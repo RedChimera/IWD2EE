@@ -44,7 +44,7 @@ Les changements majeurs décrits ci-dessus ne sont appliqués que si vous instal
 19. [Débloque tous les choix de couleur pour chaque race](#19-debloque-tous-les-choix-de-couleur-pour-chaque-race)
 20. [Plus d’options de persuasion](#20-plus-doptions-de-persuasion)
 21. [Composant principal des compagnons](#21-composant-principal-des-compagnons)
-22. [Les compagnons commencent avec de l’expérience en rejoignant le groupe](#22-les-compagnons-commencent-avec-de-lexperience-en-rejoignant-le-groupe)
+22. [Les PNJ commencent avec de l’expérience en rejoignant le groupe](#22-les-pnj-commencent-avec-de-lexperience-en-rejoignant-le-groupe)
 23. [Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement (incomplet)](#23-ameliorations-cosmetiques-de-linterface-graphique-et-nouveaux-ecrans-de-chargement-incomplet)
 24. [Thème principal en boucle](#24-theme-principal-en-boucle)
 25. [Champ de Bataille du Temple de Glace remanié](#25-champ-de-bataille-du-temple-de-glace-remanie)
@@ -52,11 +52,11 @@ Les changements majeurs décrits ci-dessus ne sont appliqués que si vous instal
 27. [Remaniement des races](#27-remaniement-des-races)
 28. [Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe](#28-les-ennemis-donnent-la-meme-quantite-dexperience-quel-que-soit-le-niveau-du-groupe)
 29. [Ajuster le niveau des rencontres (difficulté++)](#29-ajuster-le-niveau-des-rencontres-difficulte)
-30. [Réduire les bonus aux PV des créatures en mode Cœur de Furie](#30-reduire-les-bonus-aux-pv-des-creatures-en-mode-coeur-de-furie)
-31. [Réduire les bonus à l’attaque des créatures en mode Cœur de Furie](#31-reduire-les-bonus-a-lattaque-des-creatures-en-mode-coeur-de-furie)
-32. [Réduire les bonus aux jets de sauvegarde des créatures en mode Cœur de Furie](#32-reduire-les-bonus-aux-jets-de-sauvegarde-des-creatures-en-mode-coeur-de-furie)
-33. [Supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées en mode Cœur de Furie](#33-supprimer-les-bonus-de-valeurs-de-caracteristiques-des-creatures-alliees-invoquees-en-mode-coeur-de-furie)
-34. [Faire en sorte que le groupe commence le jeu avec plus d’expérience en mode Cœur de Furie](#34-faire-en-sorte-que-le-groupe-commence-le-jeu-avec-plus-dexperience-en-mode-coeur-de-furie)
+30. [En mode Cœur de Furie, réduire les bonus aux PV des créatures](#30-en-mode-coeur-de-furie-reduire-les-bonus-aux-pv-des-creatures)
+31. [En mode Cœur de Furie, réduire les bonus à l’attaque des créatures](#31-en-mode-coeur-de-furie-reduire-les-bonus-a-lattaque-des-creatures)
+32. [En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures](#32-en-mode-coeur-de-furie-reduire-les-bonus-aux-jets-de-sauvegarde-des-creatures)
+33. [En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées](#33-en-mode-coeur-de-furie-supprimer-les-bonus-de-valeurs-de-caracteristiques-des-creatures-alliees-invoquees)
+34. [En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience](#34-en-mode-coeur-de-furie-faire-en-sorte-que-le-groupe-commence-le-jeu-avec-plus-dexperience)
 35. [Réduire le délai entre chaque attaque sournoise](#35-reduire-le-delai-entre-chaque-attaque-sournoise)
 36. [Ajuster le niveau maximum](#36-ajuster-le-niveau-maximum)
 37. [Toujours apprendre avec succès les sorts provenant de parchemins](#37-toujours-apprendre-avec-succes-les-sorts-provenant-de-parchemins)
@@ -66,7 +66,7 @@ Les changements majeurs décrits ci-dessus ne sont appliqués que si vous instal
 41. [Ajouter des raccourcis clavier pour automatiser l’application de buffs](#41-ajouter-des-raccourcis-clavier-pour-automatiser-lapplication-de-buffs)
 
 
-### 1. Noyau d’IWD2EE
+### 1. Noyau d’IWD2EE {#1-noyau-diwd2ee}
 
 Ce composant doit être installé pour que tout autre composant puisse l'être. Il inclut divers changements "Quality of Life".
 
@@ -87,7 +87,7 @@ Ce composant doit être installé pour que tout autre composant puisse l'être. 
 * Tant que vous avez activé la console dans le menu de configuration classique d’IWD2 (Config.exe), les codes de triche seront automatiquement activés sans avoir besoin de saisir de commande.
 * Pour les moddeurs, IWD2EE inclut plusieurs nouveaux opcodes, et offre la possibilité d’exécuter du code Lua dans le jeu via la console ou divers hooks (et certains des nouveaux opcodes peuvent appeler des fonctions Lua personnalisées), ainsi qu’une capacité limitée de modifier l’interface graphique. Cela ouvre de nombreuses possibilités de modding.
 
-### 2. Remaniement des classes
+### 2. Remaniement des classes {#2-remaniement-des-classes}
 
 Ce composant revoit les classes du jeu pour rendre les guerriers, les barbares et les roublards beaucoup plus viables, et il ajoute plus de 30 nouveaux dons au jeu. Ce composant est plus équilibré lorsqu’il est combiné avec le composant Remaniement des sorts.
 
@@ -179,7 +179,7 @@ Magiciens : Comme dans le jeu de rôle papier, les magiciens peuvent choisir deu
 
 Bien que les modifications inhérentes aux prêtres, ensorceleurs et magiciens ne soient pas énormes, toutes les classes de lanceurs de sorts bénéficient grandement de certains des nouveaux dons, en particulier des dons de métamagie.
 
-### 3. Restrictions d’alignement plus souples pour les classes
+### 3. Restrictions d’alignement plus souples pour les classes {#3-restrictions-concernant-lalignement-des-classes-assouplies}
 
 Même le système de classes très large d'IWD2 peut être restrictif, principalement pour l'axe loyal/chaotique. Ce composant assouplit certaines restrictions, permettant à certaines classes d'être compatibles avec plus d'alignements :
 
@@ -191,7 +191,7 @@ Les paladins d’Ilmater et de Mystra peuvent être Neutres Bons.
 Les paladins de Heaum peuvent être Loyaux Neutres.
 Les roublards peuvent être Loyaux Bons.
 
-### 4. Remaniement des sorts
+### 4. Remaniement des sorts {#4-remaniement-des-sorts}
 
 Ce composant renforce considérablement de nombreux sorts qui étaient peu puissants. Il déplace également certains sorts vers des niveaux inférieurs ou supérieurs et accorde certains sorts à des classes qui ne pouvaient pas les lancer auparavant. Voici les principaux changements :
 
@@ -228,7 +228,7 @@ Dans le jeu non modifié, les lanceurs de sorts ne pouvaient choisir École de p
 
 ### 6. Remaniement des objets
 
-Normalement, les objets d'Icewind Dale 2 sont terriblement mal équilibrés. Il n’y a que quelques bons objets qui dominent des centaines d’objets magiques presque inutiles (par exemple, des objets qui ne fournissent que +1 en Discrétion ou 1/- de Résistance aux sorts). Ce n’est même pas un jeu à faible magie : on obtient des tonnes d’objets magiques, mais la plupart d’entre eux sont terribles.
+Normalement, les objets d'Icewind Dale 2 sont terriblement mal équilibrés. Il n’y a que quelques bons objets qui dominent des centaines d’objets magiques presque inutiles (par exemple, des objets qui ne fournissent que +1 en Discrétion ou 1/- à la résistance aux sorts). Ce n’est même pas un jeu où la magie est peu présente : on obtient des tonnes d’objets magiques, mais la plupart d’entre eux sont inintéressants.
 
 Remaniement des objets améliore la plupart des objets magiques d'Icewind Dale 2, leur conférant une plus grande variété de capacités utiles. Le but est principalement de rendre plus puissants les objets faibles plutôt que d'affaiblir les objets puissants. Globalement, le nombre total d’objets magiques que vous obtenez en butin dans le jeu ne changera pas beaucoup, mais ces objets seront plus susceptibles d’être utiles.
 
@@ -238,51 +238,51 @@ Remaniement des objets ajoute également de nombreux nouveaux objets aux tables 
 
 Ce composant améliore les créatures et les rencontres tout au long du jeu. Voici les principaux changements :
 
-- Les lanceurs de sorts reçoivent une meilleure IA et de nouvelles sélections de sorts, y compris certains des nouveaux sorts de Révisions des sorts. Ils commencent le combat avec les buffs activés. Ils ne devraient cependant pas être aussi coriaces que les lanceurs de sorts de Sword Coast Stratagems.
+- Les lanceurs de sorts reçoivent une meilleure IA et de nouvelles sélections de sorts, y compris certains des nouveaux sorts du Remaniement des sorts. Ils commencent le combat avec des buffs. Ils ne devraient cependant pas être aussi coriaces que les lanceurs de sorts de Sword Coast Stratagems.
 - Les prêtres ennemis utilisent désormais les sorts de domaine. Même les prêtres de divinités réservées aux ennemis lancent des sorts de domaine (par exemple, les prêtres d’Aurile ont des sorts comme Tempête de glace, tandis que les prêtres de Xvim ont des sorts d’acide).
-- Les ennemis utilisent des objets et des attaques plus judicieux. Les rôdeurs aurilites tirent des flèches de givre, les flagelleurs mentaux drainent l’Intelligence au toucher, et les grandes créatures ont une plus grande portée sur leurs attaques.
+- Les ennemis utilisent des objets et des attaques plus sensés. Les rôdeurs aurilites tirent des flèches de givre, les flagelleurs mentaux drainent l’Intelligence au toucher, et les grandes créatures ont une plus grande portée avec leurs attaques.
 - En mode Cœur de Furie, les ennemis sont plus forts de diverses manières. Les capacités innées des monstres ont des DD de jets de sauvegarde plus élevés et/ou infligent plus de dégâts. Les lanceurs de sorts lancent des sorts de niveau supérieur à ceux qu'ils lancent dans les modes de difficulté normaux.
 
 Corrections :
 
-- Les harpies du Chapitre 1 utilisent leur lamentation.
-- Les ensorceleuses yuan-ti sang-mêlé dans la bataille pour Kuldahar lancent désormais des sorts.
+- Les harpies du Chapitre 1 utilisent leur cri.
+- Durant la bataille pour Kuldahar, les ensorceleuses yuan-ti sang-mêlé lancent désormais des sorts.
 - En mode Cœur de Furie, les moines ennemis ont des poings de moine de niveau supérieur pour refléter le fait qu'ils sont de niveau supérieur.
-- En mode Cœur de Furie, les créatures invoquées par les ennemis gagnent désormais des bonus de Cœur de Furie.
+- En mode Cœur de Furie, les créatures invoquées par les ennemis gagnent désormais des bonus du Cœur de Furie.
 
 ### 8. Progression du gain d'XP plus linéaire
 
-Dans la plupart des jeux de rôle, vous gagnez des niveaux à un rythme à peu près constant tout au long du jeu. Dans IWD2, cependant, vous gagnez des PX et des niveaux de plus en plus lentement au fur et à mesure que vous progressez dans le jeu, ce qui est la principale raison pour laquelle la fin du jeu est tellement moins amusante que le début. En effet, de nombreux ennemis sont conçus pour avoir un FP inférieur à leur niveau réel. Lorsque vous êtes dans la Main Tranchée, vous pourriez vous battre contre des créatures qui sont de niveau 17 mais ont un FP de 9 !
+Dans la plupart des jeux de rôle, vous gagnez des niveaux à un rythme à peu près constant tout au long du jeu. Dans IWD2, vous gagnez de l'XP et des niveaux de plus en plus lentement au fur et à mesure que vous progressez dans le jeu, ce qui est la principale raison pour laquelle la fin du jeu est bien moins amusante que le début. En effet, de nombreux ennemis sont conçus pour avoir un Niveau de Difficulté inférieur à leur niveau réel. Lorsque vous êtes dans la Main Tranchée, vous pourriez vous battre contre des créatures qui sont de niveau 17 mais qui ont un ND de 9 !
 
-Ce composant corrige cela. Il existe deux options d’installation. La première option définit le FP de toutes les créatures à leur niveau, ce qui entraîne une augmentation de niveau extrêmement rapide au fur et à mesure que le jeu progresse. La deuxième option, qui est la version recommandée, définit le FP légèrement en dessous de leur niveau après le niveau 9. Aucune des deux options n’affectera beaucoup les ennemis en début de partie, mais les ennemis de milieu et fin de partie accorderont désormais des PX en fonction de la difficulté qu’ils représentent.
+Ce composant corrige cela. Il existe deux options d’installation. La première option définit le ND de toutes les créatures à leur niveau, ce qui entraîne une montée en niveau extrêmement rapide au fur et à mesure que le jeu progresse. La deuxième option, qui est la version recommandée, définit le ND légèrement en dessous de leur niveau après le niveau 9. Aucune des deux options n’affectera beaucoup les ennemis en début de partie, mais les ennemis de milieu et fin de partie accorderont désormais de l'XP en fonction de la difficulté qu’ils représentent.
 
-### 9. Alternative plus intéressante aux quêtes de la Palissade
+### 9. Alternative plus rapide aux quêtes de la Palissade
 
 Ce composant offre une alternative plus excitante aux quêtes que vous auriez normalement à faire à la Palissade. Lorsque vous parlez à Shawford pour la première fois, au lieu d’accepter ses "missions spéciales", vous pouvez simplement choisir de monter la garde à vos postes jusqu’à ce que les gobelins attaquent. Cela vous amène directement à la bataille de la Palissade, qui sera plus difficile et impliquera plus d’ennemis (par exemple, parce que vous n’avez pas réparé le mur, et Isherwood ne pourra pas éliminer autant de gobelins avant de manquer de flèches). Si vous parvenez à remporter cette bataille plus difficile, vous gagnez de l’expérience supplémentaire égale à l’expérience que vous auriez obtenue en terminant les quêtes.
 
 ### 10. Ajouter des façons de progresser à travers certaines zones
 
-Ce composant comprend plusieurs changements qui rendent certaines zones plus non linéaires et ajoutent des opportunités d’utiliser certains sorts et compétences de niche.
+Ce composant comprend plusieurs changements qui rendent certaines zones moins linéaires et ajoutent des opportunités d’utiliser certains sorts et compétences de niche.
 
-* Si vous souhaitez essayer d’attaquer de front la Forteresse de la Horde, vous pouvez ouvrir la porte de la forteresse intérieure avec un sort de Coup. À l’intérieur, l’un des ennemis lâche une pierre de garde qui ouvrira la porte de la cabane de Guthma, bien que vous puissiez également vous y faufiler en ouvrant une grille sur le toit. Avec la pierre de garde, vous pouvez également vous diriger vers les Galeries Gobelines depuis la direction opposée à celle que vous emprunteriez normalement, vous frayer un chemin à travers et sortir de l’autre côté.
+* Si vous souhaitez essayer d’attaquer de front la Forteresse de la Horde, vous pouvez ouvrir la porte de la forteresse intérieure avec un sort de Déblocage. À l’intérieur, l’un des ennemis lâche une pierre de garde qui ouvrira la porte de la cabane de Guthma, bien que vous puissiez également vous y faufiler en ouvrant une grille sur le toit. Avec la pierre de garde, vous pouvez également vous diriger vers les Galeries Gobelines depuis la direction opposée à celle que vous emprunteriez normalement, vous frayer un chemin à travers et sortir de l’autre côté.
 * Plusieurs serrures dans le Temple de Glace qui nécessitaient auparavant des clés ou l’activation de la machine à foudre peuvent être crochetées.
-* Il est possible de combattre Aeij-Kllenzr’t. Le narguer pour qu’il quitte l’autel déclenchera le combat, bien que vous puissiez toujours éviter le combat en le bannissant avec son vrai nom. Le combattre et le vaincre le bannira et vous permettra de terminer la quête avec des récompenses supplémentaires. Ce contenu nécessite l’installation de Révisions des créatures.
-* Dans la Main Tranchée, la porte du pont entre la Tour de Guerre et la Tour du Magicien est déverrouillée dès le départ, donc si vous avez un moyen de faire voler ou téléporter le groupe, vous pouvez accéder au bureau d’Orrick en passant au-dessus du trou dans le pont.
+* Il est possible de combattre Aeij-Kllenzr’t. Le narguer pour qu’il quitte l’autel déclenchera le combat, bien que vous puissiez toujours éviter le combat en le bannissant avec son vrai nom. Le combattre et le vaincre le bannira et vous permettra de terminer la quête avec des récompenses supplémentaires. Ce contenu nécessite l’installation du Remaniement des créatures.
+* Dans la Main Tranchée, la porte du pont entre la Tour de Guerre et la Tour des Magiciens est déverrouillée dès le départ, donc si vous avez un moyen de faire voler ou de téléporter le groupe, vous pouvez accéder au bureau d’Orrick en passant au-dessus du trou dans le pont.
 * Riki n’a plus besoin que vous combattiez Iyachtu Xvim ou que vous concluiez un pacte avec lui pour affronter les boss finaux. Cependant, si vous n’avez pas vaincu Iyachtu Xvim ou ne vous êtes pas alliés avec lui, vous devrez survivre à des glabrezus immortels tout en combattant les boss finaux, et les boss seront plus coriaces dans la deuxième phase car vous n’avez pas purifié la fontaine radieuse.
 
 ### 11. Village Itinérant plus rapide
 
-Ce composant réduit les aller-retours nécessaires aux quêtes du Village Itinérant. Vous pouvez désormais voyager vers les trois sections de la Forêt Maudite la première fois que vous vous y rendez (vous permettant de rencontrer la dryade, de récupérer la corne et de combattre le feu follet), plutôt que d’avoir à la traverser trois fois pour les trois quêtes.
+Ce composant réduit les aller-retours nécessaires aux quêtes du Village Itinérant. Vous pouvez désormais voyager vers les trois sections de la Forêt Maudite la première fois que vous vous y rendez (vous permettant de rencontrer la dryade, de récupérer la corne et de combattre les feux follets), plutôt que d’avoir à la traverser trois fois pour les trois quêtes.
 
-### 12. L'Œil du Dragon plus rapide
+### 12. Œil du Dragon plus rapide
 
 Ce composant réduit les aller-retours nécessaires pour traverser l’Œil du Dragon en rendant les quêtes d’alchimie facultatives. Vous devriez désormais pouvoir vous frayer un chemin à travers le troisième étage de l’Œil du Dragon sans avoir à retourner aux étages précédents.
 
-* Un sort puissant de protection mentale comme Citadelle de l’âme ou Esprit impénétrable peut vous permettre de passer sous l’Œil de Seth sans avoir besoin de devenir un histachii. (Ceci est exact par rapport au jeu de rôle papier ; Esprit impénétrable protège normalement contre un sort d’Antipathie).
+* Un sort puissant de protection mentale comme Citadelle de l’âme ou Esprit impénétrable peut vous permettre de passer sous l’Œil de Seth sans avoir besoin de devenir un histachii. (Ceci est exact par rapport au jeu de rôle papier ; Esprit impénétrable protège normalement contre un sort d’Aversion).
 * Ouvrir la porte au troisième étage de l’Œil du Dragon ne vous oblige plus à placer du poison dans les quatre fontaines de la zone ; il vous suffit de tuer Thorasskus.
-* La porte temporelle avec le piège à bave s’ouvre après 60 secondes au lieu de 24 heures de jeu.
+* La porte temporelle avec le piège à limon s’ouvre après 60 secondes au lieu de 24 heures de jeu.
 
-Les quêtes d’alchimie peuvent toujours être complétées ; vous pouvez toujours faire du brouet histachii et des fioles de poison. Ces objets offrent toujours des avantages : le brouet histachii vous permet de vous faufiler devant les yuan-ti sans qu’ils vous attaquent, et les fioles de poison peuvent désormais être utilisées comme consommables pour empoisonner votre arme comme avec la capacité Arme empoisonnée.
+Les quêtes d’alchimie peuvent toujours être complétées ; vous pouvez toujours faire du brouet histaksii et des fioles de poison. Ces objets offrent toujours des avantages : le brouet histachii vous permet de vous faufiler devant les yuan-ti sans qu’ils vous attaquent, et les fioles de poison peuvent désormais être utilisées comme consommables pour empoisonner votre arme comme avec la capacité Arme empoisonnée.
 
 ### 13. Raccourcir la série de quêtes de la boucle temporelle de l'Œil du Dragon à une seule bataille
 
@@ -290,19 +290,19 @@ Ce composant simplifie la zone finale de l’Œil du Dragon. Au lieu de devoir p
 
 ### 14. Ajouter plus de parchemins au jeu
 
-Ce composant ajoute des parchemins de mage de niveau relativement élevé à divers vendeurs de sorts, dont Elytharra, Zack Boosenburry, Suoma, Bered et Sheemish. Un magicien solo ou un magicien en mode Cœur de Furie pourra apprendre des sorts haut de gamme et suivre le rythme d’un ensorceleur. Ce n’est pas trop extrême : les vendeurs en début de partie peuvent avoir un ou deux parchemins de niveau 5 à 7, mais ils n’auront pas des tonnes de parchemins de niveau 9.
+Ce composant ajoute des parchemins de mage de niveau relativement élevé à divers vendeurs de sorts, dont Elytharra, Zack Boosenburry, Suoma, Bered et Sheemish. Un magicien solo ou un magicien en mode Cœur de Furie pourra apprendre des sorts haut de gamme et suivre le rythme d’un ensorceleur. Ce n’est pas trop extrême : les vendeurs en début de partie peuvent avoir un ou deux parchemins de niveau 5 à 7, mais ils n’auront certainement pas des tonnes de parchemins de niveau 9.
 
 ### 15. Résistances et immunités des créatures revues à la baisse
 
-Ce composant révise les résistances de certaines créatures pour les rendre plus raisonnables. Par exemple, les limons de l’Œil du Dragon ne sont pas complètement immunisés contre les dégâts physiques, et les golems de fer et les feux follets ne sont pas complètement immunisés contre la magie (ils ont toujours une résistance aux sorts élevée).
+Ce composant revoit les résistances de certaines créatures pour les rendre plus raisonnables. Par exemple, les limons de l’Œil du Dragon ne sont pas complètement immunisés contre les dégâts physiques, et les golems de fer et les feux follets ne sont pas complètement immunisés contre la magie (ils ont toujours une résistance aux sorts élevée).
 
-Les élémentaires ont désormais des immunités élémentaires régulières au lieu d'immunités aux morts-vivants. Les fiélons ont désormais des immunités démoniaques régulières (par exemple, l'immunité au poison) au lieu d'immunités aux morts-vivants.
+Les élémentaires ont désormais des immunités élémentaires attendues au lieu d'immunités aux morts-vivants. Les fiélons ont désormais des immunités démoniaques attendues (par exemple, l'immunité au poison) au lieu d'immunités aux morts-vivants.
 
 Les trolls ne tombent plus au sol et ne doivent plus être achevés par le feu ou l’acide ; au lieu de cela, ils se régénèrent plus rapidement et ont plus de PV, mais subissent beaucoup plus de dégâts du feu et de l’acide.
 
 ### 16. Jets de sauvegarde des ennemis ajustés à un niveau normal
 
-Ce composant ajuste tous les jets de sauvegarde des ennemis dans le jeu, les rendant à peu près égaux aux jets de sauvegarde des joueurs au même niveau. Ainsi, un guerrier ennemi de niveau 10 aura des jets de sauvegarde similaires à ceux d’un guerrier de niveau 10 dans le groupe.
+Ce composant ajuste tous les jets de sauvegarde des ennemis dans le jeu, les rendant à peu près égaux aux jets de sauvegarde des joueurs du même niveau. Ainsi, un guerrier ennemi de niveau 10 aura des jets de sauvegarde similaires à ceux d’un guerrier de niveau 10 de votre groupe.
 
 ### 17. Changer l’immunité aux coups critiques
 
@@ -314,24 +314,24 @@ Dans le jeu de base, de nombreux choix d’ennemis raciaux n’étaient tout sim
 
 Insectes géants
 Arachnides géants
-Démons
-Gobelinoïdes
+Démons/Diables
+Goblinoïdes
 Géants
-Etres amorphes
+Créatures Amorphes
 Constructions
 Humains
 Animaux
 Morts-vivants
 Aberrations
-Aberrations de l'Ombre-Terre
-Yuan-ti
+Aberrations d’Ombre-Terre
+Yuan-ti/Hommes-Lézards
 Élémentaires
 Trolls
 Dragons
 
 ### 19. Débloque tous les choix de couleur pour chaque race
 
-Actuellement, ce composant permet à n'importe quelle race de choisir n'importe laquelle des couleurs disponibles lors de la création du personnage.
+Ce composant permet à n'importe quelle race de choisir n'importe quelle couleur disponible lors de la création du personnage.
 
 ### 20. Plus d’options de persuasion
 
@@ -347,7 +347,7 @@ SPOILERS CI-DESSOUS
 * Le groupe peut soudoyer Limha pour qu’elle libère les enfants et leur rende forme humaine. Le coût est moins élevé avec une Diplomatie plus élevée.
 * Un personnage avec une compétence de Fouille ou de Sens de la nature extrêmement élevée peut potentiellement trouver la sortie de la Forêt Maudite sans avoir à combattre les sylvaniens noirs.
 * Avant de combattre Harshom, un personnage capable de lancer des sorts profanes qui a un Bluff suffisamment élevé et une Connaissance des sorts très élevée, et a accès à des sorts d'illusion, peut tromper Harshom afin de gagner un avantage dans la bataille. Le test est plus facile à réussir si le personnage est un illusionniste.
-* Lorsque le groupe entre pour la première fois dans la forteresse des flagelleurs mentaux, un personnage avec une Intimidation très élevée peut intimider le Cerveau Ancien en réponse à ses messages télépathiques et le convaincre de laisser le groupe partir sans se battre, à condition qu’ils se dirigent directement vers la sortie.
+* Lorsque le groupe entre pour la première fois dans la forteresse des flagelleurs mentaux, un personnage avec une Intimidation très élevée peut intimider le Géancéphale en réponse à ses messages télépathiques et le convaincre de laisser le groupe partir sans se battre, à condition qu’ils se dirigent directement vers la sortie.
 * Dans le temple yuan-ti à Chult, il est possible de parler à Ojaiha et d’organiser une trêve, à condition que votre Diplomatie soit suffisamment élevée. Cela vous permettra de passer au combat contre les forces de Cedra une fois de retour à Kuldahar.
 * Dans la Main Tranchée, un nouveau personnage se trouve dans la salle du trône. Un membre du groupe avec une compétence de Bluff incroyablement élevée peut les convaincre de rappeler Isair et Madae à la Main Tranchée et de vous accorder une audience, déclenchant la bataille finale plus tôt que la normale.
 * Enfin, ce composant ajoute pas moins de cinq chemins de dialogues différents pour vous sortir du combat de boss final. Ils nécessitent généralement que le personnage qui parle soit très compétent dans plusieurs compétences de persuasion.
@@ -356,15 +356,15 @@ SPOILERS CI-DESSOUS
 
 Ce composant permet à plusieurs PNJ existants de rejoindre le groupe : le guerrier Reig, le roublard Geoffrey le Noir, la devineresse Veira, la prêtresse Emma Lamelune, le troll Vrek Griffe-Vile, le gobelin Vunarg, le roublard/illusionniste Zack Boosenburry, l’abishaï Xhaan, l’ensorceleuse Pairi, et le moine Sersa.
 
-Les PNJ ont des dialogues et des interjections, mais la valeur de production des PNJ d’IWD2EE est nettement inférieure à celle du précédent mod PNJ d’IWD2.
+Les PNJ ont des dialogues et des interventions, mais dans l’ensemble, la qualité de production des PNJ d'IWD2EE est nettement inférieure à celle du précédent mod IWD2 NPC.
 
-### 22. Les compagnons commencent avec de l’expérience en rejoignant le groupe
+### 22. Les PNJ commencent avec de l’expérience en rejoignant le groupe
 
 Les PNJ commencent avec l’expérience moyenne des autres membres du groupe. La seconde fait en sorte qu’ils commencent avec un cinquième de l’expérience totale du groupe.
 
-Le but de la deuxième option est d’empêcher certaines exploitations liées au jeu en solo. Si vous avez activé la première option, vous pourriez aller assez loin dans le jeu en solo et atteindre un niveau élevé, puis recruter des PNJ aussi sur-nivelés que votre personnage de départ. Avec la deuxième option activée, ces PNJ seront à un niveau raisonnable quelle que soit la taille précédente du groupe.
+Le but de la deuxième option est d’empêcher certaines exploitations liées au jeu en solo. Si vous avez activé la première option, vous pourriez aller assez loin dans le jeu en solo et atteindre un niveau élevé, puis recruter des PNJ aussi haut en niveau que votre personnage de départ. Avec la deuxième option activée, ces PNJ seront à un niveau raisonnable quelle que soit la taille précédente du groupe.
 
-La première option est recommandée si vous ne prévoyez pas de faire d'exploitations d’expérience comme celle-ci.
+La première option est recommandée si vous ne prévoyez pas d'abuser du jeu avec l'expérience comme expliqué précédemment.
 
 ### 23. Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement (incomplet)
 
@@ -372,65 +372,65 @@ Ce composant ajoute actuellement un nouvel écran de menu principal et de nouvea
 
 ### 24. Thème principal en boucle
 
-Normalement, le thème principal d’IWD2 ne se répète pas. Après 1 minute, il se termine et vous passez le reste de la création du personnage sans musique. Ce composant modifie le thème principal pour qu’il se répète.
+Normalement, le thème principal d’IWD2 ne se répète pas. Après 1 minute, il se termine et vous passez le reste de la création de personnage sans musique. Ce composant modifie le thème principal pour qu’il se répète.
 
 ### 25. Champ de Bataille du Temple de Glace remanié
 
-Pour obtenir toutes les récompenses du Champ de Bataille, il faut normalement mener 25 batailles par niveau, soit un total de 250 batailles. Même si les membres du groupe sont suffisamment puissants pour gagner toutes les batailles, cela reste très fastidieux.
+Pour obtenir toutes les récompenses du Champ de Bataille, il faut normalement mener 25 combats par niveau, soit un total de 250 combats. Même si les membres du groupe sont suffisamment puissants pour gagner tous les combats, cela reste très fastidieux.
 
-Ce composant fait en sorte qu’il suffit de terminer un niveau une seule fois (avec 3 cases ou plus) pour obtenir la récompense principale de ce niveau. Pour obtenir toutes les récompenses, 30 batailles suffiront au lieu de 250.
+Ce composant fait en sorte qu’il suffit de terminer un niveau une seule fois (avec 3 cases ou plus) pour obtenir la récompense principale de ce niveau. Pour obtenir toutes les récompenses, 30 combats suffiront au lieu de 250.
 
-De plus, ce composant vous permet de retourner à la Champ de Bataille et de la terminer dans le Chapitre 5, lorsque vous revenez au Temple de Glace pour demander la faveur de Nickademus.
+De plus, ce composant vous permet de retourner au Champ de Bataille et de le terminer dans le Chapitre 5, lorsque vous revenez au Temple de Glace pour demander les faveurs de Nickademus.
 
 ### 26. Résistance mineure aux dégâts pour les armures et les boucliers
 
-Inspiré par le composant similaire de Weimer de IWD2-Ease, ce composant modifie toutes les armures et tous les boucliers du jeu afin qu’ils confèrent une résistance aux dégâts physiques égale à la moitié de leur bonus de classe d’armure, arrondi à l’inférieur.
+Inspiré par le composant similaire de IWD2-Ease de Weimer, ce composant modifie toutes les armures et tous les boucliers du jeu afin qu’ils confèrent une résistance aux dégâts physiques égale à la moitié de leur bonus à la classe d’armure, arrondi à l’inférieur.
 
 ### 27. Remaniement des races
 
-Révisions des races modifie diverses races et sous-races, leur conférant les capacités qu’elles sont censées avoir dans le jeu de rôle papier :
+Remaniement des races modifie diverses races et sous-races, leur conférant les capacités qu’elles sont censées avoir dans le jeu de rôle papier :
 * Les humains obtiennent 4 points de compétence supplémentaires au niveau 1 au lieu de 2.
 * Les elfes peuvent détecter les pièges même lorsqu’ils ne cherchent pas activement.
 * Les gnomes bénéficient d’un bonus au DD des sorts d’illusion qu’ils lancent.
-* Les tentatives de renversement contre les nains voient leur DD réduit de 4, car les nains sont particulièrement stables sur leurs appuis.
-* Les drows et les tieffelins peuvent lancer Ténèbres une fois par jour. Les drows commencent avec une compétence en arbalètes au lieu d'une compétence en arcs.
+* Les tentatives de renversement contre les nains voient leur DD réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
+* Les drows et les tieffelins peuvent lancer Ténèbres une fois par jour. Les drows commencent avec une compétence à l'arbalète au lieu d'une compétence à l'arc.
 * Les duergars peuvent s’agrandir une fois par jour.
 
-Révisions des races confère également quelques nouvelles capacités à certaines races :
+Remaniement des races confère également quelques nouvelles capacités à certaines races :
 * Les demi-elfes et les demi-orques obtiennent désormais un don supplémentaire au niveau 1 (c’est l’avantage qu’ils obtiennent pour être à moitié humains ; auparavant, tous leurs avantages et inconvénients concernaient leur côté elfe/orque).
 * Les elfes peuvent utiliser le don Botte secrète avec les grandes épées.
-* Les nains commencent avec une compétence en haches et en marteaux.
+* Les nains commencent avec une compétence à la hache et au marteau.
 * Les gnomes des roches ont +2 en Intelligence au lieu de la Constitution.
 * Les halfelins pieds-légers peuvent ajouter la moitié de leur modificateur de Dextérité plutôt que leur modificateur de Force aux dégâts d’une fronde ou d’une arme de jet (si le premier est plus élevé).
 * Les halfelins vifs-esprits gagnent 1,5 fois leur bonus de Force aux dégâts avec les frondes et les armes de jet, comme avec les armes à deux mains. De plus, leur pénalité de caractéristique est appliquée à l'Intelligence plutôt qu'à la Force.
 
 ### 28. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
 
-Ce composant fait que tuer des ennemis donne la même quantité d’expérience quel que soit le niveau du groupe. De cette façon, la montée de niveau ne s'accompagne pas de la frustration que les ennemis donnent moins d'expérience, et il n'y a aucune raison de retarder la montée de niveau pour augmenter le gain d'expérience. Il y a deux options : soit vous pouvez faire en sorte que les ennemis donnent une expérience égale à 25 * leur FP (un groupe de six personnages atteindra environ le niveau 15 à la fin du jeu), soit vous pouvez faire en sorte qu'elle soit égale à 35 * leur FP (un groupe de six personnages atteindra environ le niveau 18 à la fin du jeu).
+Ce composant fait que tuer des ennemis donne la même quantité d’expérience quel que soit le niveau du groupe. De cette façon, la montée de niveau ne s'accompagne pas de la frustration que les ennemis donnent moins d'expérience, et il n'y a aucune raison de retarder la montée de niveau pour augmenter le gain d'expérience. Il y a deux options : soit vous pouvez faire en sorte que les ennemis donnent une expérience égale à 25 * leur ND (un groupe de six personnages atteindra environ le niveau 15 à la fin du jeu), soit vous pouvez faire en sorte qu'elle soit égale à 35 * leur ND (un groupe de six personnages atteindra environ le niveau 18 à la fin du jeu).
 
 ### 29. Ajuster le niveau des rencontres (difficulté++)
 
-Les rencontres d'Icewind Dale 2 ont souvent des ennemis supplémentaires pour un groupe de niveau supérieur. Ce composant a deux options : vous pouvez faire en sorte de toujours combattre au moins la version de la rencontre destinée à un groupe de niveau moyen, ou vous pouvez faire en sorte de toujours combattre la version destinée à un groupe de haut niveau. Les versions de niveau supérieur des rencontres ont généralement juste quelques ennemis de plus ou, dans certains cas, des versions plus coriaces des ennemis ; elles ne sont pas impossibles à terminer pour un groupe de niveau inférieur.
+Les rencontres d'Icewind Dale 2 ont souvent des ennemis supplémentaires pour un groupe de niveau supérieur. Ce composant a deux options : vous pouvez faire en sorte de toujours combattre au moins la version de la rencontre destinée à un groupe de niveau moyen, ou vous pouvez faire en sorte de toujours combattre la version destinée à un groupe de haut niveau. Les versions de niveau supérieur des rencontres ont généralement juste quelques ennemis de plus ou, dans certains cas, des versions plus coriaces des ennemis ; elles ne sont pas impossibles à remporter pour un groupe de niveau inférieur.
 
 Notez que ce composant ne fait presque rien dans une partie Cœur de Furie ou une partie en solo, car dans ces modes, vos personnages sont généralement d'un niveau suffisamment élevé pour déclencher de toute façon les rencontres de haut niveau.
 
-### 30. Réduire les bonus aux PV des créatures en mode Cœur de Furie
+### 30. En mode Cœur de Furie, réduire les bonus aux PV des créatures
 
-Les ennemis en mode Cœur de Furie ont normalement des PV absolument ridicules : les gobelins du prologue ont 157 PV, et les araignées de givre du Chapitre 2 ont 452 PV ! Ce composant réduit les PV des créatures en mode Cœur de Furie. Ce composant est conçu pour un groupe commençant le mode Cœur de Furie à un niveau bas. Il est équilibré de manière à ce que les ennemis en début de partie aient beaucoup moins de PV que dans le mode Cœur de Furie d'origine, mais les ennemis plus tard dans le jeu n’auront pas beaucoup moins de PV. Cela rendra le mode Cœur de Furie plus facile, mais aussi beaucoup moins fastidieux (et Révisions des créatures rend le mode Cœur de Furie plus difficile pour compenser).
+Les ennemis en mode Cœur de Furie ont normalement des PV absolument ridicules : les gobelins du prologue ont 157 PV, et les araignées de givre du Chapitre 2 ont 452 PV ! Ce composant réduit les PV des créatures en mode Cœur de Furie. Ce composant est conçu pour un groupe commençant le mode Cœur de Furie à un niveau bas. Il est équilibré de manière à ce que les ennemis en début de partie aient beaucoup moins de PV que dans le mode Cœur de Furie d'origine, mais les ennemis plus tard dans le jeu n’auront pas beaucoup moins de PV. Cela rendra le mode Cœur de Furie plus facile, mais aussi beaucoup moins fastidieux (et Remaniement des créatures rend le mode Cœur de Furie plus difficile pour compenser).
 
-### 31. Réduire les bonus à l’attaque des créatures en mode Cœur de Furie
+### 31. En mode Cœur de Furie, réduire les bonus à l’attaque des créatures
 
 Les ennemis en mode Cœur de Furie ont des bonus d'attaque si élevés qu'il leur est presque impossible de rater sauf sur un 1. Ce composant donne aux créatures en dehors du groupe un malus d'attaque de -9 en mode Cœur de Furie. Ils auront toujours des bonus d'attaque plus élevés que dans le mode de difficulté suivant, mais ce ne sera pas aussi extrême.
 
-### 32. Réduire les bonus aux jets de sauvegarde des créatures en mode Cœur de Furie
+### 32. En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures
 
-Au début du mode Cœur de Furie, il peut être très difficile de faire échouer les jets de sauvegarde des ennemis si vous commencez avec un groupe de bas niveau. Ce composant donne un petit malus de jets de sauvegarde aux créatures en dehors du groupe en mode Cœur de Furie.
+Au début du mode Cœur de Furie, il peut être très difficile de surpasser les jets de sauvegarde des ennemis si vous commencez avec un groupe de bas niveau. Ce composant donne un petit malus de jets de sauvegarde aux créatures en dehors du groupe en mode Cœur de Furie.
 
-### 33. Supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées en mode Cœur de Furie
+### 33. En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées
 
-En mode Cœur de Furie, les créatures alliées invoquées obtiennent également des bonus du mode Cœur de Furie, et comme vous atteignez un niveau élevé plus rapidement, les créatures invoquées peuvent être assez surpuissantes. Ce composant fait en sorte que les créatures invoquées ne gagnent pas les +10 habituels à toutes les caractéristiques que les créatures obtiennent en mode Cœur de Furie (à l'exception de +10 en Constitution, ce qui devrait au moins en faire des sacs à PV décents), à moins qu'elles ne soient invoquées par un ennemi.
+En mode Cœur de Furie, les créatures alliées invoquées obtiennent également les bonus du mode Cœur de Furie, et comme vous atteignez un niveau élevé plus rapidement, les créatures invoquées peuvent être assez surpuissantes. Ce composant fait en sorte que les créatures invoquées ne gagnent pas les +10 habituels à toutes les caractéristiques que les créatures obtiennent en mode Cœur de Furie (à l'exception de +10 en Constitution, ce qui devrait au moins en faire des sacs à PV décents), à moins qu'elles ne soient invoquées par un ennemi.
 
-### 34. Faire en sorte que le groupe commence le jeu avec plus d’expérience en mode Cœur de Furie
+### 34. En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience
 
 Le début du mode Cœur de Furie est absolument brutal si vous commencez au niveau 1 - même avec certains de ces composants installés qui affaiblissent les créatures en mode Cœur de Furie. Ce composant donne à chaque membre du groupe un peu d’expérience au début du jeu. L'expérience avec laquelle chaque personnage commence est la même quelle que soit la taille du groupe. Vous avez le choix de la quantité d’expérience avec laquelle commencer.
 
@@ -444,7 +444,7 @@ Ce composant augmente le niveau maximum à 40 ou à 50 (au choix). Vous n’atte
 
 ### 37. Toujours apprendre avec succès les sorts provenant de parchemins
 
-Ce composant permet à tous les magiciens d’apprendre avec succès les sorts des parchemins 100 % du temps.
+Ce composant permet à tous les magiciens d’apprendre avec succès les sorts des parchemins 100% du temps.
 
 ### 38. Tout le monde peut effectuer des attaques d'opportunité
 
@@ -452,13 +452,13 @@ Ce composant permet aux personnages de faire des attaques d’opportunité au co
 
 ### 39. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage
 
-Ce composant a trois options. Deux d’entre elles vous permettent de lancer des dés pour les caractéristiques au lieu d’utiliser le système de points normal d’IWD2. La première ne vous permet pas d’augmenter ou de diminuer les caractéristiques avec les boutons plus/moins, mais vous pouvez choisir la caractéristique à laquelle chaque nombre tiré aux dés est affecté (comme dans The Temple of Elemental Evil). Le deuxième sous-composant vous permet d’utiliser les boutons plus/moins.
+Ce composant a trois options. Deux d’entre elles vous permettent de lancer des dés pour les caractéristiques au lieu d’utiliser le système de points classique d’IWD2. La première ne vous permet pas d’augmenter ou de diminuer les caractéristiques avec les boutons plus/moins, mais vous pouvez choisir la caractéristique à laquelle chaque nombre tiré aux dés est affecté (comme dans The Temple of Elemental Evil). Le deuxième sous-composant vous permet d’utiliser les boutons plus/moins.
 
 Le troisième sous-composant vous permet d’utiliser le système de points de Neverwinter Nights, où l’augmentation d’une caractéristique au-delà d’une certaine valeur nécessite de dépenser des points supplémentaires, et le minimum pour une caractéristique est de 8.
 
 ### 40. Ajouter des pièges
 
-Ce composant ajoute des pièges au jeu et rend certains pièges existants un peu plus dangereux. Ne vous inquiétez pas ; cela ne devrait pas transformer IWD2 en Tour de Durlag. Le but est d’ajouter des rebondissements aux rencontres existantes et de rendre la compétence de désamorçage de pièges plus utiles.
+Ce composant ajoute des pièges au jeu et rend certains pièges existants un peu plus dangereux. Ne vous inquiétez pas ; cela ne devrait pas transformer IWD2 en Tour de Durlag. Le but est d’ajouter des rebondissements aux rencontres existantes et de rendre la compétence de désamorçage de pièges plus utile.
 
 ### 41. Ajouter des raccourcis clavier pour automatiser l’application de buffs
 
@@ -472,85 +472,85 @@ Appuyer sur la touche " ] " effacera l’enregistrement jusqu’à ce que vous e
 
 Ce système ne triche en aucune façon ; les sorts ne sont pas lancés instantanément et vous ne pouvez pas lancer plus d’un sort par round à moins d’avoir Promptitude améliorée. Cependant, cela devrait tout de même accélérer quelque peu les buffs et les rendre moins pénibles pour le joueur. Une fois les sorts enregistrés, vous n’avez qu’à appuyer sur ";" sans avoir à faire défiler les listes de sorts.
 
-Notes de compatibilité
+## Notes de compatibilité
 
-Mod Grand écran
+### Widescreen Mod
 
-Le Mod Grand écran N’EST PAS COMPATIBLE et FERA PLANTER LE JEU s’il est utilisé avec IWD2EE. IWD2EE inclut un moyen intégré pour définir la résolution du jeu, vous n’avez donc pas besoin du Mod Grand écran.
+Le Widescreen Mod N’EST PAS COMPATIBLE et FERA PLANTER LE JEU s’il est utilisé avec IWD2EE. IWD2EE inclut un moyen intégré pour définir la résolution du jeu, vous n’avez donc pas besoin du Widescreen Mod.
 
-Tweaks Anthology
+### Tweaks Anthology
 
 Tweaks Anthology a des composants compatibles avec IWD2EE (si un composant ne fonctionne pas dans IWD2, il n’y aura pas d’option pour l’installer).
 
-1 Pixel Productions
+### 1 Pixel Productions
 
 1 Pixel Productions semble provoquer des plantages fréquents lorsqu’il est installé avec IWD2EE. IWD2EE inclut déjà la plupart des nouvelles animations d’armes de 1PP (ajouter celles-ci ne nécessite pas de patcher l’exe, ce qui est donc moins risqué).
 
-IWD2 PNJ
+### IWD2 NPC
 
-Le mod IWD2 PNJ est compatible avec IWD2EE.
+Le mod IWD2 NPC est compatible avec IWD2EE.
 
-Light of Selune
+### Light of Selune
 
 Light of Selune est compatible avec IWD2EE, mais il modifie bon nombre des mêmes objets que IWD2EE.
 
-Tactics4IWD2
+### Tactics4IWD2
 
-Non recommandé, car les Révisions des Créatures d’IWD2EE donnent déjà des améliorations significatives aux ennemis et à l’IA des lanceurs de sorts. Ce mod a de nombreux objets, sorts et créatures révisés qui remplaceront les changements d’IWD2EE.
+Non recommandé, car le Remaniement des créatures d’IWD2EE donnent déjà des améliorations significatives aux ennemis et à l’IA des lanceurs de sorts. Ce mod a de nombreux objets, sorts et créatures revues qui remplaceront les changements d’IWD2EE.
 
-Undead Targos
+### Undead Targos
 
 Inutile car IWD2EE inclut déjà un moyen de raccourcir la série de quêtes de Targos tout en rendant la bataille de la Palissade plus difficile.
 
-Marchand supplémentaire pour IWD2
+### Bonus Merchant for IWD2
 
-Le mod Marchand supplémentaire est compatible avec IWD2EE. Il convient toutefois de noter que le mod contient des anachronismes ; il fait référence aux événements de Baldur’s Gate 2 même si Icewind Dale 2 commence plus de 50 ans avant Baldur’s Gate 1.
+Le mod Bonus Merchant est compatible avec IWD2EE. Il convient toutefois de noter que le mod contient des anachronismes ; il fait référence aux événements de Baldur’s Gate 2 même si Icewind Dale 2 commence plus de 50 ans avant Baldur’s Gate 1.
 
-IWD2-Ease
+### IWD2-Ease
 
 Voici une liste des composants d’IWD2-Ease qui indique quels composants sont compatibles avec IWD2EE et lesquels ne le sont pas.
 
 Corrections de bugs :
 Inutile car IWD2EE devrait déjà corriger ces bugs.
 
-Empilement infini :
+Infinite Stacking: 
 Compatible.
 
-Hymne guerrier de Sith hors combat :
+Non-Combat War Chant of Sith: 
 Inutile, car IWD2EE permet déjà d’utiliser l’Hymne guerrier de Sith en dehors des combats.
 
-Sainte Lame Améliorée :
+Improved Holy Avenger: 
 Inutile, car IWD2EE a déjà sa propre version de la Sainte Lame.
 
-Sainte Lame à deux mains :
+Two-Handed Holy Avenger: 
 Compatible (contrairement au composant précédent, celui-ci se contente de patcher la Sainte Lame au lieu de la remplacer).
 
-Pas de poings pour Corps de fer :
+No Fists for Iron Body:
 Inutile car IWD2EE vous permet déjà d’utiliser des armes lorsque Corps de fer est actif.
 
-PX de départ des Gnomes des profondeurs :
-Inutile, car IWD2EE révise déjà le système d’ajustement de niveau racial/ECL et corrige ce bug.
+Deep Gnome Starting XP:
+Inutile, car IWD2EE revoit déjà le système d’ajustement de niveau racial/ECL et corrige ce bug.
 
-Lames de lune améliorées :
-Inutile car IWD2EE révise déjà les Lames de lune de la même manière.
+Improved Moonblades:
+Inutile car IWD2EE revoit déjà les Lames de lune de la même manière.
 
-Poings de moine améliorés :
+Improved Monk Fists:
 Inutile car IWD2EE permet déjà aux Poings de moine d’être utilisés avec Botte secrète.
 
 Objets bonus de l’Édition Collector :
 Inutile car IWD2EE ajoute déjà ces objets au jeu.
 
-Aucune Restriction de Classe d’Alignement :
-Inutile car IWD2EE a déjà une option pour assouplir les restrictions d’alignement de classe.
+No Alignment Class Restrictions:
+Inutile car IWD2EE a déjà une option pour assouplir les restrictions d’alignement des classes.
 
-Botte secrète avec armes magiques :
+Magic Weapon Finesse:
 Inutile car IWD2EE permet déjà à certaines armes invoquées d’être utilisées avec Botte secrète.
 
-Obtenir toujours des PX à chaque ennemi tué :
-Inutile car IWD2EE inclut déjà des composants qui rendent le système de PX du jeu plus raisonnable.
+Always Get Some XP Per Kill:
+Inutile car IWD2EE inclut déjà des composants qui rendent le système d'XP du jeu plus raisonnable.
 
 Quelques objets Cœur de Furie en mode normal :
-Compatible, mais ce composant pourrait être déséquilibré.
+Compatible, mais ce composant pourrait déséquilibrer le jeu.
 
 Épées bâtardes plus puissantes :
 Inutile, car IWD2EE améliore déjà les épées bâtardes (les épées bâtardes plus puissantes de ce composant sont également ridiculement surpuissantes - vous pouvez acheter une épée bâtarde à Targos qui inflige +5d6 de dégâts d’acide par coup !).
@@ -558,51 +558,55 @@ Inutile, car IWD2EE améliore déjà les épées bâtardes (les épées bâtarde
 Tous les objets identifiés :
 Compatible.
 
-Téléportation non linéaire :
+Non-Linear Teleporting:
 Compatible.
 
-Les armures et les boucliers confèrent une résistance aux dégâts :
+Armor and Shields Provide Damage Resistance:
 Incompatible avec le composant d’IWD2EE qui confère également une résistance aux dégâts aux armures et aux boucliers.
 
-Inclure les armures et boucliers oubliés :
+Include Forgotten Armor and Shields:
 Inutile car IWD2EE ajoute déjà la plupart de ces objets au jeu (ce composant est également déséquilibré, car il vous donne plusieurs objets +3 gratuitement dans le prologue !).
 
-Sorts de druide supplémentaires :
+Additional Druid Spells:
 Incompatible car ce composant empêche les personnages d’apprendre les nouveaux sorts ajoutés par IWD2EE. Inutile car IWD2EE donne déjà beaucoup de nouveaux sorts aux druides, dont beaucoup des mêmes sorts que ce composant leur donne.
 
-Métamorphose alternative :
-Inutile car IWD2EE révise déjà la métamorphose des druides.
+Alternate Shapeshifting:
+Inutile car IWD2EE revoit déjà la métamorphose des druides.
 
-Passer la Place du combat :
-Inutile car IWD2EE inclut déjà un composant qui réduit considérablement le temps nécessaire pour gagner les principales récompenses de la Place du combat.
+Skip Battle Square:
+Inutile car IWD2EE inclut déjà un composant qui réduit considérablement le temps nécessaire pour gagner les principales récompenses du Champ de Bataille.
 
-Trésor aléatoire :
+Randomized Treasure:
 Compatible, mais non recommandé, car il pourrait vous donner une arme surpuissante dès le début du jeu.
 
 
-Crédits
+## Crédits
 
 Chris Dix (Elle) - alias @semiticgoddess - est à l’origine du projet IWD2EE. Elle a réuni toute l’équipe pour mener à bien ce projet ambitieux. C’est elle qui a fait le plus gros du travail sur la première moitié des composants d’IWD2EE et qui a rédigé la plupart des textes, dialogues et autres descriptions des potions.
 
 @OlvynChuru a créé la seconde moitié des composants d’IWD2EE, tous les nouveaux objets et la plupart des nouveaux sorts et dons. Il est également responsable de toutes les modifications apportées aux rencontres, à l’IA des ennemis et de la plupart des modifications apportées aux dons, objets et sorts, ainsi qu’aux fonctions Lua qui sont appelées par les nouveaux opcodes.
 
-@Bubb a créé la plupart des fonctions de base et des nouveaux opcodes qui ouvrent de nouvelles possibilités de modding. Il est également responsable de nombreuses améliorations de la qualité de vie d’IWD2EE, notamment le ramassage rapide, des temps de chargement plus rapides et la compatibilité grand écran intégrée.
+@Bubb a créé la plupart des fonctions de base et des nouveaux opcodes qui ouvrent de nouvelles possibilités de modding. Il est également responsable de nombreuses améliorations QoL d’IWD2EE, notamment le butin rapide, des temps de chargement plus rapides et la compatibilité grand écran intégrée.
 
 @mrfearless a créé le chargeur IEex qui permet d’exécuter des fonctions Lua dans IWD2.
 
 @kjeron a créé de nombreuses fonctions WeiDU qui sont utilisées dans l’installation d’IWD2EE pour modifier les fichiers d’IWD2.
 
-@CamDawg a révisé certains des fichiers WeiDU d’IWD2EE pour qu’ils s’exécutent plus rapidement.
+@CamDawg a revu certains des fichiers WeiDU d’IWD2EE pour qu’ils s’exécutent plus rapidement.
 
 @Improbabile68 a traduit IWD2EE en italien.
 
 @paladin, klichko86 et rytomen ont traduit IWD2EE en russe.
 
+@WillScarlettOhara a traduit IWD2EE en français et a apporté quelques correctifs à la VF du jeu.
+
+@Luren nous fait profiter de ses correctifs apportés à la VF du jeu.
+
 Andrii Shafetov - alias @ashafetov - a créé le nouvel écran de menu principal d’IWD2EE et les écrans de démarrage du prologue et des deux premiers chapitres.
 
 Igor Levchenko - alias @Igor_Levchenko - a peint le portrait de Vrek Griffe-Vile.
 
-@Vertis a créé l’image du nouveau panneau de ramassage rapide.
+@Vertis a créé l’image de la nouvelle interface de butin rapide.
 
 @mleduque a corrigé une commande spécifique à un système d’exploitation dans l’installation WeiDU pour qu’elle fonctionne peut-être sous Linux.
 
@@ -611,4 +615,3 @@ Plusieurs personnes sur Discord, dont @Vertis, @rbaker et @IcewindDale2, ont ré
 Merci à Erephine d’avoir permis à IWD2EE d’utiliser les animations de 1 Pixel Productions.
 
 Et enfin, merci aux plus de 300 personnes qui ont testé IWD2EE avant sa sortie. Un merci tout particulier à @Gazoo, @Firecrow, @deeel, @IcewindDale2, et @Fallen Prince pour leurs commentaires détaillés sur notre Discord.
-
