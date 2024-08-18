@@ -22,7 +22,7 @@ Français
 
 ## Composants :
 
-1. [Noyau d'IWD2EE](#1-noyau-diwd2ee)
+1. [Noyau d’IWD2EE](#1-noyau-diwd2ee)
 2. [Remaniement des classes](#2-remaniement-des-classes)
 3. [Restrictions concernant l’alignement des classes assouplies](#3-restrictions-concernant-lalignement-des-classes-assouplies)
 4. [Remaniement des sorts](#4-remaniement-des-sorts)
