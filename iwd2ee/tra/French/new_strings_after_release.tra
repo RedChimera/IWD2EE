@@ -1,135 +1,135 @@
 //Tous les nouveaux textes ajoutés à IWD2EE après le début des traductions doivent
 // être mis ici pour faciliter le travail des traducteurs.
-@539	= ~RÔDEUR :
+@539	= ~RÔDEUR :
 
 Le rôdeur est un guerrier et un forestier. Il est adroit dans le maniement des armes et compétent dans l’observation et la connaissance de la nature. Il lui arrive souvent de protéger et de guider les voyageurs égarés et les honnêtes paysans. Pour vivre longtemps, un rôdeur doit être fort et connaître les voies de la nature.
 
-REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
-Points de vie par niveau : 1-10
+Points de vie par niveau : 1-10
 
-Avantages :
+Avantages :
 * Compétent avec toutes les armes courantes et de guerre, les armures légères, les armures intermédiaires et les boucliers.
-* Les rôdeurs peuvent choisir un Ennemi Juré au premier niveau. Ils gagnent alors +1 aux jets d’attaque et +4 aux dégâts contre les créatures de ce type. Les rôdeurs gagnent un Ennemi Juré supplémentaire tous les cinq niveaux, et le bonus d’attaque contre les anciens Ennemis Jurés augmente de 1.
-* Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s’ils possédaient les dons Ambidextrie et Combat à 2 armes.
-* 2ème niveau : Incantation. Les rôdeurs acquièrent la capacité de lancer des sorts.
-* 6ème niveau : Le rôdeur peut obtenir le don Attaque Tourbillon s’il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
-* 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu’il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d’échec au jet de sauvegarde de Réflexes. Le DD du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
-* 7ème niveau : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile d’araignée et Croissance d’épines.
-* 9ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri, même s’il ne remplit pas les conditions préalables.
-* 15ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri une seconde fois, ce qu’aucune autre classe ne peut faire.
+* Les rôdeurs peuvent choisir un Ennemi Juré au premier niveau. Ils gagnent alors +1 aux jets d'attaque et +4 aux dégâts contre les créatures de ce type. Les rôdeurs gagnent un Ennemi Juré supplémentaire tous les cinq niveaux, et le bonus d'attaque contre les anciens Ennemis Jurés augmente de 1.
+* Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s'ils possédaient les dons Ambidextrie et Combat à 2 armes.
+* 2ème niveau : Incantation. Les rôdeurs acquièrent la capacité de lancer des sorts.
+* 6ème niveau : Le rôdeur peut obtenir le don Attaque Tourbillon s'il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
+* 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le DD du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
+* 7ème niveau : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile d’araignée et Croissance d'épines.
+* 9ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu nourri, même s'il ne remplit pas les conditions préalables.
+* 15ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
 
-Désavantages :
+Désavantages :
 * Les rôdeurs gagnent des dons à un rythme plus lent que les guerriers.
 * Les rôdeurs commencent sans compétence en armure lourde.~
 
 @10384	= ~La Robe de Mage de Résistance au Froid est monnaie courante dans la région de la Côte des Epées, en particulier en remontant vers le nord, en direction de Padhiver et du Val de Bise. De nombreux jeunes apprentis magiciens la reçoivent en cadeau à la fin de leurs études, après avoir passé cinq ans auprès de leurs professeurs.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance :  20/- de résistance au froid
+Résistance :  20/- de résistance au froid
 Augmente de 20% tous les dégâts de froid infligés par le personnage
-Poids : 3 lb (1,36 kg)~
+Poids : 3 lb (1,36 kg)~
 
 @10717	= ~Dague de Flammes Jumelles +5~
 @10718	= ~La dague diffère du couteau par sa lame, qui est à la fois pointue, un peu plus grande et à double tranchant.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d4 + 5
-Bonus d’attaque : +5
-Enchantement : +5
-Type de dégâts : Perforants
-Spécial :
- Flammes jumelles : +1d6 de dégâts du feu. Si le personnage combat à deux armes, son autre arme bénéficie également de +1d6 de dégâts du feu.
-Poids : 1 lb (0,45 kg)
-Compétence : arme courante, petite lame/à mains nues
-Type d’arme : à une main~
+Dégâts : 1d4 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Perforants
+Spécial :
+ Flammes jumelles : +1d6 de dégâts du feu. Si le personnage combat à deux armes, son autre arme bénéficie également de +1d6 de dégâts du feu.
+Poids : 1 lb (0,45 kg)
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
 
 @10809	= ~Tueuse du Silence +3~
 @10810	= ~L’histoire de Tueuse du Silence est connue de tous, mais il est difficile de dire si elle est véridique ou non. Elle évoque deux frères qui se disputaient le trône de leur père malade. Quand l’aîné fut nommé roi par le monarque mourant, le cadet, fou de rage, jura de s’emparer du trône. Il fit forger cette épée afin de tuer son frère.
 
 Beaucoup d’histoires similaires circulent à propos de nombreuses armes, et il est bien difficile de dire si elles sont vérifiées ou non. Reste que Tueuse du Silence est une arme rêvée pour un assassin, puisqu’elle permet à son possesseur de se fondre dans l’ombre et de faire aussi peu de bruit qu’un félin traquant sa proie.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d6 + 3
-Bonus d’attaque : +3
-Enchantement : +3
-Type de dégâts : Perforants
-Spécial :
- Déplacement silencieux : +6
- Discrétion : +6
- Véritable attaque sournoise : si le porteur attaque depuis l’ombre ou alors qu’il est invisible, et s’il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 6d6.
-Poids : 3 lb (1,36 kg)
-Compétence : arme courante, petite lame/à mains nues
-Type d’arme : à une main~
-@10811	= ~Lame de l’Assassin +5~
-@10812	= ~L’histoire de la Lame de l’Assassin est connue de tous, mais il est difficile de dire si elle est véridique ou non. Elle évoque deux frères qui se disputaient le trône de leur père malade. Quand l’aîné fut nommé roi par le monarque mourant, le cadet, fou de rage, jura de s’emparer du trône. Il fit forger cette lame afin de tuer son frère.
+Dégâts : 1d6 + 3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Perforants
+Spécial :
+ Déplacement silencieux : +6
+ Discrétion : +6
+ Véritable attaque sournoise : si le porteur attaque depuis l'ombre ou alors qu'il est invisible, et s'il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 6d6.
+Poids : 3 lb (1,36 kg)
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
+@10811	= ~Lame de l'Assassin +5~
+@10812	= ~L'histoire de la Lame de l'Assassin est connue de tous, mais il est difficile de dire si elle est véridique ou non. Elle évoque deux frères qui se disputaient le trône de leur père malade. Quand l'aîné fut nommé roi par le monarque mourant, le cadet, fou de rage, jura de s'emparer du trône. Il fit forger cette lame afin de tuer son frère.
 
-Beaucoup d’histoires similaires circulent à propos de nombreuses armes, et il est bien difficile de dire si elles sont vraies ou non. Reste que la Lame de l’Assassin est l’arme rêvée pour un assassin, puisqu’elle permet à son possesseur de se fondre dans l’ombre et de faire aussi peu de bruit qu’un félin traquant sa proie.
+Beaucoup d'histoires similaires circulent à propos de nombreuses armes, et il est bien difficile de dire si elles sont vraies ou non. Reste que la Lame de l'Assassin est l'arme rêvée pour un assassin, puisqu'elle permet à son possesseur de se fondre dans l'ombre et de faire aussi peu de bruit qu'un félin traquant sa proie.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d6 + 5
-Bonus d’attaque : +5
-Enchantement : +5
-Type de dégâts : Perforants
-Spécial :
- Déplacement Silencieux : +12
- Discrétion : +12
- Véritable attaque sournoise : si le porteur attaque depuis l’ombre ou alors qu’il est invisible, et s’il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 10d6.
-Poids : 3 lb (1,36 kg)
-Compétence : arme courante, petite lame/à mains nues
-Type d’arme : à une main~
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Perforants
+Spécial :
+ Déplacement Silencieux : +12
+ Discrétion : +12
+ Véritable attaque sournoise : si le porteur attaque depuis l'ombre ou alors qu'il est invisible, et s'il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 10d6.
+Poids : 3 lb (1,36 kg)
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
 
-@11386	= ~Le gourdin de confusion a été conçu par l’ogresse Shavauntea pour "l’offrir" à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à "insuffler un peu d’intelligence dans cette tête vide". Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l’improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance. Ce n’est apparemment pas le cas.
+@11386	= ~Le gourdin de confusion a été conçu par l’ogresse Shavauntea pour "l’offrir" à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à "insuffler un peu d’intelligence dans cette tête vide". Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l'improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance. Ce n’est apparemment pas le cas.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d6 +5
-Bonus d’attaque : +5
-Enchantement : +5
-Type de dégâts : Contondants
-Spécial :
- Contondant : 66% de chances d’infliger +3d6 points de dégâts contondants à la tête.
- Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de DD 33)
- Impact : Augmente les chances d’infliger un coup critique
-Poids : 3 lb (1,36 kg)
-Compétence : arme courante, masse
-Type d’arme : à une main~
+Dégâts : 1d6 +5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Contondants
+Spécial :
+ Contondant : 66% de chances d'infliger +3d6 points de dégâts contondants à la tête.
+ Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de DD 33)
+ Impact : Augmente les chances d'infliger un coup critique
+Poids : 3 lb (1,36 kg)
+Compétence : arme courante, masse
+Type d'arme : à une main~
 
-@12268	= ~Les baguettes mesurent en général 40 à 50 cm. Faites d’ivoire, d’os ou de bois, elles sont fragiles. Leurs extrémités sont souvent renforcées par du métal, du cristal ou de la pierre. En général, elles sont conservées dans des boîtes de bois précieux.
+@12268	= ~Les baguettes mesurent en général 40 à 50 cm. Faites d'ivoire, d'os ou de bois, elles sont fragiles. Leurs extrémités sont souvent renforcées par du métal, du cristal ou de la pierre. En général, elles sont conservées dans des boîtes de bois précieux.
 
-Les baguettes disposent d’un nombre de charges et chaque utilisation en consomme une ou plusieurs (selon la baguette). Lorsqu’une baguette utilise sa dernière charge, elle se consume et devient inutilisable.
+Les baguettes disposent d'un nombre de charges et chaque utilisation en consomme une ou plusieurs (selon la baguette). Lorsqu'une baguette utilise sa dernière charge, elle se consume et devient inutilisable.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Augmente de 30% les dégâts du feu, de froid, d’électricité et d’acide pendant 20 rounds (pas de sauvegarde, non cumulable).
-Portée : 30 mètres (100 pieds)
-Poids : 1 lb (0,45 kg)~
+Augmente de 30% les dégâts du feu, de froid, d'électricité et d’acide pendant 20 rounds (pas de sauvegarde, non cumulable).
+Portée : 30 mètres (100 pieds)
+Poids : 1 lb (0,45 kg)~
 @12639	= ~Billes de la Dévastation +5~
-@12640	= ~Cette bille a été imprégnée d’énergie magique, ce qui la rend un peu plus équilibrée et légère.
+@12640	= ~Cette bille a été imprégnée d'énergie magique, ce qui la rend un peu plus équilibrée et légère.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d4 +5
-Bonus d’attaque : +5
-Enchantement : +5
-Type de dégâts : Projectile (contondant)
-Spécial :
+Dégâts : 1d4 +5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Projectile (contondant)
+Spécial :
  Inflige le triple des dégâts en cas de coup critique
-Poids : 0
-Arme utilisée : fronde~
+Poids : 0
+Arme utilisée : fronde~
 @35653 	= ~Répulsion~
 @36653 	= ~Répulsion
 (Abjuration)
-Niveau : Bar 7, Prê 6, Ens/Mag 7, Heaum 5
-Portée : lanceur
-Durée : 3 rounds
-Temps d’incantation : 6
-Zone d’effet : rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Vigueur annule
+Niveau : Bar 7, Prê 6, Ens/Mag 7, Heaum 5
+Portée : lanceur
+Durée : 3 rounds
+Temps d'incantation : 6
+Zone d'effet : rayon de 6 mètres (20 pieds)
+Jet de sauvegarde : Vigueur annule
 
 Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projetant loin du lanceur. Tout ennemi qui entre dans la zone d’effet doit réussir un jet de sauvegarde de Vigueur avec -5 au Degré de Difficulté sous peine d’être repoussé.~
 
@@ -137,60 +137,60 @@ Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projet
 @1010 = ~Cercle d’ossements~
 @1011 = ~Cercle d’ossements
 (Nécromancie)
-Niveau : Prê 3
-Portée : lanceur
-Durée : 3 rounds
-Temps d’incantation : 3
-Zone d’effet : rayon de 1 mètre (3 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 3
+Portée : lanceur
+Durée : 3 rounds
+Temps d’incantation : 3
+Zone d’effet : rayon de 1 mètre (3 pieds)
+Jet de sauvegarde : aucun
 
 Ce sort fait apparaître une barrière d’ossements tourbillonnants autour du prêtre. Quiconque tente de la franchir subit 2d6 points de dégâts contondants plus 2d6 points de dégâts tranchants par round. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @1016 = ~Empoisonnement~
 @1017 = ~Empoisonnement
 (Nécromancie)
-Niveau : Prê 4, Dru 3
-Portée : toucher
-Durée : 30 secondes
-Temps d’incantation : 7
-Zone d’effet : 1 créature
-Jet de sauvegarde : la Vigueur annule
+Niveau : Prê 4, Dru 3
+Portée : toucher
+Durée : 30 secondes
+Temps d’incantation : 7
+Zone d’effet : 1 créature
+Jet de sauvegarde : la Vigueur annule
 
 Ce sort donne au lanceur la possibilité de toucher une créature et de l’empoisonner instantanément. Le poison inflige 2 dégâts par seconde pendant 30 secondes, puis se dissipe du corps de la cible. Tous les 6 niveaux de lanceur de sorts, le poison inflige un point de dégâts supplémentaire par seconde, jusqu’à un maximum de 7 dégâts par seconde au niveau 30. Un jet de sauvegarde de Vigueur réussi annule tout effet. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @1022 = ~Cercle de lames~
 @1023 = ~Cercle de lames
 (Évocation)
-Niveau : Prê 6, Pal 5,  Heaum 6, Tempus 6
-Portée : lanceur
-Durée : 2 rounds
-Temps d’incantation : 9
-Zone d’effet : rayon de 1 mètre (3 pieds)
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Prê 6, Pal 5,  Heaum 6, Tempus 6
+Portée : lanceur
+Durée : 2 rounds
+Temps d’incantation : 9
+Zone d’effet : rayon de 1 mètre (3 pieds)
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort invoque un mur de lames acérées tournoyantes autour du lanceur, créant ainsi une barrière de protection. Toute créature tentant de franchir ce mur de lames subit 10d8 points de dégâts. Un jet de Réflexes réussi réduit les dégâts de moitié. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @1024 = ~Colère spirituelle~
 @1025 = ~Colère spirituelle
 (Évocation)
-Niveau : Prê 6, Pal 6, Heaum 7, Tempus 6
-Portée : portée de vue
-Durée : instantanée
-Temps d’incantation : 2
-Zone d’effet : Spéciale
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Prê 6, Pal 6, Heaum 7, Tempus 6
+Portée : portée de vue
+Durée : instantanée
+Temps d’incantation : 2
+Zone d’effet : Spéciale
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 À la fin de ce sort, le lanceur de sorts devient un foyer d’énergie spirituelle, qui jaillit ensuite du lanceur dans quatre directions, comme des éclairs. Le lanceur précise la direction de l’un des éclairs et les autres éclairs partent à l’opposé et perpendiculairement à cette direction, complétant ainsi un motif en forme de croix. Toutes les créatures sur le chemin des éclairs subissent 5d20 points de dégâts magiques, avec un jet de Réflexes pour la moitié des dégâts. Les créatures du même alignement moral (bon, neutre, mauvais) que le lanceur ne sont pas affectées par le sort. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @1136    	= ~Rage de Malavon~
 @1137    	= ~Rage de Malavon
 (Évocation)
-Niveau : Ens/Mag 7
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 1
-Zone d’effet : Rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Ens/Mag 7
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 1
+Zone d’effet : Rayon de 4,5 mètres (15 pieds)
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 La Rage de Malavon a été créée par le sorcier elfe noir Malavon. Elle projette des dards d’énergie pure à partir du corps du lanceur dans toutes les directions, blessant amis et ennemis. Les barbillons magiques infligent 25d4 points de dégâts perforants à tout ce qui se trouve sur leur passage (jet de Réflexes avec +2 au Degré de Difficulté pour la moitié des dégâts). Ce sort est particulièrement utile lorsque le lanceur est entouré d’ennemis, et il ne provoquera pas d’attaque d’opportunité.
 
@@ -199,463 +199,463 @@ Comme la plupart des sorts créés par les drows, la Rage de Malavon est conçue po
 @1623    	= ~Rage animale~
 @1624    	= ~Rage animale
 (Enchantement)
-Niveau : Dru 4, Rôd 3
-Portée : portée de vue
-Durée : 10 rounds
-Temps d’incantation : 1
-Zone d’effet : 1 créature
-Jet de sauvegarde : Spécial
+Niveau : Dru 4, Rôd 3
+Portée : portée de vue
+Durée : 10 rounds
+Temps d’incantation : 1
+Zone d’effet : 1 créature
+Jet de sauvegarde : Spécial
 
 Ce sort imprègne la créature ciblée de férocité animale. La créature ciblée gagne +4 en Force, +4 en Constitution, +20% de mouvement, et +2 à tous les jets de sauvegarde. La cible perd la capacité de lancer des sorts pendant la durée de Rage animale. Elle peut être contrôlée normalement, sauf si des ennemis sont en vue, auquel cas la cible attaque immédiatement en mêlée, utilisant ce qu’elle a sous la main. Il y a 5% de chance par round que la cible devienne incontrôlable, attaquant amis et ennemis sans distinction. Les alliés sont automatiquement affectés, tandis que les ennemis peuvent effectuer un jet de Volonté pour éviter les effets.~
 
 @1680    	= ~Couleurs dansantes~
 @1681    	= ~Couleurs dansantes
 (Illusion)
-Niveau : Bar 1, Ens/Mag 1
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 1
-Zone d’effet : Cône de 1,5m x 6m x 6m
-Jet de sauvegarde : Volonté annule
+Niveau : Bar 1, Ens/Mag 1
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 1
+Zone d’effet : Cône de 1,5m x 6m x 6m
+Jet de sauvegarde : Volonté annule
 
-Un cône de couleurs vives et tourbillonnantes jaillit de la main tendue du lanceur. Le sort affecte chaque créature prise dans la zone d’effet en fonction de ses Dés de Vie :
+Un cône de couleurs vives et tourbillonnantes jaillit de la main tendue du lanceur. Le sort affecte chaque créature prise dans la zone d’effet en fonction de ses Dés de Vie :
 
-Jusqu’à 2 DV : Inconsciente pendant 5 rounds
-3 ou 4 DV : Aveuglée pendant 3 rounds
-5 DV ou plus : Étourdie pendant 1 round
+Jusqu’à 2 DV : Inconsciente pendant 5 rounds
+3 ou 4 DV : Aveuglée pendant 3 rounds
+5 DV ou plus : Étourdie pendant 1 round
 
 Un jet de sauvegarde de Volonté réussi avec +2 Degré de Difficulté annule l’effet. Les créatures aveugles ne sont pas affectées par le jet de couleurs. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @1893     	= ~Mains brûlantes~
 @1894     	= ~Mains brûlantes
 (Transmutation)
-Niveau : Dru 1, Ens/Mag 1
-Portée : lanceur
-Durée : Instantané
-Temps d’incantation : 1
-Zone d’effet : Jet de flammes de 3 mètres (10 pieds) de long, centré sur les mains du lanceur
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Dru 1, Ens/Mag 1
+Portée : lanceur
+Durée : Instantané
+Temps d’incantation : 1
+Zone d’effet : Jet de flammes de 3 mètres (10 pieds) de long, centré sur les mains du lanceur
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Lorsque le magicien lance ce sort, un jet de flammes jaillit de ses doigts. Les flammes ont une longueur de 1,5 mètre (5 pieds) et s’étendent en un arc horizontal d’environ 120 degrés devant le magicien. Toute créature dans la zone d’effet subit 1d4 points de dégâts par niveau de lanceur (maximum de 5d4). Un jet de sauvegarde de Réflexes réussi réduit les dégâts de moitié. Ce sort ne provoque pas d’attaque d’opportunité.~
 @31117     	= ~Doigts de Givre~
 @32117     	= ~Doigts de Givre
 (Transmutation)
-Niveau : Dru 1
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 1
-Zone d’effet : arc de 1,5 mètre (5 pieds) de long sur 120 degrés
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Dru 1
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 1
+Zone d’effet : arc de 1,5 mètre (5 pieds) de long sur 120 degrés
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Une fois l’incantation achevée, un arc de cercle de froid intense émane des doigts tendus du personnage. Toutes les créatures prises dans la zone d’effet subissent 1d3+1 points de dégâts de froid par niveau du lanceur, jusqu’à un maximum de 1d3+10 points. De plus, la créature est ralentie pour 2 rounds. Un jet de Réflexes réussi réduit les dégâts de moitié et annule l’effet de ralentissement. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @31226     	= ~Fragments de lune~
 @32226     	= ~Fragments de lune
 (Invocation)
-Niveau : Dru 2, Séluné 1
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 3
-Zone d’effet : cône de 1,5 mètre x 6 mètres x 6 mètres (5’ x 20’ x 20’)
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Dru 2, Séluné 1
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 3
+Zone d’effet : cône de 1,5 mètre x 6 mètres x 6 mètres (5’ x 20’ x 20’)
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort fait appel aux liens de Séluné avec la lune et les arcanes pour invoquer une pluie de sphères luisantes. Le sort inflige 1d6 dégâts magiques par niveau (max 5d6) à toute créature sur son passage. Les créatures peuvent effectuer un jet de sauvegarde de Réflexes pour réduire de moitié les dégâts. Ce sort ne provoque pas d’attaque d’opportunité.~
 
 @31409     	= ~Manteau de terreur~
 @32409     	= ~Manteau de terreur
 (Invocation)
-Niveau : Prê 4, Bane 4
-Portée : lanceur
-Durée : 6 rounds
-Temps d’incantation : 6
-Zone d’effet : lanceur
-Jet de sauvegarde : Volonté annule
+Niveau : Prê 4, Bane 4
+Portée : lanceur
+Durée : 6 rounds
+Temps d’incantation : 6
+Zone d'effet : lanceur
+Jet de sauvegarde : Volonté annule
 
 Manteau de terreur confère au lanceur une aura de terreur s’étendant à 1,50 mètre (5 pieds) autour de lui. Tous ceux qui l’approchent doivent réussir un jet de Volonté ou s’enfuir, paniqués, pendant 1 round. En cas de succès, ils doivent continuer à effectuer deux jets de Volonté par round tant qu’ils restent dans la zone d’effet du Manteau de terreur. Le sort n’affecte pas les morts-vivants. Ce sort ne provoque pas d’attaque d’opportunité.~
 @33519     	= ~Feu solaire~
 @34519     	= ~Feu solaire
 (Évocation)
-Niveau : Ens/Mag 5
-Portée : lanceur
-Durée : Instantané
-Temps d’incantation : 3
-Zone d’effet : Rayon de 9 mètres (30 pieds)
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Ens/Mag 5
+Portée : lanceur
+Durée : Instantané
+Temps d’incantation : 3
+Zone d’effet : Rayon de 9 mètres (30 pieds)
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Un feu solaire est une explosion de flammes similaire à une boule de feu, mais centrée sur le lanceur de sorts. Toutes les créatures dans la zone d’effet, à l’exception du lanceur de sorts, subissent 1d6 points de dégâts de feu par niveau du lanceur de sorts (maximum 15d6, minimum 12d6). Un jet de sauvegarde de Réflexes réussi réduit les dégâts de moitié. Ce sort aveugle les drows et les duergars s’ils échouent à un jet de sauvegarde de Vigueur. Ce sort ne provoque pas d’attaque d’opportunité.~
 
-@55377=~Le corps de ce personnage a été détruit. Un sort de Résurrection sera nécessaire pour les ramener à la vie ; Rappel à la vie ne suffira pas.~
-@55378=~L’âme de ce personnage a été capturée. Le réceptacle de leur âme doit être détruit avant qu’ils puissent être ramenés à la vie.~
-@523    	= ~MAGICIEN :
+@55377=~Le corps de ce personnage a été détruit. Un sort de Résurrection sera nécessaire pour les ramener à la vie ; Rappel à la vie ne suffira pas.~
+@55378=~L'âme de ce personnage a été capturée. Le réceptacle de leur âme doit être détruit avant qu'ils puissent être ramenés à la vie.~
+@523    	= ~MAGICIEN :
 
-Le magicien est passé maître dans l’art de manipuler les énergies magiques et de les utiliser sous forme de sortilèges. Il doit pour cela étudier des langues ésotériques et des tomes obscurs, passant le plus clair de son temps à effectuer des recherches. La survie d’un magicien repose sur son intelligence et ses connaissances. Il part rarement à l’aventure sans être encadré par des guerriers ou des hommes d’armes. Il existe plusieurs écoles de magie qui forment donc différents types de magiciens. Toutefois, le généraliste étudie toutes les sortes de magie et a accès à une grande variété de sorts. C’est donc bien souvent un compagnon plein de ressources.
+Le magicien est passé maître dans l'art de manipuler les énergies magiques et de les utiliser sous forme de sortilèges. Il doit pour cela étudier des langues ésotériques et des tomes obscurs, passant le plus clair de son temps à effectuer des recherches. La survie d'un magicien repose sur son intelligence et ses connaissances. Il part rarement à l'aventure sans être encadré par des guerriers ou des hommes d'armes. Il existe plusieurs écoles de magie qui forment donc différents types de magiciens. Toutefois, le généraliste étudie toutes les sortes de magie et a accès à une grande variété de sorts. C'est donc bien souvent un compagnon plein de ressources.
 
-Remarque : pour lancer un sort, le magicien doit avoir un niveau d’intelligence égal ou supérieur à celui du sort. L’intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+Remarque : pour lancer un sort, le magicien doit avoir un niveau d'intelligence égal ou supérieur à celui du sort. L'intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
-Points de vie par niveau : 1-4
+Points de vie par niveau : 1-4
 
-Avantages :
+Avantages :
 * Compétent avec toutes les armes courantes sauf les armes à projectiles.
 * Reçoit un don supplémentaire tous les 5 niveaux, en plus des dons normaux attribués à toutes les autres classes tous les 3 niveaux.
 * Si le personnage ne se spécialise pas dans une école de magie, il gagne un bonus de +1 au Degré de Difficulté de tous ses sorts.
-* Apprend deux nouveaux sorts à chaque fois qu’il monte de niveau, et peut également apprendre des sorts à partir de parchemins.
+* Apprend deux nouveaux sorts à chaque fois qu'il monte de niveau, et peut également apprendre des sorts à partir de parchemins.
 
-Désavantages :
+Désavantages :
 * Débute sans aucune compétence en armure, très médiocre en combat au corps à corps.~
-@527	= ~BARDE :
+@527	= ~BARDE :
 
-Le barde tire sa force de sa personnalité agréable et charmante. Grâce à elle et à son intelligence, il fait son chemin dans le monde. Le barde est un musicien talentueux et un conteur itinérant qui connaît nombre de légendes et autres histoires. Toutes les rencontres qu’il fait sont autant de sources de connaissance et d’inspiration ; il sait tout faire, mais n’est maître en rien. Les bardes sont souvent des voleurs, mais leurs chants et leurs contes leur ouvrent les portes les plus hermétiquement closes.
+Le barde tire sa force de sa personnalité agréable et charmante. Grâce à elle et à son intelligence, il fait son chemin dans le monde. Le barde est un musicien talentueux et un conteur itinérant qui connaît nombre de légendes et autres histoires. Toutes les rencontres qu'il fait sont autant de sources de connaissance et d'inspiration ; il sait tout faire, mais n'est maître en rien. Les bardes sont souvent des voleurs, mais leurs chants et leurs contes leur ouvrent les portes les plus hermétiquement closes.
 
-Points de vie par niveau : 1-6
+Points de vie par niveau : 1-6
 
-Avantages :
+Avantages :
 * Compétent avec toutes les armes courantes, les armures légères et moyennes et les boucliers. Le barde peut aussi manier les grandes épées.
-* Gagne un point en Secrets des arcanes, réduisant l’échec des sorts profanes de 35%.
+* Gagne un point en Secrets des arcanes, réduisant l'échec des sorts profanes de 35%.
 * +1 en Alchimie, en Connaissances (Mystères) et en Connaissance des sorts.
-* Niveau 2 : Incantation. Les bardes peuvent lancer des sorts mineurs de magicien.
-* Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer des sorts qu’au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu’il peut lancer (par exemple, seulement un sort de niveau 1 lorsque le barde atteint le niveau 7), bien qu’il puisse remplacer des sorts de niveau 7 à partir du niveau 25, et des sorts de niveau 8 à partir du niveau 28.
+* Niveau 2 : Incantation. Les bardes peuvent lancer des sorts mineurs de magicien.
+* Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsque le barde atteint le niveau 7), bien qu'il puisse remplacer des sorts de niveau 7 à partir du niveau 25, et des sorts de niveau 8 à partir du niveau 28.
 * De nombreuses compétences de roublard sont également des compétences de barde.
 * Chants du barde. Les bardes peuvent interpréter des mélodies qui produisent des effets magiques sur les créatures dans un rayon de 9 mètres (30 pieds). Plus ils gagnent de niveaux, plus leur répertoire musical est étendu. Voici un descriptif de ces chants.
-* Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu’il est joué, tous les alliés du barde gagnent +1 au jet d’attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d’attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
-* Niveau 3 : La Chanson des Kaudies. Lorsqu’elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d’outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
-* Niveau 5 : La Mélodie de Tymora. Lorsqu’elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
-* Niveau 9 : L’Appel de la Sirène. Lorsqu’il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d’être enchantée, incapable d’agir pendant un round ou jusqu’à ce qu’elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d’un barde de niveau 15 a un DD de 15.
-* Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
-* Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+* Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
+* Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
+* Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
+* Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un DD de 15.
+* Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
+* Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
-Un barde ne peut pas faire bénéficier le groupe de plus d’une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
+Un barde ne peut pas faire bénéficier le groupe de plus d'une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
 
-* Niveau 30 : Le barde peut maintenant effectuer d’autres actions tout en chantant une chanson de barde.
+* Niveau 30 : Le barde peut maintenant effectuer d'autres actions tout en chantant une chanson de barde.
 
-Désavantages :
+Désavantages :
 * En combat rapproché, les bardes ne sont pas aussi efficaces que les guerriers ou les prêtres.
 * Les bardes peuvent lancer moins de sorts que les mages ou les prêtres.~
-@569	= ~ENSORCELEUR :
+@569	= ~ENSORCELEUR :
 
 Les ensorceleurs pratiquent la magie et possèdent un don inné pour les sorts. On dit que le sang de puissantes créatures coule dans leurs veines et qu’ils seraient les descendants de dragons ayant pris une forme humanoïde. Quoi qu’il en soit, la magie des ensorceleurs repose davantage sur l’intuition que sur la logique. Leur connaissance des sorts est moins étendue et plus difficile à acquérir que celle des magiciens, mais ils peuvent en lancer plus souvent et n’ont pas besoin de les préparer à l’avance. Les ensorceleurs ne peuvent pas se spécialiser dans un domaine de magie, contrairement aux magiciens. Ce sont là les seules différences qui permettent de distinguer les ensorceleurs des magiciens.
 
-REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le DD de ses jets de sort et le nombre de sorts supplémentaires.
+REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le DD de ses jets de sort et le nombre de sorts supplémentaires.
 
-Points de vie par niveau : 1-4
+Points de vie par niveau : 1-4
 
-Avantages :
+Avantages :
 * Compétent avec toutes les armes courantes.
-* 6ème niveau : L’ensorceleur peut remplacer un de ses sorts connus par un autre sort de même niveau. Il peut faire cela tous les 2 niveaux après le niveau 6. L’ensorceleur ne peut remplacer des sorts qu’au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu’il peut lancer (par exemple, seulement un sort de niveau 1 lorsqu’il atteint le niveau 6 d’ensorceleur), mais peut remplacer des sorts de niveau 8 à partir du niveau 20 d’ensorceleur et des sorts de niveau 9 à partir du niveau 22 d’ensorceleur.
+* 6ème niveau : L'ensorceleur peut remplacer un de ses sorts connus par un autre sort de même niveau. Il peut faire cela tous les 2 niveaux après le niveau 6. L’ensorceleur ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsqu'il atteint le niveau 6 d’ensorceleur), mais peut remplacer des sorts de niveau 8 à partir du niveau 20 d’ensorceleur et des sorts de niveau 9 à partir du niveau 22 d’ensorceleur.
 
-Désavantages :
+Désavantages :
 * Débute sans aucune compétence en armure et s’avère très faible en combat rapproché.~
-@55761=~Sélection de sorts profanes : Niveau 1~
-@55762=~Sélection de sorts profanes : Niveau 2~
-@55763=~Sélection de sorts profanes : Niveau 3~
-@55764=~Sélection de sorts profanes : Niveau 4~
-@55765=~Sélection de sorts profanes : Niveau 5~
-@55766=~Sélection de sorts profanes : Niveau 6~
-@55767=~Sélection de sorts profanes : Niveau 7~
-@55768=~Sélection de sorts profanes : Niveau 8~
-@55769=~Sélection de sorts profanes : Niveau 9~
+@55761=~Sélection de sorts profanes : Niveau 1~
+@55762=~Sélection de sorts profanes : Niveau 2~
+@55763=~Sélection de sorts profanes : Niveau 3~
+@55764=~Sélection de sorts profanes : Niveau 4~
+@55765=~Sélection de sorts profanes : Niveau 5~
+@55766=~Sélection de sorts profanes : Niveau 6~
+@55767=~Sélection de sorts profanes : Niveau 7~
+@55768=~Sélection de sorts profanes : Niveau 8~
+@55769=~Sélection de sorts profanes : Niveau 9~
 @55770=~Réinitialiser les sorts~
 @55771=~Vous ne pouvez pas apprendre plus de 24 sorts pour un seul niveau de sort.~
 @55772=~Vous pouvez choisir <EXWLNUM> sorts à ajouter dans votre livre de sorts.~
-@55773=~Vous pouvez choisir jusqu’à 1 sort que vous connaissez, qui est au moins 2 niveaux inférieurs au niveau de sort le plus élevé que vous pouvez lancer, et le remplacer par un autre sort du même niveau.~
-@55774=~Vous pouvez choisir jusqu’à <EXWLNUM> sorts que vous connaissez, qui sont au moins 2 niveaux inférieurs au niveau de sort le plus élevé que vous pouvez lancer, et les remplacer par d’autres sorts du même niveau.~
-@55781=~Remplacement de sort : Niveau 1~
-@55782=~Remplacement de sort : Niveau 2~
-@55783=~Remplacement de sort : Niveau 3~
-@55784=~Remplacement de sort : Niveau 4~
-@55785=~Remplacement de sort : Niveau 5~
-@55786=~Remplacement de sort : Niveau 6~
-@55787=~Remplacement de sort : Niveau 7~
-@55788=~Remplacement de sort : Niveau 8~
-@55789=~Remplacement de sort : Niveau 9~
+@55773=~Vous pouvez choisir jusqu'à 1 sort que vous connaissez, qui est au moins 2 niveaux inférieurs au niveau de sort le plus élevé que vous pouvez lancer, et le remplacer par un autre sort du même niveau.~
+@55774=~Vous pouvez choisir jusqu'à <EXWLNUM> sorts que vous connaissez, qui sont au moins 2 niveaux inférieurs au niveau de sort le plus élevé que vous pouvez lancer, et les remplacer par d'autres sorts du même niveau.~
+@55781=~Remplacement de sort : Niveau 1~
+@55782=~Remplacement de sort : Niveau 2~
+@55783=~Remplacement de sort : Niveau 3~
+@55784=~Remplacement de sort : Niveau 4~
+@55785=~Remplacement de sort : Niveau 5~
+@55786=~Remplacement de sort : Niveau 6~
+@55787=~Remplacement de sort : Niveau 7~
+@55788=~Remplacement de sort : Niveau 8~
+@55789=~Remplacement de sort : Niveau 9~
 
 @1871     	= ~Bénédiction~
 @1872     	= ~Bénédiction
 (Invocation)
-Niveau : Prê 1, Pal 1, Tempus 1
-Portée : portée de vue
-Durée : 10 rounds / niveau
-Temps d’incantation : 2
-Zone d’effet : rayon de 7,5 mètres (25 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Pal 1, Tempus 1
+Portée : portée de vue
+Durée : 10 rounds / niveau
+Temps d’incantation : 2
+Zone d’effet : rayon de 7,5 mètres (25 pieds)
+Jet de sauvegarde : aucun
 
 En prononçant ce sort, le lanceur augmente le bonus d’attaque et les jets de sauvegarde des créatures alliées dans la zone d’effet de +1. Bénédiction contre et dissipe Malédiction.~
 
 @1873     	= ~Malédiction~
 @1874     	= ~Malédiction
 (Enchantement)
-Niveau : Prê 1, Bane 1
-Portée : portée de vue
-Durée : 10 rounds / niveau
-Temps d’incantation : 2
-Zone d’effet : rayon de 7,5 mètres (25 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Bane 1
+Portée : portée de vue
+Durée : 10 rounds / niveau
+Temps d’incantation : 2
+Zone d’effet : rayon de 7,5 mètres (25 pieds)
+Jet de sauvegarde : aucun
 
 Malédiction est l’inverse de Bénédiction, et réduit le bonus d’attaque et les jets de sauvegarde des créatures ennemies dans la zone d’effet de 1 pendant la durée du sort. Malédiction contre et dissipe Bénédiction.~
 
-@214	= ~Endurance d’Ilmater
+@214	= ~Endurance d'Ilmater
 
-Cette capacité permet à un allié non maléfique de supporter bien plus de douleur mais aussi d’en subir plus, lui accordant un bonus de +20 en Constitution mais une vulnérabilité de -3 aux dégâts physiques pendant 8 heures.~
+Cette capacité permet à un allié non maléfique de supporter bien plus de douleur mais aussi d'en subir plus, lui accordant un bonus de +20 en Constitution mais une vulnérabilité de -3 aux dégâts physiques pendant 8 heures.~
 
 @31802 	= ~Guérison suprême de groupe~
 @32802 	= ~Guérison suprême de groupe
 (Invocation)
-Niveau : Prê 8, Dru 9, Lathandre 9
-Portée : portée de vue
-Durée : Instantanée
-Temps d’incantation : 9
-Zone d’effet : rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 8, Dru 9, Lathandre 9
+Portée : portée de vue
+Durée : Instantanée
+Temps d’incantation : 9
+Zone d’effet : rayon de 6 mètres (20 pieds)
+Jet de sauvegarde : aucun
 
 Ce sort guérit instantanément toutes les blessures et maladies des sujets, ainsi que la cécité et la débilité. Ils retrouvent tous les points de vie qu’ils avaient perdus. Les morts-vivants ennemis dans la zone d’effet subissent les effets d’un sort de Blessure critique si le lanceur réussit une attaque de contact à distance pour chacun d’eux.~
 
 @35952 	= ~Mise à mal de groupe~
 @36952 	= ~Mise à mal de groupe
 (Nécromancie)
-Niveau : Prê 9
-Portée : portée de vue
-Durée : Instantanée
-Temps d’incantation : 9
-Zone d’effet : Rayon de 6 mètres (20 ft)
-Jet de sauvegarde : Vigueur annule
+Niveau : Prê 9
+Portée : portée de vue
+Durée : Instantanée
+Temps d’incantation : 9
+Zone d’effet : Rayon de 6 mètres (20 ft)
+Jet de sauvegarde : Vigueur annule
 
-Mise à mal de groupe libère une énergie négative destructrice sur tous les ennemis vivants dans la zone d’effet. Le lanceur effectue des attaques de contact à distance contre chacune de ces créatures ; chacune d’elles touchée doit réussir un jet de sauvegarde de Vigueur ou perdre tous ses points de vie sauf un. Le Degré de Difficulté est le même que celui du sort Mise à mal de niveau 6. Les morts-vivants alliés dans la zone d’effet sont au contraire soignés complètement comme par un sort Guérison suprême.~
+Mise à mal de groupe libère une énergie négative destructrice sur tous les ennemis vivants dans la zone d’effet. Le lanceur effectue des attaques de contact à distance contre chacune de ces créatures ; chacune d’elles touchée doit réussir un jet de sauvegarde de Vigueur ou perdre tous ses points de vie sauf un. Le Degré de Difficulté est le même que celui du sort Mise à mal de niveau 6. Les morts-vivants alliés dans la zone d’effet sont au contraire soignés complètement comme par un sort Guérison suprême.~
 
 @1126	= ~Corps de Fer~
 @1127	= ~Corps de fer
 (Transmutation)
-Niveau : Ens/Mag 8, Heaum 8
-Portée : lanceur
-Durée : 1 round / niveau
-Temps d’incantation : 8
-Zone d’effet : lanceur de sorts
-Jet de sauvegarde : aucun
+Niveau : Ens/Mag 8, Heaum 8
+Portée : lanceur
+Durée : 1 round / niveau
+Temps d’incantation : 8
+Zone d’effet : lanceur de sorts
+Jet de sauvegarde : aucun
 
 Ce sort transforme le corps du lanceur en fer vivant, lui conférant plusieurs résistances et capacités puissantes. Tant que le sort est en vigueur, le lanceur a une résistance de 15/- au feu, au froid et à toutes formes de dégâts physiques, mais aussi une vulnérabilité de +15 à l’électricité. Les sorts qui affectent la respiration ou la physiologie du lanceur sont complètement ignorés, comme le poison, la cécité, la surdité et la maladie pour n’en nommer que quelques-uns, et le lanceur devient trop lourd pour être repoussé avec des sorts comme Rafale de vent, Lancer ou Répulsion. De plus, le lanceur gagne un bonus de +8 en Force et en Constitution et un malus de -8 en Dextérité. Malheureusement, le mouvement du lanceur devient lent et gênant sous le poids de son nouveau corps, ce qui réduit sa vitesse de déplacement à la moitié de sa vitesse normale, et il reçoit une pénalité de -2 à la vitesse d’incantation.~
 
 @1857	= ~Brume mortelle~
 @1858	= ~Brume mortelle
 (Transmutation)
-Niveau : Ens/Mag 6
-Portée : portée de vue
-Durée : 10 rounds
-Temps d’incantation : 6
-Zone d’effet : rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : aucun
+Niveau : Ens/Mag 6
+Portée : portée de vue
+Durée : 10 rounds
+Temps d’incantation : 6
+Zone d’effet : rayon de 4,5 mètres (15 pieds)
+Jet de sauvegarde : aucun
 
 Ce sort fait apparaître un nuage de brouillard acide. Le brouillard épais limite la vitesse de déplacement à 50% de la vitesse actuelle d’une créature. De plus, toutes les créatures prises dans le brouillard subissent 3d6 points de dégâts acides par round.~
 
 @37955 	= ~Brouillard corrosif de Malavon~
 @38955 	= ~Brouillard corrosif de Malavon
 (Invocation)
-Niveau : Ens/Mag 9
-Portée : portée de vue
-Durée : 30 rounds
-Temps d’incantation : 12
-Zone d’effet : rayon de 12 mètres (40 pieds)
-Jet de sauvegarde : Vigueur, 1/2 dégâts
+Niveau : Ens/Mag 9
+Portée : portée de vue
+Durée : 30 rounds
+Temps d’incantation : 12
+Zone d’effet : rayon de 12 mètres (40 pieds)
+Jet de sauvegarde : Vigueur, 1/2 dégâts
 
 Le Brouillard corrosif de Malavon est un autre sort créé par le sorcier elfe noir Malavon. Il crée un énorme nuage de brouillard acide qui persiste longtemps. Chaque round, toute créature dans le brouillard subit 12d6 dégâts d’acide (jet de Vigueur réussi pour réduire de moitié les dégâts), et leur vitesse de déplacement est réduite de moitié (il n’y a pas de jet de sauvegarde contre la pénalité de mouvement). La résistance à la magie de la cible, si elle en a, n’affecte pas ce sort.~
 
-@19910	= ~Nous avons utilisé les notes d’Imphraili pour achever ses expérimentations théoriques sur la transfusion d’un Sanguis Anima modifié dans notre propre flux sanguin. Le processus fut pénible et douloureux mais notre alchimiste connaît une nouvelle vigueur.~
-@19911	= ~Nous avons utilisé l’oeuf du dracosire blanc pour créer un liquide magique, que nous avons ensuite mélangé au sang de l’alchimiste. Son sang s’est refroidi, accroissant sa résistance au froid, mais le rendant plus vulnérable à la chaleur.~
+@19910	= ~Nous avons utilisé les notes d'Imphraili pour achever ses expérimentations théoriques sur la transfusion d'un Sanguis Anima modifié dans notre propre flux sanguin. Le processus fut pénible et douloureux mais notre alchimiste connaît une nouvelle vigueur.~
+@19911	= ~Nous avons utilisé l'oeuf du dracosire blanc pour créer un liquide magique, que nous avons ensuite mélangé au sang de l’alchimiste. Son sang s'est refroidi, accroissant sa résistance au froid, mais le rendant plus vulnérable à la chaleur.~
 @56005	= ~Absorption d’une Valeur de Caractéristique~
 @55370	= ~sonique~
 @55603	= ~ (Liche)~
 
-@316	= ~RENVERSEMENT :
+@316	= ~RENVERSEMENT :
 
 Vous êtes formé à renverser ou faire trébucher les ennemis en combat rapproché.
 
-Prérequis : Bonus de base à l’attaque de +6 ou plus
+Prérequis : Bonus de base à l’attaque de +6 ou plus
 
-Avantage : Vous gagnez une capacité qui vous permet de renverser ou de faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Sinon, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce DD est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu’un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité a pour conséquence une attaque de moins au round suivant.
+Avantage : Vous gagnez une capacité qui vous permet de renverser ou de faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Sinon, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce DD est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu’un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité a pour conséquence une attaque de moins au round suivant.
 
 Ce don peut être pris deux fois. Lorsqu’il est pris une deuxième fois, le don devient Renversement amélioré, ce qui ajoute un bonus de +2 au Degré de Difficulté, et permet de renverser ou faire trébucher des créatures d’une catégorie de taille supérieure (créatures dont le cercle a jusqu’à deux fois le rayon du vôtre).~
 
-@389 = ~VOIE DE LA LICHE :
+@389 = ~VOIE DE LA LICHE :
 
 Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité... tant que votre phylactère survit.
 
-Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, 12 niveaux de magicien ou d’ensorceleur ou 10 niveaux de nécromancien, et un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
+Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, 12 niveaux de magicien ou d’ensorceleur ou 10 niveaux de nécromancien, et un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
-Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
+Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
 * Bonus générique à la classe d’armure de +5.
 * +2 en Intelligence, Sagesse et Charisme.
-* Immunité au froid, à l’électricité, au poison, aux maladies, au saignement, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification, aux effets de métamorphose, aux coups critiques et aux attaques sournoises.
+* Immunité au froid, à l’électricité, au poison, aux maladies, au saignement, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d'énergie, à la mort instantanée, à la pétrification, aux effets de métamorphose, aux coups critiques et aux attaques sournoises.
 * Résistance de 5/- aux dégâts tranchants et perforants, réduction des dégâts de 5/+1.
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
-@390 = ~VOIE DE LA LICHE :
+@390 = ~VOIE DE LA LICHE :
 
 Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité... tant que votre phylactère survit.
 
-Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, 12 niveaux de magicien ou d’ensorceleur ou 10 niveaux de nécromancien, et un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
+Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, 12 niveaux de magicien ou d’ensorceleur ou 10 niveaux de nécromancien, et un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
-Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
+Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
 * Bonus à la classe d’armure de +5.
 * +2 en Intelligence, en Sagesse et en Charisme.
-* Immunité au froid, à l’électricité, au poison, aux maladies, au saignement, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification et aux effets de polymorphisme.
+* Immunité au froid, à l’électricité, au poison, aux maladies, au saignement, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d'énergie, à la mort instantanée, à la pétrification et aux effets de polymorphisme.
 * Résistance de 5/- aux dégâts tranchants et perforants, réduction des dégâts de 5/+1.
 * +8 de bonus en Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
-@704 = ~SAISIE :
+@704 = ~SAISIE :
 
 Bien que n’importe qui puisse attraper quelque chose, vous avez la faculté de saisir une créature hostile en plein combat.
 
-Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) sous peine d’être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d’échouer ses incantations et ne peut pas s’éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
+Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) sous peine d'être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d’échouer ses incantations et ne peut pas s’éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
 
 Pour pouvoir saisir, vous devez avoir au moins une main libre. Le Degré de Difficulté du jet de sauvegarde augmente de +4 si vous avez les deux mains libres. Il diminue de -4 chaque fois que quelqu’un a essayé de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou à terre, il n’y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
-@730 = ~ESQUIVE :
+@730 = ~ESQUIVE :
 
 Vous êtes passé maître dans l’art d’éviter les coups.
 
-Prérequis : Dex 13+. Prendre ce don une deuxième fois nécessite Dex 25+, Esquive surnaturelle et Roulade Défensive.
+Prérequis : Dex 13+. Prendre ce don une deuxième fois nécessite Dex 25+, Esquive surnaturelle et Roulade Défensive.
 
-Avantage : Vous recevez un bonus d’esquive de +1 à la classe d’armure contre les attaques d’un adversaire.
+Avantage : Vous recevez un bonus d’esquive de +1 à la classe d’armure contre les attaques d’un adversaire.
 
 Lorsqu’il est pris une deuxième fois, le don vous permet également d’esquiver automatiquement la première attaque qui vous toucherait chaque round.~
-@890 = ~A esquivé l’attaque~
-@891 = ~Quelle apparence de liche souhaitez-vous utiliser ?~
+@890 = ~A esquivé l'attaque~
+@891 = ~Quelle apparence de liche souhaitez-vous utiliser ?~
 @892 = ~Liche noire.~
 @893 = ~Liche blanche.~
 @894 = ~Je vais garder mon apparence.~
 @895 = ~Phylactère de liche~
 @896 = ~Ceci est votre phylactère. Si vous mourrez, votre âme se réfugie dans votre phylactère, qui créera un nouveau corps pour vous et vous ressuscitera après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Poids : 1 lb (0,45 kg)~
+Poids : 1 lb (0,45 kg)~
 
 @1105 = ~Cri~
 @1105 = ~Cri
 (Évocation)
-Niveau : Bar 3, Ens/Mag 4, Oghma 4
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 1
-Zone d’effet : 9 mètres de long, 3 mètres de diamètre (30 pieds de long, 10 pieds de diamètre)
-Jet de sauvegarde : Vigueur partiel
+Niveau : Bar 3, Ens/Mag 4, Oghma 4
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 1
+Zone d’effet : 9 mètres de long, 3 mètres de diamètre (30 pieds de long, 10 pieds de diamètre)
+Jet de sauvegarde : Vigueur partiel
 
 Le lanceur émet un cri perçant qui assourdit et endommage les créatures sur son passage. Toute créature dans la zone d’effet est assourdie pendant 5 rounds, étourdie pendant 2 rounds, et subit 5d6 points de dégâts soniques. Un jet de sauvegarde réussi annule la surdité et l’étourdissement et réduit les dégâts de moitié. Une créature sourde a 50% de chances de résister à ce sort.~
 
 @1145 = ~Toucher de Liche~
 @1145 = ~Toucher de Liche
 (Nécromancie)
-Niveau : Ens/Mag 6
-Portée : toucher
-Durée : 1 round / niveau
-Temps d’incantation : 6
-Zone d’effet : lanceur
-Jet de sauvegarde : Vigueur, 1/2 dégâts
+Niveau : Ens/Mag 6
+Portée : toucher
+Durée : 1 round / niveau
+Temps d’incantation : 6
+Zone d'effet : lanceur
+Jet de sauvegarde : Vigueur, 1/2 dégâts
 
 Ce sort confère les pouvoirs du toucher d’une liche. Les mains du lanceur sont imprégnées d’une force glaciale d’énergie négative, permettant au lanceur d’infliger 3d10+5 dégâts de froid (plus les bonus de dégâts de la Force, des dons, des sorts, des objets et d’autres effets) à chaque coup et de paralyser les victimes vivantes pendant 10 rounds en cas d’échec du jet de sauvegarde. L’attaque tient compte du don Maniement des Armes courantes, Petite lame/Mains nues.~
 @1497 = ~Splendeur de l’aigle~
 @1497	= ~Splendeur de l’aigle
 (Transmutation)
-Niveau : Bar 2, Dru 2, Pal 2, Ens/Mag 2, Oghma 1
-Portée : lanceur
-Durée : 1 heure / niveau
-Temps d’incantation : 1
-Cible : Créature touchée
-Jet de sauvegarde : aucun
+Niveau : Bar 2, Dru 2, Pal 2, Ens/Mag 2, Oghma 1
+Portée : lanceur
+Durée : 1 heure / niveau
+Temps d’incantation : 1
+Cible : Créature touchée
+Jet de sauvegarde : aucun
 
 La créature transmutée devient plus posée, éloquente et persuasive. Le sort accorde un bonus de +4 au Charisme, apportant les avantages habituels liés aux compétences et capacités basées sur le Charisme.~
 @1622 = ~Grand cri~
 @1622	= ~Grand cri
 (Évocation)
-Niveau : Bar 6, Ens/Mag 8, Oghma 7
-Portée : lanceur
-Durée : Instantanée
-Temps d’incantation : 2
-Zone d’effet : 9 mètres de long, 3 mètres de diamètre (30 pieds de long, 10 pieds de diamètre)
-Jet de sauvegarde : Vigueur, 1/2 dégâts
+Niveau : Bar 6, Ens/Mag 8, Oghma 7
+Portée : lanceur
+Durée : Instantanée
+Temps d’incantation : 2
+Zone d’effet : 9 mètres de long, 3 mètres de diamètre (30 pieds de long, 10 pieds de diamètre)
+Jet de sauvegarde : Vigueur, 1/2 dégâts
 
 En proférant le Grand cri, le lanceur libère une force étourdissante de sa bouche sous forme de cône de 9 mètres de long et 3 mètres de diamètre. Les créatures dans la zone d’effet subissent 10d10 points de dégâts sonores avec un jet de Vigueur pour la moitié de dégâts. Celles qui échouent au jet de sauvegarde sont étourdies pendant 5 rounds et assourdies pendant 10 rounds. Les créatures assourdies ont 25% de chances de résister à ce sort.~
 @34623 	= ~Hâte de groupe~
 @34623 	= ~Hâte de groupe
 (Transmutation)
-Niveau : Bar 6, Ens/Mag 6
-Portée : portée de vue
-Durée : 3 rounds + 1 round/niveau
-Temps d’incantation : 3
-Zone d’effet : Rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : aucun
+Niveau : Bar 6, Ens/Mag 6
+Portée : portée de vue
+Durée : 3 rounds + 1 round/niveau
+Temps d’incantation : 3
+Zone d’effet : Rayon de 6 mètres (20 pieds)
+Jet de sauvegarde : aucun
 
 Hâte de groupe confère les effets du sort de 3ème niveau Hâte à tous les alliés dans la zone d’effet. Ces alliés gagnent +4 à la classe d’armure et une attaque supplémentaire par round, et se déplacent deux fois plus vite. Ces effets ne se cumulent pas avec le sort de 3ème niveau. Hâte de groupe dissipe les effets de Lenteur.~
 @38252 	= ~Explosion sonore~
 @38252 	= ~Explosion sonore
 (Évocation)
-Niveau : Bar 2
-Portée : portée de vue
-Durée : 1 round
-Temps d’incantation : 2
-Zone d’effet : rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : Vigueur partiel
+Niveau : Bar 2
+Portée : portée de vue
+Durée : 1 round
+Temps d’incantation : 2
+Zone d’effet : rayon de 4,5 mètres (15 pieds)
+Jet de sauvegarde : Vigueur partiel
 
 Ce sort libère une explosion de son extrêmement forte et déstabilisante. Les créatures dans la zone d’effet subissent 1d8 dégâts soniques et doivent réussir un jet de Vigueur sous peine d’être étourdies pendant 1 round. Les créatures sourdes ne sont pas étourdies mais subissent quand même des dégâts. Le lanceur est insensible à ce sort.~
 
 @1009 = ~Carapace de Tortue
 (Abjuration)
-Niveau : Dru 3, Rôd 3
-Portée : portée de vue
-Durée : 4 rounds
-Temps d’incantation : 2
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Dru 3, Rôd 3
+Portée : portée de vue
+Durée : 4 rounds
+Temps d’incantation : 2
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Une carapace rigide ressemblant à celle d’une tortue se forme autour du sujet, lequel se retrouve alors complètement isolé du monde extérieur (il ne peut plus rien faire, mais plus personne ne peut non plus l’affecter). La carapace a 50 points de vie, plus 50 points de vie supplémentaires tous les 10 niveaux atteints par le druide. La Carapace de Tortue ne peut affecter que les alliés.~
 
 @1679	= ~Sphère d’isolement d’Otiluke
 (Évocation)
-Niveau : Ens/Mag 4
-Portée : portée de vue
-Durée : 4 rounds
-Temps d’incantation : 1
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Ens/Mag 4
+Portée : portée de vue
+Durée : 4 rounds
+Temps d’incantation : 1
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
-Ce sort fait apparaître une bulle luisante entourant la cible. La sphère l’enferme jusqu’au terme de la durée indiquée. Elle est complètement immunisée contre tous les types de dégâts et seul Dissipation de la magie peut la faire disparaître. La créature enfermée ne risque donc rien, mais elle ne peut plus avoir le moindre impact sur le monde extérieur.~
+Ce sort fait apparaître une bulle luisante entourant la cible. La sphère l'enferme jusqu'au terme de la durée indiquée. Elle est complètement immunisée contre tous les types de dégâts et seul Dissipation de la magie peut la faire disparaître. La créature enfermée ne risque donc rien, mais elle ne peut plus avoir le moindre impact sur le monde extérieur.~
 
-@529 = ~PRÊTRE :
+@529 = ~PRÊTRE :
 
 Le prêtre a pour devoir de répondre aux soins spirituels d’une communauté. C’est un protecteur et un guérisseur, même s’il n’est pas uniquement défensif.
 
-REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
-Points de vie par niveau : 1-8
+Points de vie par niveau : 1-8
 
-Avantages :
+Avantages :
 * Compétent avec toutes les armes courantes ainsi que les marteaux, les fléaux, les armures légères, les armures moyennes, les armures lourdes et les boucliers.
 * Les prêtres peuvent lancer de puissants sorts défensifs et de soins.
-* Renvoi des morts-vivants. Lorsqu’ils font appel à ce pouvoir spécifique aux prêtres, ils canalisent l’énergie positive ou négative, qui a divers effets sur les morts-vivants. Plus le niveau du prêtre et son charisme sont élevés, plus ses chances de succès sont grandes. Si le prêtre est bon, ou un disciple neutre d’une divinité non maléfique, leur capacité fait fuir les morts-vivants, ou les détruit carrément si le jet de renvoi des morts-vivants est suffisamment élevé. Si le prêtre est maléfique, ou un disciple neutre d’une divinité maléfique, leur capacité fait se recroqueviller les morts-vivants hostiles devant eux, ou prend le contrôle des morts-vivants si le jet de renvoi des morts-vivants est suffisamment élevé, tandis que les morts-vivants alliés sont au contraire renforcés, les rendant plus difficiles à repousser pour les prêtres ennemis. Si un mort-vivant allié a été repoussé par un prêtre ennemi, un prêtre maléfique peut annuler cet effet avec sa propre capacité.
+* Renvoi des morts-vivants. Lorsqu’ils font appel à ce pouvoir spécifique aux prêtres, ils canalisent l’énergie positive ou négative, qui a divers effets sur les morts-vivants. Plus le niveau du prêtre et son charisme sont élevés, plus ses chances de succès sont grandes. Si le prêtre est bon, ou un disciple neutre d'une divinité non maléfique, leur capacité fait fuir les morts-vivants, ou les détruit carrément si le jet de renvoi des morts-vivants est suffisamment élevé. Si le prêtre est maléfique, ou un disciple neutre d'une divinité maléfique, leur capacité fait se recroqueviller les morts-vivants hostiles devant eux, ou prend le contrôle des morts-vivants si le jet de renvoi des morts-vivants est suffisamment élevé, tandis que les morts-vivants alliés sont au contraire renforcés, les rendant plus difficiles à repousser pour les prêtres ennemis. Si un mort-vivant allié a été repoussé par un prêtre ennemi, un prêtre maléfique peut annuler cet effet avec sa propre capacité.
 * Les prêtres reçoivent des pouvoirs et des sorts spéciaux de leur divinité.
-* Incantation spontanée : les prêtres peuvent convertir leurs sorts pour soigner (s’ils sont d’alignement bon ou neutre) ou blesser (s’ils sont d’alignement mauvais) avec des sorts du niveau le plus proche lorsque le joueur clique avec la touche Maj enfoncée sur un sort au moment de l’incantation. Le sort est immédiatement retiré de la liste mémorisée par le personnage et un sort de soins ou de dégâts de même niveau est lancé.
+* Incantation spontanée : les prêtres peuvent convertir leurs sorts pour soigner (s’ils sont d’alignement bon ou neutre) ou blesser (s’ils sont d’alignement mauvais) avec des sorts du niveau le plus proche lorsque le joueur clique avec la touche Maj enfoncée sur un sort au moment de l’incantation. Le sort est immédiatement retiré de la liste mémorisée par le personnage et un sort de soins ou de dégâts de même niveau est lancé.
 
-Sorts à incantation spontanée :
-1 : Soins légers/Blessures légères
-2 : Soins modérés/Blessures modérées
-3 : Soins importants/Blessures graves
-4 : Soins critiques/Blessures critiques
-5 : Rappel à la vie/Exécution
-6 : Guérison suprême/Mise à mal
-7 : Résurrection/Destruction
-8 : Restauration suprême/Absorption d’énergie
-9 : Guérison suprême de groupe/Mise à mal de groupe
+Sorts à incantation spontanée :
+1 : Soins légers/Blessures légères
+2 : Soins modérés/Blessures modérées
+3 : Soins importants/Blessures graves
+4 : Soins critiques/Blessures critiques
+5 : Rappel à la vie/Exécution
+6 : Guérison suprême/Mise à mal
+7 : Résurrection/Destruction
+8 : Restauration suprême/Absorption d’énergie
+9 : Guérison suprême de groupe/Mise à mal de groupe
 
-Inconvénients :
+Inconvénients :
 * Les prêtres n’ont pas accès à de nombreux sorts offensifs puissants.
 * Au combat, les prêtres sont plus faibles que les guerriers, les rôdeurs, les paladins et les barbares.~
-@814 = ~EMPATHIE AVEC LES ANIMAUX (Cha ; Entraînement requis ; Druide, Rôdeur uniquement) :
+@814 = ~EMPATHIE AVEC LES ANIMAUX (Cha ; Entraînement requis ; Druide, Rôdeur uniquement) :
 
 Utilisez cette compétence pour empêcher un chien de garde d’aboyer, demander à un oiseau de se poser sur votre main ou calmer un ours-hibou pendant que vous battez en retraite. Toute créature sauvage, y compris les animaux ainsi que les monstres animaux tels que les wiverns, doit réussir un jet de Volonté sous peine d’être charmée pendant 1 round par niveau de lanceur.~
 @55717=~Ce mort-vivant a été renforcé et est plus difficile à renvoyer.~
@@ -666,7 +666,7 @@ Utilisez cette compétence pour empêcher un chien de garde d’aboyer, demander à u
 @56010=~Les bonus de race supplémentaires pour les drows sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur Drow juste après la création du personnage.~
 @56011=~Les bonus de race supplémentaires pour les elfes sauvages sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur Elfe sauvage juste après la création du personnage.~
 @56012=~Les bonus de race supplémentaires pour les demi-elfes sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur demi-elfe juste après la création du personnage.~
-@56013=~Les bonus de race supplémentaires pour les nains d’écu sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur nain d’écu juste après la création du personnage.~
+@56013=~Les bonus de race supplémentaires pour les nains d'écu sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur nain d'écu juste après la création du personnage.~
 @56014=~Les bonus de race supplémentaires pour les nains dorés sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur nain doré juste après la création du personnage.~
 @56015=~Les bonus de race supplémentaires pour les nains gris sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur Nain gris juste après la création du personnage.~
 @56016=~Les bonus de race supplémentaires pour les halfelins pieds-légers sont inscrits ici. Chaque effet de ce sort est appliqué à tout joueur halfelin pied-léger juste après la création du personnage.~
@@ -679,33 +679,33 @@ Utilisez cette compétence pour empêcher un chien de garde d’aboyer, demander à u
 
 Tant qu’elle demeure dans le Plan Matériel, Veira est seulement en partie incarnée. Elle peut interagir avec le monde extérieur, mais étant partiellement éthérée, elle n’a besoin ni de dormir, ni de se nourrir. Elle ne peut non plus souffrir de maladie ou de blessures. Si sa forme est endommagée, elle se régénère lentement. Si elle est détruite, elle peut être reconstituée avec un afflux d’énergie positive tel qu’un sort de rappel à la vie.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Régénération : 1 PV par round
-Réduction des dégâts : 5/+1
-Incorporel : 50% de chances d’éviter tout dégât physique.
-Déplacement silencieux : +50
-Résistance : 25/- résistance au froid
-Résistance : 5/- résistance à l’acide, à l’électricité et au feu.
-Résistance au renvoi : 4 niveaux supplémentaires contre les renvois de morts-vivants
-Immunité à la fatigue, au poison, aux maladies, aux saignements, à l’étourdissement, aux toiles, aux enchevêtrements, à l’intoxication, à la nausée, aux baisers de vampire, à l’absorption d’énergie, aux sorts Peau de pierre, Peau de fer et Peau d’écorce, aux sorts d’affaiblissement, aux sorts Sphère d’isolement d’Otiluke, Carapace de tortue et Flétrissure, à la magie de la mort, à la pétrification, aux coups critiques et à la plupart des potions.
-Poids : 0~
+Régénération : 1 PV par round
+Réduction des dégâts : 5/+1
+Incorporel : 50% de chances d'éviter tout dégât physique.
+Déplacement silencieux : +50
+Résistance : 25/- résistance au froid
+Résistance : 5/- résistance à l’acide, à l’électricité et au feu.
+Résistance au renvoi : 4 niveaux supplémentaires contre les renvois de morts-vivants
+Immunité à la fatigue, au poison, aux maladies, aux saignements, à l’étourdissement, aux toiles, aux enchevêtrements, à l’intoxication, à la nausée, aux baisers de vampire, à l'absorption d'énergie, aux sorts Peau de pierre, Peau de fer et Peau d’écorce, aux sorts d’affaiblissement, aux sorts Sphère d’isolement d’Otiluke, Carapace de tortue et Flétrissure, à la magie de la mort, à la pétrification, aux coups critiques et à la plupart des potions.
+Poids : 0~
 
 @4805 = ~Cet anneau est le seul élément de Veira qui est vraiment tangible. Lié à son doigt dans la mort comme dans la vie, il ne peut être ôté qu’avec un sort de Délivrance des malédictions, s’il est lancé sur elle.
 
 Tant qu’elle demeure dans le Plan Matériel, Veira est seulement en partie incarnée. Elle peut interagir avec le monde extérieur, mais étant partiellement éthérée, elle n’a besoin ni de dormir, ni de se nourrir. Elle ne peut non plus souffrir de maladie ou de blessures. Si sa forme est endommagée, elle se régénère lentement. Si elle est détruite, elle peut être reconstituée avec un afflux d’énergie positive tel qu’un sort de rappel à la vie.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Régénération : 2 PV par round
-Réduction des dégâts : 10/+2
-Incorporel : 50% de chances d’éviter tout dégât physique.
-Déplacement silencieux : +50
-Résistance : 50/- résistance au froid
-Résistance : 10/- résistance à l’acide, à l’électricité et au feu.
-Résistance au renvoi : 4 niveaux supplémentaires contre Renvoi de Morts-Vivants
-Immunité à la fatigue, au poison, aux maladies, aux saignements, à l’étourdissement, aux toiles d’araignée, à l’enchevêtrement, à l’intoxication, à la nausée, aux baisers de vampire, à l’absorption d’énergie, aux sorts Peau de pierre, Peau de fer et Peau d’écorce, aux sorts d’affaiblissement, aux sorts Sphère d’isolement d’Otiluke, Carapace de Tortue et Flétrissure, à la magie de la mort, à la pétrification, aux coups critiques et à la plupart des potions.
-Poids : 0~
+Régénération : 2 PV par round
+Réduction des dégâts : 10/+2
+Incorporel : 50% de chances d'éviter tout dégât physique.
+Déplacement silencieux : +50
+Résistance : 50/- résistance au froid
+Résistance : 10/- résistance à l’acide, à l’électricité et au feu.
+Résistance au renvoi : 4 niveaux supplémentaires contre Renvoi de Morts-Vivants
+Immunité à la fatigue, au poison, aux maladies, aux saignements, à l’étourdissement, aux toiles d'araignée, à l’enchevêtrement, à l’intoxication, à la nausée, aux baisers de vampire, à l'absorption d'énergie, aux sorts Peau de pierre, Peau de fer et Peau d’écorce, aux sorts d’affaiblissement, aux sorts Sphère d’isolement d’Otiluke, Carapace de Tortue et Flétrissure, à la magie de la mort, à la pétrification, aux coups critiques et à la plupart des potions.
+Poids : 0~
 
 @55604=~, +<EXRDVAL1> de dégâts supplémentaires~
 @55605=~, -<EXRDVAL1> de pénalité aux dégâts~
@@ -713,188 +713,188 @@ Poids : 0~
 @55607=~, jet de dé maximum de <EXRLVAL1>~
 
 @11533 = ~Le Crâne Hurlant +2~
-@11534 = ~Le Crâne Hurlant, dont on pense généralement qu’il a été fabriqué par les gnomes des profondeurs, est un fléau d’aspect particulièrement inhabituel, puisqu’il se compose d’un manche en bois de près d’un mètre de long, surmonté d’une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d’une dureté incroyable.
+@11534 = ~Le Crâne Hurlant, dont on pense généralement qu'il a été fabriqué par les gnomes des profondeurs, est un fléau d'aspect particulièrement inhabituel, puisqu'il se compose d'un manche en bois de près d'un mètre de long, surmonté d'une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d'une dureté incroyable.
 
 Dès que ces pointes magiques frappent un objet, elles se mettent à vibrer et émettent une sorte de cri, mettant à mal les sortilèges affectant la cible. Elles peuvent également assourdir la cible.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d8 +2
-Bonus d’attaque : +2
-Enchantement : +2
-Type de dégâts : Contondants
-Spécial :
- Sonique : +1d6 de dégâts soniques
- Dissipation de la magie : 15% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 15 contre la Volonté + bonus de Force du porteur)
- Hurlement : assourdit la cible frappée (Degré de Difficulté de 15 contre la Vigueur + bonus de Force du porteur)
-Poids : 5 lb (2,27 kg)
-Compétence : armes de guerre, fléau
-Type d’arme : à une main~
+Dégâts : 1d8 +2
+Bonus d'attaque : +2
+Enchantement : +2
+Type de dégâts : Contondants
+Spécial :
+ Sonique : +1d6 de dégâts soniques
+ Dissipation de la magie : 15% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 15 contre la Volonté + bonus de Force du porteur)
+ Hurlement : assourdit la cible frappée (Degré de Difficulté de 15 contre la Vigueur + bonus de Force du porteur)
+Poids : 5 lb (2,27 kg)
+Compétence : armes de guerre, fléau
+Type d'arme : à une main~
 
 @11535	= ~Le Crâne Hurlant de Svirfnebelin +4~
-@11536	= ~Le Crâne Hurlant de Svirfnebelin, dont on pense généralement qu’il a été fabriqué par les gnomes des profondeurs, est un fléau d’aspect particulièrement inhabituel, puisqu’il se compose d’un manche en bois de près d’un mètre de long, surmonté d’une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d’une dureté incroyable.
+@11536	= ~Le Crâne Hurlant de Svirfnebelin, dont on pense généralement qu'il a été fabriqué par les gnomes des profondeurs, est un fléau d'aspect particulièrement inhabituel, puisqu'il se compose d'un manche en bois de près d'un mètre de long, surmonté d'une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d'une dureté incroyable.
 
-Lorsque les cristaux enchantés frappent un objet, ils vibrent et émettent un gémissement aigu : ces harmoniques surnaturelles peuvent déchirer les auras magiques et dissiper la sorcellerie qui entoure la cible. Ce même son aigu peut également assourdir la cible.
+Lorsque les cristaux enchantés frappent un objet, ils vibrent et émettent un gémissement aigu : ces harmoniques surnaturelles peuvent déchirer les auras magiques et dissiper la sorcellerie qui entoure la cible. Ce même son aigu peut également assourdir la cible.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d8 +4
-Bonus d’attaque : +4
-Enchantement : +4
-Type de dégâts : Contondants
-Spécial :
- Sonique : +2d6 de dégâts soniques
- Dissipation de la magie : 30% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 25 contre la Volonté + bonus de Force du porteur)
- Hurlement : Assourdit la cible frappée (Degré de Difficulté de 25 contre la Vigueur + bonus de Force du porteur)
-Poids : 5 lb (2,27 kg)
-Compétence : armes de guerre, fléau
-Type d’arme : à une main~
+Dégâts : 1d8 +4
+Bonus d’attaque : +4
+Enchantement : +4
+Type de dégâts : Contondants
+Spécial :
+ Sonique : +2d6 de dégâts soniques
+ Dissipation de la magie : 30% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 25 contre la Volonté + bonus de Force du porteur)
+ Hurlement : Assourdit la cible frappée (Degré de Difficulté de 25 contre la Vigueur + bonus de Force du porteur)
+Poids : 5 lb (2,27 kg)
+Compétence : armes de guerre, fléau
+Type d'arme : à une main~
 
-@11538	= ~Ce lourd fléau est composé d’un manche de fer et de trois tubes de métal creux reliés entre eux par une épaisse chaîne de fer. Les têtes s’entrechoquent sans cesse lorsque cette arme est tenue en main, comme si un souffle de vent pernicieux les empêchait de rester au repos. Ce bruit devient assourdissant au combat, au point de lourdement pénaliser tous les adversaires touchés par le fléau.
+@11538	= ~Ce lourd fléau est composé d'un manche de fer et de trois tubes de métal creux reliés entre eux par une épaisse chaîne de fer. Les têtes s'entrechoquent sans cesse lorsque cette arme est tenue en main, comme si un souffle de vent pernicieux les empêchait de rester au repos. Ce bruit devient assourdissant au combat, au point de lourdement pénaliser tous les adversaires touchés par le fléau.
 
-Cette arme est le dernier vestige du Lent Galop de Cédric, un petit camp frontalier situé dans la Passe Méridionale de l’Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d’orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là... Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu’au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d’orques, pétrifiés dans les postures les plus insolites.
+Cette arme est le dernier vestige du Lent Galop de Cédric, un petit camp frontalier situé dans la Passe Méridionale de l'Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d'orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là... Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu'au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d'orques, pétrifiés dans les postures les plus insolites.
 
-D’après les légendes, le Carillon Noir était le symbole des missions du Garde-Cloches du campement : sonner l’alarme lorsqu’un ennemi était en vue et défendre la passe, au prix de sa vie si nécessaire. On croit savoir que le premier Garde-Cloches du Lent Galop de Cedric fabriqua le Carillon Noir, un fléau enchanté qui sonnait pour avertir les habitants du danger lorsque son porteur se ruait contre ses ennemis.
+D'après les légendes, le Carillon Noir était le symbole des missions du Garde-Cloches du campement : sonner l'alarme lorsqu'un ennemi était en vue et défendre la passe, au prix de sa vie si nécessaire. On croit savoir que le premier Garde-Cloches du Lent Galop de Cedric fabriqua le Carillon Noir, un fléau enchanté qui sonnait pour avertir les habitants du danger lorsque son porteur se ruait contre ses ennemis.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d8
-Bonus d’attaque : +1
-Enchantement : +1
-Type de dégâts : Contondants
-Spécial :
- Sonique : +1d6 de dégâts soniques
+Dégâts : 1d8
+Bonus d’attaque : +1
+Enchantement : +1
+Type de dégâts : Contondants
+Spécial :
+ Sonique : +1d6 de dégâts soniques
  Lorsqu’il frappe une créature, le carillon réveille tous les membres du groupe (s’ils dorment) et leur confère un bonus d’attaque de +1 pendant 1 round (non cumulable).
- Pénalité : -1 à la compétence Discrétion
-Poids : 5 lb (2,27 kg)
-Compétence : armes de guerre, fléau
-Type d’arme : à une main~
+ Pénalité : -1 à la compétence Discrétion
+Poids : 5 lb (2,27 kg)
+Compétence : armes de guerre, fléau
+Type d'arme : à une main~
 
-@11540	= ~Ce lourd fléau est composé d’un manche de fer et de trois tubes de métal creux reliés entre eux par une épaisse chaîne de fer. Les têtes s’entrechoquent sans cesse lorsque cette arme est tenue en main, comme si un souffle de vent pernicieux les empêchait de rester au repos. Ce bruit devient assourdissant au combat, au point de lourdement pénaliser tous les adversaires touchés par le fléau.
+@11540	= ~Ce lourd fléau est composé d'un manche de fer et de trois tubes de métal creux reliés entre eux par une épaisse chaîne de fer. Les têtes s'entrechoquent sans cesse lorsque cette arme est tenue en main, comme si un souffle de vent pernicieux les empêchait de rester au repos. Ce bruit devient assourdissant au combat, au point de lourdement pénaliser tous les adversaires touchés par le fléau.
 
-Cette arme est le dernier vestige du Lent Galop de Cédric, un petit camp frontalier situé dans la Passe Méridionale de l’Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d’orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là... Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu’au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d’orques, pétrifiés dans les postures les plus insolites.
+Cette arme est le dernier vestige du Lent Galop de Cédric, un petit camp frontalier situé dans la Passe Méridionale de l'Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d'orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là... Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu'au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d'orques, pétrifiés dans les postures les plus insolites.
 
-D’après les légendes, le Carillon Noir était le symbole des missions du Garde-Cloches du campement : sonner l’alarme lorsqu’un ennemi était en vue et défendre la passe, au prix de sa vie si nécessaire. On croit savoir que le premier Garde-Cloches du Lent Galop de Cedric fabriqua le Carillon Noir, un fléau enchanté qui sonnait pour avertir les habitants du danger lorsque son porteur se ruait contre ses ennemis.
+D'après les légendes, le Carillon Noir était le symbole des missions du Garde-Cloches du campement : sonner l'alarme lorsqu'un ennemi était en vue et défendre la passe, au prix de sa vie si nécessaire. On croit savoir que le premier Garde-Cloches du Lent Galop de Cedric fabriqua le Carillon Noir, un fléau enchanté qui sonnait pour avertir les habitants du danger lorsque son porteur se ruait contre ses ennemis.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d8 +3
-Bonus d’attaque : +3
-Enchantement : +3
-Type de dégâts : Contondants
-Spécial :
- Sonique : +1d6 de dégâts soniques
+Dégâts : 1d8 +3
+Bonus d’attaque : +3
+Enchantement : +3
+Type de dégâts : Contondants
+Spécial :
+ Sonique : +1d6 de dégâts soniques
  Lorsqu’il frappe une créature, le carillon réveille tous les membres du groupe (s’ils dorment) et leur confère un bonus d’attaque de +3 pendant 1 round (non cumulable).
- Protection Magique : Immunité aux sorts Mot de pouvoir : Silence et Silence
-Poids : 5 lb (2,27 kg)
-Compétence : armes de guerre, fléau
-Type d’arme : à une main~
+ Protection Magique : Immunité aux sorts Mot de pouvoir : Silence et Silence
+Poids : 5 lb (2,27 kg)
+Compétence : armes de guerre, fléau
+Type d'arme : à une main~
 
 @12120	= ~Les potions sont généralement contenues dans des récipients en céramique, de cristal ou de verre, des flasques de métal ou des éprouvettes. Tous ces récipients contiennent généralement une dose complète pour une personne.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance permanente : 1/- résistance aux dégâts tranchants
-Résistance permanente : 1/- résistance aux dégâts perforants
-Résistance permanente : 1/- résistance aux dégâts contondants
-Poids : 1 lb (0,45 kg)~
+Résistance permanente : 1/- résistance aux dégâts tranchants
+Résistance permanente : 1/- résistance aux dégâts perforants
+Résistance permanente : 1/- résistance aux dégâts contondants
+Poids : 1 lb (0,45 kg)~
 
 @12915	= ~Robe de mage de Résistance à l’Acide~
-@12916	= ~Les Robes de mage de Résistance à l’Acide sont parfois portées pour se protéger des limons acides, mais on les voit bien plus souvent sur les mages désirant se défendre de leurs pairs. Les sorts d’acide sont assez rares chez les magiciens, mais les quelques-uns connus sont utilisés très souvent.
+@12916	= ~Les Robes de mage de Résistance à l’Acide sont parfois portées pour se protéger des limons acides, mais on les voit bien plus souvent sur les mages désirant se défendre de leurs pairs. Les sorts d'acide sont assez rares chez les magiciens, mais les quelques-uns connus sont utilisés très souvent.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance à l’acide
+Résistance : 20/- de résistance à l'acide
 Tous les dégâts d’acide infligés par le personnage augmentent de 20%
-Poids : 1,5 lb (0,68 kg)~
+Poids : 1,5 lb (0,68 kg)~
 
 @12917	= ~Robe de mage de Résistance à la Force~
-@12918	= ~Parmi les robes de résistance, la Robe de mage de Résistance à la Force est l’une des plus rares. Non pas parce qu’elle est inutile, mais parce qu’elle est bien plus difficile à fabriquer que les autres. Son nom porte d’ailleurs à confusion, car cette robe augmente la puissance de la magie et ne la bloque pas.
+@12918	= ~Parmi les robes de résistance, la Robe de mage de Résistance à la Force est l'une des plus rares. Non pas parce qu'elle est inutile, mais parce qu'elle est bien plus difficile à fabriquer que les autres. Son nom porte d'ailleurs à confusion, car cette robe augmente la puissance de la magie et ne la bloque pas.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance aux dégâts magiques
+Résistance : 20/- de résistance aux dégâts magiques
 Tous les dégâts magiques infligés par le personnage augmentent de 20%
-Poids : 1,5 lb (0,68 kg)~
+Poids : 1,5 lb (0,68 kg)~
 
 @38359	= ~Bagou
 (Enchantement)
-Niveau : Bar 3
-Portée : lanceur
-Durée : 10 rounds/niveau
-Temps d’incantation : 3
-Zone d’effet : lanceur
-Jet de sauvegarde : aucun
+Niveau : Bar 3
+Portée : lanceur
+Durée : 10 rounds/niveau
+Temps d’incantation : 3
+Zone d'effet : lanceur
+Jet de sauvegarde : aucun
 
 Ce sort augmente considérablement la capacité du personnage à duper les autres. Pendant la durée du sort, la compétence Bluff du personnage est augmentée de 15.~
 
-@816	= ~ABJURATEUR :
+@816	= ~ABJURATEUR :
 
 Un magicien qui se spécialise dans la magie qui protège, bloque ou bannit.
 
-Avantages :
+Avantages :
 * Les abjurateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d’abjuration lancés par un abjurateur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d’abjuration lancés par un abjurateur durent 20% plus longtemps.
+* Les sorts d'abjuration lancés par un abjurateur gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'abjuration lancés par un abjurateur durent 20% plus longtemps.
 
-Désavantages :
-* Les abjurateurs ne peuvent pas apprendre les sorts de l’école d’Évocation.~
+Désavantages :
+* Les abjurateurs ne peuvent pas apprendre les sorts de l'école d'Évocation.~
 
-@0	= ~Noyau d’IWD2EE~
-@98   = ~Vous devez d’abord installer le composant principal.~
-@535	= ~MOINE :
+@0	= ~Noyau d'IWD2EE~
+@98   = ~Vous devez d'abord installer le composant principal.~
+@535	= ~MOINE :
 
-Les moines sont des guerriers en quête de perfection, tant spirituelle que corporelle. Particulièrement polyvalents, ils excellent notamment dans le combat à mains nues. Ils ne peuvent pas lancer de sorts, mais sont dotés de pouvoirs magiques qui leurs sont propres. Ces pouvoirs leur viennent du ki, cette énergie subtile qu’ils canalisent intérieurement et qui leur permet de réaliser des actes prodigieux. Ainsi, un moine peut assommer un adversaire de ses seules mains.
+Les moines sont des guerriers en quête de perfection, tant spirituelle que corporelle. Particulièrement polyvalents, ils excellent notamment dans le combat à mains nues. Ils ne peuvent pas lancer de sorts, mais sont dotés de pouvoirs magiques qui leurs sont propres. Ces pouvoirs leur viennent du ki, cette énergie subtile qu'ils canalisent intérieurement et qui leur permet de réaliser des actes prodigieux. Ainsi, un moine peut assommer un adversaire de ses seules mains.
 
-REMARQUE : Les moines multiclassés n’utilisent que leurs niveaux de moine pour déterminer leur nombre d’attaques lorsqu’ils combattent à mains nues.
+REMARQUE : Les moines multiclassés n'utilisent que leurs niveaux de moine pour déterminer leur nombre d'attaques lorsqu'ils combattent à mains nues.
 
-Points de vie par niveau : 1-8
+Points de vie par niveau : 1-8
 
-Avantages :
-* Le bonus de base à l’attaque d’un moine permet à celui-ci de lancer plus rapidement des attaques supplémentaires en combat à mains nues :
+Avantages :
+* Le bonus de base à l'attaque d'un moine permet à celui-ci de lancer plus rapidement des attaques supplémentaires en combat à mains nues :
 
-Niveau 1-3 : 2 attaques par round
-Niveau 4-6 : 3 attaques
-Niveau 7-9 : 4 attaques
-Niveau 10-12 : 5 attaques
-Niveau 13-15 : 6 attaques. Tous les 3 niveaux après le niveau 13, le moine gagne une attaque supplémentaire par round.
+Niveau 1-3 : 2 attaques par round
+Niveau 4-6 : 3 attaques
+Niveau 7-9 : 4 attaques
+Niveau 10-12 : 5 attaques
+Niveau 13-15 : 6 attaques. Tous les 3 niveaux après le niveau 13, le moine gagne une attaque supplémentaire par round.
 
-* Armes de moine : Le moine peut manier des bâtons, des dagues, des dagues de lancer et des fléchettes avec très peu de pénalités (une attaque de moins par round qu’avec les poings, mais le moine obtient quand même une attaque supplémentaire par round tous les 3 niveaux).
+* Armes de moine : Le moine peut manier des bâtons, des dagues, des dagues de lancer et des fléchettes avec très peu de pénalités (une attaque de moins par round qu'avec les poings, mais le moine obtient quand même une attaque supplémentaire par round tous les 3 niveaux).
 
-* Plus un moine progresse dans les niveaux, plus ses poings infligent de dégâts :
+* Plus un moine progresse dans les niveaux, plus ses poings infligent de dégâts :
 
-Niveau 1-2 : 1d6
-Niveau 3-4 : 1d8
-Niveau 5-7 : 1d8+1
-Niveau 8-10 : 1d8+2
-Niveau 11-13 : 1d8+3
-Niveau 14-16 : 1d8+4
-Niveau 17+ : 1d8+5
+Niveau 1-2 : 1d6
+Niveau 3-4 : 1d8
+Niveau 5-7 : 1d8+1
+Niveau 8-10 : 1d8+2
+Niveau 11-13 : 1d8+3
+Niveau 14-16 : 1d8+4
+Niveau 17+ : 1d8+5
 
-* Ki : Au niveau 5, l’attaque à mains nues du moine est imprégnée de ki, et gagne un enchantement de +1 avec des bonus correspondants à l’attaque et aux dégâts. Ce bonus d’enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu’à +5 au niveau 17.
-* La classe d’armure naturelle d’un moine commence à 10 et augmente d’un point au niveau 5, puis d’un point supplémentaire tous les 5 niveaux.
-* Lorsqu’un moine ne porte pas d’armure (les robes sont acceptées), il peut ajouter son bonus de Sagesse à sa classe d’armure, comme pour son bonus de Dextérité. Si le moine change de forme, il ne bénéficiera de cet avantage que si son niveau de moine est supérieur ou égal au niveau minimum requis pour se transformer en cette forme.
-* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) sous peine d’être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
-* Esquive totale : un moine peut éviter les dégâts des sorts à zone d’effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d’effet autorisant la réduction des dégâts par jet de Réflexes.
-* 2ème niveau : Parade de projectiles. Le moine acquiert le don Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première source de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
-* 3ème niveau : Déplacement accéléré. Le moine se déplace de 3 mètres (10 pieds) plus vite qu’un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n’est pas encombré ou ne porte pas d’armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
-* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l’école d’enchantement.
-* 5ème niveau : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
-* 7ème niveau : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
-* 9ème niveau : Esquive surnaturelle. Le moine acquiert le don d’Esquive surnaturelle, habituellement réservé aux roublards.
-* 10ème niveau : Pas chassé. Le moine peut se téléporter vers n’importe quel endroit en vue une fois par jour.
-* 11ème niveau : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d’être immunisé contre tous les poisons.
-* 13ème niveau :  me de diamant. Le moine acquiert de la résistance aux sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
-* 15ème niveau : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d’une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + moitié du niveau du moine). Les créatures artificielles, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
-* 19ème niveau : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
-* 20ème niveau : Perfection de l’être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l’affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu’il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d’un bonus d’altération de +1 (ou plus), par un sort ou par une forme d’énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
+* Ki : Au niveau 5, l'attaque à mains nues du moine est imprégnée de ki, et gagne un enchantement de +1 avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
+* La classe d'armure naturelle d'un moine commence à 10 et augmente d'un point au niveau 5, puis d'un point supplémentaire tous les 5 niveaux.
+* Lorsqu'un moine ne porte pas d'armure (les robes sont acceptées), il peut ajouter son bonus de Sagesse à sa classe d’armure, comme pour son bonus de Dextérité. Si le moine change de forme, il ne bénéficiera de cet avantage que si son niveau de moine est supérieur ou égal au niveau minimum requis pour se transformer en cette forme.
+* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) sous peine d’être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
+* Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
+* 2ème niveau : Parade de projectiles. Le moine acquiert le don Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première source de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
+* 3ème niveau : Déplacement accéléré. Le moine se déplace de 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
+* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'enchantement.
+* 5ème niveau : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
+* 7ème niveau : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
+* 9ème niveau : Esquive surnaturelle. Le moine acquiert le don d'Esquive surnaturelle, habituellement réservé aux roublards.
+* 10ème niveau : Pas chassé. Le moine peut se téléporter vers n'importe quel endroit en vue une fois par jour.
+* 11ème niveau : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d'être immunisé contre tous les poisons.
+* 13ème niveau :  me de diamant. Le moine acquiert de la résistance aux sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
+* 15ème niveau : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d'une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + moitié du niveau du moine). Les constructions, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
+* 19ème niveau : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
+* 20ème niveau : Perfection de l'être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l'affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu'il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d'un bonus d'altération de +1 (ou plus), par un sort ou par une forme d'énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
-Désavantages :
-* Perd de nombreux bonus s’il porte une armure et/ou utilise des armes.~
+Désavantages :
+* Perd de nombreux bonus s'il porte une armure et/ou utilise des armes.~
 
-@55718	= ~Remarque : Actuellement, vous avez déjà enregistré des sorts. Toute nouvelle action enregistrée sera ajoutée à l’enregistrement existant. Si vous souhaitez enregistrer de nouveaux sorts, appuyez sur la touche <EXRCKEYDELETE> pour supprimer l’enregistrement précédent, puis sur <EXRCKEYRECORD> pour recommencer.~
+@55718	= ~Remarque : Actuellement, vous avez déjà enregistré des sorts. Toute nouvelle action enregistrée sera ajoutée à l’enregistrement existant. Si vous souhaitez enregistrer de nouveaux sorts, appuyez sur la touche <EXRCKEYDELETE> pour supprimer l’enregistrement précédent, puis sur <EXRCKEYRECORD> pour recommencer.~
 
-@23086	= ~Cimeterre d’Ichor Spectral~
+@23086	= ~Cimeterre d'Ichor Spectral~
 @23087	= ~Morgenstern de la Fureur de Xvim~
 @24034	= ~Croissance des plantes~
 @23056	= ~5 points de dégâts résistés des armes ni maléfiques, ni chaotiques, ni en argent~
@@ -906,298 +906,298 @@ Désavantages :
 @23062	= ~15 points de dégâts résistés des armes ni maléfiques, ni loyales, ni en fer froid~
 @23063	= ~20 points de dégâts résistés des armes ni maléfiques, ni loyales, ni en fer froid~
 
-@4823	= ~En tant qu’abishaï blanc, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
+@4823	= ~En tant qu'abishaï blanc, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Bonus d’armure : +5
-Bonus de Dextérité maxi : Aucun
-Spécial :
- Résistance : 10/- de résistance à l’acide
- Résistance : 100/- de résistance au feu
- Résistance : 50/- de résistance au froid
- Résistance : 18/- de résistance aux sorts
- Réduction des dégâts : 5/bon, chaotique ou argent
- Régénération : Régénère 1 point de vie par round
+Bonus d’armure : +5
+Bonus de Dextérité maxi : Aucun
+Spécial :
+ Résistance : 10/- de résistance à l’acide
+ Résistance : 100/- de résistance au feu
+ Résistance : 50/- de résistance au froid
+ Résistance : 18/- de résistance aux sorts
+ Réduction des dégâts : 5/bon, chaotique ou argent
+ Régénération : Régénère 1 point de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
  Peut voir parfaitement, même dans l’obscurité magique
-Poids : 0~
-@4825	= ~En tant qu’abishaï blanc, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
+Poids : 0~
+@4825	= ~En tant qu'abishaï blanc, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Bonus d’armure : +9
-Bonus de Dextérité maxi : Aucun
-Spécial :
- Résistance : 10/- de résistance à l’acide
- Résistance : 100/- de résistance au feu
- Résistance : 50/- de résistance au froid
- Résistance : 26/- de résistance aux sorts
- Réduction des dégâts : 10/bon, chaotique ou argent
- Régénération : Régénère 2 points de vie par round
+Bonus d’armure : +9
+Bonus de Dextérité maxi : Aucun
+Spécial :
+ Résistance : 10/- de résistance à l’acide
+ Résistance : 100/- de résistance au feu
+ Résistance : 50/- de résistance au froid
+ Résistance : 26/- de résistance aux sorts
+ Réduction des dégâts : 10/bon, chaotique ou argent
+ Régénération : Régénère 2 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
  Peut voir parfaitement, même dans l’obscurité magique
-Poids : 0~
+Poids : 0~
 
 @4835	= ~En tant que cornugon, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Bonus d’armure : +18
-Bonus de Dextérité maxi : Aucun
-Spécial :
- Résistance : 10/- de résistance à l’acide
- Résistance : 100/- de résistance au feu
- Résistance : 10/- de résistance au froid
- Résistance : 24/- de résistance aux sorts
- Réduction des dégâts : 10/bon, chaotique ou argent
- Régénération : Régénère 5 points de vie par round
+Bonus d’armure : +18
+Bonus de Dextérité maxi : Aucun
+Spécial :
+ Résistance : 10/- de résistance à l’acide
+ Résistance : 100/- de résistance au feu
+ Résistance : 10/- de résistance au froid
+ Résistance : 24/- de résistance aux sorts
+ Réduction des dégâts : 10/bon, chaotique ou argent
+ Régénération : Régénère 5 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
  Peut voir parfaitement, même dans l’obscurité magique
-Poids : 0~
+Poids : 0~
 
 @4837	= ~En tant que cornugon, Xhaan est naturellement résistant aux sorts et aux dégâts élémentaires. Son cuir épais et sa biologie extraplanaire lui confèrent également une immunité contre le poison et les maladies, ainsi que la capacité de régénération. En tant que baatezu, il ne ressent aucune peur, et les charmes mineurs sont inutiles contre son esprit étranger.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Bonus d’armure : +24
-Bonus de Dextérité maxi : Aucun
-Spécial :
- Résistance : 10/- de résistance à l’acide
- Résistance : 100/- de résistance au feu
- Résistance : 10/- de résistance au froid
- Résistance : 36/- de résistance aux sorts
- Réduction des dégâts : 15/bon, chaotique ou argent
- Régénération : Régénère 10 points de vie par round
+Bonus d’armure : +24
+Bonus de Dextérité maxi : Aucun
+Spécial :
+ Résistance : 10/- de résistance à l’acide
+ Résistance : 100/- de résistance au feu
+ Résistance : 10/- de résistance au froid
+ Résistance : 36/- de résistance aux sorts
+ Réduction des dégâts : 15/bon, chaotique ou argent
+ Régénération : Régénère 10 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
  Peut voir parfaitement, même dans l’obscurité magique
-Poids : 0~
+Poids : 0~
 
-@10498	= ~Un grand mystère entoure cette armure de cuir, personne n’étant à même d’en connaître l’origine. On sait simplement qu’elle est faite de cuir d’abishaï mais il est impossible d’être plus précis, l’armure étant teintée d’un noir profond. Il en émane également un très léger fumet de vinaigre.
-Les propriétaires de l’armure en peau d’abishaï ont toujours bénéficié d’une légère invulnérabilité aux armes.
+@10498	= ~Un grand mystère entoure cette armure de cuir, personne n'étant à même d'en connaître l'origine. On sait simplement qu'elle est faite de cuir d'abishaï mais il est impossible d'être plus précis, l'armure étant teintée d'un noir profond. Il en émane également un très léger fumet de vinaigre.
+Les propriétaires de l'armure en peau d'abishaï ont toujours bénéficié d'une légère invulnérabilité aux armes.
 
-PARAMÈTRES :
-
-Armure intermédiaire
-Bonus à la classe d’armure : +4
-Bonus max de Dextérité : +4
-Malus de jet d’armure : -3
-Echec des sorts profanes : 20%
-Spécial :
-  Réduction des dégâts : 5/bon, chaotique ou argent
-Poids : 15 lb (6,80 kg)~
-
-@10500	= ~Un grand mystère entoure cette armure de cuir, dont personne ne connaît l’origine. Tout ce que l’on sait, c’est qu’elle a été confectionnée à partir de la peau d’un cornugon. De couleur noire, elle s’orne d’écailles couvertes de pointes redoutables et dégage une étrange odeur de vinaigre, heureusement assez discrète.
-
-Les propriétaires de l’armure en peau de cornugon ont toujours bénéficié d’une grande invulnérabilité aux armes et d’une certaine capacité de régénération.
-
-PARAMÈTRES :
+PARAMÈTRES :
 
 Armure intermédiaire
-Bonus à la classe d’armure : +7
-Bonus max de Dextérité : +4
-Malus de jet d’armure : -3
-Echec des sorts profanes : 20%
-Spécial :
-  Réduction des dégâts : 10/bon, chaotique ou argent
-  Régénération : 1 pv par round
-Poids : 15 lb (6,80 kg)~
+Bonus à la classe d’armure : +4
+Bonus max de Dextérité : +4
+Malus de jet d'armure : -3
+Echec des sorts profanes : 20%
+Spécial :
+  Réduction des dégâts : 5/bon, chaotique ou argent
+Poids : 15 lb (6,80 kg)~
+
+@10500	= ~Un grand mystère entoure cette armure de cuir, dont personne ne connaît l'origine. Tout ce que l'on sait, c'est qu'elle a été confectionnée à partir de la peau d'un cornugon. De couleur noire, elle s'orne d'écailles couvertes de pointes redoutables et dégage une étrange odeur de vinaigre, heureusement assez discrète.
+
+Les propriétaires de l'armure en peau de cornugon ont toujours bénéficié d'une grande invulnérabilité aux armes et d'une certaine capacité de régénération.
+
+PARAMÈTRES :
+
+Armure intermédiaire
+Bonus à la classe d’armure : +7
+Bonus max de Dextérité : +4
+Malus de jet d'armure : -3
+Echec des sorts profanes : 20%
+Spécial :
+  Réduction des dégâts : 10/bon, chaotique ou argent
+  Régénération : 1 pv par round
+Poids : 15 lb (6,80 kg)~
 
 @38256	= ~Ténèbres
 (Illusion)
-Niveau : Bar 2, Prê 2, Ens/Mag 2
-Portée : portée de vue
-Durée : 4 rounds
-Temps d’incantation : 4
-Zone d’effet : Rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Vigueur annule
+Niveau : Bar 2, Prê 2, Ens/Mag 2
+Portée : portée de vue
+Durée : 4 rounds
+Temps d'incantation : 4
+Zone d'effet : Rayon de 6 mètres (20 pieds)
+Jet de sauvegarde : Vigueur annule
 
-Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 Degré de Difficulté sous peine d’être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité d’attaque de -4 en cas d’échec du jet de sauvegarde. Les créatures avec une vision dans le noir supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) n’ont qu’une pénalité d’attaque de -2. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
+Ce sort crée une obscurité magique dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 Degré de Difficulté sous peine d'être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité d'attaque de -4 en cas d'échec du jet de sauvegarde. Les créatures avec une vision dans le noir supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) n'ont qu'une pénalité d'attaque de -2. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
 
 @1001	= ~Funeste destin
 (Enchantement)
-Niveau : Prê 1, Talos 1, Barde 2
-Portée : portée de vue
-Durée : 10 rounds / niveau
-Temps d’incantation : 4
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Talos 1, Barde 2
+Portée : portée de vue
+Durée : 10 rounds / niveau
+Temps d’incantation : 4
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Ce sort provoque un sentiment de malheur qui submerge la cible. Pendant toute la durée du sort, la cible reçoit un malus de -2 au bonus d’attaque et aux jets de sauvegarde.~
-@6403	= ~J’ai appris vos exploits à la forteresse. J’ai du mal à croire à l’accord que vous avez conclu, mais au moins vous nous avez gagné un peu de temps.~
-@6404	= ~Je pense qu’Ulbrec essaie simplement de ne pas nous payer. Nous sommes venus pour l’or, Shawford, pas pour les compliments.~
+@6403	= ~J’ai appris vos exploits à la forteresse. J'ai du mal à croire à l'accord que vous avez conclu, mais au moins vous nous avez gagné un peu de temps.~
+@6404	= ~Je pense qu'Ulbrec essaie simplement de ne pas nous payer. Nous sommes venus pour l'or, Shawford, pas pour les compliments.~
 @6405	= ~Nous attendons le paiement pour nos efforts dans la forteresse, Shawford... ainsi que les autres missions que vous ne nous avez pas payées.~
 @30070	= ~10 points de dégâts résistés des armes ni maléfiques et ni chaotiques~
 @30071	= ~15 points de dégâts résistés des armes ni maléfiques et ni chaotiques~
 @1031	= ~Brume d’Eldath
 (Invocation) [Bon]
-Niveau : Dru 7, Ilmater 8
-Portée : portée de vue
-Durée : 1 tour
-Temps d’incantation : 1 tour
-Zone d’effet : rayon de 3 mètres (10 pieds)
-Jet de sauvegarde : aucun
+Niveau : Dru 7, Ilmater 8
+Portée : portée de vue
+Durée : 1 tour
+Temps d’incantation : 1 tour
+Zone d’effet : rayon de 3 mètres (10 pieds)
+Jet de sauvegarde : aucun
 
 Une brume verte baigne la zone d’effet. Elle soigne les maladies, guérit du poison et soigne 80 points de vie à toute créature vivante et non hostile baignant dans la brume. Ce sort ne peut être lancé par des personnages d’alignement mauvais.~
-@1697	= ~Mot de pouvoir : Cécité
+@1697	= ~Mot de pouvoir : Cécité
 (Divination)
-Niveau : Bar 7, Ens/Mag 8, Tempus 7, Bane 8
-Portée : portée de vue
-Durée : Spéciale
-Temps d’incantation : 0
-Zone d’effet : rayon de 3 mètres (10 pieds)
-Jet de sauvegarde : aucun
+Niveau : Bar 7, Ens/Mag 8, Tempus 7, Bane 8
+Portée : portée de vue
+Durée : Spéciale
+Temps d’incantation : 0
+Zone d’effet : rayon de 3 mètres (10 pieds)
+Jet de sauvegarde : aucun
 
-Ce sort aveugle les créatures ennemies dans la zone d’effet. La durée de la cécité dépend des Dés de Vie de la créature. Les créatures de 9 DV ou moins sont aveuglées de façon permanente, tandis que celles de 10 DV ou plus sont aveuglées pendant 3 rounds. Une créature ne peut pas être affectée par ce sort plus d’une fois toutes les 8 heures. Ce sort n’a aucun effet sur les créatures sourdes.~
+Ce sort aveugle les créatures ennemies dans la zone d'effet. La durée de la cécité dépend des Dés de Vie de la créature. Les créatures de 9 DV ou moins sont aveuglées de façon permanente, tandis que celles de 10 DV ou plus sont aveuglées pendant 3 rounds. Une créature ne peut pas être affectée par ce sort plus d’une fois toutes les 8 heures. Ce sort n’a aucun effet sur les créatures sourdes.~
 @38154	= ~Simple invocation
 (Invocation)
-Niveau : Bar 2, Prê 2, Ens/Mag 1
-Portée : portée de vue
-Durée : Instantanée
-Temps d’incantation : 1
-Zone d’effet : 1 créature
-Jet de sauvegarde : Volonté annule
+Niveau : Bar 2, Prê 2, Ens/Mag 1
+Portée : portée de vue
+Durée : Instantanée
+Temps d’incantation : 1
+Zone d’effet : 1 créature
+Jet de sauvegarde : Volonté annule
 
-Simple invocation invoque la cible du sort. La cible est instantanément téléportée à côté du lanceur si elle échoue à un jet de Volonté. Contrairement à la plupart des autres sorts d’invocation, Simple invocation ne donne aucun contrôle sur la créature. Ce sort peut être utilisé soit pour secourir un allié (par exemple, si l’allié est paralysé et attaqué par des ennemis), soit pour transporter un ennemi dans une position où il se retrouverait désavantagé. Les alliés sont affectés sans jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d’un barrage ou d’un pont par exemple) ne sont pas affectés par ce sort.~
+Simple invocation invoque la cible du sort. La cible est instantanément téléportée à côté du lanceur si elle échoue à un jet de Volonté. Contrairement à la plupart des autres sorts d’invocation, Simple invocation ne donne aucun contrôle sur la créature. Ce sort peut être utilisé soit pour secourir un allié (par exemple, si l’allié est paralysé et attaqué par des ennemis), soit pour transporter un ennemi dans une position où il se retrouverait désavantagé. Les alliés sont affectés sans jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d'un barrage ou d'un pont par exemple) ne sont pas affectés par ce sort.~
 @1872	= ~Bénédiction
 (Invocation)
-Niveau : Prê 1, Pal 1, Tempus 1
-Portée : portée de vue
-Durée : 10 rounds / niveau
-Temps d’incantation : 2
-Zone d’effet : rayon de 7,5 mètres (25 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Pal 1, Tempus 1
+Portée : portée de vue
+Durée : 10 rounds / niveau
+Temps d’incantation : 2
+Zone d’effet : rayon de 7,5 mètres (25 pieds)
+Jet de sauvegarde : aucun
 
 En prononçant ce sort, le lanceur augmente le bonus d’attaque et les jets de sauvegarde des créatures alliées dans la zone d’effet de +1. Bénédiction contre et dissipe Malédiction.~
 @1874	= ~Malédiction
 (Enchantement)
-Niveau : Prê 1, Bane 1
-Portée : portée de vue
-Durée : 10 rounds / niveau
-Temps d’incantation : 2
-Zone d’effet : rayon de 7,5 mètres (25 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Bane 1
+Portée : portée de vue
+Durée : 10 rounds / niveau
+Temps d’incantation : 2
+Zone d’effet : rayon de 7,5 mètres (25 pieds)
+Jet de sauvegarde : aucun
 
 Malédiction est l’inverse de Bénédiction, et réduit le bonus d’attaque et les jets de sauvegarde des créatures ennemies dans la zone d’effet de 1 pendant la durée du sort. Malédiction contre et dissipe Bénédiction.~
 @1898	= ~Massue de chêne
 (Transmutation)
-Niveau : Dru 1, Rôd 1
-Portée : lanceur
-Durée : 5 rounds + 1 round/niveau
-Temps d’incantation : 2
-Zone d’effet : lanceur
-Jet de sauvegarde : aucun
+Niveau : Dru 1, Rôd 1
+Portée : lanceur
+Durée : 5 rounds + 1 round/niveau
+Temps d’incantation : 2
+Zone d'effet : lanceur
+Jet de sauvegarde : aucun
 
 Ce sort crée une massue magique qui a un bonus d’attaque de +1 et inflige 1d10+1 points de dégâts contondants par coup. L’enchantement, les bonus d’attaque et de dégâts de la Massue de chêne augmentent à +2 au niveau 6, +3 au niveau 9, +4 au niveau 12 et +5 au niveau 15. La Massue de chêne bénéficie également du bonus de Sagesse du personnage pour l’attaque et les dégâts au lieu de la Force si sa Sagesse est supérieure. La Massue de chêne profite du don Maniement des Armes courantes, Masse.~
 @32107	= ~Protection contre le mal
 (Abjuration) [Bon]
-Niveau : Prê 1, Pal 1, Ens/Mag 1
-Portée : toucher
-Durée : 10 rounds/niveau
-Temps d’incantation : 1
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Prê 1, Pal 1, Ens/Mag 1
+Portée : toucher
+Durée : 10 rounds/niveau
+Temps d’incantation : 1
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Ce sort forme une barrière magique autour de la créature ciblée, accordant un bonus générique de +2 à la classe d’armure et aux jets de sauvegarde contre les attaques, sorts et capacités des créatures maléfiques. De plus, la créature est immunisée contre les effets de charme et de domination. Les fiélons invoqués n’attaquent pas leur invocateur ou les alliés de leur invocateur si ce dernier est sous Protection contre le mal.~
 @32408 	= ~Cercle magique contre le mal
 (Abjuration) [Bien]
-Niveau : Prê 4, Pal 4, Ens/Mag 4, Ilmater 3
-Portée : lanceur
-Durée : 10 rounds/niveau
-Temps d’incantation : 7
-Zone d’effet : Rayon de 3 mètres (10 pieds)
-Jet de sauvegarde : aucun
+Niveau : Prê 4, Pal 4, Ens/Mag 4, Ilmater 3
+Portée : lanceur
+Durée : 10 rounds/niveau
+Temps d’incantation : 7
+Zone d’effet : Rayon de 3 mètres (10 pieds)
+Jet de sauvegarde : aucun
 
 Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres sont affectées individuellement par la Protection contre le mal, ce qui leur donne +2 à la classe d’armure et +2 aux jets de sauvegarde contre les créatures maléfiques, ainsi qu’une immunité aux effets de charme et de domination de ces créatures.~
 @32523 	= ~Electricité statique
 (Transmutation)
-Niveau : Dru 5, Rôd 6, Talos 4
-Durée : 50 rounds
-Temps d’incantation : 1 round
-Zone d’effet : Vue du lanceur de sorts
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Dru 5, Rôd 6, Talos 4
+Durée : 50 rounds
+Temps d’incantation : 1 round
+Zone d’effet : Vue du lanceur de sorts
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Electricité statique est similaire à Appel de la foudre, sauf qu’il peut être utilisé à l’intérieur. Une fois le sort terminé, une créature ennemie dans la zone d’effet est frappée par une décharge d’électricité statique infligeant 1d8 points de dégâts électriques par niveau de lanceur de sorts, jusqu’à un maximum de 16d8 points de dégâts électriques. Un jet de Réflexes réussi avec +4 au Degré de Difficulté réduit les dégâts de moitié. Une fois libérée, l’électricité statique se reforme sur le lanceur, se déchargeant une fois toutes les 5 rounds pendant la durée du sort.~
 @32704 	= ~Fatalité rampante
 (Invocation)
-Niveau : Dru 7
-Portée : portée de vue
-Durée : 1 round/niveau
-Temps d’incantation : 10
-Zone d’effet : Spécial
-Jet de sauvegarde : aucun
+Niveau : Dru 7
+Portée : portée de vue
+Durée : 1 round/niveau
+Temps d’incantation : 10
+Zone d’effet : Spécial
+Jet de sauvegarde : aucun
 
 Fatalité rampante invoque une horde d’insectes composée de divers petits scarabées, araignées et autres créatures. L’essaim est capable d’infliger des dégâts dévastateurs en peu de temps, mais il est fragile et facile à tuer.~
 @1063	= ~Citadelle de l’âme
 (Abjuration)
-Niveau : Prê 7, Ilmater 7, Heaum 7
-Portée : portée de vue
-Durée : 10 rounds/niveau
-Temps d’incantation : 2
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Prê 7, Ilmater 7, Heaum 7
+Portée : portée de vue
+Durée : 10 rounds/niveau
+Temps d’incantation : 2
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Ce sort protège l’esprit du personnage contre toutes les influences extérieures, ce qui l’immunise contre les attaques psioniques, ainsi que les sorts de type charme, injonction, confusion, domination, terreur, débilité, immobilisation, sommeil et désespoir.~
 @34101 	= ~Graisse
 (Invocation)
-Niveau : Bar 1, Ens/Mag 1
-Portée : portée de vue
-Durée : 10 rounds
-Temps d’incantation : 1
-Zone d’effet : rayon de 1,5 mètre (5 pieds)
-Jet de sauvegarde : Réflexes, 1/2 dégâts
+Niveau : Bar 1, Ens/Mag 1
+Portée : portée de vue
+Durée : 10 rounds
+Temps d’incantation : 1
+Zone d’effet : rayon de 1,5 mètre (5 pieds)
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort fait apparaître une couche de graisse glissante sur le sol. Toute créature comprise dans la zone d’effet ou y pénétrant par la suite doit réussir un jet de Réflexes à chaque round sous peine de voir sa vitesse de déplacement fortement ralentie. Celles qui réussissent leur jet peuvent se déplacer dans la zone à la moitié de leur vitesse normale.~
 @34206 	= ~Invisibilité
 (Illusion)
-Niveau : Bar 2, Rôd 2, Ens/Mag 2
-Portée : toucher
-Durée : 10 rounds/niveau
-Temps d’incantation : 2
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Bar 2, Rôd 2, Ens/Mag 2
+Portée : toucher
+Durée : 10 rounds/niveau
+Temps d’incantation : 2
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Ce sort rend une créature invisible et indétectable par la vision normale ou la vision dans le noir. Le sort reste en vigueur jusqu’à ce que la durée soit écoulée, qu’il soit rompu ou dissipé par magie, ou jusqu’à ce que le destinataire parle à une créature ou l’attaque. Ainsi, l’être invisible peut ouvrir des portes, manger, monter des escaliers, etc., mais s’il attaque ou lance un sort, il devient immédiatement visible (bien que l’invisibilité lui permette d’attaquer en premier).~
 @1750	= ~Nuage nauséabond
 (Nécromancie)
-Niveau : Ens/Mag 3
-Portée : Moyenne
-Durée : 10 rounds
-Temps d’incantation : 2
-Zone d’effet : rayon de 9 mètres (30 pieds)
-Jet de sauvegarde : Vigueur annule
+Niveau : Ens/Mag 3
+Portée : Moyenne
+Durée : 10 rounds
+Temps d’incantation : 2
+Zone d’effet : rayon de 9 mètres (30 pieds)
+Jet de sauvegarde : Vigueur annule
 
 Nuage nauséabond crée une masse de vapeurs nauséabondes jusqu’à 9 mètres (30 pieds) du lanceur de sorts. Toute créature vivante prise dans le nuage doit réussir un jet de sauvegarde de Vigueur avec -2 au Degré de Difficulté sous peine de devenir nauséeuse, ce qui les empêche d’attaquer, de lancer des sorts, de se concentrer sur des sorts, etc. Ces effets durent tant que le personnage reste dans le nuage.~
 @34311 	= ~Protection contre les projectiles
 (Abjuration)
-Niveau : Ens/Mag 2, Heaum 3
-Portée : toucher
-Durée : 10 rounds/niveau
-Temps d’incantation : 3
-Zone d’effet : 1 créature
-Jet de sauvegarde : aucun
+Niveau : Ens/Mag 2, Heaum 3
+Portée : toucher
+Durée : 10 rounds/niveau
+Temps d’incantation : 3
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
 Ce sort confère à la cible une réduction des dégâts de 10/+1 contre les projectiles pour la durée du sort. La réduction des dégâts augmente avec le niveau du lanceur de sorts jusqu’à 10/+2 au 5ème niveau, 10/+3 au 10ème, 10/+4 au 15ème, et 10/+5 au 20ème.~
 @34321 	= ~Sphère d’invisibilité
 (Illusion)
-Niveau : Bar 3, Ens/Mag 3, Mask 3
-Portée : lanceur
-Durée : 10 rounds/niveau
-Temps d’incantation : 10
-Zone d’effet : Rayon de 3 mètres (10 pieds)
-Jet de sauvegarde : aucun
+Niveau : Bar 3, Ens/Mag 3, Mask 3
+Portée : lanceur
+Durée : 10 rounds/niveau
+Temps d’incantation : 10
+Zone d’effet : Rayon de 3 mètres (10 pieds)
+Jet de sauvegarde : aucun
 
-Ce sort fait disparaître toutes les créatures situées à moins de 3 mètres du lanceur de sorts et les rend indétectables par la vision normale ou même par la vision dans le noir. Bien entendu, la créature invisible ne devient pas muette pour autant, et certaines autres conditions peuvent la rendre détectable. Même ses alliés ne peuvent pas la voir, à moins qu’ils ne possèdent la faculté de voir l’invisible ou qu’ils n’usent de magie. Les objets que l’être invisible fait tomber ou abandonne au sol deviennent visibles ; les objets ramassés disparaissent s’ils sont glissés dans un vêtement ou une bourse. Le sort reste actif tant qu’il n’est pas rompu ou dissipé par magie, à moins que le magicien ou l’un des bénéficiaires ne l’annule, que l’un de ces derniers n’attaque une créature ou que la durée maximale soit écoulée. Les êtres invisibles peuvent ouvrir les portes, parler, manger, monter les escaliers, etc. Mais s’ils attaquent, ils deviennent immédiatement visibles, bien que l’invisibilité leur permette de porter le premier coup.~
+Ce sort fait disparaître toutes les créatures situées à moins de 3 mètres du lanceur de sorts et les rend indétectables par la vision normale ou même par la vision dans le noir. Bien entendu, la créature invisible ne devient pas muette pour autant, et certaines autres conditions peuvent la rendre détectable. Même ses alliés ne peuvent pas la voir, à moins qu'ils ne possèdent la faculté de voir l'invisible ou qu'ils n'usent de magie.  Les objets que l'être invisible fait tomber ou abandonne au sol deviennent visibles ; les objets ramassés disparaissent s'ils sont glissés dans un vêtement ou une bourse. Le sort reste actif tant qu'il n'est pas rompu ou dissipé par magie, à moins que le magicien ou l'un des bénéficiaires ne l'annule, que l'un de ces derniers n’attaque une créature ou que la durée maximale soit écoulée. Les êtres invisibles peuvent ouvrir les portes, parler, manger, monter les escaliers, etc. Mais s’ils attaquent, ils deviennent immédiatement visibles, bien que l’invisibilité leur permette de porter le premier coup.~
 @38455 	= ~Transformation
 (Transmutation)
-Niveau : Ens/Mag 4
-Portée : lanceur
-Durée : 10 rounds/niveau
-Temps d’incantation : 4
-Zone d’effet : lanceur
-Jet de sauvegarde : aucun
+Niveau : Ens/Mag 4
+Portée : lanceur
+Durée : 10 rounds/niveau
+Temps d’incantation : 4
+Zone d'effet : lanceur
+Jet de sauvegarde : aucun
 
-Transformation permet au lanceur de prendre la forme d’une créature de puissance modérée. Sous une autre forme, le lanceur possède sa Force, sa Dextérité, sa Constitution, sa classe d’armure de base, ses résistances, ses immunités, ses attaques et ses capacités spéciales. Le lanceur peut se polymorpher sous l’une des formes suivantes :
+Transformation permet au lanceur de prendre la forme d’une créature de puissance modérée. Sous une autre forme, le lanceur possède sa Force, sa Dextérité, sa Constitution, sa classe d’armure de base, ses résistances, ses immunités, ses attaques et ses capacités spéciales. Le lanceur peut se polymorpher sous l’une des formes suivantes :
 
 * Géant fomorien (peut lancer des rochers à longue portée)
 * Troll (régénère 1 PV par seconde)
@@ -1205,21 +1205,21 @@ Transformation permet au lanceur de prendre la forme d’une créature de puissance
 * Wyverne (peut voler, et chaque coup empoisonne la cible en cas d’échec au jet de sauvegarde de Vigueur)~
 @38955 	= ~Brouillard corrosif de Malavon
 (Invocation)
-Niveau : Ens/Mag 9
-Portée : portée de vue
-Durée : 20 rounds
-Temps d’incantation : 12
-Zone d’effet : rayon de 12 mètres (40 pieds)
-Jet de sauvegarde : Vigueur, 1/2 dégâts
+Niveau : Ens/Mag 9
+Portée : portée de vue
+Durée : 20 rounds
+Temps d’incantation : 12
+Zone d’effet : rayon de 12 mètres (40 pieds)
+Jet de sauvegarde : Vigueur, 1/2 dégâts
 
 Le Brouillard corrosif de Malavon est un autre sort créé par le sorcier elfe noir Malavon. Il crée un énorme nuage de brouillard acide qui persiste longtemps. Chaque round, toute créature dans le brouillard subit 12d6 dégâts d’acide (jet de Vigueur réussi pour réduire de moitié les dégâts), et leur vitesse de déplacement est réduite de moitié (il n’y a pas de jet de sauvegarde contre la pénalité de mouvement). La résistance à la magie de la cible, si elle en a, n’affecte pas ce sort.~
-@389	= ~VOIE DE LA LICHE :
+@389	= ~VOIE DE LA LICHE :
 
 Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité... tant que votre phylactère survit.
 
-Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
+Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
-Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
+Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
 * Bonus d’armure générique de +5.
 * +2 en Intelligence, Sagesse et Charisme.
 * Immunité au froid, à l’électricité, au poison, aux maladies, aux saignements, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification, aux effets de métamorphose nuisibles (Transformation fonctionne toujours), aux coups critiques et aux attaques sournoises.
@@ -1228,15 +1228,15 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
-@390	= ~VOIE DE LA LICHE :
+@390	= ~VOIE DE LA LICHE :
 
 Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité... tant que votre phylactère survit.
 
-Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
+Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
-Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
+Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
 * Bonus d’armure de +5.
 * +2 en Intelligence, Sagesse et Charisme.
 * Immunité au froid, à l’électricité, au poison, aux maladies, aux saignements, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification et aux effets de métamorphose nuisibles (Transformation fonctionne toujours).
@@ -1245,5 +1245,6 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
+
