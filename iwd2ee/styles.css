@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+body {
+  font-family: Verdana,Tahoma,Arial,sans-serif;
+  background-image: linear-gradient(#ccc7ba, #e8e6e1);
+  background-color: #e8e6e1;
+  background-repeat: no-repeat;
+  margin: 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0.75rem auto;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0.75rem auto 0.5rem;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0.75rem 1.5rem 0.5rem;
+  padding: 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0.75rem auto 0.5rem;
+  padding: 0;
+}
+
+h5 {
+  font-size: 1.1rem;
+  margin: 0.4rem 1rem 0.3rem;
+  padding: 0;
+}
+
+h6 {
+  font-size: 1.05rem;
+  font-style: italic;
+  margin: 0.3rem auto 0.2rem;
+  padding: 0;
+}
+
+p {
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0.6rem auto;
+}
+
+pre {
+  margin: 0.6rem auto;
+}
+
+ul, ol {
+  margin: 0.6rem 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+li > ul {
+  list-style-type: disc;
+}
+
+li > ul > li > ul {
+  list-style-type: circle;
+}
+
+li {
+  line-height: 1.5;
+}
+
+header {
+  width: 80vw;
+  margin: 1.5rem auto 0;
+  border-width: 0.1875rem 0.1875rem 0.0625rem 0.1875rem;
+  border-color: #66451f;
+  border-style: solid;
+  background: #e8e8e0;
+  text-align: center;
+}
+
+header > * {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+nav ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+nav ul li {
+  display: inline;
+  white-space: nowrap;
+}
+
+nav ul li:not(:last-child):after {
+  content: "\25aa"; /* simulates list-style-type: square */
+  padding-left: 0.4rem;
+}
+
+nav a:link, nav a:visited {
+  color: #420;
+}
+
+nav a:hover, nav a:active {
+  color: #222;
+}
+
+main {
+  width: 80vw;
+  margin: 0 auto 1.5rem;
+  border-width: 0.0625rem 0.1875rem 0.125rem;
+  border-color: #66451f;
+  border-style: solid;
+  background: #e8e8e0;
+}
+
+main > * {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+section {
+  border-width: 0.0625rem 0;
+  border-style: solid;
+  border-color: #66451f;
+}
+
+section > p, section > div, section > pre {
+  margin-left: 2rem;
+}
+
+details {
+  margin-left: 2rem;
+}
+
+hr {
+  color: #aaa;
+}
+
+a:link, a:visited {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:link {
+  color: #730;
+}
+
+a:visited {
+  color: #850;
+}
+
+a:hover, a:active {
+  color: #420;
+  text-decoration: underline #420 solid;
+}
+
+a img {
+  padding-bottom: 0.125rem;
+  border-bottom: 0.1rem solid transparent;  /* can't find another way to keep fixed image size */
+}
+
+a:hover img, a:active img {
+  color: #420;
+  border-bottom: 0.1rem solid #420;
+}
+
+#language {
+  width: 80vw;
+  margin: 0 auto;
+  border-width: 0.1875rem;
+  border-color: #66451f;
+  border-style: none solid solid solid;
+  background: #e8e8e0;
+  text-align: center;
+  font-weight: bold;
+}
+
+#language > * {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+#language ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+#language ul li {
+  display: inline-block;
+  border-left-style: dotted;
+  border-left-color: #66451f;
+  border-left-width: 0.1rem;
+  padding-left: 0.4rem;
+}
+
+#language ul li:first-child {
+  border-left-style: none;
+  padding-left: 0;
+}
+
+#globalnav {
+  margin: 0;
+}
+
+#globalnav li {
+  display: inline;
+  white-space: nowrap;
+}
+
+#globalnav li:not(:last-child):after {
+  content: "\2022"; /* simulates list-style-type: disc */
+  padding-left: 0.4rem;
+}
+
+#license img {
+  /* Creative Commons logo: 88x31 px */
+  /* Account for padding value in "a img {}" definition */
+  width: auto;
+  height: 2.0625rem;
+}
+
+details {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+details > summary {
+  cursor: help;
+}
+
+details.faq > summary {
+  font-weight: bold;
+}
+
+details.faq ul {
+  list-style-type: none;
+}
+
+details.faq ul > li:before {
+  font-weight: bold;
+  content: attr(data-letter) ":";
+  margin-right: 0.5rem;
+}
+
+.novisit:visited {
+  color: #730;
+}
+
+.back {
+  text-align: right;
+  margin: 0.25rem -1.5vw 0.25rem 0;
+}
+
+.title {
+  text-shadow: 0.1rem 0.1rem 0.25rem #807559;
+}
+
+.subtitle {
+  font-style: italic;
+  text-shadow: 0.03rem 0.03rem 0.1rem #807559;
+}
+
+.about {
+  font-size: 1.25rem;
+}
+
+.important {
+  font-size: 0.95rem;
+  background-color: #f5f5f0;
+  border: solid 0.1rem #888;
+  padding: 0.8rem;
+  margin: 1.5rem auto;
+  width: 85%;
+  line-height: 1.6rem;
+}
+
+.important > * {
+  margin: 0;
+}
+
+.floatfix {
+  clear: both;
+  color: transparent;
+  background-color: transparent;
+}
+
+.boxed {
+  border-style: inset;
+  border-width: 0.1rem;
+  border-color: #66451f;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+.spacer {
+  background-color: transparent;
+  color: transparent;
+  margin: 0.5rem 0;
+}
+
+.doublespacer {
+  background-color: transparent;
+  color: transparent;
+  margin: 1rem 0;
+}
+
+.code {
+  overflow: auto;
+  font-family: Consolas,monospace;
+  font-size: 0.9rem;
+  border-width: 0.0625rem;
+  border-color: black;
+  border-style: solid;
+  padding: 0 0.2rem;
+}
+
+.desc {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto; /* Laisse le tableau prendre sa largeur naturelle */
+  margin: 1rem 2rem; /* Marge supérieure et inférieure, alignement à gauche */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.pseudo {
+  color: #300018; /* Une couleur bleue pour les pseudos */
+  font-weight: bold;
+}
