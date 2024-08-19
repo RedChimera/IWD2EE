@@ -44,6 +44,7 @@
                 <li><a href="#installation">Installation</a></li>
                 <li><a href="#components">Components</a></li>
                 <li><a href="#credits">Credits</a></li>
+                <button id="themeToggle">Switch theme</button>
             </ul>
         </nav>
     </header>
@@ -597,7 +598,7 @@
                         they do on normal difficulty settings.</li>
                 </ul>
 
-                <h4>Fixes:</h4>
+                <h5>Fixes:</h5>
                 <ul>
                     <li>Harpies in Chapter 1 use their wail.</li>
                     <li>Yuan-ti Half-breed Sorceresses in the battle for Kuldahar now cast spells.</li>
@@ -1241,14 +1242,23 @@
             </div>
         </section>
     </main>
+    <!-- Fetch version number from github -->
     <script>
-        //fetch the latest version number from github
         fetch('https://api.github.com/repos/RedChimera/IWD2EE/releases/latest')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('version').textContent = "Version: " + data.tag_name;
             });
     </script>
+    <!-- Make the button to change theme work -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+      
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark-theme');
+        });
+      </script>
 </body>
 
 </html>
