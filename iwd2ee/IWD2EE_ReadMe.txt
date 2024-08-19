@@ -16,6 +16,7 @@ Languages:
 English
 Italian
 Russian
+French
 
 Components:
 
@@ -66,7 +67,7 @@ Components:
 The core component must be installed for any other component to be installed. It includes various quality of life changes.
 
 * Load times are much faster.
-* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game.
+* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game. You should play at 600p or 768p height to make the in-game UI take up the full height of your screen, and to keep the text somewhat readable. For 21:9 and other ultrawide displays, you can set a custom resolution (like 1835x768 or 1433x600) in the ddraw.ini file at the [iwd2] section.
 * IWD2EE includes a ddraw fix unless you already had one installed. This should improve performance.
 * Scrolling the screen should be smoother on some devices.
 * It is possible to scroll with the middle mouse button.

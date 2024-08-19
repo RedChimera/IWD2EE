@@ -21,7 +21,9 @@ ALWAYS
 	VERBOSE
 END
 
-README ~iwd2ee/IWD2EE_ReadMe.txt~
+README ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.html~
+       ~iwd2ee/IWD2EE_ReadMe.html~
+       ~iwd2ee/IWD2EE_ReadMe.txt~
 
 AUTO_TRA ~iwd2ee/tra/%s~
 
