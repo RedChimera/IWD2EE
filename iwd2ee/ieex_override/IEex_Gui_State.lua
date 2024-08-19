@@ -3,24 +3,28 @@
 -- General Functions --
 -----------------------
 
-function IEex_WritePrivateProfileString(lpAppName, lpKeyName, lpString, lpFileName)
+function IEex_GetCursorXY()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local x = IEex_ReadDword(g_pBaldurChitin + 0x1906)
+	local y = IEex_ReadDword(g_pBaldurChitin + 0x190A)
+	return x, y
+end
+
+function IEex_GetPrivateProfileInt(lpAppName, lpKeyName, nDefault, lpFileName)
+	local toReturn
 	IEex_RunWithStackManager({
 		{["name"] = "lpAppName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpAppName}  }},
 		{["name"] = "lpKeyName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpKeyName}  }},
-		{["name"] = "lpString",   ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpString}   }},
 		{["name"] = "lpFileName", ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpFileName} }}, },
 		function(manager)
-			IEex_Call(IEex_ReadDword(0x847308), {
+			toReturn = IEex_Call(IEex_ReadDword(0x847310), {
 				manager:getAddress("lpFileName"),
-				manager:getAddress("lpString"),
+				nDefault,
 				manager:getAddress("lpKeyName"),
 				manager:getAddress("lpAppName"),
 			})
 		end)
-end
-
-function IEex_WritePrivateProfileInt(lpAppName, lpKeyName, nInt, lpFileName)
-	IEex_WritePrivateProfileString(lpAppName, lpKeyName, tostring(nInt), lpFileName)
+	return toReturn
 end
 
 function IEex_GetPrivateProfileString(lpAppName, lpKeyName, lpDefault, lpFileName)
@@ -46,33 +50,33 @@ function IEex_GetPrivateProfileString(lpAppName, lpKeyName, lpDefault, lpFileNam
 	return toReturn
 end
 
-function IEex_GetPrivateProfileInt(lpAppName, lpKeyName, nDefault, lpFileName)
-	local toReturn
-	IEex_RunWithStackManager({
-		{["name"] = "lpAppName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpAppName}  }},
-		{["name"] = "lpKeyName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpKeyName}  }},
-		{["name"] = "lpFileName", ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpFileName} }}, },
-		function(manager)
-			toReturn = IEex_Call(IEex_ReadDword(0x847310), {
-				manager:getAddress("lpFileName"),
-				nDefault,
-				manager:getAddress("lpKeyName"),
-				manager:getAddress("lpAppName"),
-			})
-		end)
-	return toReturn
-end
-
 function IEex_GetResolution()
 	return IEex_ReadWord(0x8BA31C, 0), IEex_ReadWord(0x8BA31E, 0)
 end
 
-function IEex_GetCursorXY()
-	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-	local x = IEex_ReadDword(g_pBaldurChitin + 0x1906)
-	local y = IEex_ReadDword(g_pBaldurChitin + 0x190A)
-	return x, y
+function IEex_WritePrivateProfileInt(lpAppName, lpKeyName, nInt, lpFileName)
+	IEex_WritePrivateProfileString(lpAppName, lpKeyName, tostring(nInt), lpFileName)
 end
+
+function IEex_WritePrivateProfileString(lpAppName, lpKeyName, lpString, lpFileName)
+	IEex_RunWithStackManager({
+		{["name"] = "lpAppName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpAppName}  }},
+		{["name"] = "lpKeyName",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpKeyName}  }},
+		{["name"] = "lpString",   ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpString}   }},
+		{["name"] = "lpFileName", ["struct"] = "string", ["constructor"] = {["luaArgs"] = {lpFileName} }}, },
+		function(manager)
+			IEex_Call(IEex_ReadDword(0x847308), {
+				manager:getAddress("lpFileName"),
+				manager:getAddress("lpString"),
+				manager:getAddress("lpKeyName"),
+				manager:getAddress("lpAppName"),
+			})
+		end)
+end
+
+-------------------------
+-- CInfinity Functions --
+-------------------------
 
 function IEex_GetViewportRectFromCInfinity(CInfinity)
 	local rViewPort = CInfinity + 0x48
@@ -82,89 +86,9 @@ function IEex_GetViewportRectFromCInfinity(CInfinity)
 		   IEex_ReadDword(rViewPort + 0xC)  -- bottom
 end
 
-function IEex_GetViewportRect()
-	return IEex_GetViewportRectFromCInfinity(IEex_GetCInfinity())
-end
-
-function IEex_SetViewportBottom(bottom)
-	IEex_WriteDword(IEex_GetCInfinity() + 0x48 + 0xC, bottom)
-end
-
-function IEex_ResetViewport()
-	local panel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), 1)
-	local _, y, _, _ = IEex_GetPanelArea(panel)
-	IEex_SetViewportBottom(y)
-end
-
-function IEex_PanelInvalidateRect(CUIPanel, left, top, right, bottom)
-	local rect = IEex_Malloc(0x10)
-	IEex_WriteDword(rect + 0x0, left)
-	IEex_WriteDword(rect + 0x4, top)
-	IEex_WriteDword(rect + 0x8, right)
-	IEex_WriteDword(rect + 0xC, bottom)
-	IEex_Call(0x4D3810, {rect}, CUIPanel, 0x0)
-	IEex_Free(rect)
-end
-
-function IEex_PanelInvalidate(CUIPanel)
-	IEex_Call(0x4D3810, {0x0}, CUIPanel, 0x0)
-end
-
-function IEex_InvalidatePanelUIManager(panel)
-	IEex_InvalidateUIManagerRect(IEex_GetUIManagerFromPanel(panel), IEex_GetPanelArea(panel))
-end
-
-function IEex_GetPanelArea(CUIPanel)
-	local x = IEex_ReadDword(CUIPanel + 0x24)
-	local y = IEex_ReadDword(CUIPanel + 0x28)
-	local w = IEex_ReadDword(CUIPanel + 0x34)
-	local h = IEex_ReadDword(CUIPanel + 0x38)
-	return x, y, w, h
-end
-
-function IEex_InvalidateUIManagerRect(CUIManager, l, r, t, b)
-	IEex_RunWithStackManager({
-		{["name"] = "rect", ["struct"] = "CRect", ["constructor"] = {["variant"] = "fill", ["luaArgs"] = {l, r, t, b} }}, },
-		function(manager)
-			IEex_Call(0x4D45E0, {manager:getAddress("rect")}, CUIManager, 0x0)
-		end)
-end
-
-function IEex_IsUIManagerHidden(CUIManager)
-	return IEex_ReadDword(CUIManager) == 1
-end
-
-function IEex_IsEngineUIManagerHidden(CBaldurEngine)
-	return IEex_ReadDword(IEex_GetUIManagerFromEngine(CBaldurEngine)) == 1
-end
-
-function IEex_GetPanel(CUIManager, panelID)
-	return IEex_Call(0x4D4000, {panelID}, CUIManager, 0x0)
-end
-
-function IEex_GetPanelID(CUIPanel)
-	return IEex_ReadDword(CUIPanel + 0x20)
-end
-
-function IEex_GetUIManagerFromEngine(CBaldurEngine)
-	return CBaldurEngine + 0x30
-end
-
-function IEex_GetUIManagerFromPanel(CUIPanel)
-	return IEex_ReadDword(CUIPanel)
-end
-
-function IEex_GetCHUResrefFromUIManager(CUIManager)
-	return IEex_ReadLString(CUIManager + 0x8, 8)
-end
-
-function IEex_GetCHUResrefFromEngine(CBaldurEngine)
-	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromEngine(CBaldurEngine))
-end
-
-function IEex_GetCHUResrefFromPanel(CUIPanel)
-	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromPanel(CUIPanel))
-end
+------------------------
+-- Viewport Functions --
+------------------------
 
 function IEex_GetMainViewportBottom(excludeQuickloot, checkHidden)
 	local _, _, _, minY = IEex_GetViewportRect()
@@ -183,30 +107,74 @@ function IEex_GetMainViewportBottom(excludeQuickloot, checkHidden)
 	return minY
 end
 
-function IEex_GetPanelBackgroundImage(CUIPanel)
-	-- CUIPanel.m_mosaic.resHelper.cResRef
-	return IEex_ReadLString(CUIPanel + 0x3E + 0xA0 + 0x8, 8)
+function IEex_GetViewportRect()
+	return IEex_GetViewportRectFromCInfinity(IEex_GetCInfinity())
+end
+
+function IEex_ResetViewport()
+	local panel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), 1)
+	local _, y, _, _ = IEex_GetPanelArea(panel)
+	IEex_SetViewportBottom(y)
+end
+
+function IEex_SetViewportBottom(bottom)
+	IEex_WriteDword(IEex_GetCInfinity() + 0x48 + 0xC, bottom)
+end
+
+----------------------
+-- Engine Functions --
+----------------------
+
+function IEex_GetCHUResrefFromEngine(CBaldurEngine)
+	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromEngine(CBaldurEngine))
 end
 
 function IEex_GetPanelFromEngine(CBaldurEngine, panelID)
 	return IEex_GetPanel(IEex_GetUIManagerFromEngine(CBaldurEngine), panelID)
 end
 
-function IEex_IsPanelActive(CUIPanel)
-	return IEex_ReadDword(CUIPanel + 0xF4) == 1
+function IEex_GetUIManagerFromEngine(CBaldurEngine)
+	return CBaldurEngine + 0x30
 end
 
--- Flagged when panel is not interactable yet should still render
-function IEex_IsPanelInactiveRender(CUIPanel)
-	return IEex_ReadDword(CUIPanel + 0x10A) == 1
+function IEex_IsEngineUIManagerHidden(CBaldurEngine)
+	return IEex_ReadDword(IEex_GetUIManagerFromEngine(CBaldurEngine)) == 1
 end
 
-function IEex_SetPanelActive(CUIPanel, active)
-	IEex_Call(0x4D3980, {active and 1 or 0}, CUIPanel, 0x0)
+function IEex_SetEngineScrollbarFocus(CBaldurEngine, CUIControlScrollbar)
+	IEex_WriteDword(CBaldurEngine + 0xFA, CUIControlScrollbar)
 end
 
-function IEex_SetPanelEnabled(CUIPanel, enabled)
-	IEex_Call(0x4D29D0, {enabled and 1 or 0}, CUIPanel, 0x0)
+--------------------------
+-- UI Manager Functions --
+--------------------------
+
+function IEex_GetCHUResrefFromUIManager(CUIManager)
+	return IEex_ReadLString(CUIManager + 0x8, 8)
+end
+
+function IEex_GetPanel(CUIManager, panelID)
+	return IEex_Call(0x4D4000, {panelID}, CUIManager, 0x0)
+end
+
+function IEex_InvalidateUIManagerRect(CUIManager, l, r, t, b)
+	IEex_RunWithStackManager({
+		{["name"] = "rect", ["struct"] = "CRect", ["constructor"] = {["variant"] = "fill", ["luaArgs"] = {l, r, t, b} }}, },
+		function(manager)
+			IEex_Call(0x4D45E0, {manager:getAddress("rect")}, CUIManager, 0x0)
+		end)
+end
+
+function IEex_IsUIManagerHidden(CUIManager)
+	return IEex_ReadDword(CUIManager) == 1
+end
+
+---------------------
+-- Panel Functions --
+---------------------
+
+function IEex_GetCHUResrefFromPanel(CUIPanel)
+	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromPanel(CUIPanel))
 end
 
 function IEex_GetControlFromPanel(CUIPanel, controlID)
@@ -220,9 +188,91 @@ function IEex_GetControlFromPanel(CUIPanel, controlID)
 	return foundControl
 end
 
-function IEex_GetControlPanel(CUIControl)
-	return IEex_ReadDword(CUIControl + 0x6)
+function IEex_GetPanelArea(CUIPanel)
+	local x = IEex_ReadDword(CUIPanel + 0x24)
+	local y = IEex_ReadDword(CUIPanel + 0x28)
+	local w = IEex_ReadDword(CUIPanel + 0x34)
+	local h = IEex_ReadDword(CUIPanel + 0x38)
+	return x, y, w, h
 end
+
+function IEex_GetPanelBackgroundImage(CUIPanel)
+	-- CUIPanel.m_mosaic.resHelper.cResRef
+	return IEex_ReadLString(CUIPanel + 0x3E + 0xA0 + 0x8, 8)
+end
+
+function IEex_GetPanelID(CUIPanel)
+	return IEex_ReadDword(CUIPanel + 0x20)
+end
+
+function IEex_GetUIManagerFromPanel(CUIPanel)
+	return IEex_ReadDword(CUIPanel)
+end
+
+function IEex_InvalidatePanelUIManager(panel)
+	IEex_InvalidateUIManagerRect(IEex_GetUIManagerFromPanel(panel), IEex_GetPanelArea(panel))
+end
+
+function IEex_IsPanelActive(CUIPanel)
+	return IEex_ReadDword(CUIPanel + 0xF4) == 1
+end
+
+-- Flagged when panel is not interactable yet should still render
+function IEex_IsPanelInactiveRender(CUIPanel)
+	return IEex_ReadDword(CUIPanel + 0x10A) == 1
+end
+
+function IEex_IsPointOverControlID(CUIPanel, controlID, x, y)
+	return IEex_IsPointOverControl(IEex_GetControlFromPanel(CUIPanel, controlID), x, y)
+end
+
+function IEex_IsPointOverPanel(CUIPanel, x, y)
+	local panelX, panelY, panelW, panelH = IEex_GetPanelArea(CUIPanel)
+	return x >= panelX and x <= (panelX + panelW) and y >= panelY and y <= (panelY + panelH)
+end
+
+function IEex_PanelInvalidate(CUIPanel)
+	IEex_Call(0x4D3810, {0x0}, CUIPanel, 0x0)
+end
+
+function IEex_PanelInvalidateRect(CUIPanel, left, top, right, bottom)
+	local rect = IEex_Malloc(0x10)
+	IEex_WriteDword(rect + 0x0, left)
+	IEex_WriteDword(rect + 0x4, top)
+	IEex_WriteDword(rect + 0x8, right)
+	IEex_WriteDword(rect + 0xC, bottom)
+	IEex_Call(0x4D3810, {rect}, CUIPanel, 0x0)
+	IEex_Free(rect)
+end
+
+function IEex_SetPanelActive(CUIPanel, active)
+	IEex_Call(0x4D3980, {active and 1 or 0}, CUIPanel, 0x0)
+end
+
+function IEex_SetPanelArea(CUIPanel, x, y, w, h, bSetOriginal)
+	IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
+	if w then IEex_WriteDword(CUIPanel + 0x34, w) end
+	if h then IEex_WriteDword(CUIPanel + 0x38, h) end
+end
+
+function IEex_SetPanelEnabled(CUIPanel, enabled)
+	IEex_Call(0x4D29D0, {enabled and 1 or 0}, CUIPanel, 0x0)
+end
+
+function IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
+	if x then
+		IEex_WriteDword(CUIPanel + 0x24, x)
+		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x2C, x) end
+	end
+	if y then
+		IEex_WriteDword(CUIPanel + 0x28, y)
+		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x30, y) end
+	end
+end
+
+----------------------------
+-- Control Base Functions --
+----------------------------
 
 function IEex_GetControlArea(CUIControl)
 	local x = IEex_ReadDword(CUIControl + 0xE)
@@ -238,26 +288,16 @@ function IEex_GetControlAreaAbsolute(CUIControl)
 	return panelX + controlX, panelY + controlY, controlW, controlH
 end
 
-function IEex_GetControlButtonFrameUp(CUIControlButton)
-	return IEex_ReadWord(CUIControlButton + 0x12C)
+function IEex_GetControlID(CUIControl)
+	return IEex_ReadDword(CUIControl + 0xA)
 end
 
-function IEex_GetControlButtonFrameDown(CUIControlButton)
-	return IEex_ReadWord(CUIControlButton + 0x12E)
-end
-
-function IEex_GetControlButtonBAM(CUIControlButton)
-	-- CUIControlButton.m_vidCellButton.resHelper.cResRef
-	return IEex_ReadLString(CUIControlButton + 0x52 + 0xA4 + 0x8, 8)
+function IEex_GetControlPanel(CUIControl)
+	return IEex_ReadDword(CUIControl + 0x6)
 end
 
 function IEex_IsControlOnPanel(CUIControl, CUIPanel)
 	return IEex_GetControlPanel(CUIControl) == CUIPanel
-end
-
-function IEex_IsPointOverPanel(CUIPanel, x, y)
-	local panelX, panelY, panelW, panelH = IEex_GetPanelArea(CUIPanel)
-	return x >= panelX and x <= (panelX + panelW) and y >= panelY and y <= (panelY + panelH)
 end
 
 function IEex_IsPointOverControl(CUIControl, x, y)
@@ -265,12 +305,43 @@ function IEex_IsPointOverControl(CUIControl, x, y)
 	return x >= controlX and x <= (controlX + controlW) and y >= controlY and y <= (controlY + controlH)
 end
 
-function IEex_IsPointOverControlID(CUIPanel, controlID, x, y)
-	return IEex_IsPointOverControl(IEex_GetControlFromPanel(CUIPanel, controlID), x, y)
+function IEex_SetControlXY(CUIControl, x, y)
+	if x then IEex_WriteDword(CUIControl + 0xE, x) end
+	if y then IEex_WriteDword(CUIControl + 0x12, y) end
 end
 
-function IEex_GetControlID(CUIControl)
-	return IEex_ReadDword(CUIControl + 0xA)
+------------------------------
+-- Control Button Functions --
+------------------------------
+
+function IEex_GetControlButtonBAM(CUIControlButton)
+	-- CUIControlButton.m_vidCellButton.resHelper.cResRef
+	return IEex_ReadLString(CUIControlButton + 0x52 + 0xA4 + 0x8, 8)
+end
+
+function IEex_GetControlButtonFrameDown(CUIControlButton)
+	return IEex_ReadWord(CUIControlButton + 0x12E)
+end
+
+function IEex_GetControlButtonFrameUp(CUIControlButton)
+	return IEex_ReadWord(CUIControlButton + 0x12C)
+end
+
+function IEex_SetControlButtonFrame(CUIControlButton, frame)
+	IEex_WriteWord(CUIControlButton + 0x116, frame)
+end
+
+function IEex_SetControlButtonFrameDown(CUIControlButton, frame)
+	IEex_WriteWord(CUIControlButton + 0x12E, frame)
+end
+
+function IEex_SetControlButtonFrameUp(CUIControlButton, frame)
+	IEex_WriteWord(CUIControlButton + 0x12C, frame)
+end
+
+function IEex_SetControlButtonFrameUpForce(CUIControlButton, frame)
+	IEex_SetControlButtonFrameUp(CUIControlButton, frame)
+	IEex_SetControlButtonFrame(CUIControlButton, frame)
 end
 
 function IEex_SetControlButtonText(CUIControlButton, text)
@@ -297,6 +368,10 @@ function IEex_SetControlButtonText(CUIControlButton, text)
 	manager:free()
 end
 
+-----------------------------
+-- Control Label Functions --
+-----------------------------
+
 function IEex_SetControlLabelText(CUIControlLabel, text)
 
 	local manager = IEex_NewMemoryManager({
@@ -321,22 +396,9 @@ function IEex_SetControlLabelText(CUIControlLabel, text)
 	manager:free()
 end
 
-function IEex_SetControlButtonFrameUp(CUIControlButton, frame)
-	IEex_WriteWord(CUIControlButton + 0x12C, frame)
-end
-
-function IEex_SetControlButtonFrameDown(CUIControlButton, frame)
-	IEex_WriteWord(CUIControlButton + 0x12E, frame)
-end
-
-function IEex_SetControlButtonFrame(CUIControlButton, frame)
-	IEex_WriteWord(CUIControlButton + 0x116, frame)
-end
-
-function IEex_SetControlButtonFrameUpForce(CUIControlButton, frame)
-	IEex_SetControlButtonFrameUp(CUIControlButton, frame)
-	IEex_SetControlButtonFrame(CUIControlButton, frame)
-end
+---------------------------------------------------
+-- Control Button Mage Spell Info Icon Functions --
+---------------------------------------------------
 
 function IEex_SetControlButtonMageSpellInfoIcon(CUIControlButtonMageSpellInfoIcon, resref)
 	IEex_RunWithStackManager({
@@ -346,34 +408,15 @@ function IEex_SetControlButtonMageSpellInfoIcon(CUIControlButtonMageSpellInfoIco
 		end)
 end
 
-function IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
-	if x then
-		IEex_WriteDword(CUIPanel + 0x24, x)
-		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x2C, x) end
-	end
-	if y then
-		IEex_WriteDword(CUIPanel + 0x28, y)
-		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x30, y) end
-	end
-end
+--------------------------------
+-- /START Container Functions --
+--------------------------------
 
-function IEex_SetPanelArea(CUIPanel, x, y, w, h, bSetOriginal)
-	IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
-	if w then IEex_WriteDword(CUIPanel + 0x34, w) end
-	if h then IEex_WriteDword(CUIPanel + 0x38, h) end
-end
-
-function IEex_SetControlXY(CUIControl, x, y)
-	if x then IEex_WriteDword(CUIControl + 0xE, x) end
-	if y then IEex_WriteDword(CUIControl + 0x12, y) end
-end
-
-function IEex_SetEngineScrollbarFocus(CBaldurEngine, CUIControlScrollbar)
-	IEex_WriteDword(CBaldurEngine + 0xFA, CUIControlScrollbar)
-end
-
-function IEex_GetContainerType(CGameContainer)
-	return IEex_ReadWord(CGameContainer + 0x5CA, 0)
+function IEex_GetContainerIDNumItems(containerID)
+	local share = IEex_GetActorShare(containerID)
+	local toReturn = IEex_GetContainerNumItems(share)
+	IEex_UndoActorShare(containerID)
+	return toReturn
 end
 
 function IEex_GetContainerIDType(containerID)
@@ -387,11 +430,8 @@ function IEex_GetContainerNumItems(CGameContainer)
 	return IEex_ReadDword(CGameContainer + 0x5AE + 0xC)
 end
 
-function IEex_GetContainerIDNumItems(containerID)
-	local share = IEex_GetActorShare(containerID)
-	local toReturn = IEex_GetContainerNumItems(share)
-	IEex_UndoActorShare(containerID)
-	return toReturn
+function IEex_GetContainerType(CGameContainer)
+	return IEex_ReadWord(CGameContainer + 0x5CA, 0)
 end
 
 function IEex_GetGroundPilesAroundActor(actorID)
@@ -464,6 +504,10 @@ function IEex_GetGroundPilesAroundActor(actorID)
 	toReturn.defaultContainerID = defaultContainerID
 	return toReturn
 end
+
+------------------------------
+-- /END Container Functions --
+------------------------------
 
 function IEex_MapCHU(chuWrapper)
 
@@ -1716,7 +1760,7 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 						local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
 						local actorID = IEex_ReadDword(screenCharacter + 0x136)
 						if not IEex_IsSprite(actorID, false) then return end
-						
+
 						-- Remove from popup stack
 						IEex_Call(0x7FB343, {}, screenCharacter + 0x62A, 0x0) -- CPtrList_RemoveTail()
 
@@ -1805,7 +1849,7 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 --[[
 					-- Remove from popup stack
 					IEex_Call(0x7FB343, {}, screenCharacter + 0x62A, 0x0) -- CPtrList_RemoveTail()
-		
+
 					-- Add to popup stack
 					IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
 --]]
@@ -2615,7 +2659,7 @@ function IEex_OnCHUInitialized(chuResref)
 					buttonID = buttonID + 1
 				end
 			end
-			
+
 			IEex_AddControlOverride("GUIREC", 58, 30, "IEex_UI_TextArea")
 			IEex_AddControlToPanel(newWizardSpellsPanel, {
 				["type"] = IEex_ControlStructType.TEXT_AREA,
@@ -2662,7 +2706,7 @@ function IEex_OnCHUInitialized(chuResref)
 				["frameDisabled"] = 3,
 			})
 			IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 32), IEex_FetchString(ex_tra_55770))
-			
+
 			IEex_AddControlOverride("GUIREC", 58, 33, "IEex_UI_Label")
 			IEex_AddControlToPanel(newWizardSpellsPanel, {
 				["type"] = IEex_ControlStructType.LABEL,
@@ -2675,7 +2719,7 @@ function IEex_OnCHUInitialized(chuResref)
 				["fontColor1"] = 0xFFFFF6,
 				["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
 			})
-			
+
 			IEex_AddControlOverride("GUIREC", 58, 34, "IEex_UI_Label")
 			IEex_AddControlToPanel(newWizardSpellsPanel, {
 				["type"] = IEex_ControlStructType.LABEL,
@@ -2704,7 +2748,7 @@ function IEex_OnCHUInitialized(chuResref)
 				["frameDisabled"] = 3,
 			})
 			IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 35), IEex_FetchString(11973))
-			
+
 			IEex_AddControlOverride("GUIREC", 58, 36, "IEex_UI_Button")
 			IEex_AddControlToPanel(newWizardSpellsPanel, {
 				["type"] = IEex_ControlStructType.BUTTON,
@@ -2719,7 +2763,7 @@ function IEex_OnCHUInitialized(chuResref)
 				["framePressed"] = 2,
 				["frameDisabled"] = 3,
 			})
-			
+
 			IEex_AddControlOverride("GUIREC", 58, 37, "IEex_UI_Button")
 			IEex_AddControlToPanel(newWizardSpellsPanel, {
 				["type"] = IEex_ControlStructType.BUTTON,
@@ -2734,7 +2778,7 @@ function IEex_OnCHUInitialized(chuResref)
 				["framePressed"] = 2,
 				["frameDisabled"] = 3,
 			})
-			
+
 			IEex_SetPanelActive(newWizardSpellsPanel, false)
 		end
 	end
@@ -3796,7 +3840,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				local minimumRoll = 1 + luckBonus
 				if minimumRoll > ex_current_record_weapon_die_size then
 					minimumRoll = ex_current_record_weapon_die_size
-				end				 
+				end
 				if minimumRoll == ex_current_record_weapon_die_size then
 					line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number * ex_current_record_weapon_die_size)
 				else
