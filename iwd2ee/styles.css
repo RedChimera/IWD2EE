@@ -22,11 +22,11 @@
   --dark-gradien-color2: #1a1a19;
   --dark-text-color: #dedede;
   --dark-border-color: #9b6f35;
-  --dark-nav-link-color: rgb(151, 75, 0);
-  --dark-hr-color: #6e6e6e;
-  --dark-link-color: rgb(150, 65, 0);
-  --dark-visited-color: rgb(169, 107, 0);
-  --dark-hover-color: rgb(164, 82, 0);
+  --dark-nav-link-color: rgb(183, 92, 0);
+  --dark-hr-color: #535353;
+  --dark-link-color: rgb(201, 109, 18);
+  --dark-visited-color: rgb(168, 126, 53);
+  --dark-hover-color: rgb(204, 168, 131);
   --dark-td-color:#292929;
   --dark-th-color:#272727;
   --dark-tr-color:#373737;
@@ -85,19 +85,19 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  margin: 0.75rem 1.5rem 0.5rem;
+  margin: 0.75rem auto 0.5rem;
   padding: 0;
 }
 
 h4 {
   font-size: 1.2rem;
-  font-style: italic;
   margin: 0.75rem auto 0.5rem;
   padding: 0;
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: 1.1rem;  
+  font-style: italic;
   margin: 0.4rem 1rem 0.3rem;
   padding: 0;
 }
@@ -184,6 +184,7 @@ nav a:visited {
 nav a:hover,
 nav a:active {
   color: var(--text-color);
+  text-decoration: none;
 }
 
 body.dark-theme nav a:link,
@@ -194,6 +195,7 @@ body.dark-theme nav a:visited {
 body.dark-theme nav a:hover,
 body.dark-theme nav a:active {
   color: var(--dark-text-color);
+  text-decoration: none;
 }
 
 main {
@@ -268,14 +270,14 @@ body.dark-theme a:visited {
 a:hover,
 a:active {
   color: var(--hover-color);
-  text-decoration: underline var(--hover-color) solid;
+  text-decoration: none;
 }
 
 
 body.dark-theme a:hover,
 body.dark-theme a:active {
   color: var(--dark-hover-color);
-  text-decoration: underline var(--dark-hover-color) solid;
+  text-decoration: none;
 }
 
 a img {
@@ -477,14 +479,25 @@ body.dark-theme .pseudo {
 #themeToggle {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  background-color: var(--dark-background-color);
+  background-color: var(--border-color);
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.2rem;
   cursor: pointer;
   color: var(--dark-text-color);
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition-duration: 0.4s;
 }
 
 body.dark-theme #themeToggle {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--dark-border-color);
+  color: var(--dark-text-color);
+}
+
+#themeToggle:hover {
+  background-color: var(--hover-color);
+}
+
+body.dark-theme #themeToggle:hover{
+  background-color: var(--dark-hover-color);
 }
