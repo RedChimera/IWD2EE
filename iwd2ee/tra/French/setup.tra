@@ -16,7 +16,7 @@
 @14 = ~Monastere du Corbeau Noir plus rapide~
 @15 = ~Ombre-Terre plus rapide~
 @16 = ~Oeil du Dragon plus rapide~
-@17 = ~Main TranchÃ©e plus rapide~
+@17 = ~Main Tranchée plus rapide~
 @18 = ~Plus de potions pour Oswald~
 @19 = ~Ajouter plus de parchemins au jeu~
 @20 = ~Resistances et immunites des creatures revues a la baisse~
@@ -99,7 +99,7 @@
 Installer IWD2EE une nouvelle fois sans supprimer ces fichiers pourrait corrompre divers fichiers.
 Pour installer IWD2EE, procedez comme suit :
 1. Desinstallez tous vos autres mods.
-2. Ensuite, allez dans le dossier Â« override Â» et supprimez tout ce qu'il contient.
+2. Ensuite, allez dans le dossier « override » et supprimez tout ce qu'il contient.
 3. Reinstallez vos mods, y compris IWD2EE.~
 
 // WeiDU prompts
@@ -134,7 +134,7 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 
 @-1016= "Installation en cours"
 @-1017= "ERREUR pendant l'installation de ["
-@-1018= "], retour a l'etat antÃ©rieur"
+@-1018= "], retour a l'etat antérieur"
 @-1019= "INSTALLATION REUSSIE"
 @-1020= "Saute"
 @-1021= "Suppression de ["
@@ -156,7 +156,7 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 choisir un parmi :"
 @-1031= "] ?
 [R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
-@-1032= "INSTALLATION ECHOUEE Ã€ CAUSE D'ERREURS"
+@-1032= "INSTALLATION ECHOUEE À CAUSE D'ERREURS"
 @-1033= "INSTALLATION AVEC DES ALERTES"
 @-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
 @-1035= "Dans la langue"
