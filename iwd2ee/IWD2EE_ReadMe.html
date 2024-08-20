@@ -11,7 +11,7 @@
 </head>
 
 <body class="light-theme">
-    <div><a name="top" id="top"></a></div>
+    <div id="top"></div>
     <div id="language">
         <ul>
             <li>English</li>
@@ -35,7 +35,8 @@
                 <a href="https://discord.gg/t7pWFx2B5Q">Discord</a>)
             </li>
             <li><a href="https://github.com/RedChimera/IWD2EE">Project</a></li>
-            <li id="version"></li><!-- fetch the latest version number from github -->
+            <li id="version" style="display: none;"></li>
+            <!-- fetch the latest version number and date from github / hide until done to not slow down page loading -->
         </ul>
         <hr />
         <nav>
@@ -45,7 +46,7 @@
                 <li><a href="#components">Components</a></li>
                 <li><a href="#compatibility">Compatibility</a></li>
                 <li><a href="#credits">Credits</a></li>
-                <button id="themeToggle">Switch theme</button>
+                <li><button id="themeToggle">Switch theme</button></li>
             </ul>
         </nav>
     </header>
@@ -129,23 +130,20 @@
                 <h4><a href="#battlesquare">25. Revised Battle Square</a></h4>
                 <h4><a href="#damageresist">26. Minor Damage Resistance for Armor and Shields</a></h4>
                 <h4><a href="#racerev">27. Race Revisions</a></h4>
-                <h4><a href="#enemyxp">28. Enemies give the same amount of experience regardless of the party's level
-                </h4></a>
+                <h4><a href="#enemyxp">28. Enemies give the same amount of experience regardless of the party's level</a></h4>
                 <h4><a href="#scaling">29. Adjust encounter level-scaling</a></h4>
                 <h4><a href="#hofhp">30. Reduce enemy HP bonuses in Heart of Fury Mode</a></h4>
                 <h4><a href="#hofattack">31. Reduce enemy attack bonuses in Heart of Fury Mode</a></h4>
                 <h4><a href="#hofsaving">32. Reduce enemy saving throw bonuses in Heart of Fury Mode</a></h4>
                 <h4><a href="#hofsummoned">33. Weaken allied summoned creatures in Heart of Fury Mode</a></h4>
                 <h4><a href="#hofpartyxp">34. Have the party start with experience in Heart of Fury Mode</a></h4>
-                <h4><a href="#delay">35. Reduce the delay between sneak attacks</a></h>
-                    <h4><a href="#levelcap">36. Increase the level cap</a></h4>
-                    <h4><a href="#scrolllearn">37. Always learn spells from scrolls successfully</a></h4>
-                    <h4><a href="#opportunity">38. Add attacks of opportunity to the game</a></h4>
-                    <h4><a href="#abilityscores">39. Change the way ability scores are assigned at character
-                            creation</a>
-                    </h4>
-                    <h4><a href="#traps">40. Add more traps</a></h4>
-                    <h4><a href="#buffing">41. Add key bindings for automating buffing</a></h4>
+                <h4><a href="#delay">35. Reduce the delay between sneak attacks</a></h4>
+                <h4><a href="#levelcap">36. Increase the level cap</a></h4>
+                <h4><a href="#scrolllearn">37. Always learn spells from scrolls successfully</a></h4>
+                <h4><a href="#opportunity">38. Add attacks of opportunity to the game</a></h4>
+                <h4><a href="#abilityscores">39. Change the way ability scores are assigned at character creation</a></h4>
+                <h4><a href="#traps">40. Add more traps</a></h4>
+                <h4><a href="#buffing">41. Add key bindings for automating buffing</a></h4>
             </div>
 
 
@@ -156,7 +154,8 @@
             <section id="core">
 
                 <h3>1. IWD2EE Core</h3>
-                <p>The core component must be installed for any other component to be installed. It includes various quality of life changes.</p>
+                <p>The core component must be installed for any other component to be installed. It includes various
+                    quality of life changes.</p>
                 <ul>
                     <li>Load times are much faster.</li>
                     <li>IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO
@@ -1382,6 +1381,8 @@
             <p><span class="pseudo">@kjeron</span> created many WeiDU functions that are used in IWD2EE's installation
                 to modify IWD2 files.</p>
             <p><span class="pseudo">@CamDawg</span> revised some of IWD2EE's WeiDU files to run faster.</p>
+            <p><span class="pseudo">@Argent77</span> crafted the initial HTML template and stylesheet, which <span
+                    class="pseudo">@WillScarlettOhara</span> customized and expanded for this ReadMe.</p>
             <p><span class="pseudo">@Improbabile68</span> translated IWD2EE into Italian.</p>
             <p><span class="pseudo">@paladin</span>, <span class="pseudo">klichko86</span>, and <span
                     class="pseudo">rytomen</span> translated IWD2EE into Russian.</p>
@@ -1412,10 +1413,33 @@
         fetch('https://api.github.com/repos/RedChimera/IWD2EE/releases/latest')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('version').textContent = "Version: " + data.tag_name;
+                const version = data.tag_name;
+                const publishedAt = new Date(data.published_at);
+
+                // Get the language of the page
+                const lang = document.documentElement.lang;
+
+                let formattedDate;
+
+                if (lang === 'fr-FR') {
+                    formattedDate = publishedAt.toLocaleDateString('fr-FR', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    });
+                } else { // Assume English for other languages
+                    formattedDate = publishedAt.toLocaleDateString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                }
+
+                document.getElementById('version').textContent = "Version: " + version + " - " + formattedDate;
+                document.getElementById('version').style.display = 'inline'; // Show after loading
             });
     </script>
-    <!-- Make the button to change theme work -->
+    <!-- Button to switch theme -->
     <script>
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
