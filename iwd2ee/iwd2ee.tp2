@@ -22,6 +22,7 @@ ALWAYS
 END
 
 README ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.html~
+       ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.txt~
        ~iwd2ee/IWD2EE_ReadMe.html~
        ~iwd2ee/IWD2EE_ReadMe.txt~
 
@@ -83,7 +84,7 @@ LANGUAGE   ~Russian~
            ~iwd2ee/tra/Russian/misc.tra~
            ~iwd2ee/tra/Russian/more_persuasion_options.tra~
            ~iwd2ee/tra/Russian/new_strings_after_release.tra~
-		   
+
 LANGUAGE   ~French~
            ~French~
            ~iwd2ee/tra/French/setup.tra~
