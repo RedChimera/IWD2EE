@@ -34,7 +34,7 @@ END
 ACTION_GET_STRREF 32033 ~temple_of_ice_strref~ //a stringref that won't normally be changed
 OUTER_SET is_french = ~%temple_of_ice_strref%~ STR_EQ ~Temple de Glace~
 ACTION_IF (is_french) BEGIN
-    COPY ~%MOD_FOLDER%/tra/French/NARR004.wav~ ~override~
+    COPY ~%mod_folder%/tra/French/NARR004.wav~ ~override~
 END
 
  //Files in this folder may be used in multiple components and shouldn't affect the game unless a component is installed that uses the file.
