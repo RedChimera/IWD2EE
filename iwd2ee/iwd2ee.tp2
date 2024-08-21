@@ -21,7 +21,7 @@ ALWAYS
 	VERBOSE
 END
 
-README ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.html~ //if doesn't exist for that language, opens next one
+README ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.html~ //if doesn't exist, goes to next one
        ~iwd2ee/IWD2EE_ReadMe-%LANGUAGE%.txt~
        ~iwd2ee/IWD2EE_ReadMe.html~
        ~iwd2ee/IWD2EE_ReadMe.txt~
