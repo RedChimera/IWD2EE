@@ -129,9 +129,9 @@ Condition de prérequis: Arme de guerre, Hache
 Type: Une main~
 @4818   = ~Griffe de Xhaan~
 @4819   = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +1 pour la réduction des dégâts.
- 
+
 PARAMÈTRES:
- 
+
 Dégâts: 1d6 +1
 Bonus d’attaque: +1
 Enchantement: +1
@@ -144,9 +144,9 @@ Condition de prérequis: Arme simple, Attaque de contact
 Type: Une main~
 @4820   = ~Griffe de Xhaan~
 @4821   = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 pour la réduction des dégâts.
- 
+
 PARAMÈTRES:
- 
+
 Dégâts: 1d6 +5
 Bonus d’attaque: +5
 Enchantement: +5
@@ -197,9 +197,9 @@ Poids: 0 lb.~
 @4829   = ~Venin d’Aocha~
 @4830   = ~Griffe de Xhaan~
 @4831   = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu à un cornugon, ses attaques de griffes sont plus puissantes.
- 
+
 PARAMÈTRES:
- 
+
 Dégâts: 2d6 +3
 Bonus d’attaque: +3
 Enchantement: +3
@@ -214,7 +214,7 @@ Type: Une main~
 @4833   = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu à un cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
- 
+
 Dégâts: 2d6 +5
 Bonus d’attaque: +5
 Enchantement: +5
@@ -572,7 +572,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40266=~Au moins, le gobelin est moins moche.~
 @40267=~Je commence à en avoir assez de tes préjugés, Reig. Je commence aussi à en avoir assez de tes contestations de mes décisions. Je suis la seule raison pour laquelle tu es en vie et Targos est toujours debout.~
 @40268=~Je n’ai pas oublié. Mais tu as toujours été à nos côtés. Le gobelin essaierait de nous ouvrir en deux si nous nous rencontrions sur le champ de bataille.~
-@40269=~Estime-toi heureux que ce ne soit pas arrivé. Remettons-nous en marche. Je sais déjà ce que tu penses de Vrek ; je n'ai pas besoin d'entendre le même discours à propos de Vunarg.~
+@40269=~Estime-toi heureux que ce ne soit pas arrivé. Remettons-nous en marche. Je sais déjà ce que tu penses de Vrek ; je n’ai pas besoin d’entendre le même discours à propos de Vunarg.~
 @40270=~Tu pourrais dire la même chose de moi. Dieu sait que mon espèce ne s’est pas toujours entendue avec la tienne. Peut-être devrions-nous être reconnaissants qu’il y ait des exceptions.~
 @40271=~Tu pourrais dire la même chose de moi. Dieu sait que mon espèce ne s’est pas toujours entendue avec la tienne. Peut-être devrions-nous être reconnaissants qu’il y ait des exceptions.~
 @40272=~Peut-être. Mais ces exceptions ne sont pas bon marché. Je vais donner une chance au gobelin, mais je n’oublierai pas ce qu’il est.~
@@ -588,7 +588,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40282=~Je n’aurais jamais pensé me retrouver à combattre aux côtés d’un gobelin. Je ne suis pas sûr que j’aime ça.~
 @40283=~Je ne vois pas ce dont tu te plains. J’aime avoir un gobelin qui n’essaie pas de nous tuer pour une fois. ~
 @40284=~Habitue-toi. S’il se bat bien, il sera avec nous longtemps. Nous avons besoin de guerriers forts.~
-@40285=~Tes préjugés s'affichent, Reig.~
+@40285=~Tes préjugés s’affichent, Reig.~
 @40286=~Et combien de temps cela va-t-il durer? Ce gobelin a passé sa vie à massacrer mon peuple. Cela ne va pas changer après une seule conversation.~
 @40287=~Peut-être pas. Mais nous devrons traverser ce pont quand nous y arriverons.~
 @40288=~Je sais. Mais j’ai besoin que tu te battes à ses côtés quand même.~
@@ -606,7 +606,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40300=~Écoute *attentivement*, humain. Je ne suis pas un démon, mais un démon, une créature de loi et de but. Nous, les démons, *tuons* les démons; ce sont nos ennemis de longue date. Être appelé démon est une grande insulte pour notre espèce.~
 @40301=~Sois assuré que je suis prêt à travailler avec ce groupe pour me venger de la Légion de la Chimère. Mais appelle-moi encore un démon et tu mourras douloureusement.~
 @40302=~Très bien, démon. Mais qu’est-ce que tu disais avant? À propos des démons qui sont tes ennemis?~
-@40303=~Nous, les démons, nous combattons les démons depuis d’innombrables millénaires dans ce que les mortels appellent la Guerre du Sang. Un conflit au-delà de ta compréhension, mortel, et bien plus ancien que tes dieux insignifiants.~ 
+@40303=~Nous, les démons, nous combattons les démons depuis d’innombrables millénaires dans ce que les mortels appellent la Guerre du Sang. Un conflit au-delà de ta compréhension, mortel, et bien plus ancien que tes dieux insignifiants.~
 @40304=~Une guerre pour quoi?~
 @40305=~Beaucoup de choses. La lutte entre la loi et le chaos. La gloire du bain de sang et la poursuite du pouvoir. La promesse d’une ascension vers une forme supérieure... J’espère devenir un abishai rouge ou même un cornugon si je peux me distinguer aux yeux de Tiamat. Et je ne peux pas décrire le frisson de chasser les manes et les dretches et de leur montrer leur faiblesse et leur impuissance face à un être supérieur.~
 @40306=~Ouais. Les démons peuvent être des créatures féroces.~

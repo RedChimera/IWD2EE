@@ -809,10 +809,10 @@ Avantages :
 * Compétent avec les armes courantes et de guerre, les armures (légère, moyenne et lourde) et les boucliers.
 * Reçoit un don bonus au premier niveau, au deuxième niveau, et tous les deux niveaux suivants. Ceci s'ajoute au don normal reçu par toutes les classes de personnages tous les trois niveaux.
 * Le guerrier obtient un bonus de +1 aux dégâts des armes tous les 5 niveaux, et un bonus de +1 à la zone de critique (par exemple, 19-20 devient 18-20) tous les 10 niveaux.
-* 4ème niveau : Le guerrier peut bénéficier de la Spécialisation martiale dans une arme, gagnant +2 aux dégâts avec celle-ci.
-* 8ème niveau : Le guerrier peut bénéficier de la Arme de prédilection supérieure dans une arme, gagnant +1 à l'attaque avec celle-ci.
-* 12ème niveau : Le guerrier peut bénéficier de la Spécialisation martiale supérieure dans une arme, gagnant +2 aux dégâts avec celle-ci.
-* 30ème niveau : Le guerrier obtient +1 à leur multiplicateur de dégâts critiques (par exemple, x2 devient x3).
+* Niveau 4 : Le guerrier peut bénéficier de la Spécialisation martiale dans une arme, gagnant +2 aux dégâts avec celle-ci.
+* Niveau 8 : Le guerrier peut bénéficier de la Arme de prédilection supérieure dans une arme, gagnant +1 à l'attaque avec celle-ci.
+* Niveau 12 : Le guerrier peut bénéficier de la Spécialisation martiale supérieure dans une arme, gagnant +2 aux dégâts avec celle-ci.
+* Niveau 30 : Le guerrier obtient +1 à leur multiplicateur de dégâts critiques (par exemple, x2 devient x3).
 
 Désavantages :
 * Les guerriers ne peuvent pas lancer de sorts.~
@@ -850,20 +850,20 @@ Niveau 17+ : 1d8+5
 * Ki : Au niveau 5, l'attaque à mains nues du moine est imprégnée de ki, et gagne un enchantement de +1 avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
 * La classe d'armure naturelle d'un moine commence à 10 et augmente d'un point au niveau 5, puis d'un point supplémentaire tous les 5 niveaux.
 * Lorsqu'un moine ne porte pas d'armure (les robes sont acceptées), il peut ajouter son bonus de Sagesse à sa classe d’armure, comme pour son bonus de Dextérité. Si le moine change de forme, il ne bénéficiera de cet avantage que si son niveau de moine est supérieur ou égal au niveau minimum requis pour se transformer en cette forme.
-* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) sous peine d'être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
+* Attaques étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) sous peine d'être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
 * Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
-* 2ème niveau : Parade de projectiles. Le moine acquiert le don de Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première instance de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
-* 3ème niveau : Déplacement accéléré. Le moine se déplace 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
-* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'enchantement.
-* 5ème niveau : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
-* 7ème niveau : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
-* 9ème niveau : Esquive surnaturelle. Le moine acquiert le don d'Esquive surnaturelle, habituellement réservé aux roublards.
-* 10ème niveau : Pas chassé. Le moine peut se téléporter vers n'importe quel endroit en vue une fois par jour.
-* 11ème niveau : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d'être immunisé contre tous les poisons.
-* 13ème niveau :  me de diamant. Le moine acquiert la Résistance aux Sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
-* 15ème niveau : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d'une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine). Les constructions, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
-* 19ème niveau : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
-* 20ème niveau : Perfection de l'être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l'affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu'il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d'un bonus d'altération de +1 (ou plus), par un sort ou par une forme d'énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
+* Niveau 2 : Parade de projectiles. Le moine acquiert le don de Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première instance de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
+* Niveau 3 : Déplacement accéléré. Le moine se déplace 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
+* Niveau 3 : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'enchantement.
+* Niveau 5 : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
+* Niveau 7 : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
+* Niveau 9 : Esquive surnaturelle. Le moine acquiert le don d'Esquive surnaturelle, habituellement réservé aux roublards.
+* Niveau 10 : Pas chassé. Le moine peut se téléporter vers n'importe quel endroit en vue une fois par jour.
+* Niveau 11 : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d'être immunisé contre tous les poisons.
+* Niveau 13 :  me de diamant. Le moine acquiert la Résistance aux Sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
+* Niveau 15 : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d'une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine). Les constructions, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
+* Niveau 19 : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
+* Niveau 20 : Perfection de l'être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l'affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu'il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d'un bonus d'altération de +1 (ou plus), par un sort ou par une forme d'énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
 Désavantages :
 * Perd de nombreux bonus s'il porte une armure et/ou utilise des armes.~
@@ -881,12 +881,12 @@ Avantages :
 * Compétent avec toutes les armes courantes et de guerre, les armures (légères, moyennes et lourdes) et les boucliers.
 * Imposition des mains 1 fois par jour. Imposition des Mains soigne la cible pour un nombre de points de vie égal au modificateur de Charisme du paladin multiplié par leur niveau de paladin (minimum de 1 point par niveau). Elle peut également être utilisée sur une créature morte-vivante pour lui infliger des dégâts, mais cela nécessite une attaque de contact au corps à corps réussie. Les paladins gagnent un lancement supplémentaire tous les 5 niveaux.
 * Les paladins sont immunisés contre toutes les formes de maladie.
-* 2ème niveau : Ajoute le modificateur de Charisme à tous les jets de sauvegarde.
-* 2ème niveau : Incantation. Les paladins acquièrent la capacité de lancer des sorts.
-* 2ème niveau : Châtiment du Mal. Une fois par jour, le paladin peut tenter de châtier le mal avec une attaque de mêlée normale. Il ajoute son modificateur de Charisme (s’il est positif) à son jet d'attaque et inflige des d4 supplémentaires égaux à son niveau de paladin + son modificateur de Charisme. Les paladins peuvent châtier le mal une fois de plus tous les 10 niveaux.
-* 2ème niveau : Aura de bravoure. Les paladins deviennent immunisés contre la peur, et les alliés dans un rayon de 3 mètres (10 pieds) reçoivent un bonus de +4 aux jets de sauvegarde contre les effets de peur.
-* 3ème niveau : Guérison des maladies. Le paladin peut soigner un autre personnage autant de fois par jour que son niveau divisé par 3.
-* 3ème niveau : Renvoi des morts-vivants. Lorsqu'il fait appel à ce pouvoir, le paladin tente d'invoquer le pouvoir de sa divinité pour terrifier un groupe de morts-vivants. Plus son niveau et son charisme sont élevés, plus il a de chances de réussir. Cette aptitude est similaire au renvoi des morts-vivants des prêtres, mais elle fonctionne comme si le paladin avait 2 niveaux de moins.
+* Niveau 2 : Ajoute le modificateur de Charisme à tous les jets de sauvegarde.
+* Niveau 2 : Incantation. Les paladins acquièrent la capacité de lancer des sorts.
+* Niveau 2 : Châtiment du Mal. Une fois par jour, le paladin peut tenter de châtier le mal avec une attaque de mêlée normale. Il ajoute son modificateur de Charisme (s’il est positif) à son jet d'attaque et inflige des d4 supplémentaires égaux à son niveau de paladin + son modificateur de Charisme. Les paladins peuvent châtier le mal une fois de plus tous les 10 niveaux.
+* Niveau 2 : Aura de bravoure. Les paladins deviennent immunisés contre la peur, et les alliés dans un rayon de 3 mètres (10 pieds) reçoivent un bonus de +4 aux jets de sauvegarde contre les effets de peur.
+* Niveau 3 : Guérison des maladies. Le paladin peut soigner un autre personnage autant de fois par jour que son niveau divisé par 3.
+* Niveau 3 : Renvoi des morts-vivants. Lorsqu'il fait appel à ce pouvoir, le paladin tente d'invoquer le pouvoir de sa divinité pour terrifier un groupe de morts-vivants. Plus son niveau et son charisme sont élevés, plus il a de chances de réussir. Cette aptitude est similaire au renvoi des morts-vivants des prêtres, mais elle fonctionne comme si le paladin avait 2 niveaux de moins.
 
 Désavantages :
 * Le paladin doit être d'alignement loyal bon ou neutre bon et doit choisir un ordre divin. Ce choix limite les possibilités de multiclassage pour les paladins.
@@ -904,12 +904,12 @@ Avantages :
 * Compétent avec toutes les armes courantes et de guerre, les armures légères, les armures intermédiaires et les boucliers.
 * Les rôdeurs peuvent choisir un Ennemi Juré au premier niveau. Ils gagnent alors +1 aux jets d'attaque et +4 aux dégâts contre les créatures de ce type. Les rôdeurs gagnent un Ennemi Juré supplémentaire tous les cinq niveaux, et le bonus d'attaque contre les anciens Ennemis Jurés augmente de 1.
 * Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s'ils possédaient les dons Ambidextrie et Combat à 2 armes.
-* 2ème niveau : Lancement de sorts. Les rôdeurs acquièrent la capacité de lancer des sorts.
-* 6ème niveau : Le rôdeur peut obtenir le don Attaque Tourbillon s'il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
-* 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
-* 7ème niveau : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile et Croissance d'épines.
-* 9ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri, même s'il ne remplit pas les conditions préalables.
-* 15ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
+* Niveau 2 : Lancement de sorts. Les rôdeurs acquièrent la capacité de lancer des sorts.
+* Niveau 6 : Le rôdeur peut obtenir le don Attaque Tourbillon s'il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
+* Niveau 6 : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
+* Niveau 7 : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile et Croissance d'épines.
+* Niveau 9 : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri, même s'il ne remplit pas les conditions préalables.
+* Niveau 15 : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
 
 Désavantages :
 * Les rôdeurs gagnent des dons à un rythme plus lent que les guerriers.
@@ -926,14 +926,14 @@ Avantages :
 * Compétent avec toutes les armes courantes, les arcs et les armures légères.
 * Les roublards reçoivent un plus grand nombre de points de compétence par niveau que toute autre classe. Ils peuvent utiliser ces points de compétence supplémentaires pour acheter des compétences de classe telles que Désamorçage/Sabotage, Discrétion, Vol à la tire et Utilisation d'objets magiques.
 * Attaque Sournoise : Les roublards peuvent effectuer des attaques sournoises pour infliger 1d6 dégâts supplémentaires, plus 1d6 tous les 2 niveaux après le niveau 1. Une attaque est considérée comme une attaque sournoise si elle touche un ennemi par derrière, si elle se produit dans les 2 secondes après être sorti de la furtivité ou de l'invisibilité, ou si la cible est paralysée, immobilisée, étourdie, endormie, confuse, rendue débile, saisie ou feintée. Les épées courtes, les dagues de lancer, les fléchettes, les arcs courts, les arcs courts composites, les arbalètes légères, les frondes, les bâtons et les attaques à mains nues infligent un dé supplémentaire de dégâts d'attaque sournoise. Les dagues de mêlée infligent deux dés supplémentaires de dégâts d'attaque sournoise.
-* 2ème niveau : Évasion. Lorsqu'un roublard atteint le 2ème niveau, il ou elle gagne la capacité d'éviter les dégâts des sorts à effet de zone. Chaque fois qu'un roublard réussit un jet de sauvegarde de Réflexes contre un sort à effet de zone qui permet un jet de Réflexes pour réduire les dégâts de moitié, il ou elle ne subit aucun dégât.
-* 3ème niveau : Esquive totale. Les roublards conservent leur bonus de Dextérité à la classe d'armure s'ils sont attaqués par des ennemis invisibles.
-* 6ème niveau : Esquive instinctive améliorée : Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard à moins que l'attaquant ait au moins quatre niveaux de plus.
-* 10ème niveau : Don Supplémentaire. Le roublard gagne un don supplémentaire et a également accès à un certain nombre de nouveaux dons disponibles uniquement pour les roublards. Ceux-ci incluent Attaque handicapante, Esquive surnaturelle, Esprit fuyant, Roulade Défensive et Opportuniste.
-* 13ème niveau : Don Supplémentaire.
-* 16ème niveau : Don Supplémentaire.
-* 19ème niveau : Don Supplémentaire.
-* 22ème niveau : Don Supplémentaire. C'est le dernier don supplémentaire, car à ce stade, le roublard peut obtenir ses cinq dons spéciaux accessibles dès le niveau 10.
+* Niveau 2 : Évasion. Lorsqu'un roublard atteint le 2ème niveau, il ou elle gagne la capacité d'éviter les dégâts des sorts à effet de zone. Chaque fois qu'un roublard réussit un jet de sauvegarde de Réflexes contre un sort à effet de zone qui permet un jet de Réflexes pour réduire les dégâts de moitié, il ou elle ne subit aucun dégât.
+* Niveau 3 : Esquive totale. Les roublards conservent leur bonus de Dextérité à la classe d'armure s'ils sont attaqués par des ennemis invisibles.
+* Niveau 6 : Esquive instinctive améliorée : Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard à moins que l'attaquant ait au moins quatre niveaux de plus.
+* Niveau 10 : Don Supplémentaire. Le roublard gagne un don supplémentaire et a également accès à un certain nombre de nouveaux dons disponibles uniquement pour les roublards. Ceux-ci incluent Attaque handicapante, Esquive surnaturelle, Esprit fuyant, Roulade Défensive et Opportuniste.
+* Niveau 13 : Don Supplémentaire.
+* Niveau 16 : Don Supplémentaire.
+* Niveau 19 : Don Supplémentaire.
+* Niveau 22 : Don Supplémentaire. C'est le dernier don supplémentaire, car à ce stade, le roublard peut obtenir ses cinq dons spéciaux accessibles dès le niveau 10.
 * Les roublards gagnent +1 à la chance tous les 5 niveaux.
 
 Désavantages :
@@ -945,7 +945,7 @@ Ilmater est le dieu de la souffrance et de la persécution (aussi connu sous le n
 Avantages :
 
 * Toucher Apaisant 1/jour (soigne 2d8+5 points de vie et guérit le poison, la maladie, les saignements et les effets de douleur)
-* 6ème niveau : Peut lancer Endurance d'Ilmater 1 fois par jour (permet à un allié non-malveillant de supporter bien plus de douleur mais également de subir plus de douleur, lui accordant un bonus de +20 en Constitution et une vulnérabilité de -3 aux dégâts physiques pendant 8 heures)~
+* Niveau 6 : Peut lancer Endurance d'Ilmater 1 fois par jour (permet à un allié non-malveillant de supporter bien plus de douleur mais également de subir plus de douleur, lui accordant un bonus de +20 en Constitution et une vulnérabilité de -3 aux dégâts physiques pendant 8 heures)~
 
 @543	= ~HALFELIN VIF-ESPRIT :
 
@@ -1013,52 +1013,52 @@ Avantages :
 Les paladins d'Ilmater vénèrent le dieu de la souffrance. Ils subissent volontairement d'horribles blessures dans toutes les batailles afin d'éviter aux autres cette souffrance. Ils sont connus pour leur humilité.
 
 Avantages :
-* 2ème niveau : Le paladin peut lancer Lien de protection (qui divise par deux les dégâts subis par un allié, le paladin prenant l'autre moitié) à volonté.
-* 6ème niveau : Les sorts et capacités de soins du paladin guérissent 50% de points de vie en plus s'ils sont utilisés sur un allié autre que le paladin.
-* 11ème niveau : Le bonus aux sorts et capacités de soins passe de 50% à 100%.~
+* Niveau 2 : Le paladin peut lancer Lien de protection (qui divise par deux les dégâts subis par un allié, le paladin prenant l'autre moitié) à volonté.
+* Niveau 6 : Les sorts et capacités de soins du paladin guérissent 50% de points de vie en plus s'ils sont utilisés sur un allié autre que le paladin.
+* Niveau 11 : Le bonus aux sorts et capacités de soins passe de 50% à 100%.~
 @561	= ~PALADIN DE HEAUM :
 
 Les paladins de Heaum suivent les enseignements du dieu des gardiens. Ils se consacrent à la défense des plus faibles et protègent les régions fortement peuplées des assauts ennemis.
 
 Avantages :
-* 2ème niveau : Lorsqu'il utilise l'action Défendre/Protéger, le paladin et tous les alliés dans un rayon de 6 mètres (20 pieds) gagnent un bonus de +2 à la classe d’armure.
-* 6ème niveau : Le bonus à la classe d’armure lors de l'utilisation de l'action Défendre/Protéger passe à +4.
-* 11ème niveau : Lorsqu'il utilise l'action Défendre/Protéger, le paladin peut voir à travers les illusions comme avec la Vision Véritable.~
+* Niveau 2 : Lorsqu'il utilise l'action Défendre/Protéger, le paladin et tous les alliés dans un rayon de 6 mètres (20 pieds) gagnent un bonus de +2 à la classe d’armure.
+* Niveau 6 : Le bonus à la classe d’armure lors de l'utilisation de l'action Défendre/Protéger passe à +4.
+* Niveau 11 : Lorsqu'il utilise l'action Défendre/Protéger, le paladin peut voir à travers les illusions comme avec la Vision Véritable.~
 @562	= ~PALADIN DE MYSTRA :
 
 Les paladins de Mystra s'assurent que les pouvoirs de la Déesse des Mystères ne sont pas utilisés à des fins maléfiques. Ils traquent les lanceurs de sorts malveillants dans tout Féerûne. Leur but est de protéger la civilisation et les mages inoffensifs des conséquences d'une mauvaise utilisation de la magie.
 
 Avantages :
-* 2ème niveau : Le paladin gagne un rang en Secrets des arcanes, réduisant son échec avec les sorts profanes de 35%.
-* 6ème niveau : Le paladin gagne deux rangs supplémentaires en Secrets des arcanes, réduisant son échec aux sorts profanes de 105% (lui permettant de lancer des sorts profanes sans risque d'échec tout en portant les armures et boucliers les plus lourds).
-* 11ème niveau : Tous les dégâts de feu, de froid, d’électricité, d’acide et de magie infligés par le paladin sont augmentés de 20%. Cela se cumule avec des dons comme Esprit du feu et Maître de la magie de force. Ce bonus s'applique à la fois aux sorts comme Boule de Feu et aux capacités comme Châtiment du mal.~
+* Niveau 2 : Le paladin gagne un rang en Secrets des arcanes, réduisant son échec avec les sorts profanes de 35%.
+* Niveau 6 : Le paladin gagne deux rangs supplémentaires en Secrets des arcanes, réduisant son échec aux sorts profanes de 105% (lui permettant de lancer des sorts profanes sans risque d'échec tout en portant les armures et boucliers les plus lourds).
+* Niveau 11 : Tous les dégâts de feu, de froid, d’électricité, d’acide et de magie infligés par le paladin sont augmentés de 20%. Cela se cumule avec des dons comme Esprit du feu et Maître de la magie de force. Ce bonus s'applique à la fois aux sorts comme Boule de Feu et aux capacités comme Châtiment du mal.~
 @563	= ~MOINE DE L'ORDRE ANCIEN :
 
 Les membres de l'Ordre Ancien ne vénèrent aucune divinité spécifique, mais sont férus de débats philosophiques et d'introspection.
 
 Avantages :
-* 2ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de l'Attaque étourdissante.
-* 18ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de la Paume vibratoire.~
+* Niveau 2 : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de l'Attaque étourdissante.
+* Niveau 18 : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de la Paume vibratoire.~
 @564	= ~MOINE DE L'ORDRE DES ESTROPIÉS :
 
 Les membres de l'Ordre des Estropiés vénèrent Ilmater, le dieu de la souffrance. Ils s'efforcent de supporter la douleur de leur entraînement ainsi que de celle des autres.
 
 Avantages :
-* 2ème niveau : Le moine gagne une utilisation d'Imposition des mains par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une utilisation supplémentaire d'Imposition des Mains. Utilisée par un Moine de l’Ordre des Estropiés, l'Imposition des mains restaure la même quantité de points de vie que la Plénitude physique (niveau de moine * bonus de Sagesse) mais peut également être utilisée sur d'autres créatures.
-* 6ème niveau : Le moine gagne une résistance de 2/- à tous les dégâts physiques. Une résistance supplémentaire de 1/- est gagnée tous les 4 niveaux suivants.~
+* Niveau 2 : Le moine gagne une utilisation d'Imposition des mains par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une utilisation supplémentaire d'Imposition des Mains. Utilisée par un Moine de l’Ordre des Estropiés, l'Imposition des mains restaure la même quantité de points de vie que la Plénitude physique (niveau de moine * bonus de Sagesse) mais peut également être utilisée sur d'autres créatures.
+* Niveau 6 : Le moine gagne une résistance de 2/- à tous les dégâts physiques. Une résistance supplémentaire de 1/- est gagnée tous les 4 niveaux suivants.~
 @565	= ~MOINE DE LA LUNE NOIRE :
 
 Les membres de l'Ordre de la Lune Noire vénèrent Shar la Sombre Dame, déesse de la nuit. Leur formation monastique guide leurs pouvoirs spirituels et personnels.
 
 Avantages :
-* 2ème niveau : Le moine gagne un bonus d'attaque sournoise de 1d6. Tous les 4 niveaux de moine après le niveau 2, le moine gagne 1d6 dégâts supplémentaires d'attaque sournoise.~
+* Niveau 2 : Le moine gagne un bonus d'attaque sournoise de 1d6. Tous les 4 niveaux de moine après le niveau 2, le moine gagne 1d6 dégâts supplémentaires d'attaque sournoise.~
 @566	= ~Moine du Corbeau Noir~
 @567	= ~MOINE DU CORBEAU NOIR :
 
 L'Ordre du Corbeau Noir a été fondé par Valas le Corbeau Noir, un demi-drow autrefois esclave dans l'Ombre-Terre. Utilisant ses compétences légendaires en arts martiaux, il s'est échappé de l'esclavage et s'est frayé un chemin jusqu'à la surface. Les moines qui suivent l'exemple du Corbeau Noir ont un objectif central : lutter contre l'esclavage.
 
 Avantages :
-* 2ème niveau : Le moine gagne +2 aux dégâts contre les groupes ennemis pratiquant couramment l'esclavage, tels que les drows, les duergars, les flagelleurs mentaux, les yuan-ti, les diables, les Thayens et les adeptes de Bane et de Iyachtu Xvim. Tous les 4 niveaux de moine après le niveau 2, le moine gagne +1 de dégâts supplémentaires contre ces ennemis.~
+* Niveau 2 : Le moine gagne +2 aux dégâts contre les groupes ennemis pratiquant couramment l'esclavage, tels que les drows, les duergars, les flagelleurs mentaux, les yuan-ti, les diables, les Thayens et les adeptes de Bane et de Iyachtu Xvim. Tous les 4 niveaux de moine après le niveau 2, le moine gagne +1 de dégâts supplémentaires contre ces ennemis.~
 
 @569	= ~ENSORCELEUR :
 
@@ -1070,7 +1070,7 @@ Points de vie par niveau : 1-4
 
 Avantages :
 * Compétent avec toutes les armes courantes.
-* 6ème niveau : L'ensorceleur peut remplacer un de ses sorts connus par un autre sort de même niveau. Il peut faire cela tous les 2 niveaux après le niveau 6. L’ensorceleur ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsqu'il atteint le niveau 6 d’ensorceleur), mais peut remplacer des sorts de niveau 8 à partir du niveau 20 d’ensorceleur et des sorts de niveau 9 à partir du niveau 22 d’ensorceleur.
+* Niveau 6 : L'ensorceleur peut remplacer un de ses sorts connus par un autre sort de même niveau. Il peut faire cela tous les 2 niveaux après le niveau 6. L’ensorceleur ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsqu'il atteint le niveau 6 d’ensorceleur), mais peut remplacer des sorts de niveau 8 à partir du niveau 20 d’ensorceleur et des sorts de niveau 9 à partir du niveau 22 d’ensorceleur.
 
 Désavantages :
 * Débute sans aucune compétence en armure et s’avère très faible en combat rapproché.~
@@ -1598,7 +1598,7 @@ Vous savez comment frapper les adversaires dans des zones vulnérables.
 
 Prérequis : Dex 13+, Sag 13+, bonus de base à l'attaque de +8 ou plus.
 
-Avantage : Lorsque vous attaquez avec Attaque Étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau + modificateur de Sag), en plus d'infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
+Avantage : Lorsque vous attaquez avec Attaque étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau + modificateur de Sag), en plus d'infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
 @730	= ~ESQUIVE :
 
 Vous êtes passé maître dans l'art d'éviter les coups.
@@ -1901,7 +1901,7 @@ Avantages :
 
 Utilisez cette compétence pour empêcher un chien de garde d'aboyer, demander à un oiseau de se poser sur votre main ou calmer un ours-hibou pendant que vous battez en retraite. Toute créature sauvage, y compris les animaux ainsi que les monstres animaux tels que les wyverns, doit réussir un jet de Volonté sous peine d'être charmée pendant 1 round par niveau de lanceur.~
 
-@815 = ~abjurateur~
+@815 = ~Abjurateur~
 @816 = ~ABJURATEUR :
 
 Un magicien qui se spécialise dans la magie qui protège, bloque ou bannit.
@@ -2354,19 +2354,19 @@ Cette capacité fait disparaître le personnage qui devient indétectable à la visi
 @973	= ~Collets Naturels
 
 Cette capacité place un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec d'un jet de Réflexes. Le Degré de Difficulté du jet de sauvegarde est de 6 plus la compétence Sens de la nature du rôdeur.~
-@974	= ~Attaques Dévastatrices
+@974	= ~Attaques dévastatrices
 
 Toutes les attaques infligent des dégâts maximaux pendant 5 rounds. Si vous avez 12 niveaux ou plus de guerrier, vous gagnez également un bonus d'attaque de +4 et une augmentation de la plage de critique de +4 pendant la durée de l'effet.~
-@975	= ~Attaque Étourdissante
+@975	= ~Attaque étourdissante
 
 Lorsqu'elle est utilisée, toutes les attaques à mains nues du personnage au prochain round obligent la victime à réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau de moine du personnage) sous peine d’être étourdie pendant 1 round.~
-@976	= ~Paume Vibratoire
+@976	= ~Paume vibratoire
 
 Cette attaque terrifiante permet au moine de créer des vibrations à l'intérieur du corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins qu'elle ne réussisse un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau de moine). Les constructions et les morts-vivants ne peuvent pas être affectés.~
-@977	= ~Rage de Berserker
+@977	= ~Rage de berserker
 
 En entrant en rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et à la Constitution), ainsi qu'une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, l'étourdissement, le sommeil, la confusion, l'inconscience, la paralysie, la débilité et le désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant trois rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.~
-@978	= ~Rage de Grand Berserker
+@978	= ~Rage de grand berserker
 
 En entrant en rage, le barbare gagne +6 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et à la Constitution), ainsi qu'une pénalité de -2 à la classe d’armure, +3 aux jets de sauvegarde de Volonté, et une immunité contre la peur, l'étourdissement, le sommeil, la confusion, l'inconscience, la paralysie, la débilité et le désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant 3 rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.
 
@@ -2415,8 +2415,8 @@ PARAMÈTRES :
 Soigne 4d8 points de vie
 Poids : 1 lb (0,45 kg)
 ~
-@4704 	= ~Élixir Doux~
-@4705 	= ~On pourrait prendre cette boisson douce pour du vin blanc, mais la légère amertume de son goût ne provient pas de l'alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu'il s'agisse d'une infection courante, d'un venin mortel ou d'une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l'intoxication. Si cela ne suffit pas à soigner l'aventurier malade, les larmes de cheval dans le sirop restaurent également 1d4 points de vie à l'utilisateur.
+@4704 	= ~Élixir Sucré~
+@4705 	= ~On pourrait prendre cette boisson sucrée pour du vin blanc, mais la légère amertume de son goût ne provient pas de l'alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu'il s'agisse d'une infection courante, d'un venin mortel ou d'une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l'intoxication. Si cela ne suffit pas à soigner l'aventurier malade, les larmes de cheval dans le sirop restaurent également 1d4 points de vie à l'utilisateur.
 
 PARAMÈTRES :
 
@@ -2429,7 +2429,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Résistance : 5/- Résistance à l'Électricité pendant 10 rounds
+5/- de résistance à l’électricité pendant 10 rounds
 ~
 @4708 	= ~Philtre Radieux~
 @4709 	= ~Un liquide visqueux scintille à l'intérieur de cette petite bouteille. Préparée dans un pot en cire et filtrée à travers des bandes de parchemin magique, cette mixture de salpêtre, huile d'olive, lézards hachés, soude caustique, feuilles de menthe et cannelle peut protéger la peau de l'utilisateur contre une chaleur extrême.
@@ -2438,7 +2438,7 @@ En versant la fiole sur son bras et en prononçant le mot de commande, l'utilisat
 
 PARAMÈTRES :
 
-Résistance : 5/- Résistance au Feu pendant 10 rounds
+5/- de résistance au Feu pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4710 	= ~Manie Noire~
@@ -2521,7 +2521,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Résistance : 5/- Résistance aux sorts pendant 10 rounds
+5/- de résistance aux sorts pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4728 	= ~Fiole d’Écailles~
@@ -2537,7 +2537,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Résistance : 10/+2 Réduction des Dégâts pendant 10 rounds
+10/+2 de réduction des dégâts pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4732 	= ~Éther Hanté~
@@ -2567,7 +2567,7 @@ Le buveur conserve toutes ses fonctions normales, mais l'état liquide amortit l'
 
 PARAMÈTRES :
 
-Résistance : 1/- Résistance aux dégâts tranchants, contondants, perforants et aux projectiles pendant 10 rounds
+1/- de résistance aux dégâts tranchants, contondants, perforants et aux projectiles pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4738 	= ~Nectar de Sang~
@@ -2583,6 +2583,7 @@ PARAMÈTRES :
 +2 Intelligence
 +2 Sagesse
 +2 Charisme
+Se dissipe après 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4740 	= ~Ichor Purifié~
@@ -2626,7 +2627,7 @@ PARAMÈTRES :
 
 Dégâts : 1d4
 Type de dégâts : Projectiles (perforants)
-Spécial : -1 Résistance aux sorts pendant 10 rounds
+Spécial : -1 à la résistance aux sorts pendant 10 rounds
 Poids : 0 lb
 Don requis : Maniement des Armes courantes, Projectile
 Type : À une main
@@ -2636,7 +2637,7 @@ Type : À une main
 
 PARAMÈTRES :
 
-Image miroir
+Image miroir pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4748 	= ~Fluide Magnétique~
@@ -2650,7 +2651,7 @@ Réaction Magnétique : Les assaillants subissent 10d4 dégâts contondants par coup
 -5 bonus d'attaque
 -5 dégâts d'attaque
 -5 à classe d'armure
--10 Résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
+-10 à la résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
 Se dissipe après 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
@@ -2663,7 +2664,7 @@ Lorsqu'il est bu, le sirop crée un champ d’anti-magie autour du corps de l'utili
 PARAMÈTRES :
 
 Dissipe tous les effets dissipables sur le buveur
-Résistance : 10/- Résistance aux sorts
+Résistance : 10/- à la résistance aux sorts
 25% d'échec des sorts
 Se dissipe après 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2675,7 +2676,7 @@ Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste 
 
 PARAMÈTRES :
 
-Résistance : 1/- Résistance au poison pendant 10 rounds
+1/- à la résistance au poison pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4754 	= ~Lait de Vampire~
@@ -2744,7 +2745,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Bouclier de feu (rouge)
+Bouclier de feu (rouge) pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4769 	= ~Gelée de Salamandre de Givre~
@@ -2760,7 +2761,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Liberté de Mouvement
+Liberté de Mouvement pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4773 	= ~Boisson Pétillante~
@@ -2778,7 +2779,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Résistance : 5/- Résistance au froid pendant 10 rounds
+5/- à la résistance au froid pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4777 	= ~Bulles Dorées~
@@ -2810,7 +2811,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Immunité contre charme, domination, débilité, terreur, et confusion pendant 10 rounds
+Immunité contre charme, domination, débilité, terreur et confusion pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4785 	= ~Sève de Sylvanien~
@@ -2818,7 +2819,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Écorce (+3 à la classe d'armure) pendant 10 rounds
+Peau d’écorce (+3 à la classe d'armure) pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4787 	= ~Sérum de Troll~
@@ -2834,7 +2835,7 @@ Poids : 1 lb (0,45 kg)
 
 PARAMÈTRES :
 
-Résistance : 5/- Résistance à l'acide pendant 10 rounds
+5/- à la résistance à l'acide pendant 10 rounds
 Poids : 1 lb (0,45 kg)
 ~
 @4791 	= ~Fiole de Vipères~

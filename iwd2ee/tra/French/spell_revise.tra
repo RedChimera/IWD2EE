@@ -5376,4 +5376,3 @@ Tout personnage qui connaît le sort Lien d’âme (ou tout démon, qu’il connaisse l
 * Restaurer complètement les charges d’un objet magique dans l’inventaire du personnage (les objets donnant des bonus permanents ne peuvent pas être rechargés).
 
 Les morts-vivants, les constructions, les créatures invoquées et les créatures avec moins de 13 DV ne sont pas affectés par Lien d’âme. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est lancé sur un ennemi. Il ne peut être lancé que par des personnages d’alignement mauvais.~
-
