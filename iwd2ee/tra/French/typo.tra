@@ -52,7 +52,7 @@ Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour t
 //40223: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
 @57009	=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n’oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
 
-//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand 
+//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand
 @57010	=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez donc les dons Attaque en puissance ou Tir rapide pour maximiser les dégâts que vous leur infligez.~
 
 //35794: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
