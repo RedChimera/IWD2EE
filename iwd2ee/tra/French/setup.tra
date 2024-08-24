@@ -99,21 +99,21 @@
 Installer IWD2EE une nouvelle fois sans supprimer ces fichiers pourrait corrompre divers fichiers.
 Pour installer IWD2EE, procedez comme suit :
 1. Desinstallez tous vos autres mods.
-2. Ensuite, allez dans le dossier ´ override ª et supprimez tout ce qu'il contient.
+2. Ensuite, allez dans le dossier ? override ? et supprimez tout ce qu'il contient.
 3. Reinstallez vos mods, y compris IWD2EE.~
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"
 @-1001= "composants optionnels distincts.
 Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
-au niveau general plutot que de repondre aux questions pour chacun.
+au niveau gÇnÇral plutìt que de rÇpondre aux questions pour chacun.
 "
-@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installÇs ?
 Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
-@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
-Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DêJé installÇs ?
+Les [R]Çinstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 
-@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1004= "S'IL VOUS PLA®T, envoyez par e-mail le fichier"
 @-1005= "a"
 
 @-1006= "Installer le composant ["
@@ -124,13 +124,13 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 
 @-1009= "Entrez une partie du nom du module : "
 
-@-1010= "Reinstallation du composant ["
+@-1010= "RÇinstallation du composant ["
 @-1011= "] "
-@-1012= "Reinstallation dans la langue"
+@-1012= "RÇinstallation dans la langue"
 
 @-1013= "Suppression de l'ancienne installation de ["
 @-1014= "] au prealable..."
-@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+@-1015= "SUPPRESSION RêUSSIE DE L'ANCIEN"
 
 @-1016= "Installation en cours"
 @-1017= "ERREUR pendant l'installation de ["
@@ -140,10 +140,10 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 @-1021= "Suppression de ["
 @-1022= "] (composant #"
 @-1023= ")"
-@-1024= "SUPPRESSION REUSSIE DE ["
+@-1024= "SUPPRESSION RêUSSIE DE ["
 
 @-1025= "] ?
-[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+[R]Çinstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
 @-1026= "] ?
 [N]e pas installer, [Q]uitter ou choisir un parmi :"
 @-1027= " (installe actuellement)"
@@ -156,46 +156,46 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 choisir un parmi :"
 @-1031= "] ?
 [R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
-@-1032= "INSTALLATION ECHOUEE ¿ CAUSE D'ERREURS"
+@-1032= "INSTALLATION ECHOUEE ? CAUSE D'ERREURS"
 @-1033= "INSTALLATION AVEC DES ALERTES"
 @-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
 @-1035= "Dans la langue"
 
 @-1036= "Saute le GROUPE ["
-@-1037= "] pour cause d'absence des pre-requis."
+@-1037= "] pour cause d'absence des prÇ-requis."
 
-@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
-@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une sÇlection prÇ-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]Çinstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une sÇlection prÇ-definie :"
 
 @-1040= "
 Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
-Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
-faudra editer le fichier weidu.conf et reinstaller vos mods.
+Si par la suite vous dÇsirez jouer au jeu dans une langue differente, il vous
+faudra Çditer le fichier weidu.conf et rÇinstaller vos mods.
 "
-@-1041= "Tcheque"
+@-1041= "Tchäque"
 @-1042= "Allemand"
 @-1043= "Anglais"
 @-1044= "Espagnol"
-@-1045= "Francais"
+@-1045= "Franáais"
 @-1046= "Italien"
 @-1047= "Polonais"
 @-1048= "Portugais"
 @-1049= "Turc"
 @-1050= "Japonais"
-@-1051= "Coreen"
-@-1052= "Chinois simplifie"
+@-1051= "CorÇen"
+@-1052= "Chinois simplifiÇ"
 @-1053= "Russe"
 @-1054= "Ukrainien"
 
 @-1060= "
-Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ÇtÇ choisie quand ce mod a ete installÇ.
 
-Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+Veuillez indiquer quelle langue du jeu a ÇtÇ utilisÇe quand vous avez installÇ ce mod. Votre choix servira jusqu'Ö ce que WeiDU s'arràte mais ne sera pas memorisÇ.
 "
 @-1061= "
 Utilisation de"
 @-1062= " et "
 
-@-1063= "INSTALLATION ABANDONNEE"
+@-1063= "INSTALLATION ABANDONNêE"
 @-1064= "Abandon de l'installation de ["
 @-1065= "], retour a l'etat anterieur"
