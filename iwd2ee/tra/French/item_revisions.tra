@@ -12670,7 +12670,7 @@ Spécial :
  Bénéficie du bonus de Force aux dégâts
 Poids : 0
 Lanceur : arc~
-@12557	= ~Flèche éternelle +5~
+@12557	= ~Flèches éternelles +5~
 @12558	= ~Ces flèches ont été enchantées au cours de leur confection. Elles sont légèrement plus droites que leurs congénères normales, semblent devenir vivantes alors qu’elles quittent votre arc pour filer vers leur cible avec une précision diabolique.
 
 PARAMÈTRES :
@@ -12683,7 +12683,7 @@ Spécial :
   Boomerang : La flèche revient vers l’archer.
 Poids : 0
 Lanceur : arc~
-@12559	= ~Flèche détonante~
+@12559	= ~Flèches détonantes~
 @12560	= ~Ces flèches très rares explosent en boules de feu au moment de l’impact, infligeant également des dégâts aux créatures proches.
 
 PARAMÈTRES :
@@ -12696,7 +12696,7 @@ Spécial :
   Explose à l’impact et inflige des dégâts à toutes les créatures dans un rayon de 6 mètres (20 pieds).
 Poids : 0
 Lanceur : Arc~
-@12561	= ~Flèche de force acérée boomerang +5~
+@12561	= ~Flèches de force acérées boomerang +5~
 @12562	= ~Ces flèches ont été enchantées au cours de leur confection. Elles sont légèrement plus droites que leurs congénères normales, semblent devenir vivantes alors qu’elles quittent votre arc pour filer vers leur cible avec une précision diabolique.
 
 PARAMÈTRES :
