@@ -4949,7 +4949,7 @@ Temps d’incantation : 7
 Zone d'effet : cadavre le plus proche dans un rayon de 1,5 m (5 pieds)
 Jet de sauvegarde : aucun
 
-Ce sort "ressuscite" la cible en tant que créature morte-vivante sous le contrôle du lanceur, en conservant les statistiques et les sorts qu’elle avait de son vivant. La créature morte la plus proche du point ciblé, à l’exception des morts-vivants, des constructions, de la plupart des créatures extraplanaires et des créatures ayant plus de cinq niveaux de plus que le lanceur, est réanimée. Elle ramasse et rééquipe les objets qu’elle a lâchés lorsqu’elle est morte, à moins que le groupe n’ait pris ces objets. Les créatures qui ont explosé en morceaux ne peuvent pas être réanimées. Réanimation ne peut pas être lancé par des personnages d’alignement bon.~
+Ce sort “ressuscite” la cible en tant que créature morte-vivante sous le contrôle du lanceur, en conservant les statistiques et les sorts qu’elle avait de son vivant. La créature morte la plus proche du point ciblé, à l’exception des morts-vivants, des constructions, de la plupart des créatures extraplanaires et des créatures ayant plus de cinq niveaux de plus que le lanceur, est réanimée. Elle ramasse et rééquipe les objets qu’elle a lâchés lorsqu’elle est morte, à moins que le groupe n’ait pris ces objets. Les créatures qui ont explosé en morceaux ne peuvent pas être réanimées. Réanimation ne peut pas être lancé par des personnages d’alignement bon.~
 
 @37757 	= ~Horde de squelettes~
 @38757 	= ~Horde de squelettes
@@ -4973,9 +4973,9 @@ Temps d’incantation : 15
 Zone d’effet : Spécial
 Jet de sauvegarde : aucun
 
-Séquenceur de sorts permet au lanceur de stocker trois sorts pour les libérer plus tard. Après avoir lancé Séquenceur de sorts, le lanceur doit lancer jusqu’à trois sorts de niveau 4 ou inférieur. Au lieu d’être lancés, ces sorts sont stockés dans le séquenceur (consommant une utilisation de chaque sort). Le lanceur obtient alors la capacité innée "Libérer le séquenceur de sorts". Utiliser cette capacité lance immédiatement les trois sorts précédemment stockés sur la cible.
+Séquenceur de sorts permet au lanceur de stocker trois sorts pour les libérer plus tard. Après avoir lancé Séquenceur de sorts, le lanceur doit lancer jusqu’à trois sorts de niveau 4 ou inférieur. Au lieu d’être lancés, ces sorts sont stockés dans le séquenceur (consommant une utilisation de chaque sort). Le lanceur obtient alors la capacité innée “Libérer le séquenceur de sorts”. Utiliser cette capacité lance immédiatement les trois sorts précédemment stockés sur la cible.
 
-Les sorts avec une portée de "Lanceur" seront lancés sur le lanceur, quelle que soit la cible de la capacité. Les sorts avec une portée limitée échoueront si la cible est hors de portée du sort.~
+Les sorts avec une portée de “Lanceur” seront lancés sur le lanceur, quelle que soit la cible de la capacité. Les sorts avec une portée limitée échoueront si la cible est hors de portée du sort.~
 
 @37759 	= ~Attirance~
 @38759 	= ~Attirance
@@ -5332,9 +5332,9 @@ Temps d’incantation : 15
 Zone d’effet : Spéciale
 Jet de sauvegarde : aucun
 
-Le Séquenceur éclectique ne peut être lancé que par des magiciens généralistes. Il permet au lanceur de stocker huit sorts à libérer plus tard. Après avoir lancé le Séquenceur éclectique, le lanceur doit lancer jusqu’à huit sorts de niveau 7 ou inférieur, chacun devant être d’une école différente. Au lieu d’être lancés, ces sorts sont stockés dans le séquenceur (consommant une utilisation de chaque sort). Le lanceur obtient alors la capacité innée "Libérer le séquenceur éclectique". Utiliser cette capacité lance immédiatement les huit sorts sur la cible.
+Le Séquenceur éclectique ne peut être lancé que par des magiciens généralistes. Il permet au lanceur de stocker huit sorts à libérer plus tard. Après avoir lancé le Séquenceur éclectique, le lanceur doit lancer jusqu’à huit sorts de niveau 7 ou inférieur, chacun devant être d’une école différente. Au lieu d’être lancés, ces sorts sont stockés dans le séquenceur (consommant une utilisation de chaque sort). Le lanceur obtient alors la capacité innée “Libérer le séquenceur éclectique”. Utiliser cette capacité lance immédiatement les huit sorts sur la cible.
 
-Les sorts avec une portée de "Lanceur" seront lancés sur le lanceur, indépendamment de la cible de la capacité. Les sorts avec une portée limitée échoueront si la cible est hors de portée du sort.~
+Les sorts avec une portée de “Lanceur” seront lancés sur le lanceur, indépendamment de la cible de la capacité. Les sorts avec une portée limitée échoueront si la cible est hors de portée du sort.~
 
 @37962 	= ~Souhait~
 @38962 	= ~Souhait

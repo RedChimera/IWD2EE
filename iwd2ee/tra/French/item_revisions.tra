@@ -35,14 +35,14 @@ PARAMÈTRES :
 Intelligence : +3
 Poids : 0,45 kg (1 lb)~
 //@10028	= ~Porte-Bonheur de la Truite~
-@10029	= ~Ce morceau de poisson difficilement reconnaissable sert de porte-bonheur à Targos depuis près de 20 ans. L’histoire de cet objet commence avec le jeune Ned de Bois-Isolé. Au cours de l’une de ses sorties de pêche, sa barque se retourna près de la rive du Maer Dualdon. Il réussit néanmoins à conserver sa prise du jour, une truite "incroyablement énorme", même s’il fut pourchassé par un ours affamé dès qu’il mit pied sur la plage. L’ours parvint néanmoins à emporter avec lui la plus grosse partie du poisson, ne laissant à ce pauvre Ned que la tête. Ned retourna à Targos à pied et conserva la tête de la truite comme preuve de sa mésaventure. Avec le temps, Ned attribua à la truite la chance qu’il eut dans sa carrière de pêcheur. Le brigand Marg la tremblotte "gagna" le porte-bonheur de Ned au cours d’une partie de cartes "honnête". Amer, Ned se résigna, ne voulant pas se confronter au malfrat. Ce dernier vendit le fétiche un peu plus tard, pour acheter des provisions pour son départ hâtif de Targos. L’acheteur la conserva quelques mois avant d’en faire cadeau à un de ses amis des docks. Depuis ce temps, le "Porte-bonheur de la Truite" a été vendu, donné ou prêté à près d’une douzaine de personnes à Targos et même, une fois, à un habitant de Bremen.
+@10029	= ~Ce morceau de poisson difficilement reconnaissable sert de porte-bonheur à Targos depuis près de 20 ans. L’histoire de cet objet commence avec le jeune Ned de Bois-Isolé. Au cours de l’une de ses sorties de pêche, sa barque se retourna près de la rive du Maer Dualdon. Il réussit néanmoins à conserver sa prise du jour, une truite “incroyablement énorme”, même s’il fut pourchassé par un ours affamé dès qu’il mit pied sur la plage. L’ours parvint néanmoins à emporter avec lui la plus grosse partie du poisson, ne laissant à ce pauvre Ned que la tête. Ned retourna à Targos à pied et conserva la tête de la truite comme preuve de sa mésaventure. Avec le temps, Ned attribua à la truite la chance qu’il eut dans sa carrière de pêcheur. Le brigand Marg la tremblotte “gagna” le porte-bonheur de Ned au cours d’une partie de cartes “honnête”. Amer, Ned se résigna, ne voulant pas se confronter au malfrat. Ce dernier vendit le fétiche un peu plus tard, pour acheter des provisions pour son départ hâtif de Targos. L’acheteur la conserva quelques mois avant d’en faire cadeau à un de ses amis des docks. Depuis ce temps, le “Porte-bonheur de la Truite” a été vendu, donné ou prêté à près d’une douzaine de personnes à Targos et même, une fois, à un habitant de Bremen.
 
 PARAMÈTRES :
 
 Chance : +1
 Poids : 0~
 //@10030	= ~Porte-Bonheur du Jeune Ned~
-@10031	= ~Ce morceau de poisson difficilement reconnaissable sert de porte-bonheur à Targos depuis près de 20 ans. L’histoire de cet objet commence avec le jeune Ned de Bois-Isolé. Au cours de l’une de ses sorties de pêche, sa barque se retourna près de la rive du Maer Dualdon. Il réussit néanmoins à conserver sa prise du jour, une truite "incroyablement énorme", même s’il fut pourchassé par un ours affamé dès qu’il mit pied sur la plage. L’ours parvint néanmoins à emporter avec lui la plus grosse partie du poisson, ne laissant à ce pauvre Ned que la tête. Ned retourna à Targos à pied et conserva la tête de la truite comme preuve de sa mésaventure. Avec le temps, Ned attribua à la truite la chance qu’il eut dans sa carrière de pêcheur. Le brigand Marg la tremblotte "gagna" le porte-bonheur de Ned au cours d’une partie de cartes "honnête". Amer, Ned se résigna, ne voulant pas se confronter au malfrat. Ce dernier vendit le fétiche un peu plus tard, pour acheter des provisions pour son départ hâtif de Targos. L’acheteur la conserva quelques mois avant d’en faire cadeau à un de ses amis des docks. Depuis ce temps, le "Porte-bonheur de la Truite" a été vendu, donné ou prêté à près d’une douzaine de personnes à Targos et même, une fois, à un habitant de Bremen.
+@10031	= ~Ce morceau de poisson difficilement reconnaissable sert de porte-bonheur à Targos depuis près de 20 ans. L’histoire de cet objet commence avec le jeune Ned de Bois-Isolé. Au cours de l’une de ses sorties de pêche, sa barque se retourna près de la rive du Maer Dualdon. Il réussit néanmoins à conserver sa prise du jour, une truite “incroyablement énorme”, même s’il fut pourchassé par un ours affamé dès qu’il mit pied sur la plage. L’ours parvint néanmoins à emporter avec lui la plus grosse partie du poisson, ne laissant à ce pauvre Ned que la tête. Ned retourna à Targos à pied et conserva la tête de la truite comme preuve de sa mésaventure. Avec le temps, Ned attribua à la truite la chance qu’il eut dans sa carrière de pêcheur. Le brigand Marg la tremblotte “gagna” le porte-bonheur de Ned au cours d’une partie de cartes “honnête”. Amer, Ned se résigna, ne voulant pas se confronter au malfrat. Ce dernier vendit le fétiche un peu plus tard, pour acheter des provisions pour son départ hâtif de Targos. L’acheteur la conserva quelques mois avant d’en faire cadeau à un de ses amis des docks. Depuis ce temps, le “Porte-bonheur de la Truite” a été vendu, donné ou prêté à près d’une douzaine de personnes à Targos et même, une fois, à un habitant de Bremen.
 
 PARAMÈTRES :
 
@@ -165,14 +165,14 @@ Chance : +1
 Sort : lance Invisibilité suprême (niveau 20) (1/jour)
 Poids : 0~
 //@10056	= ~Pendentif de Mirabel~
-@10057	= ~Ce pendentif en ivoire fut autrefois porté par une devineresse des sorciers rouges nommée Mirabel, qui fut envoyée pour tuer les soi-disant sauveurs de Val de Bise. Il représente une très belle femme chauve. De forme ovale, il est enchâssé dans un tour en argent fixé à un collier ras de cou en velours bordeaux. Les lettres "A.L." sont inscrites au verso dans l’écriture de Mulhorande.
+@10057	= ~Ce pendentif en ivoire fut autrefois porté par une devineresse des sorciers rouges nommée Mirabel, qui fut envoyée pour tuer les soi-disant sauveurs de Val de Bise. Il représente une très belle femme chauve. De forme ovale, il est enchâssé dans un tour en argent fixé à un collier ras de cou en velours bordeaux. Les lettres “A.L.” sont inscrites au verso dans l’écriture de Mulhorande.
 
 PARAMÈTRES :
 
 Augmentation de la durée : prolonge de 25% la durée des sorts profanes de l’utilisateur
 Poids : 0~
 //@10058	= ~Pendentif maléfique de Mirabel~
-@10059	= ~Ce pendentif en ivoire fut autrefois porté par une devineresse des sorciers rouges nommée Mirabel, qui fut envoyée pour tuer les soi-disant sauveurs de Val de Bise. Il représente une très belle femme chauve. De forme ovale, il est enchâssé dans un tour en argent fixé à un collier ras de cou en velours bordeaux. Les lettres "A.L." sont inscrites au verso dans l’écriture de Mulhorande.
+@10059	= ~Ce pendentif en ivoire fut autrefois porté par une devineresse des sorciers rouges nommée Mirabel, qui fut envoyée pour tuer les soi-disant sauveurs de Val de Bise. Il représente une très belle femme chauve. De forme ovale, il est enchâssé dans un tour en argent fixé à un collier ras de cou en velours bordeaux. Les lettres “A.L.” sont inscrites au verso dans l’écriture de Mulhorande.
 
 PARAMÈTRES :
  
@@ -314,7 +314,7 @@ Constitution : -4
 Spécial : Seul un sort de Délivrance des malédictions permet de le retirer.
 Poids : 0~
 //@10090	= ~Anneau d’Invisibilité~
-@10091	= ~Pendant près d’une génération, cet anneau resta entre les mains d’un maître voleur qui l’utilisa de manière effrontée sur tous les marchés d’Eauprofonde. Il n’hésitait pas à dévaliser les foules en plein jour et remplaçait les bourses des nobles par des sacs de sable afin que le vol passe inaperçu. On ne découvrit jamais son identité, mais ses victimes le maudissaient pourtant sous le nom de "Voleur de sable" qui lui fut attribué. On dit qu’il aurait pris sa retraite et qu’il vivrait aujourd’hui parmi les nobles qu’il dévalisait autrefois.
+@10091	= ~Pendant près d’une génération, cet anneau resta entre les mains d’un maître voleur qui l’utilisa de manière effrontée sur tous les marchés d’Eauprofonde. Il n’hésitait pas à dévaliser les foules en plein jour et remplaçait les bourses des nobles par des sacs de sable afin que le vol passe inaperçu. On ne découvrit jamais son identité, mais ses victimes le maudissaient pourtant sous le nom de “Voleur de sable” qui lui fut attribué. On dit qu’il aurait pris sa retraite et qu’il vivrait aujourd’hui parmi les nobles qu’il dévalisait autrefois.
 
 PARAMÈTRES :
 
@@ -619,7 +619,7 @@ Poids : 0,23 kg (0,5 lb)~
 
 Le Cercle de Glace était financé par un marchand d’Eauprofonde dont le nom a été effacé des annales de l’histoire par la Tour de l’Arcane. Il semblerait que ce marchand ait gardé rancune contre la Tour de l’Arcane suite à un différend au cours duquel il dut abandonner ses biens à Luskan, ainsi qu’une bonne partie de ses marchandises. Il dépêcha alors une poignée de sorciers d’Eauprofonde pour lui procurer des anneaux magiques et recruter un groupe de tueurs de mages, dont la mission consistait à anéantir la Tour de l’Arcane. Les vingt tueurs et le marchand devaient ensuite se retrouver à Luskan.
 
-Ironie du sort, c’est le marchand lui-même qui provoqua la chute de son "mouvement" en ne portant pas l’anneau magique qu’il avait fait forger pour chaque membre de son groupe. Il était en effet à peine arrivé à Luskan que des télépathes purent lire dans ses pensées ; tous les membres de son organisation secrète furent ainsi identifiés et bien sûr soigneusement éliminés... Leurs anneaux ne les protégèrent pas longtemps contre les hordes de monstres des magiciens et la pluie de flèches mortelles. Il semblerait qu’un seul de ces tueurs de mages, Martek, soit parvenu à leur échapper... et qu’il reste aujourd’hui encore totalement introuvable...
+Ironie du sort, c’est le marchand lui-même qui provoqua la chute de son “mouvement” en ne portant pas l’anneau magique qu’il avait fait forger pour chaque membre de son groupe. Il était en effet à peine arrivé à Luskan que des télépathes purent lire dans ses pensées ; tous les membres de son organisation secrète furent ainsi identifiés et bien sûr soigneusement éliminés... Leurs anneaux ne les protégèrent pas longtemps contre les hordes de monstres des magiciens et la pluie de flèches mortelles. Il semblerait qu’un seul de ces tueurs de mages, Martek, soit parvenu à leur échapper... et qu’il reste aujourd’hui encore totalement introuvable...
 
 Quoi qu’il en soit, le Cercle de Glace disparut aussi vite qu’il était né et le pauvre marchand vécut un véritable enfer auprès de la Tour de l’Arcane jusqu’à son dernier souffle... Il semblerait que ses restes aient d’ailleurs participé à la conception du bras gauche d’un golem de chair du nom de Bok.
 
@@ -853,14 +853,14 @@ Résistance : 2/- de résistance au froid
 Charisme : +1
 Poids : 0,23 kg (0,5 lb)~
 //@10244	= ~Bandeaux soudés~
-@10245	= ~Les Bandeaux Soudés sont enchantés de sorte qu’ils "absorbent" la puissance et l’inertie des coups portés par les ennemis du porteur, lui procurant ainsi une protection équivalente à celle d’une cotte de mailles sans en avoir les inconvénients.
+@10245	= ~Les Bandeaux Soudés sont enchantés de sorte qu’ils “absorbent” la puissance et l’inertie des coups portés par les ennemis du porteur, lui procurant ainsi une protection équivalente à celle d’une cotte de mailles sans en avoir les inconvénients.
 
 PARAMÈTRES :
 
 Bonus à la CA (générique) : +3
 Poids : 0,23 kg (0,5 lb)~
 //@10246	= ~Bandeaux indomptables~
-@10247	= ~Les Bandeaux Indomptables sont enchantés de sorte qu’ils "absorbent" la puissance et l’inertie des coups portés par les ennemis du porteur, lui procurant ainsi une protection équivalente à celle d’une cotte de mailles sans en avoir les inconvénients.
+@10247	= ~Les Bandeaux Indomptables sont enchantés de sorte qu’ils “absorbent” la puissance et l’inertie des coups portés par les ennemis du porteur, lui procurant ainsi une protection équivalente à celle d’une cotte de mailles sans en avoir les inconvénients.
 
 PARAMÈTRES :
 
@@ -869,7 +869,7 @@ Poids : 0,23 kg (0,5 lb)~
 //@10248	= ~Bandeaux de Concentration~
 @10249	= ~Les enseignements de Kamjin-Doh de Kara-Tur stipulent qu’un véritable maître d’armes ne compte pas sur le cuir, la maille ou les plaques d’une armure pour survivre, mais uniquement sur sa propre capacité à ne jamais être touché... ce qui implique qu’il doit maîtriser les mouvements de son adversaire comme les siens. Seule une concentration extrême permet d’appliquer un tel principe au beau milieu d’un combat, et telle est exactement la fonction de ces brassards.
 
-Ces Bandeaux de Concentration étaient à l’origine utilisés pour l’entraînement des recrues de Kamjin-Doh et ils irradient une faible lueur lorsqu’ils sont effleurés par la lumière du crépuscule. Celui qui les porte ressent un grand calme intérieur et voit ses sens exacerbés au point qu’il est capable de "lire" les mouvements de son adversaire. Et si jamais le porteur de ces brassards venait à être touché, ils atténuent la douleur (appelée aussi "distraction" par les maîtres du Kamjin-Doh) au point de la rendre quasiment inexistante.
+Ces Bandeaux de Concentration étaient à l’origine utilisés pour l’entraînement des recrues de Kamjin-Doh et ils irradient une faible lueur lorsqu’ils sont effleurés par la lumière du crépuscule. Celui qui les porte ressent un grand calme intérieur et voit ses sens exacerbés au point qu’il est capable de “lire” les mouvements de son adversaire. Et si jamais le porteur de ces brassards venait à être touché, ils atténuent la douleur (appelée aussi “distraction” par les maîtres du Kamjin-Doh) au point de la rendre quasiment inexistante.
 
 De nombreux exemplaires de cet objet furent disséminés dans Féérune à la chute de Kamjin-Doh, alors dirigé par le Maître des Lames. Ce même Maître en aurait lui-même possédé un, bien qu’on ait fort peu d’informations à ce sujet.
 
@@ -1056,7 +1056,7 @@ Poids : 1,36 kg (3 lb)~
 //@10294	= ~Petit Géant~
 //@10295	= ~Item description can remain the same; if new description is needed put it here~
 //@10296	= ~Orge Nain~
-@10297	= ~L’Ogre Nain est une ceinture de cuir épais de très belle facture, faite de poils de barbe de nain rouge et de cheveux de géant des tempêtes, qui confère à son porteur une force surhumaine. Créée par le fameux tueur de géants, "Petit Géant" Hohn Barbefeu, elle dispose également d’une boucle faite de l’œil pétrifié d’un chaman firbolg qu’Hohn vainquit au cours de ses pérégrinations.
+@10297	= ~L’Ogre Nain est une ceinture de cuir épais de très belle facture, faite de poils de barbe de nain rouge et de cheveux de géant des tempêtes, qui confère à son porteur une force surhumaine. Créée par le fameux tueur de géants, “Petit Géant” Hohn Barbefeu, elle dispose également d’une boucle faite de l’œil pétrifié d’un chaman firbolg qu’Hohn vainquit au cours de ses pérégrinations.
 
 Hohn perdit cette ceinture dans une rivière en poursuivant un verbeeg qui tentait de s’enfuir avec un de ses poneys. La ceinture fut emportée par le courant et finit entre les mains d’un trappeur, qui la revendit à un inventeur de passage.
 
@@ -1189,7 +1189,7 @@ Poids : 1,36 kg (3 lb)~
 //@10294	= ~Petit Géant~
 //@10295	= ~Item description can remain the same; if new description is needed put it here~
 //@10296	= ~Orge Nain~
-@10297	= ~L’Ogre Nain est une ceinture de cuir épais de très belle facture, faite de poils de barbe de nain rouge et de cheveux de géant des tempêtes, qui confère à son porteur une force surhumaine. Créée par le fameux tueur de géants, "Petit Géant" Hohn Barbefeu, elle dispose également d’une boucle faite de l’œil pétrifié d’un chaman firbolg qu’Hohn vainquit au cours de ses pérégrinations.
+@10297	= ~L’Ogre Nain est une ceinture de cuir épais de très belle facture, faite de poils de barbe de nain rouge et de cheveux de géant des tempêtes, qui confère à son porteur une force surhumaine. Créée par le fameux tueur de géants, “Petit Géant” Hohn Barbefeu, elle dispose également d’une boucle faite de l’œil pétrifié d’un chaman firbolg qu’Hohn vainquit au cours de ses pérégrinations.
 
 Hohn perdit cette ceinture dans une rivière en poursuivant un verbeeg qui tentait de s’enfuir avec un de ses poneys. La ceinture fut emportée par le courant et finit entre les mains d’un trappeur, qui la revendit à un inventeur de passage.
 
@@ -1453,7 +1453,7 @@ Spécial :
   Charisme : +1
 Poids : 0,45 kg (1 lb)~
 //@10363	= ~The Black Hands of Shelgoth~
-@10364	= ~Shelgoth, puissante liche "vivant" au temps de la chute de Néthéril, terrorisait les réfugiés de l’empire déchu qui erraient dans la région connue sous le nom d’Empreinte de Moander. En effet, ses morts-vivants et ses animaux étaient plus que terrifiants du haut des rochers d’où ils attaquaient leurs proies, et plus d’une centaine de magiciens durent unir leurs efforts pour vaincre la liche. Une fois qu’ils l’eurent vaincue, ils décidèrent d’utiliser ses mains squelettiques pour fabriquer un casque magique. Certains historiens ajoutent en marge que les mages cherchaient peut-être à recréer un objet similaire à la tristement célèbre Couronne Cornue, mais l’histoire et le processus de création du casque sont inconnus.
+@10364	= ~Shelgoth, puissante liche “vivant” au temps de la chute de Néthéril, terrorisait les réfugiés de l’empire déchu qui erraient dans la région connue sous le nom d’Empreinte de Moander. En effet, ses morts-vivants et ses animaux étaient plus que terrifiants du haut des rochers d’où ils attaquaient leurs proies, et plus d’une centaine de magiciens durent unir leurs efforts pour vaincre la liche. Une fois qu’ils l’eurent vaincue, ils décidèrent d’utiliser ses mains squelettiques pour fabriquer un casque magique. Certains historiens ajoutent en marge que les mages cherchaient peut-être à recréer un objet similaire à la tristement célèbre Couronne Cornue, mais l’histoire et le processus de création du casque sont inconnus.
 
 PARAMÈTRES :
 
@@ -1462,7 +1462,7 @@ Spécial :
   Effet constant : le porteur bénéficie de la Protection contre la mort
 Poids : 0,45 kg (1 lb)~
 //@10365	= ~Horrific Black Hands of Shelgoth~
-@10366	= ~Shelgoth, puissante liche "vivant" au temps de la chute de Néthéril, terrorisait les réfugiés de l’empire déchu qui erraient dans la région connue sous le nom d’Empreinte de Moander. En effet, ses morts-vivants et ses animaux étaient plus que terrifiants du haut des rochers d’où ils attaquaient leurs proies, et plus d’une centaine de magiciens durent unir leurs efforts pour vaincre la liche. Une fois qu’ils l’eurent vaincue, ils décidèrent d’utiliser ses mains squelettiques pour fabriquer un casque magique. Certains historiens ajoutent en marge que les mages cherchaient peut-être à recréer un objet similaire à la tristement célèbre Couronne Cornue, mais l’histoire et le processus de création du casque sont inconnus.
+@10366	= ~Shelgoth, puissante liche “vivant” au temps de la chute de Néthéril, terrorisait les réfugiés de l’empire déchu qui erraient dans la région connue sous le nom d’Empreinte de Moander. En effet, ses morts-vivants et ses animaux étaient plus que terrifiants du haut des rochers d’où ils attaquaient leurs proies, et plus d’une centaine de magiciens durent unir leurs efforts pour vaincre la liche. Une fois qu’ils l’eurent vaincue, ils décidèrent d’utiliser ses mains squelettiques pour fabriquer un casque magique. Certains historiens ajoutent en marge que les mages cherchaient peut-être à recréer un objet similaire à la tristement célèbre Couronne Cornue, mais l’histoire et le processus de création du casque sont inconnus.
 
 PARAMÈTRES :
 
@@ -1515,7 +1515,7 @@ Poids : 0,45 kg (1 lb)~
 
 Il n’y a toutefois rien d’inhabituel à ce que le capitaine Aeryl Barbedor et l’équipage du Rhonda Bondissant aient agi de la sorte. C’est plutôt le déroulement de l’abordage en tant que tel qui peut étonner... A peine l’équipage adverse vaincu, le capitaine Aeryl Barbedor grimpait au plus haut mât de son navire et, avec une grâce exquise, se laissait glisser le long d’un cordage jusqu’au pont du vaisseau abordé. Au moment même où il y posait le pied, l’équipage vaincu semblait tout simplement subjugué par l’élégance et la prestance du capitaine, au point qu’une partie des marins demandait alors souvent à servir sur le Rhonda Bondissant ! Mais une fois les pirates repartis avec la cargaison du vaisseau marchand, les membres d’équipage restés à bord revenaient instantanément à des sentiments nettement moins amicaux à l’égard du capitaine Barbedor.
 
-Personne ne sut comment le capitaine Barbedor s’y prenait pour "charmer" ainsi ses victimes, jusqu’au jour où il perdit son bandana coloré alors qu’il allait faire son entrée sur le pont du navire saisi... Le comité d’accueil qui l’attendait n’avait bien évidemment plus rien de commun avec ce qu’il connaissait, puisque les marins capturés se jetèrent sur lui et le battirent à mort. Dès lors, il devint évident que le bandana du capitaine contenait une magie le rendant nettement plus charismatique.
+Personne ne sut comment le capitaine Barbedor s’y prenait pour “charmer” ainsi ses victimes, jusqu’au jour où il perdit son bandana coloré alors qu’il allait faire son entrée sur le pont du navire saisi... Le comité d’accueil qui l’attendait n’avait bien évidemment plus rien de commun avec ce qu’il connaissait, puisque les marins capturés se jetèrent sur lui et le battirent à mort. Dès lors, il devint évident que le bandana du capitaine contenait une magie le rendant nettement plus charismatique.
 
 Le malheur veut que la bandana ait été perdu dans la bataille qui s’ensuivit. Toutefois, des rumeurs parcourent régulièrement les quais au sujet d’un pirate particulièrement audacieux qui a pour habitude d’aborder les navires ennemis en glissant le long des cordages de son mât, un bandana coloré autour du front.
 
@@ -1529,7 +1529,7 @@ Poids : 0,45 kg (1 lb)~
 //@10379	= ~Gueule de Dracosire~
 @10380	= ~Kellem Longueil était un célèbre rôdeur de la ville de Bremen, qui n’hésitait pas à parcourir le Nord sauvage à la poursuite de ses proies. Il traquait dragons, wivernes et autres grands reptiles volants, notamment ceux attaquaient les Dix-Cités. Cela lui permit de ramener un grand nombre de trophées et d’orner la plupart de ses objets d’écailles ou de griffes de dragon.
 
-Son plus grand trophée, il l’arracha à Soufflegivre, un grand dracosire blanc à la férocité légendaire. Dans ses spasmes d’agonie, le monstre parvint à exhaler un dernier souffle et le froid qui s’échappa de sa gueule fit perdre à Kellem son œil et son oreille gauches. Ce dernier jura aussitôt de se venger de tous les dragons. Afin de l’aider dans sa tâche, il fit transformer, dès son retour à la civilisation, les mâchoires de son adversaire en casque capable de cracher un souffle gelé. Il donna à l’objet le nom de "Gueule de Dracosire".
+Son plus grand trophée, il l’arracha à Soufflegivre, un grand dracosire blanc à la férocité légendaire. Dans ses spasmes d’agonie, le monstre parvint à exhaler un dernier souffle et le froid qui s’échappa de sa gueule fit perdre à Kellem son œil et son oreille gauches. Ce dernier jura aussitôt de se venger de tous les dragons. Afin de l’aider dans sa tâche, il fit transformer, dès son retour à la civilisation, les mâchoires de son adversaire en casque capable de cracher un souffle gelé. Il donna à l’objet le nom de “Gueule de Dracosire”.
 
 Hélas, Kellem finit par se faire vieux et ne revint jamais d’une chasse dangereuse qui l’avait conduit dans les montagnes de l’Épine Dorsale du Monde. Personne n’a jamais retrouvé son équipement.
 
@@ -1544,7 +1544,7 @@ Poids : 1,36 kg (3 lb)~
 //@10381	= ~Gueule de Grand Dracosire blanc~
 @10382	= ~Kellem Longueil était un célèbre rôdeur de la ville de Bremen, qui n’hésitait pas à parcourir le Nord sauvage à la poursuite de ses proies. Il traquait dragons, wivernes et autres grands reptiles volants, notamment ceux attaquaient les Dix-Cités. Cela lui permit de ramener un grand nombre de trophées et d’orner la plupart de ses objets d’écailles ou de griffes de dragon.
 
-Son plus grand trophée, il l’arracha à Soufflegivre, un grand dracosire blanc à la férocité légendaire. Dans ses spasmes d’agonie, le monstre parvint à exhaler un dernier souffle et le froid qui s’échappa de sa gueule fit perdre à Kellem son œil et son oreille gauches. Ce dernier jura aussitôt de se venger de tous les dragons. Afin de l’aider dans sa tâche, il fit transformer, dès son retour à la civilisation, les mâchoires de son adversaire en casque capable de cracher un souffle gelé. Il donna à l’objet le nom de "Gueule de Grand Dracosire".
+Son plus grand trophée, il l’arracha à Soufflegivre, un grand dracosire blanc à la férocité légendaire. Dans ses spasmes d’agonie, le monstre parvint à exhaler un dernier souffle et le froid qui s’échappa de sa gueule fit perdre à Kellem son œil et son oreille gauches. Ce dernier jura aussitôt de se venger de tous les dragons. Afin de l’aider dans sa tâche, il fit transformer, dès son retour à la civilisation, les mâchoires de son adversaire en casque capable de cracher un souffle gelé. Il donna à l’objet le nom de “Gueule de Grand Dracosire”.
 
 Hélas, Kellem finit par se faire vieux et ne revint jamais d’une chasse dangereuse qui l’avait conduit dans les montagnes de l’Épine Dorsale du Monde. Personne n’a jamais retrouvé son équipement.
 
@@ -2585,7 +2585,7 @@ Spécial :
  Régénération : chaque round, le porteur de l’armure regagne l’équivalent de son bonus de Constitution en PV.
 Poids : 4,54 kg (10 lb)~
 @10521	= ~Broigne d’Ogien +3~
-@10522	= ~Ogien, le grand héros barbare, portait cette armure durant ces nombreuses conquêtes légendaires. Il était considéré comme un géant parmi les hommes. Il était en effet plus grand et plus robuste que les autres barbares. Certains barbares racontent qu’il se battait à mains nues contre des loups pour se divertir. Il était hanté par une prophétie selon laquelle il serait tué par "des pattes blanches". Il fut tué par des ours polaires alors qu’il explorait la toundra du Val de Bise et on l’enterra avec son armure. Malgré ses grands pouvoirs, cette armure semble assez banale.
+@10522	= ~Ogien, le grand héros barbare, portait cette armure durant ces nombreuses conquêtes légendaires. Il était considéré comme un géant parmi les hommes. Il était en effet plus grand et plus robuste que les autres barbares. Certains barbares racontent qu’il se battait à mains nues contre des loups pour se divertir. Il était hanté par une prophétie selon laquelle il serait tué par “des pattes blanches”. Il fut tué par des ours polaires alors qu’il explorait la toundra du Val de Bise et on l’enterra avec son armure. Malgré ses grands pouvoirs, cette armure semble assez banale.
 
 PARAMÈTRES :
 
@@ -2599,7 +2599,7 @@ Spécial :
  Lorsque le porteur est sous l’effet de Rage de berserker, Rage animale ou Rage sanguinaire, il obtient une résistance de 3/- à tous les dégâts.
 Poids : 11,34 kg (25 lb)~
 @10523	= ~Broigne d’Ogien +5~ //HoF
-@10524	= ~Ogien, le grand héros barbare, portait cette armure durant ces nombreuses conquêtes légendaires. Il était considéré comme un géant parmi les hommes. Il était en effet plus grand et plus robuste que les autres barbares. Certains barbares racontent qu’il se battait à mains nues contre des loups pour se divertir. Il était hanté par une prophétie selon laquelle il serait tué par "des pattes blanches". Il fut tué par des ours polaires alors qu’il explorait la toundra du Val de Bise et on l’enterra avec son armure. Malgré ses grands pouvoirs, cette armure semble assez banale.
+@10524	= ~Ogien, le grand héros barbare, portait cette armure durant ces nombreuses conquêtes légendaires. Il était considéré comme un géant parmi les hommes. Il était en effet plus grand et plus robuste que les autres barbares. Certains barbares racontent qu’il se battait à mains nues contre des loups pour se divertir. Il était hanté par une prophétie selon laquelle il serait tué par “des pattes blanches”. Il fut tué par des ours polaires alors qu’il explorait la toundra du Val de Bise et on l’enterra avec son armure. Malgré ses grands pouvoirs, cette armure semble assez banale.
 
 PARAMÈTRES :
 
@@ -3455,7 +3455,7 @@ Poids : 13,61 kg (30 lb)~
 @10657	= ~Falaises surplombant Maer Duaidon +3~
 //@10658	= ~Item description can remain the same; if new description is needed put it here~
 @10659	= ~Tête de Truite +2~
-@10660	= ~Cette surprenante targe d’ivoire a été taillée dans le crâne d’une truite géante. La solidité de l’os, alliée à sa grande légèreté, en fait un bouclier d’une grande efficacité. Il a été ciselé avec art, et son créateur a laissé sa marque sous la forme d’un symbole indiquant "Apsel". En raison de ses origines naturelles, ce bouclier peut être utilisé par les druides.
+@10660	= ~Cette surprenante targe d’ivoire a été taillée dans le crâne d’une truite géante. La solidité de l’os, alliée à sa grande légèreté, en fait un bouclier d’une grande efficacité. Il a été ciselé avec art, et son créateur a laissé sa marque sous la forme d’un symbole indiquant “Apsel”. En raison de ses origines naturelles, ce bouclier peut être utilisé par les druides.
 
 Cette matière peu commune fait un bruit surprenant, aussi est-il extrêmement tentant de frapper sur ce bouclier pour l’entendre résonner.
 
@@ -3467,7 +3467,7 @@ Echec des sorts profanes : 5%
 Poids : 0,91 kg (2 lb)~
 
 @10661 = ~Bouclier Cornedentelle d’Apsel +4~
-@10662 = ~Cette surprenante targe d’ivoire a été taillée dans le crâne d’une truite géante. La solidité de l’os, alliée à sa grande légèreté, en fait un bouclier d’une grande efficacité. Il a été ciselé avec art, et son créateur a laissé sa marque sous la forme d’un symbole indiquant "Apsel". En raison de ses origines naturelles, ce bouclier peut être utilisé par les druides.
+@10662 = ~Cette surprenante targe d’ivoire a été taillée dans le crâne d’une truite géante. La solidité de l’os, alliée à sa grande légèreté, en fait un bouclier d’une grande efficacité. Il a été ciselé avec art, et son créateur a laissé sa marque sous la forme d’un symbole indiquant “Apsel”. En raison de ses origines naturelles, ce bouclier peut être utilisé par les druides.
 
 Cette matière peu commune fait un bruit surprenant, aussi est-il extrêmement tentant de frapper sur ce bouclier pour l’entendre résonner.
 
@@ -3478,7 +3478,7 @@ Malus de jet d’armure : -1
 Echec des sorts profanes : 5%
 Poids : 0,91 kg (2 lb)~
 @10663 = ~Calotte du Géant Triste +3~
-@10664 = ~Cette targe un peu tordue fut à l’origine fabriquée pour servir de rotule à Gohji, un géant des pierres sourd-muet qui vivait dans les Montagnes du Couchant, il y a de nombreuses décennies de cela. De nature pacifique, Gohji évitait les ennuis chaque fois qu’il le pouvait, ne sortant de sa grotte que pour aller chercher des pierres et de quoi manger. C’est au cours de l’une de ses sorties qu’il fut surpris par un groupe de mineurs nains du clan de Brueghor, qui venait d’arriver dans la région. Avant de pouvoir lever les mains pour montrer qu’il n’était pas dangereux, Gohji eut le genou fracassé par un marteau de guerre magique. Mais alors que les Nains s’apprêtaient à l’achever, ils furent stupéfaits de le voir pleurer et ne purent se résoudre à porter le coup de grâce. Appelant un guérisseur afin de soigner Gohji, qu’ils baptisèrent instantanément le "Géant Triste", ils ramenèrent ensuite ce dernier chez lui. Au cours des semaines qui suivirent, ils le nourrirent et lui forgèrent une rotule magique qu’ils baptisèrent "Calotte du Géant Triste", lui permettant ainsi de marcher à nouveau et forgeant ainsi une amitié indéfectible entre Gohji et le clan de Brueghor.
+@10664 = ~Cette targe un peu tordue fut à l’origine fabriquée pour servir de rotule à Gohji, un géant des pierres sourd-muet qui vivait dans les Montagnes du Couchant, il y a de nombreuses décennies de cela. De nature pacifique, Gohji évitait les ennuis chaque fois qu’il le pouvait, ne sortant de sa grotte que pour aller chercher des pierres et de quoi manger. C’est au cours de l’une de ses sorties qu’il fut surpris par un groupe de mineurs nains du clan de Brueghor, qui venait d’arriver dans la région. Avant de pouvoir lever les mains pour montrer qu’il n’était pas dangereux, Gohji eut le genou fracassé par un marteau de guerre magique. Mais alors que les Nains s’apprêtaient à l’achever, ils furent stupéfaits de le voir pleurer et ne purent se résoudre à porter le coup de grâce. Appelant un guérisseur afin de soigner Gohji, qu’ils baptisèrent instantanément le “Géant Triste”, ils ramenèrent ensuite ce dernier chez lui. Au cours des semaines qui suivirent, ils le nourrirent et lui forgèrent une rotule magique qu’ils baptisèrent “Calotte du Géant Triste”, lui permettant ainsi de marcher à nouveau et forgeant ainsi une amitié indéfectible entre Gohji et le clan de Brueghor.
 
 Gohji et la plupart des nains périrent finalement au cours d’une invasion de gnolls et d’ogres dans les Montagnes du Couchant. La rotule du Géant Triste fut arrachée à sa dépouille par les gnolls du clan de l’Œil Ardent. Plus tard, elle refit surface dans le Nord entre les mains d’un marchand de Bremen qui la conserva comme une curiosité, puis fut perdue à nouveau lorsque les gobelins rasèrent la ville avant de descendre vers le sud, en direction de Targos.
 
@@ -3489,7 +3489,7 @@ Malus de jet d’armure : -1
 Echec des sorts profanes : 5%
 Poids : 1,36 kg (3 lb)~
 @10665	= ~Calotte de Gohji +5~
-@10666	= ~Cette targe un peu tordue fut à l’origine fabriquée pour servir de rotule à Gohji, un géant des pierres sourd-muet qui vivait dans les Montagnes du Couchant il y a de nombreuses décennies de cela. De nature pacifique, Gohji évitait les ennuis chaque fois qu’il le pouvait, ne sortant de sa grotte que pour aller chercher des pierres et de quoi manger. C’est au cours de l’une de ses sorties qu’il fut surpris par un groupe de mineurs nains du clan de Brueghor, qui venait d’arriver dans la région. Avant de pouvoir lever les mains pour montrer qu’il n’était pas dangereux, Gohji eut le genou fracassé par un marteau de guerre magique. Mais alors que les Nains s’apprêtaient à l’achever, ils furent stupéfaits de le voir pleurer et ne purent se résoudre à porter le coup de grâce. Appelant un guérisseur afin de soigner Gohji, qu’ils baptisèrent instantanément le "Géant Triste", ils ramenèrent ensuite ce dernier chez lui. Au cours des semaines qui suivirent, ils le nourrirent et lui forgèrent une rotule magique qu’ils baptisèrent "Calotte de Gohji", lui permettant ainsi de marcher à nouveau et forgeant ainsi une amitié indéfectible entre Gohji et le clan de Brueghor.
+@10666	= ~Cette targe un peu tordue fut à l’origine fabriquée pour servir de rotule à Gohji, un géant des pierres sourd-muet qui vivait dans les Montagnes du Couchant il y a de nombreuses décennies de cela. De nature pacifique, Gohji évitait les ennuis chaque fois qu’il le pouvait, ne sortant de sa grotte que pour aller chercher des pierres et de quoi manger. C’est au cours de l’une de ses sorties qu’il fut surpris par un groupe de mineurs nains du clan de Brueghor, qui venait d’arriver dans la région. Avant de pouvoir lever les mains pour montrer qu’il n’était pas dangereux, Gohji eut le genou fracassé par un marteau de guerre magique. Mais alors que les Nains s’apprêtaient à l’achever, ils furent stupéfaits de le voir pleurer et ne purent se résoudre à porter le coup de grâce. Appelant un guérisseur afin de soigner Gohji, qu’ils baptisèrent instantanément le “Géant Triste”, ils ramenèrent ensuite ce dernier chez lui. Au cours des semaines qui suivirent, ils le nourrirent et lui forgèrent une rotule magique qu’ils baptisèrent “Calotte de Gohji”, lui permettant ainsi de marcher à nouveau et forgeant ainsi une amitié indéfectible entre Gohji et le clan de Brueghor.
 
 Gohji et la plupart des nains périrent finalement au cours d’une invasion de gnolls et d’ogres dans les Montagnes du Couchant et la rotule du Géant Triste fut arrachée à sa dépouille par les gnolls du clan de l’Œil Ardent. Plus tard, elle refit surface dans le Nord entre les mains d’un marchand de Bremen qui la conserva comme une curiosité, puis fut perdue à nouveau lorsque les gobelins rasèrent la ville avant de descendre vers le sud, en direction de Targos.
 
@@ -3751,7 +3751,7 @@ Poids : 0,45 kg (1 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 //@10725	= ~Mot de la Fin~
-@10726	= ~Le mot "Assez !" est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux et ce d’une manière ou d’une autre. Quand on lance l’arme, ses enchantements lui permettent de trouver sa cible avec une grande facilité. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
+@10726	= ~Le mot “Assez !” est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux et ce d’une manière ou d’une autre. Quand on lance l’arme, ses enchantements lui permettent de trouver sa cible avec une grande facilité. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
 
 PARAMÈTRES :
 
@@ -3767,7 +3767,7 @@ Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 
 @10727 = ~Mot de la Fin~
-@10728 = ~Le mot "Assez !" est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux... d’une manière ou d’une autre. Quand on la lance, sa précision et les enchantements de vitesse qui l’accompagnent lui permettent d’atteindre sa cible. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
+@10728 = ~Le mot “Assez !” est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux... d’une manière ou d’une autre. Quand on la lance, sa précision et les enchantements de vitesse qui l’accompagnent lui permettent d’atteindre sa cible. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
 
 PARAMÈTRES :
 
@@ -3934,7 +3934,7 @@ Type d’arme : À une main~
 //@10749	= ~Langue de Lamie~
 //@10750	= ~Item description can remain the same; if new description is needed put it here~
 //@10751	= ~La Langue de la Lamie Noire~
-@10752	= ~Cette dague de jet à l’air menaçant appartenait autrefois à Suhailah el Khaba, une mercenaire tristement célèbre de Calimport qui se faisait appeler la Lamie Noire. Les rumeurs concernant la disparition de cette dernière abondent, et vont entre autres de "elle a fini emprisonnée sous terre par un magicien vengeur dont elle avait tué la nièce" à "elle est tombée amoureuse d’un noble de Thay et vit depuis cachée." Ce qui est sûr, c’est qu’elle n’est plus en activité depuis de longues années et que certaines de ses possessions ont été retrouvées aux quatre coins des Royaumes.
+@10752	= ~Cette dague de jet à l’air menaçant appartenait autrefois à Suhailah el Khaba, une mercenaire tristement célèbre de Calimport qui se faisait appeler la Lamie Noire. Les rumeurs concernant la disparition de cette dernière abondent, et vont entre autres de “elle a fini emprisonnée sous terre par un magicien vengeur dont elle avait tué la nièce” à “elle est tombée amoureuse d’un noble de Thay et vit depuis cachée.” Ce qui est sûr, c’est qu’elle n’est plus en activité depuis de longues années et que certaines de ses possessions ont été retrouvées aux quatre coins des Royaumes.
 
 La lame de cette dague a été forgée dans un acier noir et terne. Elle a la forme d’une longue langue au tranchant en dents de scie, son manche étant gravé pour donner l’impression qu’il est recouvert de minuscules écailles. Comme la dague enchantée revient automatiquement dans la main de son porteur après avoir touché sa cible, les dents qui ornent sa lame peuvent infliger de terrifiants dégâts. On ne compte plus les imprudents tués par la Langue de Lamie avant d’avoir pu s’approcher de Suhailah, la gorge ouverte par sa redoutable lame.
 
@@ -3952,7 +3952,7 @@ Poids : 0
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 //@10753	= ~Crochet de Sulo~
-@10754	= ~Personne ne sait d’où vient cette dague de parade magique, mais elle est devenue célèbre entre les mains du célèbre corsaire Sulo de Luskan, qui s’était autoproclamé "baron" des mers. Quand il décida de s’emparer des bijoux de la famille Leberm sur un petit navire évoluant au large de Port Llast, ses hommes et lui se retrouvèrent face à un groupe d’aventuriers expérimentés déguisés en gardes. L’un d’eux se battait comme un diable, utilisant son épée et sa dague avec une redoutable efficacité. Ce héros, dont l’histoire n’a pas retenu le nom, tua la majeure partie des hommes de Sulo et trancha la main gauche de ce dernier. Le "baron" aurait lui aussi péri si, par un caprice du destin, une flèche de baliste tirée au hasard n’avait transpercé l’aventurier qui s’apprêtait à l’achever, le projetant en mer et ne laissant derrière lui que cette belle dague de parade tourbillonnant sur le pont.
+@10754	= ~Personne ne sait d’où vient cette dague de parade magique, mais elle est devenue célèbre entre les mains du célèbre corsaire Sulo de Luskan, qui s’était autoproclamé “baron” des mers. Quand il décida de s’emparer des bijoux de la famille Leberm sur un petit navire évoluant au large de Port Llast, ses hommes et lui se retrouvèrent face à un groupe d’aventuriers expérimentés déguisés en gardes. L’un d’eux se battait comme un diable, utilisant son épée et sa dague avec une redoutable efficacité. Ce héros, dont l’histoire n’a pas retenu le nom, tua la majeure partie des hommes de Sulo et trancha la main gauche de ce dernier. Le “baron” aurait lui aussi péri si, par un caprice du destin, une flèche de baliste tirée au hasard n’avait transpercé l’aventurier qui s’apprêtait à l’achever, le projetant en mer et ne laissant derrière lui que cette belle dague de parade tourbillonnant sur le pont.
 
 Sulo se fit fixer la dague à son moignon, en lieu et place d’un crochet. Quand il fut tué neuf ans plus tard, la dague fut enterrée à ses côtés, de même qu’une grande quantité d’or et de pierres précieuses. Mais bien que sa tombe fut supposée secrète, elle fut rapidement pillée et la dague reprit bien vite du service.
 
@@ -3966,8 +3966,8 @@ Spécial :
 Poids : 0,45 kg (1 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
-//@10755	= ~Crochet du "Baron" Sulo~
-@10756	= ~Personne ne sait d’où vient cette dague de parade magique, mais elle est devenue célèbre entre les mains du célèbre corsaire Sulo de Luskan, qui s’était autoproclamé "baron" des mers. Quand il décida de s’emparer des bijoux de la famille Leberm sur un petit navire évoluant au large de Port Llast, ses hommes et lui se retrouvèrent face à un groupe d’aventuriers expérimentés déguisés en gardes. L’un d’eux se battait comme un diable, utilisant son épée et sa dague avec une redoutable efficacité. Ce héros, dont l’histoire n’a pas retenu le nom, tua la majeure partie des hommes de Sulo et trancha la main gauche de ce dernier. Le "baron" aurait lui aussi péri si, par un caprice du destin, une flèche de baliste tirée au hasard n’avait transpercé l’aventurier qui s’apprêtait à l’achever, le projetant en mer et ne laissant derrière lui que cette belle dague de parade tourbillonnant sur le pont.
+//@10755	= ~Crochet du “Baron” Sulo~
+@10756	= ~Personne ne sait d’où vient cette dague de parade magique, mais elle est devenue célèbre entre les mains du célèbre corsaire Sulo de Luskan, qui s’était autoproclamé “baron” des mers. Quand il décida de s’emparer des bijoux de la famille Leberm sur un petit navire évoluant au large de Port Llast, ses hommes et lui se retrouvèrent face à un groupe d’aventuriers expérimentés déguisés en gardes. L’un d’eux se battait comme un diable, utilisant son épée et sa dague avec une redoutable efficacité. Ce héros, dont l’histoire n’a pas retenu le nom, tua la majeure partie des hommes de Sulo et trancha la main gauche de ce dernier. Le “baron” aurait lui aussi péri si, par un caprice du destin, une flèche de baliste tirée au hasard n’avait transpercé l’aventurier qui s’apprêtait à l’achever, le projetant en mer et ne laissant derrière lui que cette belle dague de parade tourbillonnant sur le pont.
 
 Sulo se fit fixer la dague à son moignon, en lieu et place d’un crochet. Quand il fut tué neuf ans plus tard, la dague fut enterrée à ses côtés, de même qu’une grande quantité d’or et de pierres précieuses. Mais bien que sa tombe fut supposée secrète, elle fut rapidement pillée et la dague reprit bien vite du service.
 
@@ -4070,7 +4070,7 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 //@10775	= ~Épée courte réflectrice +1~
-@10776	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme "épée courte" n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
+@10776	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme “épée courte” n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
 
 PARAMÈTRES :
 
@@ -4084,7 +4084,7 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 @10777	= ~Épée courte sanglante de l’Ombre +1~
-@10778	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme "épée courte" n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
+@10778	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme “épée courte” n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
 
 PARAMÈTRES :
 
@@ -4100,7 +4100,7 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 @10779	= ~Épée courte d’Invisibilité +2~
-@10780	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme "épée courte" n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
+@10780	= ~L’épée courte est le premier type d’épée qui soit apparu. On peut la voir comme une dague dont la lame est trop longue pour être qualifiée de dague. Le terme “épée courte” n’existe normalement pas dans les classifications, mais il est utilisé pour décrire une lame à double tranchant d’environ 60 cm. La pointe de l’épée est généralement utilisée pour donner des coups d’estoc.
 
 PARAMÈTRES :
 
@@ -4166,7 +4166,7 @@ Type d’arme : À une main~
 //@10797	= ~Épée courte Rafale +3~
 //@10798	= ~Item description can remain the same; if new description is needed put it here~
 //@10799	= ~Épée courte Sanglante +4~
-@10800	= ~L’épée courte est le premier type d’épée à avoir vu le jour. Pour parler simplement, elle peut être considérée comme une dague dont la lame est trop longue pour qu’on puisse encore l’appeler dague. Le terme "épée courte" n’existe normalement pas dans la classification des épées, il n’en est pas moins passé dans l’usage pour décrire une lame à double tranchant d’environ soixante centimètres de long et dont le bout pointu la rend idéale pour piquer. La pointe de l’épée est utilisée pour donner des coups d’estoc. De multiples runes de pouvoir recouvrent la surface de cette lame.
+@10800	= ~L’épée courte est le premier type d’épée à avoir vu le jour. Pour parler simplement, elle peut être considérée comme une dague dont la lame est trop longue pour qu’on puisse encore l’appeler dague. Le terme “épée courte” n’existe normalement pas dans la classification des épées, il n’en est pas moins passé dans l’usage pour décrire une lame à double tranchant d’environ soixante centimètres de long et dont le bout pointu la rend idéale pour piquer. La pointe de l’épée est utilisée pour donner des coups d’estoc. De multiples runes de pouvoir recouvrent la surface de cette lame.
 
 PARAMÈTRES :
 
@@ -4279,7 +4279,7 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 @10813	= ~Lame de Thy Dunag +1~
-@10814	= ~"Thy-Dunag" est une expression utilisée dans divers royaumes de Kara-Tur et qui signifie "plus de respect qu’il n’en faut". Elle est gravée sur la poignée de cette épée et reste visible même lorsque la lame est rangée au fourreau. Elle aurait été offerte à un seigneur de guerre local qui souhaitait défier le shogun, mais ce dernier n’avait que mépris pour son prétendant, à tel point qu’il l’invita à sa cour et qu’il lui donna cette arme, pour l’humilier et lui rappeler la place qui était la sienne.
+@10814	= ~“Thy-Dunag” est une expression utilisée dans divers royaumes de Kara-Tur et qui signifie “plus de respect qu’il n’en faut”. Elle est gravée sur la poignée de cette épée et reste visible même lorsque la lame est rangée au fourreau. Elle aurait été offerte à un seigneur de guerre local qui souhaitait défier le shogun, mais ce dernier n’avait que mépris pour son prétendant, à tel point qu’il l’invita à sa cour et qu’il lui donna cette arme, pour l’humilier et lui rappeler la place qui était la sienne.
 
 La lame de cette épée courte a une large base mais sa pointe est très effilée. Malgré sa légèreté apparente, elle est étonnamment lourde. Elle a tendance à attirer l’œil de tous les combattants et de les distraire durant quelques instants qui leur sont parfois fatals.
 
@@ -4295,7 +4295,7 @@ Poids : 2,27 kg (5 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 @10815	= ~Honte de Thy-Dunag +3~
-@10816	= ~"Thy-Dunag" est une expression utilisée dans divers royaumes de Kara-Tur et qui signifie "plus de respect qu’il n’en faut". Elle est gravée sur la poignée de cette épée et reste visible même lorsque la lame est rangée au fourreau. Elle aurait été offerte à un seigneur de guerre local qui souhaitait défier le shogun, mais ce dernier n’avait que mépris pour son prétendant, à tel point qu’il l’invita à sa cour et qu’il lui donna cette arme, pour l’humilier et lui rappeler la place qui était la sienne.
+@10816	= ~“Thy-Dunag” est une expression utilisée dans divers royaumes de Kara-Tur et qui signifie “plus de respect qu’il n’en faut”. Elle est gravée sur la poignée de cette épée et reste visible même lorsque la lame est rangée au fourreau. Elle aurait été offerte à un seigneur de guerre local qui souhaitait défier le shogun, mais ce dernier n’avait que mépris pour son prétendant, à tel point qu’il l’invita à sa cour et qu’il lui donna cette arme, pour l’humilier et lui rappeler la place qui était la sienne.
 
 La lame de cette épée courte a une large base mais sa pointe est très effilée. Malgré sa légèreté apparente, elle est étonnamment lourde. Elle a tendance à attirer l’œil de tous les combattants et de les distraire durant quelques instants qui leur sont parfois fatals.
 
@@ -4375,7 +4375,7 @@ Les lames de lune de Séluné sont les armes favorites de ses prêtresses. Elles ne
 
 PARAMÈTRES :
 
-Dégâts : 1D8 + 2
+Dégâts : 1d8 + 2
 Enchantement : +2
 Type de dégâts : magiques
 Spécial : Dommages doublés contre les morts-vivants
@@ -4391,7 +4391,7 @@ Les lames de lune de Séluné sont les armes favorites de ses prêtresses. Elles ne
 
 PARAMÈTRES :
 
-Dégâts : 1D8 + 5
+Dégâts : 1d8 + 5
 Bonus d’attaque : +5
 Enchantement : +5
 Type de dégâts : magiques
@@ -4426,7 +4426,7 @@ Bonus d’attaque : +2
 Enchantement : +2
 Type de dégâts : Tranchants
 Spécial :
- Froid : 50% de chances d’infliger +1D6 de dégâts du froid
+ Froid : 50% de chances d’infliger +1d6 de dégâts du froid
  Corrosion : 50% de chances d’infliger +1d6 de dégâts d’acide
 Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, grande épée
@@ -4639,7 +4639,7 @@ Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, grande épée
 Type d’arme : À une main~
 //@10877	= ~Fléau de la Mort~
-@10878	= ~Delnar était un magicien timide, peu enclin à l’aventure. Il passa une grande partie de son existence à étudier, vivant avec sa mère et tentant d’apprendre à confectionner des objets magiques. Malheureusement, sa mère avait pour habitude de l’interrompre au moment le plus crucial de ses enchantements, souvent avec des résultats désastreux. "Fléau de la Mort" est une autre création ratée de Delnar.
+@10878	= ~Delnar était un magicien timide, peu enclin à l’aventure. Il passa une grande partie de son existence à étudier, vivant avec sa mère et tentant d’apprendre à confectionner des objets magiques. Malheureusement, sa mère avait pour habitude de l’interrompre au moment le plus crucial de ses enchantements, souvent avec des résultats désastreux. “Fléau de la Mort” est une autre création ratée de Delnar.
 
 Cette arme est vraiment une énigme. Au combat, elle inflige peu de dégâts, voire aucun, et se contente de soigner la cible. Mais elle ne restaure qu’un nombre dérisoire de PV, à tel point que l’effort fourni n’en vaut pas la chandelle. En tout cas, son nom vient justement de son inefficacité à combattre.
 
@@ -4707,7 +4707,7 @@ Poids : 0,45 kg (1 lb)
 Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
 //@10885	= ~Cœur de <CHARNAME>~
-@10886	= ~Vous ne savez absolument pas d’où provient cette épée de facture naine, mais vous distinguez nettement le mot "<CHARNAME>" sur sa lame. Vous êtes sûr de ne l’avoir jamais vue et pourtant elle vous semble étrangement familière lorsque vous la tenez. Elle semble assez ancienne et sa lame est ébréchée à plusieurs endroits. Un léger froid en émane. Vous vous demandez pourquoi cette épée porte votre nom.
+@10886	= ~Vous ne savez absolument pas d’où provient cette épée de facture naine, mais vous distinguez nettement le mot “<CHARNAME>” sur sa lame. Vous êtes sûr de ne l’avoir jamais vue et pourtant elle vous semble étrangement familière lorsque vous la tenez. Elle semble assez ancienne et sa lame est ébréchée à plusieurs endroits. Un léger froid en émane. Vous vous demandez pourquoi cette épée porte votre nom.
 
 PARAMÈTRES :
 
@@ -4780,18 +4780,18 @@ Spécial :
 Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, grande épée
 Type d’arme : À une main~
-//@10893	= ~"Cera Sumat," Sainte Lame~
+//@10893	= ~“Cera Sumat,” Sainte Lame~
 @10894	= ~L’épée de justice est l’arme ultime du paladin contre les forces du Mal. Même les créatures des plans inférieurs hésitent à se mesurer à un paladin équipé d’une telle arme, plus encore de cette épée bien précise. Autrefois, elle n’avait rien de particulier, jusqu’à ce qu’elle soit transformée par le courage et la foi de son possesseur.
 
-La lame de cette épée de justice dégage une lueur dorée. Les mots "Cera Sumat" sont inscrits en lettres d’or sur son manche, ce qui signifie "Les six ont été réduits au silence." Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’un enfant.
+La lame de cette épée de justice dégage une lueur dorée. Les mots “Cera Sumat” sont inscrits en lettres d’or sur son manche, ce qui signifie “Les six ont été réduits au silence.” Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’un enfant.
 
 Le duc Ehld vivait en des temps troublés où les serviteurs de Baine, particulièrement puissants, écrasaient quiconque se dressait en travers de leur chemin. Des royaumes entiers craignaient leur colère et tous ou presque préféraient fermer les yeux devant leurs exactions, car ceux qui osaient protester étaient immédiatement condamnés à mort.
 
 En ce temps, les plus terribles serviteurs de Baine étaient au nombre de six et se donnaient le nom de Disciples Perdus. Leurs pouvoirs étaient terrifiants, et seules la haine et la cupidité semblaient motiver leurs actes. Ils n’aimaient rien tant que perpétrer massacre sur massacre, et jamais ils ne faisaient couler assez de sang à leur goût.
 
-Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le "Royaume des Larmes". Après avoir animé le corps décapité du monarque pour lui faire tuer tous les gens qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
+Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le “Royaume des Larmes”. Après avoir animé le corps décapité du monarque pour lui faire tuer tous les gens qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
 
-Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent "Reine" de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
+Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent “Reine” de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
 
 Le vieux duc Ehld fut le premier à franchir les protections magiques du Royaume des Larmes pour trouver la fillette assise sur le trône de son père. Il s’agenouilla devant elle et prêta serment, jurant de toujours la servir. Il lui expliqua qu’il lui avait apporté à boire et à manger, puis s’excusa d’être arrivé aussi tard, mais il ne se déplaçait plus aussi vite que dans son jeune âge. Elle le regarda sans comprendre alors qu’il lui jurait qu’il traquerait les responsables et ferait en sorte qu’ils payent pour leurs crimes si elle le souhaitait. Après de longues minutes de silence, elle parvint enfin à le remercier.
 
@@ -4823,15 +4823,15 @@ Type d’arme : À une main~
 //@10895	= ~Lumière de Cera Sumat~
 @10896	= ~L’épée de justice est l’arme ultime du paladin contre les forces du mal. Même les créatures des plans inférieurs hésitent à se mesurer à un paladin équipé d’une telle arme, plus encore de cette épée bien précise. Autrefois, elle n’avait rien de particulier, jusqu’à ce qu’elle soit transformée par le courage et la foi de son possesseur.
 
-La lame de cette sainte épée brille d’une douce lumière dorée. Sur la garde est inscrit en lettres d’or fluides "Cera Sumat", ce qui signifie "Les six ont été réduits au silence." Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’une enfant.
+La lame de cette sainte épée brille d’une douce lumière dorée. Sur la garde est inscrit en lettres d’or fluides “Cera Sumat”, ce qui signifie “Les six ont été réduits au silence.” Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’une enfant.
 
 Le duc Ehld vivait en des temps troublés où les serviteurs de Baine, particulièrement puissants, écrasaient quiconque se dressait en travers de leur chemin. Des royaumes entiers craignaient leur colère et tous ou presque préféraient fermer les yeux devant leurs exactions, car ceux qui osaient protester étaient immédiatement condamnés à mort.
 
 En ce temps, les plus terribles serviteurs de Baine étaient au nombre de six et se donnaient le nom de Disciples Perdus. Leurs pouvoirs étaient terrifiants, et seules la haine et la cupidité semblaient motiver leurs actes. Ils n’aimaient rien tant que perpétrer massacre sur massacre, et jamais ils ne faisaient couler assez de sang à leur goût.
 
-Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le "Royaume des Larmes". Après avoir animé son cadavre décapité et l’avoir fait marcher dans les rues, tuant tous ceux qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
+Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le “Royaume des Larmes”. Après avoir animé son cadavre décapité et l’avoir fait marcher dans les rues, tuant tous ceux qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
 
-Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent "Reine" de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
+Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent “Reine” de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
 
 Le vieux duc Ehld fut le premier à franchir les protections magiques du Royaume des Larmes pour trouver la fillette assise sur le trône de son père. Il s’agenouilla devant elle et prêta serment, jurant de toujours la servir. Il lui expliqua qu’il lui avait apporté à boire et à manger, puis s’excusa d’être arrivé aussi tard, mais il ne se déplaçait plus aussi vite que dans son jeune âge. Elle le regarda sans comprendre alors qu’il lui jurait qu’il traquerait les responsables et ferait en sorte qu’ils payent pour leurs crimes si elle le souhaitait. Après de longues minutes de silence, elle parvint enfin à le remercier.
 
@@ -4995,7 +4995,7 @@ Type d’arme : À une main~
 //@10929	= ~Croc Vert~
 //@10930	= ~Si nous décidons de faire une version CdF de cet objet, nous devrions mettre sa description ici~
 @10931	= ~Fils Bâtard +2~
-@10932	= ~On prétend que Kresselack le Loup Noir, grand seigneur de guerre du Nord, aurait eu beaucoup d’enfants au cours de son long règne, et que l’un d’eux, un jeune homme maladif du nom de Thomas, se serait mis en quête de son père après la mort de sa mère, qui lui avait légué en héritage une épée de fer d’une grande laideur. Sur la lame était gravée l’inscription "Connais ta famille", et Thomas en fit sa devise. Encouragé par l’épée et la perte de sa mère, il devint déterminé à trouver Kresselack, que ce soit par besoin d’appartenance à une nouvelle famille ou pour se venger de Kresselack d’avoir abandonné sa mère, on ne sait pas.
+@10932	= ~On prétend que Kresselack le Loup Noir, grand seigneur de guerre du Nord, aurait eu beaucoup d’enfants au cours de son long règne, et que l’un d’eux, un jeune homme maladif du nom de Thomas, se serait mis en quête de son père après la mort de sa mère, qui lui avait légué en héritage une épée de fer d’une grande laideur. Sur la lame était gravée l’inscription “Connais ta famille”, et Thomas en fit sa devise. Encouragé par l’épée et la perte de sa mère, il devint déterminé à trouver Kresselack, que ce soit par besoin d’appartenance à une nouvelle famille ou pour se venger de Kresselack d’avoir abandonné sa mère, on ne sait pas.
 
 Lorsqu’il trouva le Loup Noir, Kresselack repoussa le jeune homme, affirmant que Thomas, maladif et d’apparence chétive, n’avait aucun lien de sang avec lui, puis ordonna qu’il soit battu et laissé pour mort à l’ombre du Cairn de Kelvin. Après deux jours passés dans le froid glacial, Thomas fut secouru par une tribu de barbares Uthgardt fuyant l’armée de Kresselack. Soignant l’homme pour le remettre sur pied, les barbares adoptèrent Thomas dans leur tribu, et il devint finalement l’un de leurs plus grands chasseurs. Lorsqu’il mourut de froid des années plus tard, il laissa son épée à son plus jeune fils pour l’aider à trouver sa voie dans le monde.
 
@@ -5012,7 +5012,7 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
 @10933	= ~Connais ta Famille +3~
-@10934	= ~On prétend que Kresselack le Loup noir, grand seigneur de guerre du Nord, aurait eu beaucoup d’enfants au cours de son long règne, et que l’un d’eux, un jeune homme maladif du nom de Thomas, se serait mis en quête de son père après la mort de sa mère, qui lui avait légué en héritage une épée de fer d’une grande laideur. Sur la lame était gravée l’inscription "Connais ta famille", et Thomas en fit sa devise. Encouragé par l’épée et la perte de sa mère, il devint déterminé à trouver Kresselack, que ce soit par besoin d’appartenance à une nouvelle famille ou pour se venger de Kresselack d’avoir abandonné sa mère, on ne sait pas.
+@10934	= ~On prétend que Kresselack le Loup noir, grand seigneur de guerre du Nord, aurait eu beaucoup d’enfants au cours de son long règne, et que l’un d’eux, un jeune homme maladif du nom de Thomas, se serait mis en quête de son père après la mort de sa mère, qui lui avait légué en héritage une épée de fer d’une grande laideur. Sur la lame était gravée l’inscription “Connais ta famille”, et Thomas en fit sa devise. Encouragé par l’épée et la perte de sa mère, il devint déterminé à trouver Kresselack, que ce soit par besoin d’appartenance à une nouvelle famille ou pour se venger de Kresselack d’avoir abandonné sa mère, on ne sait pas.
 
 Lorsqu’il trouva le Loup Noir, Kresselack repoussa le jeune homme, affirmant que Thomas, maladif et d’apparence chétive, n’avait aucun lien de sang avec lui, puis ordonna qu’il soit battu et laissé pour mort à l’ombre du Cairn de Kelvin. Après deux jours passés dans le froid glacial, Thomas fut secouru par une tribu de barbares Uthgardt fuyant l’armée de Kresselack. Soignant l’homme pour le remettre sur pied, les barbares adoptèrent Thomas dans leur tribu, et il devint finalement l’un de leurs plus grands chasseurs. Lorsqu’il mourut de froid des années plus tard, il laissa son épée à son plus jeune fils pour l’aider à trouver sa voie dans le monde.
 
@@ -5071,11 +5071,11 @@ Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
 
 @10939    = ~Courroux +1~
-@10940    = ~"C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix."
+@10940    = ~“C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix.”
 
-"Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour."
+“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour.”
 
- -- extrait des "Contes de Maître Pélib"
+ -- extrait des “Contes de Maître Pélib”
 
 Cette lourde épée bâtarde dépourvue d’ornements en acier gris terne est maudite, mais elle ne le montre qu’au moment où son porteur commence à combattre. C’est à ce moment que des filaments rouge sang jaillissent du manche pour se planter dans l’avant-bras du possesseur de l’arme et se nourrir de son sang, tandis que trois yeux démoniaques s’ouvrent le long de la lame et que le porteur de l’arme se sent envahi d’une terrible fureur sanguinaire.
 
@@ -5102,11 +5102,11 @@ Poids : 4,54 kg (10 lb)
 Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
 @10941    = ~Courroux sanglant +3~
-@10942    = ~"C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux sanglant, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix."
+@10942    = ~“C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux sanglant, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix.”
 
-"Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour."
+“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour.”
 
- -- extrait des "Contes de Maître Pélib"
+ -- extrait des “Contes de Maître Pélib”
 
 Cette lourde épée bâtarde dépourvue d’ornements en acier gris terne est maudite, mais elle ne le montre qu’au moment où son porteur commence à combattre. C’est à ce moment que des filaments rouge sang jaillissent du manche pour se planter dans l’avant-bras du possesseur de l’arme et se nourrir de son sang, tandis que trois yeux démoniaques s’ouvrent le long de la lame et que le porteur de l’arme se sent envahi d’une terrible fureur sanguinaire.
 
@@ -5247,7 +5247,7 @@ Type d’arme : À une main~
 //@10969    = ~Cimeterre +1~
 //@10970    = ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 @10971    = ~Serpe de Caernach +1~
-@10972    = ~L’archidruide Caernach était connu pour transporter un bon nombre d’objets enchantés, dont la plupart étaient fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, "Souffle de vie", qui faisaient pousser des fleurs et de minuscules jeunes arbres sur la terre où Caernach marchait. Pourtant, les "possessions mineures" de l’archidruide n’étaient pas à dédaigner - prenez, par exemple, sa faucille en argent, conçue pour cueillir le gui sacré et les têtes des ennemis. Cette arme inhabituelle est en réalité un croisement entre une faucille et une épée, ressemblant davantage à un cimeterre qu’à toute autre chose. La poignée en chêne et la lame en argent sont gravées de tourbillons et de motifs décoratifs.
+@10972    = ~L’archidruide Caernach était connu pour transporter un bon nombre d’objets enchantés, dont la plupart étaient fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, “Souffle de vie”, qui faisaient pousser des fleurs et de minuscules jeunes arbres sur la terre où Caernach marchait. Pourtant, les “possessions mineures” de l’archidruide n’étaient pas à dédaigner - prenez, par exemple, sa faucille en argent, conçue pour cueillir le gui sacré et les têtes des ennemis. Cette arme inhabituelle est en réalité un croisement entre une faucille et une épée, ressemblant davantage à un cimeterre qu’à toute autre chose. La poignée en chêne et la lame en argent sont gravées de tourbillons et de motifs décoratifs.
 
 PARAMÈTRES :
 
@@ -5262,7 +5262,7 @@ Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, grande épée
 Type d’arme : À une main~
 @10973    = ~Faucile d’Argent de Caernach +3~
-@10974    = ~L’archidruide Caernach était connu pour transporter un bon nombre d’objets enchantés, dont la plupart étaient fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, "Souffle de vie", qui faisaient pousser des fleurs et de minuscules jeunes arbres sur la terre où Caernach marchait. Pourtant, les "possessions mineures" de l’archidruide n’étaient pas à dédaigner - prenez, par exemple, sa faucille en argent, conçue pour cueillir le gui sacré et les têtes des ennemis. Cette arme inhabituelle est en réalité un croisement entre une faucille et une épée, ressemblant davantage à un cimeterre qu’à toute autre chose. La poignée en chêne et la lame en argent sont gravées de tourbillons et de motifs décoratifs.
+@10974    = ~L’archidruide Caernach était connu pour transporter un bon nombre d’objets enchantés, dont la plupart étaient fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, “Souffle de vie”, qui faisaient pousser des fleurs et de minuscules jeunes arbres sur la terre où Caernach marchait. Pourtant, les “possessions mineures” de l’archidruide n’étaient pas à dédaigner - prenez, par exemple, sa faucille en argent, conçue pour cueillir le gui sacré et les têtes des ennemis. Cette arme inhabituelle est en réalité un croisement entre une faucille et une épée, ressemblant davantage à un cimeterre qu’à toute autre chose. La poignée en chêne et la lame en argent sont gravées de tourbillons et de motifs décoratifs.
 
 PARAMÈTRES :
 
@@ -5471,7 +5471,7 @@ Hreidgar fut l’un des premiers à mettre son épée au service de Jerrod le chaman 
 
 Hreidgar poursuivit néanmoins sa quête et ses voyages l’auraient mené aux grandes falaises du glacier de Reghed au cours de la Saison des Pluies de Lances, puis sur la Mer des Glaces Mouvantes où il s’embarqua avec la Tribu de la Grande Baleine et combattit les esclavagistes venus du sud, jusqu’à sa destination finale, la petite bourgade de la Pointe d’Enholm, où il mit une fois de plus son épée au service des défenseurs contre les hordes de Kresselack le Loup Noir. On raconte qu’Hreidgar combattit si vaillamment que Kresselack abandonna le champ de bataille en honneur de ce fier guerrier... mais pas avant de lui avoir asséné le coup fatal qui allait mettre un terme à sa vie aventureuse.
 
-Malgré ses nombreuses blessures, Hreidgar partit alors vers le nord, parcourant plusieurs lieues avant de tomber à terre. Dans un dernier sursaut, le vieux guerrier planta sa lame dans la glace et prononça alors ce qui serait sa propre oraison funèbre. "Que les cieux se déchirent", proclama-t-il, "car mon voyage ici s’achève !"
+Malgré ses nombreuses blessures, Hreidgar partit alors vers le nord, parcourant plusieurs lieues avant de tomber à terre. Dans un dernier sursaut, le vieux guerrier planta sa lame dans la glace et prononça alors ce qui serait sa propre oraison funèbre. “Que les cieux se déchirent”, proclama-t-il, “car mon voyage ici s’achève !”
 
 Les habitants de la Pointe d’Enholm retrouvèrent son corps le lendemain, mais ne purent jamais mettre la main sur sa fameuse lame. On raconte que l’épée voyage désormais dans les cieux, montrant leur chemin à ceux qui ont un long voyage devant eux... et les guidant jusqu’à leur destination finale.
 
@@ -5530,7 +5530,7 @@ Type d’arme : À deux mains~
 //@11033	= ~Bâton de Courroux de la Nature +3~
 //@11034	= ~Si nous décidons de faire une version CdF de cet objet, nous devrions mettre sa description ici~
 //@11035	= ~Bâton de Jubilation des Pendus~
-@11036	= ~Ce bâton inquiétant de sinistre réputation est fait du bois de l’Arbre du Mort, un ancien saule noir où étaient pendus les criminels dans les environs d’un hameau oublié de Séluné. Quantité de bandits, assassins et autres gredins finirent leurs carrières suspendus à ses branches, pour le plus grand bonheur de Mordigan le fossoyeur. Ce dernier était en effet un nécromancien exerçant dans le plus secret, ravi de l’opportunité qui lui était donnée de s’adonner à son art. Enterrant les restes des pendus à proximité de l’arbre, Mordigan en appela aux forces obscures du plan négatif pour jeter un sort au saule noir. L’arbre se vit alors accorder le "droit" de se nourrir des chairs putréfiées des hommes pendus à ses branches. Les noires racines s’étendirent, pénétrant dans les cadavres fraîchement enterrés, se gavant de leurs âmes ; et les visages torturés des pendus ne tardèrent pas à apparaître sur le tronc de l’arbre noueux, au grand désarroi des villageois. Mais c’est le bâton ensorcelé que le maléfique Mordigan élabora à partir du bois du saule même qui provoqua la perte des villageois et qui se fit l’objet de la vengeance des pendus de l’Arbre du Mort.
+@11036	= ~Ce bâton inquiétant de sinistre réputation est fait du bois de l’Arbre du Mort, un ancien saule noir où étaient pendus les criminels dans les environs d’un hameau oublié de Séluné. Quantité de bandits, assassins et autres gredins finirent leurs carrières suspendus à ses branches, pour le plus grand bonheur de Mordigan le fossoyeur. Ce dernier était en effet un nécromancien exerçant dans le plus secret, ravi de l’opportunité qui lui était donnée de s’adonner à son art. Enterrant les restes des pendus à proximité de l’arbre, Mordigan en appela aux forces obscures du plan négatif pour jeter un sort au saule noir. L’arbre se vit alors accorder le “droit” de se nourrir des chairs putréfiées des hommes pendus à ses branches. Les noires racines s’étendirent, pénétrant dans les cadavres fraîchement enterrés, se gavant de leurs âmes ; et les visages torturés des pendus ne tardèrent pas à apparaître sur le tronc de l’arbre noueux, au grand désarroi des villageois. Mais c’est le bâton ensorcelé que le maléfique Mordigan élabora à partir du bois du saule même qui provoqua la perte des villageois et qui se fit l’objet de la vengeance des pendus de l’Arbre du Mort.
 
 PARAMÈTRES :
 
@@ -5544,7 +5544,7 @@ Poids : 0,91 kg (2 lb)
 Compétence : Arme courante, bâton
 Type d’arme : À deux mains~
 @11037	= ~L’Horrifiante Jubilation du Pendu~
-@11038	= ~Ce bâton inquiétant de sinistre réputation est fait du bois de l’Arbre du Mort, un ancien saule noir où étaient pendus les criminels dans les environs d’un hameau oublié de Séluné. Quantité de bandits, assassins et autres gredins finirent leurs carrières suspendus à ses branches, pour le plus grand bonheur de Mordigan le fossoyeur. Ce dernier était en effet un nécromancien exerçant dans le plus secret, ravi de l’opportunité qui lui était donnée de s’adonner à son art. Enterrant les restes des pendus à proximité de l’arbre, Mordigan en appela aux forces obscures du plan négatif pour jeter un sort au saule noir. L’arbre se vit alors accorder le "droit" de se nourrir des chairs putréfiées des hommes pendus à ses branches. Les noires racines s’étendirent, pénétrant dans les cadavres fraîchement enterrés, se gavant de leurs âmes ; et les visages torturés des pendus ne tardèrent pas à apparaître sur le tronc de l’arbre noueux, au grand désarroi des villageois. Mais c’est le bâton ensorcelé que le maléfique Mordigan élabora à partir du bois du saule même qui provoqua la perte des villageois et qui se fit l’objet de la vengeance des pendus de l’Arbre du Mort.
+@11038	= ~Ce bâton inquiétant de sinistre réputation est fait du bois de l’Arbre du Mort, un ancien saule noir où étaient pendus les criminels dans les environs d’un hameau oublié de Séluné. Quantité de bandits, assassins et autres gredins finirent leurs carrières suspendus à ses branches, pour le plus grand bonheur de Mordigan le fossoyeur. Ce dernier était en effet un nécromancien exerçant dans le plus secret, ravi de l’opportunité qui lui était donnée de s’adonner à son art. Enterrant les restes des pendus à proximité de l’arbre, Mordigan en appela aux forces obscures du plan négatif pour jeter un sort au saule noir. L’arbre se vit alors accorder le “droit” de se nourrir des chairs putréfiées des hommes pendus à ses branches. Les noires racines s’étendirent, pénétrant dans les cadavres fraîchement enterrés, se gavant de leurs âmes ; et les visages torturés des pendus ne tardèrent pas à apparaître sur le tronc de l’arbre noueux, au grand désarroi des villageois. Mais c’est le bâton ensorcelé que le maléfique Mordigan élabora à partir du bois du saule même qui provoqua la perte des villageois et qui se fit l’objet de la vengeance des pendus de l’Arbre du Mort.
 
 PARAMÈTRES :
 
@@ -5780,7 +5780,7 @@ Bonus d’attaque : +2
 Enchantement : +2
 Type de dégâts : Contondants
 Spécial :
-  Les dégâts magiques infligés par le porteur de la plupart des sources sont augmentés de 30 %.
+  Les dégâts magiques infligés par le porteur provenant de la plupart des sources sont augmentés de 30%.
 Poids : 1,81 kg (4 lb)
 Compétence : Arme courante, bâton
 Type d’arme : À deux mains~
@@ -5861,11 +5861,11 @@ Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, bâton
 Type d’arme : À une main~
 //@11091	= ~Bâton Inoffensif de Ryomaru~
-@11092	= ~Ryomaru était l’un des plus grands espions et assassins du clan Kumo de Kozakura, à Kara-Tur, et son Bâton Inoffensif est tout sauf inoffensif. La majeure partie de sa longueur creuse est constituée d’une série de compartiments contenant des poudres toxiques, des fléchettes à ressort, des chaînes lestées, des pointes saillantes, des crochets d’enchevêtrement et diverses autres armes dissimulées. Lorsqu’il est utilisé au combat, il y a toujours une chance qu’un ou plusieurs des petits "trucs" désagréables du bâton soient déclenchés contre un adversaire imprudent. Cependant, il faut faire très attention à son utilisation - l’arme peut facilement blesser un porteur occasionnel.
+@11092	= ~Ryomaru était l’un des plus grands espions et assassins du clan Kumo de Kozakura, à Kara-Tur, et son Bâton Inoffensif est tout sauf inoffensif. La majeure partie de sa longueur creuse est constituée d’une série de compartiments contenant des poudres toxiques, des fléchettes à ressort, des chaînes lestées, des pointes saillantes, des crochets d’enchevêtrement et diverses autres armes dissimulées. Lorsqu’il est utilisé au combat, il y a toujours une chance qu’un ou plusieurs des petits “trucs” désagréables du bâton soient déclenchés contre un adversaire imprudent. Cependant, il faut faire très attention à son utilisation - l’arme peut facilement blesser un porteur occasionnel.
 
-Ryomaru lui-même n’a utilisé le bâton que lors de trois missions, le confiant finalement au temple d’Hojori - une couverture pour le clan Kumo - et passant à des armes encore plus rusées et dangereuses. Lorsque le célèbre voleur "Poulet" Wu Wei - ainsi nommé pour le tatouage de faucon sur sa poitrine - cambriola le temple, les Kumo découvrirent rapidement son implication et le traquèrent jusqu’à sa patrie de Shou Lung. Wu Wei fut contraint de fuir à travers la mer pour échapper à leur colère, ce qui provoqua l’envoi de trois autres groupes d’assassins Kumo : un pour traverser l’océan oriental et retrouver Wu Wei, un deuxième pour tuer le groupe initial qui n’avait pas réussi à l’attraper à Shou Lung, et un troisième pour torturer puis exécuter tous les parents vivants de Wu Wei.
+Ryomaru lui-même n’a utilisé le bâton que lors de trois missions, le confiant finalement au temple d’Hojori - une couverture pour le clan Kumo - et passant à des armes encore plus rusées et dangereuses. Lorsque le célèbre voleur “Poulet” Wu Wei - ainsi nommé pour le tatouage de faucon sur sa poitrine - cambriola le temple, les Kumo découvrirent rapidement son implication et le traquèrent jusqu’à sa patrie de Shou Lung. Wu Wei fut contraint de fuir à travers la mer pour échapper à leur colère, ce qui provoqua l’envoi de trois autres groupes d’assassins Kumo : un pour traverser l’océan oriental et retrouver Wu Wei, un deuxième pour tuer le groupe initial qui n’avait pas réussi à l’attraper à Shou Lung, et un troisième pour torturer puis exécuter tous les parents vivants de Wu Wei.
 
-"Poulet" Wu Wei prit une retraite paisible sur la côte des Terres du Mitan occidental, dirigeant une petite boutique de tabac et ne pensant qu’occasionnellement à son père de Shou Lung, un ivrogne joueur qui avait battu à mort la mère et la sœur de Wu Wei alors qu’il n’était qu’un enfant. Lorsque les assassins Kumo ont enfin rattrapé Wu Wei, il n’y avait plus qu’une pierre tombale - le "Poulet" Audacieux avait vendu tous les trésors volés aux Kumo et était mort en vieil homme heureux.
+“Poulet” Wu Wei prit une retraite paisible sur la côte des Terres du Mitan occidental, dirigeant une petite boutique de tabac et ne pensant qu’occasionnellement à son père de Shou Lung, un ivrogne joueur qui avait battu à mort la mère et la sœur de Wu Wei alors qu’il n’était qu’un enfant. Lorsque les assassins Kumo ont enfin rattrapé Wu Wei, il n’y avait plus qu’une pierre tombale - le “Poulet” Audacieux avait vendu tous les trésors volés aux Kumo et était mort en vieil homme heureux.
 
 PARAMÈTRES :
 
@@ -5896,11 +5896,11 @@ Poids : 2,72 kg (6 lb)
 Compétence : Arme courante, bâton
 Type d’arme : À deux mains~
 
-@11094	= ~Ryomaru était l’un des plus grands espions et assassins du clan Kumo de Kozakura, à Kara-Tur, et son Bâton Inoffensif est tout sauf inoffensif. La majeure partie de sa longueur creuse est constituée d’une série de compartiments contenant des poudres toxiques, des fléchettes à ressort, des chaînes lestées, des pointes saillantes, des crochets d’enchevêtrement et diverses autres armes dissimulées. Lorsqu’il est utilisé au combat, il y a toujours une chance qu’un ou plusieurs des petits "trucs" désagréables du bâton soient déclenchés contre un adversaire imprudent. Cependant, il faut faire très attention à son utilisation - l’arme peut facilement blesser un porteur occasionnel.
+@11094	= ~Ryomaru était l’un des plus grands espions et assassins du clan Kumo de Kozakura, à Kara-Tur, et son Bâton Inoffensif est tout sauf inoffensif. La majeure partie de sa longueur creuse est constituée d’une série de compartiments contenant des poudres toxiques, des fléchettes à ressort, des chaînes lestées, des pointes saillantes, des crochets d’enchevêtrement et diverses autres armes dissimulées. Lorsqu’il est utilisé au combat, il y a toujours une chance qu’un ou plusieurs des petits “trucs” désagréables du bâton soient déclenchés contre un adversaire imprudent. Cependant, il faut faire très attention à son utilisation - l’arme peut facilement blesser un porteur occasionnel.
 
-Ryomaru lui-même n’a utilisé le bâton que lors de trois missions, le confiant finalement au temple d’Hojori - une couverture pour le clan Kumo - et passant à des armes encore plus rusées et dangereuses. Lorsque le célèbre voleur "Poulet" Wu Wei - ainsi nommé pour le tatouage de faucon sur sa poitrine - cambriola le temple, les Kumo découvrirent rapidement son implication et le traquèrent jusqu’à sa patrie de Shou Lung. Wu Wei fut contraint de fuir à travers la mer pour échapper à leur colère, ce qui provoqua l’envoi de trois autres groupes d’assassins Kumo : un pour traverser l’océan oriental et retrouver Wu Wei, un deuxième pour tuer le groupe initial qui n’avait pas réussi à l’attraper à Shou Lung, et un troisième pour torturer puis exécuter tous les parents vivants de Wu Wei.
+Ryomaru lui-même n’a utilisé le bâton que lors de trois missions, le confiant finalement au temple d’Hojori - une couverture pour le clan Kumo - et passant à des armes encore plus rusées et dangereuses. Lorsque le célèbre voleur “Poulet” Wu Wei - ainsi nommé pour le tatouage de faucon sur sa poitrine - cambriola le temple, les Kumo découvrirent rapidement son implication et le traquèrent jusqu’à sa patrie de Shou Lung. Wu Wei fut contraint de fuir à travers la mer pour échapper à leur colère, ce qui provoqua l’envoi de trois autres groupes d’assassins Kumo : un pour traverser l’océan oriental et retrouver Wu Wei, un deuxième pour tuer le groupe initial qui n’avait pas réussi à l’attraper à Shou Lung, et un troisième pour torturer puis exécuter tous les parents vivants de Wu Wei.
 
-"Poulet" Wu Wei prit une retraite paisible sur la côte des Terres du Mitan occidental, dirigeant une petite boutique de tabac et ne pensant qu’occasionnellement à son père de Shou Lung, un ivrogne joueur qui avait battu à mort la mère et la sœur de Wu Wei alors qu’il n’était qu’un enfant. Lorsque les assassins Kumo ont enfin rattrapé Wu Wei, il n’y avait plus qu’une pierre tombale - le "Poulet" Audacieux avait vendu tous les trésors volés aux Kumo et était mort en vieil homme heureux.
+“Poulet” Wu Wei prit une retraite paisible sur la côte des Terres du Mitan occidental, dirigeant une petite boutique de tabac et ne pensant qu’occasionnellement à son père de Shou Lung, un ivrogne joueur qui avait battu à mort la mère et la sœur de Wu Wei alors qu’il n’était qu’un enfant. Lorsque les assassins Kumo ont enfin rattrapé Wu Wei, il n’y avait plus qu’une pierre tombale - le “Poulet” Audacieux avait vendu tous les trésors volés aux Kumo et était mort en vieil homme heureux.
 
 PARAMÈTRES :
 
@@ -6282,7 +6282,7 @@ Lodur demanda également que l’arme soit bénie, afin qu’elle puisse faire explose
 
 La réputation d’homme coléreux qui accompagnait le prêtre et les nombreux sacs d’or qu’il avait avec lui convainquirent le forgeron nain qu’il avait contacté d’accepter la commande. Renvoyant Lodur chez lui, l’artisan lui promit l’arme dans un délai de deux mois. Il consulta aussitôt le gardien du savoir, ce qui lui permit d’apprendre qu’une telle arme existait bel et bien, et qu’elle était arrivée de Sigil, apportée par un individu habitué à se déplacer entre les plans. Le forgeron recopia fidèlement les schémas dont il disposait, ajoutant quelques runes magiques au manche de l’arme afin d’obtenir les pouvoirs requis par Lodur.
 
-Quand ce dernier vint chercher son fabuleux marteau, il se retrouva en présence d’une arme perforante, que sa religion lui interdisait d’utiliser. Fou de rage, il protesta tant et plus, avant de s’en aller sans un regard en arrière, laissant là tout son argent et son "marteau de Lucerne" qui n’avait en fait rien d’un marteau.
+Quand ce dernier vint chercher son fabuleux marteau, il se retrouva en présence d’une arme perforante, que sa religion lui interdisait d’utiliser. Fou de rage, il protesta tant et plus, avant de s’en aller sans un regard en arrière, laissant là tout son argent et son “marteau de Lucerne” qui n’avait en fait rien d’un marteau.
 
 PARAMÈTRES :
 
@@ -6306,7 +6306,7 @@ Lodur demanda également que l’arme soit bénie, afin qu’elle puisse faire explose
 
 La réputation d’homme coléreux qui accompagnait le prêtre et les nombreux sacs d’or qu’il avait avec lui convainquirent le forgeron nain qu’il avait contacté d’accepter la commande. Renvoyant Lodur chez lui, l’artisan lui promit l’arme dans un délai de deux mois. Il consulta aussitôt le gardien du savoir, ce qui lui permit d’apprendre qu’une telle arme existait bel et bien, et qu’elle était arrivée de Sigil, apportée par un individu habitué à se déplacer entre les plans. Le forgeron recopia fidèlement les schémas dont il disposait, ajoutant quelques runes magiques au manche de l’arme afin d’obtenir les pouvoirs requis par Lodur.
 
-Quand ce dernier vint chercher son fabuleux marteau, il se retrouva en présence d’une arme perforante, que sa religion lui interdisait d’utiliser. Fou de rage, il protesta tant et plus, avant de s’en aller sans un regard en arrière, laissant là tout son argent et son "marteau de Lucerne" qui n’avait en fait rien d’un marteau.
+Quand ce dernier vint chercher son fabuleux marteau, il se retrouva en présence d’une arme perforante, que sa religion lui interdisait d’utiliser. Fou de rage, il protesta tant et plus, avant de s’en aller sans un regard en arrière, laissant là tout son argent et son “marteau de Lucerne” qui n’avait en fait rien d’un marteau.
 
 PARAMÈTRES :
 
@@ -6599,7 +6599,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
 @11249	= ~Hache des  mes +3~
-@11250	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme "puise" en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
+@11250	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
 
 PARAMÈTRES :
 
@@ -6616,7 +6616,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
 @11251	= ~Voleuse d’âmes +5~
-@11252	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme "puise" en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
+@11252	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
 
 PARAMÈTRES :
 
@@ -6712,7 +6712,7 @@ Type d’arme : À une main~
 @11263	= ~Hache Hurlante +5~
 @11264	= ~On ignore l’origine de cette arme, mais on pense généralement qu’elle a été créée à la suite d’une blague d’un goût douteux. Hurleuse ressemble à une hache de lancer comme les autres, mais elle émet un terrible hurlement en filant vers sa cible. Si cette dernière est touchée, elle subit des dégâts supplémentaires de source sonique.
 
-" Hache Hurlante " n’est pas une arme subtile et ne doit jamais être envisagée pour des opérations furtives. Son seul avantage est qu’elle confère une immunité aux sorts de silence à son porteur.
+“ Hache Hurlante “ n’est pas une arme subtile et ne doit jamais être envisagée pour des opérations furtives. Son seul avantage est qu’elle confère une immunité aux sorts de silence à son porteur.
 
 PARAMÈTRES :
 
@@ -6870,9 +6870,9 @@ Type de dégâts : Tranchants
 Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
-@11287	= ~Brise-écailles +1~ //Sans le mod "Meilleurs Ennemis Raciaux" installé
+@11287	= ~Brise-écailles +1~ //Sans le mod “Meilleurs Ennemis Raciaux” installé
 //@11288	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
-//@11289	= ~Brise-écailles~ //Avec le mod "Meilleurs Ennemis Raciaux" installé
+//@11289	= ~Brise-écailles~ //Avec le mod “Meilleurs Ennemis Raciaux” installé
 @11290	= ~Cette hache d’armes à la lame d’une exceptionnelle finesse n’a rien perdu de son tranchant, même si elle est légèrement ébréchée. Elle fut forgée voici plusieurs millénaires afin de lutter contre les hordes de yuan-ti qui cherchaient à devenir maîtres du monde. Son style est très différent des haches naines ou barbares. Durant sa longue histoire, elle a tué des centaines de yuan-ti entre les mains de valeureux guerriers. Quand les yuan-ti purent enfin l’arracher à leurs adversaires humains, ils se saisirent aussitôt de l’opportunité.
 
 PARAMÈTRES :
@@ -6886,9 +6886,9 @@ Type de dégâts : Tranchants
 Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
-@11291	= ~Brise-écailles puissant +5~ //Sans le mod "Meilleurs Ennemis Raciaux" installé
+@11291	= ~Brise-écailles puissant +5~ //Sans le mod “Meilleurs Ennemis Raciaux” installé
 //@11292	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
-//@11293	= ~Brise-écailles puissant~ //Avec le mod "Meilleurs Ennemis Raciaux" installé
+//@11293	= ~Brise-écailles puissant~ //Avec le mod “Meilleurs Ennemis Raciaux” installé
 @11294	= ~Cette hache d’armes à la lame d’une exceptionnelle finesse n’a rien perdu de son tranchant, même si elle est légèrement ébréchée. Elle fut forgée voici plusieurs millénaires afin de lutter contre les hordes de yuan-ti qui cherchaient à devenir maîtres du monde. Son style est très différent des haches naines ou barbares. Durant sa longue histoire, elle a tué des centaines de yuan-ti entre les mains de valeureux guerriers. Quand les yuan-ti purent enfin l’arracher à leurs adversaires humains, ils se saisirent aussitôt de l’opportunité.
 
 PARAMÈTRES :
@@ -7160,7 +7160,7 @@ Type d’arme : À deux mains~
 //@11339	= ~La Femme du Bourreau~
 //@11340	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 //@11341	= ~Légende de la Femme du Bourreau~
-@11342	= ~Dans la ville portuaire crasseuse de Luskan, les exécutions quotidiennes permettent de rompre la monotonie de la vie dans cette cité. Cette grande hache était le seul bien du bourreau de la ville. On prétend qu’il ne s’en séparait jamais et lui donnait le nom de " Légende de la Femme du Bourreau ". Au bout de quelques années, il rencontra dans l’une des maisons de tolérance de la ville une femme complaisante qui ne semblait pas troublée par sa profession. Au cours des mois qui suivirent, il lui rendit donc de nombreuses visites. Lorsque les autorités de la ville se rendirent dans la chambre de la prostitué pour l’arrêter (il s’agissait en fait d’une voleuse accomplie), ils ne trouvèrent que le bourreau. Ce dernier fut accusé de l’avoir aidée à prendre la fuite et sa propre hache fut utilisée pour le décapiter sur la place de la ville. C’était la première fois qu’autant de personnes se pressaient pour assister à une exécution et beaucoup furent d’accord pour dire que la "Légende de la Femme du Bourreau" avait eu le dernier mot sur ces infidélités.
+@11342	= ~Dans la ville portuaire crasseuse de Luskan, les exécutions quotidiennes permettent de rompre la monotonie de la vie dans cette cité. Cette grande hache était le seul bien du bourreau de la ville. On prétend qu’il ne s’en séparait jamais et lui donnait le nom de “ Légende de la Femme du Bourreau “. Au bout de quelques années, il rencontra dans l’une des maisons de tolérance de la ville une femme complaisante qui ne semblait pas troublée par sa profession. Au cours des mois qui suivirent, il lui rendit donc de nombreuses visites. Lorsque les autorités de la ville se rendirent dans la chambre de la prostitué pour l’arrêter (il s’agissait en fait d’une voleuse accomplie), ils ne trouvèrent que le bourreau. Ce dernier fut accusé de l’avoir aidée à prendre la fuite et sa propre hache fut utilisée pour le décapiter sur la place de la ville. C’était la première fois qu’autant de personnes se pressaient pour assister à une exécution et beaucoup furent d’accord pour dire que la “Légende de la Femme du Bourreau” avait eu le dernier mot sur ces infidélités.
 
 Dégâts : 1d12 +3
 Bonus d’attaque : +3
@@ -7349,7 +7349,7 @@ Type d’arme : À une main~
 //@11381	= ~Gourdin du Givre~
 //@11382	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 @11383	= ~Brise-Crâne +3~
-@11384	= ~Brise-Crâne a été conçu par l’ogresse Shavauntea pour "l’offrir" à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à "insuffler un peu d’intelligence dans cette tête vide". Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l’improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance.
+@11384	= ~Brise-Crâne a été conçu par l’ogresse Shavauntea pour “l’offrir” à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à “insuffler un peu d’intelligence dans cette tête vide”. Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l’improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance.
 
 PARAMÈTRES :
 
@@ -7364,7 +7364,7 @@ Poids : 2,72 kg (6 lb)
 Compétence : Arme courante, masse
 Type d’arme : arme à une main~
 @11385	= ~Gourdin de Confusion +5~
-@11386	= ~Le gourdin de confusion a été conçu par l’ogresse Shavauntea pour "l’offrir" à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à "insuffler un peu d’intelligence dans cette tête vide". Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l’improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance.
+@11386	= ~Le gourdin de confusion a été conçu par l’ogresse Shavauntea pour “l’offrir” à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à “insuffler un peu d’intelligence dans cette tête vide”. Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l’improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance.
 
 PARAMÈTRES :
 
@@ -7912,7 +7912,7 @@ Type d’arme : À une main~
 //@11489	= ~Fléau +1~
 //@11490	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 @11491	= ~Fléau aux Trois Crânes +2~
-@11492	= ~Le Fléau aux Trois Crânes, également connu sous le nom de "Fléau Denté", fut élaboré en 1035 CV par le seigneur de guerre barbare Wychgar. Au cours de la fameuse bataille de la Passe Sacrée, Wychgar perdit ses trois frères qui tombèrent sous les coups de l’armée orque menée par Kraag le Fort. Il en fut si bouleversé qu’à la nuit tombée, il arpenta le champ de bataille à la recherche de leurs cadavres pour leur offrir des funérailles décentes. Il finit par les découvrir mais reçut la visite de leurs esprits, perdus entre le monde des morts et celui des vivants. Incapable de les libérer de ce fardeau, il eut recours aux services d’un chaman pour les installer dans les trois têtes d’un fléau de sa construction.
+@11492	= ~Le Fléau aux Trois Crânes, également connu sous le nom de “Fléau Denté”, fut élaboré en 1035 CV par le seigneur de guerre barbare Wychgar. Au cours de la fameuse bataille de la Passe Sacrée, Wychgar perdit ses trois frères qui tombèrent sous les coups de l’armée orque menée par Kraag le Fort. Il en fut si bouleversé qu’à la nuit tombée, il arpenta le champ de bataille à la recherche de leurs cadavres pour leur offrir des funérailles décentes. Il finit par les découvrir mais reçut la visite de leurs esprits, perdus entre le monde des morts et celui des vivants. Incapable de les libérer de ce fardeau, il eut recours aux services d’un chaman pour les installer dans les trois têtes d’un fléau de sa construction.
 
 Les trois têtes de ce fléau ne sont rien d’autre que les trois crânes de ses frères, rattachés au manche de l’arme par une chaîne d’argent. Animées d’un rictus démoniaque, elles se complaisent à mordre dans les chairs des ennemis touchés par le fléau.
 
@@ -7928,7 +7928,7 @@ Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, fléau
 Type d’arme : À une main~
 @11493	= ~Fléau aux Trois Crânes +4~ //CdF
-@11494	= ~Le Fléau aux Trois Crânes, également connu sous le nom de "Fléau Denté", fut élaboré en 1035 CV par le seigneur de guerre barbare Wychgar. Au cours de la fameuse bataille de la Passe Sacrée, Wychgar perdit ses trois frères qui tombèrent sous les coups de l’armée orque menée par Kraag le Fort. Il en fut si bouleversé qu’à la nuit tombée, il arpenta le champ de bataille à la recherche de leurs cadavres pour leur offrir des funérailles décentes. Il finit par les découvrir mais reçut la visite de leurs esprits, perdus entre le monde des morts et celui des vivants. Incapable de les libérer de ce fardeau, il eut recours aux services d’un chaman pour les installer dans les trois têtes d’un fléau de sa construction.
+@11494	= ~Le Fléau aux Trois Crânes, également connu sous le nom de “Fléau Denté”, fut élaboré en 1035 CV par le seigneur de guerre barbare Wychgar. Au cours de la fameuse bataille de la Passe Sacrée, Wychgar perdit ses trois frères qui tombèrent sous les coups de l’armée orque menée par Kraag le Fort. Il en fut si bouleversé qu’à la nuit tombée, il arpenta le champ de bataille à la recherche de leurs cadavres pour leur offrir des funérailles décentes. Il finit par les découvrir mais reçut la visite de leurs esprits, perdus entre le monde des morts et celui des vivants. Incapable de les libérer de ce fardeau, il eut recours aux services d’un chaman pour les installer dans les trois têtes d’un fléau de sa construction.
 
 Les trois têtes de ce fléau ne sont rien d’autre que les trois crânes de ses frères, rattachés au manche de l’arme par une chaîne d’argent. Animées d’un rictus démoniaque, elles se complaisent à mordre dans les chairs des ennemis touchés par le fléau.
 
@@ -8107,7 +8107,7 @@ Quelques instants plus tard, l’adolescente décharnée fit irruption dans la salle
 
 Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage... et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
 
-Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : "Dans la Justice Réside ma Force".
+Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : “Dans la Justice Réside ma Force”.
 
 PARAMÈTRES :
 
@@ -8129,7 +8129,7 @@ Quelques instants plus tard, l’adolescente décharnée fit irruption dans la salle
 
 Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage... et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
 
-Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : "Dans la Justice Réside ma Force".
+Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : “Dans la Justice Réside ma Force”.
 
 PARAMÈTRES :
 
@@ -8569,7 +8569,7 @@ Type d’arme : À une main~
 //@11599	= ~Marteau vaillant~
 @11600	= ~Marteau vaillant est une arme terrifiante, forgée dans le but de mettre à mal le moral de l’ennemi avant de défoncer son armure et son crâne. Le nom de son créateur s’est depuis longtemps perdu dans les brumes des temps, alors que les registres duergars remontent pourtant sur de nombreux millénaires. Couvert de runes inquiétantes, il arbore l’inscription suivante dans la langue des Nains d’antan, qui n’est plus désormais utilisée que par les Duergars :
 
-"Ce n’est pas la mort qu’il faut craindre, mais la peur de la mort."
+“Ce n’est pas la mort qu’il faut craindre, mais la peur de la mort.”
 
 Chaque coup de Marteau vaillant peut provoquer la terreur chez la cible, l’obligeant à s’enfuir à toutes jambes.
 
@@ -8585,9 +8585,9 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, marteau
 Type d’arme : À une main~
 //@11601	= ~Marteau Vaillant Funeste~
-@11602	= ~" Marteau vaillant funeste " est une arme terrifiante, forgée dans le but de mettre à mal le moral de l’ennemi avant de défoncer son armure et son crâne. Le nom de son créateur s’est depuis longtemps perdu dans les brumes des temps, alors que les registres duergars remontent pourtant sur de nombreux millénaires. Couvert de runes inquiétantes, il arbore l’inscription suivante dans la langue des Nains d’antan, qui n’est plus désormais utilisée que par les Duergars :
+@11602	= ~” Marteau vaillant funeste “ est une arme terrifiante, forgée dans le but de mettre à mal le moral de l’ennemi avant de défoncer son armure et son crâne. Le nom de son créateur s’est depuis longtemps perdu dans les brumes des temps, alors que les registres duergars remontent pourtant sur de nombreux millénaires. Couvert de runes inquiétantes, il arbore l’inscription suivante dans la langue des Nains d’antan, qui n’est plus désormais utilisée que par les Duergars :
 
-"Ce n’est pas la mort qu’il faut craindre, mais la peur de la mort."
+“Ce n’est pas la mort qu’il faut craindre, mais la peur de la mort.”
 
 Chaque coup de Marteau vaillant funeste peut provoquer la terreur chez la cible, l’obligeant à s’enfuir à toutes jambes.
 
@@ -8690,7 +8690,7 @@ Poids : 0
 Compétence : Arme courante, projectile
 Type d’arme : À une main~
 @11635	= ~Fléchette Merveilleuse de Zilzanzer +5~
-@11636	= ~Zilzanzer, le mage excentrique connu pour son Anneau de la Gorgone, a également créé plusieurs petites armes de jet magiques. Il vendit ses "Fléchettes Merveilleuses de Zilzanzer" à plusieurs de ses amis. Contrairement à bon nombre de ses créations, ces fléchettes avaient vraiment l’effet escompté. Il en créa un nombre assez important avant de mourir prématurément.
+@11636	= ~Zilzanzer, le mage excentrique connu pour son Anneau de la Gorgone, a également créé plusieurs petites armes de jet magiques. Il vendit ses “Fléchettes Merveilleuses de Zilzanzer” à plusieurs de ses amis. Contrairement à bon nombre de ses créations, ces fléchettes avaient vraiment l’effet escompté. Il en créa un nombre assez important avant de mourir prématurément.
 
 PARAMÈTRES :
 
@@ -9703,7 +9703,7 @@ Poids : 2,72 kg (6 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11827 = ~Réponse de Marie de Fer~
-@11828 = ~Marie de Tantras, dite "Marie de Fer", était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
+@11828 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
 
 PARAMÈTRES :
 
@@ -9717,7 +9717,7 @@ Poids : 2,27 kg (5 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11829 = ~Réponse audacieuse de Marie de Fer~
-@11830 = ~Marie de Tantras, dite "Marie de Fer", était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
+@11830 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
 
 PARAMÈTRES :
 
@@ -9950,7 +9950,7 @@ Poids : 4,54 kg (10 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11869 = ~Arbaleste de Fer +4~
-@11870 = ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme "normale". C’est pourquoi l’Arbaleste de Fer se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
+@11870 = ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste de Fer se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
 
 PARAMÈTRES :
 
@@ -9963,7 +9963,7 @@ Poids : 6,35 kg (14 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11871	= ~Arbaleste d’Adamantium +6~
-@11872	= ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme "normale". C’est pourquoi l’Arbaleste d’Adamantium se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
+@11872	= ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste d’Adamantium se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
 
 PARAMÈTRES :
 
@@ -10267,7 +10267,7 @@ Dégâts : 1d6 + 1
 Bonus d’attaque : +1
 Enchantement : +1
 Type de dégâts : Projectile (perforants)
-Spécial : +1D6 de dégâts de feu
+Spécial : +1d6 de dégâts de feu
 Poids : 0
 Arme utilisée : arc~
 //@11941	= ~Flèches de Givre +1~
@@ -10442,7 +10442,7 @@ Spécial :
 Poids : 0
 Lanceur : Arbalète~
 @11987	= ~Carreau de Silence +1~
-@11988	= ~Les érudits en magie reconnaissent assez facilement ces carreaux d’arbalète, en raison de leur fonction et des couleurs de leur décoration. La tristement célèbre "Bande de la Clef" était un groupe de combattants occultes méconnus, dont le seul but était de ne pas laisser de textes magiques maléfiques tomber entre les mains de personnes mal intentionnées. Leur bande délaissait l’arc au profit de l’arbalète, qu’ils pouvaient armer à l’avance et donc utiliser sans délai. Le chef de cette bande, un homme mince et moustachu du nom de Heglyf, commanda une grande quantité de ces carreaux à des prêtres de Déneïr.
+@11988	= ~Les érudits en magie reconnaissent assez facilement ces carreaux d’arbalète, en raison de leur fonction et des couleurs de leur décoration. La tristement célèbre “Bande de la Clef” était un groupe de combattants occultes méconnus, dont le seul but était de ne pas laisser de textes magiques maléfiques tomber entre les mains de personnes mal intentionnées. Leur bande délaissait l’arc au profit de l’arbalète, qu’ils pouvaient armer à l’avance et donc utiliser sans délai. Le chef de cette bande, un homme mince et moustachu du nom de Heglyf, commanda une grande quantité de ces carreaux à des prêtres de Déneïr.
 
 PARAMÈTRES :
 
@@ -10655,14 +10655,14 @@ PARAMÈTRES :
 Lorsqu’on le lance sur une cible, le pot en verre se brise et répand de l’huile enflammée sur tout ce qui se trouve dans un rayon de 1,50 m (5 pieds), en infligeant 10d8 points de dégâts de feu. (jet de Réflexes avec un DD de 27 pour réduire de moitié).
 Poids : 0~
 //@12047	= ~Crâne volant de Xainlaphar~
-@12048	= ~Xainlaphar était un sorcier rouge de Thay atteint de folie. Il avait l’habitude d’utiliser le crâne de ses ennemis pour fabriquer des armes. La plus connue étant le "Crâne Volant". Cet objet n’est pas très différent du sort Crâne piégé. Xainlaphar mourut en 913 CV, bien avant d’avoir utilisé ne serait-ce que la moitié de ses crânes enchantés. Ses ennemis, un paladin et un prêtre de Heaum, s’en emparèrent avec l’intention de les détruire, mais quarante de ces crânes au moins furent dérobés par des voleurs alors qu’ils faisaient route vers la Sembie.
+@12048	= ~Xainlaphar était un sorcier rouge de Thay atteint de folie. Il avait l’habitude d’utiliser le crâne de ses ennemis pour fabriquer des armes. La plus connue étant le “Crâne Volant”. Cet objet n’est pas très différent du sort Crâne piégé. Xainlaphar mourut en 913 CV, bien avant d’avoir utilisé ne serait-ce que la moitié de ses crânes enchantés. Ses ennemis, un paladin et un prêtre de Heaum, s’en emparèrent avec l’intention de les détruire, mais quarante de ces crânes au moins furent dérobés par des voleurs alors qu’ils faisaient route vers la Sembie.
 
 PARAMÈTRES :
 
 Une fois lancé, le crâne flotte au point ciblé jusqu’à ce qu’une créature s’approche, puis il explose en infligeant 10d8 points de dégâts magiques à toutes les créatures dans un rayon de 3 mètres (10 pieds) (jet de Réflexes avec un DD de 25 pour la moitié des dégâts).
 Poids : 0,45 kg (1 lb)~
 @12049	= ~Crâne détonnant de Xainlaphar~ // CdF
-@12050	= ~Xainlaphar était un sorcier rouge de Thay atteint de folie. Il avait l’habitude d’utiliser le crâne de ses ennemis pour fabriquer des armes. La plus connue étant le "Crâne détonnant". Cet objet n’est pas très différent du sort Crâne piégé. Xainlaphar mourut en 913 CV, bien avant d’avoir utilisé ne serait-ce que la moitié de ses crânes enchantés. Ses ennemis, un paladin et un prêtre de Heaum, s’en emparèrent avec l’intention de les détruire, mais quarante de ces crânes au moins furent dérobés par des voleurs alors qu’ils faisaient route vers la Sembie.
+@12050	= ~Xainlaphar était un sorcier rouge de Thay atteint de folie. Il avait l’habitude d’utiliser le crâne de ses ennemis pour fabriquer des armes. La plus connue étant le “Crâne détonnant”. Cet objet n’est pas très différent du sort Crâne piégé. Xainlaphar mourut en 913 CV, bien avant d’avoir utilisé ne serait-ce que la moitié de ses crânes enchantés. Ses ennemis, un paladin et un prêtre de Heaum, s’en emparèrent avec l’intention de les détruire, mais quarante de ces crânes au moins furent dérobés par des voleurs alors qu’ils faisaient route vers la Sembie.
 
 PARAMÈTRES :
 
@@ -10946,7 +10946,7 @@ Poids : 0,45 kg (1 lb)~
 //@12129	= ~Vents Violents~
 //@12130	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 //@12131	= ~Le Rebec de Guerre~
-@12132	= ~Le Rebec de Guerre est l’un des seuls instruments de musique acceptés au sein de l’église de Tempus. Il est la création d’un luthier halfelin du nom de Relias Noiregraine et fut moultes fois béni par les prêtres d’Arvoreen. Rélias n’eut jamais l’intention de jouer de cet instrument et le vendit à un barde nommé Gallow Deely. Gallow était un homme mince et séduisant qui fréquentait nombre d’aventuriers, non pas pour les seconder au combat mais plutôt pour chanter leurs péripéties, un art dans lequel il était passé maître. Il suivait la Compagnie des Arbres Gelés lorsque celle-ci défit un jeune dragon vert en 1013 CV et la ballade qu’il composa pour l’occasion, "Le Combat des Treize Verts", est toujours jouée dans les tavernes de l’est et du centre du continent.
+@12132	= ~Le Rebec de Guerre est l’un des seuls instruments de musique acceptés au sein de l’église de Tempus. Il est la création d’un luthier halfelin du nom de Relias Noiregraine et fut moultes fois béni par les prêtres d’Arvoreen. Rélias n’eut jamais l’intention de jouer de cet instrument et le vendit à un barde nommé Gallow Deely. Gallow était un homme mince et séduisant qui fréquentait nombre d’aventuriers, non pas pour les seconder au combat mais plutôt pour chanter leurs péripéties, un art dans lequel il était passé maître. Il suivait la Compagnie des Arbres Gelés lorsque celle-ci défit un jeune dragon vert en 1013 CV et la ballade qu’il composa pour l’occasion, “Le Combat des Treize Verts”, est toujours jouée dans les tavernes de l’est et du centre du continent.
 
 PARAMÈTRES :
 
@@ -10954,7 +10954,7 @@ Lorsque le personnage en joue, cet instrument confère un bonus de +2 aux jets d’
 
 Poids : 1,36 kg (3 lb)~
 //@12133	= ~Rebec de guerre de maître~
-@12134	= ~Le Rebec de Guerre est l’un des rares instruments approuvés par l’église de Tempus. On le doit à un luthier halfelin, Rélias Germenoir. Les prêtres d’Arvoreen le Défenseur bénirent ensuite l’instrument, lui conférant ainsi son impressionnant pouvoir magique. Rélias n’avait pas l’intention de jouer lui-même de son chef-d’œuvre, qu’il vendit à un barde nommé Gallow Deely, lequel fréquentait souvent les aventuriers. Bien que piètre combattant, Gallow était très doué pour composer des odes vantant l’héroïsme de ses compagnons. Le rebec lui permit d’aider la Compagnie des Arbres Gelés à vaincre un dragon vert en 1013 CV et il en tira un chant joyeux, la "Bataille des Treize Verts", que l’on peut entendre aujourd’hui encore dans les tavernes de l’est et du centre des Royaumes.
+@12134	= ~Le Rebec de Guerre est l’un des rares instruments approuvés par l’église de Tempus. On le doit à un luthier halfelin, Rélias Germenoir. Les prêtres d’Arvoreen le Défenseur bénirent ensuite l’instrument, lui conférant ainsi son impressionnant pouvoir magique. Rélias n’avait pas l’intention de jouer lui-même de son chef-d’œuvre, qu’il vendit à un barde nommé Gallow Deely, lequel fréquentait souvent les aventuriers. Bien que piètre combattant, Gallow était très doué pour composer des odes vantant l’héroïsme de ses compagnons. Le rebec lui permit d’aider la Compagnie des Arbres Gelés à vaincre un dragon vert en 1013 CV et il en tira un chant joyeux, la “Bataille des Treize Verts”, que l’on peut entendre aujourd’hui encore dans les tavernes de l’est et du centre des Royaumes.
 
 PARAMÈTRES :
 
@@ -11053,7 +11053,7 @@ Lorsque Relev fut tué par un groupe d’orques, Nikolai commença à se produire seu
 
 Nikolai refusa de jouer pour Tremble et ses hommes, qu’il traite de rats puants et tenta de partir la tête haute. Tremble affirma alors qu’il refusait de jouer uniquement parce qu’on le jetterait hors de l’auberge pour la médiocrité de son interprétation. Blessé dans sa fierté, Nikolai répondit qu’il était un violoniste tellement doué qu’il pourrait réveiller les morts. Prenant cette réponse pour un défi, Tremble enfonça son poignard droit dans le cœur du père de Nikolai et plusieurs villageois subirent le même sort lorsqu’ils tentèrent d’intervenir.
 
-Se tenant au-dessus du corps sans vie du père de Nikolai, il lança alors : "Qu’attend-tu maintenant petit violoniste ?" Sans dire un mot, Nikolai prit son violon et son archet et commença à jouer une mélodie qu’aucun habitant de Haut-Haspur n’avait jamais entendue… Et que plus personne n’entendrait jamais dans Féérune, d’ailleurs. Nikolai joua avec fièvre et passion. L’assistance fit plus tard remarquer qu’il ressemblait à un fou, jouant d’une manière qu’ils pensaient impossible. A l’apogée de cette œuvre frénétique, Tremble et ses hommes virent les âmes quitter les corps étendus à terre pour se ruer sur leurs assassins. Les bandits connurent une fin atroce et moururent glacés par les ombres de leurs victimes. Nikolai continua à jouer et traversa en dansant les rues et les prairies de la région avant de disparaître avec sa musique dans une vallée lointaine, entouré d’un mystérieux brouillard et de tous les hommes, femmes, enfants et animaux enterrés dans la région.
+Se tenant au-dessus du corps sans vie du père de Nikolai, il lança alors : “Qu’attend-tu maintenant petit violoniste ?” Sans dire un mot, Nikolai prit son violon et son archet et commença à jouer une mélodie qu’aucun habitant de Haut-Haspur n’avait jamais entendue… Et que plus personne n’entendrait jamais dans Féérune, d’ailleurs. Nikolai joua avec fièvre et passion. L’assistance fit plus tard remarquer qu’il ressemblait à un fou, jouant d’une manière qu’ils pensaient impossible. A l’apogée de cette œuvre frénétique, Tremble et ses hommes virent les âmes quitter les corps étendus à terre pour se ruer sur leurs assassins. Les bandits connurent une fin atroce et moururent glacés par les ombres de leurs victimes. Nikolai continua à jouer et traversa en dansant les rues et les prairies de la région avant de disparaître avec sa musique dans une vallée lointaine, entouré d’un mystérieux brouillard et de tous les hommes, femmes, enfants et animaux enterrés dans la région.
 
 La légende dit que lorsque les nuits sont brumeuses, le fantôme de Nikolai Tallow revient sur sa terre natale et joue d’un violon fantomatique, suivi par une foule de morts dansant derrière lui sous la lumière de la lune.
 
@@ -11064,13 +11064,13 @@ Utilisable une fois par jour.
 
 Poids : 1,36 kg (3 lb)~
 //@12157	= ~Violon de Tallow~
-@12158	= ~Cet instrument porte également le nom de "Violon de Tallow", mais les musiciens prononcent très rarement ce surnom. Ils pensent d’ailleurs que le nom de Nikolai Tallow porte malheur. Nikolai, fils d’un fabricant de chandelles, était né dans le Vaste, près de Haut-Haspur. Il fut en contact avec des cultures très différentes, sa région étant traversée par de nombreuses routes commerciales. Parmi les voyageurs qu’il rencontra se trouvait un musicien elfe du nom de Relev Minceruisseau. Celui-ci lui enseigna l’art de jouer du violon pendant plusieurs années, alors qu’il se trouvait dans cette région. Il savait que Nikolai était un enfant particulièrement doué, avec des doigts d’une rapidité incroyable, un esprit très vif, et se passionnant pour tout ce qui l’entourait. Il s’aperçut également que Nikolai était d’une fierté et d’une arrogance démesurées. Malgré ces défauts, il lui enseigna tout ce qu’il savait.
+@12158	= ~Cet instrument porte également le nom de “Violon de Tallow”, mais les musiciens prononcent très rarement ce surnom. Ils pensent d’ailleurs que le nom de Nikolai Tallow porte malheur. Nikolai, fils d’un fabricant de chandelles, était né dans le Vaste, près de Haut-Haspur. Il fut en contact avec des cultures très différentes, sa région étant traversée par de nombreuses routes commerciales. Parmi les voyageurs qu’il rencontra se trouvait un musicien elfe du nom de Relev Minceruisseau. Celui-ci lui enseigna l’art de jouer du violon pendant plusieurs années, alors qu’il se trouvait dans cette région. Il savait que Nikolai était un enfant particulièrement doué, avec des doigts d’une rapidité incroyable, un esprit très vif, et se passionnant pour tout ce qui l’entourait. Il s’aperçut également que Nikolai était d’une fierté et d’une arrogance démesurées. Malgré ces défauts, il lui enseigna tout ce qu’il savait.
 
 Lorsque Relev fut tué par un groupe d’orques, Nikolai commença à se produire seul dans tout le Vaste. Il voyageait beaucoup mais revenait toujours vers les pics isolés de la montagne où il avait vu le jour. Il devint célèbre dans tout le Vaste, dans la Mer de Lune et en Sembie pour son talent incroyable et ses spectacles passionnés. Tremble Ghon, un voleur de Calonte, finit par entendre parler de ce jeune virtuose. Lorsqu’il traversa le Col du Sang Elfique avec ses hommes, ils s’arrêtèrent dans l’auberge de l’Elfe en Armure et demandèrent à Nikolai qui dînait avec son père de jouer pour eux.
 
 Nikolai refusa de jouer pour Tremble et ses hommes, qu’il traite de rats puants et tenta de partir la tête haute. Tremble affirma alors qu’il refusait de jouer uniquement parce qu’on le jetterait hors de l’auberge pour la médiocrité de son interprétation. Blessé dans sa fierté, Nikolai répondit qu’il était un violoniste tellement doué qu’il pourrait réveiller les morts. Prenant cette réponse pour un défi, Tremble enfonça son poignard droit dans le cœur du père de Nikolai et plusieurs villageois subirent le même sort lorsqu’ils tentèrent d’intervenir.
 
-Se tenant au-dessus du corps sans vie du père de Nikolai, il lança alors : "Qu’attend-tu maintenant petit violoniste ?" Sans dire un mot, Nikolai prit son violon et son archet et commença à jouer une mélodie qu’aucun habitant de Haut-Haspur n’avait jamais entendue… Et que plus personne n’entendrait jamais dans Féérune, d’ailleurs. Nikolai joua avec fièvre et passion. L’assistance fit plus tard remarquer qu’il ressemblait à un fou, jouant d’une manière qu’ils pensaient impossible. A l’apogée de cette œuvre frénétique, Tremble et ses hommes virent les âmes quitter les corps étendus à terre pour se ruer sur leurs assassins. Les bandits connurent une fin atroce et moururent glacés par les ombres de leurs victimes. Nikolai continua à jouer et traversa en dansant les rues et les prairies de la région avant de disparaître avec sa musique dans une vallée lointaine, entouré d’un mystérieux brouillard et de tous les hommes, femmes, enfants et animaux enterrés dans la région.
+Se tenant au-dessus du corps sans vie du père de Nikolai, il lança alors : “Qu’attend-tu maintenant petit violoniste ?” Sans dire un mot, Nikolai prit son violon et son archet et commença à jouer une mélodie qu’aucun habitant de Haut-Haspur n’avait jamais entendue… Et que plus personne n’entendrait jamais dans Féérune, d’ailleurs. Nikolai joua avec fièvre et passion. L’assistance fit plus tard remarquer qu’il ressemblait à un fou, jouant d’une manière qu’ils pensaient impossible. A l’apogée de cette œuvre frénétique, Tremble et ses hommes virent les âmes quitter les corps étendus à terre pour se ruer sur leurs assassins. Les bandits connurent une fin atroce et moururent glacés par les ombres de leurs victimes. Nikolai continua à jouer et traversa en dansant les rues et les prairies de la région avant de disparaître avec sa musique dans une vallée lointaine, entouré d’un mystérieux brouillard et de tous les hommes, femmes, enfants et animaux enterrés dans la région.
 
 La légende dit que lorsque les nuits sont brumeuses, le fantôme de Nikolai Tallow revient sur sa terre natale et joue d’un violon fantomatique, suivi par une foule de morts dansant derrière lui sous la lumière de la lune.
 
@@ -11111,7 +11111,7 @@ Entrevoyant une solution, Aznee proposa un remède à base de fleur de Lait de Vie
 
 L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet... mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu résister à une telle activité...
 
-Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les "Flûtes du Dragon Sifflant". Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
+Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les “Flûtes du Dragon Sifflant”. Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
 
 Une fine corde de boyau de dragon relie les flûtes entre elles pour permettre à leur propriétaire de les porter autour du cou et de les avoir sous la main en cas de danger. La lanière est noircie, comme si elle avait été brûlée récemment, mais semble étonnamment solide.
 
@@ -11135,7 +11135,7 @@ Entrevoyant une solution, Aznee proposa un remède à base de fleur de Lait de Vie
 
 L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet... mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu resister à une telle activité...
 
-Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les "Flûtes du Dragon Sifflant". Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
+Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les “Flûtes du Dragon Sifflant”. Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
 
 Une fine corde de boyau de dragon relie les flûtes entre elles pour permettre à leur propriétaire de les porter autour du cou et de les avoir sous la main en cas de danger. La lanière est noircie, comme si elle avait été brûlée récemment, mais semble étonnamment solide.
 
@@ -11268,7 +11268,7 @@ Durée : 24 heures~
 //@12197	= ~Livre des Méritants~
 @12198	= ~Ce livre volumineux décrit en détail les dogmes de Tempus, le Dieu de la Guerre. Vous y trouvez les principes de l’ordre :
 
-"Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.
+“Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.
 
 Le pouvoir de ce livre s’accroît lorsqu’un prêtre de Tempus en lit des passages à voix haute. Il permet au prêtre de faire appel au pouvoir qu’il contient et de l’utiliser au nom de la guerre.
 
@@ -11280,7 +11280,7 @@ Poids : 0,45 kg (1 lb)~
 //@12199	= ~Grimoire du Seigneur des Batailles~
 @12200	= ~Ce livre volumineux décrit en détail les dogmes de Tempus, le Dieu de la Guerre. Vous y trouvez les principes de l’ordre :
 
-"Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.
+“Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.
 
 Le pouvoir de ce livre s’accroît lorsqu’un prêtre de Tempus en lit des passages à voix haute. Il permet au prêtre de faire appel au pouvoir qu’il contient et de l’utiliser au nom de la guerre.
 
@@ -11330,7 +11330,7 @@ Sort : lance une version plus puissante du sort Peau d’écorce (bonus de +6 à la 
 Sort : lance le sort Marcheur 1/jour
 Poids : 0,5~
 //@12209	= ~Comment devenir aventurier~
-@12210	= ~Ce livre incroyablement gros et lourd (c’est plus une compilation de plusieurs volumes dans une seule reliure, en fait) prétend être un manuel traitant de tout ce qui touche à "l’art de l’aventure". Ses nombreux chapitres abordent les sujets suivants :
+@12210	= ~Ce livre incroyablement gros et lourd (c’est plus une compilation de plusieurs volumes dans une seule reliure, en fait) prétend être un manuel traitant de tout ce qui touche à “l’art de l’aventure”. Ses nombreux chapitres abordent les sujets suivants :
 
  - Compagnons d’armes : loyaux compagnons ou véritables boulets ?
  - Tirer le meilleur parti de son choix de carrière
@@ -11354,7 +11354,7 @@ Poids : 0,5~
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
- - Comment accepter plus facilement le fait d’être " neutre mauvais "
+ - Comment accepter plus facilement le fait d’être “ neutre mauvais “
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
@@ -11367,7 +11367,7 @@ Spécial :
   Peut être utilisé jusqu’à six fois.
 Poids : 3,63 kg (8 lb)~
 //@12211	= ~Comment devenir aventurier (2e éd.)~
-@12212	= ~Ce livre incroyablement gros et lourd (c’est plus une compilation de plusieurs volumes dans une même reliure, en fait) prétend être un manuel traitant de tout ce qui touche à "l’art de l’aventure". Ses nombreux chapitres abordent les sujets suivants :
+@12212	= ~Ce livre incroyablement gros et lourd (c’est plus une compilation de plusieurs volumes dans une même reliure, en fait) prétend être un manuel traitant de tout ce qui touche à “l’art de l’aventure”. Ses nombreux chapitres abordent les sujets suivants :
 
  - Compagnons d’armes : loyaux compagnons ou véritables boulets ?
  - Tirer le meilleur parti de son choix de carrière
@@ -11391,7 +11391,7 @@ Poids : 3,63 kg (8 lb)~
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
- - Comment accepter plus facilement le fait d’être " neutre mauvais "
+ - Comment accepter plus facilement le fait d’être “ neutre mauvais “
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
@@ -12789,7 +12789,7 @@ Spécial :
 Poids : 0
 Lanceur : Fronde~
 @12575	= ~Fléau des Ages +5~
-@12576	= ~Ce fléau traîne une longue histoire de destructions derrière lui, qui nous ramène à ses premiers propriétaires. Les rakshasas, ces esprits vengeurs toujours à la recherche de chair humaine, se servirent de ce fléau car c’était une arme s’adaptant à toutes les situations de combat.  Ils le perdirent lors d’une chasse particulièrement difficile, et durent avoir recours à la magie pour le retrouver. Ils découvrirent que l’arme était entre les mains d’un puissant guerrier humain et la bataille qui s’ensuivit fut mémorable. Ils ne cessèrent par la suite de " perdre " cette arme pour mieux la retrouver par la suite. Les armes puissantes attirent les individus de la même trempe, et ces derniers donnent les plus belles des batailles.
+@12576	= ~Ce fléau traîne une longue histoire de destructions derrière lui, qui nous ramène à ses premiers propriétaires. Les rakshasas, ces esprits vengeurs toujours à la recherche de chair humaine, se servirent de ce fléau car c’était une arme s’adaptant à toutes les situations de combat.  Ils le perdirent lors d’une chasse particulièrement difficile, et durent avoir recours à la magie pour le retrouver. Ils découvrirent que l’arme était entre les mains d’un puissant guerrier humain et la bataille qui s’ensuivit fut mémorable. Ils ne cessèrent par la suite de “ perdre “ cette arme pour mieux la retrouver par la suite. Les armes puissantes attirent les individus de la même trempe, et ces derniers donnent les plus belles des batailles.
 
 PARAMÈTRES :
 
@@ -13844,7 +13844,7 @@ PARAMÈTRES :
 Le porteur régénère 0,5 % de ses PV maximum (arrondi à l’inférieur) chaque seconde.
 Poids : 0~
 @12785 = ~Malakar +2~
-@12786 = ~Ce katana élégant irradie d’énergie magique. Le Malakar, ou "Acier du Duel", était utilisé par un samouraï peu honorable lors de duels contre d’autres samouraïs. Comme de sa propre volonté, il fond sur l’adversaire pour dévier les attaques tranchantes. C’est l’arme idéale pour un guerrier qui se soucie autant de sa défense que de son attaque.
+@12786 = ~Ce katana élégant irradie d’énergie magique. Le Malakar, ou “Acier du Duel”, était utilisé par un samouraï peu honorable lors de duels contre d’autres samouraïs. Comme de sa propre volonté, il fond sur l’adversaire pour dévier les attaques tranchantes. C’est l’arme idéale pour un guerrier qui se soucie autant de sa défense que de son attaque.
 
 PARAMÈTRES :
 
@@ -13858,7 +13858,7 @@ Poids : 1,81 kg (4 lb)
 Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
 @12787 = ~Malakar +5~
-@12788 = ~Ce katana élégant irradie d’énergie magique. Le Malakar, ou "Acier du Duel", était utilisé par un samouraï peu honorable lors de duels contre d’autres samouraïs. Comme de sa propre volonté, il fond sur l’adversaire pour dévier les attaques tranchantes. C’est l’arme idéale pour un guerrier qui se soucie autant de sa défense que de son attaque.
+@12788 = ~Ce katana élégant irradie d’énergie magique. Le Malakar, ou “Acier du Duel”, était utilisé par un samouraï peu honorable lors de duels contre d’autres samouraïs. Comme de sa propre volonté, il fond sur l’adversaire pour dévier les attaques tranchantes. C’est l’arme idéale pour un guerrier qui se soucie autant de sa défense que de son attaque.
 
 PARAMÈTRES :
 
@@ -13953,14 +13953,14 @@ PARAMÈTRES :
 Le porteur bénéficie d’une résistance de 50 % au feu et quiconque le touche au corps à corps subit 1d6+5 points de dégâts du froid. Ces effets ne se cumulent pas avec Bouclier de feu (bleu).~
 
 @12805	= ~Bracelets de Frappe Aveuglante~
-@12806	= ~Le chevalier Wesic du Très Noble Ordre du Cœur Radieux disait souvent : "Attaquez rapidement et l’ennemi sera tellement dépassé que la bataille sera vôtre". Il a appliqué ce principe grâce à ces bracelets. Avant de s’engager dans une bataille vertueuse, il déclenchait la magie de la Frappe Aveuglante et se ruait sur son ennemi. Le plus souvent, son adversaire tombait dans les premières secondes de la bataille.
+@12806	= ~Le chevalier Wesic du Très Noble Ordre du Cœur Radieux disait souvent : “Attaquez rapidement et l’ennemi sera tellement dépassé que la bataille sera vôtre”. Il a appliqué ce principe grâce à ces bracelets. Avant de s’engager dans une bataille vertueuse, il déclenchait la magie de la Frappe Aveuglante et se ruait sur son ennemi. Le plus souvent, son adversaire tombait dans les premières secondes de la bataille.
 
 PARAMÈTRES :
 
 Sort : une fois par jour, le porteur peut gagner 10 attaques supplémentaires par round et augmenter sa vitesse de déplacement au maximum pendant 3 rounds.
 Poids : 0,45 kg (1 lb)~
 @12807	= ~Bracelets de Frappe Aveuglante~
-@12808	= ~Le chevalier Wesic du Très Noble Ordre du Cœur Radieux disait souvent : "Attaquez rapidement et l’ennemi sera tellement dépassé que la bataille sera vôtre". Il appliquait ce principe grâce à ces bracelets. Avant de s’engager dans une bataille vertueuse, il déclenchait la magie de la Frappe Aveuglante et se ruait sur son ennemi. Le plus souvent, son adversaire tombait dans les premières secondes de la bataille.
+@12808	= ~Le chevalier Wesic du Très Noble Ordre du Cœur Radieux disait souvent : “Attaquez rapidement et l’ennemi sera tellement dépassé que la bataille sera vôtre”. Il appliquait ce principe grâce à ces bracelets. Avant de s’engager dans une bataille vertueuse, il déclenchait la magie de la Frappe Aveuglante et se ruait sur son ennemi. Le plus souvent, son adversaire tombait dans les premières secondes de la bataille.
 
 PARAMÈTRES :
 
@@ -14033,7 +14033,7 @@ PARAMÈTRES :
 Régénération défensive : le porteur regagne 2d4 points de vie chaque fois qu’il subit des dégâts.
 Poids : 0,45 kg (1 lb)~
 @12827	= ~Reliance~
-@12828	= ~Ket Stillpond, un guerrier halfelin, était connu pour être quelqu’un d’intègre qui gardait toujours son sang-froid. Les bardes chantent les nombreuses fois où il faillit perdre la vie dans une complainte assez monotone qui s’intitule "Les Cent vies de Ket l’Averti". On le connaissait également pour les deux armes dont il ne se séparait jamais : une épée courte qu’il nommait le Laboureur et une dague, Reliance. On raconte que Ket ne se départait jamais de cette dague, la gardant toujours à portée de main. Elle est maudite, ce qui explique peut-être pourquoi Ket s’obstinait à ne jamais la reposer. Il fut même chassé de la cour du Cormyr pour avoir refusé de s’en séparer. A sa mort, sa famille, qui était très nombreuse, décida d’offrir la dague à l’église d’Arvoreen. Le clergé fit ensuite don de l’arme à un jeune guerrier halfelin plein de promesses qui perdit la vie en la remettant (après avoir utilisé la magie pour annuler la malédiction) lorsqu’il pénétra dans un camp qui avait l’air bien inoffensif. Ses hôtes étaient en fait des brigands qui tuèrent le malheureux sur-le-champ.
+@12828	= ~Ket Stillpond, un guerrier halfelin, était connu pour être quelqu’un d’intègre qui gardait toujours son sang-froid. Les bardes chantent les nombreuses fois où il faillit perdre la vie dans une complainte assez monotone qui s’intitule “Les Cent vies de Ket l’Averti”. On le connaissait également pour les deux armes dont il ne se séparait jamais : une épée courte qu’il nommait le Laboureur et une dague, Reliance. On raconte que Ket ne se départait jamais de cette dague, la gardant toujours à portée de main. Elle est maudite, ce qui explique peut-être pourquoi Ket s’obstinait à ne jamais la reposer. Il fut même chassé de la cour du Cormyr pour avoir refusé de s’en séparer. A sa mort, sa famille, qui était très nombreuse, décida d’offrir la dague à l’église d’Arvoreen. Le clergé fit ensuite don de l’arme à un jeune guerrier halfelin plein de promesses qui perdit la vie en la remettant (après avoir utilisé la magie pour annuler la malédiction) lorsqu’il pénétra dans un camp qui avait l’air bien inoffensif. Ses hôtes étaient en fait des brigands qui tuèrent le malheureux sur-le-champ.
 
 PARAMÈTRES :
 
@@ -14046,7 +14046,7 @@ Poids : 0,45 kg (1 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 @12829	= ~Reliance~ //CdF
-@12830	= ~Ket Stillpond, un guerrier halfelin, était connu pour être quelqu’un d’intègre qui gardait toujours son sang-froid. Les bardes chantent les nombreuses fois où il faillit perdre la vie dans une complainte assez monotone qui s’intitule "Les Cent vies de Ket l’Averti". On le connaissait également pour les deux armes dont il ne se séparait jamais : une épée courte qu’il nommait le Laboureur et une dague, Reliance. On raconte que Ket ne se départait jamais de cette dague, la gardant toujours à portée de main. Elle est maudite, ce qui explique peut-être pourquoi Ket s’obstinait à ne jamais la reposer. Il fut même chassé de la cour du Cormyr pour avoir refusé de s’en séparer. A sa mort, sa famille, qui était très nombreuse, décida d’offrir la dague à l’église d’Arvoreen. Le clergé fit ensuite don de l’arme à un jeune guerrier halfelin plein de promesses qui perdit la vie en la remettant (après avoir utilisé la magie pour annuler la malédiction) lorsqu’il pénétra dans un camp qui avait l’air bien inoffensif. Ses hôtes étaient en fait des brigands qui tuèrent le malheureux sur-le-champ.
+@12830	= ~Ket Stillpond, un guerrier halfelin, était connu pour être quelqu’un d’intègre qui gardait toujours son sang-froid. Les bardes chantent les nombreuses fois où il faillit perdre la vie dans une complainte assez monotone qui s’intitule “Les Cent vies de Ket l’Averti”. On le connaissait également pour les deux armes dont il ne se séparait jamais : une épée courte qu’il nommait le Laboureur et une dague, Reliance. On raconte que Ket ne se départait jamais de cette dague, la gardant toujours à portée de main. Elle est maudite, ce qui explique peut-être pourquoi Ket s’obstinait à ne jamais la reposer. Il fut même chassé de la cour du Cormyr pour avoir refusé de s’en séparer. A sa mort, sa famille, qui était très nombreuse, décida d’offrir la dague à l’église d’Arvoreen. Le clergé fit ensuite don de l’arme à un jeune guerrier halfelin plein de promesses qui perdit la vie en la remettant (après avoir utilisé la magie pour annuler la malédiction) lorsqu’il pénétra dans un camp qui avait l’air bien inoffensif. Ses hôtes étaient en fait des brigands qui tuèrent le malheureux sur-le-champ.
 
 PARAMÈTRES :
 
@@ -14082,14 +14082,14 @@ Poids : 9,07 kg (20 lb)~
 PARAMÈTRES :
 
 Poids : 0,45 kg (1 lb)~
-@12837	= ~Ailes Volantes~
+@12837	= ~Ailes de Vol~
 @12838	= ~Ces ailes douces et plumeuses semblent avoir été conçues dans un style céleste. Une fois fixées sur le dos d’une créature, elles confèrent à cette dernière le pouvoir de voler.
 
 PARAMÈTRES :
 
 Vol : le porteur acquiert la capacité de voler lorsqu’il est en extérieur.
 Poids : 0,45 kg (1 lb)~
-@12839	= ~Ailes Volantes~
+@12839	= ~Ailes de Vol~
 @12840	= ~Ces ailes douces et plumeuses semblent avoir été conçues dans un style céleste. Une fois fixées sur le dos d’une créature, elles confèrent à cette dernière le pouvoir de voler.
 
 PARAMÈTRES :
@@ -14119,7 +14119,7 @@ Type d’arme : À deux mains~
 @12843	= ~Bâton des mages~
 @12844	= ~~
 @12845	= ~L’Icône de Puissance +3~
-@12846	= ~Le temple de Loviatar, dans le Val des femmes en pleurs, connu sous le nom de " Flèches Noires de la Dame ", a toujours été à l’abri des intrusions des églises d’alignement bon que redoutent la plupart des autres temples du même type. Toutefois, pour défendre cette énorme bâtisse contre les espions et les agresseurs, il faut un nombre impressionnant de soldats et le chef des gardes du temple, le "Fouet de l’Obéissance", est traditionnellement armé d’une hallebarde magique, l’Icône de Puissance. Les gardes, la voyant passer lors de leurs rondes, redoublent de vigilance pour ne pas avoir à subir les foudres du Fouet. Hélas, un voleur humain originaire de la ville d’Elturel s’est un jour donné pour défi de s’emparer de l’arme. Ce voleur, dont on ignore toujours l’identité, réussit son forfait et revendit l’Icône de Puissance à l’église de Baine. Les Banites ont depuis longtemps exposé l’objet aux yeux de tous, pour rabaisser le Fouet de l’Obéissance en soulignant son incompétence. L’Icône fut finalement perdue lorsque le temple où elle était entreposée, la Chapelle d’Obsidienne, fut pillée par des Bédouins.
+@12846	= ~Le temple de Loviatar, dans le Val des femmes en pleurs, connu sous le nom de “ Flèches Noires de la Dame “, a toujours été à l’abri des intrusions des églises d’alignement bon que redoutent la plupart des autres temples du même type. Toutefois, pour défendre cette énorme bâtisse contre les espions et les agresseurs, il faut un nombre impressionnant de soldats et le chef des gardes du temple, le “Fouet de l’Obéissance”, est traditionnellement armé d’une hallebarde magique, l’Icône de Puissance. Les gardes, la voyant passer lors de leurs rondes, redoublent de vigilance pour ne pas avoir à subir les foudres du Fouet. Hélas, un voleur humain originaire de la ville d’Elturel s’est un jour donné pour défi de s’emparer de l’arme. Ce voleur, dont on ignore toujours l’identité, réussit son forfait et revendit l’Icône de Puissance à l’église de Baine. Les Banites ont depuis longtemps exposé l’objet aux yeux de tous, pour rabaisser le Fouet de l’Obéissance en soulignant son incompétence. L’Icône fut finalement perdue lorsque le temple où elle était entreposée, la Chapelle d’Obsidienne, fut pillée par des Bédouins.
 
 PARAMÈTRES :
 
@@ -14135,7 +14135,7 @@ Poids : 6,35 kg (14 lb)
 Compétence : Arme courante, arme d’hast
 Type d’arme : À deux mains~
 @12847	= ~L’Icône de la Douleur +5~
-@12848	= ~Le temple de Loviatar, dans le Val des femmes en pleurs, connu sous le nom de " Flèches Noires de la Dame ", a toujours été à l’abri des intrusions des églises d’alignement bon que redoutent la plupart des autres temples du même type. Toutefois, pour défendre cette énorme bâtisse contre les espions et les agresseurs, il faut un nombre impressionnant de soldats et le chef des gardes du temple, le "Fouet de l’Obéissance", est traditionnellement armé d’une hallebarde magique, l’Icône de la Douleur. Les gardes, la voyant passer lors de leurs rondes, redoublent de vigilance pour ne pas avoir à subir les foudres du Fouet. Hélas, un voleur humain originaire de la ville d’Elturel s’est un jour donné pour défi de s’emparer de l’arme. Ce voleur, dont on ignore toujours l’identité, réussit son forfait et revendit l’Icône de la Douleur à l’église de Baine. Les Banites ont depuis longtemps exposé l’objet aux yeux de tous, pour rabaisser le Fouet de l’Obéissance en soulignant son incompétence. L’Icône fut finalement perdue lorsque le temple où elle était entreposée, la Chapelle d’Obsidienne, fut pillée par des Bédouins.
+@12848	= ~Le temple de Loviatar, dans le Val des femmes en pleurs, connu sous le nom de “ Flèches Noires de la Dame “, a toujours été à l’abri des intrusions des églises d’alignement bon que redoutent la plupart des autres temples du même type. Toutefois, pour défendre cette énorme bâtisse contre les espions et les agresseurs, il faut un nombre impressionnant de soldats et le chef des gardes du temple, le “Fouet de l’Obéissance”, est traditionnellement armé d’une hallebarde magique, l’Icône de la Douleur. Les gardes, la voyant passer lors de leurs rondes, redoublent de vigilance pour ne pas avoir à subir les foudres du Fouet. Hélas, un voleur humain originaire de la ville d’Elturel s’est un jour donné pour défi de s’emparer de l’arme. Ce voleur, dont on ignore toujours l’identité, réussit son forfait et revendit l’Icône de la Douleur à l’église de Baine. Les Banites ont depuis longtemps exposé l’objet aux yeux de tous, pour rabaisser le Fouet de l’Obéissance en soulignant son incompétence. L’Icône fut finalement perdue lorsque le temple où elle était entreposée, la Chapelle d’Obsidienne, fut pillée par des Bédouins.
 
 PARAMÈTRES :
 
