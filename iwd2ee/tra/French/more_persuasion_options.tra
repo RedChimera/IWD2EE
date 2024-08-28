@@ -242,7 +242,7 @@
 @6241 = ~Parfois, la meilleure vision des choses est celle d’un étranger. Vous avez tous tellement travaillé sur ce projet que vous ne pouvez plus rien y voir. Moi, j’étais nouveau. J’ai pu voir ce qui vous échappait.~
 @6242 = ~Je… je ne suis pas une ensorceleuse inculte utilisant la magie sans connaître son fonctionnement ! J’ai passé autant d’années à étudier la magie que n’importe quel mage.~
 @6243 = ~Peut-être. Mais il m’a suffit que vous commettiez cette erreur *une seule fois* pour que je puisse en profiter. Maintenant que j’ai modifié l’architecture sous-jacente, les dysfonctionnements vont désintégrer le mythal dans une spirale de mort rapide. Et comme vous avez bêtement lié votre essence au mythal, il va vous absorber dès qu’il commencera à faillir. Il ne vous reste que quelques heures avant que toute la tour ne s’effondre. Ou plutôt – *claquement de doigts* - quelques minutes.~
-@6244 = ~Vous prétendez avoir saboté tout un mythal tout seul ? Sans vous faire repérer ?~
+@6244 = ~Vous prétendez avoir saboté tout un mythal <TOUT_SEUL> ? Sans vous faire repérer ?~
 @6245 = ~Ca vous impressionne ?~
 @6246 = ~Vous seriez surpris de ce que je peux accomplir.~
 @6247 = ~Nous avons travaillé dur pendant de nombreuses années pour mettre sur pied cette Légion. Nous avons étendu nos alliances, nos réseaux et nos richesses bien au-delà des Dix-Cités. Nous sommes partis de zéro, mais aujourd’hui, nous représentons la plus grande force de la région. Nous avons déjà réalisé tous ces objectifs. Quant à la mise en esclavage… eh bien, ce sont les esclaves qui ont rebâti la Main Tranchée, non ?~
@@ -256,7 +256,7 @@
 @6255 = ~Vous, les mercenaires, ne comprenez rien aux épreuves que nous avons traversées ! de ce qu’on a dû surmonter ! Vous ne savez rien de la passion, de la frustration… non, de la FUREUR des rebuts de votre “civilisation” ! Des nations entières attendent un monde qui serait le leur, un foyer qui les accueillerait ! Nous SOMMES ce foyer ! Nous SOMMES cette nation ! La Légion de la Chimère n’est pas qu’une bande de sang-mêlés fuyant la race humaine… nous sommes un RÊVE ! Le rêve de sécurité, d’indépendance, de *liberté* pour ceux que vous avez opprimés pendant des siècles !~
 @6256 = ~La passion n’a jamais gagné une guerre, Isair. Les guerres ne se gagnent que par la force. Votre “rêve”, ce n’est qu’un concept ; les armées, c’est la réalité. Une poignée de mercenaires a suffi à retourner vos troupes les unes contre les autres et à les mener à la défaite. Nous ne sommes pourtant qu’une fraction de l’armée que vous espérez détruire. Même après tous vos efforts, les Dix-Cités sont toujours debout, et même si vous les conquissiez, les nations du Sud finiraient par s’unir pour vous écraser avant que vous n’ayez pu vous étendre davantage.~
 @6257 = ~Un rêve ne suffit pas, Isair. Vous aurez besoin de bien plus que de grands idéaux pour gagner une guerre.~
-@6258 = ~Est-ce là votre vision de la justice, mercenaire ? Le droit du plus fort, les puissants dominant les faibles ? Nous ne pouvons pas ACCEPTER ce genre de “justice” ! Nous n’accepterons pas d’être opprimés ! Nous avons un but, un nouvel ordre, un nouveau monde pour corriger les erreurs du passé ! Vous n’êtes que le gardien d’un monde injuste… Vous *n’essayez* même pas de justifier les actions de vos semblables !~
+@6258 = ~Est-ce là votre vision de la justice, mercenaire ? Le droit du plus fort, les puissants dominant les faibles ? Nous ne pouvons pas ACCEPTER ce genre de “justice” ! Nous n’accepterons pas d’être opprimés ! Nous avons un but, un nouvel ordre, un nouveau monde pour corriger les erreurs du passé ! Vous n’êtes que <LE_GARDIEN> d’un monde injuste… Vous *n’essayez* même pas de justifier les actions de vos semblables !~
 @6259 = ~Je n’ai pas besoin de le faire, Isair. Votre empire est en train de s’écrouler. La Légion n’est que le produit de vos rêves personnels, et tout le monde se sert à votre table en attendant de trouver mieux. Vous pouvez crier tant que vous le voudrez, vos passions ne comptent pour rien dans ce monde. Elles n’ont jamais compté. Tout ce que vous avez construit est en train de s’effondrer, tout le monde vous abandonne, et vous n’intéressez personne.~
 @6260 = ~Même si nous nous installions sur une île lointaine, notre “sécurité” ne durerait guère. Lorsque notre nation deviendrait prospère et puissante, l’humanité verrait un profit dans notre destruction et enverrait des pirates et des voleurs pour nous piller jusqu’à ce que nous soyons assez faibles pour être conquis. Nous ne pouvons pas survivre en comptant sur la bonne volonté de l’humanité.~
 @6261 = ~Je ne suis pas d’accord avec votre raisonnement. Vous dites que la Légion n’aurait aucune chance de survivre sur une île, en indépendance, même après plusieurs décennies… et pourtant vous prétendez qu’elle *est* assez forte pour conquérir les Dix-Cités aujourd’hui, *sans* avoir bénéficié de trente années de paix dans l’indépendance.~
@@ -294,7 +294,7 @@
 @6293 = ~Alors, éclairez-moi. Pourquoi la vie d’Isair et de Madae est-elle si difficile ?~
 @6294 = ~Ils n’avaient pas d’autre choix que d’accepter votre aide. Vous auraient-ils traités de la même manière s’ils n’étaient pas attaqués ?~
 @6295 = ~Vous semblez avoir du mal à le comprendre. C’est si difficile à croire ? Il est vrai que certains m’ont dévisagé au début, mais lorsqu’ils ont compris que je n’étais pas leur ennemi, personne ne m’a causé d’ennuis.~
-@6296 = ~Ils m’ont traité de la même manière après l’attaque. Une fois les gobelins disparus, j’ai pu me promener en ville sans être harcelé.  Personne ne s’est retourné contre moi.~
+@6296 = ~Ils m’ont <TRAITE> de la même manière après l’attaque. Une fois les gobelins disparus, j’ai pu me promener en ville sans être <HARCELE>.  Personne ne s’est retourné contre moi.~
 @6297 = ~Targos n’est pas le seul endroit où je suis allé, Isair. J’ai rencontré un grand nombre d’humains et je ne me suis pas encore fait brûler sur un bûcher.~
 @6298 = ~Alors, vous êtes un cas à part. Ma sœur et moi n’avons pas reçu un aussi bon accueil. La première fois que les humains ont posé leurs yeux sur *nous*, ils ont essayé de nous tuer.~
 @6299 = ~Je connais l’histoire. Les humains ne vous ont pas attaqués à cause de votre apparence, mais parce que vous étiez debout à côté d’un cadavre d’une humaine.~
@@ -369,10 +369,10 @@
 @6368 = ~Vous ne pouvez pas répondre à ma question ! Vous êtes incapable de nommer une seule chose que vous avez accomplie ! La Légion de la Chimère ne vise pas à libérer qui que ce soit. La Légion n’est qu’une imposture pour vous rendre plus puissant.~
 @6369 = ~Alors je ne puis que remettre en question votre intelligence. Seul un imbécile ne comprendrait pas ce que l’humanité pense réellement de votre existence.~
 @6370 = ~Il est vrai que j’ai connu l’intolérance à cause de ma race, mais ce n’est pas pour autant la nature véritable de l’humanité.~
-@6371 = ~Madae, je suis le héros de Targos. Lorsqu’ils m’ont vu débarquer sur les quais, ils ne m’ont pas refoulé et ils ne m’ont pas attaqué. Ils m’ont accueilli, en dépit de la couleur de ma peau.~
-@6372 = ~Madae, je suis le héros de Targos. Lorsqu’ils m’ont vu débarquer sur les quais, ils ne m’ont pas attaqué, même s’ils avaient déjà combattu de nombreux orques avant moi. Ils m’ont invité à lutter contre les gobelins.~
-@6373 = ~Madae, je suis le héros de Targos. Ils n’ont pas rejeté mon héritage ; ils m’ont accepté pour mes compétences.~
-@6374 = ~Je sais ce qu’il s’est passé lorsque vous êtes arrivé à Targos. Vous êtes arrivé en plein milieu d’une invasion de gobelins et ils vous ont laissé combattre par pur désespoir.~
+@6371 = ~Madae, je suis <LE_HEROS> de Targos. Lorsqu’ils m’ont <VU> débarquer sur les quais, ils ne m’ont pas <REFOULE> et ils ne m’ont pas <ATTAQUE>. Ils m’ont <ACCUEILLI>, en dépit de la couleur de ma peau.~
+@6372 = ~Madae, je suis <LE_HEROS> de Targos. Lorsqu’ils m’ont <VU> débarquer sur les quais, ils ne m’ont pas <ATTAQUE>, même s’ils avaient déjà combattu de nombreux orques avant moi. Ils m’ont <INVITE> à lutter contre les gobelins.~
+@6373 = ~Madae, je suis <LE_HEROS> de Targos. Ils n’ont pas rejeté mon héritage ; ils m’ont <ACCEPTE> pour mes compétences.~
+@6374 = ~Je sais ce qu’il s’est passé lorsque vous êtes <ARRIVE> à Targos. Vous êtes <ARRIVE> en plein milieu d’une invasion de gobelins et ils vous ont laissé combattre par pur désespoir.~
 @6375 = ~Nous étions en train d’enterrer notre mère adoptive, mercenaire. J’accomplissais le rite lorsque ces villageois nous ont attaqués.~
 @6376 = ~Je sais. Mère Egénie, prêtresse d’Ilmater. C’était votre dieu avant la mort de votre mère, Madae.~
 @6377 = ~Pouvez-vous les en blâmer ? Ils ne savaient pas ce qui s’était passé et pouvaient très bien croire que vous l’aviez tuée.~
@@ -383,7 +383,7 @@
 @6382 = ~Elle était encore là ? Après notre départ ?~
 @6383 = ~Elle craignait qu’il vous soit arrivé un grand malheur. Elle ne pouvait trouver le repos tant qu’elle ignorait votre sort.~
 @6384 = ~Qu’est-ce qu’elle vous a dit ?~
-@6385 = ~“Soyez fort lorsque viendra le moment de livrer votre dernier combat et vous l’emporterez.”~
+@6385 = ~“Soyez <FORT> lorsque viendra le moment de livrer votre dernier combat et vous l’emporterez.”~
 @6386 = ~Que voulez-vous dire ?~
 @6387 = ~Eh bien, c’était une prêtresse d’Ilmater, Madae. Le dieu du martyr… de ceux qui résistent à la violence.~
 @6388 = ~Parler avec nous ?~
@@ -393,12 +393,12 @@
 @6392 = ~Oui. Je le crois, oui.~
 @6393 = ~Isair ? Je… argh…~
 @6394 = ~Nous avons déjà rencontré des personnes comme vous. Des personnes crédules qui refusent de voir le poignard pressé contre leur gorge.~
-@6395 = ~Pourquoi ce mercenaire se permet-il de nous faire la leçon sur l’endroit où nous devrions établir nos foyers ?~
+@6395 = ~Pourquoi <CE> mercenaire se permet-<IL> de nous faire la leçon sur l’endroit où nous devrions établir nos foyers ?~
 @6396 = ~Avant que nous n’arrivions ici, la Main Tranchée n’était que ruine. Elle était infestée d’esprits en colère. Pourquoi devrions-nous nous contenter de vivre dans les cimetières des humains ?~
 @6397 = ~Et pourquoi suivrions-nous vos conseils, mercenaire ? Vous n’avez cessé de saboter nos efforts pendant des semaines.~
 @6398 = ~Je vous aurais conseillé la même chose il y a longtemps, si j’en avais eu la possibilité. C’est la première fois que je parviens à vous parler. J’ai réfléchi à cette conversation depuis que j’ai entendu vos noms pour la première fois. Je ne suis pas ici pour détruire la Légion ; je suis ici pour protéger les Dix-Cités. Si cela signifie donner un nouveau foyer à la Légion, cela m’est égal.~
 @6399 = ~… Si seulement c’était aussi simple.~
-@6400 = ~Un mercenaire naïf. Je n’aurais jamais cru une telle chose possible.~
+@6400 = ~<UN> mercenaire <NAIF>. Je n’aurais jamais cru une telle chose possible.~
 @6401 = ~Je partage votre avis. Finissons-en. Au revoir, mercenaires.~
 @6402 = ~Vous êtes de retour. J’imagine qu’il va falloir que vous repartiez bientôt. On a signalé des gobelins près de la Palissade, et je ne sais pas combien de temps nous…~
 @6403 = ~J’ai entendu parler de ce que vous avez fait à la forteresse. Je doute de la fiabilité de ce marché, mais au moins, vous nous avez donné un peu de répit.~
