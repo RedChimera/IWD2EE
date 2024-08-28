@@ -305,18 +305,18 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40005=~Pourquoi ne pas venir avec nous? On t’offrira une bière - si tu ne nous avais pas prévenus des gobelins, on aurait pu être pris par surprise.~
 @40006=~Oui, je pense que je peux me battre. J’ai perdu ma lance, mais au moins je peux bouger mon bras à nouveau. Si on arrive à mettre fin à ces foutus gobelins, on devrait aller en informer Ulbrec en ville.~
 @40007=~Très bien. Allons-y.~
-@40008=~Gardez un œil sur les archers gobelins si vous ne voulez pas finir comme Brohn. Gardez l’œil ouvert et restez silencieux... Les gobelins ont l’avantage du nombre, et nous ne pouvons pas nous permettre d’être encerclés.~
+@40008=~Gardez un œil sur les archers gobelins si vous ne voulez pas finir comme Brohn. Gardez l’œil ouvert et restez sile…eux... Les gobelins ont l’avantage du nombre, et nous ne pouvons pas nous permettre d’être encerclés.~
 @40009=~Compris.~
 @40010=~Je vous remercie, mais la bière peut attendre. Allons informer Ulbrec. Il doit savoir ce qui s’est passé ici.~
 @40011=~Très bien. Allons-y.~
 @40012=~Si vous savez quelque chose de l’avenir, peut-être pourriez-vous venir avec nous. C’est toujours bien d’avoir une autre tête et une autre paire d’yeux, surtout quelqu’un qui ne mourra pas d’une simple flèche perdue.~
-@40013=~Attendez... Vous pourriez encore nous aider. Si le danger se trouve devant nous, nous pourrions utiliser quelqu’un qui ne mourra pas aussi facilement que nous autres.~
+@40013=~Attendez… Vous pourriez encore nous aider. Si le danger se trouve devant nous, nous pourrions utiliser quelqu’un qui ne mourra pas aussi facilement que nous autres.~
 @40014=~Peut-être pourriez-vous venir avec nous. C’est toujours bien d’avoir une autre tête et une autre paire d’yeux, surtout quelqu’un qui ne mourra pas d’une simple flèche perdue.~
 @40015=~- Je ne suis pas immortelle -
    - Cette forme est moins que l’air -
      	- Mais si je quitte cet endroit, je peux être détruite comme n’importe qui d’autre -~
 @40016=~Alors je vous fais mes adieux, Veira. J’espère que vous pourrez trouver la paix.~
-@40017=~Je crains que nous ayons besoin de toutes les mains que nous pouvons obtenir. Si cette... chimère... est aussi dangereuse que vous le dites, nous pourrions utiliser votre aide.~
+@40017=~Je crains que nous ayons besoin de toutes les mains que nous pouvons obtenir. Si cette… chimè….. est aussi dangereuse que vous le dites, nous pourrions utiliser votre aide.~
 @40018=~- Alors allez-y, et je vous suivrai -
    - Je vous aiderai tant que cette forme persistera -
      	- Jusqu’à ce que l’ombre soit bannie de notre avenir -~
@@ -335,7 +335,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40031=~Une façon étrange de le dire, mais je ne suis pas étranger au combat. Je ferai tout ce qu’il faut pour assurer la sécurité de ces villageois.~
 @40032=~Oui. Ce serait mal de ma part de rester ici et d’ignorer leur sort, même si je n’ai pas mon épée de lune. Je voyagerai avec vous.~
 @40033=~Très bien. Même sans mon épée de lune, je peux me battre. Allons-y.~
-@40034=~Tu es revenu. Comment puis-je... est-ce le troll qui a volé mon épée?~
+@40034=~Tu es revenu. Comment puis-je… est-ce le troll qui a volé mon épée?~
 @40035=~Nous avions besoin de l’aide du troll pour affronter la horde. Je suis désolé, mais la condition de Vrek était que nous ne pouvions pas lui remettre l’épée. L’épée est une menace pour lui et nous ne pouvons pas la lui abandonner.~
 @40036=~Désolé, Emma, mais nous avons un allié plus puissant à portée de main. Nous ne pouvons pas te donner l’épée. Vrek la considère comme une menace.~
 @40037=~Tu as échangé mon épée de lune contre la loyauté d’un *troll* ? Rends-moi mon épée, cochon, ou je la prendrai de force!~
@@ -343,12 +343,12 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40039=~J’aimerais bien te voir essayer. Vrek, on y va?~
 @40040=~Je ne peux pas te vaincre maintenant, mais je reviendrai avec des alliés!~
 @40041=~Tu ne nous échapperas pas, prêtresse!~
-@40042=~C’est assez intelligent, Vrek. Tu as créé ton propre petit royaume, mis en place un approvisionnement alimentaire, éliminé une menace importante... Tu es un troll très intelligent.~
+@40042=~C’est assez intelligent, Vrek. Tu as créé ton propre petit royaume, mis en place un approvisionnement alimentaire, éliminé une menace …ortante... Tu es un troll très intelligent.~
 @40043=~Vrek pense souvent. Vrek voit des choses que l’orc ne voit pas. Orc ne sait pas ce que Vrek sait.~
 @40044=~Que vois-tu que les orcs ne voient pas?~
 @40045=~Emma n’est pas la seule à avoir une arme magique. Il existe des armes comme la sienne dans tout Faerun - et si un autre humain arrive avec une épée magique?~
 @40046=~Orc n’a pas de plan. Seul Vrek a un plan. Vrek a rassemblé les pièces. Maintenant, Vrek contrôle l’orc, l’humain et le monde.~
-@40047=~Plus maintenant, Vrek. Je vais mettre fin à ton petit "royaume".~
+@40047=~Plus maintenant, Vrek. Je vais mettre fin à ton petit “royaume”.~
 @40048=~Le monde a beaucoup plus à offrir que quelques humains. Tu n’as pas d’ambitions plus élevées? L’or, le pouvoir, une armée? Un troll intelligent pourrait faire beaucoup plus que cela.~
 @40049=~Tu ne contrôles pas encore le monde entier. L’épée d’Emma n’est pas la seule qui puisse te faire du mal.~
 @40050=~Vrek ne mange pas d’or. Vrek mange de la viande. La viande humaine est la meilleure.~
@@ -363,16 +363,16 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40059=~Ce n’est pas ce qui va se passer. Je mets fin à cette opération.~
 @40060=~Et si tu ne le vois pas venir? Et si la prochaine lame est cachée? Tu as besoin d’autres personnes pour t’aider à les trouver. Des gens comme nous.~
 @40061=~Vrek ne fait pas confiance aux humains. Les humains détestent Vrek.~
-@40062=~J’ai besoin d’aide pour combattre la horde de gobelins, et je prendrai toute l’aide que je peux obtenir, même d’un troll. Si tu m’aides à tuer les orcs au pont, je t’aiderai à rechercher des armes magiques comme celle d’Emma... Tu peux même obtenir une part de notre or.~
-@40063=~Je ne suis pas un humain, mais j’ai besoin d’aide pour combattre la horde de gobelins, et je prendrai toute l’aide que je peux obtenir, même d’un troll. Si tu m’aides à tuer les orcs au pont, je t’aiderai à rechercher des armes magiques comme celle d’Emma... Tu peux même obtenir une part de notre or.~
+@40062=~J’ai besoin d’aide pour combattre la horde de gobelins, et je prendrai toute l’aide que je peux obtenir, même d’un troll. Si tu m’aides à tuer les orcs au pont, je t’aiderai à rechercher des armes magiques …me celle d’Emma... Tu peux même obtenir une part de notre or.~
+@40063=~Je ne suis pas un humain, mais j’ai besoin d’aide pour combattre la horde de gobelins, et je prendrai toute l’aide que je peux obtenir, même d’un troll. Si tu m’aides à tuer les orcs au pont, je t’aiderai à rechercher des armes magiques …me celle d’Emma... Tu peux même obtenir une part de notre or.~
 @40064=~Vrek ne mange pas d’or. Vrek a déjà de la nourriture et une lame de guérisseur.~
 @40065=~Alors, il est impossible de raisonner avec toi. Ton règne prend fin ici, Vrek.~
 @40066=~Peut-être pas. Mais je peux te proposer mieux. Rejoins mon groupe et nous aurons beaucoup de viande pour toi tous les jours.~
 @40067=~Peut-être pas. Mais je peux te proposer mieux. Rejoins mon groupe et nous aurons beaucoup de viande pour toi tous les jours. Je n’aurais rien contre un troll dans l’équipe - en fait, un troll intelligent serait le bienvenu.~
 @40068=~Tu as de l’or? Donne de la viande à Vrek? Garde l’épée de guérisseur loin?~
 @40069=~Viens avec nous et tu auras toute la nourriture que tu veux et plus encore. Tout ce que tu as à faire est de nous aider à tuer les orcs près du pont. Ils n’ont pas d’armes magiques; ce devrait être facile pour un troll.~
-@40070=~Vrek... Vrek dit oui. Mais si l’humain donne l’épée au guérisseur, Vrek tue l’humain.~
-@40071=~C’est assez bien pour moi. Viens... nous avons des orcs à abattre.~
+@40070=~Vrek… Vrek dit oui. Mais si l’humain donne l’épée au guérisseur, Vrek tue l’humain.~
+@40071=~C’est assez bien pour moi. Vie….. nous avons des orcs à abattre.~
 @40072=~Je veux que tu partes, comme tous les autres gobelins. Tu peux partir sans te battre ou tu peux rejoindre les cadavres que j’ai laissés derrière moi.~
 @40073=~Oui. Ne soyez pas si surpris, juste parce que je suis un gobelin ne signifie pas que je ne pense pas. Je suis Vunarg, le chef du clan Vunarg, et j’ai une responsabilité envers eux. Nous devons manger, chasser et faire la guerre. Ici, nous n’avons rien de tout cela. Enfin, pas encore; nous attendons pour l’instant.~
 @40074=~Intéressant. Meurs, ordure!~
@@ -393,7 +393,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40089=~Pourquoi tuer un allié juste après qu’il a prouvé sa valeur au groupe? Pourquoi tuer un gobelin qui se bat de notre côté?~
 @40090=~Nous pourrions te porter sur un palanquin doré dans les rues de Targos en criant des louanges à ton nom et à tous les gobelins, et personne n’oserait nous dire que nous avions tort de le faire. Nous sommes les héros de Targos - nous avons sauvé toute la ville des gobelins, deux fois. Qui va remettre en question notre jugement?~
 @40091=~Lord Ulbrec n’a jamais dit que nous *ne pouvions pas* nous lier d’amitié avec les gobelins.~
-@40092=~Laisse-moi parler de cela avec mon clan...~
+@40092=~Laisse-moi parler de cela avec mon clan…~
 @40093=~Mon clan est contre ça. Ils n’ont aucun intérêt à se battre pour défendre une ville humaine. Cependant, je suis prêt à t’aider à combattre Guthma, pour une part du butin. Je sais que la horde est riche, et ramener une partie de cet or rendra mon clan bien plus fort.~
 @40094=~Un gobelin suffit. Bienvenue dans l’équipe, Vunarg.~
 @40095=~J’aime ton attitude. Allons tuer des orcs.~
@@ -423,12 +423,12 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40119=~Je ne t’ai rien promis, mortel - j’ai simplement dit que j’avais le *pouvoir* d’exaucer ta requête. Nos affaires sont terminées. Adieu.~
 @40120=~Tu vas payer pour ça! Tu retournes aux Enfers à la dure!~
 @40121=~Je n’aurais dû m’attendre à rien de moins d’un démon. Prends ta liberté et va-t’en.~
-@40122=~Zack, c’est mon nom... Zack Boosenburry... illusionniste et fidèle de Baervan Wildwanderer. Avez-vous-excusez-moi un instant. Aocha? *Aocha?* AOCHA?!~
+@40122=~Zack, c’est mon n….. Zack Boosenbur….. illusionniste et fidèle de Baervan Wildwanderer. Avez-vous-excusez-moi un instant. Aocha? *Aocha?* AOCHA?!~
 @40123=~Tu es un illusionniste? Est-ce que ça veut dire que tu as des sorts à vendre?~
 @40124=~Aocha - viens ici fille! *PHHIRRR!* Oh, j’avais presque oublié - en fouillant dans ce ver que j’ai rencontré, j’ai trouvé quelques objets. Si je peux faire quelque chose pour vous, faites-le moi savoir.~
 @40125=~Nous sommes heureux pour toi. Adieu.~
 @40126=~En fait, nous pourrions utiliser ton aide. Voudrais-tu envisager de te joindre à nous?~
-@40127=~Aocha... AOCHA...! Elle était une bonne monture... Peut-être que sa mort était inévitable, <CHARNAME> - étant qui... *ce qu’elle était*. Si j’étais à proximité, j’aurais pu la sauver, mais...~
+@40127=~Aocha… AOCHA…! Elle était une bonne montu….. Peut-être que sa mort était inévitable, <CHARNAME> - é…t qui... *ce qu’elle était*. Si j’étais à proximité, j’aur… pu la sauver, mais...~
 @40128=~Nous pourrions utiliser ton aide. Voudrais-tu envisager de te joindre à nous?~
 @40129=~Je peux envisager toutes sortes de choses. De quoi avez-vous besoin d’aide?~
 @40130=~Nous avons l’intention de détruire ce glacier qui bloque le col. Lord Ulbrec nous a envoyé rencontrer les soldats de Neverwinter, et ce mur de glace nous bloque le passage.~
@@ -439,50 +439,50 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40135=~Aocha vient avec nous?~
 @40136=~Bien sûr! Elle est assez amicale, bien qu’elle puisse être une sacrée brute quand on a des ennuis. Je la garde généralement dans ma poche - elle y est plus en sécurité.~
 @40137=~Tu gardes une araignée géante dans ta poche?~
-@40138=~C’est l’une de mes petites inventions. J’ai conçu une poche magique pour qu’elle s’y cache! C’est pratique quand je dois aller en ville - tu ne croirais pas combien de gens ont peur d’elle! J’ai aussi une formule spéciale dedans, au cas où elle se ferait mal. Laisse-moi la réduire et la mettre dans ma poche, et je serai prêt à partir...~
+@40138=~C’est l’une de mes petites inventions. J’ai conçu une poche magique pour qu’elle s’y cache! C’est pratique quand je dois aller en ville - tu ne croirais pas combien de gens ont peur d’elle! J’ai aussi une formule spéciale dedans, au cas où elle se ferait mal. Laisse-moi la réduire et la mettre dans ma poche, e…e serai prêt à partir...~
 @40139=~Fait! Aocha est à l’aise, et je suis prêt. On y va?~
 @40140=~Cela ressemble à un échange équitable pour m’avoir sauvé la vie et Aocha, et avec le mur de glace brisé, il ne me reste plus grand-chose à faire ici, de toute façon. Très bien, je peux me joindre à vous pendant un certain temps. Laisse-moi juste récupérer Aocha d’abord.~
 @40141=~En fait, je me demandais si tu serais prête à rejoindre notre groupe. Nous avons de la place pour une jeune sorcière.~
 @40142=~Pourquoi attendre? Nous avons de la place pour un autre sorcier dans notre groupe. Tu pourrais venir avec nous.~
 @40143=~Si tu veux en savoir plus sur la magie, nous avons de la place pour un autre sorcier dans notre groupe. Tu pourrais venir avec nous.~
 @40144=~Si tu veux en savoir plus, nous avons de la place pour un autre sorcier dans nos voyages. Tu peux nous rejoindre, si tu veux.~
-@40145=~Attendez! Je dois vous demander... il y a de la magie - de la sorcellerie - qui coule dans mon sang. Personne ici ne peut me l’apprendre, mais je ne souhaite pas quitter le village tout de suite. Pouvez-vous m’aider?~
+@40145=~Attendez! Je dois vous demander… il y a de la magie - de la sorcellerie - qui coule dans mon sang. Personne ici ne peut me l’apprendre, mais je ne souhaite pas quitter le village tout de suite. Pouvez-vous m’aider?~
 @40146=~Si tu veux en savoir plus sur la magie, nous avons de la place pour un sorcier dans notre groupe. Tu pourrais venir avec nous.~
 @40147=~Tu m’emmènerais avec toi? Je ne sais pas quoi dire - c’est tellement excitant!~
 @40148=~Dis simplement oui.~
 @40149=~Cela pourrait être dangereux. Tu apprendrais beaucoup, mais tu prendrais aussi beaucoup de risques. Es-tu sûre d’être à la hauteur?~
-@40150=~Oui! Oui, je le ferai! J’ai hâte de commencer. Tous les endroits où nous irons, toutes les choses que nous verrons...~
+@40150=~Oui! Oui, je le ferai! J’ai hâte de commencer. Tous les endroits où nous irons, toutes les choses que nous v…ons...~
 @40151=~Bienvenue dans le groupe, Pairi. Tu fais maintenant partie des héros de Targos.~
 @40152=~Mets-toi en rang, Pairi. Nous avons une longue marche devant nous.~
 @40153=~Je peux t’apprendre plus, si tu veux. J’ai pratiqué mes compétences dans tout le Val d’Icewind et j’ai appris bien plus que ce que j’avais appris lorsque j’étais en formation dans une petite pièce exiguë. Nous pourrions utiliser un moine dévoué et énergique comme toi.~
 @40154=~Tu sais, il n’y a pas de meilleur professeur que l’expérience. Si tu veux améliorer tes compétences, nous pourrions utiliser un moine dévoué. Tu peux apprendre beaucoup en faisant des aventures, et pas seulement sur les arts martiaux.~
 @40155=~Quitter le monastère? Mais j’ai tellement appris ici - et ma formation n’est pas encore terminée!~
 @40156=~Si tu as besoin d’une aide extérieure juste pour convaincre ton professeur de faire son travail, alors je pense que tu vas continuer à te heurter à des murs mentaux. Pourquoi ne pas aller chercher ta dernière leçon pendant que Svaltid se sent serviable, puis venir avec nous?~
-@40157=~J’ai toujours voulu voyager à Faerun... C’est comme ça que je suis arrivé au monastère en premier lieu, mais je me suis installé pour pratiquer mes compétences. Je suppose que cela dépend de l’endroit où vous allez et de ce que vous faites.~
+@40157=~J’ai toujours voulu voyager à Fa…n... C’est comme ça que je suis arrivé au monastère en premier lieu, mais je me suis installé pour pratiquer mes compétences. Je suppose que cela dépend de l’endroit où vous allez et de ce que vous faites.~
 @40158=~Les Dix-Villes sont en danger. La Légion de la Chimère s’apprête à attaquer toutes les villes, nous allons donc les défendre toutes.~
-@40159=~Partout où le vent nous mènera ensuite... ce qui semble être les profondeurs du Souterrain, et toutes les créatures horribles qui s’y trouvent. Cela a l’air amusant, n’est-ce pas?~
+@40159=~Partout où le vent nous mènera ens…e... ce qui semble être les profondeurs du Souterrain, et toutes les créatures horribles qui s’y trouvent. Cela a l’air amusant, n’est-ce pas?~
 @40160=~Nous sommes en mission de la part de Lord Ulbrec de Targos pour faire tomber la Légion de la Chimère. Nous avons dû parcourir tout le Val d’Icewind pour arriver là où nous sommes. Quant à l’endroit où nous allons, cela commence par le passage du Souterrain, mais après cela, cela pourrait être n’importe où.~
-@40161=~De l’or, surtout. Il a tendance à disparaître rapidement... Nous avons certaines habitudes coûteuses.~
+@40161=~De l’or, surtout. Il a tendance à disparaître rapi…ent... Nous avons certaines habitudes coûteuses.~
 @40162=~Nous avons certaines griefs avec la Légion de la Chimère et ses divers alliés - à savoir, leurs tentatives incessantes de nous tuer. Nous avons l’intention de les anéantir.~
 @40163=~Pratiquer nos compétences, comme toi. Un désir constant de perfectionnement personnel - qui coïncide avec une mission pour sauver les Dix-Villes de la Légion de la Chimère.~
 @40164=~Nous tuons des monstres. Nous allons là où sont les monstres, puis nous les tuons.~
 @40165=~Mis à part la défaite de la Légion de la Chimère? Nous admirons les paysages. Profitons du temps. Rencontrons de nouvelles personnes. Faisons des découvertes.~
 @40166=~Je ne sais pas vraiment.~
-@40167=~Cela... a l’air intéressant en fait. Mais je pense que je suis mieux ici. J’ai des amis au monastère et, euh... beaucoup de choses à faire. Mais je vous remercie de vous être entretenu avec Svaltid pour moi. Merci.~
+@40167=~Cela… a l’air intéressant en fait. Mais je pense que je suis mieux ici. J’ai des amis au monastère…, euh... beaucoup de choses à faire. Mais je vous remercie de vous être entretenu avec Svaltid pour moi. Merci.~
 @40168=~Je comprends. Adieu, Sersa.~
-@40169=~Cela... a l’air intéressant en fait. Mais j’ai tellement de choses à apprendre ici aussi... Je ne peux pas te dire tout de suite. Laisse-moi faire mon entraînement avec Svaltid et dormir dessus. Je te reparlerai demain matin...~
+@40169=~Cela… a l’air intéressant en fait. Mais j’ai tellement de choses à apprendre i…aussi... Je ne peux pas te dire tout de suite. Laisse-moi faire mon entraînement avec Svaltid et dormir dessus. Je te reparlerai de…n matin...~
 @40170=~Très bien. Je te verrai alors.~
 @40171=~J’ai vu les moines ici et les professeurs ont beaucoup de compétences. Mais tu approches déjà la limite de ce qu’ils peuvent t’apprendre. Je vois un grand talent en toi. Peut-être est-il temps de quitter la maison et de partir à la recherche de plus de connaissances.~
-@40172=~Peut-être... Mais j’ai besoin d’en savoir plus sur ce dans quoi je m’engage. Dis-moi, où vas-tu exactement?~
-@40173=~Cela... a l’air intéressant en fait. Mais je ne suis pas sûr... Je ne peux pas te dire tout de suite. J’ai besoin de dormir dessus. Donne-moi une journée et je te reparlerai demain matin.~
-@40174=~Je ne suis pas sûr... Je ne peux pas te dire tout de suite. J’ai besoin de dormir dessus. Donne-moi une journée et je te reparlerai demain matin.~
-@40175=~J’ai réfléchi à ce que tu as dit et... ma réponse est oui. Je serais ravi de rejoindre votre groupe. J’ai déjà parlé à Salisam et il a dit que c’était une bonne occasion pour moi. Je suis sûr qu’il y a des choses que je vais manquer en quittant le monastère, mais c’est le prix à payer pour essayer de nouvelles choses. J’ai mes affaires avec moi - ce qui signifie juste moi - et je suis prêt à partir.~
-@40176=~J’ai réfléchi à ce que tu as dit et... ma réponse est oui. Je serais ravi de rejoindre votre groupe. J’ai déjà parlé à Aruma et elle a dit que c’était une bonne occasion pour moi. Je suis sûr qu’il y a des choses que je vais manquer en quittant le monastère, mais c’est le prix à payer pour essayer de nouvelles choses. J’ai mes affaires avec moi - ce qui signifie juste moi - et je suis prêt à partir.~
+@40172=~Peut-êt….. Mais j’ai besoin d’en savoir plus sur ce dans quoi je m’engage. Dis-moi, où vas-tu exactement?~
+@40173=~Cela… a l’air intéressant en fait. Mais je ne suis pas…r... Je ne peux pas te dire tout de suite. J’ai besoin de dormir dessus. Donne-moi une journée et je te reparlerai demain matin.~
+@40174=~Je ne suis pas sû…. Je ne peux pas te dire tout de suite. J’ai besoin de dormir dessus. Donne-moi une journée et je te reparlerai demain matin.~
+@40175=~J’ai réfléchi à ce que tu a…it et... ma réponse est oui. Je serais ravi de rejoindre votre groupe. J’ai déjà parlé à Salisam et il a dit que c’était une bonne occasion pour moi. Je suis sûr qu’il y a des choses que je vais manquer en quittant le monastère, mais c’est le prix à payer pour essayer de nouvelles choses. J’ai mes affaires avec moi - ce qui signifie juste moi - et je suis prêt à partir.~
+@40176=~J’ai réfléchi à ce que tu a…it et... ma réponse est oui. Je serais ravi de rejoindre votre groupe. J’ai déjà parlé à Aruma et elle a dit que c’était une bonne occasion pour moi. Je suis sûr qu’il y a des choses que je vais manquer en quittant le monastère, mais c’est le prix à payer pour essayer de nouvelles choses. J’ai mes affaires avec moi - ce qui signifie juste moi - et je suis prêt à partir.~
 @40177=~Génial. Commençons.~
 @40178=~Jamais vu quelqu’un si bougon juste parce qu’il doit faire son devoir.~
 @40179=~Je n’apprécie pas d’être obligé de me balader dans le froid. Je suis venu ici pour me battre et profiter; pas pour me geler les pieds dans la neige avec des gamins qui jouent aux soldats.~
-@40180=~Jouer aux soldats? Toi et ton groupe de mercenaires...~
-@40181=~Nous ne sommes pas des *mercenaires*, garçon! Nous...~
+@40180=~Jouer aux soldats? Toi et ton groupe de mercenaires…~
+@40181=~Nous ne sommes pas des *mercenaires*, garçon! No…..~
 @40182=~Vous vous buviez jusqu’à la mort pendant que les *vrais* hommes étaient dehors à combattre les gobelins.~
 @40183=~On dirait que les gobelins ont fait tout le combat. Dis, comment va ton bras, garçon? Tu penses pouvoir encore te battre?~
 @40184=~Menace-moi encore une fois, mercenaire. Passe une journée au pilori et tu changeras de ton.~
@@ -509,13 +509,13 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40203=~Tu ne veux pas de moi dans le groupe? Je suis prête à partir, mais il est préférable que nous restions ensemble.~
 @40204=~Bien sûr, tu peux venir.~
 @40205=~Pour l’instant, nous allons nous séparer, mais je pourrais revenir.~
-@40206=~Tu ne travailles plus avec Vrek? Alors peut-être que Vrek te mangera à la place...~
+@40206=~Tu ne travailles plus avec Vrek? Alors peut-être que Vrek te mangera à la p…e...~
 @40207=~Attends, j’ai changé d’avis. Rejoins le groupe.~
 @40208=~Je te verrai mort, troll immonde.~
 @40209=~J’aurais dû m’attendre à autant de la part de la racaille de la ville. Tu as cinq secondes pour retirer ça ou je pars pour toujours pour retourner à ma tribu.~
 @40210=~Oublie, tu es toujours dans le groupe. Désolé pour ça.~
 @40211=~Tu peux y aller.~
-@40212=~...~
+@40212=~…~
 @40213=~Nous aurions dû te tuer quand nous t’avons rencontré. Il est temps de corriger cela!~
 @40214=~Tu m’as séparé de dizaines de kilomètres de ma tribu juste pour me larguer!? Je vais te couper en morceaux pour ça, racaille!~
 @40215=~Attends! Tu es toujours dans le groupe. Désolé pour ça.~
@@ -541,7 +541,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40235=~Targos a besoin de toute l’aide possible, mais je ne pense pas que ce soit une bonne idée d’amener un troll avec nous. Que se passe-t-il quand le cours de la bataille se retourne contre nous? Cette bête va nous abandonner dès qu’elle pensera que nous sommes en danger - ou pire, rejoindre la horde et se retourner contre nous. Nous avons besoin d’alliés, oui, mais nous avons besoin d’alliés en qui nous pouvons *avoir confiance.*~
 @40236=~Le leadership signifie prendre des risques. Je ne fais pas confiance à Vrek non plus, mais nous avons besoin de muscles supplémentaires. Un troll est un ennemi puissant et un ami puissant. Nous avons déjà assez d’ennemis comme ça.~
 @40237=~Je n’aime pas les flèches. Je préférerais qu’elles s’enfoncent dans la peau de Vrek que dans la mienne.~
-@40238=~Pour être honnête, j’improvisais... Nous étions encerclés; je n’étais pas sûr que nous allions nous en sortir vivant. Je ne pensais pas que j’allais finir par voyager avec lui. C’est arrivé comme ça.~
+@40238=~Pour être honnête, j’impro…ais... Nous étions encerclés; je n’étais pas sûr que nous allions nous en sortir vivant. Je ne pensais pas que j’allais finir par voyager avec lui. C’est arrivé comme ça.~
 @40239=~Remarqué. Maintenant, continue de marcher, soldat.~
 @40240=~Un ennemi mort vaut mieux qu’un faux ami.~
 @40241=~Je veux dire, on pourrait le poignarder dans son sommeil si on pensait qu’il allait se retourner contre nous de toute façon, mais je ne suis pas sûr que ça le tuerait vraiment.~
@@ -602,13 +602,13 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40296=~Et toi le sien. Mais il y a des exceptions. Nous ne sommes pas toujours en guerre.~
 @40297=~Je sais. Mais j’ai besoin que tu te battes à ses côtés quand même.~
 @40298=~Peut-être. Mais ces exceptions ne sont pas bon marché. Je vais donner une chance au gobelin, mais je n’oublierai pas ce qu’il est.~
-@40299=~Allons-nous vraiment faire confiance à la parole d’un démon? Nous...~
+@40299=~Allons-nous vraiment faire confiance à la parole d’un démon…ous...~
 @40300=~Écoute *attentivement*, humain. Je ne suis pas un démon, mais un démon, une créature de loi et de but. Nous, les démons, *tuons* les démons; ce sont nos ennemis de longue date. Être appelé démon est une grande insulte pour notre espèce.~
 @40301=~Sois assuré que je suis prêt à travailler avec ce groupe pour me venger de la Légion de la Chimère. Mais appelle-moi encore un démon et tu mourras douloureusement.~
 @40302=~Très bien, démon. Mais qu’est-ce que tu disais avant? À propos des démons qui sont tes ennemis?~
 @40303=~Nous, les démons, nous combattons les démons depuis d’innombrables millénaires dans ce que les mortels appellent la Guerre du Sang. Un conflit au-delà de ta compréhension, mortel, et bien plus ancien que tes dieux insignifiants.~
 @40304=~Une guerre pour quoi?~
-@40305=~Beaucoup de choses. La lutte entre la loi et le chaos. La gloire du bain de sang et la poursuite du pouvoir. La promesse d’une ascension vers une forme supérieure... J’espère devenir un abishai rouge ou même un cornugon si je peux me distinguer aux yeux de Tiamat. Et je ne peux pas décrire le frisson de chasser les manes et les dretches et de leur montrer leur faiblesse et leur impuissance face à un être supérieur.~
+@40305=~Beaucoup de choses. La lutte entre la loi et le chaos. La gloire du bain de sang et la poursuite du pouvoir. La promesse d’une ascension vers une forme supéri…e... J’espère devenir un abishai rouge ou même un cornugon si je peux me distinguer aux yeux de Tiamat. Et je ne peux pas décrire le frisson de chasser les manes et les dretches et de leur montrer leur faiblesse et leur impuissance face à un être supérieur.~
 @40306=~Ouais. Les démons peuvent être des créatures féroces.~
 @40307=~Ce sont des démons, Reig. Tout ce qu’ils connaissent est le sadisme et la cruauté. Je ne souhaiterais jamais voir l’intérieur de leur esprit.~
 @40308=~Je connais bien ce sentiment, démon. Il n’y a pas de plus grand but que de servir son maître.~
@@ -652,18 +652,18 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40346=~Je ne connais même pas tous les noms de ces créatures. Il va falloir que tu me renseignes en chemin. Je ne veux pas être pris au dépourvu.~
 @40347=~Je vous remercie. J’espère que je ne serai pas trop lourd dans l’obscurité.~
 @40348=~Tu l’es? C’est bien d’entendre ça.~
-@40349=~C’est une vue lugubre. J’ai entendu des histoires sur le Grand Chêne... Je n’aurais jamais pensé le voir comme ça.~
-@40350=~Oui... c’est affreux ce qu’ils font à l’arbre.~
+@40349=~C’est une vue lugubre. J’ai entendu des histoires sur le Grand C…e... Je n’aurais jamais pensé le voir comme ça.~
+@40350=~Oui… c’est affreux ce qu’ils font à l’arbre.~
 @40351=~Le plus que nous puissions faire maintenant est de vaincre tous ces yuan-ti qui l’attaquent. Ce sera aux druides de Kuldahar de guérir l’arbre lorsque la guerre sera finie.~
 @40352=~Nous avons beaucoup de travail à faire, alors.~
-@40353=~Je ne suis pas un druide, et ce mal afflige probablement Iselore plus que moi, mais quand même... nous devrions faire quelque chose à ce sujet.~
+@40353=~Je ne suis pas un druide, et ce mal afflige probablement Iselore plus que moi, mais quand mê….. nous devrions faire quelque chose à ce sujet.~
 @40354=~Par les enfers, je n’ai jamais eu aussi chaud auparavant. Comment est-ce que quelque chose peut vivre ici?~
 @40355=~Les Mezro vivent ici depuis aussi longtemps que vos ancêtres ont vécu dans le Val d’Icewind. Si quoi que ce soit, ce serait incroyable que quelque chose puisse vivre à Targos. Combien de personnes sont mortes de froid chez vous?~
 @40356=~Essayons de rester à l’ombre. Peut-être que la chaleur sera plus supportable.~
 @40357=~Tu serais surpris de voir où la vie peut survivre. Si elle peut vivre dans le Gloomfrost et les déserts d’Anauroch, elle peut vivre à Chult.~
 @40358=~Pas beaucoup normalement, tant que nous maintenons un feu de joie à la maison. Les Dix-Villes, contrairement à Luskan, ne vénèrent pas Auril, nous ne faisons donc pas d’efforts pour rester au froid. C’est définitivement une menace pour nous, soldats et aventuriers, cependant.~
 @40359=~Je regrette le pays. J’ai été absent trop longtemps. Oublie ça. Nous avons des serpents à tuer.~
-@40360=~Alors, c’est ici que ça se termine. Des esclaves, des démons dans les couloirs, et Dieu sait ce que c’est que cette croissance maladive partout sur les murs. Et cette forteresse était autrefois une forteresse elfe?... Je n’ai jamais réalisé à quel point la horde était étendue.~
+@40360=~Alors, c’est ici que ça se termine. Des esclaves, des démons dans les couloirs, et Dieu sait ce que c’est que cette croissance maladive partout sur les murs. Et cette forteresse était autrefois une forter…e elfe?... Je n’ai jamais réalisé à quel point la horde était étendue.~
 @40361=~Presque tous les coins du Val d’Icewind, il semble.~
 @40362=~J’ai froid, je suis fatigué et en colère. J’ai hâte de planter la tête des jumeaux sur une pique.~
 @40363=~Quels sont tes projets pour quand tout sera fini?~
@@ -673,7 +673,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40367=~Où veux-tu en venir?~
 @40368=~C’est vrai. Le pillage à lui seul n’aurait pas pu financer cela; la Légion est apparue trop soudainement et trop inopinément pour n’être qu’une extension d’une plus grande tribu de gobelins.~
 @40369=~Tu ne peux pas lever une horde contre l’humanité si l’humanité n’avait pas déjà une horde d’ennemis. Je ne regrette pas d’avoir mis Torak à l’épée, ni d’avoir abattu ces fanatiques au mur de glace, ni d’avoir combattu ces serpents dans la jungle. C’étaient des êtres maléfiques qui se battaient pour des causes maléfiques.~
-@40370=~Mais ce sont les autres cas qui me font réfléchir. Tous ces métis yuan-ti à Dragon’s Eye... Ils étaient demi-humains. Pourquoi devaient-ils être du côté des yuan-ti, au lieu de se ranger du côté des humains?~
+@40370=~Mais ce sont les autres cas qui me font réfléchir. Tous ces métis yuan-ti à Drag…s Eye... Ils étaient demi-humains. Pourquoi devaient-ils être du côté des yuan-ti, au lieu de se ranger du côté des humains?~
 @40371=~Les humains ne les voulaient pas.~
 @40372=~Ils ont été élevés parmi les yuan-ti. Bien sûr qu’ils se rangeraient du côté de ceux qui les ont élevés.~
 @40373=~Alors, que font les humains après cela? Est-ce qu’on les veut maintenant, après que la guerre est finie? Ou est-ce qu’ils s’enfuient et reviennent se battre à nouveau?~
@@ -683,7 +683,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40377=~Oui. Je l’ai fait. Je ne le fais pas normalement, mais je l’ai fait. Tout est tellement compliqué maintenant.~
 @40378=~J’en ai tellement assez de me battre. Il y en a tellement à combattre, et nous avons perdu tellement de nos propres.~
 @40379=~Ils ne vont pas tous disparaître. Mais je ne sais pas comment faire la paix après tout ça. Je ne suis pas un diplomate; je suis juste un autre soldat. Et je ne sais pas qui *va* tout arranger. J’espère que cela prendra fin lorsque les jumeaux seront morts. Mais je n’y compterais pas.~
-@40380=~Et toi? Tu penses que la guerre va prendre fin? Dieu, j’ai l’air d’un savant pompeux assis chez lui dans son fauteuil, pensant qu’il comprend le monde extérieur à sa porte...~
+@40380=~Et toi? Tu penses que la guerre va prendre fin? Dieu, j’ai l’air d’un savant pompeux assis chez lui dans son fauteuil, pensant qu’il comprend le monde extérieur …a porte...~
 @40381=~Les guerres prennent fin lorsque l’ennemi est mort. Nous ne pouvons pas les tuer tous maintenant, mais nous nous en rapprochons. Et ils sauront certainement mieux que de nous attaquer à nouveau.~
 @40382=~Je ne pense pas que ces guerres prennent fin. Tout ce que tu peux faire est de les arrêter temporairement. Nous devrons nous contenter de cela.~
 @40383=~Je n’y ai pas pensé. Trop occupé à tuer des monstres. J’y suis habitué, honnêtement.~
@@ -703,7 +703,7 @@ En utilisant cette capacité, Xhaan se téléporte à n’importe quel endroit en vue.
 @40397=~Bien. Allons-y. J’ai hâte de savoir à quoi sent le sang cambion.~
 @40398=~Et d’égorger quelques monstres demi-diables.~
 @40399=~Ça doit être agréable de donner des ordres depuis un bureau propre et de laisser les soldats faire le sale boulot. Peut-être que je vais prendre la relève de Shawford. Ulbrec ne pourrait pas dire non; j’ai servi Targos plus que quiconque à ce jour.~
-@40400=~J’ai assez combattu pour dix vies maintenant. Et j’ai gagné assez d’or pour en durer cinquante... peut-être que j’achèterai des terres et que je me ferai seigneur quelque part.~
+@40400=~J’ai assez combattu pour dix vies maintenant. Et j’ai gagné assez d’or pour en durer c…uante... peut-être que j’achèterai des terres et que je me ferai seigneur quelque part.~
 @40401=~Je ne saurais même pas par où commencer. Je suis juste un soldat. Je pense que je devrai laisser ça aux diplomates.~
 @40402=~En attendant, nous avons du travail à faire. Allons chasser les jumeaux. Il est temps que nous mettions fin à tout ça.~
 @40403=~Je ne te blâme pas. Je n’aurais rien contre un séjour dans un endroit plus chaud. De plus, je suppose que je suis maintenant un aventurier. Il n’y a pas d’avenir pour moi à Targos. Je retourne chez moi après ça, mais je ne pense pas que j’y resterai longtemps.~
@@ -720,16 +720,16 @@ Après quelques jours de voyage, la bande de Xhaan est tombée sur la demi-dragon 
 Xhaan cherche à se venger de la Légion de la Chimère pour cette insulte. Cependant, vous sentez que la promotion est toujours plus importante pour lui que la vengeance. Il vous trahirait probablement si un démon supérieur le lui ordonnait pour sa promotion.
 
 Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de limite de temps à son séjour sur ce plan. Les sorts de Renvoi et de Bannissement ne fonctionneront pas sur lui.~
-@40411=~HAH! Parie que ça va faire peur aux petites créatures vertes! Allons voir si elles sont assez stupides pour essayer de grimper aux murs à nouveau. Hé... je suis *presque* content que tu m’aies traîné ici. Je me demande combien d’or on peut leur voler...~
+@40411=~HAH! Parie que ça va faire peur aux petites créatures vertes! Allons voir si elles sont assez stupides pour essayer de grimper aux murs à nouve… Hé... je suis *presque* content que tu m’aies traîné ici. Je me demande combien d’or on…ut leur voler...~
 @40412=~Toujours le pilleur de tombes, Geoffrey. Hé, n’oublie pas notre part - tu n’es pas le seul à avoir gagné une nouvelle marque sur sa ceinture aujourd’hui.~
-@40413=~Content que tu puisses porter ton poids, "aventurier." Allons en informer Shawford et Ulbrec.~
+@40413=~Content que tu puisses porter ton poids, “aventurier”. Allons en informer Shawford et Ulbrec.~
 @40414=~Tu es un homme assoiffé de sang, Geoffrey le Noir. Je pense que je vais te garder dans les parages.~
 @40415=~Content? On a failli mourir!~
-@40416=~Sortons d’ici... L’odeur est insupportable.~
+@40416=~Sortons d’i….. L’odeur est insupportable.~
 @40417=~Hmph. Tu veux de l’or, prends-le toi-même - ou quémande un peu de monnaie à cette vieille corneille. Je ne me suis pas fendu en deux des gobelins comme du bois de chauffage pour ton bien.~
 @40418=~Je ne suis le chien de garde de personne, <PRO_BOYGIRL>. *N’oublie* jamais ça.~
 @40419=~Mieux vaut que tu l’apprennes vite, mioche. Ou garde ton cou maigre hors du combat, avant qu’un meilleur combattant ne décide de le fendre pour toi. Les faibles ne vivent pas longtemps sur le champ de bataille.~
-@40420=~Vas-y toi-même; je n’ai pas fini ici. Peut-être qu’un de ces gobelins peut m’acheter quelque chose de mieux que ce breuvage aqueux que Gohar nous vend...~
+@40420=~Vas-y toi-même; je n’ai pas fini ici. Peut-être qu’un de ces gobelins peut m’acheter quelque chose de mieux que ce breuvage aqueux que Gohar…us vend...~
 @40421=~garçon~
 @40422=~fille~
 @40423=~Garçon~
@@ -748,12 +748,12 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @40436=~Comment savons-nous que tu ne nous abandonneras pas comme tu l’as fait avec eux?~
 @40437=~Oui, allons-y.~
 @40438=~Tu ne le sais pas. Je pourrais le faire. Mais vu comment les choses se présentent, c’est de moins en moins probable. Mieux vaut espérer que le salaire reste aussi bon.~
-@40439=~Je n’aime pas ça. Toute la foutue forêt grouille d’orcs. Détourne les yeux une demi-seconde et on pourrait se prendre une flèche dans le cou...~
-@40440=~Oh, tu perds tes nerfs, Geoffrey? Je pensais que tu étais un vieux baroudeur. Je me suis trompé...~
+@40439=~Je n’aime pas ça. Toute la foutue forêt grouille d’orcs. Détourne les yeux une demi-seconde et on pourrait se prendre une flèche…ns le cou...~
+@40440=~Oh, tu perds tes nerfs, Geoffrey? Je pensais que tu étais un vieux baroudeur. Je me suis trom…..~
 @40441=~Ah, la bonne vieille flèche dans le cou! Rapide et propre. Définitivement la meilleure façon de mourir.~
 @40442=~C’est pareil pour les orcs. Ils s’en vont pisser et puis *thwip*-étouffés dans leur propre sang!~
 @40443=~Nous devrions faire attention à l’endroit où nous installons notre campement. Espérons que si les orcs voient notre feu, ils penseront que c’est l’un des leurs.~
-@40444=~Ferme-la avant que je ne te casse les dents, <PRO_BOYGIRL>. Un baroudeur est assez intelligent pour repérer le danger dans le champ... Garde les yeux ouverts. Si tu te fais tuer, *je* ne serai pas celui qui aura à enterrer ton corps.~
+@40444=~Ferme-la avant que je ne te casse les dents, <PRO_BOYGIRL>. Un baroudeur est assez intelligent pour repérer le danger dans le cha….. Garde les yeux ouverts. Si tu te fais tuer, *je* ne serai pas celui qui aura à enterrer ton corps.~
 @40445=~Je n’aurais jamais pensé que tu aurais la politesse de m’enterrer, Geoffrey.~
 @40446=~C’est juste une blague amicale, frère. Pas besoin de perdre ton sang-froid.~
 @40447=~J’espère que ce n’est pas la seule raison pour laquelle tu veux que je survive.~
@@ -1271,10 +1271,10 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @40906=~Mais il est très puissant, et nous aurons besoin de lui prochainement.~
 @40907=~Xhaan nous doit quelque chose. Nous l’avons libéré, lui et ses compagnons.~
 @40908=~Vous me flattez.~
-@40909=~Il faut reconnaître que Vunarg s’est bien comporté... mieux que ce à quoi je m’attendais, d’ailleurs... Mais une créature des Enfers n’est pas un mortel. Ses actes et sa façon de penser sont hors de notre portée.~
+@40909=~Il faut reconnaître que Vunarg s’est bien comp…é... mieux que ce à quoi je m’attendais, …illeurs... Mais une créature des Enfers n’est pas un mortel. Ses actes et sa façon de penser sont hors de notre portée.~
 @40910=~J’espère que ce jour viendra vite. Même le plus noir des mercenaires serait plus digne de confiance qu’une bête des Enfers.~
 @40911=~Des esprits bien plus brillants ont pensé la même chose, et ont eu tort. Nombre de mages qui ont conclu un pacte avec un démon y ont laissé la vie et l’âme. Ne commettez pas leurs erreurs, je vous en prie.~
-@40912=~Certainement ! A la lettre, sinon à l’esprit. En fait... généralement CONTRE l’esprit. Et parfois au prix de la vie du contractant. Voire de son âme. Mais vous pouvez être certain que Xhaan tiendra parole... techniquement du moins.~
+@40912=~Certainement ! A la lettre, sinon à l’esprit. E…ait... généralement CONTRE l’esprit. Et parfois au prix de la vie du contractant. Voire de son âme. Mais vous pouvez être certain que Xhaa…iendra parole... techniquement du moins.~
 @40913=~Je crois.~
 @40914=~Il nous faut rompre ce pacte avec le démon au plus vite. Nos vies sont en jeu et les Dix-Cités ont besoin de nous.~
 @40915=~Pour votre bien comme pour le mien, je prie que ses pouvoirs soient utilisés à bon escient. Mais nous jouons avec des forces que nous ne maîtrisons pas.~
@@ -1284,38 +1284,38 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @40919=~Oh, heu, oui !~
 @40920=~Xhaan ? J’avais une question, par simple curiosité…~
 @40921=~Je vous écoute…~
-@40922=~J’ai une idée d’expérience... académique, vous savez... et, heu… Vous pourriez peut-être me fournir l’un des él-éléments nécessaires. Un des composants.~
+@40922=~J’ai une idée d’expé…nce... académique, vo…savez... et, heu… Vous pourriez peut-être me fournir l’un des él-éléments nécessaires. Un des composants.~
 @40923=~Vous voulez mon sang, mortel ?~
 @40924=~Euh… oui. Et, si j’avais le droit de tr-tremper le bout de votre queue dans une solution ? Juste un peu. Un tout petit peu. Juste…~
 @40925=~Ah bon ? Vous y tenez tellement ? Mettez-vous à genoux et suppliez-moi, mortel… Avec un peu de chance, je vous donnerai peut-être un peu de mon sang.~
 @40926=~Oui, oui, s’il vous plaît ! Donnez-moi un peu de votre sang !~
 @40927=~NON ! Vous n’aurez pas une seule goutte de mon sang. La prochaine fois que vous aurez besoin de moi, vous feriez mieux d’avoir davantage d’arguments.~
-@40928=~Aïe ! Ça fait mal ! Et vous avez cassé la fiole dans laquelle je voulais le mettre ! Il va falloir que j’en retrouve une autre...~
+@40928=~Aïe ! Ça fait mal ! Et vous avez cassé la fiole dans laquelle je voulais le mettre ! Il va falloir que j’en retr…e une autre...~
 @40929=~Que voulez-vous, humain ?~
 @40930=~Je n’ai rien à vous dire, démon !~
 @40931=~Pourtant, vous me regardez avec insistance. Il y a quelque chose qui vous intrigue.~
 @40932=~Oui. Mais je n’ai rien à vous dire.~
 @40933=~Sage décision.~
 @40934=~Hou-*hou !* Wow ! Quelle horreur ! Ne recommençons jamais ça.~
-@40935=~J’ai vécu une expérience vraiment fascinante ! Cet endroit est rempli de trucs bizarres sous la glace ! C’est incroyable...~
+@40935=~J’ai vécu une expérience vraiment fascinante ! Cet endroit est rempli de trucs bizarres sous la glace ! C’es…ncroyable...~
 @40936=~Je me gèle les fesses.~
 @40937=~Quel talent ! Dommage qu’on doive tout détruire.~
 @40938=~C’est beau, n’est-ce pas ?~
-@40939=~Je ne comprends pas comment vous pouvez vous intéresser à ces "trucs" alors que des ours polaires et des barbares nous traquent.~
-@40940=~Profitez-en tant que vous le pouvez. On ne compte pas préserver le mur, " expérience fascinante " ou pas.~
+@40939=~Je ne comprends pas comment vous pouvez vous intéresser à ces “trucs” alors que des ours polaires et des barbares nous traquent.~
+@40940=~Profitez-en tant que vous le pouvez. On ne compte pas préserver le mur, “ expérience fascinante “ ou pas.~
 @40941=~Baisse un peu le ton, Zack. Les murs renvoient le moindre bruit, et les Aurilites peuvent être n’importe où.~
 @40942=~Oh, j’ai une crème qui pourrait t’aider ! Aocha a toujours eu les pieds sensibles, et quand elle s’est plainte de devoir marcher dans la neige il y a quelques semaines, j’ai dû trouver un remède. Attends un peu, je vais voir où je l’ai rangée…~
 @40943=~En fait non, ça va, merci. ~
 @40944=~Je ne vais pas mettre de la crème pour les pieds d’araignée sur MES pieds, gnome !~
 @40945=~C’était une image, Zack. Mais, si elle me réchauffe les doigts, je veux bien essayer.~
-@40946=~Ah bon ? Wow, ça a été vite. Tant mieux, d’ailleurs. Je ne suis pas sûr que la crème soit encore bonne... ça fait des semaines. Mais si vous en avez besoin, vous savez où la trouver !~
+@40946=~Ah bon ? Wow, ça a été vite. Tant mieux, d’ailleurs. Je ne suis pas sûr que la crème soi…ncore bonne... ça fait des semaines. Mais si vous en avez besoin, vous savez où la trouver !~
 @40947=~Rabat-joie ! Bon, d’accord. Mais ne venez pas pleurer quand vous aurez des stalactites entre les jambes.~
 @40948=~Ah, la voilà ! Tenez ! Elle date un peu, mais elle doit être encore bonne.~
-@40949=~Ne m’en parlez pas. Je sais bien pourquoi il faut l’abattre. Je comprends. Mais quand même... On ne voit pas des trucs comme ça tous les jours. Je crois que je vais simplement profiter du spectacle, tant que je le peux.~
-@40950=~En effet. La magie a toujours quelque chose de beau. Et la géométrie de ce grand temple est si délicate... Je regrette déjà de devoir le quitter.~
+@40949=~Ne m’en parlez pas. Je sais bien pourquoi il faut l’abattre. Je comprends. Mais quand …e... On ne voit pas des trucs comme ça tous les jours. Je crois que je vais simplement profiter du spectacle, tant que je le peux.~
+@40950=~En effet. La magie a toujours quelque chose de beau. Et la géométrie de ce grand temple est si dé…ate... Je regrette déjà de devoir le quitter.~
 @40951=~Je sais ce que je vais faire : je vais en garder un souvenir. Je vais peut-être pouvoir détacher un morceau de glace du mur pour le rapporter chez moi.~
 @40952=~Il ne va pas fondre ?~
-@40953=~Peut-être. Mais si je le casse comme il faut, je devrais pouvoir en préserver la magie. Il se régénère, vous savez ? Il me suffit de trouver le bon endroit...~
+@40953=~Peut-être. Mais si je le casse comme il faut, je devrais pouvoir en préserver la magie. Il se régénère, vous savez ? Il me suffit de trouver le…n endroit...~
 @40954=~Quoi ? Oh, vous parlez des ours ? En effet, ils n’ont pas l’air commodes. Mais regardez ces murs ! Leur géométrie est si délicate… Enfin, si vous comprenez la magie. C’est un chef d’œuvre ! A mon avis, la magie est une forme d’art.~
 @40955=~Vous ne vous inquiétez jamais de rien.~
 @40956=~Heureusement que vous n’êtes pas seul. Au moins, une personne ici pense aux dangers qui nous entourent.~
@@ -1326,12 +1326,12 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @40961=~Je ne vois pas l’intérêt de s’inquiéter. Ca ne fait que gâcher l’existence.~
 @40962=~Oui, oui. Il va falloir que je fasse un peu plus attention. J’aimerais éviter de me faire dévorer, quand même !~
 @40963=~Si Isair et Madae sont à la tête de la Légion, peut-être que leur parent démon n’en fait pas partie… Sinon, ce serait ce dernier qui serait le chef, non ? Ce serait une bonne nouvelle… A moins que le véritable chef de la Légion ne soit un secret…~
-@40964=~Aocha s’occupe de ça ! Elle surveille toujours les alentours. Elle est très douée pour ça... Sans doute parce qu’elle a quatre fois plus d’yeux que moi.~
-@40965=~Oh, c’est vrai, les Aurilites... Il y en a eu beaucoup, non ?~
+@40964=~Aocha s’occupe de ça ! Elle surveille toujours les alentours. Elle est très doué…our ça... Sans doute parce qu’elle a quatre fois plus d’yeux que moi.~
+@40965=~Oh, c’est vrai, les Aurilit….. Il y en a eu beaucoup, non ?~
 @40966=~C’est normal, c’est leur temple.~
 @40967=~*soupir* Bon, très bien. Si vous ne pouvez pas faire attention, je le ferai pour nous deux.~
 @40968=~C’est bizarre, non ?~
-@40969=~C’est logique. Mais c’est dommage qu’un si bel endroit soit habité par des gens si désagréables. Quel dommage...~
+@40969=~C’est logique. Mais c’est dommage qu’un si bel endroit soit habité par des gens si désagréables. …l dommage...~
 @40970=~Les Aurilites aiment la glace, rien de surprenant à ça.~
 @40971=~Mm. Vous ne semblez jamais vous inquiéter de quoi que ce soit, Zack.~
 @40972=~Heureusement que vous n’êtes pas seul. Au moins, une personne ici pense aux dangers qui nous entourent.~
@@ -1349,9 +1349,9 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @40980=~Nous avons passé un accord avec la sorcière, elle ne nous concerne plus. Passons à des choses plus urgentes.~
 @40981=~Eviter le combat était la meilleure solution. J’aurais pas aimé voir cette sorcière nous transformer en visons.~
 @40982=~Zut ! Ces démons ont déjà disparu. On aurait dû les découper en petits morceaux quand on en avait l’occasion !~
-@40983=~Mon cœur bat toujours la chamade... C’est contre ÇA que vous vous battez ?! J’ai peur... Mon village n’est pas le seul à être en danger.~
+@40983=~Mon cœur bat toujours la chama….. C’est contre ÇA que vous vous battez ?! J… peur... Mon village n’est pas le seul à être en danger.~
 @40984=~Les chefs de la Légion ne se déplacent pas avec des gardes du corps. Ils n’en ont probablement pas besoin ; ce sont de puissants lanceurs de sorts. J’aurais bien aimé régler le problème sur-le-champ, mais ils sont partis et c’est sans doute une bonne chose. Je ne pense pas que nous soyons prêts à les affronter.~
-@40985=~Isair et Madae s’allient aux hordes de gobelinoïdes et aux dieux maléfiques, et pourtant ils prétendent servir la justice. On a affaire à des fanatiques de la pire espèce... Je me demande d’où ils viennent ?~
+@40985=~Isair et Madae s’allient aux hordes de gobelinoïdes et aux dieux maléfiques, et pourtant ils prétendent servir la justice. On a affaire à des fanatiques de la p… espèce... Je me demande d’où ils viennent ?~
 @40986=~Je me suis un peu intéressé aux cambions, mais je n’en sais pas beaucoup. Ce sont les descendants de démons et de mortels mais… Les pouvoirs magiques qu’ils ont utilisés n’étaient pas normaux. Etre capable de tuer les vivants et de ramener les morts d’un seul coup ? Ce n’est pas à la portée de n’importe quel cambion. Le démon qui les a enfantés devait être puissant.~
 @40987=~Je commence à comprendre pourquoi la Légion s’associe aux clans gobelinoïdes. Isair et Madae nous voyaient comme des alliés naturels parce que nous sommes souvent en guerre avec les humains. Mais si l’on en croit ce que disait Sherincal à Guthma, on dirait que ce n’est pas réciproque ; Guthma et la horde ne combattaient que pour profiter du soutien de la Légion dans leur guerre contre les humains.~
 @40988=~Xhaan, ces deux-là sont de votre famille, n’est-ce pas ? Pouvez-vous nous en dire plus à leur sujet ?~
@@ -1371,7 +1371,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41002=~J’apprécie votre enthousiasme. Nous manquons cruellement d’optimisme dans notre groupe.~
 @41003=~Alors, je me fais un plaisir de le partager. Montrez-moi le chemin!~
 @41004=~Très bien. Mais, pour l’instant, je ne suis pas mécontent de la façon dont les choses se déroulent.~
-@41005=~Oh... Je vois.~
+@41005=~Oh… Je vois.~
 @41006=~Ce n’est pas pour vous faire peur. Je veux simplement que vous compreniez le danger que nous courons.~
 @41007=~Le monde est froid, ma petite. Il faut être forte pour survivre.~
 @41008=~Vous n’êtes peut-être pas faite pour la vie d’aventurière. Mais vous ne le saurez vraiment qu’en l’ayant vécue.~
@@ -1386,7 +1386,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41017=~Les Aurilites semblaient du même avis. Cathin, la prêtresse armée d’une hache que nous avons rencontrée au temple, a dit qu’ils ne voulaient que s’emparer de la gemme Cœur de pierre. Ils ont conclu une alliance avec la Légion pour parvenir à leurs fins, comme la horde. Ce qui pourrait jouer en notre faveur. Leur alliance semble plutôt fragile.~
 @41018=~Les demi-diables sont une caste inférieure sur mon plan et ne peuvent pas être promus. Toutefois, les plus puissants d’entre eux peuvent égaler, voire surpasser, les diables en magie et en combat. Et ceux-ci sont peut-être les cambions les plus forts qu’il m’ait été donné de voir.~
 @41019=~Très bien. Je serai forte et je braverai le froid.~
-@41020=~Oh... Oh, wow...~
+@41020=~Oh… Oh, wow…~
 @41021=~Ha ! *souffle* *souffle* Voilà un combat digne de ce nom. Regardez-nous ! Des tueurs de dragons !~
 @41022=~Humain ou orque, quelle que soit leur race, ils ne méritent pas d’être enchaînés. Je ne laisserai pas faire, c’est une abomination !~
 @41023=~Humain stupide !~
@@ -1394,20 +1394,20 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41025=~Je ne ferais plus partie de ce groupe s’il ne s’opposait pas à l’esclavage. C’est une abomination aux yeux de Séluné et à ceux de quiconque sait faire la différence entre la justice et l’injustice!~
 @41026=~Il aurait peut-être mieux valu attendre le bon moment pour les attaquer. Il y aura bien une occasion où leur chef sera seul, ou accompagné de quelques gardes seulement, et nous pourrons alors agir.~
 @41027=~J’aurais pu réfléchir un peu plus longtemps, je veux bien le reconnaître. Mais je ne regrette pas mon geste. Je n’aurais pas pu faire autrement, je ne serais plus un Astre d’Argent de Séluné.~
-@41028=~L’attaque de Harshom m’inquiète. Au village, Isair et Madae ne nous considéraient pas comme une menace. S’ils ont envoyé Harshom récemment, cela signifie que la Légion nous prend au sérieux... et qu’ils suivent nos déplacements. Bien sûr, s’il a été envoyé il y a longtemps, il n’y a pas de raison de s’inquiéter.~
+@41028=~L’attaque de Harshom m’inquiète. Au village, Isair et Madae ne nous considéraient pas comme une menace. S’ils ont envoyé Harshom récemment, cela signifie que la Légion nous …nd au sérieux... et qu’ils suivent nos déplacements. Bien sûr, s’il a été envoyé il y a longtemps, il n’y a pas de raison de s’inquiéter.~
 @41029=~Mais tôt ou tard, la Légion nous prendra au sérieux et ils enverront des assassins plus puissants. La Légion dispose de suffisamment de magie et de ressources pour nous espionner où que nous allions.~
 @41030=~Ils n’ont qu’à venir, on n’en fera qu’une bouchée ! On a déjà combattu des ennemis bien plus puissants que ce mage !~
 @41031=~Ca ne sera peut-être pas pour tout de suite. Isair était très clair quant au mépris qu’il avait pour nous. C’est le genre d’idiot qui sous-estime ses adversaires.~
 @41032=~Certes, ce n’est pas pour tout de suite. Mais un autre groupe de tueurs finira par nous trouver et ils seront prêts à nous affronter.~
 @41033=~Ça va être difficile. Je me sens nu sans arme.~
 @41034=~Sales moines ! Pourquoi faut-il qu’on subisse ça ?~
-@41035=~Séluné, guide ma main...~
+@41035=~Séluné, guide ma …n...~
 @41036=~Je me sens comme un loup en cage.~
 @41037=~Pas d’armes ni d’armure. Je m’en charge.~
-@41038=~Je ne pensais pas être là aussi tôt... J’espère que je suis prêt...~
+@41038=~Je ne pensais pas être là aussi…t... J’espère que je s… prêt...~
 @41039=~Ces tâches sont fastidieuses, j’aimerais bien en finir.~
 @41040=~Des machines vraiment fascinantes… Je me demande ce qu’ils nous réservent…~
-@41041=~Quel gâchis ! J’aurais aimé avoir plus de temps pour étudier ses recherches. On peut toujours examiner ses notes, mais ce n’est pas pareil...~
+@41041=~Quel gâchis ! J’aurais aimé avoir plus de temps pour étudier ses recherches. On peut toujours examiner ses notes, mais ce n’es…as pareil...~
 @41042=~Je dois remettre en question vos priorités, Zack. La magie n’est rien sans la personne qui l’utilise, et je ne vois aucun bien dans tout cela.~
 @41043=~Après avoir vu les horreurs auxquelles Imphraili a donné naissance, je pense qu’il vaut mieux éviter de s’intéresser à ses recherches.~
 @41044=~J’aimerais avoir plus de temps. Je déteste abandonner des connaissances aussi précieuses.~
@@ -1425,12 +1425,12 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41056=~Je suis content pour vous, Zack.~
 @41057=~Je m’inquiète pour vous, Zack.~
 @41058=~Oh, je ne sais pas. Une araignée est un animal unique. Sans vouloir manquer de respect aux autres créatures, bien sûr, mais, une bête à huit pattes et huit yeux qui peut tisser sa propre soie ? Ça, c’est un animal rare !~
-@41059=~ De quoi est-ce qu’on parlait déjà ? Ah oui, ce mage mort. Quel gâchis...~
+@41059=~ De quoi est-ce qu’on parlait déjà ? Ah oui, ce mage mort. Quel …his...~
 @41060=~C’est vrai. Peut-être qu’un jour j’aurai l’occasion d’essayer.~
 @41061=~Vous avez du goût, mon ami. Du très bon goût, même.~
 @41062=~Moi aussi. On pourrait peut-être revenir plus tard, pour voir s’il y a autre chose à récupérer. Un autre jour, peut-être.~
 @41063=~Rabat-joie ! Bon, très bien. Je suppose que tout le monde n’est pas forcément capable d’apprécier les merveilles de l’Art. Chacun ses goûts…~
-@41064=~Encore pire ! Cet Elfe noir a des goûts étranges. Il a ruiné ce parfait transformateur en araignée ! Quel gâchis...~
+@41064=~Encore pire ! Cet Elfe noir a des goûts étranges. Il a ruiné ce parfait transformateur en araignée !…el gâchis...~
 @41065=~Ce serait pas mal. Mais ça risque de ne pas être pour tout de suite. La Légion a encore beaucoup de projets, j’imagine. J’aimerais bien que quelqu’un d’autre s’en charge.~
 @41066=~Ah, la joie d’une nouvelle invention ! Dommage qu’on doive s’en servir contre la Viciscamera. Mais c’est tellement bien !~
 @41067=~Zack est TOUJOURS comme ça ?~
@@ -1438,7 +1438,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41069=~J’espère que cet engin va fonctionner. Je commence à fatiguer, et je n’ai pas envie de devoir tout détruire à la force du poignet.~
 @41070=~Finissons-en. J’ai l’impression d’être observé.~
 @41071=~J’ai entendu parler de ces créatures. Ils viennent d’un autre plan, réduisent les autres peuples en esclavage et leur dévorent le cerveau. Et nous sommes dans leur repaire.~
-@41072=~L’air est lourd ici... comme chargé d’électricité. Il y a quelque chose qui cloche.~
+@41072=~L’air est lourd i….. comme chargé d’électricité. Il y a quelque chose qui cloche.~
 @41073=~Vrek pas aimer ici. Flagelleur mental faire tourner tête de Vrek.~
 @41074=~Il faut rester concentrés. Tout est fait pour nous déstabiliser.~
 @41075=~Les Illithids sont redoutables. Un seul est déjà une menace, mais tout un groupe, c’est… bon, je suis sûr qu’on peut s’en sortir. J’espère juste qu’on n’aura pas à tuer le cerveau, hein. Sinon on est morts !~
@@ -1446,14 +1446,14 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41077=~Bravo. Terrifier un cerveau maître n’est pas chose aisée. Rares sont les mortels qui peuvent s’en vanter.~
 @41078=~Vallée pue pourriture. Pas de viande fraîche. Pourriture, huile et serpent.~
 @41079=~C’est vraiment triste… J’ai entendu parler de Kuldahar, de la vie qui abonde autour du Grand Chêne. Cet orque a transformé une vallée magnifique en un cimetière. Nous devons absolument purifier cet endroit. C’est une abomination.~
-@41080=~Tant d’âmes errantes ont été libérées par la Légion... La mort et le chaos semblent les suivre partout où elles passent. Il faudra beaucoup de temps et d’efforts pour effacer les traces de leurs méfaits, et sans doute des années avant que Val de Bise ne retrouve la paix.~
+@41080=~Tant d’âmes errantes ont été libérées p…la Légion... La mort et le chaos semblent les suivre partout où elles passent. Il faudra beaucoup de temps et d’efforts pour effacer les traces de leurs méfaits, et sans doute des années avant que Val de Bise ne retrouve la paix.~
 @41081=~Il est de notre devoir de panser les blessures que la Légion a infligées. Commençons par le commencement. Venez, il y a du travail.~
 @41082=~Si la vallée est dans cet état, j’ai peur de ce que la Légion a bien pu faire au Grand Chêne.~
 @41083=~Nous trouverons de la vraie nourriture pour vous, Vrek. Ne vous inquiétez pas.~
 @41084=~Nous trouverons de la vraie nourriture pour vous, Vrek. Mais d’abord, nous devons apaiser ces âmes errantes.~
 @41085=~La Légion a profané une terre sacrée. Il faut soigner les blessures de la nature.~
 @41086=~Ne vous laissez pas abattre. Il est plus que jamais nécessaire d’être forts.~
-@41087=~Moi aussi. Un lieu sacré dans cet état... ça fait mal au cœur.~
+@41087=~Moi aussi. Un lieu sacré dans cet é…... ça fait mal au cœur.~
 @41088=~Oui… Bientôt. Vrek pas patient.~
 @41089=~Ce Jermsy est vraiment grincheux, mais je ne sais pas si je peux lui en vouloir. Ce doit être dur de voir son foyer dans un tel état.~
 @41090=~Jermsy me fait penser à moi, sur les quais. Je sais ce que c’est que de se sentir impuissant et d’avoir peur.~
@@ -1477,9 +1477,9 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41108=~Vous avez raison. Je dois me ressaisir. Il y a trop d’enjeux.~
 @41109=~Non, pas question. Si je commence à boire pour oublier ma peur, je vais finir par me noyer.~
 @41110=~*soupir* Bon, très bien. J’aimerais bien avoir votre enthousiasme, moi.~
-@41111=~Je suis désolé pour vous, mon ami... et si jamais je trouve une solution, je vous le ferai savoir.~
-@41112=~On... on va vraiment traverser un portail pour aller dans le Chult ? Je n’ai pas encore récupéré de mon voyage en aéronef !~
-@41113=~Je n’ai jamais vu de jungle. Ce doit être magnifique... enfin, à part les yuan-ti.~
+@41111=~Je suis désolé pour vous, mon…i... et si jamais je trouve une solution, je vous le ferai savoir.~
+@41112=~On… on va vraiment traverser un portail pour aller dans le Chult ? Je n’ai pas encore récupéré de mon voyage en aéronef !~
+@41113=~Je n’ai jamais vu de jungle. Ce doit être magnif…e... enfin, à part les yuan-ti.~
 @41114=~La jungle ne va pas être un endroit facile pour Aocha. Les araignées des glaces ne sont pas faites pour les climats tropicaux. Je vais lui préparer un baume à la menthe pour son thorax.~
 @41115=~Je m’étonne que ces cambions se soient opposés à la Guerre sanglante. Leur héritage aurait dû les guider, comme pour la plupart des autres cambions. Le fait d’être les enfants de Belhifet en personne aurait dû leur conférer un statut particulier, en plus de les doter de grands pouvoirs. Ou ils ont désobéi, ou alors leur volonté est trop faible.~
 @41116=~Vous désapprouvez ? Je pensais que ces deux-là étaient suffisamment malfaisants pour répondre aux attentes d’un démon.~
@@ -1488,8 +1488,8 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41119=~Au moins, nous savons que Belhifet ne soutient pas la Légion. C’est une bonne nouvelle.~
 @41120=~J’espère que cela vous donnera une motivation supplémentaire pour les abattre lorsque nous rencontrerons enfin les jumeaux.~
 @41121=~C’est regrettable. Je préférerais qu’ils combattent les tanar’ri plutôt que les Dix-Cités.~
-@41122=~Le "Mal" seul n’a aucun sens sans direction. Ces enfants sont sans direction, perdus et confus quant à leur véritable but. Il faut les éduquer.~
-@41123=~Si vous espérez avoir l’occasion de les "éduquer", vous serez déçu. Ils ne vivront pas assez longtemps pour apprendre quoi que ce soit.~
+@41122=~Le “Mal” seul n’a aucun sens sans direction. Ces enfants sont sans direction, perdus et confus quant à leur véritable but. Il faut les éduquer.~
+@41123=~Si vous espérez avoir l’occasion de les “éduquer”, vous serez déçu. Ils ne vivront pas assez longtemps pour apprendre quoi que ce soit.~
 @41124=~Je n’ose imaginer le genre d’éducation que vous envisagez, démon.~
 @41125=~La douleur est le meilleur des professeurs.~
 @41126=~Je ne pense pas que les jumeaux soient de bons élèves.~
@@ -1498,7 +1498,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41129=~D’accord. Mais je doute qu’ils survivent à la leçon.~
 @41130=~Vous avez raison. Et un élève qui ne veut pas apprendre est inutile. J’attends avec impatience leur disparition. Le châtiment pour leur désobéissance est attendu depuis trop longtemps.~
 @41131=~En effet. Ils luttent en vain contre l’ordre naturel, essayant d’imposer leur volonté à un monde indifférent. J’ai honte de les considérer comme mes cousins… et j’attends leur disparition avec impatience. Le châtiment pour leur désobéissance est attendu depuis longtemps.~
-@41132=~Il se pourrait bien que des baatezus se battent à leurs côtés. Il est vrai que les jumeaux ont abandonné leur véritable mission, mais je les imagine bien enrôler leurs semblables pour mener à bien leur projet insensé. Il est possible qu’ils se soient faits des alliés pendant leur passage dans la Guerre Sanglante... et il est même très probable que leurs amis parmi les magiciens de Thay aient lié mes frères baatezus à leur service.~
+@41132=~Il se pourrait bien que des baatezus se battent à leurs côtés. Il est vrai que les jumeaux ont abandonné leur véritable mission, mais je les imagine bien enrôler leurs semblables pour mener à bien leur projet insensé. Il est possible qu’ils se soient faits des alliés pendant leur passage dans… Guerre Sanglante... et il est même très probable que leurs amis parmi les magiciens de Thay aient lié mes frères baatezus à leur service.~
 @41133=~Nous ne le savons pas. Il est vrai qu’Isair et Madae ont trahi les baatezus en refusant de participer à la Guerre Sanglante, mais Belhifet peut toujours avoir des projets pour eux… même s’ils l’ignorent eux-mêmes.~
 @41134=~Je suis un abishai, mortel. Je n’ai pas besoin d’être motivé pour accomplir ma part du marché.~
 @41135=~Les villes mortelles ne m’intéressent pas, mais en effet, je préférerais qu’ils combattent les tanar’ri.~
@@ -1527,9 +1527,9 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
  - Et sa foi lui interdit la guerre -
  - Mais les mots peuvent commander des armées -
  - Et les mots peuvent retenir la main -~
-@41144=~Enfin un endroit chaud ! Je... en fait... il fait trop chaud. Zut ! Je transpire déjà.~
-@41145=~Ça change du Val de Bise. J’aimerais savoir ce que ça fait de vivre ici... un monde aussi chaud qu’un foyer.~
-@41146=~J’aurai tellement d’histoires à raconter à mon clan... J’me demande s’ils vont me croire.~
+@41144=~Enfin un endroit chaud ! ….. en fa….. il fait trop chaud. Zut ! Je transpire déjà.~
+@41145=~Ça change du Val de Bise. J’aimerais savoir ce que ça fait de viv…ici... un monde aussi chaud qu’un foyer.~
+@41146=~J’aurai tellement d’histoires à raconter à … clan... J’me demande s’ils vont me croire.~
 @41147=~J’… j’entends tellement de cris… J’ai lu que les yuan-ti sont des tortionnaires, mais… J’en ai des frissons. Je n’ai jamais eu autant envie de tuer. Nous DEVONS absolument purifier ce temple. Il faut les anéantir tous, sans exception !~
 @41148=~J’aime bien votre attitude !~
 @41149=~Je suis surpris de vous voir si impatient de tuer, Sersa. Vous n’êtes pas du genre à rechercher la bagarre.~
@@ -1551,7 +1551,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41165=~C’est vraiment étrange. Tous ces sang-mêlés sont en partie humains. Leurs mères étaient de Kuldahar, elles sont toutes nées sous le même arbre. Et pourtant, ils sont à l’Œil du Dragon, élevés par d’autres yuan-ti qui leur ont appris à vénérer un dieu serpent maléfique.~
 @41166=~Je suis sérieux. Je n’arrive pas à trouver la réponse.~
 @41167=~Imaginez qu’on en ait amené un à Targos quand il était bébé. Il aurait été différent, avec sa peau verte, et les autres se seraient sans doute moqués de lui, mais il aurait pu grandir avec mes amis. J’aurais pu avoir un ami yuan-ti… ou en tomber amoureux. J’aurais peut-être même eu un enfant yuan-ti à la peau verte.~
-@41168=~Qu’est-ce qui les rend différents de moi ? Ce ne peut pas être une simple question de couleur de peau. Est-ce l’éducation qu’ils ont reçue ? Est-ce que le simple fait d’avoir été élevé par des yuan-ti suffit à rendre quelqu’un maléfique ? Peut-être que moi aussi, je me battrais à leurs côtés si j’avais été élevé ici, comme ces humains que nous avons rencontré au Chult. Et si c’est vrai... est-ce que c’est vrai aussi pour les gobelins ? Les orques ? Sherincal ? Les duergars ? Les flagelleurs mentaux ?~
+@41168=~Qu’est-ce qui les rend différents de moi ? Ce ne peut pas être une simple question de couleur de peau. Est-ce l’éducation qu’ils ont reçue ? Est-ce que le simple fait d’avoir été élevé par des yuan-ti suffit à rendre quelqu’un maléfique ? Peut-être que moi aussi, je me battrais à leurs côtés si j’avais été élevé ici, comme ces humai…que nous avons rencontré au Chult. Et si c’est vrai... est-ce que c’est vrai aussi pour les gobelins ? Les orques ? Sherincal ? Les duergars ? Les flagelleurs mentaux ?~
 @41169=~Est-ce que c’est vrai pour Isair et Madae ?~
 @41170=~Peu importe. Ils ont choisi le camp de la Légion, il est trop tard pour changer.~
 @41171=~C’est difficile à dire. Je me suis souvent demandé quelle aurait été mon existence si j’avais été élevé par des humains. Mais, même en ayant grandi avec les miens, je me bats pour Targos.~
@@ -1562,18 +1562,18 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41176=~On ne grandit jamais sans repères. Notre enfance ne dicte peut-être pas notre avenir, mais elle détermine notre point de départ, oui. Et la plupart des gens ne cherchent pas à changer le monde dans lequel ils ont grandi.~
 @41177=~Peut-être. Difficile de faire la part des choses.~
 @41178=~Il y a aussi des humains qui combattent pour la Légion, Reig. Il y a des humains qui grandissent parmi les humains et choisissent le mal, tout comme il y a des drows, des duergars ou des gobelinoïdes qui deviennent bons. Notre enfance peut nous influencer, mais nous ne sommes pas les esclaves du monde dans lequel nous avons grandi.~
-@41179=~Vous avez raison. Je réfléchis peut-être un peu trop. La situation est ce qu’elle est, et nous devons faire avec... De toute façon, même si l’un de ces sang-mêlés avait pu être à nos côtés, nous ne le saurons jamais. Il est trop tard pour philosopher lorsque l’heure est au combat.~
+@41179=~Vous avez raison. Je réfléchis peut-être un peu trop. La situation est ce qu’elle est, et nous devons fa… avec... De toute façon, même si l’un de ces sang-mêlés avait pu être à nos côtés, nous ne le saurons jamais. Il est trop tard pour philosopher lorsque l’heure est au combat.~
 @41180=~C’est vrai. Je ne devrais pas leur chercher des excuses. Vous avez grandi comme eux, mais vous avez fait des choix différents. Ils auraient pu faire de même, mais ils ne l’ont pas fait.~
 @41181=~Et je suis heureux que vous ayez fait ce choix.~
-@41182=~Je ne sais pas pourquoi j’ai posé cette question... Je ne fais plus la différence entre le Bien et le Mal. Tout est flou. Mais je suis content de vous avoir à mes côtés. Je ne sais pas ce qu’on ferait sans vous.~
+@41182=~Je ne sais pas pourquoi j’ai posé cette ques…n... Je ne fais plus la différence entre le Bien et le Mal. Tout est flou. Mais je suis content de vous avoir à mes côtés. Je ne sais pas ce qu’on ferait sans vous.~
 @41183=~Avant, les choses étaient claires. Sur les quais, tout était simple. Mais, aujourd’hui, je ne sais plus quoi penser… Je réfléchis peut-être trop.~
 @41184=~Peu importe. Que vous soyez humain, yuan-ti ou autre chose, je suis content de vous avoir avec nous. Je ne sais pas ce qu’on ferait sans vous.~
-@41185=~Vous avez raison. Ils ont toujours eu le choix. Ils l’ont encore, d’ailleurs... Comme nous. Rien ne nous empêche de faire demi-tour, et pourtant nous sommes toujours là. Nous avons TOUS choisi de nous battre.~
+@41185=~Vous avez raison. Ils ont toujours eu le choix. Ils l’ont encore, d’aill…s... Comme nous. Rien ne nous empêche de faire demi-tour, et pourtant nous sommes toujours là. Nous avons TOUS choisi de nous battre.~
 @41186=~Je ne pense pas. Je ne suis pas sûr que ces sang-mêlés puissent retourner à Kuldahar et être traités comme n’importe quel humain. Ils sont enracinés ici, tout comme je le suis à Targos… *soupir* Mais ça ne change rien. Même si l’un d’eux était un être bon, nous ne le saurons jamais.~
-@41187=~C’est vrai. Il est trop tard pour changer le cours des choses. Mais la prochaine fois qu’il y aura une génération de sang-mêlés... Nous les garderons près de chez nous, loin des ennemis. Pour qu’ils ne fassent pas les mauvais choix.~
+@41187=~C’est vrai. Il est trop tard pour changer le cours des choses. Mais la prochaine fois qu’il y aura une génération de sa…mêlés... Nous les garderons près de chez nous, loin des ennemis. Pour qu’ils ne fassent pas les mauvais choix.~
 @41188=~Avant, les choses étaient plus simples. La frontière entre le Bien et le Mal s’est estompée, et je ne pense pas que nous aurons le temps de rétablir l’équilibre.~
 @41189=~Nous serons trop occupés à essayer de nous entre-tuer.~
-@41190=~C’est vrai. J’aurais dû éviter de leur chercher des excuses... Il est trop tard, de toute façon. Les dés sont jetés et la guerre a commencé.~
+@41190=~C’est vrai. J’aurais dû éviter de leur chercher des…cuses... Il est trop tard, de toute façon. Les dés sont jetés et la guerre a commencé.~
 @41191=~Il ne nous reste plus qu’à y mettre fin.~
 @41192=~- Ce n’est pas la première fois que cela se produit -
  - Des centaines de personnes enfermées ici -
@@ -1607,7 +1607,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41218=~Ne vous inquiétez pas, je leur dirai que vous êtes un gnome bizarre.~
 @41219=~Vous voulez que je combatte mes frères d’armes pour vous protéger ?~
 @41220=~Ils penseront que vous êtes notre prisonnier.~
-@41221=~Je vous remercie. Mais je me demande ce que mon clan dirait s’il apprenait que je suis un "héros de Targos".~
+@41221=~Je vous remercie. Mais je me demande ce que mon clan dirait s’il apprenait que je suis un “héros de Targos”.~
 @41222=~Vous pouvez toujours leur mentir.~
 @41223=~Ils seront sans doute plus satisfaits de vos victoires que de vos choix en matière d’alliés.~
 @41224=~Ils savaient à quoi s’attendre, n’est-ce pas ?~
@@ -1615,7 +1615,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41226=~Noble idéal.~
 @41227=~Je n’aurais jamais cru entendre des paroles pareilles sortir de la bouche d’un gobelin.~
 @41228=~À votre place, je ne prendrais pas ce risque. Ils n’auront aucun moyen de savoir si vous mentez.~
-@41229=~Noble idéal... Bon, si c’est ce que vous voulez penser... Je ne discuterai pas.~
+@41229=~Noble idé….. Bon, si c’est ce que vous voulez pe…r... Je ne discuterai pas.~
 @41230=~Ce n’est pas parce que je suis un gobelin que je ne me sens aucune responsabilité envers mon clan. Je ne suis pas leur chef parce que je suis le plus fort. C’est aussi parce qu’ils me font confiance. Et je tiens à les garder.~
 @41231=~Je sais.~
 @41232=~C’est vrai. La mort de Guthma fera une belle histoire à raconter au coin du feu.~
@@ -1625,9 +1625,9 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41236=~C’est MOI votre allié, <PRO_RACE>. Je vous ai déjà défendu. J’attends de vous que vous fassiez de même.~
 @41237=~L’idée ne me plait pas, mais c’est peut-être la solution la plus sage. Ce sera plus facile à expliquer à vos soldats.~
 @41238=~Marché conclu.~
-@41239=~Ouais, je crois que "Vunarg est un ami de Targos" ne sera pas très bien vu par ici.~
+@41239=~Ouais, je crois que “Vunarg est un ami de Targos” ne sera pas très bien vu par ici.~
 @41240=~Continuez à faire la tête et à grogner, ça vous ira bien.~
-@41241=~Sans doute. Mon clan ne serait pas ravi de m’entendre dire que je suis un "ami de Targos".~
+@41241=~Sans doute. Mon clan ne serait pas ravi de m’entendre dire que je suis un “ami de Targos”.~
 @41242=~Bonne idée. Je vais essayer de me montrer un peu moins enthousiaste.~
 @41243=~~
 @41244=~~
@@ -1670,7 +1670,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41281=~Ha ! Arrêtez une épée à mains nues, et j’y croirai peut-être.~
 @41282=~Tout ce que je vois, c’est une bande de gamins qui s’amusent à faire les guerriers. Mettez-les en situation de combat et vous verrez ce qu’il adviendra d’eux.~
 @41283=~Oh, il ne faudrait surtout pas les offenser. Bon, d’accord. Ils peuvent perdre leur temps, ça m’est égal.~
-@41284=~Je n’ai jamais vu de "philosophie" qui ait eu des effets concrets. Pour moi, ces gens perdent leur temps.~
+@41284=~Je n’ai jamais vu de “philosophie” qui ait eu des effets concrets. Pour moi, ces gens perdent leur temps.~
 @41285=~En effet. J’aimerais bien voir ce que ça donnerait si ces moines se battaient pour de bon.~
 @41286=~He… s’il y en a un qui arrête une épée à mains nues, alors j’y croirai peut-être.~
 @41287=~C’est génial de rencontrer Malavon en chair et en os ! Je n’aurais jamais cru avoir cette chance. On dirait que notre aventure nous emmène vraiment partout…~
@@ -1686,8 +1686,8 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41297=~Il y a quelque chose d’anormal ici… Je le sens dans l’air.~
 @41298=~Je sens une puissante magie de transmutation. Ces driders ont été créés par des mages. Plusieurs, d’ailleurs, à mon avis. Il faudrait les retrouver.~
 @41299=~C’était vraiment dégoûtant… On dirait une poissonnerie. Et ces pauvres esclaves… J’me demande combien de temps ils ont vécu ici ?~
-@41300=~Un esclavagiste cruel est tombé sous nos coups. Nous pouvons en être fiers. L’esclavage est une abomination, mais s’emparer du cerveau de sa victime... c’est encore pire.~
-@41301=~Oui... Valas serait fier de nous.~
+@41300=~Un esclavagiste cruel est tombé sous nos coups. Nous pouvons en être fiers. L’esclavage est une abomination, mais s’emparer du cerveau de sa…ctime... c’est encore pire.~
+@41301=~Oui… Valas serait fier de nous.~
 @41232=~C’est vrai. La mort de Guthma fera une belle histoire à raconter au coin du feu.~
 @41233=~Ils étaient au courant. Je ne devrais pas m’inquiéter, ils ont compris pourquoi j’ai rejoint votre groupe.~
 @41234=~Vous devriez. Je ne vous serai d’aucune utilité si je me fais tuer.~
@@ -1695,9 +1695,9 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41236=~C’est MOI votre allié, <PRO_RACE>. Je vous ai déjà défendu. J’attends de vous que vous fassiez de même.~
 @41237=~L’idée ne me plait pas, mais c’est peut-être la solution la plus sage. Ce sera plus facile à expliquer à vos soldats.~
 @41238=~Marché conclu.~
-@41239=~Ouais, je crois que "Vunarg est un ami de Targos" ne sera pas très bien vu par ici.~
+@41239=~Ouais, je crois que “Vunarg est un ami de Targos” ne sera pas très bien vu par ici.~
 @41240=~Continuez à faire la tête et à grogner, ça vous ira bien.~
-@41241=~Sans doute. Mon clan ne serait pas ravi de m’entendre dire que je suis un "ami de Targos".~
+@41241=~Sans doute. Mon clan ne serait pas ravi de m’entendre dire que je suis un “ami de Targos”.~
 @41242=~Bonne idée. Je vais essayer de me montrer un peu moins enthousiaste.~
 @41243=~~
 @41244=~~
@@ -1740,7 +1740,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41281=~Ha ! Arrêtez une épée à mains nues, et j’y croirai peut-être.~
 @41282=~Tout ce que je vois, c’est une bande de gamins qui s’amusent à faire les guerriers. Mettez-les en situation de combat et vous verrez ce qu’il adviendra d’eux.~
 @41283=~Oh, il ne faudrait surtout pas les offenser. Bon, d’accord. Ils peuvent perdre leur temps, ça m’est égal.~
-@41284=~Je n’ai jamais vu de "philosophie" qui ait eu des effets concrets. Pour moi, ces gens perdent leur temps.~
+@41284=~Je n’ai jamais vu de “philosophie” qui ait eu des effets concrets. Pour moi, ces gens perdent leur temps.~
 @41285=~En effet. J’aimerais bien voir ce que ça donnerait si ces moines se battaient pour de bon.~
 @41286=~He… s’il y en a un qui arrête une épée à mains nues, alors j’y croirai peut-être.~
 @41287=~C’est génial de rencontrer Malavon en chair et en os ! Je n’aurais jamais cru avoir cette chance. On dirait que notre aventure nous emmène vraiment partout…~
@@ -1756,8 +1756,8 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41297=~Il y a quelque chose d’anormal ici… Je le sens dans l’air.~
 @41298=~Je sens une puissante magie de transmutation. Ces driders ont été créés par des mages. Plusieurs, d’ailleurs, à mon avis. Il faudrait les retrouver.~
 @41299=~C’était vraiment dégoûtant… On dirait une poissonnerie. Et ces pauvres esclaves… J’me demande combien de temps ils ont vécu ici ?~
-@41300=~Un esclavagiste cruel est tombé sous nos coups. Nous pouvons en être fiers. L’esclavage est une abomination, mais s’emparer du cerveau de sa victime... c’est encore pire.~
-@41301=~Oui... Valas serait fier de nous.~
+@41300=~Un esclavagiste cruel est tombé sous nos coups. Nous pouvons en être fiers. L’esclavage est une abomination, mais s’emparer du cerveau de sa…ctime... c’est encore pire.~
+@41301=~Oui… Valas serait fier de nous.~
 @41302=~Vrek penser à l’avenir. Après, quand la Légion sera morte… Où Vrek aller ?~
 @41303=~Où vous voudrez, Vrek. Vous l’avez mérité.~
 @41304=~J’espère que vous ne retournerez pas kidnapper les gens.~
@@ -1770,12 +1770,12 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41311=~Mieux vaut éviter les humains, Vrek. Vous risqueriez de finir au bûcher.~
 @41312=~Peut-être Vrek créer légion ; peut-être pas. Vrek pas encore décidé. Vrek savoir plus tard.~
 @41313=~Ne mentez pas à Vrek… Vrek savoir que Givre Ténébreux froid et vide. Vrek aller là où chaud et humide et riche, pour faire nouvelle maison.~
-@41314=~Oui. Peut-être Vrek trouver autre endroit... un endroit chaud et humide et riche et sûr.~
+@41314=~Oui. Peut-être Vrek trouver autre endro….. un endroit chaud et humide et riche et sûr.~
 @41315=~Bonne idée. Vrek aimer la vie sur la route. Vrek vouloir continuer à voyager.~
 @41316=~Mm. Bonne idée. Humains pas aimer Vrek, mais ils aimer or de Vrek.~
 @41317=~Vrek, vous permettez que j’examine cette étrange excroissance sur votre peau ?~
 @41318=~Pourquoi gnome vouloir ça ?~
-@41319=~C’est une mutation inhabituelle… sauf votre respect... et je suis sûr qu’elle contient une magie intéressante. C’est par simple curiosité, Vrek. Heu... vous permettez ?~
+@41319=~C’est une mutation inhabituelle… sauf votre res…t... et je suis sûr qu’elle contient une magie intéressante. C’est par simple curiosit…Vrek. Heu... vous permettez ?~
 @41320=~Gnome regarder. Pas toucher.~
 @41321=~Bon, très bien. Merci, Vrek.~
 @41322=~Vrek laisser gnome toucher, si gnome donner viande.~
@@ -1790,7 +1790,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
  - La route sera dure -
  - Mais vous serez heureux comme toujours -
  - Aimé par les étoiles et par le monde -~
-@41328=~Oh... C’est vraiment gentil !~
+@41328=~Oh… C’est vraiment gentil !~
 @41329=~- Je ne pouvais pas -
  - Faire autrement -
  - Personne ne le pouvait -~
@@ -1799,7 +1799,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41332=~Quoi ? Ah, oui, je suis attentive.~
 @41333=~Je ne veux pas être désagréable, mais vous êtes souvent distraite. Et dans notre métier, ça peut coûter cher. Il faut être prudent, à chaque fois qu’on arrive dans un nouvel endroit. D’accord ?~
 @41334=~Mais c’est justement ce qui est intéressant, les nouveaux endroits ! C’est plus facile d’être distrait ! Et c’est comme ça que je progresse, en magie. En observant les choses, les gens.~
-@41335=~Je... comprends. Si vous préférez faire comme ça, d’accord. Je vous surveillerai.~
+@41335=~Je… comprends. Si vous préférez faire comme ça, d’accord. Je vous surveillerai.~
 @41336=~Merci ! J’suis contente d’avoir un ami aussi fort pour me protéger.~
 @41337=~C’est avec plaisir, Pairi.~
 @41338=~J’avais des doutes à votre sujet, Vunarg. Mais vous défendez très bien le groupe… Je voulais vous remercier.~
@@ -1812,16 +1812,16 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41345=~Ha ha ! Je comprends.~
 @41346=~Hé…~
 @41347=~Reig, vous faites ce métier depuis longtemps, n’est-ce pas ?~
-@41348=~Pas vraiment. Avant de rejoindre ce groupe, j’étais simple soldat. J’ai vu beaucoup de choses depuis ce temps, mais... ça ne fait pas longtemps.~
-@41349=~Ah... Je voulais vous demander conseil. Vous avez l’air d’un vétéran.~
-@41350=~Merci. Mais je ne sais pas quoi vous dire. Vous êtes attentif, vous avez envie d’apprendre, on s’entend bien... Et vous êtes humble, ce qui est une qualité importante, et plutôt rare de nos jours. Ils vous ont bien appris les choses, au monastère.~
+@41348=~Pas vraiment. Avant de rejoindre ce groupe, j’étais simple soldat. J’ai vu beaucoup de choses depuis ce temps…ais... ça ne fait pas longtemps.~
+@41349=~Ah… Je voulais vous demander conseil. Vous avez l’air d’un vétéran.~
+@41350=~Merci. Mais je ne sais pas quoi vous dire. Vous êtes attentif, vous avez envie d’apprendre, on s’enten…ien... Et vous êtes humble, ce qui est une qualité importante, et plutôt rare de nos jours. Ils vous ont bien appris les choses, au monastère.~
 @41351=~Mais si jamais j’ai un conseil à vous donner, je vous le ferai savoir.~
 @41352=~Merci !~
 @41353=~Regardez devant vous, assassin.~
 @41354=~Occupez-vous de vos affaires. Je regarde où je veux.~
 @41355=~J’en ai vu, des obsédés comme vous… Vous n’êtes pas le premier. Laissez Pairi tranquille.~
 @41356=~Ah bon ? Elle est à VOUS ? Laissez-la choisir… Je suis sûr qu’elle préfèrerait un VRAI homme.~
-@41357=~Elle n’appartient à personne, Geoffrey, ni à moi ni à vous. Cherchez ailleurs... Quelqu’un qui acceptera ce que vous êtes.~
+@41357=~Elle n’appartient à personne, Geoffrey, ni à moi ni à vous. Cherchez …leurs... Quelqu’un qui acceptera ce que vous êtes.~
 @41358=~* reniflement * On est loin d’une taverne, vous savez ? C’est normal que je sois un peu assoiffé.~
 @41359=~Je suis sérieux, Geoffrey, je vous surveille.~
 @41360=~Veira, vous pouvez me prédire mon avenir ? Je suis curieux. Je n’ai jamais eu ma bonne aventure.~
@@ -1832,7 +1832,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
  - La route sera dure -
  - Mais vous serez heureux comme toujours -
  - Aimé par les étoiles et par le monde -~
-@41362=~Aww... C’est gentil…~
+@41362=~Aww… C’est gentil…~
 @41363=~- Je ne pouvais pas -
  - Faire autrement -
  - Personne ne le pouvait -~
@@ -1852,7 +1852,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41377=~Vrek pas avoir peur de vous. Une seule arme effrayer Vrek, et Vrek l’avoir !~
 @41378=~Mais Sersa est avec nous. C’est un Moine du Corbeau Noir. Elle devrait pouvoir entrer, même si c’est impossible pour nous ?~
 @41379=~Non. Sersa n’est qu’une apprentie. Elle ne maîtrise pas encore les Huit Chambres.~
-@41380=~Honnêtement, je n’ai pas trop envie de me battre contre des driders. Espérons qu’ils ne sont pas trop nombreux...~
+@41380=~Honnêtement, je n’ai pas trop envie de me battre contre des driders. Espérons qu’ils ne sont pas trop …breux...~
 @41381=~Et voici ma lame. Merci de m’avoir aidée à la retrouver. Je dois vous récompenser.~
 @41382=~J’ai vu vos actes. Vous êtes de preux guerriers luttant sans relâche contre le Mal. C’est pour cette raison que j’ai fait forger cette lame. Je vous remercie de me l’avoir rapportée, mais c’est à vous qu’elle appartient désormais. Servez-vous en à bon escient.~
 @41383=~Merci pour ce cadeau, prêtresse. Mais, si vous nous accompagnez, c’est vous qui devez la manier. C’est votre arme de prédilection et vous la méritez autant que nous. S’il vous plaît, reprenez-la.~
@@ -1948,7 +1948,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
  - Ne serait-ce qu’un instant -
  - Et nous serions sauvés -~
 @41441=~Les jumeaux sont très sûrs d’eux et de leurs idées. Le doute n’est pas un sentiment qu’ils connaissent.~
-@41442=~Si nous devons planter quelque chose dans leurs cœurs, une dague sera plus efficace que le "doute".~
+@41442=~Si nous devons planter quelque chose dans leurs cœurs, une dague sera plus efficace que le “doute”.~
 @41443=~~
 @41444=~- Vous avez peut-être raison -
  - On a peu de chances de les influencer -
@@ -2057,7 +2057,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41507=~C’est plutôt encourageant. Chaque victoire est une preuve de notre force. L’ennemi est puissant et on dirait parfois qu’il est sans fin, mais nous avons toujours réussi à le vaincre.~
 @41508=~Mais Isair et Madae sont notre ultime objectif, et on va bientôt pouvoir les affronter. La Légion n’a bientôt plus personne pour nous barrer le chemin.~
 @41509=~Je comprends ce que vous ressentez. C’est vraiment un plaisir de voir tous ces esclaves libres. Ca nous rappelle pourquoi on se bat.~
-@41510=~En effet. Mais voir tous ces gens enfin libres... ça redonne force et espoir. Notre combat contre la Légion n’est pas sans fin. Nos actions font la différence.~
+@41510=~En effet. Mais voir tous ces gens enfin libres… ça redonne force et espoir. Notre combat contre la Légion n’est pas sans fin. Nos actions font la différence.~
 @41511=~C’est ce que j’ai toujours souhaité. Rendre le monde meilleur.~
 @41512=~Sans doute. Je suis surtout soulagé de voir le résultat de tous nos efforts. Je n’ai jamais éprouvé de plaisir à tuer, mais savoir que ces gens sont enfin libres… ça redonne force et espoir. On ne se contente pas de combattre la Légion, on change vraiment le monde.~
 @41513=~Oui. On aura bientôt terminé… et on pourra passer à autre chose. J’ai hâte de retrouver une vie normale, plus simple. Comme avant.~
@@ -2075,7 +2075,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41525=~Je crois que je prendrai ma retraite après ça. J’ai vécu assez d’aventures pour dix vies.~
 @41526=~Dans deux cents ans, vous serez le plus grand sorcier de tous les temps. Mais vous aurez toujours un cœur d’enfant.~
 @41527=~Bonne chance, Pairi. Le monde est bizarre, vous savez.~
-@41528=~Bien sûr ! Je fais de mon mieux... Je trouve simplement que le monde est bien plus grand que je ne le pensais. On a vu des choses terribles, mais aussi de belles choses. J’ai envie de tout découvrir !~
+@41528=~Bien sûr ! Je fais de mon m…x... Je trouve simplement que le monde est bien plus grand que je ne le pensais. On a vu des choses terribles, mais aussi de belles choses. J’ai envie de tout découvrir !~
 @41529=~Aww, merci ! Je trouve simplement que le monde est bien plus grand que je ne le pensais. On a vu des choses terribles, mais aussi de belles choses. J’ai envie de tout découvrir !~
 @41530=~Je fais de mon mieux. Je trouve simplement que le monde est bien plus grand que je ne le pensais ! On a vu des choses horribles, mais aussi de très belles choses. J’ai envie de tout découvrir !~
 @41531=~Parfait ! J’aime ma vie, maintenant. Et apprendre la magie, c’est toujours amusant.~
@@ -2114,11 +2114,11 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41564=~Vrek fier. Même dieu pas pouvoir nous arrêter.~
 @41565=~- J’ignore quoi dire -
  - Je suis juste content d’être encore en vie -~
-@41566=~Wow. Hé hé... c’était la pire expérience de ma *vie* ! On a eu de la chance d’avoir affaire à un dieu enfant. Contre son père Baine, on n’aurait pas fait le poids.~
+@41566=~Wow. Hé ….. c’était la pire expérience de ma *vie* ! On a eu de la chance d’avoir affaire à un dieu enfant. Contre son père Baine, on n’aurait pas fait le poids.~
 @41567=~Oh, d’accord ! Je m’excuse. Je ferai attention. Peut-être qu’après on pourra discuter de ce qu’on va faire…~
 @41568=~Oh… Vous allez me manquer ! Je viendrai souvent vous voir. Je vous rapporterai des souvenirs. Je me demande où j’irai…~
-@41569=~... De plus, si Sersa termine les huit chambres toute seule, sans l’aide d’aucun membre du groupe, elle deviendra un véritable moine du Corbeau Noir.~
-@41570=~...L’heure est venue pour moi de m’essayer aux Huit Chambres. J’ai un peu peur. J’espère être prête.~
+@41569=~… De plus, si Sersa termine les huit chambres toute seule, sans l’aide d’aucun membre du groupe, elle deviendra un véritable moine du Corbeau Noir.~
+@41570=~…L’heure est venue pour moi de m’essayer aux Huit Chambres. J’ai un peu peur. J’espère être prête.~
 @41571=~Vous êtes un moine du Corbeau Noir, n’est-ce pas ? Vous n’avez pas déjà terminé les Chambres ?~
 @41572=~Pourquoi avoir peur ? Ce n’est qu’une forme d’entraînement pour devenir moine, non ?~
 @41573=~Que savez-vous des épreuves qui nous attendent dans les Huit Chambres ?~
@@ -2143,7 +2143,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
  - Qui traite les défunts -
  - Comme de simples outils -~
 @41591=~- J’entrevois une époque -
- - Ou "mon" Dieu -
+ - Ou “mon” Dieu -
  - Sera remplacé -
  - Et où les morts pourront reposer en paix -~
 @41592=~Ne dites pas de telles choses, esprit. N’oubliez pas que Myrkul peut vous faire trembler de terreur d’un simple geste.~
@@ -2152,7 +2152,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41595=~Vrek sentir chat.~
 @41596=~Des chats ? Où ça ?~
 @41597=~Toi sentir chat.~
-@41598=~Oh... heu… Je suis druide, je vis dans les bois, au milieu des animaux.~
+@41598=~Oh… heu… Je suis druide, je vis dans les bois, au milieu des animaux.~
 @41599=~Avant, druide pas sentir chat.~
 @41600=~Si vous le dites, Vrek. Content de revoir les héros de Targos, en tout cas !~
 @41601=~- Ce lieu me semble familier -
@@ -2162,7 +2162,7 @@ Puisque Xhaan n’a pas été invoqué par la magie conventionnelle, il n’y a pas de 
 @41603=~Oh, wow ! Levez les yeux ! Le sommet de la tour est toujours intact, il flotte au-dessus des ruines ! Comment va-t-on pouvoir monter là-haut ?~
 @41604=~Sersa nous a raconté ce qui nous attend dans les Huit Chambres :
 
-"Je sais qu’il faut actionner les leviers de la première Chambre dans un ordre précis, mais personne ne connaît cet ordre. Dans la deuxième, il faut également accomplir les épreuves dans un ordre bien défini.
+ “Je sais qu’il faut actionner les leviers de la première Chambre dans un ordre précis, mais personne ne connaît cet ordre. Dans la deuxième, il faut également accomplir les épreuves dans un ordre bien défini.
 
 Dans les six autres chambres, il suffit d’abattre tous les ennemis. Ceux de la troisième chambre lancent des éclairs. On dit toutefois qu’il y a une dalle au sol qui permet de s’en protéger.
 
@@ -2170,7 +2170,7 @@ Les ennemis de la quatrième chambre explosent. Il semblerait toutefois qu’il y a
 
 On dit que la sixième chambre grouille d’araignées. Je n’ai pas hâte d’y être. Dans la septième, il faut simplement assommer les ennemis, ça n’a pas l’air trop difficile.
 
-La dernière chambre est apparemment la plus difficile, car il faut combattre dans une pièce remplie de flammes."~
+La dernière chambre est apparemment la plus difficile, car il faut combattre dans une pièce remplie de flammes.”~
 @41605=~Sersa a réussi l’une des épreuves des Huit Chambres.~
 @41606=~Sersa a terminé les Huit Chambres.~
 @41607=~Sersa est désormais un moine du Corbeau Noir.~
@@ -2196,7 +2196,7 @@ La dernière chambre est apparemment la plus difficile, car il faut combattre dan
 @41627=~En fait, selon la loi infernale, les diables ne doivent obéir qu’aux diables de rang supérieur du même niveau, et aux archidiables. Je viens d’Averne, ce qui n’est pas votre cas, et aucun de nous deux n’est archidiable. La hiérarchie doit donc se décider par la force.~
 @41628=~Quelle insolence ! Un simple abishai blanc qui prétend me dicter ses conditions ! J’ai dû tuer et travailler pendant des centaines d’années pour passer du blanc au rouge, et vous pensez pouvoir devenir cornugon après une seule mission ?!~
 @41629=~Argh, c’est vous l’insolent ! Bon, très bien, on verra qui est le plus fort !~
-@41630=~...Vous ne m’avez pas encore vaincu, abishai. Mais, je vous fais une autre proposition : tuez tous ces mortels et je vous jure de vous promouvoir au rang de cornugon.~
+@41630=~…Vous ne m’avez pas encore vaincu, abishai. Mais, je vous fais une autre proposition : tuez tous ces mortels et je vous jure de vous promouvoir au rang de cornugon.~
 @41631=~Vous jurez de tenir parole ? Parfait. Vous m’avez bien servi, mortels, mais je n’ai plus besoin de vous. Adieu.~
 @41632=~Que le diable vous emporte, Xhaan ! Vous paierez pour votre trahison !~
 @41633=~Si vous nous attaquez, vous mourrez. Vous ne pouvez pas nous vaincre tous à la fois.~

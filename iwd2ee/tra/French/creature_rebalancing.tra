@@ -80,10 +80,10 @@ Poids :  0 lb.~
 @23017=~Larve Onirique~
 @23018=~Lame de Marilith~
 @23019=~Immonde créature ! Je ne te dirai pas mon nom ! Retourne dans les flammes brûlantes des Neuf Enfers !~
-@23020=~Oui, tu es un gélugon. Tu n’es surpassé en pouvoir que par les formidables seigneurs des fosses. Les gélugons sont originaires des strates glacées de Stygia et Cania, dans les Neuf Enfers. Je peux dire grâce à ta pâleur que tu viens de Cania. On vous attribue généralement un rôle d’espion ou de garde d’élite. Et si tu fais la preuve de ta puissance en tant que gélugon, ce dont je ne doute pas, tu auras l’insigne honneur d’être jeté dans la Fosse de Flammes pendant mille et un jours, puis...~
+@23020=~Oui, tu es un gélugon. Tu n’es surpassé en pouvoir que par les formidables seigneurs des fosses. Les gélugons sont originaires des strates glacées de Stygia et Cania, dans les Neuf Enfers. Je peux dire grâce à ta pâleur que tu viens de Cania. On vous attribue généralement un rôle d’espion ou de garde d’élite. Et si tu fais la preuve de ta puissance en tant que gélugon, ce dont je ne doute pas, tu auras l’insigne honneur d’être jeté dans la Fosse de Flammes pendant mille et un jours, puis…~
 @23021=~D’après ce que je peux dire, tu es un diable. Les diables viennent des Neuf Enfers, si je ne m’abuse. Pourquoi est-ce si important ?~
 @23022=~Je dois dire que jamais je n’ai rencontré de mortel connaissant aussi bien la Guerre Sanglante et les habitants de Baator. Cela mérite le respect. Pour te récompenser de ton savoir, je vais te laisser la vie sauve. Maintenant, j’ai beaucoup à faire. Au revoir, <CHARNAME>, mais sache que si nos chemins se croisent à nouveau, je te pulvériserai.~
-@23023=~Comme tous les héros mortels. En tout cas, je commençais à avoir faim. Après vous, gentils-diables...~
+@23023=~Comme tous les héros mortels. En tout cas, je commençais à avoir faim. Après vous, gentils-diables…~
 @23024=~Espadon de Chevalier de la Mort~
 @23025=~Humpf. Lui ancien chef, mais Vrek le battre au combat. Lui se moquer de chef maintenant. C’est Vrek le chef, ici maintenant !~
 @23026=~Élémentaire de feu colossal~
@@ -97,7 +97,7 @@ Poids :  0 lb.~
 @23034=~Vous combattez de manière impressionnante, mortels. Vous avez porté un coup modéré à mon essence. Il me faudra du temps avant de pouvoir manifester à nouveau mon avatar.~
 @23035=~MAIS NE CROYEZ PAS VOUS EN TIRER COMME CA ! JE VOUS HAIS ET QUAND JE RÉCUPÉRERAI, JE VOUS CHERCHERAI POUR ME VENGER !~
 @23036=~Vous avez vaincu l’avatar d’un dieu, l’un des plus puissants ennemis qui soit. Bravo.~
-@23037=~Au début, ils étaient furieux et voulaient me mettre en pièces pour l’affront que je leur avais fait. Ils se sont finalement calmés et ont décidé de m’enfermer ici, dans l’obscurité, et de me torturer à l’aide d’illusions. Parfois, j’aurais préféré être mort...~
+@23037=~Au début, ils étaient furieux et voulaient me mettre en pièces pour l’affront que je leur avais fait. Ils se sont finalement calmés et ont décidé de m’enfermer ici, dans l’obscurité, et de me torturer à l’aide d’illusions. Parfois, j’aurais préféré être mort…~
 @23038=~Nous avons libéré un gnome du nom de Puddy Hautelégende, qui était torturé par un créature cauchemardesque. Bien que nous ayons déverrouillé la porte de sa cellule, il a refusé de partir tant qu’on ne lui aurait pas trouvé un passage sécurisé. Nous lui avons promis de le ramener chez lui à Bryn Shander, estimant qu’il ne pourrait pas survivre seul dans les Vaux glacés.~
 @23039=~Bon sang, reprenez-vous ! Regardez, le monstre est mort ! Je ne suis pas une illusion !~
 @23040=~Bâton de Pouvoir~
@@ -125,13 +125,13 @@ Poids :  0 lb.~
 @23062=~15 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
 @23063=~20 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
 @23064=~TU CONNAIS MON NOM ?!~
-@23065=~Aeij-Kllenzr’t, j’invoque ton vrai nom, "Fureur Emprisonnée", et je t’ordonne de sortir de ton autel et de nous affronter.~
+@23065=~Aeij-Kllenzr’t, j’invoque ton vrai nom, “Fureur Emprisonnée”, et je t’ordonne de sortir de ton autel et de nous affronter.~
 @23066=~Oui, apparemment. Au revoir.~
 @23067=~C’EST *TOUT* CE QUE TU ES CAPABLE DE FAIRE AVEC MON VRAI NOM ? TRÈS BIEN ! JE VAIS TE FAIRE UNE DÉMONSTRATION DE MA PUISSANCE !~
 @23068=~QUI ES-*TU* POUR T’ADRESSER AINSI À UNE DÉESSE ? JE VAIS CH TIER TON ORGUEIL SUR-LE-CHAMP !~
 @23069=~Vous avez vaincu Aeij-Kllenzr’t, le bannissant ainsi de l’autel d’Aurile.~
 @23070=~En mourant, Aeij-Kllenzr’t vous insuffle une vague d’énergie qui régénère votre organisme et augmente votre vitalité, et vous offre une meilleure résistance aux attaques électriques.~
-@23071=~Nous avons découvert l’un des autels d’Aurile dans une pièce isolée au niveau inférieur du temple de glace. L’autel renfermait un esprit des tempêtes, Aaij-Kllenzr’t. Il voulait se faire passer pour Aurile mais nous l’avons banni en prononçant son véritable nom, "Fureur Emprisonnée".~
+@23071=~Nous avons découvert l’un des autels d’Aurile dans une pièce isolée au niveau inférieur du temple de glace. L’autel renfermait un esprit des tempêtes, Aaij-Kllenzr’t. Il voulait se faire passer pour Aurile mais nous l’avons banni en prononçant son véritable nom, “Fureur Emprisonnée”.~
 @23072=~Griffe d’Abishaï~
 @23073=~Souffle du Loup Arctique~
 @23074=~15 points de dégâts résistés, sauf contre une arme perforante d’alignement bon~

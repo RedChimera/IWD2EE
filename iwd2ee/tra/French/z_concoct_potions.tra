@@ -292,7 +292,7 @@ PARAMÈTRES :
 Se dissipe après 10 rounds
 Poids : 0,45 kg (1 lb)~
 @4738 	= ~Nectar de Sang~
-@4739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
+@4739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion a “elée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +2 à toutes les caractéristiques pendant 1 heure.
 
@@ -307,7 +307,7 @@ PARAMÈTRES :
 Se dissipe après 1 heure
 Poids : 0,45 kg (1 lb)~
 @54738 	= ~Nectar de Sang~
-@54739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
+@54739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion a “elée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +6 à toutes les caractéristiques pendant 1 heure.
 
@@ -324,7 +324,7 @@ Poids : 0,45 kg (1 lb)~
 @4740 	= ~Ichor Purifié~
 @4741 	= ~L’ichor peut provenir de nombreuses sources, mais la source la plus pratique est le sang d’un Enfant de Bhaal. À l’état brut, ce sang n’est pas différent de tout autre -- en extraire la véritable puissance est un processus complexe.
 
-D’abord, l’alchimiste doit mener des recherches sur la divinité parentale et concevoir un rituel pour activer le potentiel caché de l’ichor. Ensuite, l’essence doit être extraite en léchant le sang avec des bandages de momie, distillée et précipitée dans une centrifugeuse, produisant un liquide doré à l’odeur douce... ou, dans le cas d’ichor provenant de divinités maléfiques, un mélange nauséabond de graisse et de poussière grossière.
+D’abord, l’alchimiste doit mener des recherches sur la divinité parentale et concevoir un rituel pour activer le potentiel caché de l’ichor. Ensuite, l’essence doit être extraite en léchant le sang avec des bandages de momie, distillée et précipitée dans une centrifugeuse, produisant un liquid…oré à l’odeur douce... ou, dans le cas d’ichor provenant de divinités maléfiques, un mélange nauséabond de graisse et de poussière grossière.
 
 La consommation de cette substance est généralement fatale ; l’ichor purifié doit être dilué et adapté au système de l’utilisateur pour avoir un effet positif. La méthode exacte dépend de l’utilisateur et nécessite des recherches et des tests intensifs pour être découverte. Si l’utilisateur est chanceux, la méthode pourrait être aussi inoffensive que de broyer des perles et de mélanger l’ichor avec du jus de citrouille et du beurre pour produire une potion étrange mais parfaitement buvable.
 

@@ -182,7 +182,7 @@ Poids : 0~
 //@10060	= ~Amulette du Léopard des Neiges~
 @10061	= ~Les chamans de nombreux clans barbares voient le léopard des neiges comme le chasseur le plus gracieux et le plus efficace des étendues glacées ; il est même fréquent que les guerriers de ces mêmes clans s’échinent à reproduire en combat les mouvements et les mimiques du terrible prédateur. Les chamans ont même, à quelques rares occasions, élaboré des sorts accordant la dextérité du léopard à leurs meilleurs guerriers. L’effet de cet enchantement est toutefois limité dans le temps et ne procure qu’un avantage temporaire aux combattants.
 
-Un groupe de chamans aurait cependant décidé de peaufiner cet enchantement en étudiant attentivement le prédateur des neiges. Ils passèrent un an loin de leurs tribus respectives, traquant le léopard et tentant d’en comprendre toutes les subtilités. Ils revinrent un beau jour au sein de leurs clans, chacun porteur d’un collier d’argent orné d’un pendentif figurant une patte de léopard, qu’ils donnèrent à leurs meilleurs guerriers. L’effet fut immédiat, les combattants se sentant instantanément imprégnés de la dextérité du léopard des neiges... L’Amulette du Léopard des Neiges, puisque tel est son nom, devint dès lors l’un des objets les plus prisés des différents clans barbares. Seuls les guerriers les plus puissants peuvent un jour rêver de porter cette amulette et cette émulation exacerbe encore davantage la volonté de tous les jeunes barbares.
+Un groupe de chamans aurait cependant décidé de peaufiner cet enchantement en étudiant attentivement le prédateur des neiges. Ils passèrent un an loin de leurs tribus respectives, traquant le léopard et tentant d’en comprendre toutes les subtilités. Ils revinrent un beau jour au sein de leurs clans, chacun porteur d’un collier d’argent orné d’un pendentif figurant une patte de léopard, qu’ils donnèrent à leurs meilleurs guerriers. L’effet fut immédiat, les combattants se sentant instantanément imprégnés de la dextérité du léopard des neiges… L’Amulette du Léopard des Neiges, puisque tel est son nom, devint dès lors l’un des objets les plus prisés des différents clans barbares. Seuls les guerriers les plus puissants peuvent un jour rêver de porter cette amulette et cette émulation exacerbe encore davantage la volonté de tous les jeunes barbares.
 
 PARAMÈTRES :
 
@@ -192,7 +192,7 @@ Poids : 0,45 kg (1 lb)~
 //@10062	= ~Amulette Cœur de Léopard des Neiges~
 @10063	= ~Les chamans de nombreux clans barbares voient le léopard des neiges comme le chasseur le plus gracieux et le plus efficace des étendues glacées ; il est même fréquent que les guerriers de ces mêmes clans s’échinent à reproduire en combat les mouvements et les mimiques du terrible prédateur. Les chamans ont même, à quelques rares occasions, élaboré des sorts accordant la dextérité du léopard à leurs meilleurs guerriers. L’effet de cet enchantement est toutefois limité dans le temps et ne procure qu’un avantage temporaire aux combattants.
 
-Un groupe de chamans aurait cependant décidé de peaufiner cet enchantement en étudiant attentivement le prédateur des neiges. Ils passèrent un an loin de leurs tribus respectives, traquant le léopard et tentant d’en comprendre toutes les subtilités. Ils revinrent un beau jour au sein de leurs clans, chacun porteur d’un collier d’argent orné d’un pendentif figurant une patte de léopard, qu’ils donnèrent à leurs meilleurs guerriers. L’effet fut immédiat, les combattants se sentant instantanément imprégnés de la dextérité du léopard des neiges... L’Amulette Cœur de Léopard des Neiges, puisque tel est son nom, devint dès lors l’un des objets les plus prisés des différents clans barbares. Seuls les guerriers les plus puissants peuvent un jour rêver de porter cette amulette et cette émulation exacerbe encore davantage la volonté de tous les jeunes barbares.
+Un groupe de chamans aurait cependant décidé de peaufiner cet enchantement en étudiant attentivement le prédateur des neiges. Ils passèrent un an loin de leurs tribus respectives, traquant le léopard et tentant d’en comprendre toutes les subtilités. Ils revinrent un beau jour au sein de leurs clans, chacun porteur d’un collier d’argent orné d’un pendentif figurant une patte de léopard, qu’ils donnèrent à leurs meilleurs guerriers. L’effet fut immédiat, les combattants se sentant instantanément imprégnés de la dextérité du léopard des neiges… L’Amulette Cœur de Léopard des Neiges, puisque tel est son nom, devint dès lors l’un des objets les plus prisés des différents clans barbares. Seuls les guerriers les plus puissants peuvent un jour rêver de porter cette amulette et cette émulation exacerbe encore davantage la volonté de tous les jeunes barbares.
 
 PARAMÈTRES :   
 
@@ -615,17 +615,17 @@ PARAMÈTRES :
 Durée d’incantation réduite de 2
 Poids : 0,23 kg (0,5 lb)~
 //@10172	= ~Froidarmure~
-@10173	= ~Peu de gens ont entendu parler du Cercle de Glace (disparu depuis longtemps), un mouvement clandestin s’opposant à la Tour de l’Arcane... et rares sont ceux qui connaissent l’anneau porté par les membres de cette organisation, de leur vivant et après leur mort.
+@10173	= ~Peu de gens ont entendu parler du Cercle de Glace (disparu depuis longtemps), un mouvement clandestin s’opposant à la Tour de l’Arcane… et rares sont ceux qui connaissent l’anneau porté par les membres de cette organisation, de leur vivant et après leur mort.
 
 Le Cercle de Glace était financé par un marchand d’Eauprofonde dont le nom a été effacé des annales de l’histoire par la Tour de l’Arcane. Il semblerait que ce marchand ait gardé rancune contre la Tour de l’Arcane suite à un différend au cours duquel il dut abandonner ses biens à Luskan, ainsi qu’une bonne partie de ses marchandises. Il dépêcha alors une poignée de sorciers d’Eauprofonde pour lui procurer des anneaux magiques et recruter un groupe de tueurs de mages, dont la mission consistait à anéantir la Tour de l’Arcane. Les vingt tueurs et le marchand devaient ensuite se retrouver à Luskan.
 
-Ironie du sort, c’est le marchand lui-même qui provoqua la chute de son “mouvement” en ne portant pas l’anneau magique qu’il avait fait forger pour chaque membre de son groupe. Il était en effet à peine arrivé à Luskan que des télépathes purent lire dans ses pensées ; tous les membres de son organisation secrète furent ainsi identifiés et bien sûr soigneusement éliminés... Leurs anneaux ne les protégèrent pas longtemps contre les hordes de monstres des magiciens et la pluie de flèches mortelles. Il semblerait qu’un seul de ces tueurs de mages, Martek, soit parvenu à leur échapper... et qu’il reste aujourd’hui encore totalement introuvable...
+Ironie du sort, c’est le marchand lui-même qui provoqua la chute de son “mouvement” en ne portant pas l’anneau magique qu’il avait fait forger pour chaque membre de son groupe. Il était en effet à peine arrivé à Luskan que des télépathes purent lire dans ses pensées ; tous les membres de son organisation secrète furent ainsi identifiés et bien sûr soigneusement éliminés… Leurs anneaux ne les protégèrent pas longtemps contre les hordes de monstres des magiciens et la pluie de flèches mortelles. Il semblerait qu’un seul de ces tueurs de mages, Martek, soit parvenu à leur échapper… et qu’il reste aujourd’hui encore totalement introuvable…
 
-Quoi qu’il en soit, le Cercle de Glace disparut aussi vite qu’il était né et le pauvre marchand vécut un véritable enfer auprès de la Tour de l’Arcane jusqu’à son dernier souffle... Il semblerait que ses restes aient d’ailleurs participé à la conception du bras gauche d’un golem de chair du nom de Bok.
+Quoi qu’il en soit, le Cercle de Glace disparut aussi vite qu’il était né et le pauvre marchand vécut un véritable enfer auprès de la Tour de l’Arcane jusqu’à son dernier souffle… Il semblerait que ses restes aient d’ailleurs participé à la conception du bras gauche d’un golem de chair du nom de Bok.
 
 Ces petits anneaux de Froidarmure sont manifestement faits de cristal de glace. Ils sont très froids au toucher et ne peuvent être portés par un magicien qui en ignore la fonction première.
 
-Si vous comptez dans vos rangs un tueur ou une tueuse de mages, ces anneaux pourront peut-être enfin remplir l’usage auquel ils étaient destinés... sans que de stupides marchands ne viennent gâcher vos efforts.
+Si vous comptez dans vos rangs un tueur ou une tueuse de mages, ces anneaux pourront peut-être enfin remplir l’usage auquel ils étaient destinés… sans que de stupides marchands ne viennent gâcher vos efforts.
 
 PARAMÈTRES :
 
@@ -638,9 +638,9 @@ Poids : 0~
 
 L’organisation et la fabrication des anneaux étaient financées par un marchand d’Eauprofonde dont le nom a été effacé des annales de l’histoire par la Tour de l’Arcane. Il semblerait que ce marchand ait gardé rancune contre la Tour de l’Arcane suite à un différend au cours duquel il dut abandonner ses biens à Luskan, ainsi qu’une bonne partie de ses marchandises. Il dépêcha alors une poignée de sorciers d’Eauprofonde pour lui procurer des anneaux magiques et recruter un groupe de tueurs de mages, dont la mission consistait à anéantir la Tour de l’Arcane. Les vingt tueurs et le marchand devaient ensuite se retrouver à Luskan.
 
-L’un des tueurs de mages, un dénommé Martek, craignait à juste titre la puissance de la Tour de l’Arcane et préféra donc faire forger un anneau bien plus puissant par un de ses amis Nains. Les premiers membres du Cercle de Glace tombèrent rapidement sous les coups de la Tour de l’Arcane, qui avait depuis longtemps découvert le fin mot de l’histoire... Seul Martek parvint à leur échapper en fuyant vers le sud, protégé par son anneau spécial. Il retourna auprès de son ami Nain et lui rendit son anneau, que celui-ci vendit à un marchand en route pour Bryn Shander.
+L’un des tueurs de mages, un dénommé Martek, craignait à juste titre la puissance de la Tour de l’Arcane et préféra donc faire forger un anneau bien plus puissant par un de ses amis Nains. Les premiers membres du Cercle de Glace tombèrent rapidement sous les coups de la Tour de l’Arcane, qui avait depuis longtemps découvert le fin mot de l’histoire… Seul Martek parvint à leur échapper en fuyant vers le sud, protégé par son anneau spécial. Il retourna auprès de son ami Nain et lui rendit son anneau, que celui-ci vendit à un marchand en route pour Bryn Shander.
 
-Cet anneau de Froidarmure d’acier diffère des autres anneaux du Cercle de Glace par sa fine tige d’acier déroulée sous la couche de glace... un peu comme Martek, en quelque sorte.
+Cet anneau de Froidarmure d’acier diffère des autres anneaux du Cercle de Glace par sa fine tige d’acier déroulée sous la couche de glace… un peu comme Martek, en quelque sorte.
 
 PARAMÈTRES :
 
@@ -867,7 +867,7 @@ PARAMÈTRES :
 Bonus à la CA (générique) : +5
 Poids : 0,23 kg (0,5 lb)~
 //@10248	= ~Bandeaux de Concentration~
-@10249	= ~Les enseignements de Kamjin-Doh de Kara-Tur stipulent qu’un véritable maître d’armes ne compte pas sur le cuir, la maille ou les plaques d’une armure pour survivre, mais uniquement sur sa propre capacité à ne jamais être touché... ce qui implique qu’il doit maîtriser les mouvements de son adversaire comme les siens. Seule une concentration extrême permet d’appliquer un tel principe au beau milieu d’un combat, et telle est exactement la fonction de ces brassards.
+@10249	= ~Les enseignements de Kamjin-Doh de Kara-Tur stipulent qu’un véritable maître d’armes ne compte pas sur le cuir, la maille ou les plaques d’une armure pour survivre, mais uniquement sur sa propre capacité à ne jamais être touché… ce qui implique qu’il doit maîtriser les mouvements de son adversaire comme les siens. Seule une concentration extrême permet d’appliquer un tel principe au beau milieu d’un combat, et telle est exactement la fonction de ces brassards.
 
 Ces Bandeaux de Concentration étaient à l’origine utilisés pour l’entraînement des recrues de Kamjin-Doh et ils irradient une faible lueur lorsqu’ils sont effleurés par la lumière du crépuscule. Celui qui les porte ressent un grand calme intérieur et voit ses sens exacerbés au point qu’il est capable de “lire” les mouvements de son adversaire. Et si jamais le porteur de ces brassards venait à être touché, ils atténuent la douleur (appelée aussi “distraction” par les maîtres du Kamjin-Doh) au point de la rendre quasiment inexistante.
 
@@ -882,7 +882,7 @@ Sagesse requise : 14 (minimum)~
 //@10250	= ~Bandeaux du Maître~
 @10251	= ~Le Maître des Lames, dernier kensai de Kamjin-Doh, connut une mort déshonorante dans les étendues sauvages du Kara-Tur occidental ; ses brassards de cuir furent arrachés de ses bras, tout comme ses bras furent arrachés de ses épaules en représailles de sa responsabilité dans la chute de Kamjin-Doh. On ne sait pas précisément qui parvint à le vaincre, mais de nombreuses rumeurs attribuent sa mort aux esprits de trois kensai de Kamjin-Doh, revenus d’entre les morts pour punir le renégat.
 
-On découvrit que les bandeaux de concentration que le Maître des Lames portait depuis son apprentissage s’étaient teintés de sang et de honte et qu’ils ne brillaient plus de la même lumière. Alors qu’il perdait sa concentration lors de son ultime combat, ses bandeaux se rouillèrent au point de quasiment se désagréger lorsqu’ils lui furent arrachés. Il n’en reste pas moins que ces bandeaux, bien qu’en piteux état, renferment toujours le pouvoir, la force et la malice du Maître des Lames... rendant leur nouveau porteur encore plus dangereux.
+On découvrit que les bandeaux de concentration que le Maître des Lames portait depuis son apprentissage s’étaient teintés de sang et de honte et qu’ils ne brillaient plus de la même lumière. Alors qu’il perdait sa concentration lors de son ultime combat, ses bandeaux se rouillèrent au point de quasiment se désagréger lorsqu’ils lui furent arrachés. Il n’en reste pas moins que ces bandeaux, bien qu’en piteux état, renferment toujours le pouvoir, la force et la malice du Maître des Lames… rendant leur nouveau porteur encore plus dangereux.
 
 Celui qui porte ces bandeaux doit impérativement conserver trois choses à l’esprit : leur fonction, sa concentration et l’objectif de son ennemi. Que ces trois éléments soient présents dans son cœur et les bandeaux ne le trahiront pas à l’heure de l’affrontement.
 
@@ -1035,7 +1035,7 @@ Régénération : le porteur récupère 1 point de vie par seconde
 Jet de sauvegarde : bonus de +2
 Poids : 1,36 kg (3 lb)~
 @10290	= ~Ceinture du Dragon~
-@10291	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement...
+@10291	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement…
 
 La boucle de la ceinture est ornée d’une grande écaille de dragon blanc. Le reste de la ceinture est fait de cuir et de fourrure d’ours polaire.
 
@@ -1044,7 +1044,7 @@ PARAMÈTRES :
 Bonus au jet de sauvegarde : +4 aux jets de Réflexes
 Poids : 1,36 kg (3 lb)~
 @10292	= ~Ceinture du Dragon enchantée~
-@10293	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement...
+@10293	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement…
 
 La boucle de la ceinture est ornée d’une grande écaille de dragon blanc. Le reste de la ceinture est fait de cuir et de fourrure d’ours polaire.
 
@@ -1168,7 +1168,7 @@ Régénération : le porteur récupère 1 point de vie par seconde
 Jet de sauvegarde : bonus de +2
 Poids : 1,36 kg (3 lb)~
 @10290	= ~Ceinture du Dragon~
-@10291	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement...
+@10291	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement…
 
 La boucle de la ceinture est ornée d’une grande écaille de dragon blanc. Le reste de la ceinture est fait de cuir et de fourrure d’ours polaire.
 
@@ -1177,7 +1177,7 @@ PARAMÈTRES :
 Bonus au jet de sauvegarde : +4 aux jets de Réflexes
 Poids : 1,36 kg (3 lb)~
 @10292	= ~Ceinture du Dragon enchantée~
-@10293	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement...
+@10293	= ~Un barbare du nom d’Edhan demanda au chaman de sa tribu de lui enchanter cette ceinture ; Edhan risquait en effet quotidiennement sa vie, chassant les jeunes dragons blancs dans la toundra du Val de Bise. Cette occupation particulièrement dangereuse lui permit d’engranger plus d’or qu’un barbare ne peut en rêver, mais, l’âge avançant, Edhan perdit de ses réflexes ; sa ceinture lui fut donc d’un grand secours dans ses dernières années. Il succomba toutefois aux assauts de deux dragons blancs alors qu’il venait de fêter ses cinquante-six hivers. Les membres de la tribu du Grand Dracosire parvinrent à rassembler les morceaux épars de son cadavre, mais ne l’enterrèrent pas, préférant vendre sa ceinture et le reste de son équipement…
 
 La boucle de la ceinture est ornée d’une grande écaille de dragon blanc. Le reste de la ceinture est fait de cuir et de fourrure d’ours polaire.
 
@@ -1199,7 +1199,7 @@ Spécial :
  Force : bonus de +10
 Poids : 0,91 kg (2 lb)~
 //@10298	= ~Ceinture d’Ombre~
-@10299	= ~Cette ceinture semble se fondre dans les vêtements de son porteur lorsqu’elle est nouée autour de la taille, au point de devenir quasiment invisible. Des ceintures de ce type étaient portées par les émissaires de Kresselack le Loup Noir lorsqu’il les chargea de trouver un endroit sûr pour y finir ses jours... Elles leur servaient notamment à passer inaperçus aux yeux de leurs ennemis (et des magiciens à leur solde). Les émissaires finirent par trouver un lieu digne de Kresselack, qui les récompensa en les tuant les uns après les autres, leur reprenant les ceintures pour en tapisser les murs de son tombeau, quelque part dans le Val des Ombres.
+@10299	= ~Cette ceinture semble se fondre dans les vêtements de son porteur lorsqu’elle est nouée autour de la taille, au point de devenir quasiment invisible. Des ceintures de ce type étaient portées par les émissaires de Kresselack le Loup Noir lorsqu’il les chargea de trouver un endroit sûr pour y finir ses jours… Elles leur servaient notamment à passer inaperçus aux yeux de leurs ennemis (et des magiciens à leur solde). Les émissaires finirent par trouver un lieu digne de Kresselack, qui les récompensa en les tuant les uns après les autres, leur reprenant les ceintures pour en tapisser les murs de son tombeau, quelque part dans le Val des Ombres.
 
 Les ceintures furent découvertes quelques années plus tard par des pilleurs de tombes qui les disséminèrent un peu partout dans le Nord.
 
@@ -1256,7 +1256,7 @@ Poids : 1,36 kg (3 lb)~
 //@10308	= ~Ceinture liante du Corbeau Noir~
 @10309	= ~La Ceinture liante du Corbeau Noir appartenait vraisemblablement à l’un des disciples du monastère du Corbeau Noir, un sanctuaire situé au fin fond de l’Épine Dorsale du Monde. Le Corbeau Noir est une figure mythique d’Uthgardt, un esprit vengeur venu en ce monde pour punir l’arrogance des barbares et leur apprendre l’humilité. Décrit comme un homme noir de peau, aux yeux de braise et aux poignets ornés de chaînes brisées, le Corbeau Noir apparaît le plus souvent au cœur de batailles épiques, libérant les esclaves et combattant les injustices dans tous les royaumes. Certains historiens avancent que le Corbeau Noir pourrait avoir été un Drow ou assimilé, mais d’autres affirment qu’il était un dieu mineur venu sur terre pour mettre un terme à toutes les formes d’esclavage et d’oppression.
 
-Cette ceinture noire est faite de soie d’araignée et se porte lâche autour de la taille. Elle permet à son porteur de se concentrer uniquement sur le combat, libérant son esprit de toutes les distractions et canalisant son énergie en vue de vaincre ses ennemis. Seul un moine peut la porter...
+Cette ceinture noire est faite de soie d’araignée et se porte lâche autour de la taille. Elle permet à son porteur de se concentrer uniquement sur le combat, libérant son esprit de toutes les distractions et canalisant son énergie en vue de vaincre ses ennemis. Seul un moine peut la porter…
 
 PARAMÈTRES :
 
@@ -1375,7 +1375,7 @@ Charisme : bonus de +6
 Vigilance accrue : immunise le porteur contre les attaques sournoises
 Poids : 0,91 kg (2 lb)~
 //@10344	= ~Cape des Bois~
-@10345	= ~Les feuilles qui tombent du grand chêne de Kuldahar sont étonnamment souples, comme du tissu, et peuvent ainsi être assemblées en un manteau à l’aide de sorts druidiques. Cette cape rend son porteur plus discret et silencieux, lui permettant de se fondre dans son environnement naturel, évitant ainsi d’attirer l’attention de la faune dangereuse. En cas de danger, le porteur de la cape peut même s’en enrouler, utilisant l’étonnante résistance du vêtement à son avantage...
+@10345	= ~Les feuilles qui tombent du grand chêne de Kuldahar sont étonnamment souples, comme du tissu, et peuvent ainsi être assemblées en un manteau à l’aide de sorts druidiques. Cette cape rend son porteur plus discret et silencieux, lui permettant de se fondre dans son environnement naturel, évitant ainsi d’attirer l’attention de la faune dangereuse. En cas de danger, le porteur de la cape peut même s’en enrouler, utilisant l’étonnante résistance du vêtement à son avantage…
 
 PARAMÈTRES :
 
@@ -1385,7 +1385,7 @@ Spécial :
  Sort : Peau d’écorce (niveau 12) une fois par jour
 Poids : 0,45 kg (1 lb)~
 //@10346	= ~Cape des Bois Profonds~
-@10347	= ~Cette cape enchantée est un puissant objet magique conçu il y a fort longtemps par Everard, archidruide de Kuldahar. Elle a été confectionnée à partir d’un morceau d’écorce du grand arbre qui fut enchanté pour prendre la forme d’un manteau. Cette cape rend son porteur plus discret et silencieux, lui permettant de se fondre dans un environnement naturel, évitant ainsi d’attirer l’attention de la faune dangereuse. En cas de danger, le porteur de la cape peut même s’y enrouler et profiter de la protection du Grand Chêne, utilisant l’étonnante résistance du vêtement à son avantage...
+@10347	= ~Cette cape enchantée est un puissant objet magique conçu il y a fort longtemps par Everard, archidruide de Kuldahar. Elle a été confectionnée à partir d’un morceau d’écorce du grand arbre qui fut enchanté pour prendre la forme d’un manteau. Cette cape rend son porteur plus discret et silencieux, lui permettant de se fondre dans un environnement naturel, évitant ainsi d’attirer l’attention de la faune dangereuse. En cas de danger, le porteur de la cape peut même s’y enrouler et profiter de la protection du Grand Chêne, utilisant l’étonnante résistance du vêtement à son avantage…
 
 PARAMÈTRES :
 
@@ -1513,9 +1513,9 @@ Poids : 0,45 kg (1 lb)~
 //@10377	= ~Nid de Corbeau~
 @10378	= ~Aeryl Barbedor était un pirate particulièrement flamboyant qui écumait les côtes de l’Amn. Il était capitaine d’un navire de guerre, le Rhonda Bondissant, un cutter à vingt canons considéré comme l’un des plus rapides en haute mer. Les vaisseaux marchands qui avaient la mauvaise fortune de croiser sa route ne pouvaient jamais le distancer ; ils étaient alors irrémédiablement abordés et pillés.
 
-Il n’y a toutefois rien d’inhabituel à ce que le capitaine Aeryl Barbedor et l’équipage du Rhonda Bondissant aient agi de la sorte. C’est plutôt le déroulement de l’abordage en tant que tel qui peut étonner... A peine l’équipage adverse vaincu, le capitaine Aeryl Barbedor grimpait au plus haut mât de son navire et, avec une grâce exquise, se laissait glisser le long d’un cordage jusqu’au pont du vaisseau abordé. Au moment même où il y posait le pied, l’équipage vaincu semblait tout simplement subjugué par l’élégance et la prestance du capitaine, au point qu’une partie des marins demandait alors souvent à servir sur le Rhonda Bondissant ! Mais une fois les pirates repartis avec la cargaison du vaisseau marchand, les membres d’équipage restés à bord revenaient instantanément à des sentiments nettement moins amicaux à l’égard du capitaine Barbedor.
+Il n’y a toutefois rien d’inhabituel à ce que le capitaine Aeryl Barbedor et l’équipage du Rhonda Bondissant aient agi de la sorte. C’est plutôt le déroulement de l’abordage en tant que tel qui peut étonner… A peine l’équipage adverse vaincu, le capitaine Aeryl Barbedor grimpait au plus haut mât de son navire et, avec une grâce exquise, se laissait glisser le long d’un cordage jusqu’au pont du vaisseau abordé. Au moment même où il y posait le pied, l’équipage vaincu semblait tout simplement subjugué par l’élégance et la prestance du capitaine, au point qu’une partie des marins demandait alors souvent à servir sur le Rhonda Bondissant ! Mais une fois les pirates repartis avec la cargaison du vaisseau marchand, les membres d’équipage restés à bord revenaient instantanément à des sentiments nettement moins amicaux à l’égard du capitaine Barbedor.
 
-Personne ne sut comment le capitaine Barbedor s’y prenait pour “charmer” ainsi ses victimes, jusqu’au jour où il perdit son bandana coloré alors qu’il allait faire son entrée sur le pont du navire saisi... Le comité d’accueil qui l’attendait n’avait bien évidemment plus rien de commun avec ce qu’il connaissait, puisque les marins capturés se jetèrent sur lui et le battirent à mort. Dès lors, il devint évident que le bandana du capitaine contenait une magie le rendant nettement plus charismatique.
+Personne ne sut comment le capitaine Barbedor s’y prenait pour “charmer” ainsi ses victimes, jusqu’au jour où il perdit son bandana coloré alors qu’il allait faire son entrée sur le pont du navire saisi… Le comité d’accueil qui l’attendait n’avait bien évidemment plus rien de commun avec ce qu’il connaissait, puisque les marins capturés se jetèrent sur lui et le battirent à mort. Dès lors, il devint évident que le bandana du capitaine contenait une magie le rendant nettement plus charismatique.
 
 Le malheur veut que la bandana ait été perdu dans la bataille qui s’ensuivit. Toutefois, des rumeurs parcourent régulièrement les quais au sujet d’un pirate particulièrement audacieux qui a pour habitude d’aborder les navires ennemis en glissant le long des cordages de son mât, un bandana coloré autour du front.
 
@@ -1634,7 +1634,7 @@ Résistance : 20/- en résistance au feu.
 Augmente de 20% tous les dégâts du feu infligés par le personnage.
 Poids : 1,36 kg (3 lb)~
 //@10399	= ~Robe de mage de Résistance à l’Électricité~
-@10400	= ~Plus rare que ses consœurs, la robe de résistance électrique est toutefois un objet relativement courant. Certains possesseurs s’en servent de protection contre la foudre, d’autres des intrigues de leurs collègues...
+@10400	= ~Plus rare que ses consœurs, la robe de résistance électrique est toutefois un objet relativement courant. Certains possesseurs s’en servent de protection contre la foudre, d’autres des intrigues de leurs collègues…
 
 PARAMÈTRES :
 
@@ -2315,7 +2315,7 @@ Poids : 9,07 kg (20 lb)~
 
 Si un éclaireur suffisamment compétent peut bien souvent observer un campement de soldats ou de brigands, il n’en va pas de même lorsque le camp est défendu par des sorts de détection. C’est pour cette raison que les armures telles qu’Intrus ont été créées.
 
-Il y a de nombreuses générations, un Elfe des bois mit au point une technique permettant d’intégrer des sorts d’antidétection à une armure de cuir. A l’aide de ce cuir, les éclaireurs pouvaient infiltrer les campements ennemis sans craindre de se faire détecter par la magie. Malheureusement, l’un d’eux fit preuve de négligence, ce qui lui valut d’être capturé par un groupe de Drows. Après plusieurs jours de torture, les Elfes noirs apprirent comment les éclaireurs ennemis parvenaient à s’approcher si facilement, ainsi que le nom du village où ces armures spéciales étaient confectionnées. Comme de bien entendu, tous les habitants du village, hommes, femmes et enfants, furent aussitôt massacrés... sauf un. Ce cuir n’a survécu que parce que son porteur se trouvait en dehors du village le jour où les Drows lancèrent leur assaut.
+Il y a de nombreuses générations, un Elfe des bois mit au point une technique permettant d’intégrer des sorts d’antidétection à une armure de cuir. A l’aide de ce cuir, les éclaireurs pouvaient infiltrer les campements ennemis sans craindre de se faire détecter par la magie. Malheureusement, l’un d’eux fit preuve de négligence, ce qui lui valut d’être capturé par un groupe de Drows. Après plusieurs jours de torture, les Elfes noirs apprirent comment les éclaireurs ennemis parvenaient à s’approcher si facilement, ainsi que le nom du village où ces armures spéciales étaient confectionnées. Comme de bien entendu, tous les habitants du village, hommes, femmes et enfants, furent aussitôt massacrés… sauf un. Ce cuir n’a survécu que parce que son porteur se trouvait en dehors du village le jour où les Drows lancèrent leur assaut.
 
 PARAMÈTRES :
 
@@ -2334,7 +2334,7 @@ Poids : 2,27 kg (5 lb)~
 
 Si un éclaireur suffisamment compétent peut bien souvent observer un campement de soldats ou de brigands, il n’en va pas de même lorsque le camp est défendu par des sorts de détection. C’est pour cette raison que les armures telles qu’Intrus Silencieux ont été créées.
 
-Il y a de nombreuses générations, un Elfe des bois mit au point une technique permettant d’intégrer des sorts d’antidétection à une armure de cuir. A l’aide de ce cuir, les éclaireurs pouvaient infiltrer les campements ennemis sans craindre de se faire détecter par la magie. Malheureusement, l’un d’eux fit preuve de négligence, ce qui lui valut d’être capturé par un groupe de Drows. Après plusieurs jours de torture, les Elfes noirs apprirent comment les éclaireurs ennemis parvenaient à s’approcher si facilement, ainsi que le nom du village où ces armures spéciales étaient confectionnées. Comme de bien entendu, tous les habitants du village, hommes, femmes et enfants, furent aussitôt massacrés... sauf un. Ce cuir n’a survécu que parce que son porteur se trouvait en dehors du village le jour où les Drows lancèrent leur assaut.
+Il y a de nombreuses générations, un Elfe des bois mit au point une technique permettant d’intégrer des sorts d’antidétection à une armure de cuir. A l’aide de ce cuir, les éclaireurs pouvaient infiltrer les campements ennemis sans craindre de se faire détecter par la magie. Malheureusement, l’un d’eux fit preuve de négligence, ce qui lui valut d’être capturé par un groupe de Drows. Après plusieurs jours de torture, les Elfes noirs apprirent comment les éclaireurs ennemis parvenaient à s’approcher si facilement, ainsi que le nom du village où ces armures spéciales étaient confectionnées. Comme de bien entendu, tous les habitants du village, hommes, femmes et enfants, furent aussitôt massacrés… sauf un. Ce cuir n’a survécu que parce que son porteur se trouvait en dehors du village le jour où les Drows lancèrent leur assaut.
 
 PARAMÈTRES :
 
@@ -2613,9 +2613,9 @@ Spécial :
  Lorsque le porteur est sous l’effet de Rage de berserker, Rage animale ou Rage sanguinaire, il obtient une résistance de 5/- à tous les dégâts.
 Poids : 9,07 kg (20 lb)~
 @10525	= ~Fatalité du mercenaire~
-@10526	= ~Le Destin du Mercenaire n’avait rien de joyeux dans le grand nord, du moins jusqu’à récemment... Cette armure était portée par les membres d’une compagnie de mercenaires, la Phalange d’Argent, qui fut contrainte de prendre la route du nord après une décision du conseil des Dix-Cités, qui réduisait très notablement la présence de mercenaires au sein des dix villes pendant les trois prochaines saisons. La conclusion du conseil était que les mercenaires utilisés jusque-là n’étaient que de piètres combattants dont les qualités martiales n’étaient pas à la mesure de leur coût d’entretien faramineux...
+@10526	= ~Le Destin du Mercenaire n’avait rien de joyeux dans le grand nord, du moins jusqu’à récemment… Cette armure était portée par les membres d’une compagnie de mercenaires, la Phalange d’Argent, qui fut contrainte de prendre la route du nord après une décision du conseil des Dix-Cités, qui réduisait très notablement la présence de mercenaires au sein des dix villes pendant les trois prochaines saisons. La conclusion du conseil était que les mercenaires utilisés jusque-là n’étaient que de piètres combattants dont les qualités martiales n’étaient pas à la mesure de leur coût d’entretien faramineux…
 
-La Phalange d’Argent dut vendre nombre de ses armures pour payer le passage de ses membres et de son matériel (chevaux, machines de siège, etc.) vers le sud, et elle jura bien de ne jamais revenir dans cette région désolée, quand bien même elle croulerait sous une avalanche de gobelins ou de monstres sanguinaires. Il semblerait donc que ces mêmes mercenaires n’auraient guère fait fortune en prédisant l’avenir...
+La Phalange d’Argent dut vendre nombre de ses armures pour payer le passage de ses membres et de son matériel (chevaux, machines de siège, etc.) vers le sud, et elle jura bien de ne jamais revenir dans cette région désolée, quand bien même elle croulerait sous une avalanche de gobelins ou de monstres sanguinaires. Il semblerait donc que ces mêmes mercenaires n’auraient guère fait fortune en prédisant l’avenir…
 
 Cette armure est très prisée dans le nord, autant pour la protection qu’elle accorde que pour sa maniabilité et sa souplesse, qui permettent une grande liberté de mouvement.
 
@@ -2654,7 +2654,7 @@ Un jour, son vœu se réalisa et il réussit à s’enfuir dans l’Ombre-Terre après av
 
 Malheureusement pour lui, ces derniers le bannirent en voyant ses atroces cicatrices. Dépité par cette trahison, il se fit alors un point d’honneur à se venger de ses ravisseurs en les tuant de la façon la plus douloureuse possible. Pour ce faire, il apprit la magie noire, tout en continuant à s’entraîner au maniement des armes. Quand il se sentit prêt, il se fit mercenaire afin de gagner de l’argent et de s’acheter un meilleur équipement. Il voulait notamment acquérir une cotte de mailles si légère qu’elle ne l’empêcherait pas de lancer des sorts. La chance était avec lui le jour où il rencontra un forgeron nain qui accepta de lui forger l’armure qu’il souhaitait. Bien vite, la cotte de mailles fut achevée et Drakkas put partir se venger.
 
-Disparaissant sans laisser de traces, il s’enfonça dans les profondeurs de l’Ombre-Terre et personne n’entendit plus jamais parler de lui. Par contre, son armure finit par ressurgir. Nul ne sait comment cela se produisit, mais on pense généralement qu’il s’agit d’un message subtil des Drows... message que chacun est libre d’interpréter à sa guise, bien sûr.
+Disparaissant sans laisser de traces, il s’enfonça dans les profondeurs de l’Ombre-Terre et personne n’entendit plus jamais parler de lui. Par contre, son armure finit par ressurgir. Nul ne sait comment cela se produisit, mais on pense généralement qu’il s’agit d’un message subtil des Drows… message que chacun est libre d’interpréter à sa guise, bien sûr.
 
 PARAMÈTRES :
 
@@ -2674,7 +2674,7 @@ Un jour, son vœu se réalisa et il réussit à s’enfuir dans l’Ombre-Terre après av
 
 Malheureusement pour lui, ces derniers le bannirent en voyant ses atroces cicatrices. Dépité par cette trahison, il se fit alors un point d’honneur à se venger de ses ravisseurs en les tuant de la façon la plus douloureuse possible. Pour ce faire, il apprit la magie noire, tout en continuant à s’entraîner au maniement des armes. Quand il se sentit prêt, il se fit mercenaire afin de gagner de l’argent et de s’acheter un meilleur équipement. Il voulait notamment acquérir une cotte de mailles si légère qu’elle ne l’empêcherait pas de lancer des sorts. La chance était avec lui le jour où il rencontra un forgeron nain qui accepta de lui forger l’armure qu’il souhaitait. Bien vite, la cotte de mailles fut achevée et Drakkas put partir se venger.
 
-Disparaissant sans laisser de traces, il s’enfonça dans les profondeurs de l’Ombre-Terre et personne n’entendit plus jamais parler de lui. Par contre, son armure finit par ressurgir. Nul ne sait comment cela se produisit, mais on pense généralement qu’il s’agit d’un message subtil des Drows... message que chacun est libre d’interpréter à sa guise, bien sûr.
+Disparaissant sans laisser de traces, il s’enfonça dans les profondeurs de l’Ombre-Terre et personne n’entendit plus jamais parler de lui. Par contre, son armure finit par ressurgir. Nul ne sait comment cela se produisit, mais on pense généralement qu’il s’agit d’un message subtil des Drows… message que chacun est libre d’interpréter à sa guise, bien sûr.
 
 PARAMÈTRES :
 
@@ -3767,7 +3767,7 @@ Compétence : Arme courante, petite lame
 Type d’arme : À une main~
 
 @10727 = ~Mot de la Fin~
-@10728 = ~Le mot “Assez !” est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux... d’une manière ou d’une autre. Quand on la lance, sa précision et les enchantements de vitesse qui l’accompagnent lui permettent d’atteindre sa cible. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
+@10728 = ~Le mot “Assez !” est inscrit sur la lame de cette dague. A en juger par la façon dont elle a été forgée, on peut penser qu’elle est originaire d’une école d’orateurs du Cormyr, où elle a peut-être été utilisée pour mettre un terme aux débats houleux… d’une manière ou d’une autre. Quand on la lance, sa précision et les enchantements de vitesse qui l’accompagnent lui permettent d’atteindre sa cible. Il ne semble pas qu’elle ait été utilisée au corps à corps, aussi peut-on penser qu’il s’agit d’une arme purement décorative.
 
 PARAMÈTRES :
 
@@ -4801,11 +4801,11 @@ Il fallut six ans à Ehld pour parcourir le monde et les plans et retrouver les m
 
 Quand le dernier des six eut enfin répondu de ses crimes devant sa sainte lame, Ehld revint auprès de sa reine et déposa Cera Sumat à ses pieds. La lame autrefois ternie brillait désormais de mille feux, le récit des voyages du duc s’inscrivant en lettres d’or sur la pierre précieuse du pommeau. Ehld ôta la pierre, la sertit à un collier et l’offrit à la reine. Il l’enjoignit de toujours la garder sur elle, afin de ne jamais oublier que le Mal est toujours présent de par le monde, mais que l’on peut en triompher pour peu que l’on serve la justice et que l’on reste fidèle à ses principes.
 
-Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli... et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
+Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli… et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
 
-Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal...
+Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal…
 
-Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction...
+Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction…
 
 PARAMÈTRES :
 
@@ -4841,11 +4841,11 @@ Il fallut six ans à Ehld pour parcourir le monde et les plans et retrouver les m
 
 Quand le dernier des six eut enfin répondu de ses crimes devant sa sainte lame, Ehld revint auprès de sa reine et déposa Cera Sumat à ses pieds. La lame autrefois ternie brillait désormais de mille feux, le récit des voyages du duc s’inscrivant en lettres d’or sur la pierre précieuse du pommeau. Ehld ôta la pierre, la sertit à un collier et l’offrit à la reine. Il l’enjoignit de toujours la garder sur elle, afin de ne jamais oublier que le Mal est toujours présent de par le monde, mais que l’on peut en triompher pour peu que l’on serve la justice et que l’on reste fidèle à ses principes.
 
-Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli... et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
+Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli… et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
 
-Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal...
+Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal…
 
-Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction...
+Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction…
 
 PARAMÈTRES :
 
@@ -5073,7 +5073,7 @@ Type d’arme : À une main~
 @10939    = ~Courroux +1~
 @10940    = ~“C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix.”
 
-“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour.”
+“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence… l’Abomination Sanguinaire était de retour.”
 
  -- extrait des “Contes de Maître Pélib”
 
@@ -5104,7 +5104,7 @@ Type d’arme : À une main~
 @10941    = ~Courroux sanglant +3~
 @10942    = ~“C’est au moment où Borab le Profanateur mit la Citadelle d’Azur à sac qu’Alémis Portepaix, fils cadet du comte Marimor, s’introduisit dans la salle au trésor secrète que son père croyait inconnue de tous. La pièce ne contenait que trois objets, Courroux sanglant, Haine et Fureur : l’épée, la hache et l’armure de Hurom, ancêtre d’Alémis connu sous le surnom d’Abomination Sanguinaire avant de se débarrasser de la malédiction de ces trois objets et de prendre le nom de Portepaix.”
 
-“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence... l’Abomination Sanguinaire était de retour.”
+“Alémis, qui n’était encore qu’un adolescent, revêtit la terrible armure et brandit les deux armes. Sans la moindre assistance, il se fraya un chemin sanglant au milieu des rangs de l’armée de Borab, jusqu’à ce qu’il se retrouve face au demi-géant, qu’il massacra avec autant d’aisance que ses sbires humanoïdes. Le père, la mère, les frères et les sœurs d’Alémis avaient tous été mis à mort, mais cela ne l’émut en rien. Il partit dans les Royaumes, les yeux luisants de haine, tuant monstres et brigands partout où il les trouvait. Mais au fil des ans, il se mit à s’en prendre à tous ceux qui croisaient son chemin, et il fallut bien se rendre à l’évidence… l’Abomination Sanguinaire était de retour.”
 
  -- extrait des “Contes de Maître Pélib”
 
@@ -5280,7 +5280,7 @@ Type d’arme : À une main~
 @10975	= ~Cimeterre des  mes +5~
 @10976	= ~En l’honneur d’Iyachtu Xvim, Madae demanda à l’un de ses meilleurs armuriers de forger un cimeterre pour Iyachtu Xvim, le Cimeterre des  mes. Une fois l’arme terminée, elle la fit placer dans la main d’une statue de Iyachtu Xvim, dans l’espoir qu’un jour le dieu se manifeste sous la forme d’un de ses avatars et utilise ce présent dans l’un de ses combats. Arme de prédilection d’Iyachtu Xvim, le Cimeterre des  mes a le pouvoir de littéralement absorber l’essence vitale de ses victimes. Sa large lame noire polie est taillée en dents de scie sur la partie opposée à la courbe, ce qui lui permet d’infliger des blessures atroces en taillant dans les chairs des malheureuses victimes.
 
-La terrifiante apparence de cette redoutable lame ne fait que renforcer encore la prestance et l’impression de puissance qui émane d’Iyachtu Xvim. Même cette copie de la lame originale accorde un avantage prépondérant aux avatars du dieu s’ils avaient à combattre... Quant à savoir le bénéfice qu’en tirerait un mortel...
+La terrifiante apparence de cette redoutable lame ne fait que renforcer encore la prestance et l’impression de puissance qui émane d’Iyachtu Xvim. Même cette copie de la lame originale accorde un avantage prépondérant aux avatars du dieu s’ils avaient à combattre… Quant à savoir le bénéfice qu’en tirerait un mortel…
 
 PARAMÈTRES :
 
@@ -5467,13 +5467,13 @@ Force requise : 18~
 
 La Tribu de l’Ours fut parmi les premières à subir l’assaut des légions déferlantes d’Arakon l’archimage. Les barbares luttèrent vaillamment mais furent rapidement submergés par les innombrables forces d’Arakon. Hreidgar, l’un des plus anciens chasseurs et guerriers de la tribu, perdit connaissance au cours de la bataille et ne reprit conscience qu’au milieu d’un champ de carnage. Sa femme et ses enfants avaient disparu. Sans un mot, Hreidgar ramassa son épée et se mit à la poursuite des hordes d’Arakon, déterminé à récupérer les siens et à venger ses compagnons tombés au champ d’honneur.
 
-Hreidgar fut l’un des premiers à mettre son épée au service de Jerrod le chaman lorsqu’il unifia les tribus barbares pour stopper la progression d’Arakon et participa à toutes les batailles, même pendant les jours noirs où Arakon fit déverser ses armées infernales sur Jerrod et ses alliés. A chaque combat, Hreidgar et son épée ne faisaient qu’un, hurlant tel le vent en repoussant ses innombrables ennemis... jusqu’à ce qu’ils tombent. Malheureusement, Hreidgar ne trouva nulle trace de sa femme et de ses enfants lorsque Arakon fut finalement vaincu.
+Hreidgar fut l’un des premiers à mettre son épée au service de Jerrod le chaman lorsqu’il unifia les tribus barbares pour stopper la progression d’Arakon et participa à toutes les batailles, même pendant les jours noirs où Arakon fit déverser ses armées infernales sur Jerrod et ses alliés. A chaque combat, Hreidgar et son épée ne faisaient qu’un, hurlant tel le vent en repoussant ses innombrables ennemis… jusqu’à ce qu’ils tombent. Malheureusement, Hreidgar ne trouva nulle trace de sa femme et de ses enfants lorsque Arakon fut finalement vaincu.
 
-Hreidgar poursuivit néanmoins sa quête et ses voyages l’auraient mené aux grandes falaises du glacier de Reghed au cours de la Saison des Pluies de Lances, puis sur la Mer des Glaces Mouvantes où il s’embarqua avec la Tribu de la Grande Baleine et combattit les esclavagistes venus du sud, jusqu’à sa destination finale, la petite bourgade de la Pointe d’Enholm, où il mit une fois de plus son épée au service des défenseurs contre les hordes de Kresselack le Loup Noir. On raconte qu’Hreidgar combattit si vaillamment que Kresselack abandonna le champ de bataille en honneur de ce fier guerrier... mais pas avant de lui avoir asséné le coup fatal qui allait mettre un terme à sa vie aventureuse.
+Hreidgar poursuivit néanmoins sa quête et ses voyages l’auraient mené aux grandes falaises du glacier de Reghed au cours de la Saison des Pluies de Lances, puis sur la Mer des Glaces Mouvantes où il s’embarqua avec la Tribu de la Grande Baleine et combattit les esclavagistes venus du sud, jusqu’à sa destination finale, la petite bourgade de la Pointe d’Enholm, où il mit une fois de plus son épée au service des défenseurs contre les hordes de Kresselack le Loup Noir. On raconte qu’Hreidgar combattit si vaillamment que Kresselack abandonna le champ de bataille en honneur de ce fier guerrier… mais pas avant de lui avoir asséné le coup fatal qui allait mettre un terme à sa vie aventureuse.
 
 Malgré ses nombreuses blessures, Hreidgar partit alors vers le nord, parcourant plusieurs lieues avant de tomber à terre. Dans un dernier sursaut, le vieux guerrier planta sa lame dans la glace et prononça alors ce qui serait sa propre oraison funèbre. “Que les cieux se déchirent”, proclama-t-il, “car mon voyage ici s’achève !”
 
-Les habitants de la Pointe d’Enholm retrouvèrent son corps le lendemain, mais ne purent jamais mettre la main sur sa fameuse lame. On raconte que l’épée voyage désormais dans les cieux, montrant leur chemin à ceux qui ont un long voyage devant eux... et les guidant jusqu’à leur destination finale.
+Les habitants de la Pointe d’Enholm retrouvèrent son corps le lendemain, mais ne purent jamais mettre la main sur sa fameuse lame. On raconte que l’épée voyage désormais dans les cieux, montrant leur chemin à ceux qui ont un long voyage devant eux… et les guidant jusqu’à leur destination finale.
 
 PARAMÈTRES :
 
@@ -5491,7 +5491,7 @@ Type d’arme : À deux mains~
 //@11023	= ~Destruction ailée~
 @11024	= ~Cette épée massive, qui a dû être forgée à l’attention d’un guerrier doté d’une force colossale, est aussi élégante que repoussante. Sa lame métallique a été renforcée par des ossements humains, tandis que son manche et son fourreau sont recouverts de chair humaine.
 
-On ne sait pas grand-chose sur les origines de cette épée, mais les aristocrates de la Mulhorande évoquent son existence depuis de nombreuses générations. Selon une de leurs légendes, à chaque fois qu’une femme de leur pays donnait naissance à une fille après avoir été réduite en esclavage, elle priait l’ancien pharaon Tyrish par une nuit de pleine lune. Entendant ses suppliques, ce dernier lui envoyait l’arme, qui n’était alors pas plus grosse qu’une dague, en la faisant descendre du ciel jusqu’à la malheureuse. Celle-ci n’avait plus alors qu’à s’en servir pour défigurer sa fille, après quoi l’arme repartait, non sans avoir légèrement grandi au passage. Jugées sans valeur par leurs gardiens, les fillettes pouvaient racheter leur liberté, ce qui leur permettait d’échapper à l’enfer de l’esclavage. Et les blessures physiques finissent toutes par se refermer avec le temps...
+On ne sait pas grand-chose sur les origines de cette épée, mais les aristocrates de la Mulhorande évoquent son existence depuis de nombreuses générations. Selon une de leurs légendes, à chaque fois qu’une femme de leur pays donnait naissance à une fille après avoir été réduite en esclavage, elle priait l’ancien pharaon Tyrish par une nuit de pleine lune. Entendant ses suppliques, ce dernier lui envoyait l’arme, qui n’était alors pas plus grosse qu’une dague, en la faisant descendre du ciel jusqu’à la malheureuse. Celle-ci n’avait plus alors qu’à s’en servir pour défigurer sa fille, après quoi l’arme repartait, non sans avoir légèrement grandi au passage. Jugées sans valeur par leurs gardiens, les fillettes pouvaient racheter leur liberté, ce qui leur permettait d’échapper à l’enfer de l’esclavage. Et les blessures physiques finissent toutes par se refermer avec le temps…
 
 PARAMÈTRES :
 
@@ -5507,7 +5507,7 @@ Type d’arme : À deux mains~
 //@11025	= ~Coup de Tonnerre~
 @11026	= ~Cette épée massive, qui a dû être forgée à l’attention d’un guerrier doté d’une force colossale, est aussi élégante que repoussante. Sa lame métallique a été renforcée par des ossements humains, tandis que son manche et son fourreau sont recouverts de chair humaine.
 
-On ne sait pas grand-chose sur les origines de cette épée, mais les aristocrates de la Mulhorande évoquent son existence depuis de nombreuses générations. Selon une de leurs légendes, à chaque fois qu’une femme de leur pays donnait naissance à une fille après avoir été réduite en esclavage, elle priait l’ancien pharaon Tyrish par une nuit de pleine lune. Entendant ses suppliques, ce dernier lui envoyait l’arme, en la faisant descendre du ciel jusqu’à la malheureuse. Celle-ci n’avait plus alors qu’à s’en servir pour défigurer sa fille, après quoi l’arme repartait, non sans avoir légèrement grandi au passage. Jugées sans valeur par leurs gardiens, les fillettes pouvaient racheter leur liberté, ce qui leur permettait d’échapper à l’enfer de l’esclavage. Et les blessures physiques finissent toutes par se refermer avec le temps...
+On ne sait pas grand-chose sur les origines de cette épée, mais les aristocrates de la Mulhorande évoquent son existence depuis de nombreuses générations. Selon une de leurs légendes, à chaque fois qu’une femme de leur pays donnait naissance à une fille après avoir été réduite en esclavage, elle priait l’ancien pharaon Tyrish par une nuit de pleine lune. Entendant ses suppliques, ce dernier lui envoyait l’arme, en la faisant descendre du ciel jusqu’à la malheureuse. Celle-ci n’avait plus alors qu’à s’en servir pour défigurer sa fille, après quoi l’arme repartait, non sans avoir légèrement grandi au passage. Jugées sans valeur par leurs gardiens, les fillettes pouvaient racheter leur liberté, ce qui leur permettait d’échapper à l’enfer de l’esclavage. Et les blessures physiques finissent toutes par se refermer avec le temps…
 
 PARAMÈTRES :
 
@@ -6109,7 +6109,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, arme d’hast
 Type d’arme : À deux mains~
 //@11133    = ~Lance de Kyosti~
-@11134    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l’aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu’elle cherche le cœur de sa cible...
+@11134    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l’aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu’elle cherche le cœur de sa cible…
 
 PARAMÈTRES :
 
@@ -6123,7 +6123,7 @@ Poids : 2,27 kg (5 lb)
 Compétence : Arme de guerre, arme d’hast
 Type d’arme : À deux mains~
 //@11135    = ~Lance de chasse de Kyosti~
-@11136    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l’aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu’elle cherche le cœur de sa cible...
+@11136    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l’aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu’elle cherche le cœur de sa cible…
 
 PARAMÈTRES :
 
@@ -6599,7 +6599,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
 @11249	= ~Hache des  mes +3~
-@11250	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
+@11250	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale…
 
 PARAMÈTRES :
 
@@ -6616,7 +6616,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
 @11251	= ~Voleuse d’âmes +5~
-@11252	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale...
+@11252	= ~On en sait fort peu sur l’origine de cette hache, tous ses précédents propriétaires étant peu à peu devenus fous. Cette arme “puise” en effet aussi bien dans l’esprit de son porteur qu’en celui de ses ennemis : son propriétaire ne doit donc plus seulement vaincre son adversaire par les armes, mais aussi par l’esprit pour véritablement le terrasser. Le protagoniste qui remporte ce duel se voit récompensé de l’énergie vitale de son malheureux ennemi. Peu de défaites suffisent pour y laisser sa santé mentale…
 
 PARAMÈTRES :
 
@@ -6637,7 +6637,7 @@ Type d’arme : À une main~
 @11257	= ~Baiser de Brume +3~
 @11258	= ~Magmar Forgefer, le célèbre forgeron nain, créa cette hache. On raconte qu’il aurait passé sa vie à étudier les techniques de forge les plus complexes pour la fabriquer. Pendant trente jours et trente nuits, Magmar s’enferma dans son atelier, la mélodie du marteau sur l’enclume et le grondement assourdissant du fourneau pour seule compagnie. Au trentième jour, Magmar termina Baiser de Brume, puis s’écroula, mort d’épuisement. On raconte qu’au cours de ses funérailles, bien qu’organisées avec le plus grand respect par ses pairs, on pouvait entendre des rires étouffés derrière les pleurs. Il semblerait que la dernière œuvre de Magmar ne soit pas le chef-d’œuvre que tout le monde attendait. Elle était en fait assez banale et ressemblait davantage au travail d’un débutant qu’à celui d’un maître forgeron.
 
-Cette arme fut longtemps oubliée sur les murs du Clan Forgefer jusqu’au jour funeste où une horde de gobelins envahit la région. Dans les derniers instants de la bataille, un nain blessé s’empara de Baiser de Brume et la lança sur les rangs ennemis. À sa grande surprise, la hache se transforma en éclair et massacra de nombreux gobelins avec une précision diabolique avant de revenir dans sa main, laissant derrière elle un tas de cadavres calcinés. Ce conte de légende aurait dû traverser les siècles, mais, malheureusement, aucun survivant ne put le raconter ; le destin voulut en effet que le Clan Forgefer disparaisse ce jour-là...
+Cette arme fut longtemps oubliée sur les murs du Clan Forgefer jusqu’au jour funeste où une horde de gobelins envahit la région. Dans les derniers instants de la bataille, un nain blessé s’empara de Baiser de Brume et la lança sur les rangs ennemis. À sa grande surprise, la hache se transforma en éclair et massacra de nombreux gobelins avec une précision diabolique avant de revenir dans sa main, laissant derrière elle un tas de cadavres calcinés. Ce conte de légende aurait dû traverser les siècles, mais, malheureusement, aucun survivant ne put le raconter ; le destin voulut en effet que le Clan Forgefer disparaisse ce jour-là…
 
 PARAMÈTRES :
 
@@ -6665,7 +6665,7 @@ Type d’arme : À une main~
 @11259	= ~Déplace-tempête +5~
 @11260	= ~Magmar Forgefer, le célèbre forgeron nain, créa cette hache. On raconte qu’il aurait passé sa vie à étudier les techniques de forge les plus complexes pour la fabriquer. Pendant trente jours et trente nuits, Magmar s’enferma dans son atelier, la mélodie du marteau sur l’enclume et le grondement assourdissant du fourneau pour seule compagnie. Au trentième jour, Magmar termina Déplace-tempête, puis s’écroula, mort d’épuisement. On raconte qu’au cours de ses funérailles, bien qu’organisées avec le plus grand respect par ses pairs, on pouvait entendre des rires étouffés derrière les pleurs. Il semblerait que la dernière œuvre de Magmar ne soit pas le chef-d’œuvre que tout le monde attendait. Elle était en fait assez banale et ressemblait davantage au travail d’un débutant qu’à celui d’un maître forgeron.
 
-Cette arme fut longtemps oubliée sur les murs du Clan Forgefer jusqu’au jour funeste où une horde de gobelins envahit la région. Dans les derniers instants de la bataille, un nain blessé s’empara de Déplace-tempête et la lança sur les rangs ennemis. À sa grande surprise, la hache se transforma en une boule d’énergie pure et massacra de nombreux gobelins avec une précision diabolique avant de revenir dans sa main, laissant derrière elle un tas de cadavres calcinés. Ce conte de légende aurait dû traverser les siècles, mais, malheureusement, aucun survivant ne put le raconter ; le destin voulut en effet que le Clan Forgefer disparaisse ce jour-là...
+Cette arme fut longtemps oubliée sur les murs du Clan Forgefer jusqu’au jour funeste où une horde de gobelins envahit la région. Dans les derniers instants de la bataille, un nain blessé s’empara de Déplace-tempête et la lança sur les rangs ennemis. À sa grande surprise, la hache se transforma en une boule d’énergie pure et massacra de nombreux gobelins avec une précision diabolique avant de revenir dans sa main, laissant derrière elle un tas de cadavres calcinés. Ce conte de légende aurait dû traverser les siècles, mais, malheureusement, aucun survivant ne put le raconter ; le destin voulut en effet que le Clan Forgefer disparaisse ce jour-là…
 
 PARAMÈTRES :
 
@@ -6767,13 +6767,13 @@ Type d’arme : À une main~
 @11271	= ~Hache lestée +1~
 //@11272	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 @11273	= ~Hache de Dullcobble +4~
-@11274	= ~Il paraît évident que Dullcobble Tweed fut le pire charpentier de tous les temps et il était encore plus déplorable quand il s’essayait au métier de forgeron. Mais il se vantait tant que ses concitoyens finirent par le défier de forger une hache de lancer digne de lui. Comprenant qu’il n’avait pas le choix, il accepta sans hésiter... tout en ressentant une intense terreur à l’idée de ne pas pouvoir mener cette tâche à bien.
+@11274	= ~Il paraît évident que Dullcobble Tweed fut le pire charpentier de tous les temps et il était encore plus déplorable quand il s’essayait au métier de forgeron. Mais il se vantait tant que ses concitoyens finirent par le défier de forger une hache de lancer digne de lui. Comprenant qu’il n’avait pas le choix, il accepta sans hésiter… tout en ressentant une intense terreur à l’idée de ne pas pouvoir mener cette tâche à bien.
 
 Il essaya à plusieurs reprises de fabriquer une hache tranchante, toutes ses tentatives finissant au feu. La veille du jour où il était censé livrer son arme, il n’avait réussi qu’à forger une petite hache à la lame tordue et dont le manche était très mal équilibré. Sachant qu’il ne pouvait présenter cette arme sous peine de devenir la risée de sa communauté, il loua les services d’un mage pour transformer sa hache en arme utilisable. Le mage, qui était entropiste, accepta l’argent avec un haussement d’épaules et promit à Dullcobble de lui livrer une hache pour le lendemain à l’aube. Lorsque l’artisan se réveilla, l’arme l’attendait sur le pas de sa porte, toujours aussi difforme. Il n’eut d’autre choix que de la présenter à son jury.
 
-Quand il entra dans la salle commune de la ville, sa hache fut accueillie par des quolibets. Rouge de honte et de colère, Dullcobble la lança vers ses détracteurs. La hache heurta une colonne... qu’elle brisa en deux, provoquant l’effondrement du toit. Frappé de stupeur, Dullcobble fut assommé par la chute d’une poutre, tandis que les autres personnes présentes sortaient dans le plus grand désordre, mais sans une égratignure.
+Quand il entra dans la salle commune de la ville, sa hache fut accueillie par des quolibets. Rouge de honte et de colère, Dullcobble la lança vers ses détracteurs. La hache heurta une colonne… qu’elle brisa en deux, provoquant l’effondrement du toit. Frappé de stupeur, Dullcobble fut assommé par la chute d’une poutre, tandis que les autres personnes présentes sortaient dans le plus grand désordre, mais sans une égratignure.
 
-Le coup reçu par Dullcobble fut si sérieux qu’il devint par la suite l’idiot du village... ce qui ne changeait pas beaucoup d’avant. Quant à la hache, elle finit dans le chariot d’un marchand en partance vers le Nord, et personne ne la revit plus jamais dans la région. On ignore quel est l’effet des enchantements ajoutés par l’entropiste à la hache, mais ce qui est sûr, c’est qu’elle tourne en vol et que c’est son manche, et non sa lame, qui s’en va frapper la cible en lui infligeant des dégâts contondants plutôt que tranchants.
+Le coup reçu par Dullcobble fut si sérieux qu’il devint par la suite l’idiot du village… ce qui ne changeait pas beaucoup d’avant. Quant à la hache, elle finit dans le chariot d’un marchand en partance vers le Nord, et personne ne la revit plus jamais dans la région. On ignore quel est l’effet des enchantements ajoutés par l’entropiste à la hache, mais ce qui est sûr, c’est qu’elle tourne en vol et que c’est son manche, et non sa lame, qui s’en va frapper la cible en lui infligeant des dégâts contondants plutôt que tranchants.
 
 PARAMÈTRES :
 
@@ -7433,7 +7433,7 @@ Type d’arme : À une main~
 //@11395	= ~Torche éternelle fabuleuse de Belib~
 @11396	= ~Belib le Prudent était ou aurait sans aucun doute été l’aventurier le mieux équipé à avoir foulé le royaume s’il avait effectivement quitté sa maison en vie. La torche éternelle n’est que l’un des nombreux objets enchantés dont il était équipé. Cette lanterne magique, qui a la forme d’une torche en bois, brûle d’une flamme orange brillante, impossible à éteindre. Qu’elle soit plongée dans de l’eau, enterrée sous des tonnes de roches ou utilisée pour fracasser le crâne trempé d’un troll des marais, la torche éternelle de Belib ne s’éteindra jamais.
 
-Lorsque Belib eut terminé le dernier de ses objets, il les entassa dans un sac gigantesque, enchanté pour contenir bien plus que ce que Belib aurait pu porter, et le mit sur son dos, prêt à partir à l’aventure. Alors qu’il franchissait le seuil de sa porte, il trébucha ... et fut instantanément écrasé sous le poids de son énorme sac à dos. Le sac s’ouvrit et répandit tout son contenu dans la rue d’Eauprofonde où vivait Belib. Le contenu du sac disparut évidemment assez rapidement dans les mains des bons à rien qui passaient par là.
+Lorsque Belib eut terminé le dernier de ses objets, il les entassa dans un sac gigantesque, enchanté pour contenir bien plus que ce que Belib aurait pu porter, et le mit sur son dos, prêt à partir à l’aventure. Alors qu’il franchissait le seuil de sa porte, il trébucha … et fut instantanément écrasé sous le poids de son énorme sac à dos. Le sac s’ouvrit et répandit tout son contenu dans la rue d’Eauprofonde où vivait Belib. Le contenu du sac disparut évidemment assez rapidement dans les mains des bons à rien qui passaient par là.
 
 Le corps de Belib fut finalement emmené jusque dans un temple où une prêtresse au bon cœur lui rendit la vie, mais à ce moment-là tous ces objets enchantés avaient disparu pour de bon, comme une bonne partie de ce que contenait sa maison. Reconnaissant, mais quelque peu agacé, Belib conçu quelques objets magiques uniques pour la prêtresse, avant de rejoindre sa famille et sa terre natale pour disparaître à jamais de la surface du monde.
 
@@ -7503,7 +7503,7 @@ Type d’arme : À une main~
 //@11395	= ~Torche éternelle fabuleuse de Belib~
 @11396	= ~Belib le Prudent était ou aurait sans aucun doute été l’aventurier le mieux équipé à avoir foulé le royaume s’il avait effectivement quitté sa maison en vie. La torche éternelle n’est que l’un des nombreux objets enchantés dont il était équipé. Cette lanterne magique, qui a la forme d’une torche en bois, brûle d’une flamme orange brillante, impossible à éteindre. Qu’elle soit plongée dans de l’eau, enterrée sous des tonnes de roches ou utilisée pour fracasser le crâne trempé d’un troll des marais, la torche éternelle de Belib ne s’éteindra jamais.
 
-Lorsque Belib eut terminé le dernier de ses objets, il les entassa dans un sac gigantesque, enchanté pour contenir bien plus que ce que Belib aurait pu porter, et le mit sur son dos, prêt à partir à l’aventure. Alors qu’il franchissait le seuil de sa porte, il trébucha ... et fut instantanément écrasé sous le poids de son énorme sac à dos. Le sac s’ouvrit et répandit tout son contenu dans la rue d’Eauprofonde où vivait Belib. Le contenu du sac disparut évidemment assez rapidement dans les mains des bons à rien qui passaient par là.
+Lorsque Belib eut terminé le dernier de ses objets, il les entassa dans un sac gigantesque, enchanté pour contenir bien plus que ce que Belib aurait pu porter, et le mit sur son dos, prêt à partir à l’aventure. Alors qu’il franchissait le seuil de sa porte, il trébucha … et fut instantanément écrasé sous le poids de son énorme sac à dos. Le sac s’ouvrit et répandit tout son contenu dans la rue d’Eauprofonde où vivait Belib. Le contenu du sac disparut évidemment assez rapidement dans les mains des bons à rien qui passaient par là.
 
 Le corps de Belib fut finalement emmené jusque dans un temple où une prêtresse au bon cœur lui rendit la vie, mais à ce moment-là tous ces objets enchantés avaient disparu pour de bon, comme une bonne partie de ce que contenait sa maison. Reconnaissant, mais quelque peu agacé, Belib conçu quelques objets magiques uniques pour la prêtresse, avant de rejoindre sa famille et sa terre natale pour disparaître à jamais de la surface du monde.
 
@@ -7877,7 +7877,7 @@ Type d’arme : À une main~
 @11483	= ~Don de Talona +2~
 @11484	= ~La morgenstern se compose d’une hampe de bois surmontée d’une tête métallique cloutée. Cette arme mesure généralement un peu plus d’un mètre. La tête peut être ronde, ovale ou cylindrique et est souvent agrémentée de pointes acérées. Quelle que soit leur forme, les morgensterns comportent une longue pointe sur leur tête.
 
-Cette arme semble avoir été créée pour un prêtre de Talona, mais elle a été perdue. C’est maintenant l’arme personnelle du chef gobelours Guthma... du moins jusqu’à ce qu’il soit tué par vous.
+Cette arme semble avoir été créée pour un prêtre de Talona, mais elle a été perdue. C’est maintenant l’arme personnelle du chef gobelours Guthma… du moins jusqu’à ce qu’il soit tué par vous.
 
 PARAMÈTRES :
 
@@ -7893,7 +7893,7 @@ Type d’arme : À une main~
 @11485	= ~Etoile de Talona +5~
 @11486	= ~La morgenstern se compose d’une hampe de bois surmontée d’une tête métallique cloutée. Cette arme mesure généralement un peu plus d’un mètre. La tête peut être ronde, ovale ou cylindrique et est souvent agrémentée de pointes acérées. Quelle que soit leur forme, les morgensterns comportent une longue pointe sur leur tête.
 
-Cette arme semble avoir été créée pour un prêtre de Talona, mais elle a été perdue. C’est maintenant l’arme personnelle du chef gobelours Guthma... du moins jusqu’à ce qu’il soit tué par vous.
+Cette arme semble avoir été créée pour un prêtre de Talona, mais elle a été perdue. C’est maintenant l’arme personnelle du chef gobelours Guthma… du moins jusqu’à ce qu’il soit tué par vous.
 
 PARAMÈTRES :
 
@@ -8105,7 +8105,7 @@ Roa n’avait pas encore seize ans. Enchaînée, elle fut jetée au fond des catacomb
 
 Quelques instants plus tard, l’adolescente décharnée fit irruption dans la salle du trône du duc et se rua sur lui. Les gardes la criblèrent de carreaux d’arbalète, mais cela ne l’arrêta pas. Écartant le champion de Sorim aussi aisément qu’elle l’aurait fait d’un pantin, elle abattit le boulet qu’elle traînait au pied avec tant de violence que son arme improvisée fit voler en éclats la cuirasse enchantée de son époux et tua celui-ci sur le coup.
 
-Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage... et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
+Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage… et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
 
 Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : “Dans la Justice Réside ma Force”.
 
@@ -8127,7 +8127,7 @@ Roa n’avait pas encore seize ans. Enchaînée, elle fut jetée au fond des catacomb
 
 Quelques instants plus tard, l’adolescente décharnée fit irruption dans la salle du trône du duc et se rua sur lui. Les gardes la criblèrent de carreaux d’arbalète, mais cela ne l’arrêta pas. Ecartant le champion de Sorim aussi aisément qu’elle l’aurait fait d’un pantin, elle abattit le boulet qu’elle traînait au pied avec tant de violence que son arme improvisée fit voler en éclats la cuirasse enchantée de son époux et tua celui-ci sur le coup.
 
-Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage... et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
+Nul ne sait exactement comment l’histoire s’achève. D’aucuns prétendent que Roa rendit aussitôt l’âme, d’autres qu’elle fut tuée par sa sœur folle de rage… et quelques optimistes veulent croire qu’elle survécut à ses atroces blessures et qu’elle connut une vie heureuse par la suite. Mais, quelle que soit la fin de l’histoire, les chaînes, elles, existent toujours bel et bien.
 
 Elles ont été enroulées sur elles-mêmes autour d’un manche afin qu’il soit possible de s’en servir comme d’un fléau dont la tête n’est autre que le boulet qui empêchait les déplacements de la malheureuse. L’inscription suivante a été gravée à la hâte à la surface du boulet : “Dans la Justice Réside ma Force”.
 
@@ -8145,7 +8145,7 @@ Type d’arme : À une main~
 @11533	= ~Le Crâne Hurlant +2~
 @11534	= ~Le Crâne Hurlant, dont on pense généralement qu’il a été fabriqué par les gnomes des profondeurs, est un fléau d’aspect particulièrement inhabituel, puisqu’il se compose d’un manche en bois de près d’un mètre de long, surmonté d’une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d’une dureté incroyable.
 
-Dès que ces pointes magiques frappent un objet, elles se mettent à vibrer et émettent une sorte de cri, mettant à mal les enchantements qui protègent la cible... et qui a autant de chances d’assourdir cette dernière que le possesseur du fléau.
+Dès que ces pointes magiques frappent un objet, elles se mettent à vibrer et émettent une sorte de cri, mettant à mal les enchantements qui protègent la cible… et qui a autant de chances d’assourdir cette dernière que le possesseur du fléau.
 
 PARAMÈTRES :
 
@@ -8163,7 +8163,7 @@ Type d’arme : À une main~
 @11535	= ~Crâne de Svirfneblin hurlant +4~
 @11536	= ~Le Crâne de Svirfneblin Hurlant, dont on pense généralement qu’il a été fabriqué par les gnomes des profondeurs, est un fléau d’aspect particulièrement inhabituel, puisqu’il se compose d’un manche en bois de près d’un mètre de long, surmonté d’une tête en pierre taillée en forme de crâne et au front hérissé de pointes de cristal scintillant et d’une dureté incroyable.
 
-Dès que ces pointes magiques frappent un objet, elles se mettent à vibrer et émettent une sorte de cri, mettant à mal les enchantements qui protègent la cible... et qui a autant de chances d’assourdir cette dernière que le possesseur du fléau.
+Dès que ces pointes magiques frappent un objet, elles se mettent à vibrer et émettent une sorte de cri, mettant à mal les enchantements qui protègent la cible… et qui a autant de chances d’assourdir cette dernière que le possesseur du fléau.
 
 PARAMÈTRES :
 
@@ -8181,7 +8181,7 @@ Type d’arme : À une main~
 //@11537	= ~Carillon Noir~
 @11538	= ~Ce lourd fléau est composé d’un manche de fer et de trois tubes de métal creux reliés entre eux par une épaisse chaîne de fer. Les têtes s’entrechoquent sans cesse lorsque cette arme est tenue en main, comme si un souffle de vent pernicieux les empêchaient de rester au repos. Ce bruit devient assourdissant au combat, au point de lourdement pénaliser tous les adversaires touchés par le fléau.
 
-Cette arme est le dernier vestige du Lent Galop de Cedric, un petit camp frontalier situé dans la Passe Méridionale de l’Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d’orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là... Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu’au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d’orques, pétrifiés dans les postures les plus insolites.
+Cette arme est le dernier vestige du Lent Galop de Cedric, un petit camp frontalier situé dans la Passe Méridionale de l’Épine Dorsale du Monde. Ce campement aurait été dévasté par une tribu d’orques au cours du grand hiver de 1170 CV, les restes du camp et de ses habitants ayant été ensevelis sous les montagnes de neige qui sont tombées cette année-là… Le premier voyageur à braver la Passe au printemps suivant ne put accéder qu’au clocher de ce qui fut le campement ; il trouva cet étrange fléau sur le sol gelé et ensanglanté du dernier étage de la tour, entouré de dizaines de cadavres d’orques, pétrifiés dans les postures les plus insolites.
 
 D’après les légendes, le Carillon Noir était le symbole des missions du Garde-Cloches du campement : sonner l’alarme lorsqu’un ennemi était en vue et défendre la passe, au prix de sa vie si nécessaire. On croit savoir que le premier Garde-Cloches du Lent Galop de Cedric fabriqua le Carillon Noir, un fléau enchanté qui sonnait pour avertir les habitants du danger lorsque son porteur se ruait contre ses ennemis.
 
@@ -8425,9 +8425,9 @@ Achète patates. Paiement en or
 
 **************************************
 
-Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées... La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement...
+Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées… La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement…
 
-Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu... et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
+Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu… et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
 
 PARAMÈTRES :
 
@@ -8456,9 +8456,9 @@ Achète patates. Paiement en or
 
 **************************************
 
-Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées... La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement...
+Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées… La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement…
 
-Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu... et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
+Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu… et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
 
 PARAMÈTRES :
 
@@ -8845,7 +8845,7 @@ Poids : 0
 Compétence : Arme courante, projectile
 Type d’arme : À une main~
 @11671	= ~Théorèmes d’Adron +1~
-@11672	= ~Adron le sage était un grand professeur, qui se faisait un malin plaisir, dans chaque démonstration, d’asséner son argument final avec autant de force que possible. En guise de plaisanterie, plusieurs de ses élèves inscrivirent certains de ses théorèmes sur une série de fléchettes, qu’ils lui offrirent le jour de sa retraite. Leur choix de cadeau était fort discutable, car Adron était également connu pour ses sautes d’humeur, et il en fit la preuve en lançant aussitôt les fléchettes sur ses élèves... pour s’apercevoir que les théorèmes conféraient aux projectiles le pouvoir de mieux trouver leur cible. Fort heureusement pour les jeunes gens, ils se montrèrent aussi habiles pour éviter les dards que pour manquer leurs cours et il n’y eut aucun dégât en dehors de quelques robes souillées.
+@11672	= ~Adron le sage était un grand professeur, qui se faisait un malin plaisir, dans chaque démonstration, d’asséner son argument final avec autant de force que possible. En guise de plaisanterie, plusieurs de ses élèves inscrivirent certains de ses théorèmes sur une série de fléchettes, qu’ils lui offrirent le jour de sa retraite. Leur choix de cadeau était fort discutable, car Adron était également connu pour ses sautes d’humeur, et il en fit la preuve en lançant aussitôt les fléchettes sur ses élèves… pour s’apercevoir que les théorèmes conféraient aux projectiles le pouvoir de mieux trouver leur cible. Fort heureusement pour les jeunes gens, ils se montrèrent aussi habiles pour éviter les dards que pour manquer leurs cours et il n’y eut aucun dégât en dehors de quelques robes souillées.
 
 Les fléchettes d’Adron furent rangées dans un boîtier fait sur mesure et entreposées à l’université, où on les déroba bien des années plus tard. Depuis, elles ont été aperçues à plusieurs reprises aux quatre coins des Royaumes, et les théorèmes d’Adron les accompagnent comme au premier jour.
 
@@ -8862,7 +8862,7 @@ Compétence : Arme courante, projectile
 Type d’arme : À une main
 Intelligence minimale de 16 requise~
 @11673	= ~Théorèmes Interminables d’Adron +3~
-@11674	= ~Adron le sage était un grand professeur, qui se faisait un malin plaisir, dans chaque démonstration, d’asséner son argument final avec autant de force que possible. En guise de plaisanterie, plusieurs de ses élèves inscrivirent certains de ses théorèmes sur une série de fléchettes, qu’ils lui offrirent le jour de sa retraite. Leur choix de cadeau était fort discutable, car Adron était également connu pour ses sautes d’humeur, et il en fit la preuve en lançant aussitôt les fléchettes sur ses élèves... pour s’apercevoir que les théorèmes conféraient aux projectiles le pouvoir de mieux trouver leur cible. Fort heureusement pour les jeunes gens, ils se montrèrent aussi habiles pour éviter les dards que pour manquer leurs cours et il n’y eut aucun dégât en dehors de quelques robes souillées.
+@11674	= ~Adron le sage était un grand professeur, qui se faisait un malin plaisir, dans chaque démonstration, d’asséner son argument final avec autant de force que possible. En guise de plaisanterie, plusieurs de ses élèves inscrivirent certains de ses théorèmes sur une série de fléchettes, qu’ils lui offrirent le jour de sa retraite. Leur choix de cadeau était fort discutable, car Adron était également connu pour ses sautes d’humeur, et il en fit la preuve en lançant aussitôt les fléchettes sur ses élèves… pour s’apercevoir que les théorèmes conféraient aux projectiles le pouvoir de mieux trouver leur cible. Fort heureusement pour les jeunes gens, ils se montrèrent aussi habiles pour éviter les dards que pour manquer leurs cours et il n’y eut aucun dégât en dehors de quelques robes souillées.
 
 Les fléchettes d’Adron furent rangées dans un boîtier fait sur mesure et entreposées à l’université, où on les déroba bien des années plus tard. Depuis, elles ont été aperçues à plusieurs reprises aux quatre coins des Royaumes, et les théorèmes d’Adron les accompagnent comme au premier jour.
 
@@ -9518,7 +9518,7 @@ Toutefois, l’Arc d’Or, l’une de ces créations magiques, fut retrouvé entre les m
 
 A l’époque de la chute de la Main Tranchée, l’Arc d’Or était entreposé dans les couloirs de l’organisation comme symbole de la trahison des Nains et de leur appât du gain. Lorsque la Main tomba, l’Arc d’Or fut le témoin silencieux de l’écrasante victoire des gobelinoïdes sur les Elfes, jusqu’à ce que Larrel l’archimage, dans un geste désespéré, décide de provoquer le cataclysme du Mythal qui scella à jamais le destin de la Main Tranchée.
 
-L’Arc d’Or disparut alors des couloirs de la Main Tranchée et personne ne sut où il se trouvait... jusqu’à aujourd’hui.
+L’Arc d’Or disparut alors des couloirs de la Main Tranchée et personne ne sut où il se trouvait… jusqu’à aujourd’hui.
 
 PARAMÈTRES :
 
@@ -9539,7 +9539,7 @@ Mais son cousin, l’Arc d’Or, fut découvert entre les mains d’une horde d’orques 
 
 La légende raconte que la corde de l’arc se brisa à l’annonce de la rupture entre les peuples et que l’arme, désormais inutilisable, ait été entreposée dans le Bas Profondorn, observant silencieusement les Nains s’enfoncer toujours plus profondément dans leurs cavernes alors que les hordes de gobelins semaient terreur et destruction dans le Nord. Mais la Horde Noire ne put jamais s’en emparer, malgré ses fréquentes incursions dans Profondorn, et l’Arc de Mithril resta des années parmi les cadavres des Nains, toujours agrippés à leurs armes.
 
-Personne ne sait vraiment comment il est parvenu jusqu’ici, mais la chose la plus étonnante est encore que sa corde a été restaurée et que l’arc semble pressé d’en découdre. Peut-être y a-t-il encore un espoir pour les Elfes et les Nains tombés au champ d’honneur... ne serait-ce que pour faire valoir leurs droits sur leurs terres natales tombées aux mains des hordes de gobelins sang-mêlé.
+Personne ne sait vraiment comment il est parvenu jusqu’ici, mais la chose la plus étonnante est encore que sa corde a été restaurée et que l’arc semble pressé d’en découdre. Peut-être y a-t-il encore un espoir pour les Elfes et les Nains tombés au champ d’honneur… ne serait-ce que pour faire valoir leurs droits sur leurs terres natales tombées aux mains des hordes de gobelins sang-mêlé.
 
 PARAMÈTRES :
 
@@ -9703,7 +9703,7 @@ Poids : 2,72 kg (6 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11827 = ~Réponse de Marie de Fer~
-@11828 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
+@11828 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus… subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
 
 PARAMÈTRES :
 
@@ -9717,7 +9717,7 @@ Poids : 2,27 kg (5 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11829 = ~Réponse audacieuse de Marie de Fer~
-@11830 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus... subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
+@11830 = ~Marie de Tantras, dite “Marie de Fer”, était aussi célèbre pour sa beauté que pour sa détermination. On la repérait aisément au sein de la compagnie de mercenaires bruns dont elle faisait partie. En effet, elle refusait de porter un casque, sachant pourtant que sa longue chevelure blonde serait visible comme un phare sur le champ de bataille. On faisait souvent appel à elle pour traquer les criminels là où la loi n’avait pas cours et pour mettre un terme à leurs activités. Au bout de cinq années, tous les fauteurs de troubles de la région de la Mer de Lune et de la Mer Intérieure savaient que, si Marie était à leurs trousses, ils s’étaient fait une ennemie très dangereuse. Au lieu d’affronter la jeune femme, la plupart des hors-la-loi tentaient de se rendre, mais elle refusait systématiquement, accueillant la reddition de ses proies d’un carreau d’arbalète en plein front. Son arme, toutefois, avait une fonction plus… subtile, et ses pouvoirs magiques ne visaient pas à détruire les corps, mais à mettre à mal les esprits.
 
 PARAMÈTRES :
 
@@ -9950,7 +9950,7 @@ Poids : 4,54 kg (10 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11869 = ~Arbaleste de Fer +4~
-@11870 = ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste de Fer se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
+@11870 = ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que… son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste de Fer se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
 
 PARAMÈTRES :
 
@@ -9963,7 +9963,7 @@ Poids : 6,35 kg (14 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
 @11871	= ~Arbaleste d’Adamantium +6~
-@11872	= ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que... son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste d’Adamantium se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
+@11872	= ~La seule chose sur laquelle un assassin puisse véritablement compter n’est autre que… son arme. Et la meilleure chose qui puisse arriver à ce même assassin est de se spécialiser dans une arme de longue portée et d’une précision mortelle ; toutefois, même le meilleur des assassins peut avoir besoin d’aide dans ce domaine et ne peut pas se contenter d’une arme “normale”. C’est pourquoi l’Arbaleste d’Adamantium se révèle être une arme de choix pour tout assassin en herbe. L’Arbaleste de Fer a été enchantée pour optimiser la précision de l’assassin et lui donner plus de chances de toucher sa cible. Entre des mains expertes, elle peut causer des dommages irréversibles sans que l’on soit en mesure d’en retrouver un jour l’auteur.
 
 PARAMÈTRES :
 
@@ -10722,7 +10722,7 @@ Poids : 0,91 kg (2 lb)~
 //@12071	= ~Sandwich au chat mort d’Oagla’ta~
 //@12072	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 //@12073	= ~Sandwich au chat mort d’Oagla’ta~ // CdF
-@12074	= ~Les demi-orques sont réputés pour leurs étranges goûts culinaires, et Oagla’ta n’est pas une exception à la règle. Lorsqu’elle sent poindre la faim ou qu’elle est énervée, elle sort son chat fidèle, âcre, quelque peu rongé et... mort. Les passants horrifiés la regardent mâcher le bout de son animal, comme ferait une vache avec de l’herbe. Mais ce qu’ils ne remarquent pas, c’est que la carcasse semble ne jamais se détériorer, même après de longues périodes de machouillage. A l’inverse, elle semble être salutaire à Oagla’ta, qui paraît toujours plus fraîche après ce petit en-cas.
+@12074	= ~Les demi-orques sont réputés pour leurs étranges goûts culinaires, et Oagla’ta n’est pas une exception à la règle. Lorsqu’elle sent poindre la faim ou qu’elle est énervée, elle sort son chat fidèle, âcre, quelque peu rongé et… mort. Les passants horrifiés la regardent mâcher le bout de son animal, comme ferait une vache avec de l’herbe. Mais ce qu’ils ne remarquent pas, c’est que la carcasse semble ne jamais se détériorer, même après de longues périodes de machouillage. A l’inverse, elle semble être salutaire à Oagla’ta, qui paraît toujours plus fraîche après ce petit en-cas.
 
 PARAMÈTRES :
 
@@ -10811,7 +10811,7 @@ Dégâts : 6D6 (jet de Réflexes avec un DD de 18 pour la moitié)
 Zone d’effet : rayon de 6 m (20 pieds)
 Poids : 0,45 kg (1 lb)~
 //@12095	= ~Fiole de Braehg~
-@12096	= ~Le Braehg est une infâme concoction faite de sang de sanglier sauvage mélangé à du lait et à une poignée d’herbes rares. En ingurgiter une flasque entière d’un coup donne au courageux buveur un sursaut de force physique... mais le rendra malade presque à coup sûr.
+@12096	= ~Le Braehg est une infâme concoction faite de sang de sanglier sauvage mélangé à du lait et à une poignée d’herbes rares. En ingurgiter une flasque entière d’un coup donne au courageux buveur un sursaut de force physique… mais le rendra malade presque à coup sûr.
 
 PARAMÈTRES :
 
@@ -10820,7 +10820,7 @@ Nauséeux : pénalité de -1 aux jets de sauvegarde
 Durée : 2 heures
 Poids : 0,45 kg (1 lb)~
 //@12097	= ~Bouteille de Braehg~
-@12098	= ~Le Braehg est une infâme concoction faite de sang de sanglier sauvage mélangé à du lait et à une poignée d’herbes rares. En ingurgiter une flasque entière d’un coup donne au courageux buveur un sursaut de force physique... mais le rendra malade presque à coup sûr.
+@12098	= ~Le Braehg est une infâme concoction faite de sang de sanglier sauvage mélangé à du lait et à une poignée d’herbes rares. En ingurgiter une flasque entière d’un coup donne au courageux buveur un sursaut de force physique… mais le rendra malade presque à coup sûr.
 
 PARAMÈTRES :
 
@@ -11015,7 +11015,7 @@ Utilisable une fois par jour.
 
 Poids : 0,45 kg (1 lb)~
 //@12147	= ~Le Vieux Luth Néfaste de Pellon Kay~
-@12148	= ~Pellon Kay ne restera jamais dans l’histoire pour ses talents de musicien, et son nom serait vraisemblablement tombé dans l’oubli s’il n’avait possédé son fameux luth. Bien qu’originaire d’une famille d’artistes de Sembie, Pellon Kay ne fut jamais digne de son entourage ; sa gouaille un peu trop acide et son sens de la raillerie lui valaient en effet de nombreuses inimitiés partout où il passait. Il se dit que Milil s’offusqua de son attitude mais que Talos le prit sous son aile. L’avatar du dieu observa ainsi Pellon provoquer une bagarre générale dans une taverne et, pour le récompenser de l’avoir si bien diverti, bénit le luth dont jouait le malheureux troubadour et qui gisait auprès de son corps inanimé. Pellon découvrit bien assez tôt que son instrument pouvait rendre fous les hommes qui l’entouraient dès qu’il en jouait... Il s’amusa ainsi follement à provoquer de nombreuses échauffourées entre mercenaires et marins partout où il passait. Pellon Kay acheva tristement sa carrière, des mains d’un guerrier armé d’une arbalète qui ne lui donna pas le temps de se servir de son luth magique. Le guerrier inconnu jeta l’instrument dans la Mer des Étoiles Déchues.
+@12148	= ~Pellon Kay ne restera jamais dans l’histoire pour ses talents de musicien, et son nom serait vraisemblablement tombé dans l’oubli s’il n’avait possédé son fameux luth. Bien qu’originaire d’une famille d’artistes de Sembie, Pellon Kay ne fut jamais digne de son entourage ; sa gouaille un peu trop acide et son sens de la raillerie lui valaient en effet de nombreuses inimitiés partout où il passait. Il se dit que Milil s’offusqua de son attitude mais que Talos le prit sous son aile. L’avatar du dieu observa ainsi Pellon provoquer une bagarre générale dans une taverne et, pour le récompenser de l’avoir si bien diverti, bénit le luth dont jouait le malheureux troubadour et qui gisait auprès de son corps inanimé. Pellon découvrit bien assez tôt que son instrument pouvait rendre fous les hommes qui l’entouraient dès qu’il en jouait… Il s’amusa ainsi follement à provoquer de nombreuses échauffourées entre mercenaires et marins partout où il passait. Pellon Kay acheva tristement sa carrière, des mains d’un guerrier armé d’une arbalète qui ne lui donna pas le temps de se servir de son luth magique. Le guerrier inconnu jeta l’instrument dans la Mer des Étoiles Déchues.
 
 PARAMÈTRES :
 
@@ -11023,7 +11023,7 @@ Lance Charme funeste 1 fois par jour (DD de Volonté de 25)
 
 Poids : 0,91 kg (2 lb)~
 //@12149	= ~Cordes de la Discorde~
-@12150	= ~Pellon Kay ne restera jamais dans l’histoire pour ses talents de musicien, et son nom serait vraisemblablement tombé dans l’oubli s’il n’avait possédé son fameux luth. Bien qu’originaire d’une famille d’artistes de Sembie, Pellon Kay ne fut jamais digne de son entourage ; sa gouaille un peu trop acide et son sens de la raillerie lui valaient en effet de nombreuses inimitiés partout où il passait. Il se dit que Milil s’offusqua de son attitude mais que Talos le prit sous son aile. L’avatar du dieu observa ainsi Pellon provoquer une bagarre générale dans une taverne et, pour le récompenser de l’avoir si bien diverti, bénit le luth dont jouait le malheureux troubadour et qui gisait auprès de son corps inanimé. Pellon découvrit bien assez tôt que son instrument pouvait rendre fous les hommes qui l’entouraient dès qu’il en jouait... Il s’amusa ainsi follement à provoquer de nombreuses échauffourées entre mercenaires et marins partout où il passait. Pellon Kay acheva tristement sa carrière, des mains d’un guerrier armé d’une arbalète qui ne lui donna pas le temps de se servir de son luth magique. Le guerrier inconnu jeta l’instrument dans la Mer des Étoiles Déchues.
+@12150	= ~Pellon Kay ne restera jamais dans l’histoire pour ses talents de musicien, et son nom serait vraisemblablement tombé dans l’oubli s’il n’avait possédé son fameux luth. Bien qu’originaire d’une famille d’artistes de Sembie, Pellon Kay ne fut jamais digne de son entourage ; sa gouaille un peu trop acide et son sens de la raillerie lui valaient en effet de nombreuses inimitiés partout où il passait. Il se dit que Milil s’offusqua de son attitude mais que Talos le prit sous son aile. L’avatar du dieu observa ainsi Pellon provoquer une bagarre générale dans une taverne et, pour le récompenser de l’avoir si bien diverti, bénit le luth dont jouait le malheureux troubadour et qui gisait auprès de son corps inanimé. Pellon découvrit bien assez tôt que son instrument pouvait rendre fous les hommes qui l’entouraient dès qu’il en jouait… Il s’amusa ainsi follement à provoquer de nombreuses échauffourées entre mercenaires et marins partout où il passait. Pellon Kay acheva tristement sa carrière, des mains d’un guerrier armé d’une arbalète qui ne lui donna pas le temps de se servir de son luth magique. Le guerrier inconnu jeta l’instrument dans la Mer des Étoiles Déchues.
 
 PARAMÈTRES :
 
@@ -11109,7 +11109,7 @@ Aznee était un peu distrait mais ne manquait pas de courage, et il prit donc le 
 
 Entrevoyant une solution, Aznee proposa un remède à base de fleur de Lait de Vierge, qui, une fois écrasée et dissoute, permettait de calmer la toux en quelques minutes. Certain de pouvoir trouver de cet ingrédient dans les bois environnants, Aznee ne tarda pas à revenir avec une poignée de fleurs odorantes. Il se mit donc en devoir de préparer sa décoction et la donna au dragon dans un grand chaudron fumant.
 
-L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet... mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu résister à une telle activité...
+L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet… mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu résister à une telle activité…
 
 Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les “Flûtes du Dragon Sifflant”. Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
 
@@ -11133,7 +11133,7 @@ Aznee était un peu distrait mais ne manquait pas de courage, et il prit donc le 
 
 Entrevoyant une solution, Aznee proposa un remède à base de fleur de Lait de Vierge, qui, une fois écrasée et dissoute, permettait de calmer la toux en quelques minutes. Certain de pouvoir trouver de cet ingrédient dans les bois environnants, Aznee ne tarda pas à revenir avec une poignée de fleurs odorantes. Il se mit donc en devoir de préparer sa décoction et la donna au dragon dans un grand chaudron fumant.
 
-L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet... mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu resister à une telle activité...
+L’histoire ne précise pas si Craug avala la mixture trop vite ou si Aznee confondit Lait de Vierge et racine de Soufflet… mais toujours est-il que Craug recracha la décoction quelques secondes plus tard, boutant le feu à plusieurs acres de bois et carbonisant le pauvre Aznee sur place. Pris de spasmes violents, Craug rua et cracha pendant plus d’une heure pour tenter de se débarrasser des restes de la mixture. Le vénérable dragon finit par s’effondrer, son vieux cœur n’ayant pu resister à une telle activité…
 
 Alors que les bûcherons revenaient au camp dévasté pour déblayer les restes du dragon, ils découvrirent que les ossements de Craum résonnaient toujours de son étrange toux plusieurs jours après sa mort. Ils passèrent donc un accord avec un magicien local qui s’occupa des ossements et en confectionna une série d’instruments de musique, surnommés les “Flûtes du Dragon Sifflant”. Ces flûtes d’os jauni sont célèbres dans tous les Royaumes car elles permettent au barde qui les utilise de lancer des boules de feu sur ses adversaires. Elles sont malheureusement si bruyantes qu’elles attirent irrémédiablement l’attention sur leur porteur, ruinant tous ses efforts pour rester discret.
 
@@ -11304,7 +11304,7 @@ Sort : lance le sort Sphère glaciale d’Otiluke (au niveau 30) 3/jour
 Poids : 0,45 kg (1 lb)~
 //@12203	= ~Légendes du Val de Bise~ //CdF
 @12204	= ~Les plus grandes légendes peuvent naître du plus modeste des commencements, ce qui est le cas pour le petit groupe d’aventuriers qui commença son périple dans la petite ville de pêcheurs du Havre du Levant, il y a trente ans, en l’an 1281 du calendrier des Vaux. Ces aventuriers venus du sud, en quête d’aventure, se rencontrèrent dans la taverne du Berceau de l’Hiver. Ils furent les premiers à se joindre à l’expédition de Hrothgar pour enquêter sur les problèmes que semblait connaître la ville de Kuldahar, où se trouvait un chêne majestueux de plusieurs dizaines de mètres, apportant une chaleur bienfaitrice à la petite ville qu’il abritait sous ses branches.
-La malchance accablait cependant tout Val de Bise et l’expédition de Hrothgar tomba dans une embuscade dans le défilé de Kuldahar, balayé par le vent ... et ils furent les seuls à en ressortir vivants. Le petit groupe élimina tous les voleurs gobelins qui se trouvaient dans le défilé et découvrit en arrivant finalement à Kuldahar, que le Grand Chêne était menacé par un démon inconnu venant de l’intérieur même de la montagne. Ils réalisèrent alors que s’ils ne faisaient rien pour l’arrêter, la ville serait détruite et que tout le nord connaîtrait ensuite le même sort.
+La malchance accablait cependant tout Val de Bise et l’expédition de Hrothgar tomba dans une embuscade dans le défilé de Kuldahar, balayé par le vent … et ils furent les seuls à en ressortir vivants. Le petit groupe élimina tous les voleurs gobelins qui se trouvaient dans le défilé et découvrit en arrivant finalement à Kuldahar, que le Grand Chêne était menacé par un démon inconnu venant de l’intérieur même de la montagne. Ils réalisèrent alors que s’ils ne faisaient rien pour l’arrêter, la ville serait détruite et que tout le nord connaîtrait ensuite le même sort.
 Ce groupe de courageux aventuriers traqua le démon depuis les cryptes de la Vallée des Ombres, jusqu’aux nombreuses ruines du Nord, en passant par la forteresse en ruine de la Main Tranchée et les cavernes remplies de lave de l’Œil du Dragon. De nombreux passages de leur périple ont été oubliés, mais personne ne doute que leurs efforts ont permis de sauver Kuldahar et les Dix-Cités et de nos jours encore, on conte leurs exploits à Kuldahar et Havre du Levant. Le corps de Hrothgar a été enterré dans un petit vallon près de la ville de Kuldahar, en mémoire du désintéressement dont il a fait preuve en venant à l’aide de ses voisins alors que Havre du Levant connaissait ses propres problèmes.
 On attribut à ces aventuriers d’autres actes héroïques, comme la découverte de l’emplacement de la tombe de Kresselack, le Loup Noir, l’un des généraux les plus méprisés du Nord. Ils ont également découvert de nombreux monastères, dont celui de la Main Tranchée, ainsi que d’autres ruines dont on pensait que le temps et la neige les avaient fait disparaître pour toujours.
 
@@ -11344,13 +11344,13 @@ Poids : 0,5~
  - L’entrepôt d’objets magiques de Wozley Chiffemolle
  - La citadelle de bois de Darmos l’Infirme
  - L’établi d’Oncle Fralin
- - ... et bien plus !
+ - … et bien plus !
  - Les donjons à éviter comme la peste :
  - La Forteresse de Fer de Blodax le dévoreur d’âmes
  - Le Palais des Violentes Émasculations de Dominara l’Erinye
  - La Fosse Écarlate aux Dix Mille Morts
  - La chambre à coucher d’Oncle Fralin
- - ... et bien d’autres encore !
+ - … et bien d’autres encore !
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
@@ -11358,7 +11358,7 @@ Poids : 0,5~
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
-... et plus de 80 autres chapitres traitant de tous les aspects de la vie d’aventurier, de la collecte des trésors à l’utilisation des sorts en passant par les vertus du courage et celles de la lâcheté.
+… et plus de 80 autres chapitres traitant de tous les aspects de la vie d’aventurier, de la collecte des trésors à l’utilisation des sorts en passant par les vertus du courage et celles de la lâcheté.
 
 PARAMÈTRES :
 
@@ -11381,13 +11381,13 @@ Poids : 3,63 kg (8 lb)~
  - L’entrepôt d’objets magiques de Wozley Chiffemolle
  - La citadelle de bois de Darmos l’Infirme
  - L’établi d’Oncle Fralin
- - ... et bien plus !
+ - … et bien plus !
  - Les donjons à éviter comme la peste :
  - La Forteresse de Fer de Blodax le dévoreur d’âmes
  - Le Palais des Violentes Émasculations de Dominara l’Erinye
  - La Fosse Écarlate aux Dix Mille Morts
  - La chambre à coucher d’Oncle Fralin
- - ... et bien d’autres encore !
+ - … et bien d’autres encore !
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
@@ -11395,7 +11395,7 @@ Poids : 3,63 kg (8 lb)~
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
-... et plus de 80 autres chapitres traitant de tous les aspects de la vie d’aventurier, de la collecte des trésors à l’utilisation des sorts en passant par les vertus du courage et celles de la lâcheté.
+… et plus de 80 autres chapitres traitant de tous les aspects de la vie d’aventurier, de la collecte des trésors à l’utilisation des sorts en passant par les vertus du courage et celles de la lâcheté.
 
 PARAMÈTRES :
 
@@ -11418,9 +11418,9 @@ Poids : 0,91 kg (2 lb)~
 //@12219	= ~Livre de Maître d’Exaltation Glorieuse~
 //@12220	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 //@12221	= ~Grimoire Obscène de Mensel~
-@12222	= ~Mensel de Cormyr, ancien seigneur d’Immersye, était un homme bon, généreux et animé des meilleures intentions envers son prochain. Il était aimé de sa famille, de ses serviteurs et de tous ceux qui vivaient sur ses terres. Un coffre secret fut toutefois découvert dans son bureau après la mort du bon seigneur Mensel, qui rendit son dernier souffle dans son sommeil. Les héritiers y trouvèrent quelques trésors, ainsi que... le Grimoire Obscène.
+@12222	= ~Mensel de Cormyr, ancien seigneur d’Immersye, était un homme bon, généreux et animé des meilleures intentions envers son prochain. Il était aimé de sa famille, de ses serviteurs et de tous ceux qui vivaient sur ses terres. Un coffre secret fut toutefois découvert dans son bureau après la mort du bon seigneur Mensel, qui rendit son dernier souffle dans son sommeil. Les héritiers y trouvèrent quelques trésors, ainsi que… le Grimoire Obscène.
 
-Les origines de ce grimoire, tout autant que l’identité de ceux qui y sont affiliés de près ou de loin (à l’exception notable du bon seigneur Mensel) restent toujours inconnues, bien que les rumeurs les plus folles se répandent à ce sujet depuis près d’un siècle. Le scandale éclata par le prophète d’Arabel, un jeune homme pieux affirmant que le seigneur Mensel avait fait rédiger ce grimoire pour son usage personnel et s’était ensuite débarrassé de tous ceux qui avaient eu vent du projet... ce qui entacha irrémédiablement l’honneur de la famille Mensel, bien entendu.
+Les origines de ce grimoire, tout autant que l’identité de ceux qui y sont affiliés de près ou de loin (à l’exception notable du bon seigneur Mensel) restent toujours inconnues, bien que les rumeurs les plus folles se répandent à ce sujet depuis près d’un siècle. Le scandale éclata par le prophète d’Arabel, un jeune homme pieux affirmant que le seigneur Mensel avait fait rédiger ce grimoire pour son usage personnel et s’était ensuite débarrassé de tous ceux qui avaient eu vent du projet… ce qui entacha irrémédiablement l’honneur de la famille Mensel, bien entendu.
 
 Il fut donc décidé de réduire le grimoire impie en cendres, mais au grand étonnement des témoins venus assister à sa destruction, celui-ci s’évapora dans une fumée âcre au lieu de brûler comme il aurait dû. Le Grimoire Obscène a depuis lors fait de courtes apparitions en des lieux variés, jamais là où on pensait le trouver et disparaissant peu de temps après.
 
@@ -11433,9 +11433,9 @@ Spécial :
   Le Grimoire Obscène peut être utilisé une fois par jour.
 Poids : 0,91 kg (2 lb)~
 //@12223	= ~Grimoire Vil de Mensel Pervertere~
-@12224	= ~Mensel de Cormyr, ancien seigneur d’Immersye, était un homme bon, généreux et animé des meilleures intentions envers son prochain. Il était aimé de sa famille, de ses serviteurs et de tous ceux qui vivaient sur ses terres. Un coffre secret fut toutefois découvert dans son bureau après la mort du bon seigneur Mensel, qui rendit son dernier souffle dans son sommeil. Les héritiers y trouvèrent quelques trésors, ainsi que... le Grimoire Vil de Mensel Pervertere.
+@12224	= ~Mensel de Cormyr, ancien seigneur d’Immersye, était un homme bon, généreux et animé des meilleures intentions envers son prochain. Il était aimé de sa famille, de ses serviteurs et de tous ceux qui vivaient sur ses terres. Un coffre secret fut toutefois découvert dans son bureau après la mort du bon seigneur Mensel, qui rendit son dernier souffle dans son sommeil. Les héritiers y trouvèrent quelques trésors, ainsi que… le Grimoire Vil de Mensel Pervertere.
 
-Les origines de ce grimoire, tout autant que l’identité de ceux qui y sont affiliés de près ou de loin (à l’exception notable du bon seigneur Mensel) restent toujours inconnues, bien que les rumeurs les plus folles se répandent à ce sujet depuis près d’un siècle. Le scandale éclata par le prophète d’Arabel, un jeune homme pieux affirmant que le seigneur Mensel avait fait rédiger ce grimoire pour son usage personnel et s’était ensuite débarrassé de tous ceux qui avaient eu vent du projet... ce qui entacha irrémédiablement l’honneur de la famille Mensel, bien entendu.
+Les origines de ce grimoire, tout autant que l’identité de ceux qui y sont affiliés de près ou de loin (à l’exception notable du bon seigneur Mensel) restent toujours inconnues, bien que les rumeurs les plus folles se répandent à ce sujet depuis près d’un siècle. Le scandale éclata par le prophète d’Arabel, un jeune homme pieux affirmant que le seigneur Mensel avait fait rédiger ce grimoire pour son usage personnel et s’était ensuite débarrassé de tous ceux qui avaient eu vent du projet… ce qui entacha irrémédiablement l’honneur de la famille Mensel, bien entendu.
 
 Il fut donc décidé de réduire le grimoire impie en cendres, mais au grand étonnement des témoins venus assister à sa destruction, celui-ci s’évapora dans une fumée âcre au lieu de brûler comme il aurait dû. Le Grimoire Obscène a depuis lors fait de courtes apparitions en des lieux variés, jamais là où on pensait le trouver et disparaissant peu de temps après.
 
@@ -11841,7 +11841,7 @@ Poids : 0,45 kg (1 lb)~
 //@12325	= ~Brisarme de Pudu~
 @12326	= ~Le capitaine Pudu, commandant de la garde de la Légion de la Chimère, aime utiliser l’arme la plus impressionnante et la plus destructrice qui soit. C’est sans doute ce qui a incité ce demi-gobelin à se munir d’une arme en théorie bien trop grande pour lui, la hallebarde.
 
-Mais il ne pouvait se satisfaire d’une hallebarde comme les autres, aussi en fit-il forger une dotée d’enchantements particulièrement mauvais. La Brisarme de Pudu inflige de terrifiants dégâts du feu à ses victimes, et il arrive également qu’elle les étourdisse, les empêchant de se défendre efficacement... car c’est ainsi que Pudu préfère ses ennemis...
+Mais il ne pouvait se satisfaire d’une hallebarde comme les autres, aussi en fit-il forger une dotée d’enchantements particulièrement mauvais. La Brisarme de Pudu inflige de terrifiants dégâts du feu à ses victimes, et il arrive également qu’elle les étourdisse, les empêchant de se défendre efficacement… car c’est ainsi que Pudu préfère ses ennemis…
 
 PARAMÈTRES :
 
@@ -11858,7 +11858,7 @@ Type d’arme : À deux mains~
 //@12327	= ~Brisarme ardente de Pudu~
 @12328	= ~Le capitaine Pudu, commandant de la garde de la Légion de la Chimère, aime utiliser l’arme la plus impressionnante et la plus destructrice qui soit. C’est sans doute ce qui a incité ce demi-gobelin à se munir d’une arme en théorie bien trop grande pour lui, la hallebarde.
 
-Mais il ne pouvait se satisfaire d’une hallebarde comme les autres, aussi en fit-il forger une dotée d’enchantements particulièrement mauvais. Son arme, qu’il baptisa Brisarme Ardente de Pudu, inflige de terrifiants dégâts du feu à ses victimes, et il arrive également qu’elle les étourdisse, les empêchant de se défendre efficacement... car c’est ainsi que Pudu préfère ses ennemis.
+Mais il ne pouvait se satisfaire d’une hallebarde comme les autres, aussi en fit-il forger une dotée d’enchantements particulièrement mauvais. Son arme, qu’il baptisa Brisarme Ardente de Pudu, inflige de terrifiants dégâts du feu à ses victimes, et il arrive également qu’elle les étourdisse, les empêchant de se défendre efficacement… car c’est ainsi que Pudu préfère ses ennemis.
 
 PARAMÈTRES :
 
