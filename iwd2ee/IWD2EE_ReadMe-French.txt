@@ -18,6 +18,51 @@ Italien
 Russe
 Français
 
+Composants:
+
+1. Noyau d’IWD2EE
+2. Remaniement des classes
+3. Restrictions concernant l’alignement des classes assouplies
+4. Remaniement des sorts
+5. Dons de prédilection pour toutes les écoles de magie
+6. Remaniement des objets
+7. Remaniement des créatures
+8. Meilleure progression du gain d'XP
+9. Alternative plus intéressante aux quêtes de la Palissade
+10. Ajouter des façons de progresser à travers certaines zones
+11. Village Itinérant plus rapide
+12. Œil du Dragon plus rapide
+13. Raccourcir la série de quêtes de la boucle temporelle de l'Œil du Dragon à une seule bataille
+14. Ajouter plus de parchemins au jeu
+15. Résistances et immunités des créatures revues à la baisse
+16. Jets de sauvegarde des ennemis ajustés à un niveau normal
+17. Changer l’immunité aux coups critiques
+18. Meilleurs ennemis raciaux pour les rôdeurs
+19. Débloque tous les choix de couleur pour chaque race
+20. Plus d’options de persuasion
+21. Composant principal des compagnons
+22. Les PNJ commencent avec de l’expérience en rejoignant le groupe
+23. Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement
+24. Thème principal en boucle
+25. Champ de Bataille du Temple de Glace remanié
+26. Résistance mineure aux dégâts pour les armures et les boucliers
+27. Remaniement des races
+28. Revoir les différences de gain d'XP des races
+29. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
+30. Ajuster le niveau des rencontres
+31. En mode Cœur de Furie, réduire les bonus aux PV des créatures
+32. En mode Cœur de Furie, réduire les bonus à l’attaque des créatures
+33. En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures
+34. En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées
+35. En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience
+36. Réduire le délai entre chaque attaque sournoise
+37. Ajuster le niveau maximum
+38. Toujours apprendre avec succès les sorts provenant de parchemins
+39. Tout le monde peut effectuer des attaques d'opportunité
+40. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage
+41. Ajouter plus de pièges
+42. Ajouter des raccourcis clavier pour automatiser l’application de buffs
+
 --Noyau d’IWD2EE--
 
 Ce composant doit être installé pour que tout autre composant puisse l'être. Il inclut divers changements "Quality of Life".
