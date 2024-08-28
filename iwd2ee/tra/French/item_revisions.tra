@@ -6712,7 +6712,7 @@ Type d’arme : À une main~
 @11263	= ~Hache Hurlante +5~
 @11264	= ~On ignore l’origine de cette arme, mais on pense généralement qu’elle a été créée à la suite d’une blague d’un goût douteux. Hurleuse ressemble à une hache de lancer comme les autres, mais elle émet un terrible hurlement en filant vers sa cible. Si cette dernière est touchée, elle subit des dégâts supplémentaires de source sonique.
 
-“ Hache Hurlante “ n’est pas une arme subtile et ne doit jamais être envisagée pour des opérations furtives. Son seul avantage est qu’elle confère une immunité aux sorts de silence à son porteur.
+“Hache Hurlante” n’est pas une arme subtile et ne doit jamais être envisagée pour des opérations furtives. Son seul avantage est qu’elle confère une immunité aux sorts de silence à son porteur.
 
 PARAMÈTRES :
 
@@ -7160,7 +7160,7 @@ Type d’arme : À deux mains~
 //@11339	= ~La Femme du Bourreau~
 //@11340	= ~Vous pouvez conserver la description de l’objet, si vous n’avez pas besoin de la modifier.~
 //@11341	= ~Légende de la Femme du Bourreau~
-@11342	= ~Dans la ville portuaire crasseuse de Luskan, les exécutions quotidiennes permettent de rompre la monotonie de la vie dans cette cité. Cette grande hache était le seul bien du bourreau de la ville. On prétend qu’il ne s’en séparait jamais et lui donnait le nom de “ Légende de la Femme du Bourreau “. Au bout de quelques années, il rencontra dans l’une des maisons de tolérance de la ville une femme complaisante qui ne semblait pas troublée par sa profession. Au cours des mois qui suivirent, il lui rendit donc de nombreuses visites. Lorsque les autorités de la ville se rendirent dans la chambre de la prostitué pour l’arrêter (il s’agissait en fait d’une voleuse accomplie), ils ne trouvèrent que le bourreau. Ce dernier fut accusé de l’avoir aidée à prendre la fuite et sa propre hache fut utilisée pour le décapiter sur la place de la ville. C’était la première fois qu’autant de personnes se pressaient pour assister à une exécution et beaucoup furent d’accord pour dire que la “Légende de la Femme du Bourreau” avait eu le dernier mot sur ces infidélités.
+@11342	= ~Dans la ville portuaire crasseuse de Luskan, les exécutions quotidiennes permettent de rompre la monotonie de la vie dans cette cité. Cette grande hache était le seul bien du bourreau de la ville. On prétend qu’il ne s’en séparait jamais et lui donnait le nom de “Légende de la Femme du Bourreau”. Au bout de quelques années, il rencontra dans l’une des maisons de tolérance de la ville une femme complaisante qui ne semblait pas troublée par sa profession. Au cours des mois qui suivirent, il lui rendit donc de nombreuses visites. Lorsque les autorités de la ville se rendirent dans la chambre de la prostitué pour l’arrêter (il s’agissait en fait d’une voleuse accomplie), ils ne trouvèrent que le bourreau. Ce dernier fut accusé de l’avoir aidée à prendre la fuite et sa propre hache fut utilisée pour le décapiter sur la place de la ville. C’était la première fois qu’autant de personnes se pressaient pour assister à une exécution et beaucoup furent d’accord pour dire que la “Légende de la Femme du Bourreau” avait eu le dernier mot sur ces infidélités.
 
 Dégâts : 1d12 +3
 Bonus d’attaque : +3
@@ -8585,7 +8585,7 @@ Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, marteau
 Type d’arme : À une main~
 //@11601	= ~Marteau Vaillant Funeste~
-@11602	= ~” Marteau vaillant funeste “ est une arme terrifiante, forgée dans le but de mettre à mal le moral de l’ennemi avant de défoncer son armure et son crâne. Le nom de son créateur s’est depuis longtemps perdu dans les brumes des temps, alors que les registres duergars remontent pourtant sur de nombreux millénaires. Couvert de runes inquiétantes, il arbore l’inscription suivante dans la langue des Nains d’antan, qui n’est plus désormais utilisée que par les Duergars :
+@11602	= ~“Marteau vaillant funeste” est une arme terrifiante, forgée dans le but de mettre à mal le moral de l’ennemi avant de défoncer son armure et son crâne. Le nom de son créateur s’est depuis longtemps perdu dans les brumes des temps, alors que les registres duergars remontent pourtant sur de nombreux millénaires. Couvert de runes inquiétantes, il arbore l’inscription suivante dans la langue des Nains d’antan, qui n’est plus désormais utilisée que par les Duergars :
 
 “Ce n’est pas la mort qu’il faut craindre, mais la peur de la mort.”
 
@@ -11268,7 +11268,7 @@ Durée : 24 heures~
 //@12197	= ~Livre des Méritants~
 @12198	= ~Ce livre volumineux décrit en détail les dogmes de Tempus, le Dieu de la Guerre. Vous y trouvez les principes de l’ordre :
 
-“Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.
+“Tempus ne gagne pas les batailles. Tempus aide ceux qui le méritent à gagner la bataille. La guerre est juste. Au cours de n’importe quelle bataille, les deux camps sont opprimés de la même manière et un mortel peut y perdre la vie ou devenir un grand chef parmi ses compagnons. La guerre ne doit pas inspirer la peur. Il s’agit d’une force naturelle, une force humaine que toute civilisation crée par le simple fait d’exister.”
 
 Le pouvoir de ce livre s’accroît lorsqu’un prêtre de Tempus en lit des passages à voix haute. Il permet au prêtre de faire appel au pouvoir qu’il contient et de l’utiliser au nom de la guerre.
 
@@ -11354,7 +11354,7 @@ Poids : 0,5~
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
- - Comment accepter plus facilement le fait d’être “ neutre mauvais “
+ - Comment accepter plus facilement le fait d’être “neutre mauvais”
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
@@ -11391,7 +11391,7 @@ Poids : 3,63 kg (8 lb)~
  - Vous et votre lanterne
  - 12 façons d’utiliser 12 pointes en fer
  - 99 façons d’utiliser le petit marteau vendu avec les 12 pointes en fer
- - Comment accepter plus facilement le fait d’être “ neutre mauvais “
+ - Comment accepter plus facilement le fait d’être “neutre mauvais”
  - La belle princesse : rincez-vous l’œil, mais défense de toucher !
  - Pourquoi il ne faut jamais mettre la main dans ce trou obscur
 
