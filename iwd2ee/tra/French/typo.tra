@@ -52,7 +52,7 @@ Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour t
 //40223: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
 @57009	=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n’oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
 
-//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand
+//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand 
 @57010	=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez donc les dons Attaque en puissance ou Tir rapide pour maximiser les dégâts que vous leur infligez.~
 
 //35794: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
@@ -111,21 +111,15 @@ Ce sort protège contre tous les sorts causant la mort d’un seul coup, comme Dési
 
 Les moines du Corbeau Noir vivent toujours dans les montagnes, leurs rangs grossissant ou se vidant au fil des ans. J’ai observé leur plateau de loin, je les ai vus s’entraîner, éviter chaque flocon de neige qui tombait. Aujourd’hui, les moines semblent satisfaits, même si cela n’a pas toujours été le cas, de laisser leur monde secret et silencieux à l’écart de la politique et de la guerre.~
 
-//125: Wrong name. It was “Coulon” for some reason
-@57026	=~Forge de Conlan~
-
 //17817:
-@57027	=~Conlan~
+@57026	=~Conlan~
 
 //17818:
-@57028	=~Conlan~
-
-//17937:
-@57029	=~Cette clé en fer appartenait à Conlan, forgeron de Kuldahar.~
+@57027	=~Conlan~
 
 //12634: “Main Coupée” + “reçu” + “adressée”
-@57029	=~Plusieurs lettres adressées à Dolon Daemba, l'envoyé de Légion de la Chimère. Chacune porte le sceau de la légion.
+@57028	=~Plusieurs lettres adressées à Dolon Daemba, l'envoyé de Légion de la Chimère. Chacune porte le sceau de la légion.
 
-L'une d'entre elles parle d'un complot pour perturber les activités du monastère en retournant Aruma Blane, l'archimandrite postulant, contre Ormis Dohor, l'actuel archimandrite, parti inspecter la légion de la chimère à la Main Tranchée. Lorsque Ormis refusa de se ranger du côté de la légion de la chimère, Dolon reçut l'ordre de séduire et de corrompre Aruma et de s'assurer ensuite que le monastère n'interfère pas dans les affaires de la légion.
+L'une d'entre elles parle d'un complot pour perturber les activités du monastère en retournant Aruma Blane, l'archimandrite postulant, contre Ormis Dohor, l'actuel archimandrite, parti inspecter la Légion de la Chimère à la Main Tranchée. Lorsque Ormis refusa de se ranger du côté de la Légion de la Chimère, Dolon reçut l'ordre de séduire et de corrompre Aruma et de s'assurer ensuite que le monastère n'interfère pas dans les affaires de la légion.
 
 Poids : 0~
