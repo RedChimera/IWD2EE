@@ -2982,7 +2982,7 @@ Bonus de dextérité maxi : +1
 Malus de jet d’armure : -5
 Echec des sorts profanes : 35%
 Spécial :
-  Protection magique : immunité aux sorts Nuage nauséabond, Nuage de mort, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
+  Protection magique : immunité aux sorts Nuage nauséabond, Brume mortelle, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
  Bonus au jet de sauvegarde : +2 aux jets de Réflexes
 Poids : 22,68 kg (50 lb)~
 @10577	= ~Armure de Tempête de Genesi aérien~ //Without Spell Revisions Installed
@@ -3000,7 +3000,7 @@ Bonus de dextérité maxi : +1
 Malus de jet d’armure : -5
 Echec des sorts profanes : 35%
 Spécial :
- Protection magique : immunité aux sorts Nuage nauséabond, Nuage de mort, Brume acide, Suffocation, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
+ Protection magique : immunité aux sorts Nuage nauséabond, Brume mortelle, Brume acide, Suffocation, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
  Bonus au jet de sauvegarde : +6 aux jets de Réflexes
 Poids : 31,75 kg (70 lb)~
 //@10579	= ~Armure de Tempête de Genesi aérien~ //With Spell Revisions Installed
@@ -3018,7 +3018,7 @@ Bonus de dextérité maxi : +1
 Malus de jet d’armure : -5
 Echec des sorts profanes : 35%
 Spécial :
- Protection magique : immunité aux sorts Nuage nauséabond, Nuage de mort, Brume mortelle, Suffocation, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
+ Protection magique : immunité aux sorts Nuage nauséabond, Brume mortelle, Brouillard létal, Suffocation, Nuage de pestilence, Rafale de vent, Tourbillon et Tornade
  Bonus au jet de sauvegarde : +6 aux jets de Réflexes
 Poids : 31,75 kg (70 lb)~
 @10581	= ~Taille de Diamant~
@@ -14422,7 +14422,7 @@ Bonus d’attaque : +2
 Enchantement : +2
 Type de dégâts : Perforants
 Spécial :
-  Lorsque les sorts Moisissure, Nuage de pestilence, Contagion, Empoisonnement, Infection et Nuage de mort sont lancés par le porteur, leur DD augmente de 5 points.
+  Lorsque les sorts Moisissure, Nuage de pestilence, Contagion, Empoisonnement, Infection et Brume mortelle sont lancés par le porteur, leur DD augmente de 5 points.
 Poids : 0,91 kg (2 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~
@@ -14436,7 +14436,7 @@ Bonus d’attaque : +3
 Enchantement : +3
 Type de dégâts : Perforants
 Spécial :
-  Lorsque les sorts Moisissure, Nuage de pestilence, Contagion, Empoisonnement, Infection et Nuage de mort sont lancés par le porteur, leur DD augmente de 7 points.
+  Lorsque les sorts Moisissure, Nuage de pestilence, Contagion, Empoisonnement, Infection et Brume mortelle sont lancés par le porteur, leur DD augmente de 7 points.
 Poids : 0,91 kg (2 lb)
 Compétence : Arme courante, petite lame
 Type d’arme : À une main~

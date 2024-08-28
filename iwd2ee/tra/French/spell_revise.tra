@@ -2063,8 +2063,8 @@ Jusqu’à 2 : Inconscient pendant 5 rounds
 
 Un jet de sauvegarde réussi contre les Réflexes avec +4 au Degré de Difficulté annule l’effet. Les créatures aveugles ne sont pas affectées par le Vapeur colorée.~
 
-@1857	= ~Brume mortelle~
-@1858	= ~Brume mortelle
+@1857	= ~Brouillard létal~
+@1858	= ~Brouillard létal
 (Transmutation)
 Niveau : Ens/Mag 6
 Portée : portée de vue
@@ -2864,7 +2864,7 @@ Cette capacité peut être utilisée comme une action libre.~
 @30277=~... Champ de téléportation.~
 @30278=~... Mur de feu.~
 @30279=~... Boule de foudre.~
-@30280=~... Nuage de mort.~
+@30280=~... Brume mortelle.~
 @30281=~... Forme spectrale.~
 @30282=~... Convocation d’ombres majeure.~
 @30283=~... Immobilisation de monstre.~
@@ -2888,7 +2888,7 @@ Cette capacité peut être utilisée comme une action libre.~
 @30301=~... Chaos.~
 @30302=~... Cercle de mort.~
 @30303=~... Dards d’os.~
-@30304=~... Brume mortelle.~
+@30304=~... Brouillard létal.~
 @30305=~... Globe d’invulnérabilité.~
 @30306=~... Toucher de Liche.~
 @30307=~... Hâte de groupe.~
@@ -3631,8 +3631,8 @@ Jet de sauvegarde : aucun
 
 Le Bouclier de feu rouge protège l’utilisateur des dégâts de froid en entourant le lanceur de sorts d’un bouclier de flammes brûlantes, qui réduisent de 50% tous les dégâts de froid reçus. Les adversaires frappant le lanceur de sorts avec des attaques de mêlée subissent 1d6 + 1 par niveau (max 1d6+15) de dégâts de feu par coup.~
 
-@33503 	= ~Nuage de mort~
-@34503 	= ~Nuage de mort
+@33503 	= ~Brume mortelle~
+@34503 	= ~Brume mortelle
 (Nécromancie)
 Niveau : Ens/Mag 5
 Portée : portée de vue

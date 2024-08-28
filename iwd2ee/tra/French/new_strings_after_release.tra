@@ -432,8 +432,8 @@ Jet de sauvegarde : aucun
 
 Ce sort transforme le corps du lanceur en fer vivant, lui conférant plusieurs résistances et capacités puissantes. Tant que le sort est en vigueur, le lanceur a une résistance de 15/- au feu, au froid et à toutes formes de dégâts physiques, mais aussi une vulnérabilité de +15 à l’électricité. Les sorts qui affectent la respiration ou la physiologie du lanceur sont complètement ignorés, comme le poison, la cécité, la surdité et la maladie pour n’en nommer que quelques-uns, et le lanceur devient trop lourd pour être repoussé avec des sorts comme Rafale de vent, Lancer ou Répulsion. De plus, le lanceur gagne un bonus de +8 en Force et en Constitution et un malus de -8 en Dextérité. Malheureusement, le mouvement du lanceur devient lent et gênant sous le poids de son nouveau corps, ce qui réduit sa vitesse de déplacement à la moitié de sa vitesse normale, et il reçoit une pénalité de -2 à la vitesse d’incantation.~
 
-@1857	= ~Brume mortelle~
-@1858	= ~Brume mortelle
+@1857	= ~Brouillard létal~
+@1858	= ~Brouillard létal
 (Transmutation)
 Niveau : Ens/Mag 6
 Portée : portée de vue
