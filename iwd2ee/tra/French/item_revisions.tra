@@ -55,7 +55,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Résistance : 2/- de résistance au froid
+Résistance : 2/- à la résistance au froid
 Charisme : +1
 Poids : 0,91 kg (2 lb)~
 //@10036	= ~Outil multiple de Belib~
@@ -198,7 +198,7 @@ PARAMÈTRES :
 
 Spécial :
  Dextérité : bonus de +8
- Résistance : 10/- de résistance au froid
+ Résistance : 10/- à la résistance au froid
 Poids : 0,45 kg (1 lb)~
 //@10064	= ~Sang des Innocents~
 @10065	= ~Les impitoyables et terrifiants virtuoses de l’effroi de Baine répandent son dogme de haine et de désolation sur le monde en faisant croître le sentiment de terreur. Rien ne satisfait plus un prêtre de Baine que de savoir un de ses disciples responsable d’un beau carnage.
@@ -293,7 +293,7 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 15/- de résistance au feu
+Résistance : 15/- à la résistance au feu
 Poids : 0~
 //@10086	= ~Anneau d’Amitié avec les Animaux~
 @10087	= ~Le secret de fabrication de ces anneaux est bien gardé par un ordre de druides de Cormanthor. On n’en a d’ailleurs jamais vu un seul entre des mains étrangères. On ignore comment celui-ci a pu sortir de la forêt, mais on dit qu’un proscrit l’aurait emporté en exil avec lui.
@@ -524,7 +524,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance au froid
+Résistance : 50/- à la résistance au froid
 Augmente de 30% tous les dégâts du froid infligés par le porteur
 Poids : 0~
 //@10148	= ~Anneau de Régénération Majeure~
@@ -539,7 +539,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Résistance : 15/- de résistance à l’électricité.
+Résistance : 15/- à la résistance à l’électricité.
 Poids : 0~
 @10152	= ~Anneau de Protection +5~
 @10153	= ~Cet anneau magique offre à son porteur une protection extraordinaire.
@@ -568,14 +568,14 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Résistance : 15/- de résistance au froid
+Résistance : 15/- à la résistance au froid
 Poids : 0~
 //@10160	= ~Anneau de Résistance à l’Acide~
 @10161	= ~Un anneau est une simple bande de métal précieux utilisé en joaillerie. Certains d’entre eux se voient devenir les réceptacles de puissants sortilèges. Ils sont alors très recherchés, tout spécialement par les aventuriers. Pour une raison inconnue, cet anneau irradie une faible chaleur.
 
 PARAMÈTRES :
 
-Résistance : 15/- en résistance à l’acide
+Résistance : 15/- à la résistance à l’acide
 Poids : 0~
 @10162	= ~Anneau Majeur du Caméléon~
 @10163	= ~Un anneau est une simple bande de métal précieux utilisé en joaillerie. Certains d’entre eux se voient devenir les réceptacles de puissants sortilèges. Ils sont alors très recherchés, tout spécialement par les aventuriers. Pour une raison inconnue, cet anneau irradie une faible chaleur.
@@ -742,7 +742,7 @@ Poids : 1,91 kg (2 lb)~
 
 PARAMÈTRES :
 
-Résistance : 2/- de résistance au froid
+Résistance : 2/- à la résistance au froid
 Charisme : +1
 Poids : 1,91 kg (2 lb)~
 //@10206	= ~Chaussons de Chimandrae~
@@ -849,7 +849,7 @@ Poids : 0,68 kg (1,5 lb)~
 
 PARAMÈTRES :
 
-Résistance : 2/- de résistance au froid
+Résistance : 2/- à la résistance au froid
 Charisme : +1
 Poids : 0,23 kg (0,5 lb)~
 //@10244	= ~Bandeaux soudés~
@@ -1280,14 +1280,14 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Résistance : 3/- de résistance au froid
+Résistance : 3/- à la résistance au froid
 Poids : 1,36 kg (3 lb)~
 //@10322	= ~Cape en loup arctique~
 @10323	= ~Une cape peut adopter de nombreuses formes différentes et être fabriquée dans une multitude de matériaux. La plupart des capes sont de simples pièces circulaires d’étoffe avec un trou en leur centre pour la tête, mais on en trouve également de plus élaborées qui se drapent autour du cou à l’aide d’une chaîne, d’une broche, d’une corde ou d’une épingle plus ou moins ornementées. Cette cape semble avoir été taillée dans la peau d’un loup arctique.
 
 PARAMÈTRES :
 
-Résistance : 4/- de résistance au froid
+Résistance : 4/- à la résistance au froid
 Charisme : +1
 Poids : 1,36 kg (3 lb)~
 //@10324	= ~Cape de Berywel~
@@ -1415,7 +1415,7 @@ Poids : 1,36 kg (3 lb)~
 
 PARAMÈTRES :
 
-Résistance : 5/- en résistance au feu.
+Résistance : 5/- à la résistance au feu.
 Discrétion : +5
 Poids : 0,45 kg (1 lb)~
 //@10354	= ~Piwawfi de la Maison Despana~ //HoF
@@ -1423,7 +1423,7 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 10/- en résistance au feu.
+Résistance : 10/- à la résistance au feu.
 Discrétion : +15
 Esprit fuyant : le porteur obtient l’aptitude Esprit fuyant (roublard)
 Poids : 0,45 kg (1 lb)~
@@ -1449,7 +1449,7 @@ Poids : 0,91 kg (2 lb)~
 PARAMÈTRES :
 
 Spécial :
-  Résistance : 2/- de résistance au froid
+  Résistance : 2/- à la résistance au froid
   Charisme : +1
 Poids : 0,45 kg (1 lb)~
 //@10363	= ~The Black Hands of Shelgoth~
@@ -1554,7 +1554,7 @@ PARAMÈTRES :
 
  	Bonus à la CA (générique) : +4
 Spécial :
- Résistance : 15/- de résistance au froid
+ Résistance : 15/- à la résistance au froid
  Souffle de dracosire blanc : cône de givre, 16d8 points de dégâts du froid (Réflexes DD 24 + Charisme x2 pour 1/2 dégâts) (1/jour)
 
 Poids : 1,36 kg (3 lb)~
@@ -1564,7 +1564,7 @@ Poids : 1,36 kg (3 lb)~
 
 PARAMÈTRES :
 
-Résistance : 20/- en résistance au froid
+Résistance : 20/- à la résistance au froid
 Augmente de 20% tous les dégâts de froid infligés par le personnage.
 Poids : 1,36 kg (3 lb)~
 //@10385	= ~Robe de filou~
@@ -1630,7 +1630,7 @@ Poids : 2,7 kg (6 lb)~
 
 PARAMÈTRES :
 
-Résistance : 20/- en résistance au feu.
+Résistance : 20/- à la résistance au feu.
 Augmente de 20% tous les dégâts du feu infligés par le personnage.
 Poids : 1,36 kg (3 lb)~
 //@10399	= ~Robe de mage de Résistance à l’Électricité~
@@ -1638,7 +1638,7 @@ Poids : 1,36 kg (3 lb)~
 
 PARAMÈTRES :
 
-Résistance : 20/- de résistance à l’électricité.
+Résistance : 20/- à la résistance à l’électricité.
 Augmente de 20% tous les dégâts d’électricité infligés par le personnage
 Poids : 1,36 kg (3 lb)~
 //@10401	= ~Robe de Fusion~
@@ -1688,7 +1688,7 @@ Poids : 1,36 kg (3 lb)~
 PARAMÈTRES :
 
 Bonus de parade : +2
-Résistance : 5/- en résistance au froid
+Résistance : 5/- à la résistance au froid
 Poids : 1,36 kg (3 lb)~
 //@10413	= ~Robes Déchirées de Phaen~
 @10414	= ~La robe de Phaen est constituée de centaines de morceaux de tissu déchiré et semble plus indiquée pour revêtir un mendiant de Luskan qu’un puissant magicien. Mais si l’on surmonte sa légitime répulsion, un examen minutieux du vêtement permet de découvrir que le tissu est subtilement imprégné de magie, au point que seul un magicien expérimenté pourrait le déceler. L’intérieur de cette robe de haillons semble fourré avec de la peau d’ours qui est étonnamment chaude et légère, ce qui en fait un vêtement idéal pour le rude climat de Targos.
@@ -1696,9 +1696,9 @@ Poids : 1,36 kg (3 lb)~
 PARAMÈTRES :
 
 Bonus de parade : +6
-Résistance : 20/- en résistance au froid
-Résistance : 3/- en résistance aux armes perforantes
-Résistance : 3/- en résistance aux armes contondantes
+Résistance : 20/- à la résistance au froid
+Résistance : 3/- à la résistance aux armes perforantes
+Résistance : 3/- à la résistance aux armes contondantes
 Poids : 1,36 kg (3 lb)~
 
 //@10415	= ~Armure de Cuir~
@@ -1794,7 +1794,7 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10%
 Spécial :
- Résistance : 15/- de résistance au feu.
+ Résistance : 15/- à la résistance au feu.
 Poids : 4,54 kg (10 lb)~
 //@10437	= ~Cuir cloutée de l’Ombre +1~
 @10438	= ~L’armure de cuir cloutée a peu de points communs avec sa cousine, l’armure de cuir. Alors que cette dernière se compose de cuir durci, l’armure cloutée est faite de cuir souple percé de centaines de rivets métalliques. Ils sont si proches qu’ils constituent une carapace de métal flexible qui peut ainsi détourner les attaques de taille. En fait, le cuir ne sert à rien d’autre que maintenir les rivets en place. Cette armure de cuir bénéficie d’enchantements qui en améliorent la résistance.
@@ -1911,7 +1911,7 @@ Poids : 1,36 kg (3 lb)~
 PARAMÈTRES :
 
 Bonus de parade : +2
-Résistance : 5/- en résistance au froid
+Résistance : 5/- à la résistance au froid
 Poids : 1,36 kg (3 lb)~
 //@10413	= ~Robes Déchirées de Phaen~
 @10414	= ~La robe de Phaen est constituée de centaines de morceaux de tissu déchiré et semble plus indiquée pour revêtir un mendiant de Luskan qu’un puissant magicien. Mais si l’on surmonte sa légitime répulsion, un examen minutieux du vêtement permet de découvrir que le tissu est subtilement imprégné de magie, au point que seul un magicien expérimenté pourrait le déceler. L’intérieur de cette robe de haillons semble fourré avec de la peau d’ours qui est étonnamment chaude et légère, ce qui en fait un vêtement idéal pour le rude climat de Targos.
@@ -1919,9 +1919,9 @@ Poids : 1,36 kg (3 lb)~
 PARAMÈTRES :
 
 Bonus de parade : +6
-Résistance : 20/- en résistance au froid
-Résistance : 3/- en résistance aux armes perforantes
-Résistance : 3/- en résistance aux armes contondantes
+Résistance : 20/- à la résistance au froid
+Résistance : 3/- à la résistance aux armes perforantes
+Résistance : 3/- à la résistance aux armes contondantes
 Poids : 1,36 (3 lb)~
 
 //@10415	= ~Armure de Cuir~
@@ -2017,7 +2017,7 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10%
 Spécial :
- Résistance : 15/- de résistance au feu.
+ Résistance : 15/- à la résistance au feu.
 Poids : 4,54 kg (10 lb)~
 //@10437	= ~Cuir clouté de l’Ombre +1~
 @10438	= ~L’armure de cuir cloutée a peu de points communs avec sa cousine, l’armure de cuir. Alors que cette dernière se compose de cuir durci, l’armure cloutée est faite de cuir souple percé de centaines de rivets métalliques. Ils sont si proches qu’ils constituent une carapace de métal flexible qui peut ainsi détourner les attaques de taille. En fait, le cuir ne sert à rien d’autre que maintenir les rivets en place. Cette armure de cuir bénéficie d’enchantements qui en améliorent la résistance.
@@ -2215,7 +2215,7 @@ Bonus de dextérité maxi : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 15%
 Spécial :
- Résistance : 2/- en résistance au poison
+ Résistance : 2/- à la résistance au poison
 Poids : 11,34 kg (25 lb)~
 @10465	= ~Vile Oripeaux +5~
 @10466	= ~On dit souvent qu’on ne choisit pas sa profession, mais que c’est l’inverse qui se produit. C’est en tout cas ce qui se passa pour Phil le Villain, qui avait pour tâche de débarrasser les Dix-Cités des cadavres qui s’y entassaient, il y a très longtemps. Phil n’avait rien d’un croque-mort ; son travail consistait à tout nettoyer après le passage d’aventuriers venus éliminer un ou plusieurs monstres terrorisant la région.
@@ -2232,8 +2232,8 @@ Bonus de dextérité maxi : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 15%
 Spécial :
- Résistance : 5/- de résistance au poison
- Résistance : 10/- de résistance à l’acide
+ Résistance : 5/- à la résistance au poison
+ Résistance : 10/- à la résistance à l’acide
  Bonus au jet de sauvegarde : +5 aux jets de Vigueur
 Poids : 11,34 kg (25 lb)~
 @10467	= ~Armure de Milton Sixdoigts +2~
@@ -2360,8 +2360,8 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10%
 Spécial :
- Résistance : 2/- de résistance au feu
- Résistance : 2/- de résistance à l’acide
+ Résistance : 2/- à la résistance au feu
+ Résistance : 2/- à la résistance à l’acide
 Poids : 9,07 kg (20 lb)~
 //@10481	= ~Armure en corail et peau de requin~
 @10482	= ~L’armure en corail et peau de requin n’est guère utilisée que par les Sahuagins. Elle est faite de peau de requin et de clous de corail disposés aux endroits stratégiques. Elle protège comme une armure de cuir cloutée, mais ajoute un bonus de 3/- à la résistance au feu et à l’acide.
@@ -2374,8 +2374,8 @@ Bonus max de Dextérité : +5
 Malus de jet d’armure : -1
 Echec des sorts profanes : 15%
 Spécial :
- Résistance : 3/- de résistance au feu
- Résistance : 3/- de résistance à l’acide
+ Résistance : 3/- à la résistance au feu
+ Résistance : 3/- à la résistance à l’acide
 Poids : 11,34 kg (25 lb)~
 //@10483	= ~Harnois de corail~
 @10484	= ~Le harnois de corail n’est guère utilisé que par les Sahuagins. Il se compose de peau de requin et de plaques de corail au niveau des épaules, de la poitrine et des poignets. Il protège comme un harnois, mais ajoute un bonus de 5/- à la résistance contre le feu et l’acide.
@@ -2387,8 +2387,8 @@ Bonus max de Dextérité : +0
 Malus de jet d’armure : -7
 Echec des sorts profanes : 40%
 Spécial :
- +15% de résistance au feu
- +15% de résistance à l’acide
+ +15% à la résistance au feu
+ +15% à la résistance à l’acide
 Poids : 22,68 kg (50 lb)~
 //@10485	= ~Harnois d’ombre des roches~
 @10486	= ~Il est raisonnablement aisé de transformer les plaques protégeant les ombres des roches en armures humanoïdes. Cette armure sombre a été façonnée à la manière d’un harnois plain par des forgerons duergars. Les nains noirs, experts au travail des exosquelettes d’ombres des roches, l’ont traitée et renforcée.
@@ -2429,7 +2429,7 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10%
 Résistance :
-  20/-  de résistance à l’acide
+  20/- à la résistance à l’acide
 Poids : 4,54 kg (10 lb)~
 //@10491	= ~Armure de peau~
 @10492	= ~L’armure de peau se compose de plusieurs couches de cuir. Elle est assez simple à fabriquer et protège bien du froid, même si elle est rigide et entrave un peu les mouvements. Elle est principalement utilisée par les guerriers et les chasseurs des tribus barbares du Nord.
@@ -2453,7 +2453,7 @@ Bonus max de Dextérité : +4
 Malus de jet d’armure : -3
 Echec des sorts profanes : 20%
 Spécial :
-  Résistance : 10/- en résistance au froid
+  Résistance : 10/- à la résistance au froid
 Poids : 9,07 kg (20 lb)~
 @10495	= ~Armure de chasseur itinérant +4~ //HoF
 @10496	= ~Ce type d’armures est fabriqué avec soin pour les meilleurs jeunes chasseurs des Villages Itinérants. Elles sont doublées de fourrure de grands loups blancs de la Forêt maudite et enchantées pour protéger du froid de l’hiver.
@@ -2466,7 +2466,7 @@ Bonus max de Dextérité : +4
 Malus de jet d’armure : -3
 Echec des sorts profanes : 20%
 Spécial :
-  Résistance : 20/- en résistance au froid
+  Résistance : 20/- à la résistance au froid
 Poids : 6,80 kg (15 lb)~
 //@10497	= ~Armure en peau d’abishaï~
 @10498	= ~Un grand mystère entoure cette armure de cuir, dont personne ne connaît l’origine. Tout ce que l’on sait, c’est qu’elle a été confectionnée à partir de la peau d’un abishaï. De couleur noire, elle dégage une étrange odeur de vinaigre, heureusement assez discrète.
@@ -2628,7 +2628,7 @@ Malus de jet d’armure : -5
 Echec des sorts profanes : 30%
 Spécial :
  Légèreté : cette armure pèse la moitié d’une cotte de mailles normale
- Résistance : 10/- de résistance au froid
+ Résistance : 10/- à la résistance au froid
 Poids : 9,07 kg (20 lb)~
 @10527	= ~Destin du Mercenaire~
 @10528	= ~Cette armure était la propriété du commandant d’une compagnie de mercenaires nommée la Phalange d’Argent qui fut expulsée des Dix-Cités après un débat houleux sur les compétences martiales de ses membres (et du coût relatif de leur entretien). Ce commandant aurait péri au cours d’une bagarre d’ivrognes avant que sa compagnie ne reparte vers le sud, son armure fut ensuite confisquée par les autorités de Bryn Shander. Elle a maintes fois changé de mains depuis, dans le grand nord.
@@ -2643,7 +2643,7 @@ Bonus max de Dextérité : +2
 Malus de jet d’armure : -5
 Echec des sorts profanes : 30%
 Spécial :
- Résistance : 20/- de résistance au froid
+ Résistance : 20/- à la résistance au froid
  Légèreté : cette armure pèse 1/4 du poids normal
  Sort : dissipe la fatigue du groupe une fois par jour
 Poids : 4,54 kg (10 lb)~
@@ -2689,9 +2689,9 @@ Spécial :
   Vitesse : 1 attaque supplémentaire par round
 Poids : 2,27 kg (5 lb)~
 @10533	= ~Sainteté~
-@10534	= ~Maya Selvinis était une rôdeuse demi-elfe qui vivait dans les environs de Padhiver. Se sentant différente des autres en raison de son sang mêlé, elle les fréquentait rarement, sauf quand on l’appelait en cas de crise. Car, même si elle préférait vivre seule, elle était toujours disposée à aider ceux qui avaient besoin d’aide. Mais, cela fait, elle retournait toujours vers sa solitude, et ce malgré la tolérance que les habitants de Padhiver montraient à son égard.
+@10534	= ~Maya Selvinis était une rôdeuse demi-elfe qui vivait dans les environs de Padhiver. Se sentant différente des autres en raison de son sang-mêlé, elle les fréquentait rarement, sauf quand on l’appelait en cas de crise. Car, même si elle préférait vivre seule, elle était toujours disposée à aider ceux qui avaient besoin d’aide. Mais, cela fait, elle retournait toujours vers sa solitude, et ce malgré la tolérance que les habitants de Padhiver montraient à son égard.
 
-Mais un événement imprévu finit par bouleverser son existence. Un jour, une vieille prêtresse d’Eilistraée vint la trouver pour lui demander de l’aider à traquer et à tuer un démon qui tourmentait ses ouailles. Maya se fit une joie d’accepter et suivit la prêtresse en forêt après s’être équipée de son épée et de son clibanion. Au bout d’une journée de marche, la prêtresse s’arrêta dans une petite clairière encadrée par quatre arbres gigantesques et au centre de laquelle se trouvait une petite mare large d’un mètre à peine. La vieille femme se tourna alors vers Maya et lui dit que le démon était visible dans l’eau. Malgré ses doutes, la rôdeuse s’approcha, mais elle ne vit que son propre reflet à la surface de l’eau. Elle le fit remarquer à son aînée, qui rétorqua que c’était en effet ce démon-là qu’il fallait éradiquer, le démon qui causait la solitude et l’apitoiement de la jeune femme : Maya elle-même, ou du moins la partie d’elle qui ne parvenait pas à accepter son sang mêlé.
+Mais un événement imprévu finit par bouleverser son existence. Un jour, une vieille prêtresse d’Eilistraée vint la trouver pour lui demander de l’aider à traquer et à tuer un démon qui tourmentait ses ouailles. Maya se fit une joie d’accepter et suivit la prêtresse en forêt après s’être équipée de son épée et de son clibanion. Au bout d’une journée de marche, la prêtresse s’arrêta dans une petite clairière encadrée par quatre arbres gigantesques et au centre de laquelle se trouvait une petite mare large d’un mètre à peine. La vieille femme se tourna alors vers Maya et lui dit que le démon était visible dans l’eau. Malgré ses doutes, la rôdeuse s’approcha, mais elle ne vit que son propre reflet à la surface de l’eau. Elle le fit remarquer à son aînée, qui rétorqua que c’était en effet ce démon-là qu’il fallait éradiquer, le démon qui causait la solitude et l’apitoiement de la jeune femme : Maya elle-même, ou du moins la partie d’elle qui ne parvenait pas à accepter son sang-mêlé.
 
 Moqueuse, la rôdeuse lâcha que la vieillarde ne savait pas de quoi elle parlait et décida de repartir. La prêtresse la rappela, en répondant qu’elle en savait plus que Maya ne pouvait s’en douter, révélant à la jeune femme qu’elle n’était autre que sa mère. Maya refusa de la croire, arguant que sa mère était morte il y avait bien longtemps. La prêtresse baissa la tête et reconnut qu’elle avait en effet péri, mais qu’elle avait reçu la grâce d’Eilistaée, qui lui avait permis de partir à la recherche de sa fille afin de l’aider. Elle poursuivit en disant que Maya ne trouverait jamais le bonheur en vivant à l’écart des autres, mais qu’il lui fallait rechercher la paix intérieure. Et elle conclut en affirmant que cette paix, Maya la connaîtrait à partir du jour où elle comprendrait qu’elle n’était pas seule dans son cas et que les autres étaient tout à fait disposés à l’accepter. Puis la vieille prêtresse disparut dans une vive lumière.
 
@@ -2708,9 +2708,9 @@ Spécial :
   A chaque fois que le porteur est touché au corps à corps, il a une chance (5% x bonus de sagesse du porteur) d’être protégé par Sanctuaire pendant les 3 rounds suivants
 Poids : 18,14 kg (40 lb)~
 @10535	= ~Sainteté de l’Être~
-@10536	= ~Maya Selvinis était une rôdeuse demi-elfe qui vivait dans les environs de Padhiver. Se sentant différente des autres en raison de son sang mêlé, elle les fréquentait rarement, sauf quand on l’appelait en cas de crise. Car, même si elle préférait vivre seule, elle était toujours disposée à aider ceux qui avaient besoin d’aide. Mais, cela fait, elle retournait toujours vers sa solitude, et ce malgré la tolérance que les habitants de Padhiver montraient à son égard.
+@10536	= ~Maya Selvinis était une rôdeuse demi-elfe qui vivait dans les environs de Padhiver. Se sentant différente des autres en raison de son sang-mêlé, elle les fréquentait rarement, sauf quand on l’appelait en cas de crise. Car, même si elle préférait vivre seule, elle était toujours disposée à aider ceux qui avaient besoin d’aide. Mais, cela fait, elle retournait toujours vers sa solitude, et ce malgré la tolérance que les habitants de Padhiver montraient à son égard.
 
-Mais un événement imprévu finit par bouleverser son existence. Un jour, une vieille prêtresse d’Eilistraée vint la trouver pour lui demander de l’aider à traquer et à tuer un démon qui tourmentait ses ouailles. Maya se fit une joie d’accepter et suivit la prêtresse en forêt après s’être équipée de son épée et de son clibanion. Au bout d’une journée de marche, la prêtresse s’arrêta dans une petite clairière encadrée par quatre arbres gigantesques et au centre de laquelle se trouvait une petite mare large d’un mètre à peine. La vieille femme se tourna alors vers Maya et lui dit que le démon était visible dans l’eau. Malgré ses doutes, la rôdeuse s’approcha, mais elle ne vit que son propre reflet à la surface de l’eau. Elle le fit remarquer à son aînée, qui rétorqua que c’était en effet ce démon-là qu’il fallait éradiquer, le démon qui causait la solitude et l’apitoiement de la jeune femme : Maya elle-même, ou du moins la partie d’elle qui ne parvenait pas à accepter son sang mêlé.
+Mais un événement imprévu finit par bouleverser son existence. Un jour, une vieille prêtresse d’Eilistraée vint la trouver pour lui demander de l’aider à traquer et à tuer un démon qui tourmentait ses ouailles. Maya se fit une joie d’accepter et suivit la prêtresse en forêt après s’être équipée de son épée et de son clibanion. Au bout d’une journée de marche, la prêtresse s’arrêta dans une petite clairière encadrée par quatre arbres gigantesques et au centre de laquelle se trouvait une petite mare large d’un mètre à peine. La vieille femme se tourna alors vers Maya et lui dit que le démon était visible dans l’eau. Malgré ses doutes, la rôdeuse s’approcha, mais elle ne vit que son propre reflet à la surface de l’eau. Elle le fit remarquer à son aînée, qui rétorqua que c’était en effet ce démon-là qu’il fallait éradiquer, le démon qui causait la solitude et l’apitoiement de la jeune femme : Maya elle-même, ou du moins la partie d’elle qui ne parvenait pas à accepter son sang-mêlé.
 
 Moqueuse, la rôdeuse lâcha que la vieillarde ne savait pas de quoi elle parlait et décida de repartir. La prêtresse la rappela, en répondant qu’elle en savait plus que Maya ne pouvait s’en douter, révélant à la jeune femme qu’elle n’était autre que sa mère. Maya refusa de la croire, arguant que sa mère était morte il y avait bien longtemps. La prêtresse baissa la tête et reconnut qu’elle avait en effet péri, mais qu’elle avait reçu la grâce d’Eilistaée, qui lui avait permis de partir à la recherche de sa fille afin de l’aider. Elle poursuivit en disant que Maya ne trouverait jamais le bonheur en vivant à l’écart des autres, mais qu’il lui fallait rechercher la paix intérieure. Et elle conclut en affirmant que cette paix, Maya la connaîtrait à partir du jour où elle comprendrait qu’elle n’était pas seule dans son cas et que les autres étaient tout à fait disposés à l’accepter. Puis la vieille prêtresse disparut dans une vive lumière.
 
@@ -2791,7 +2791,7 @@ Malus de jet d’armure : -7
 Echec des sorts profanes : 40%
 Spécial :
  Vengeance : l’attaquant subit 2d6 points de dégâts (froid) chaque fois qu’il touche le porteur de Tempête Glaciale (corps à corps uniquement)
- Résistance : 15/- de résistance au froid
+ Résistance : 15/- à la résistance au froid
 Poids : 18,14 kg (40 lb)~
 
 //@10545	= ~Demi-harnois~
@@ -3096,7 +3096,7 @@ Echec des sorts profanes : 35%
 Spécial :
  +4 à la CA et aux jets de sauvegarde contre les créatures maléfiques (cumulable avec Protection contre le Mal)
  Le porteur bénéficie d’Aura divine.
- Résistance : 20/- de résistance au feu
+ Résistance : 20/- à la résistance au feu
  Bonus au jet de sauvegarde : +3 aux jets de vigueur
  Protection magique : immunité contre Ténèbres infernales et Blasphème
 Poids : 22,68 kg (50 lb)~
@@ -3180,7 +3180,7 @@ PARAMÈTRES :
 Bonus de bouclier : +5
 Bonus à la CA : +1 contre les projectiles
 Spécial :
- Résistance : 25/- de résistance aux dégâts magiques
+ Résistance : 25/- à la résistance aux dégâts magiques
 Malus de jet d’armure : -10
 Echec des sorts profanes : 50%
 Poids : 11,34 kg (25 lb)~
@@ -3202,7 +3202,7 @@ PARAMÈTRES :
 
 Bonus de bouclier : +5
 Spécial :
- Résistance : 30/- en résistance à l’électricité
+ Résistance : 30/- à la résistance à l’électricité
 Malus de jet d’armure : -2
 Echec des sorts profanes : 15%
 Poids : 2,72 kg (6 lb)~
@@ -3366,7 +3366,7 @@ Bonus de bouclier : +4
 Bonus à la CA : +1 contre les projectiles
 Spécial :
  Bonus d’attaque : +3
- Résistance : 5/- de résistance à la magie
+ Résistance : 5/- à la résistance à la magie
 Malus de jet d’armure : -1
 Echec des sorts profanes : 5%
 Poids : 2,72 kg (6 lb)~
@@ -3426,7 +3426,7 @@ PARAMÈTRES :
 Bonus de bouclier : +9
 Bonus à la CA : +1 contre les projectiles
 Spécial :
- Résistance : 20/- de résistance au feu.
+ Résistance : 20/- à la résistance au feu.
  Souffle de Croc rouge : une fois par jour, lance un cône de feu, infligeant 10d6 points de dégâts du feu (jet de Réflexes DD 25 pour moitié)
  Malus d’attaque : -2
 Malus de jet d’armure : -10
@@ -3444,7 +3444,7 @@ PARAMÈTRES :
 Bonus de bouclier : +12
 Bonus à la CA : +1 contre les projectiles
 Spécial :
- Résistance : 30/- de résistance au feu.
+ Résistance : 30/- à la résistance au feu.
  Souffle de Croc rouge : une fois par jour, lance un cône de feu, infligeant 25d6 points de dégâts du feu (jet de Réflexes DD 40 pour moitié)
  Malus d’attaque : -2
 Malus de jet d’armure : -10
@@ -4503,8 +4503,8 @@ Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
  Bonus de parade : +5
- Résistance : 25/- de résistance au feu
- Résistance : 25/- de résistance au froid
+ Résistance : 25/- à la résistance au feu
+ Résistance : 25/- à la résistance au froid
  Flammes : +1d6 de dégâts du feu
 Poids : 1,81 kg (4 lb)
 Compétence : Arme de guerre, grande épée
@@ -4945,8 +4945,8 @@ Type de dégâts : Tranchants
 Spécial :
   Givre : +1d6 points de dégâts de froid
   Flammes : +1d6 points de dégâts de feu
-  Résistance : 5/- en résistance au feu
-  Résistance : 5/- en résistance au froid
+  Résistance : 5/- à la résistance au feu
+  Résistance : 5/- à la résistance au froid
 Poids : 4,08 kg (9 lb)
 Compétence : Arme exotique, épée bâtarde
 Type d’arme : À une main~
@@ -5437,7 +5437,7 @@ Type de dégâts : Tranchants
 Spécial :
  Bonus de parade : +5
   Givre : +2d6 de dégâts du froid
-  Résistance : 30/- en résistance au froid
+  Résistance : 30/- à la résistance au froid
   Coup certain (infaillible) : cette arme est considérée comme +5 pour les créatures qui requièrent une arme magique pour être touchées
 Poids : 5,44 kg (12 lb)
 Compétence : Arme de guerre, espadon
@@ -6192,7 +6192,7 @@ Enchantement : +5
 Type de dégâts : Perforants
 Spécial :
   Bonus de bouclier : +5
-  Résistance : 35/- de résistance au feu
+  Résistance : 35/- à la résistance au feu
   Explosion : +2d6 de dégâts du feu et 10% de chances d’infliger 1d10 supplémentaires du feu
  Coup certain (infaillible) : Cette arme est considérée comme +5 pour ce qui est des créatures qui requièrent une arme magique pour être touchées
 Poids : 6,35 kg (14 lb)
@@ -6562,10 +6562,10 @@ Bonus d’attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
-  Résistance : 5/- de résistance aux dégâts tranchants
-  Résistance : 5/- de résistance aux dégâts perforants
-  Résistance : 5/- de résistance aux dégâts contondants
-  Résistance : 5/- de résistance aux projectiles
+  Résistance : 5/- à la résistance aux dégâts tranchants
+  Résistance : 5/- à la résistance aux dégâts perforants
+  Résistance : 5/- à la résistance aux dégâts contondants
+  Résistance : 5/- à la résistance aux projectiles
 Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, hache
 Type d’arme : À une main~
@@ -7405,8 +7405,8 @@ Bonus d’attaque : +1
 Enchantement : +1
 Type de dégâts : Contondants
 Spécial :
-  Résistance : 10/- de résistance au froid
-  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 5/- de résistance au froid.
+  Résistance : 10/- à la résistance au froid
+  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 5/- à la résistance au froid.
 Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, masse
 Type d’arme : À une main~
@@ -7422,8 +7422,8 @@ Bonus d’attaque : +3
 Enchantement : +3
 Type de dégâts : Contondants
 Spécial :
-  Résistance : 20/- de résistance au froid
-  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 10/- de résistance au froid.
+  Résistance : 20/- à la résistance au froid
+  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 10/- à la résistance au froid.
   Réduction des dégâts : 5/+1
 Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, masse
@@ -7475,8 +7475,8 @@ Bonus d’attaque : +1
 Enchantement : +1
 Type de dégâts : Contondants
 Spécial :
-  Résistance : 10/- de résistance au froid
-  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 5/- de résistance au froid.
+  Résistance : 10/- à la résistance au froid
+  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 5/- à la résistance au froid.
 Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, masse
 Type d’arme : À une main~
@@ -7492,8 +7492,8 @@ Bonus d’attaque : +3
 Enchantement : +3
 Type de dégâts : Contondants
 Spécial :
-  Résistance : 20/- de résistance au froid
-  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 10/- de résistance au froid.
+  Résistance : 20/- à la résistance au froid
+  Cercle de chaleur mineur : toutes les autres créatures dans un rayon de 3 mètres (10 pieds) gagnent 10/- à la résistance au froid.
   Réduction des dégâts : 5/+1
 Poids : 1,36 kg (3 lb)
 Compétence : Arme courante, masse
@@ -8935,7 +8935,7 @@ Dégâts : +1 (projectile)
 Bonus d’attaque : +1
 Spécial :
   Force Magique : les flèches tirées de cet arc infligent +1 de dégâts magiques
-  Résistance : 5/- de Résistance aux dégâts magiques
+  Résistance : 5/- à la résistance aux dégâts magiques
 Poids : 0,91 kg (2 lb)
 Compétence : Arme de guerre, arc
 Type d’arme : À deux mains~
@@ -9149,9 +9149,9 @@ PARAMÈTRES :
 
 Spécial :
   Composite : Bénéficie du bonus de Force aux dégâts jusqu’à un maximum de +1
-  Résistance : 5/- de résistance au froid
-  Résistance : 5/- de résistance au feu
-  Résistance : 3/- de résistance aux projectiles
+  Résistance : 5/- à la résistance au froid
+  Résistance : 5/- à la résistance au feu
+  Résistance : 3/- à la résistance aux projectiles
 Poids : 0,91 kg (2 lb)
 Compétence : Arme de guerre, arc
 Type d’arme : À deux mains~
@@ -9649,10 +9649,10 @@ PARAMÈTRES :
 
 Bonus d’attaque : +2
 Spécial :
-  Résistance : 2/- en résistance aux dégâts tranchants
-  Résistance : 2/- en résistance aux dégâts perforants
-  Résistance : 2/- en résistance aux dégâts contondants
-  Résistance : 2/- en résistance aux projectiles
+  Résistance : 2/- à la résistance aux dégâts tranchants
+  Résistance : 2/- à la résistance aux dégâts perforants
+  Résistance : 2/- à la résistance aux dégâts contondants
+  Résistance : 2/- à la résistance aux projectiles
 Poids : 2,72 kg (6 lb)
 Compétence : Arme courante, arbalète
 Type d’arme : À deux mains~
@@ -10777,23 +10777,23 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 25/- de résistance aux dégâts contondants
+Résistance : 25/- à la résistance aux dégâts contondants
 Poids : 0,45 kg (1 lb)~
 //@12089	= ~Potion d’Invulnérabilité~
 @12090	= ~Cette potion confère une quasi-invulnérabilité à tous les types de dégâts. Cependant, les effets sont de courte durée et ne durent que 2 rounds.
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance au feu
-Résistance : 100/- de résistance au froid
-Résistance : 100/- de résistance à l’électricité
-Résistance : 100/- de résistance à l’acide
-Résistance : 100/- de résistance aux dégâts magiques
-Résistance : 100/- de résistance aux poisons
-Résistance : 100/- de résistance aux dégâts tranchants
-Résistance : 100/- de résistance aux dégâts perforants
-Résistance : 100/- de résistance aux dégâts contondants
-Résistance : 100/- de résistance aux projectiles
+Résistance : 100/- à la résistance au feu
+Résistance : 100/- à la résistance au froid
+Résistance : 100/- à la résistance à l’électricité
+Résistance : 100/- à la résistance à l’acide
+Résistance : 100/- à la résistance aux dégâts magiques
+Résistance : 100/- à la résistance aux poisons
+Résistance : 100/- à la résistance aux dégâts tranchants
+Résistance : 100/- à la résistance aux dégâts perforants
+Résistance : 100/- à la résistance aux dégâts contondants
+Résistance : 100/- à la résistance aux projectiles
 Poids : 0,45 kg (1 lb)~
 //@12091	= ~Extrait de Thrym~
 @12092	= ~Cet épais liquide est extrait et distillé à partir des glandes de vers polaires morts. C’est la substance qui permet à ces grandes créatures de réchauffer leur corps dans les régions désolées du Nord. Boire ce liquide directement sur le corps de la créature s’est presque toujours révélé fatal pour ceux qui ont tenté l’expérience. Les alchimistes distillent donc la substance jusqu’à ce que sa consommation ne représente plus de risques. Toutefois, même après distillation, cette substance peut encore être mortelle.
@@ -10901,20 +10901,20 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Permanent : 3/- en résistance au feu
-Permanent : 3/- en résistance au froid
-Permanent : 3/- en résistance à l’électricité
-Permanent : 3/- en résistance à l’acide
-Permanent : 3/- en résistance aux dégâts magiques
+Permanent : 3/- à la résistance au feu
+Permanent : 3/- à la résistance au froid
+Permanent : 3/- à la résistance à l’électricité
+Permanent : 3/- à la résistance à l’acide
+Permanent : 3/- à la résistance aux dégâts magiques
 Poids : 0,45 kg (1 lb)~
 //@12119	= ~Potion de Résistance~
 @12120	= ~Les potions sont généralement contenues dans des fioles, flasques et autres flacons de céramique, de cristal ou de verre. Ces récipients contiennent généralement une dose complète de potion pour une personne.
 
 PARAMÈTRES :
 
-Permanent : 1/- en résistance aux dégâts tranchants
-Permanent : 1/- en résistance aux dégâts perforants
-Permanent : 1/- en résistance aux dégâts contondants
+Permanent : 1/- à la résistance aux dégâts tranchants
+Permanent : 1/- à la résistance aux dégâts perforants
+Permanent : 1/- à la résistance aux dégâts contondants
 Poids : 0,45 kg (1 lb)~
 //@12121	= ~Potion de Transfert d’Action~
 @12122	= ~Les potions sont généralement contenues dans des fioles, flasques et autres flacons de céramique, de cristal ou de verre. Ces récipients contiennent généralement une dose complète de potion pour une personne.
@@ -11154,7 +11154,7 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance à l’acide
+Résistance : 50/- à la résistance à l’acide
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -11163,7 +11163,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance au froid
+Résistance : 50/- à la résistance au froid
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -11172,7 +11172,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance électrique.
+Résistance : 50/- à la résistance électrique.
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -11181,7 +11181,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance au feu.
+Résistance : 50/- à la résistance au feu.
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -12230,7 +12230,7 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10 %
 Résistance :
-  30/- de résistance à l’acide
+  30/- à la résistance à l’acide
 Poids : 4,54 kg (10 lb)~
 @12481	= ~Écailles de Dragon Gardien~ //CdF
 @12482	= ~Coulon, le forgeron de Kuldahar, a fabriqué cette armure à partir des écailles de Chahopek, le dragon noir Gardien d’un carrefour menant de Kuldahar à Chult. Cette fantastique armure offre une protection supérieure à celle d’une armure de plates complète, tout en étant aussi peu encombrante qu’une armure de cuir.
@@ -12243,7 +12243,7 @@ Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10%
 Résistance :
-  50/- de résistance à l’acide
+  50/- à la résistance à l’acide
 Poids : 4,54 kg (10 lb)~
 @12483	= ~Armure de peau de Rage +3~
 @12484	= ~L’armure de peau se compose de plusieurs couches de cuir. Elle est assez simple à fabriquer et protège bien du froid, même si elle est rigide et entrave un peu les mouvements. Elle est principalement utilisée par les guerriers et les chasseurs des tribus barbares du Nord.
@@ -12468,7 +12468,7 @@ Poids : 0~
 PARAMÈTRES :
 
 Les dégâts de feu infligés par le porteur de la plupart des sources sont augmentés de 50 %.
-Résistance : 25/- de résistance au feu
+Résistance : 25/- à la résistance au feu
 Poids : 1,36 kg (3 lb)~
 @12525	= ~Robe de Vecna~
 @12526	= ~Cette robe est loin de posséder les pouvoirs des deux artefacts, la Main et l’Œil de Vecna. Pourtant, elle a absorbé suffisamment d’énergie en étant portée par la puissante liche pour devenir un objet magique puissant.
@@ -12497,11 +12497,11 @@ PARAMÈTRES :
 
 Bonus de bouclier : +9
 Spécial :
-  Résistance : 10/- de résistance au feu
-  Résistance : 10/- de résistance au froid
-  Résistance : 10/- de résistance à l’électricité
-  Résistance : 10/- de résistance à l’acide
-  Résistance : 10/- de résistance aux dégâts magiques
+  Résistance : 10/- à la résistance au feu
+  Résistance : 10/- à la résistance au froid
+  Résistance : 10/- à la résistance à l’électricité
+  Résistance : 10/- à la résistance à l’acide
+  Résistance : 10/- à la résistance aux dégâts magiques
   Malus d’attaque : -2
 Malus de jet d’armure : -10
 Echec des sorts profanes : 50%
@@ -12570,16 +12570,16 @@ PARAMÈTRES :
 
 Bonus de bouclier : +10
 Spécial :
-  Résistance : 5/- de résistance aux dégâts tranchants
-  Résistance : 5/- de résistance aux dégâts perforants
-  Résistance : 5/- de résistance aux dégâts contondants
-  Résistance : 5/- de résistance aux projectiles
-  Résistance : 5/- de résistance au feu
-  Résistance : 5/- de résistance au froid
-  Résistance : 5/- de résistance à l’électricité
-  Résistance : 5/- de résistance à l’acide
-  Résistance : 5/- de résistance aux dégâts magiques
-  Résistance : 5/- de résistance aux poisons
+  Résistance : 5/- à la résistance aux dégâts tranchants
+  Résistance : 5/- à la résistance aux dégâts perforants
+  Résistance : 5/- à la résistance aux dégâts contondants
+  Résistance : 5/- à la résistance aux projectiles
+  Résistance : 5/- à la résistance au feu
+  Résistance : 5/- à la résistance au froid
+  Résistance : 5/- à la résistance à l’électricité
+  Résistance : 5/- à la résistance à l’acide
+  Résistance : 5/- à la résistance aux dégâts magiques
+  Résistance : 5/- à la résistance aux poisons
   Malus d’attaque : -2
 Malus de jet d’armure : -10
 Echec des sorts profanes : 50 %
@@ -13024,10 +13024,10 @@ Bonus max de Dextérité : +4
 Malus de jet d’armure : -3
 Echec des sorts profanes : 20%
 Spécial :
-  Résistance : 40/- de résistance au feu
-  Résistance : 40/- de résistance au froid
-  Résistance : 40/- de résistance à l’électricité
-  Résistance : 40/- de résistance à l’acide
+  Résistance : 40/- à la résistance au feu
+  Résistance : 40/- à la résistance au froid
+  Résistance : 40/- à la résistance à l’électricité
+  Résistance : 40/- à la résistance à l’acide
 Poids : 4,54 kg (10 lb)~
 @12615 = ~Amulette de Volonté~
 @12616 = ~Les amulettes sont l’un des objets que les magiciens préfèrent enchanter, car ils peuvent les porter sans qu’ils interfèrent avec les rituels d’incantation. Celle-ci permet à son porteur de mieux résister aux effets affectant son mental.
@@ -13286,23 +13286,23 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 50/- de résistance aux dégâts contondants
+Résistance : 50/- à la résistance aux dégâts contondants
 Poids : 0,45 kg (1 lb)~
 //@12659 = ~Potion d’Invulnérabilité~
 @12660 = ~Cette potion confère une quasi-invulnérabilité à tous les types de dégâts. Cependant, les effets sont de courte durée et ne durent que 3 rounds.
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance au feu
-Résistance : 100/- de résistance au froid
-Résistance : 100/- de résistance à l’électricité
-Résistance : 100/- de résistance à l’acide
-Résistance : 100/- de résistance aux dégâts magiques
-Résistance : 100/- de résistance aux poisons
-Résistance : 100/- de résistance aux dégâts tranchants
-Résistance : 100/- de résistance aux dégâts perforants
-Résistance : 100/- de résistance aux dégâts contondants
-Résistance : 100/- de résistance aux projectiles
+Résistance : 100/- à la résistance au feu
+Résistance : 100/- à la résistance au froid
+Résistance : 100/- à la résistance à l’électricité
+Résistance : 100/- à la résistance à l’acide
+Résistance : 100/- à la résistance aux dégâts magiques
+Résistance : 100/- à la résistance aux poisons
+Résistance : 100/- à la résistance aux dégâts tranchants
+Résistance : 100/- à la résistance aux dégâts perforants
+Résistance : 100/- à la résistance aux dégâts contondants
+Résistance : 100/- à la résistance aux projectiles
 Poids : 0,45 kg (1 lb)~
 //@12661	= ~Essence de thrym~
 @12662	= ~Cet épais liquide est créé par distillation de glandes de vers polaires morts. Il s’agit de la substance qui permet à ces grandes créatures de réchauffer leur corps dans les régions désolées du Nord. Boire ce liquide directement sur le corps de la créature s’est presque toujours révélé fatal pour ceux qui ont tenté l’expérience. Les alchimistes distillent donc la substance jusqu’à ce que sa consommation ne représente plus de risques. Toutefois, même après distillation, cette substance peut encore être mortelle.
@@ -13324,7 +13324,7 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance à l’acide
+Résistance : 100/- à la résistance à l’acide
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -13333,7 +13333,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance au froid
+Résistance : 100/- à la résistance au froid
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -13342,7 +13342,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance électrique.
+Résistance : 100/- à la résistance électrique.
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -13351,7 +13351,7 @@ Durée : 24 heures~
 
 PARAMÈTRES :
 
-Résistance : 100/- de résistance au feu.
+Résistance : 100/- à la résistance au feu.
 Portée : 6 m (20 pieds)
 Zone d’effet : 1 créature
 Durée : 24 heures~
@@ -14504,7 +14504,7 @@ Type d’arme : À deux mains~
 
 PARAMÈTRES :
 
-Résistance : 20/- de résistance à l’acide
+Résistance : 20/- à la résistance à l’acide
 Tous les dégâts d’acide infligés par le personnage sont augmentés de 20%
 Poids : 1,36 kg (3 lb)~
 @12917	= ~Robe de Résistance à la Force~
@@ -14512,7 +14512,7 @@ Poids : 1,36 kg (3 lb)~
 
 PARAMÈTRES :
 
-Résistance : 20/- de résistance aux dégâts magiques
+Résistance : 20/- à la résistance aux dégâts magiques
 Tous les dégâts magiques infligés par le personnage sont augmentés de 20%.
 Poids : 1,36 kg (3 lb)~
 @19900	= ~Hum… En effet, vous êtes de puissants alliés. Je vais vous donner plus d’or et de gemmes. Je vous offre également un harnois, un marteau de guerre et un casque, tous fabriqués et enchantés par nos artisans duergars. Vous le méritez bien, étranger.~

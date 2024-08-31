@@ -232,7 +232,7 @@ Temps d’incantation : 2
 Zone d’effet : lanceur
 Jet de sauvegarde : aucun
 
-Au terme de l’incantation, le jeteur de sorts se retrouve entouré d’une aura d’énergie noire et crépitante issue du Plan négatif. L’armure endommage tout adversaire qui frappe le lanceur, lui infligeant 1d6 + 2 points de dégâts par 2 niveaux du lanceur (maximum de 1d6 + 5). Les autres créatures non vivantes telles que les constructions et les golems ne sont pas affectées.~
+Au terme de l’incantation, le jeteur de sorts se retrouve entouré d’une aura d’énergie noire et crépitante issue du Plan négatif. L’armure endommage tout adversaire qui frappe le lanceur, lui infligeant 1d6 + 2 points de dégâts tous les 2 niveaux du lanceur (maximum de 1d6 + 5). Les autres créatures non vivantes telles que les constructions et les golems ne sont pas affectées.~
 @1040 = ~Cercle d’yeux~
 @1041 = ~Cercle d’yeux
 (Abjuration)
@@ -3797,7 +3797,7 @@ Temps d’incantation : 7
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Vous faites pleuvoir de l’acide, infligeant 3d6 dégâts d’acide par round pendant 1 round par 3 niveaux (max 24d6 sur 8 rounds). L’acide dure deux fois moins longtemps (arrondi à l’inférieur) pour les créatures réussissant un jet de Réflexes. La tempête elle-même ne dure que quelques secondes, mais l’acide adhère à la peau des créatures dans la zone, causant des dégâts au fil du temps.~
+Vous faites pleuvoir de l’acide, infligeant 3d6 dégâts d’acide par round pendant 1 round tous les 3 niveaux (max 24d6 sur 8 rounds). L’acide dure deux fois moins longtemps (arrondi à l’inférieur) pour les créatures réussissant un jet de Réflexes. La tempête elle-même ne dure que quelques secondes, mais l’acide adhère à la peau des créatures dans la zone, causant des dégâts au fil du temps.~
 
 @33713 	= ~Cacofiélon~
 @34713 	= ~Cacofiélon
