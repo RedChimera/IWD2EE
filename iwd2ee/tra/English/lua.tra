@@ -386,3 +386,5 @@
 @55902=~Transparent Fog of War~
 @55903=~Replaces the interlaced fog of war with a version that uses transparency. This fixes the flickering caused by the vanilla implementation.~
 @55904=~Reform Party~
+@55905=~Action Indicators~
+@55906=~Enables action indicators above character portraits. These indicators visually represent the action(s) currently being performed by a character.~

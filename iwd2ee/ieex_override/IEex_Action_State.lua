@@ -275,7 +275,15 @@ end
 
 
 function IEex_Extern_CGameSprite_SetCurrAction(actionData)
+
 	IEex_AssertThread(IEex_Thread.Both, true)
+
+	local actionID = IEex_GetActionID(actionData)
+	local creatureData = actionData - 0x476
+	local actorID = IEex_GetActorIDShare(creatureData)
+
+	IEex_Helper_SetBridge("IEex_GameObjectData", actorID, "realActionID", actionID)
+
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ActionHooks", function()
 		IEex_ActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_ActionHooks")
 		IEex_Helper_ClearBridgeNL("IEex_ActionHooks")
@@ -284,13 +292,15 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 			_G[IEex_ActionHooks[i]](IEex_WrapAction(actionData))
 		end
 	end)
-	local creatureData = actionData - 0x476
-	local actorID = IEex_GetActorIDShare(creatureData)
+
 	if creatureData > 0 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x2000000) > 0 and IEex_ReadDword(creatureData + 0x740) > 0 then
-		IEex_DisplayString("Action ID " .. IEex_GetActionID(actionData) .. " from " .. IEex_GetActorName(actorID) .. " - Parameter 1: " .. IEex_GetActionInt1(actionData) .. ", Parameter2: " .. IEex_GetActionInt2(actionData) .. ", Parameter3: " .. IEex_GetActionInt3(actionData) .. ", Target: " .. IEex_GetActionObjectID(actionData) .. ", Target X: " .. IEex_GetActionPointX(actionData) .. ", Target Y: " .. IEex_GetActionPointY(actionData))
+		IEex_DisplayString("Action ID " .. actionID .. " from " .. IEex_GetActorName(actorID) .. " - Parameter 1: " .. IEex_GetActionInt1(actionData) .. ", Parameter2: " .. IEex_GetActionInt2(actionData) .. ", Parameter3: " .. IEex_GetActionInt3(actionData) .. ", Target: " .. IEex_GetActionObjectID(actionData) .. ", Target X: " .. IEex_GetActionPointX(actionData) .. ", Target Y: " .. IEex_GetActionPointY(actionData))
 	end
+
 	if IEex_GetActorSpellState(actorID, 250) then
+
 		local actorActionHookOpcodeList = {}
+
 		IEex_IterateActorEffects(actorID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -298,6 +308,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 				actorActionHookOpcodeList[IEex_ReadLString(eData + 0x30, 8)] = eData + 0x4
 			end
 		end)
+
 		IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
 			local actorActionHookOpcodeListChecked = {}
 			IEex_OpcodeActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
@@ -310,6 +321,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 			end
 		end)
 	end
+
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GlobalActionHooks", function()
 		local actorActionHookGlobalListChecked = {}
 		IEex_GlobalActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_GlobalActionHooks")

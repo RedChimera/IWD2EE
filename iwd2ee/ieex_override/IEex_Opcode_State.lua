@@ -175,7 +175,7 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 		end
 	end
 
-	local screenList = IEex_Helper_GetBridge(IEex_AccessLuaStats(actorID), "screenEffects")
+	local screenList = IEex_Helper_GetBridge(IEex_AccessActorLuaStats(actorID), "screenEffects")
 	local numEntries = IEex_Helper_GetBridgeNumInts(screenList)
 	if pSprite > 0 and IEex_ReadDword(pSprite + 0x12) > 0 then
 		for i = 1, numEntries, 1 do
