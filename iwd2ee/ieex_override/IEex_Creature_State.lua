@@ -15,12 +15,15 @@ function IEex_RegisterLuaStat(attributes)
 	end)
 end
 
-function IEex_AccessLuaStats(actorID)
-	local sprite = IEex_GetActorShare(actorID)
+function IEex_AccessSpriteLuaStats(sprite)
 	local bAllowEffectListCall = IEex_ReadDword(sprite + 0x72A4) == 1
 	return bAllowEffectListCall
 		and IEex_Helper_GetBridge("IEex_DerivedStatsData", sprite + 0x920)
 		or  IEex_Helper_GetBridge("IEex_DerivedStatsData", sprite + 0x1778)
+end
+
+function IEex_AccessActorLuaStats(actorID)
+	return IEex_AccessSpriteLuaStats(IEex_GetActorShare(actorID))
 end
 
 function IEex_EnsureActorEffectListProcessed(objectID)
@@ -274,7 +277,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	local foundOpcodeFunction = true
 	while foundOpcodeFunction do
 		foundOpcodeFunction = false
-		IEex_IterateActorEffects(targetID, function(eData)
+		IEex_IterateActorEffects(targetID, function(eData, list, node)
 			if not foundOpcodeFunction then
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local thetiming = IEex_ReadDword(eData + 0x24)
@@ -288,6 +291,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 						onTickFunctionsCalled[theresource] = true
 						IEex_WriteDword(eData + 0xD8, bit.bor(theinternal_flags, 0x80))
 						_G[theresource](eData + 0x4, creatureData, true)
+						-- Uncomment the following to properly remove the effect if the listener set m_done
+						--if IEex_ReadDword(eData + 0x114) ~= 0 then
+						--	IEex_Call(0x7FB3E3, {node}, list, 0x0) -- CPtrList_RemoveAt
+						--	IEex_Call(IEex_ReadDword(IEex_ReadDword(eData + 0x4)), {1}, eData + 0x4, 0x0) -- Destruct + Free
+						--end
 					end
 				end
 			end

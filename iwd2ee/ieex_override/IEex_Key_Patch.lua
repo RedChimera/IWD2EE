@@ -155,16 +155,18 @@
 	-- Hook that runs directly before the engine checks for input --
 	----------------------------------------------------------------
 
-	IEex_HookBeforeCall(0x78F112, IEex_FlattenTable({
-		{[[
-			!push(ecx)
-		]]},
-		IEex_GenLuaCall("IEex_Extern_BeforeCheckKeys"),
-		{[[
-			@call_error
-			!pop(ecx)
-		]]},
-	}))
+	if not IEex_Vanilla then
+		IEex_HookBeforeCall(0x78F112, IEex_FlattenTable({
+			{[[
+				!push(ecx)
+			]]},
+			IEex_GenLuaCall("IEex_Extern_BeforeCheckKeys"),
+			{[[
+				@call_error
+				!pop(ecx)
+			]]},
+		}))
+	end
 
 	---------------------------------------------------------------
 	-- Hook that runs directly after the engine checks for input --
@@ -365,8 +367,10 @@
 	-- Potentially fake the cursor position for debug --
 	----------------------------------------------------
 
-	IEex_WriteAssembly(0x45F6F8, {"!call >IEex_GetCursorPos !nop"})
-	IEex_WriteAssembly(0x78F2B3, {"!call >IEex_GetCursorPos !nop"})
+	if not IEex_Vanilla then
+		IEex_WriteAssembly(0x45F6F8, {"!call >IEex_GetCursorPos !nop"})
+		IEex_WriteAssembly(0x78F2B3, {"!call >IEex_GetCursorPos !nop"})
+	end
 
 	--------------------------------------------------------------
 	-- Allow hardcoded worldscreen keybindings to be suppressed --

@@ -1,4 +1,16 @@
 
+--------------------
+-- /START Options --
+--------------------
+
+-- This option disables most of IWD2:EE's functionality / engine patches, only leaving the widescreen and FPS uncap code
+-- enabled, as well as some very minor convenience patches. This is intended for debugging the vanilla game with IEex.
+IEex_Vanilla = false
+
+------------------
+-- /END Options --
+------------------
+
 function IEex_Reload()
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -55,7 +67,9 @@ end
 
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
-dofile("override/IEex_INI.lua")
+if not IEex_Vanilla then
+	dofile("override/IEex_INI.lua")
+end
 
 dofile("override/IEex_Bridge.lua")
 dofile("override/IEex_IWD2_Common_State.lua")
@@ -74,12 +88,11 @@ dofile("override/IEex_Dev_State.lua")
 dofile("override/IEex_FakeInputRoutine.lua")
 dofile("override/IEex_UncapFPS.lua")
 
-
-
-
-for module, tf in pairs(IEex_Modules) do
-	if tf then
-		dofile("override/" .. module .. ".lua")
+if not IEex_Vanilla then
+	for module, tf in pairs(IEex_Modules) do
+		if tf then
+			dofile("override/" .. module .. ".lua")
+		end
 	end
 end
 
@@ -565,6 +578,7 @@ end
 function IEex_CanSpriteUseItem(sprite, resref)
 	local CItem = IEex_DemandCItem(resref)
 	local junkPtr = IEex_Malloc(0x4)
+	-- CInfGame_CheckIfSpriteCanUseItem
 	local result = IEex_Call(0x5B9D20, {0x0, junkPtr, CItem, sprite}, IEex_GetGameData(), 0x0)
 	IEex_Free(junkPtr)
 	IEex_DumpCItem(CItem)
@@ -769,6 +783,38 @@ function IEex_GetActorArmorClass(actorID)
 	return {armorClass, slashingAC, piercingAC, bludgeoningAC, missileAC}
 end
 
+-- Returns the sprite's current modal state, or 0 if the sprite is invalid
+function IEex_GetSpriteModalState(sprite)
+	if not IEex_IsObjectSprite(sprite) then return 0 end
+	return IEex_ReadByte(sprite + 0x4C53)
+end
+
+-- Returns the actor's current modal state, or 0 if the actor is invalid
+function IEex_GetActorModalState(actorID)
+	return IEex_GetSpriteModalState(IEex_GetActorShare(actorID))
+end
+
+-- Returns the sprite's current bard song index (from LISTSONG.2DA), or 0 if the sprite is invalid.
+--   Note: This is only valid if the sprite is currently in the bard song modal state.
+function IEex_GetSpriteCurrentBardSongIndex(sprite)
+	if not IEex_IsObjectSprite(sprite) then return 0 end
+	return IEex_ReadByte(sprite + 0x3D42)
+end
+
+-- Returns the actor's current bard song index (from LISTSONG.2DA), or 0 if the actor is invalid.
+--   Note: This is only valid if the actor is currently in the bard song modal state.
+function IEex_GetActorCurrentBardSongIndex(actorID)
+	return IEex_GetSpriteCurrentBardSongIndex(IEex_GetActorShare(actorID))
+end
+
+-- Returns the resref associated with the given bard song index (from LISTSONG.2DA), or "" if the index is invalid.
+function IEex_BardSongIndexToResref(bardSongIndex)
+	local pGame = IEex_GetGameData()
+	local resrefArray = pGame + 0x4C08
+	if bardSongIndex >= IEex_ReadDword(resrefArray + 0x4) then return "" end
+	return IEex_ReadLString(IEex_ReadDword(resrefArray) + 0x8 * bardSongIndex, 8)
+end
+
 -- Return the specified stat of the actor (from STATS.IDS).
 function IEex_GetActorStat(actorID, statID)
 	if not IEex_IsSprite(actorID, true) then return 0 end
@@ -937,18 +983,88 @@ function IEex_GetActorTargetPoint(actorID)
 	return targetX, targetY
 end
 
--- Returns the actor's current action (from ACTION.IDS).
-function IEex_GetActorCurrentAction(actorID)
-	if not IEex_IsSprite(actorID, true) then return 0 end
+function IEex_GetActorTooltip(actorID)
+	if not IEex_IsSprite(actorID, true) then return "" end
 	local share = IEex_GetActorShare(actorID)
-	return IEex_ReadDword(share + 0x4BE)
+	local nameStrref = IEex_ReadDword(share + 0x5A8)
+	return IEex_FetchString(nameStrref)
 end
 
--- Returns the resref of the spell the actor is currently casting.
+-- Returns the object's current action struct, or nil if the object is invalid
+function IEex_GetObjectCurrentAction(CGameAIBase)
+	if not IEex_IsObjectAIBase(CGameAIBase) then return nil end
+	return CGameAIBase + 0x476
+end
+
+-- Returns the actor's current action struct, or nil if the actor is invalid
+function IEex_GetActorCurrentAction(actorID)
+	return IEex_GetObjectCurrentAction(IEex_GetActorShare(actorID))
+end
+
+-- Returns the object's current action id (from ACTION.IDS), or 0 if the object is invalid
+function IEex_GetObjectCurrentActionID(CGameAIBase)
+	if not IEex_IsObjectAIBase(CGameAIBase) then return 0 end
+	return IEex_ReadWord(CGameAIBase + 0x476)
+end
+
+-- Returns the actor's current action id (from ACTION.IDS), or 0 if the actor is invalid
+function IEex_GetActorCurrentActionID(actorID)
+	return IEex_GetObjectCurrentActionID(IEex_GetActorShare(actorID))
+end
+
+-- Returns the sprite's current action id (from ACTION.IDS), or 0 if the sprite is invalid.
+-- In some instances IEex trickery is used to override the creature's current action id with a custom value.
+-- This function returns the real value, as set by the engine.
+function IEex_GetSpriteRealCurrentActionID(sprite)
+	if not IEex_IsObjectSprite(sprite, true) then return 0 end
+	local actionID = IEex_GetObjectCurrentActionID(sprite)
+	return actionID ~= 0 and IEex_Helper_GetBridge("IEex_GameObjectData", IEex_GetActorIDShare(sprite), "realActionID") or 0
+end
+
+-- Returns the sprite's current action int1, or 0 if the sprite is invalid.
+-- In some instances IEex trickery is used to override the creature's current action int1 with a custom value.
+-- This function returns the real value, as set by the engine.
+function IEex_GetSpriteRealCurrentActionInt1(sprite)
+	if not IEex_IsObjectSprite(sprite, true) then return 0 end
+	local actionID = IEex_GetObjectCurrentActionID(sprite)
+	return actionID ~= 0 and IEex_Helper_GetBridge("IEex_GameObjectData", IEex_GetActorIDShare(sprite), "realActionInt1") or 0
+end
+
+-- Returns true if the given action id is a standard spell-cast action
+function IEex_IsActionIDSpellCast(actionID)
+	return actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 191 or actionID == 192
+end
+
+-- Returns true if the given action id is a standard item-use action
+function IEex_IsActionIDItemUse(actionID)
+	return actionID == 34 or actionID == 97
+end
+
+-- Returns true if the given action id is a standard attack action
+function IEex_IsActionIDAttack(actionID)
+	return actionID == 3 or actionID == 94 or actionID == 98 or actionID == 105 or actionID == 134
+end
+
+-- Returns the resref of the spell the object is currently casting.
 IEex_SpellIDSPrefix = {[1] = "SPPR", [2] = "SPWI", [3] = "SPIN"}
-function IEex_GetActorSpellRES(actorID)
-	if not IEex_IsSprite(actorID, false) then return "" end
-	local share = IEex_GetActorShare(actorID)
+function IEex_GetObjectUseItemSlot(share)
+	local actionID = IEex_ReadWord(share + 0x476, 0x0)
+	local spellRES = ""
+	if actionID == 34 or actionID == 97 then
+		spellRES = IEex_ReadString(IEex_ReadDword(share + 0x538))
+		if spellRES == "" then
+			local spellIDS = IEex_ReadWord(share + 0x52C, 0x0)
+			if IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] ~= nil then
+				spellRES = IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] .. (spellIDS % 1000)
+			end
+		end
+	end
+	return spellRES
+end
+
+-- Returns the resref of the spell the object is currently casting.
+IEex_SpellIDSPrefix = {[1] = "SPPR", [2] = "SPWI", [3] = "SPIN"}
+function IEex_GetObjectSpellRES(share)
 	local actionID = IEex_ReadWord(share + 0x476, 0x0)
 	local spellRES = ""
 	if actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 191 or actionID == 192 then
@@ -961,6 +1077,12 @@ function IEex_GetActorSpellRES(actorID)
 		end
 	end
 	return spellRES
+end
+
+function IEex_GetActorSpellRES(actorID)
+	local share = IEex_GetActorShare(actorID)
+	if not IEex_IsObjectSprite(share) then return "" end
+	return IEex_GetObjectSpellRES(share)
 end
 
 -- Returns the resref of the item the actor has in the chosen inventory slot (from REALSLOT.IDS).
@@ -1095,23 +1217,21 @@ function IEex_IsValidBackstabDirection(attackerID, targetID)
 end
 
 function IEex_IterateActorEffects(actorID, func)
+
 	if not IEex_IsSprite(actorID, true) then return end
-	local esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x552A)
-	while esi ~= 0x0 do
-		local edi = IEex_ReadDword(esi + 0x8) - 0x4
-		if edi > 0x0 then
-			func(edi)
-		end
-		esi = IEex_ReadDword(esi)
-	end
-	esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x54FE)
-	while esi ~= 0x0 do
-		local edi = IEex_ReadDword(esi + 0x8) - 0x4
-		if edi > 0x0 then
-			func(edi)
-		end
-		esi = IEex_ReadDword(esi)
-	end
+	local sprite = IEex_GetActorShare(actorID)
+
+	-- Equipped List
+	local equippedList = sprite + 0x5526
+	IEex_IterateCPtrListNode(equippedList, function(effect, node)
+		func(effect - 0x4, equippedList, node)
+	end)
+
+	-- Timed List
+	local timedList = sprite + 0x54FA
+	IEex_IterateCPtrListNode(timedList, function(effect, node)
+		func(effect - 0x4, timedList, node)
+	end)
 end
 
 function IEex_IterateActorTimedEffects(actorID, func)
@@ -1223,6 +1343,14 @@ function IEex_IsSprite(actorID, allowDead)
 	return IEex_IsObjectSprite(IEex_GetActorShare(actorID), allowDead)
 end
 
+function IEex_IsObjectAIBase(object)
+	return object ~= 0x0 and IEex_IsBitSet(IEex_ReadByte(object + 0x4), 0)
+end
+
+function IEex_IsActorAIBase(actorID)
+	return IEex_IsObjectAIBase(IEex_GetActorShare(actorID))
+end
+
 function IEex_GetSpriteBaseStats(sprite)
 	return sprite + 0x5A4
 end
@@ -1233,6 +1361,10 @@ end
 
 function IEex_GetSpriteDerivedStats(sprite)
 	return sprite + 0x920
+end
+
+function IEex_GetSpriteTempStats(sprite)
+	return sprite + 0x1778
 end
 
 function IEex_GetActorDerivedStats(actorID)

@@ -180,3 +180,21 @@ function IEex_Dev_DumpControlVFTables()
 
 	IEex_Free(assertTripped)
 end
+
+function IEex_Dev_SpamStateIcons()
+
+	local sprite = IEex_GetActorShare(IEex_GetActorIDSelected())
+	if sprite == 0x0 then return end
+
+	IEex_ApplyEffectToSprite(sprite, {
+		["opcode"] = 500,
+		["timing"] = 1,
+		["resource"] = "B3STSPAM",
+	})
+end
+
+function B3STSPAM(effectData, creatureData)
+	for i = 0, 19 do
+		IEex_Call(0x7FBE4E, {i}, creatureData + 0x7130, 0x0) -- CPtrList_AddTail()
+	end
+end

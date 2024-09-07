@@ -669,6 +669,8 @@ end
 
 function IEex_LoadInitial2DAs()
 
+	if IEex_Vanilla then return end
+
 	IEex_Loaded2DAs = {}
 
 	local feats2DA = IEex_2DADemand("B3FEATS")
@@ -747,6 +749,8 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 end)
 
 function IEex_WriteDelayedPatches()
+
+	if IEex_Vanilla then return end
 
 	IEex_DisableCodeProtection()
 

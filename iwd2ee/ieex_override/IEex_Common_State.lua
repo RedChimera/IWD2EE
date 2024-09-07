@@ -372,6 +372,10 @@ function IEex_Once(key, func)
 	end
 end
 
+function IEex_NewScope(func)
+	return func()
+end
+
 function IEex_Default(defaultVal, val)
 	return val ~= nil and val or defaultVal
 end
