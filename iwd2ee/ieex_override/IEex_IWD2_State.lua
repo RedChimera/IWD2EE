@@ -576,7 +576,7 @@ function IEex_IsActorSolelySelected(actorID)
 end
 
 function IEex_CanSpriteUseItem(sprite, resref)
-	local CItem = IEex_DemandCItem(resref)
+	local CItem = IEex_DemandCItemResref(resref)
 	local junkPtr = IEex_Malloc(0x4)
 	-- CInfGame_CheckIfSpriteCanUseItem
 	local result = IEex_Call(0x5B9D20, {0x0, junkPtr, CItem, sprite}, IEex_GetGameData(), 0x0)
@@ -1021,15 +1021,6 @@ function IEex_GetSpriteRealCurrentActionID(sprite)
 	return actionID ~= 0 and IEex_Helper_GetBridge("IEex_GameObjectData", IEex_GetActorIDShare(sprite), "realActionID") or 0
 end
 
--- Returns the sprite's current action int1, or 0 if the sprite is invalid.
--- In some instances IEex trickery is used to override the creature's current action int1 with a custom value.
--- This function returns the real value, as set by the engine.
-function IEex_GetSpriteRealCurrentActionInt1(sprite)
-	if not IEex_IsObjectSprite(sprite, true) then return 0 end
-	local actionID = IEex_GetObjectCurrentActionID(sprite)
-	return actionID ~= 0 and IEex_Helper_GetBridge("IEex_GameObjectData", IEex_GetActorIDShare(sprite), "realActionInt1") or 0
-end
-
 -- Returns true if the given action id is a standard spell-cast action
 function IEex_IsActionIDSpellCast(actionID)
 	return actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 191 or actionID == 192
@@ -1043,23 +1034,6 @@ end
 -- Returns true if the given action id is a standard attack action
 function IEex_IsActionIDAttack(actionID)
 	return actionID == 3 or actionID == 94 or actionID == 98 or actionID == 105 or actionID == 134
-end
-
--- Returns the resref of the spell the object is currently casting.
-IEex_SpellIDSPrefix = {[1] = "SPPR", [2] = "SPWI", [3] = "SPIN"}
-function IEex_GetObjectUseItemSlot(share)
-	local actionID = IEex_ReadWord(share + 0x476, 0x0)
-	local spellRES = ""
-	if actionID == 34 or actionID == 97 then
-		spellRES = IEex_ReadString(IEex_ReadDword(share + 0x538))
-		if spellRES == "" then
-			local spellIDS = IEex_ReadWord(share + 0x52C, 0x0)
-			if IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] ~= nil then
-				spellRES = IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] .. (spellIDS % 1000)
-			end
-		end
-	end
-	return spellRES
 end
 
 -- Returns the resref of the spell the object is currently casting.
