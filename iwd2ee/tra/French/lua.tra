@@ -386,3 +386,5 @@
 @55902=~Brouillard de guerre transparent~
 @55903=~Remplace le brouillard de guerre entrelacé par une version utilisant la transparence. Cela corrige le scintillement causé par l’implémentation vanilla.~
 @55904=~Reformer le groupe~
+@55905=~Indicateurs d’action~
+@55906=~Active les indicateurs d'action au-dessus des portraits des personnages. Ces indicateurs représentent visuellement l'action (ou les actions) actuellement effectuée(s) par un personnage.~
