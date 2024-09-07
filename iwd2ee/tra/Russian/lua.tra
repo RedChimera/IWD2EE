@@ -385,3 +385,5 @@
 @55902=~Прозрачный туман войны~
 @55903=~Заменяет чересстрочный туман войны на версию, использующую прозрачность. Это исправляет мерцание, которое появляется при оригинальной реализации тумана.~
 @55904=~Исключить~
+@55905=~Action Indicators~
+@55906=~Enables action indicators above character portraits. These indicators visually represent the action(s) currently being performed by a character.~
