@@ -148,7 +148,7 @@ function IEex_DemandRes(resref, extension)
 	return IEex_ResWrapper:new(resref, pRes)
 end
 
-function IEex_DemandCItem(resref)
+function IEex_DemandCItemResref(resref)
 
 	local resrefMem = IEex_Malloc(0x8)
 	IEex_WriteLString(resrefMem, resref, 8)
