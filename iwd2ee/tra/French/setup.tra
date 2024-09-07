@@ -16,7 +16,7 @@
 @14 = ~Monastere du Corbeau Noir plus rapide~
 @15 = ~Ombre-Terre plus rapide~
 @16 = ~Oeil du Dragon plus rapide~
-@17 = ~Main Tranchée plus rapide~
+@17 = ~Main TranchÃ©e plus rapide~
 @18 = ~Plus de potions pour Oswald~
 @19 = ~Ajouter plus de parchemins au jeu~
 @20 = ~Resistances et immunites des creatures revues a la baisse~
@@ -134,7 +134,7 @@ Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
 
 @-1016= "Installation en cours"
 @-1017= "ERREUR pendant l'installation de ["
-@-1018= "], retour a l'etat antérieur"
+@-1018= "], retour a l'etat antÃ©rieur"
 @-1019= "INSTALLATION REUSSIE"
 @-1020= "Saute"
 @-1021= "Suppression de ["
