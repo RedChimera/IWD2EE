@@ -3296,170 +3296,171 @@ function IEex_OnCHUInitialized(chuResref)
 				["framePressed"] = 1,
 				["frameDisabled"] = 0,
 			})
-
-		elseif chuResref == "GUIREC" then
-			local screenCharacter = IEex_GetEngineCharacter()
-			local newWizardSpellsPanel = IEex_AddPanelToEngine(screenCharacter, {
-				["id"] = 58,
-				["x"] = 245,
-				["width"] = 555,
-				["height"] = 433,
-				["hasBackground"] = 1,
-				["backgroundImage"] = "GUIRLVL5",
-				["flags"] = 0x1,
-			})
-			local buttonID = 0
-
-			for i = 0, 4, 1 do
-				for j = 0, 5, 1 do
-					IEex_AddControlOverride("GUIREC", 58, buttonID, "IEex_UI_Button")
-					IEex_AddControlToPanel(newWizardSpellsPanel, {
-						["type"] = IEex_ControlStructType.BUTTON,
-						["id"] = buttonID,
-						["x"] = 14 + 43 * j,
-						["y"] = 76 + 43 * i,
-						["width"] = 40,
-						["height"] = 39,
-						["bam"] = "SPLBUT",
-						["frameUnpressed"] = 1,
-						["framePressed"] = 2,
-						["frameDisabled"] = 3,
-					})
-					IEex_AddControlOverride("GUIREC", 58, (buttonID + 100), "ButtonMageSpellInfoIcon")
-					IEex_AddControlToPanel(newWizardSpellsPanel, {
-						["type"] = IEex_ControlStructType.BUTTON,
-						["id"] = (buttonID + 100),
-						["x"] = 18 + 43 * j,
-						["y"] = 79 + 43 * i,
-						["bam"] = "",
-						["width"] = 32,
-						["height"] = 32,
-					})
-					buttonID = buttonID + 1
-				end
-			end
-
-			IEex_AddControlOverride("GUIREC", 58, 30, "IEex_UI_TextArea")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.TEXT_AREA,
-				["id"] = 30,
-				["x"] = 305,
-				["y"] = 26,
-				["width"] = 207,
-				["height"] = 339,
-				["fontBam"] = "NORMAL",
-				["scrollbarID"] = 31,
-			})
-
-			IEex_AddControlOverride("GUIREC", 58, 31, "IEex_UI_Scrollbar")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.SCROLL_BAR,
-				["id"] = 31,
-				["x"] = 523,
-				["y"] = 23,
-				["width"] = 12,
-				["height"] = 348,
-				["graphicsBam"] = "GBTNSCRL",
-				["animationNumber"] = 0,
-				["upArrowFrameUnpressed"] = 0,
-				["upArrowFramePressed"] = 1,
-				["downArrowFrameUnpressed"] = 2,
-				["downArrowFramePressed"] = 3,
-				["troughFrame"] = 4,
-				["sliderFrame"] = 5,
-				["textAreaID"] = 30,
-			})
-
-			IEex_AddControlOverride("GUIREC", 58, 32, "IEex_UI_Button")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.BUTTON,
-				["id"] = 32,
-				["x"] = 298,
-				["y"] = 382,
-				["width"] = 117,
-				["height"] = 25,
-				["bam"] = "GBTNSTD",
-				["sequence"] = 0,
-				["frameUnpressed"] = 1,
-				["framePressed"] = 2,
-				["frameDisabled"] = 3,
-			})
-			IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 32), IEex_FetchString(ex_tra_55770))
-
-			IEex_AddControlOverride("GUIREC", 58, 33, "IEex_UI_Label")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.LABEL,
-				["id"] = 33,
-				["x"] = 10,
-				["y"] = 23,
-				["width"] = 205,
-				["height"] = 28,
-				["fontBam"] = "NORMAL",
-				["fontColor1"] = 0xFFFFF6,
-				["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
-			})
-
-			IEex_AddControlOverride("GUIREC", 58, 34, "IEex_UI_Label")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.LABEL,
-				["id"] = 34,
-				["x"] = 226,
-				["y"] = 23,
-				["width"] = 50,
-				["height"] = 28,
-				["fontBam"] = "NORMAL",
-				["fontColor1"] = 0xFFFF,
-				["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
-			})
-
-			IEex_AddControlOverride("GUIREC", 58, 35, "IEex_UI_Button")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.BUTTON,
-				["id"] = 35,
-				["x"] = 419,
-				["y"] = 382,
-				["width"] = 117,
-				["height"] = 25,
-				["bam"] = "GBTNSTD",
-				["sequence"] = 1,
-				["frameUnpressed"] = 1,
-				["framePressed"] = 2,
-				["frameDisabled"] = 3,
-			})
-			IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 35), IEex_FetchString(11973))
-
-			IEex_AddControlOverride("GUIREC", 58, 36, "IEex_UI_Button")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.BUTTON,
-				["id"] = 36,
-				["x"] = 14,
-				["y"] = 300,
-				["width"] = 47,
-				["height"] = 39,
-				["bam"] = "GBTNJBTN",
-				["sequence"] = 0,
-				["frameUnpressed"] = 1,
-				["framePressed"] = 2,
-				["frameDisabled"] = 3,
-			})
-
-			IEex_AddControlOverride("GUIREC", 58, 37, "IEex_UI_Button")
-			IEex_AddControlToPanel(newWizardSpellsPanel, {
-				["type"] = IEex_ControlStructType.BUTTON,
-				["id"] = 37,
-				["x"] = 222,
-				["y"] = 300,
-				["width"] = 47,
-				["height"] = 39,
-				["bam"] = "GBTNJBTN",
-				["sequence"] = 1,
-				["frameUnpressed"] = 1,
-				["framePressed"] = 2,
-				["frameDisabled"] = 3,
-			})
-
-			IEex_SetPanelActive(newWizardSpellsPanel, false)
 		end
+
+	elseif chuResref == "GUIREC" then
+
+		local screenCharacter = IEex_GetEngineCharacter()
+		local newWizardSpellsPanel = IEex_AddPanelToEngine(screenCharacter, {
+			["id"] = 58,
+			["x"] = 245,
+			["width"] = 555,
+			["height"] = 433,
+			["hasBackground"] = 1,
+			["backgroundImage"] = "GUIRLVL5",
+			["flags"] = 0x1,
+		})
+		local buttonID = 0
+
+		for i = 0, 4, 1 do
+			for j = 0, 5, 1 do
+				IEex_AddControlOverride("GUIREC", 58, buttonID, "IEex_UI_Button")
+				IEex_AddControlToPanel(newWizardSpellsPanel, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = buttonID,
+					["x"] = 14 + 43 * j,
+					["y"] = 76 + 43 * i,
+					["width"] = 40,
+					["height"] = 39,
+					["bam"] = "SPLBUT",
+					["frameUnpressed"] = 1,
+					["framePressed"] = 2,
+					["frameDisabled"] = 3,
+				})
+				IEex_AddControlOverride("GUIREC", 58, (buttonID + 100), "ButtonMageSpellInfoIcon")
+				IEex_AddControlToPanel(newWizardSpellsPanel, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = (buttonID + 100),
+					["x"] = 18 + 43 * j,
+					["y"] = 79 + 43 * i,
+					["bam"] = "",
+					["width"] = 32,
+					["height"] = 32,
+				})
+				buttonID = buttonID + 1
+			end
+		end
+
+		IEex_AddControlOverride("GUIREC", 58, 30, "IEex_UI_TextArea")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.TEXT_AREA,
+			["id"] = 30,
+			["x"] = 305,
+			["y"] = 26,
+			["width"] = 207,
+			["height"] = 339,
+			["fontBam"] = "NORMAL",
+			["scrollbarID"] = 31,
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 31, "IEex_UI_Scrollbar")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.SCROLL_BAR,
+			["id"] = 31,
+			["x"] = 523,
+			["y"] = 23,
+			["width"] = 12,
+			["height"] = 348,
+			["graphicsBam"] = "GBTNSCRL",
+			["animationNumber"] = 0,
+			["upArrowFrameUnpressed"] = 0,
+			["upArrowFramePressed"] = 1,
+			["downArrowFrameUnpressed"] = 2,
+			["downArrowFramePressed"] = 3,
+			["troughFrame"] = 4,
+			["sliderFrame"] = 5,
+			["textAreaID"] = 30,
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 32, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 32,
+			["x"] = 298,
+			["y"] = 382,
+			["width"] = 117,
+			["height"] = 25,
+			["bam"] = "GBTNSTD",
+			["sequence"] = 0,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 32), IEex_FetchString(ex_tra_55770))
+
+		IEex_AddControlOverride("GUIREC", 58, 33, "IEex_UI_Label")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 33,
+			["x"] = 10,
+			["y"] = 23,
+			["width"] = 205,
+			["height"] = 28,
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFFF6,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 34, "IEex_UI_Label")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 34,
+			["x"] = 226,
+			["y"] = 23,
+			["width"] = 50,
+			["height"] = 28,
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFF,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 35, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 35,
+			["x"] = 419,
+			["y"] = 382,
+			["width"] = 117,
+			["height"] = 25,
+			["bam"] = "GBTNSTD",
+			["sequence"] = 1,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 35), IEex_FetchString(11973))
+
+		IEex_AddControlOverride("GUIREC", 58, 36, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 36,
+			["x"] = 14,
+			["y"] = 300,
+			["width"] = 47,
+			["height"] = 39,
+			["bam"] = "GBTNJBTN",
+			["sequence"] = 0,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 37, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 37,
+			["x"] = 222,
+			["y"] = 300,
+			["width"] = 47,
+			["height"] = 39,
+			["bam"] = "GBTNJBTN",
+			["sequence"] = 1,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+
+		IEex_SetPanelActive(newWizardSpellsPanel, false)
 	end
 end
 
