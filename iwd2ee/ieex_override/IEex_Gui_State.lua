@@ -1624,6 +1624,12 @@ function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlI
 	local panelID = IEex_ReadDword(panel + 0x20)
 	local controlID = IEex_ReadDword(controlInfo)
 
+	-- Hack to get the chargen animation preview control to call its TimerAsynchronousUpdate() every tick
+	if resref == "GUICG" and panelID == 13 and controlID == 1 then
+		local flagsAddress = controlInfo + 0xD
+		IEex_WriteByte(flagsAddress, IEex_SetBit(IEex_ReadByte(flagsAddress), 0))
+	end
+
 	local controlOverride = IEex_Helper_GetBridge("IEex_GUIConstants", "controlOverrides", resref, panelID, controlID)
 	if not controlOverride then return 0x0 end
 

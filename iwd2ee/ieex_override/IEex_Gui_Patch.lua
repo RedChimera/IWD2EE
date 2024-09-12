@@ -1223,6 +1223,21 @@
 		IEex_WriteAssembly(0x67E7E2, {"!jmp_byte"})
 	end
 
+	---------------------------------------------------------------
+	-- Fix the animation preview during chargen running too fast --
+	---------------------------------------------------------------
+
+	if not IEex_Vanilla then
+
+		-- Disable sync-thread advancement of the animation
+		IEex_WriteAssembly(0x61DE34, {"!jmp_byte"})
+
+		-- Override CUIControlButtonChargenAnimationPreview::TimerAsynchronousUpdateOverride()
+		-- to make it perform the animation advancement instead
+		IEex_DisableRDataProtection()
+		IEex_WriteDword(0x85CDF0, IEex_Label("IEex_Helper_CUIControlButtonChargenAnimationPreview_TimerAsynchronousUpdateOverride"))
+		IEex_EnableRDataProtection()
+	end
 
 	IEex_EnableCodeProtection()
 
