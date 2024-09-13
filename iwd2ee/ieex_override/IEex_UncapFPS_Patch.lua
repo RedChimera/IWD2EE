@@ -236,6 +236,14 @@
 		!jmp_dword :4FFF88
 	]]})
 
+	-----------------------------------------------------------------------------
+	-- Fix main menu's "Quit Game" -> "Cancel" causing the game to freeze when --
+	-- subsequently attempting "New Game" / "Load Game" / "Quick Load". Seems  --
+	-- to be a race condition taking advantage of the higher sync thread tps.  --
+	-----------------------------------------------------------------------------
+
+	IEex_WriteAssembly(0x6029F7, {"!repeat(7,!nop)"})
+
 
 	IEex_EnableCodeProtection()
 
