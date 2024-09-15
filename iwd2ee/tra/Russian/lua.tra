@@ -387,3 +387,5 @@
 @55904=~Исключить~
 @55905=~Action Indicators~
 @55906=~Enables action indicators above character portraits. These indicators visually represent the action(s) currently being performed by a character.~
+@55907=~Highlight Empty Containers in Gray~
+@55908=~Changes the highlight color of empty containers to gray, overriding the default green color. This helps differentiate containers that have already been looted by the party.~

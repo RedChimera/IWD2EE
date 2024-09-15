@@ -271,8 +271,45 @@
 		-- CGameObject::VISIBLE_DELAY
 		IEex_WriteByte(0x84C50F, 1)
 		IEex_EnableRDataProtection()
-
-		IEex_EnableCodeProtection()
 	end
+
+	---------------------------------------------------------
+	-- Highlight empty containers in gray instead of green --
+	---------------------------------------------------------
+
+	if not IEex_Vanilla then
+
+		local callHook = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			{[[
+				!mark_esp
+				!push_registers_iwd2
+			]]},
+			IEex_GenLuaCall("IEex_Extern_OverrideContainerHighlightColor", {
+				["args"] = {
+					{"!push(esi)"},
+					{"!marked_esp !push([esp+0x4])"},
+					{[[
+						!marked_esp !lea(eax,[esp+0x14])
+						!push(eax)
+					]]},
+				},
+			}),
+			{[[
+				@call_error
+				!pop_registers_iwd2
+				!ret_word 04 00
+			]]},
+		}))
+
+		IEex_HookRestore(0x47FB41, 0, 6, {"!push_byte 00 !call", {callHook, 4, 4}}) -- Normal mouse hover - Fill
+		IEex_HookBeforeCall(0x47FB76, {"!push_byte 00 !call", {callHook, 4, 4}}) -- Normal mouse hover - Outline
+
+		IEex_HookRestore(0x47FC2A, 0, 6, {"!push_byte 01 !call", {callHook, 4, 4}}) -- Bash - Fill
+
+		IEex_HookRestore(0x47FD1C, 0, 6, {"!push_byte 02 !call", {callHook, 4, 4}}) -- Alt Down - Fill
+		IEex_HookBeforeCall(0x47FD52, {"!push_byte 02 !call", {callHook, 4, 4}}) -- Alt down - Outline
+	end
+
+	IEex_EnableCodeProtection()
 
 end)()

@@ -63,3 +63,36 @@ end
 function IEex_Extern_CheckForceOptionsScreenToRequestWindowedMode()
 	return IEex_IsCncDDrawPresent()
 end
+
+function IEex_Extern_OverrideContainerHighlightColor(CGameContainer, renderType, colorPtr)
+
+	if IEex_Helper_GetBridge("IEex_Options", "options", "highlightEmptyContainersInGray")
+		and IEex_ReadDword(CGameContainer + 0x5BA) == 0 -- m_lstItems.m_nCount
+	then
+		if renderType == 0 or renderType == 1 then -- Normal mouse hover or Bash
+
+			IEex_WriteDword(colorPtr, 0xA6A6A6)
+
+		elseif renderType == 2 then -- Alt down or thieving
+
+			local pGame = IEex_GetGameData()
+			local isThieving = (
+				-- m_id == pArea.m_iPicked
+				IEex_ReadDword(CGameContainer + 0x5C) == IEex_ReadDword(IEex_ReadDword(CGameContainer + 0x12) + 0x246)
+				-- pGame.m_nState == 2 and pGame->m_iconIndex == 36
+				and IEex_ReadWord(pGame + 0x1B96) == 2 and IEex_ReadByte(pGame + 0x1B98) == 36
+				-- (m_trapActivated ~= 0 and m_trapDetected ~= 0) or (m_dwFlags & 1) ~= 0
+				and (
+					(IEex_ReadWord(CGameContainer + 0x896) ~= 0 and IEex_ReadWord(CGameContainer + 0x898) ~= 0)
+					or IEex_IsBitSet(IEex_ReadByte(CGameContainer + 0x88E), 0)
+				)
+			)
+
+			if isThieving then
+				IEex_WriteDword(colorPtr, 0xA6A6A6)
+			else
+				IEex_WriteDword(colorPtr, 0x808080)
+			end
+		end
+	end
+end

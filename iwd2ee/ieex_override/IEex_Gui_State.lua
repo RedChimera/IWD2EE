@@ -2290,6 +2290,17 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 						IEex_Helper_SetBridge(workingOptions, "actionIndicators", true)
 					end
 				end,
+				-- "Highlight Empty Containers in Gray" Toggle
+				[10] = function()
+					local workingOptions = IEex_Helper_GetBridge("IEex_Options", "workingOptions")
+					if IEex_Helper_GetBridge(workingOptions, "highlightEmptyContainersInGray") then
+						IEex_SetControlButtonFrameUp(CUIControlButton, 1)
+						IEex_Helper_SetBridge(workingOptions, "highlightEmptyContainersInGray", false)
+					else
+						IEex_SetControlButtonFrameUp(CUIControlButton, 3)
+						IEex_Helper_SetBridge(workingOptions, "highlightEmptyContainersInGray", true)
+					end
+				end,
 			},
 		},
 		["GUIREC"] = {
@@ -2560,6 +2571,9 @@ function IEex_Extern_UI_LabelLDown(CUIControlLabel)
 				end,
 				[7] = function()
 					IEex_SetTextAreaToString(IEex_GetEngineOptions(), 14, 3, IEex_FetchString(ex_tra_55906))
+				end,
+				[9] = function()
+					IEex_SetTextAreaToString(IEex_GetEngineOptions(), 14, 3, IEex_FetchString(ex_tra_55908))
 				end,
 			},
 		},
@@ -2910,7 +2924,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["type"] = IEex_ControlStructType.LABEL,
 		["id"] = 5,
 		["x"] = 74,
-		["y"] = 97,
+		["y"] = 124,
 		["width"] = 308,
 		["height"] = 18,
 		["fontBam"] = "NORMAL",
@@ -2924,7 +2938,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["type"] = IEex_ControlStructType.BUTTON,
 		["id"] = 6,
 		["x"] = 394,
-		["y"] = 95,
+		["y"] = 122,
 		["width"] = 23,
 		["height"] = 24,
 		["bam"] = "GBTNOPT3",
@@ -2953,6 +2967,34 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["id"] = 8,
 		["x"] = 394,
 		["y"] = 67,
+		["width"] = 23,
+		["height"] = 24,
+		["bam"] = "GBTNOPT3",
+		["frameUnpressed"] = 1,
+		["framePressed"] = 2,
+	})
+
+	-- "Highlight Empty Containers in Gray" Label - ID 9
+	IEex_AddControlOverride("GUIOPT", 14, 9, "IEex_UI_Label")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.LABEL,
+		["id"] = 9,
+		["x"] = 74,
+		["y"] = 97,
+		["width"] = 308,
+		["height"] = 18,
+		["fontBam"] = "NORMAL",
+		["textFlags"] = 0x51, -- Use color(0) | Right justify(4) | Middle justify(6)
+	})
+	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 9), IEex_FetchString(ex_tra_55907)) -- "Highlight Empty Containers in Gray"
+
+	-- "Highlight Empty Containers in Gray" Toggle - ID 10
+	IEex_AddControlOverride("GUIOPT", 14, 10, "IEex_UI_Button")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.BUTTON,
+		["id"] = 10,
+		["x"] = 394,
+		["y"] = 95,
 		["width"] = 23,
 		["height"] = 24,
 		["bam"] = "GBTNOPT3",
@@ -3503,6 +3545,9 @@ function IEex_LoadOptions()
 	IEex_Helper_SetBridge(options, "actionIndicators",
 		IEex_GetPrivateProfileInt("IEex Options", "Action Indicators", 1, ".\\Icewind2.ini") ~= 0 and true or false)
 
+	IEex_Helper_SetBridge(options, "highlightEmptyContainersInGray",
+		IEex_GetPrivateProfileInt("IEex Options", "Highlight Empty Containers in Gray", 1, ".\\Icewind2.ini") ~= 0 and true or false)
+
 	IEex_InitOptionButtons()
 end
 
@@ -3515,6 +3560,9 @@ function IEex_WriteOptions()
 
 	IEex_WritePrivateProfileString("IEex Options", "Action Indicators",
 		IEex_Helper_GetBridge(options, "actionIndicators") and "1" or "0", ".\\Icewind2.ini")
+
+	IEex_WritePrivateProfileString("IEex Options", "Highlight Empty Containers in Gray",
+		IEex_Helper_GetBridge(options, "highlightEmptyContainersInGray") and "1" or "0", ".\\Icewind2.ini")
 end
 
 function IEex_InitOptionButtons()
@@ -3530,6 +3578,9 @@ function IEex_InitOptionButtons()
 
 	IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newOptionsPanel, 8),
 		IEex_Helper_GetBridge(options, "actionIndicators") and 3 or 1)
+
+	IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newOptionsPanel, 10),
+		IEex_Helper_GetBridge(options, "highlightEmptyContainersInGray") and 3 or 1)
 end
 
 IEex_AbsoluteOnce("IEex_InitOptions", function()
