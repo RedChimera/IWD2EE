@@ -244,7 +244,7 @@ Avantage : Les capacités Saisie, Attaque étourdissante et Paume vibratoire gagne
 @313	= ~Kensai~
 @314	= ~KENSAI :
 
-Vous avez été formé à la voie du kensai, ou “seigneur de l’épée”. Vous vous spécialisez dans le combat sans armure.
+Vous avez été formé à la voie du kensai, ou "seigneur de l’épée". Vous vous spécialisez dans le combat sans armure.
 
 Prérequis : 1 niveau de guerrier
 
@@ -696,7 +696,7 @@ Avantages :
 * Niveau 2 : Réduction des dégâts. Le barbare gagne 1/- point de résistance aux dégâts tranchants, perforants et contondants. Il ou elle gagne 1/- point de résistance supplémentaire aux niveaux 5, 8, 11 et tous les 3 niveaux suivants. Si le barbare porte une armure moyenne, la réduction des dégâts accordée par cette capacité est doublée.
 * Niveau 2 : Esquive instinctive. Les barbares conservent leur bonus de Dextérité à la classe d’armure s’ils sont attaqués par des ennemis invisibles.
 * Niveau 5 : Esquive instinctive améliorée. Le barbare ne peut subir d’attaque sournoise venant d’un roublard, sauf si ce dernier est supérieur de 4 niveaux (ou plus) au barbare.
-* Niveau 15 : Rage de grand berserker. La rage de berserker se transforme en “rage de grand berserker”, se traduisant par 6 points de bonus en Force et en Constitution, + 3 points de bonus aux jets de sauvegarde. La pénalité de 2 points à la classe d’armure est maintenue.
+* Niveau 15 : Rage de grand berserker. La rage de berserker se transforme en "rage de grand berserker", se traduisant par 6 points de bonus en Force et en Constitution, + 3 points de bonus aux jets de sauvegarde. La pénalité de 2 points à la classe d’armure est maintenue.
 * Niveau 20 : Rage sans fatigue. Le barbare n’est plus fatigué après une rage.
 * Niveau 21 : Rage puissante. La capacité de rage du barbare accorde désormais +8 en Force et Constitution et +4 aux jets de sauvegarde de Volonté.
 * Niveau 25 : La rage du barbare accorde désormais +10 en Force et Constitution et +5 aux jets de sauvegarde de Volonté.
@@ -978,7 +978,7 @@ Les prêtres du Dieu de la Guerre sont présents partout où il y a des conflits da
 
 Avantages :
 
-* Obtient automatiquement les dons “Maniement des Armes de guerre, Hache” et “Arme de prédilection, Hache” (qui correspond à 2 points dans le maniement des haches).
+* Obtient automatiquement les dons "Maniement des Armes de guerre, Hache" et "Arme de prédilection, Hache" (qui correspond à 2 points dans le maniement des haches).
 * Force de Tempus 1 fois par jour (le bénéficiaire gagne +6 à l’attaque et aux dégâts avec toutes les armes pendant 3 rounds)~
 
 @546	= ~SENTINELLE DE HEAUM :
@@ -992,7 +992,7 @@ Avantages :
 
 @547	= ~ASTRE D’ARGENT DE SÉLUNÉ :
 
-Aussi connue sous le nom de Dame de la Lune, Séluné est apparentée à la lune d’argent qui tourne autour de Féérune. Elle est la déesse de la lune et des voyageurs. Ses prêtres et prêtresses, les “astres d’argent”, parcourent le monde pour venir en aide aux oppressés et explorer des contrées sauvages. Ils sont connus pour leur ouverture d’esprit, leur tolérance et leur haine avouée de la bigoterie.
+Aussi connue sous le nom de Dame de la Lune, Séluné est apparentée à la lune d’argent qui tourne autour de Féérune. Elle est la déesse de la lune et des voyageurs. Ses prêtres et prêtresses, les "astres d’argent", parcourent le monde pour venir en aide aux oppressés et explorer des contrées sauvages. Ils sont connus pour leur ouverture d’esprit, leur tolérance et leur haine avouée de la bigoterie.
 
 Avantages :
 
@@ -1414,7 +1414,7 @@ Avantage : Chaque rang dans ce don réduit les chances d’échec de lancement de so
 
 En combat, le personnage réagit plus rapidement que la normale.
 
-Avantage : Le délai du “facteur de vitesse” avant d’attaquer pour la première fois dans un round est réduit de 4. Le temps d’incantation de tous vos sorts est réduit de 1.~
+Avantage : Le délai du "facteur de vitesse" avant d’attaquer pour la première fois dans un round est réduit de 4. Le temps d’incantation de tous vos sorts est réduit de 1.~
 @707	= ~BOTTE SECRETE :
 
 Vous êtes particulièrement habile avec les dagues, les épées courtes et le combat à mains nues, ce qui vous permet de bénéficier autant de votre Dextérité que de votre Force.
@@ -2571,7 +2571,7 @@ PARAMÈTRES :
 Poids : 1 lb (0,45 kg)
 ~
 @4738 	= ~Nectar de Sang~
-@4739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée “Nectar de Sang”, cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
+@4739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur un bonus de +2 à toutes les caractéristiques pendant 10 rounds.
 

@@ -13,7 +13,7 @@
 @6012 = ~Je propose que nous organisions une rencontre entre le seigneur Ulbrec et un représentant de la Légion. Laissez-nous-~
 @6013 = ~En fait, j’ai une meilleure idée. Pourquoi ne pas prendre la fuite tant que c’est possible ?~
 @6014 = ~Ce n’est pas la peine d’en venir aux menaces. Après tout, vous êtes cernés et-~
-@6015 = ~Nous venons d’anéantir le Clan de la Défense Brisée et de massacrer tout ce qui essayait de nous ralentir au Gué du Shaengarne. Votre “Légion”, c’est notre prochaine cible. Vous pouvez vous enfuir pour avoir une chance de vivre un jour de plus, ou nous pouvons vous ouvrir le ventre pour que vous puissiez contempler vos tripes en sortir tout en regardant vos compagnons se faire massacrer. C’est vous qui choisissez, Xuki.~
+@6015 = ~Nous venons d’anéantir le Clan de la Défense Brisée et de massacrer tout ce qui essayait de nous ralentir au Gué du Shaengarne. Votre "Légion", c’est notre prochaine cible. Vous pouvez vous enfuir pour avoir une chance de vivre un jour de plus, ou nous pouvons vous ouvrir le ventre pour que vous puissiez contempler vos tripes en sortir tout en regardant vos compagnons se faire massacrer. C’est vous qui choisissez, Xuki.~
 @6016 = ~Je… Je crois que ma tâche est terminée ici. Je suis certain que la Légion peut régler cette situation sans mon aide.~
 @6017 = ~Sage décision.~
 @6018 = ~Vous êtes de retour. Comment s’est déroulée la bataille ?~
@@ -80,7 +80,7 @@
 @6079 = ~Vous ne prendriez que la mienne ? Mes camarades auront la vie sauve ?~
 @6080 = ~J’ai une meilleure idée. Vous rendez aux enfants leur apparence normale et je vous laisse la vie sauve.~
 @6081 = ~Bien sûr. Je n’ai besoin que d’une seule personne. Laissez-moi préparer le rituel et je prendrai votre force vitale pour soigner les enfants.~
-@6082 = ~En réalité, non. Je ne vous fais pas confiance avec ma “force vitale”.~
+@6082 = ~En réalité, non. Je ne vous fais pas confiance avec ma "force vitale".~
 @6083 = ~Tout bien réfléchi, non. Je ne donnerai pas ma vie comme ça.~
 @6084 = ~Allez-y. Je sacrifie ma vie pour sauver les enfants.~
 @6085 = ~Parfait ! Vous avez fait le bon choix. Ne bougez pas… ça ne devrait pas faire trop mal.~
@@ -150,11 +150,11 @@
 @6149 = ~Attendez, attendez ! Nous ne sommes pas responsables de l’effondrement du glacier !~
 @6150 = ~J’ai entendu, Brogrob. Ce n’est pas la peine de le répéter.~
 @6151 = ~Votre géant nous a confondus avec nos patrons. On est juste là pour porter les bagages, faire la cuisine et le ménage. Ce sont les héros de Targos qui nous ont engagés pour les aider à atteindre la Passe Occidentale.~
-@6152 = ~Les “héros de Targos” ?~
+@6152 = ~Les "héros de Targos" ?~
 @6153 = ~Ce sont ceux qui ont sauvé Targos des hordes de gobelins. C’est un honneur pour nous de les servir. Ils sont arrivés en bateau de Luskan, ont repoussé l’invasion des gobelins, puis une *autre* invasion et ont ensuite attaqué la forteresse de la horde ! Sans eux, on serait tous morts.~
-@6154 = ~Si ce sont les “héros de Targos” qui vous emploient, pourquoi n’êtes-vous pas *avec* eux ?~
+@6154 = ~Si ce sont les "héros de Targos" qui vous emploient, pourquoi n’êtes-vous pas *avec* eux ?~
 @6155 = ~On a pris de l’avance pour éviter le combat. Quand le mur de glace s’est effondré, des prêtresses d’Aurile les ont attaqués. C’était incroyable de les voir se battre… ils massacraient littéralement ces Aurilites. Ils ont… attendez. Vous êtes l’un d’entre eux ? Vous êtes un Aurilite ?~
-@6156 = ~Comment ça les “massacrer” ? Qu’est-ce qu’il se passe au mur ?~
+@6156 = ~Comment ça les "massacrer" ? Qu’est-ce qu’il se passe au mur ?~
 @6157 = ~Je… je ne sais pas ! Je suis juste l-là pour porter les s-sacs !~
 @6158 = ~Et merde ! Hors de mon chemin ! Les gars, dépêchez-vous, il n’y a plus de temps à perdre !~
 @6159 = ~(Commence à lancer un sort d’illusion pour donner à Harshom et à ses alliés l’apparence d’ombres des roches)~
@@ -191,7 +191,7 @@
 @6190 = ~Ces termes sont inacceptables. De vagues promesses, une compensation insuffisante… Ce traité n’est qu’un tas de mots vides de sens. Je vais aider nos frères de l’Œil du Dragon et je veillerai à ce que votre espèce devienne esclave de la nôtre, comme Sseth l’a prédit. Je placerai votre cœur sur l’autel et l’offrirai au Serpent du Monde.~
 @6191 = ~Pouvez-vous atteindre l’île avec le coffre qui se trouve au sud-ouest de l’amphithéâtre ?~
 @6192 = ~Emmenez-nous vers l’une des bâtisses sur le magma.~
-@6193 = ~D’après ce que j’ai lu, “sa grandeur”, le Grand Prêtre yuan-ti Thorasskus, aurait récemment eu une vision de son dieu Sseth concernant une éruption imminente. Il a demandé à sa grande sorcière Izbelah de rapidement élaborer un sort pour inverser le processus.~
+@6193 = ~D’après ce que j’ai lu, "sa grandeur", le Grand Prêtre yuan-ti Thorasskus, aurait récemment eu une vision de son dieu Sseth concernant une éruption imminente. Il a demandé à sa grande sorcière Izbelah de rapidement élaborer un sort pour inverser le processus.~
 @6194 = ~Intrus, vous n’êtes pas les bienvenus ici. Faites demi-tour ou vous mourrez !~
 @6195 = ~Je suis Izbelah, la Grande Ensorceleuse, mais cela n’a aucune importance. J’ai des choses plus importantes à régler. Je suis en train de préparer un rituel et ne tolérerai aucune interruption.~
 @6196 = ~Un rituel ? Quel genre de rituel ?~
@@ -220,9 +220,9 @@
 @6219 = ~Oui, je m’appelle Auren Corlath. Je suis un émissaire du Palais du porte-parole de Bryn Shander. Nous avons parlé à Xavier Torsend, il nous a envoyés ici. Il semblerait que notre arrangement ait été annulé… Nous voudrions prendre un nouveau rendez-vous.~
 @6220 = ~Oui, je m’appelle Auren Corlath. Je suis un émissaire du Palais du porte-parole de Bryn Shander. Nous avons parlé à Xavier Torsend, il nous a envoyés ici.~
 @6221 = ~Je suis un diplomate de Bois Isolé. J’aimerais m’entretenir avec Isair et Madae.~
-@6222 = ~Bryn Shander ? J’aimerais comprendre… Bryn Shander a essayé d’assassiner Isair et Madae au cours d’un “geste” diplomatique, et maintenant elle envoie des émissaires pour une mystérieuse mission diplomatique non programmée ? Êtes-vous venus pour rendre votre ville isolé ? Apportez-vous de nouveaux “cadeaux” à Isair et Madae ? Êtes-vous venu présenter de pathétiques excuses ? Ou n’êtes-vous qu’un idiot qui essaie de quémander une entrevue sans même connaître la réputation de Bryn Shander au sein de la Légion de la Chimère ? Ou, mieux encore, un assassin minable et incompétent ?~
+@6222 = ~Bryn Shander ? J’aimerais comprendre… Bryn Shander a essayé d’assassiner Isair et Madae au cours d’un "geste" diplomatique, et maintenant elle envoie des émissaires pour une mystérieuse mission diplomatique non programmée ? Êtes-vous venus pour rendre votre ville isolé ? Apportez-vous de nouveaux "cadeaux" à Isair et Madae ? Êtes-vous venu présenter de pathétiques excuses ? Ou n’êtes-vous qu’un idiot qui essaie de quémander une entrevue sans même connaître la réputation de Bryn Shander au sein de la Légion de la Chimère ? Ou, mieux encore, un assassin minable et incompétent ?~
 @6223 = ~Je connais parfaitement la réputation de Bryn Shander et je comprends le point de vue de la Légion au sujet de cet incident. C’est pour cette raison que je suis ici. Et pour répondre à votre question, oui, nous avons des excuses à présenter, si Isair et Madae veulent bien les écouter.~
-@6224 = ~Je connais parfaitement la réputation de Bryn Shander et je comprends le point de vue de la Légion au sujet de cet incident. C’est pour cette raison que je suis ici. D’ailleurs, nous avons des excuses à présenter, mais il y a bien plus à dire au sujet du “geste” lui-même. C’est pourquoi nous avons amené avec nous le responsable de cette tentative d’assassinat, afin de le remettre à la garde de la Légion. Bryn Shander estime que ce geste, qui témoigne de notre confiance, contribuera à apaiser les tensions.~
+@6224 = ~Je connais parfaitement la réputation de Bryn Shander et je comprends le point de vue de la Légion au sujet de cet incident. C’est pour cette raison que je suis ici. D’ailleurs, nous avons des excuses à présenter, mais il y a bien plus à dire au sujet du "geste" lui-même. C’est pourquoi nous avons amené avec nous le responsable de cette tentative d’assassinat, afin de le remettre à la garde de la Légion. Bryn Shander estime que ce geste, qui témoigne de notre confiance, contribuera à apaiser les tensions.~
 @6225 = ~Vous… vous avez amené le cuistot ? Vous le livrez en offrande de paix ? Hah ! Je ne m’attendais pas à ça de Bryn Shander ! Très bien, Auren Corlath, je vais vous mener à Isair et Madae. Je suis certain qu’ils seront *ravis* de vous recevoir.~
 @6226 = ~Merci.~
 @6227 = ~Hum. Non, je ne crois pas. Allez parler à Xavier Torsend si vous avez des choses à dire. Du vent… qui que vous soyez.~
@@ -253,12 +253,12 @@
 @6252 = ~Vous, les mercenaires, avez parcouru la nature sauvage pendant des semaines… votre compréhension des événements actuels est, pour dire le moins, limitée. Nous avons déjà établi de nouveaux contacts et lancé de nouveaux projets avec tout le monde, de Thay à la Cabale des Dragons, en passant par Iyachtu Xvim lui-même. La Main Tranchée est elle-même le résultat du travail conjoint de nombreuses organisations. Est-ce que de simples opportunistes auraient consacré leurs propres ressources au succès de la Légion ?~
 @6253 = ~Pourquoi les opportunistes vous diraient-ils autre chose ? Ils sont bien trop malins pour ne pas vous mentir. Essayez de voir les choses avec leurs yeux… la horde des gobelins a été mise en déroute. Les Aurilites ont été vaincus. Les driders ont été écrasés. L’Œil du Dragon a disparu. Et la Main Tranchée est en train de s’effondrer. Vos alliés se font anéantir les uns après les autres… et les survivants sont inquiets. Nous avons pu nous balader dans la Main Tranchée, car aucun de vos alliés ne s’intéresse à votre sécurité au point de surveiller convenablement les couloirs. Pourquoi prendraient-ils des risques inutiles pour vous ? Vous *voulez* croire que tout le monde est de votre côté, mais en réalité, personne ne s’intéresse vraiment à ces rebuts et ces sang-mêlé, pas même les *autres* rebuts et sang-mêlé.~
 @6254 = ~Ce n’est pas tout. Les Dix-Cités ont des alliés au Sud. Quand les autres nations s’impliqueront, la Légion de la Chimère sera anéantie.~
-@6255 = ~Vous, les mercenaires, ne comprenez rien aux épreuves que nous avons traversées ! de ce qu’on a dû surmonter ! Vous ne savez rien de la passion, de la frustration… non, de la FUREUR des rebuts de votre “civilisation” ! Des nations entières attendent un monde qui serait le leur, un foyer qui les accueillerait ! Nous SOMMES ce foyer ! Nous SOMMES cette nation ! La Légion de la Chimère n’est pas qu’une bande de sang-mêlé fuyant la race humaine… nous sommes un RÊVE ! Le rêve de sécurité, d’indépendance, de *liberté* pour ceux que vous avez opprimés pendant des siècles !~
-@6256 = ~La passion n’a jamais gagné une guerre, Isair. Les guerres ne se gagnent que par la force. Votre “rêve”, ce n’est qu’un concept ; les armées, c’est la réalité. Une poignée de mercenaires a suffi à retourner vos troupes les unes contre les autres et à les mener à la défaite. Nous ne sommes pourtant qu’une fraction de l’armée que vous espérez détruire. Même après tous vos efforts, les Dix-Cités sont toujours debout, et même si vous les conquissiez, les nations du Sud finiraient par s’unir pour vous écraser avant que vous n’ayez pu vous étendre davantage.~
+@6255 = ~Vous, les mercenaires, ne comprenez rien aux épreuves que nous avons traversées ! de ce qu’on a dû surmonter ! Vous ne savez rien de la passion, de la frustration… non, de la FUREUR des rebuts de votre "civilisation" ! Des nations entières attendent un monde qui serait le leur, un foyer qui les accueillerait ! Nous SOMMES ce foyer ! Nous SOMMES cette nation ! La Légion de la Chimère n’est pas qu’une bande de sang-mêlé fuyant la race humaine… nous sommes un RÊVE ! Le rêve de sécurité, d’indépendance, de *liberté* pour ceux que vous avez opprimés pendant des siècles !~
+@6256 = ~La passion n’a jamais gagné une guerre, Isair. Les guerres ne se gagnent que par la force. Votre "rêve", ce n’est qu’un concept ; les armées, c’est la réalité. Une poignée de mercenaires a suffi à retourner vos troupes les unes contre les autres et à les mener à la défaite. Nous ne sommes pourtant qu’une fraction de l’armée que vous espérez détruire. Même après tous vos efforts, les Dix-Cités sont toujours debout, et même si vous les conquissiez, les nations du Sud finiraient par s’unir pour vous écraser avant que vous n’ayez pu vous étendre davantage.~
 @6257 = ~Un rêve ne suffit pas, Isair. Vous aurez besoin de bien plus que de grands idéaux pour gagner une guerre.~
-@6258 = ~Est-ce là votre vision de la justice, mercenaire ? Le droit du plus fort, les puissants dominant les faibles ? Nous ne pouvons pas ACCEPTER ce genre de “justice” ! Nous n’accepterons pas d’être opprimés ! Nous avons un but, un nouvel ordre, un nouveau monde pour corriger les erreurs du passé ! Vous n’êtes que <LE_GARDIEN> d’un monde injuste… Vous *n’essayez* même pas de justifier les actions de vos semblables !~
+@6258 = ~Est-ce là votre vision de la justice, mercenaire ? Le droit du plus fort, les puissants dominant les faibles ? Nous ne pouvons pas ACCEPTER ce genre de "justice" ! Nous n’accepterons pas d’être opprimés ! Nous avons un but, un nouvel ordre, un nouveau monde pour corriger les erreurs du passé ! Vous n’êtes que <LE_GARDIEN> d’un monde injuste… Vous *n’essayez* même pas de justifier les actions de vos semblables !~
 @6259 = ~Je n’ai pas besoin de le faire, Isair. Votre empire est en train de s’écrouler. La Légion n’est que le produit de vos rêves personnels, et tout le monde se sert à votre table en attendant de trouver mieux. Vous pouvez crier tant que vous le voudrez, vos passions ne comptent pour rien dans ce monde. Elles n’ont jamais compté. Tout ce que vous avez construit est en train de s’effondrer, tout le monde vous abandonne, et vous n’intéressez personne.~
-@6260 = ~Même si nous nous installions sur une île lointaine, notre “sécurité” ne durerait guère. Lorsque notre nation deviendrait prospère et puissante, l’humanité verrait un profit dans notre destruction et enverrait des pirates et des voleurs pour nous piller jusqu’à ce que nous soyons assez faibles pour être conquis. Nous ne pouvons pas survivre en comptant sur la bonne volonté de l’humanité.~
+@6260 = ~Même si nous nous installions sur une île lointaine, notre "sécurité" ne durerait guère. Lorsque notre nation deviendrait prospère et puissante, l’humanité verrait un profit dans notre destruction et enverrait des pirates et des voleurs pour nous piller jusqu’à ce que nous soyons assez faibles pour être conquis. Nous ne pouvons pas survivre en comptant sur la bonne volonté de l’humanité.~
 @6261 = ~Je ne suis pas d’accord avec votre raisonnement. Vous dites que la Légion n’aurait aucune chance de survivre sur une île, en indépendance, même après plusieurs décennies… et pourtant vous prétendez qu’elle *est* assez forte pour conquérir les Dix-Cités aujourd’hui, *sans* avoir bénéficié de trente années de paix dans l’indépendance.~
 @6262 = ~Vous sous-estimez le potentiel de tolérance des humains. Ils n’auraient aucune raison d’avoir peur si votre nation était à proximité de la leur.~
 @6263 = ~Je n’en ai pas la moindre idée, ma sœur.~
@@ -269,7 +269,7 @@
 @6268 = ~Vous n’allez pas me dire que la Main Tranchée est un mauvais quartier général. C’est un endroit formidable, que vous avez acquis sans avoir à verser une seule goutte de sang. Combien de ressources avez-vous perdu en essayant de prendre le contrôle des Dix-Cités ? Combien de ressources avez-vous *gagné* en vous installant dans la Main Tranchée ?~
 @6269 = ~La Main Tranchée ne nous suffit pas. Nous ne pouvons pas tous vivre dans une seule tour. Nous avons besoin d’un pays.~
 @6270 = ~Alors trouvez-en un ! Vous avez des devins et des mages à votre disposition ; vous pourrez facilement établir votre nation dans un lieu sûr, loin des humains. Il suffit de le trouver.~
-@6271 = ~Nous n’avons pas besoin de votre “aide”, mercenaire. La Légion est en train de gagner et les Dix-Cités tombent les unes après les autres. Pourquoi abandonner une guerre déjà gagnée ?~
+@6271 = ~Nous n’avons pas besoin de votre "aide", mercenaire. La Légion est en train de gagner et les Dix-Cités tombent les unes après les autres. Pourquoi abandonner une guerre déjà gagnée ?~
 @6272 = ~Parce que vous n’avez pas *besoin* de gagner la guerre, Isair. Il vous suffit de fonder une nation et de la défendre. Obtenez quelques concessions, rassembler vos ressources et installez-vous dans un lieu sûr. Ne risquez pas la Légion en la condamnant à dépendre de la destruction des Dix-Cités.~
 @6273 = ~Je ne suis pas venu ici pour vous critiquer, Isair. Mais le simple fait que je sois là, en vie et armé, dans votre citadelle, alors que vous avez fait tout ce qui est en votre pouvoir pour me tuer, démontre bien que la Légion n’est pas en train de gagner la guerre. Personne ne la gagne. Tout le monde la perd. Je ne dis pas que nous devons tous nous entendre ou que les Dix-Cités et la Légion puissent vivre en paix l’une à côté de l’autre. Je ne suis pas naïf. Mais les Dix-Cités, la Légion et le monde entier auraient tout à gagner de l’indépendance de votre nation quelque part en Féérune. Cela pourrait devenir le refuge de tous ceux que la civilisation rejette.~
 @6274 = ~Oui… Si seulement c’était aussi simple.~
@@ -288,7 +288,7 @@
 @6287 = ~Et vous, Madae ? Avez-vous fait quelque chose pour les opprimés depuis la création de la Légion ?~
 @6288 = ~Ca devient lassant… Est-ce que je peux les tuer, maintenant, ma sœur ?~
 @6289 = ~Répondez à ma question, Isair. Si vous êtes plus qu’un simple cambion geignard…~
-@6290 = ~Un simple cambion ?! C’est pour ça que nous nous battons depuis toutes ces années ! L’intolérance ! L’ignorance ! La cruauté du monde “civilisé” !~
+@6290 = ~Un simple cambion ?! C’est pour ça que nous nous battons depuis toutes ces années ! L’intolérance ! L’ignorance ! La cruauté du monde "civilisé" !~
 @6291 = ~Oh, le pauvre Isair et la pauvre Madae. Comme leur existence au sommet de leur tour doit être cruelle ! Quand leur douleur prendra-t-elle fin ?~
 @6292 = ~Vous n’avez aucune idée de ce qu’on a vécu, mercenaire ! Vous ne savez pas ce qu’on a dû surmonter !~
 @6293 = ~Alors, éclairez-moi. Pourquoi la vie d’Isair et de Madae est-elle si difficile ?~
@@ -305,7 +305,7 @@
 @6304 = ~J’ai rencontré l’esprit de votre mère à Kuldahar. Iselore et Nathaniel m’ont indiqué le chemin. Elle n’a jamais su ce qu’il vous était arrivé. Elle est restée là-bas en tant que fantôme, attendant votre retour pendant des années.~
 @6305 = ~Elle n’a toujours pas trouvé le repos ? Encore aujourd’hui ?~
 @6306 = ~Nous lui avons donné la paix. Nous lui avons raconté ce qu’il s’est passé à ses funérailles… la dispute avec les villageois.~
-@6307 = ~Je… Je ne comprends pas… “Notre dernier combat” ? Qu’est-ce que cela veut dire ?~
+@6307 = ~Je… Je ne comprends pas… "Notre dernier combat" ? Qu’est-ce que cela veut dire ?~
 @6308 = ~Ce n’était pas *votre* dernier combat, Isair. Elle parlait du nôtre.~
 @6309 = ~Votre dernier combat ? Ici ? Maintenant ?~
 @6310 = ~Je crois qu’elle prévoyait que cela finirait dans la violence.~
@@ -324,7 +324,7 @@
 @6323 = ~Oui, une autre fois, je crois. Ensuite, nous pourrons… Aïe ! Qu’est-ce que… aïe ! Qu’est-ce que c’était ?~
 @6324 = ~Non, ce n’est pas possible. Les Sorciers Rouges ont examiné le mythal à de nombreuses reprises ; ils auraient repéré la moindre faille. C’est de la pure folie. Je peux les tuer maintenant, ma sœur ?~
 @6325 = ~Assez d’idioties. Il est vain de débattre d’éthique avec des mercenaires. Je peux les tuer maintenant, ma sœur ?~
-@6326 = ~Je doute qu’ils soient vraiment aussi naïfs. Je dirais plutôt “fourbes”. Je peux les tuer maintenant, ma sœur ?~
+@6326 = ~Je doute qu’ils soient vraiment aussi naïfs. Je dirais plutôt "fourbes". Je peux les tuer maintenant, ma sœur ?~
 @6327 = ~… Non. C’est inutile.~
 @6328 = ~Comme s’il y avait une quelconque différence… Je peux les tuer, maintenant, ma sœur ?~
 @6329 = ~J’en ai assez. Je peux les tuer maintenant, ma sœur ?~
@@ -351,7 +351,7 @@
 @6350 = ~Unification ? Solidarité ? Mise en esclavage ? D’après ce que j’ai vu, la Légion n’est pas assez puissante pour accomplir l’un de ces objectifs.~
 @6351 = ~Mais quel rapport entre la destruction de Targos et des Dix-Cités et l’unification des sang-mêlé ?~
 @6352 = ~Regardez autour de vous, mercenaire. La Main Tranchée nous appartient. Vous êtes encerclé par les troupes les plus puissantes du Val de Bise… sans compter nos alliés venus d’au-delà du Plan Matériel.~
-@6353 = ~Les membres de notre espèce ne pourront jamais connaître la paix tant que votre “civilisation” sera debout. Depuis la nuit des temps, les humains oppriment les sang-mêlé de Féérune. Il y a longtemps que nous avons appris qu’ils n’accepteront jamais de vivre  “en paix avec nous”. Nous devons les déloger de leur trône et régner à leur place.~
+@6353 = ~Les membres de notre espèce ne pourront jamais connaître la paix tant que votre "civilisation" sera debout. Depuis la nuit des temps, les humains oppriment les sang-mêlé de Féérune. Il y a longtemps que nous avons appris qu’ils n’accepteront jamais de vivre  "en paix avec nous". Nous devons les déloger de leur trône et régner à leur place.~
 @6354 = ~Mais pourquoi ici ? Cette région est déjà entre les mains des humains. La Légion et les siens pourraient trouver refuge dans d’autres contrées. Il y a des terres vierges à Chult, des îles où les vastes étendues d’eau pourraient vous protéger des humains… Vous pourriez même aller vous installer à Zakhara. C’est l’endroit le moins sûr que vous ayez pu choisir pour vous installer.~
 @6355 = ~En d’autres termes, vous ne faites que remplacer une injustice par une autre.~
 @6356 = ~Je suis moi-même un drow, et je ne pourrais pas être plus en désaccord avec vous.~
@@ -359,7 +359,7 @@
 @6358 = ~Je suis Tieffelin, et aux yeux des humains, je suis une sorte de cambion… et je ne pourrais pas être plus en désaccord avec vous.~
 @6359 = ~Vous suggérez que nous nous résignions aux terres que l’humanité ne veut pas. Vivre comme de pauvres parias dans un désert abandonné n’est pas la vie que nous recherchons. Nous avons droit à notre part du Val de Bise et de Féérune tout entier. Nous sommes nés ici.~
 @6360 = ~Injustice ? C’est ainsi que vous appelez la libération des peuples opprimés ?~
-@6361 = ~A mon avis, vous n’avez rien fait pour les “peuples opprimés”, vous n’avez fait que guerroyer contre ceux qui ne vous ressemblent pas et vous êtes allié aux forces les plus maléfiques et oppressives que vous avez pu trouver.~
+@6361 = ~A mon avis, vous n’avez rien fait pour les "peuples opprimés", vous n’avez fait que guerroyer contre ceux qui ne vous ressemblent pas et vous êtes allié aux forces les plus maléfiques et oppressives que vous avez pu trouver.~
 @6362 = ~Bien sûr, vous n’allez pas me dire le contraire. Vous combattez pour Targos. Vous êtes ici uniquement pour défendre les bigots de ce monde parce qu’ils sont de votre côté. Mais cette époque touche à sa fin. Vous allez tous disparaître.~
 @6363 = ~Je ne vois aucune différence entre vous et les autres bigots de ce monde. Qu’avez-vous réellement fait pour les démunis de Féérune ? Leur avez-vous donné de la nourriture, des vêtements, un abri ? Sont-ils plus riches ou en sécurité grâce à la Légion ?~
 @6364 = ~Je ne suis pas là pour défendre les bigots. Je suis ici pour défendre les Dix-Cités !~
@@ -383,7 +383,7 @@
 @6382 = ~Elle était encore là ? Après notre départ ?~
 @6383 = ~Elle craignait qu’il vous soit arrivé un grand malheur. Elle ne pouvait trouver le repos tant qu’elle ignorait votre sort.~
 @6384 = ~Qu’est-ce qu’elle vous a dit ?~
-@6385 = ~“Soyez <FORT> lorsque viendra le moment de livrer votre dernier combat et vous l’emporterez.”~
+@6385 = ~"Soyez <FORT> lorsque viendra le moment de livrer votre dernier combat et vous l’emporterez."~
 @6386 = ~Que voulez-vous dire ?~
 @6387 = ~Eh bien, c’était une prêtresse d’Ilmater, Madae. Le dieu du martyr… de ceux qui résistent à la violence.~
 @6388 = ~Parler avec nous ?~
