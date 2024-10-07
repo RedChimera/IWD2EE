@@ -1,6 +1,4 @@
 
-IEex_InSyncState = true
-
 IEex_Normal_Patch_Files = {
 	"override/IEex_Core_Patch.lua",
 	"override/IEex_Trigger_Patch.lua",

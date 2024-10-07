@@ -26,19 +26,11 @@ IEex_Scroll_DefaultKeys = {
 					   IEex_KeyIDS.NUMPAD7, -- m_nKeyScrollState = 8
 }
 
-IEex_Scroll_UpKeys          = { IEex_KeyIDS.UP,    IEex_KeyIDS.NUMPAD8 }
-IEex_Scroll_TopRightKeys    = {                    IEex_KeyIDS.NUMPAD9 }
-IEex_Scroll_RightKeys       = { IEex_KeyIDS.RIGHT, IEex_KeyIDS.NUMPAD6 }
-IEex_Scroll_BottomRightKeys = {                    IEex_KeyIDS.NUMPAD3 }
-IEex_Scroll_DownKeys        = { IEex_KeyIDS.DOWN,  IEex_KeyIDS.NUMPAD2 }
-IEex_Scroll_BottomLeftKeys  = {                    IEex_KeyIDS.NUMPAD1 }
-IEex_Scroll_LeftKeys        = { IEex_KeyIDS.LEFT,  IEex_KeyIDS.NUMPAD4 }
-IEex_Scroll_TopLeftKeys     = {                    IEex_KeyIDS.NUMPAD7 }
-
 function IEex_Scroll_ResolveScrollState()
 	local state = 0
 	for _, key in ipairs(IEex_GetPressedKeysStack()) do
-		if IEex_FindInTable(IEex_Scroll_UpKeys, key) then
+		local customMapIndex = IEex_Hotkeys_GetBoundCustomMapIndex(key)
+		if IEex_Hotkeys_IsScrollUp(customMapIndex) then
 			if state == 3 or state == 4 then     -- RIGHT / BOTTOM-RIGHT
 				state = 2                        -- => TOP-RIGHT
 			elseif state == 6 or state == 7 then -- BOTTOM-LEFT / LEFT
@@ -46,9 +38,9 @@ function IEex_Scroll_ResolveScrollState()
 			else
 				state = 1                        -- => UP
 			end
-		elseif IEex_FindInTable(IEex_Scroll_TopRightKeys, key) then
+		elseif IEex_Hotkeys_IsScrollTopRight(customMapIndex) then
 			state = 2                            -- => TOP-RIGHT
-		elseif IEex_FindInTable(IEex_Scroll_RightKeys, key) then
+		elseif IEex_Hotkeys_IsScrollRight(customMapIndex) then
 			if state == 1 or state == 8 then     -- UP / TOP-LEFT
 				state = 2                        -- => TOP-RIGHT
 			elseif state == 5 or state == 6 then -- DOWN / BOTTOM-LEFT
@@ -56,9 +48,9 @@ function IEex_Scroll_ResolveScrollState()
 			else
 				state = 3                        -- => RIGHT
 			end
-		elseif IEex_FindInTable(IEex_Scroll_BottomRightKeys, key) then
+		elseif IEex_Hotkeys_IsScrollBottomRight(customMapIndex) then
 			state = 4                            -- => BOTTOM-RIGHT
-		elseif IEex_FindInTable(IEex_Scroll_DownKeys, key) then
+		elseif IEex_Hotkeys_IsScrollDown(customMapIndex) then
 			if state == 2 or state == 3 then     -- TOP-RIGHT / RIGHT
 				state = 4                        -- => BOTTOM-RIGHT
 			elseif state == 7 or state == 8 then -- LEFT / TOP-LEFT
@@ -66,9 +58,9 @@ function IEex_Scroll_ResolveScrollState()
 			else
 				state = 5                        -- => DOWN
 			end
-		elseif IEex_FindInTable(IEex_Scroll_BottomLeftKeys, key) then
+		elseif IEex_Hotkeys_IsScrollBottomLeft(customMapIndex) then
 			state = 6                            -- => BOTTOM-LEFT
-		elseif IEex_FindInTable(IEex_Scroll_LeftKeys, key) then
+		elseif IEex_Hotkeys_IsScrollLeft(customMapIndex) then
 			if state == 1 or state == 2 then     -- UP / TOP-RIGHT
 				state = 8                        -- => TOP-LEFT
 			elseif state == 4 or state == 5 then -- BOTTOM-RIGHT / DOWN
@@ -76,7 +68,7 @@ function IEex_Scroll_ResolveScrollState()
 			else
 				state = 7                        -- => LEFT
 			end
-		elseif IEex_FindInTable(IEex_Scroll_TopLeftKeys, key) then
+		elseif IEex_Hotkeys_IsScrollTopLeft(customMapIndex) then
 			state = 8                            -- => TOP-LEFT
 		end
 	end

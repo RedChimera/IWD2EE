@@ -8,6 +8,11 @@ function IEex_GetEngineCreateChar()
 	return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 end
 
+function IEex_GetEngineKeys()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1CA8)
+end
+
 function IEex_GetEngineOptions()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	return IEex_ReadDword(g_pBaldurChitin + 0x1C78)

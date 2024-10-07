@@ -389,3 +389,23 @@
 @55906=~Enables action indicators above character portraits. These indicators visually represent the action(s) currently being performed by a character.~
 @55907=~Highlight Empty Containers in Gray~
 @55908=~Changes the highlight color of empty containers to gray, overriding the default green color. This helps differentiate containers that have already been looted by the party.~
+
+@55909=~Scrolling~
+@55910=~Scroll Up~
+@55911=~Scroll Left~
+@55912=~Scroll Down~
+@55913=~Scroll Right~
+@55914=~Scroll Up (Alt)~
+@55915=~Scroll Left (Alt)~
+@55916=~Scroll Down (Alt)~
+@55917=~Scroll Right (Alt)~
+@55918=~Scroll Top Left~
+@55919=~Scroll Bottom Left~
+@55920=~Scroll Bottom Right~
+@55921=~Scroll Top Right~
+@55922=~Scroll Top Left (Alt)~
+@55923=~Scroll Bottom Left (Alt)~
+@55924=~Scroll Bottom Right (Alt)~
+@55925=~Scroll Top Right (Alt)~
+@55926=~IEex~
+@55927=~Toggle Quickloot~

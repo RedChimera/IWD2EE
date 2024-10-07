@@ -275,6 +275,10 @@ function IEex_SetPanelEnabled(CUIPanel, enabled)
 	IEex_Call(0x4D29D0, {enabled and 1 or 0}, CUIPanel, 0x0)
 end
 
+function IEex_SetPanelMosaicResref(CUIPanel, resref)
+	IEex_Helper_SetPanelMosaicResref(CUIPanel, resref)
+end
+
 function IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
 	if x then
 		IEex_WriteDword(CUIPanel + 0x24, x)
@@ -335,6 +339,13 @@ end
 
 function IEex_SetControlActive(CUIControl, active)
 	IEex_WriteByte(CUIControl + 0x1E, active and 1 or 0)
+end
+
+function IEex_SetControlArea(CUIControl, x, y, w, h)
+	if x then IEex_WriteDword(CUIControl + 0xE, x) end
+	if y then IEex_WriteDword(CUIControl + 0x12, y) end
+	if w then IEex_WriteDword(CUIControl + 0x16, w) end
+	if h then IEex_WriteDword(CUIControl + 0x1A, h) end
 end
 
 function IEex_SetControlXY(CUIControl, x, y)
@@ -420,6 +431,10 @@ end
 -- Control Label Functions --
 -----------------------------
 
+function IEex_GetControlLabelTextFlags(CUIControlLabel)
+	return IEex_ReadWord(CUIControlLabel + 0x55A)
+end
+
 function IEex_SetControlLabelText(CUIControlLabel, text)
 
 	local manager = IEex_NewMemoryManager({
@@ -442,6 +457,10 @@ function IEex_SetControlLabelText(CUIControlLabel, text)
 
 	IEex_Call(0x4E46F0, {manager:getAddress("varString")}, CUIControlLabel, 0x0)
 	manager:free()
+end
+
+function IEex_SetControlLabelTextFlags(CUIControlLabel, flags)
+	IEex_WriteWord(CUIControlLabel + 0x55A, flags)
 end
 
 ---------------------------------------------------
@@ -1228,6 +1247,7 @@ end
 function IEex_GuiRegisterListeners()
 	if IEex_Vanilla then return end
 	IEex_AddKeyPressedListener("IEex_GuiKeyPressedListener")
+	IEex_AddKeyPressedListener("IEex_Hotkeys_KeyPressedListener")
 end
 
 function IEex_GuiReloadListener()
@@ -1710,7 +1730,7 @@ function IEex_DefineCustomControl(controlName, controlStructType, args)
 	local fillVFTableDefaults = function(vftableSize, vftableAddress)
 		newVFTable = IEex_Malloc(vftableSize)
 		local currentFillAddress = newVFTable
-		for i = vftableAddress, vftableAddress + vftableSize, 0x4 do
+		for i = vftableAddress, vftableAddress + vftableSize - 0x4, 0x4 do
 			IEex_WriteDword(currentFillAddress, IEex_ReadDword(i))
 			currentFillAddress = currentFillAddress + 0x4
 		end
@@ -1926,6 +1946,13 @@ function IEex_AddControlToPanel(CUIPanel, args)
 
 	IEex_AddControlStToPanel(CUIPanel, UI_Control_st)
 	IEex_Free(UI_Control_st)
+
+	if type == IEex_ControlStructType.BUTTON then
+		local playLButtonDownSound = args["playLButtonDownSound"]
+		if playLButtonDownSound ~= nil then
+			IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(CUIPanel, args.id))
+		end
+	end
 end
 
 function IEex_ReadControlSt(UI_Control_st)
@@ -2690,9 +2717,12 @@ end
 -- Define Custom Controls --
 ----------------------------
 
+-- This runs before the engine has been initialized, it /CANNOT/ access UI structures. It should only
+-- be used to define custom control types via IEex_DefineCustomControl(), and potentially define type
+-- overrides for specific MENU->PANEL->CONTROL ids via IEex_AddControlOverride().
+
 IEex_AbsoluteOnce("IEex_CustomControls", function()
 
-	if not IEex_InAsyncState then return false end
 	if IEex_Vanilla then return end
 
 	---------------
@@ -2743,7 +2773,6 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		})),
 		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
 	})
-
 
 	IEex_AddControlOverride("GUIW08", 23, 11, "IEex_Quickloot_ScrollRight")
 	IEex_AddControlOverride("GUIW10", 23, 11, "IEex_Quickloot_ScrollRight")
@@ -2804,10 +2833,134 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 
 	IEex_DefineCustomControl("IEex_UI_TextArea", IEex_ControlStructType.TEXT_AREA, {})
 	IEex_DefineCustomControl("IEex_UI_Scrollbar", IEex_ControlStructType.SCROLL_BAR, {})
+end)
 
-	------------------
-	-- IEex Options --
-	------------------
+function IEex_InstallActionIndicators()
+
+	local worldScreen = IEex_GetEngineWorld()
+	local chuResref = IEex_GetCHUResrefFromEngine(worldScreen)
+	local panel1 = IEex_GetPanelFromEngine(worldScreen, 1)
+	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1)
+
+	local actionIndicatorsPanel = IEex_AddPanelToEngine(worldScreen, {
+		["id"]     = IEex_ActionIndicatorsPanelID,
+		["x"]      = x1,
+		["y"]      = y1 - IEex_ActionIndicators_PanelHeight,
+		["width"]  = w1,
+		["height"] = IEex_ActionIndicators_PanelHeight,
+	})
+
+	for refI = 0, 5 do
+
+		local i = refI * 3
+		local referenceControl = IEex_GetControlFromPanel(panel1, refI)
+		local referenceControlX, _, referenceControlW = IEex_GetControlArea(referenceControl)
+
+		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i, "IEex_UI_Button")
+		IEex_AddControlToPanel(actionIndicatorsPanel, {
+			["id"]     = i,
+			["x"]      = referenceControlX + IEex_ActionIndicators_PrimarySlotOffsetX,
+			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_PrimarySlotOffsetY,
+			["width"]  = IEex_ActionIndicators_PrimarySlotSize,
+			["height"] = IEex_ActionIndicators_PrimarySlotSize,
+			["type"]   = IEex_ControlStructType.BUTTON,
+			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
+		})
+		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i), false)
+
+		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 1, "IEex_UI_Button")
+		IEex_AddControlToPanel(actionIndicatorsPanel, {
+			["id"]     = i + 1,
+			["x"]      = referenceControlX + IEex_ActionIndicators_SecondarySlotOffsetX,
+			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_SecondarySlotOffsetY,
+			["width"]  = IEex_ActionIndicators_SecondarySlotSize,
+			["height"] = IEex_ActionIndicators_SecondarySlotSize,
+			["type"]   = IEex_ControlStructType.BUTTON,
+			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
+		})
+		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i + 1), false)
+
+		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 2, "IEex_UI_Button")
+		IEex_AddControlToPanel(actionIndicatorsPanel, {
+			["id"]     = i + 2,
+			["x"]      = referenceControlX + IEex_ActionIndicators_TertiarySlotOffsetX,
+			["y"]      = math.max(0, IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_TertiarySlotOffsetY),
+			["width"]  = IEex_ActionIndicators_TertiarySlotSize,
+			["height"] = IEex_ActionIndicators_TertiarySlotSize,
+			["type"]   = IEex_ControlStructType.BUTTON,
+			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
+		})
+		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i + 2), false)
+	end
+end
+
+function IEex_InstallQuickloot()
+
+	local worldScreen = IEex_GetEngineWorld()
+
+	local panel1Memory = IEex_GetPanelFromEngine(worldScreen, 1)
+	local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
+
+	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
+	local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
+		["id"]              = 23,
+		["x"]               = x1,
+		["y"]               = y1 - h1,
+		["width"]           = w1,
+		["height"]          = h1,
+		["hasBackground"]   = 1,
+		["backgroundImage"] = "B3QKLOOT"
+	})
+
+	for i = 7, 16 do
+
+		local referenceControl = IEex_GetControlFromPanel(panel1Memory, i)
+		local copyControl = IEex_GetControlFromPanel(panel8Memory, i - 7)
+
+		local referenceControlX, referenceControlY = IEex_GetControlArea(referenceControl)
+		local _, _, copyControlW, copyControlH = IEex_GetControlArea(copyControl)
+
+		IEex_AddControlToPanel(quicklootPanel, {
+			["id"]     = IEex_GetControlID(copyControl),
+			["x"]      = referenceControlX + 1,
+			["y"]      = referenceControlY + 1,
+			["width"]  = copyControlW,
+			["height"] = copyControlH,
+			["type"]   = IEex_ControlStructType.BUTTON,
+			["bam"]    = IEex_GetControlButtonBAM(copyControl),
+		})
+	end
+
+	local leftArrow = IEex_GetControlFromPanel(panel1Memory, 6)
+	local leftArrowX, leftArrowY, leftArrowW, leftArrowH = IEex_GetControlArea(leftArrow)
+	IEex_AddControlToPanel(quicklootPanel, {
+		["id"]             = 10,
+		["x"]              = leftArrowX,
+		["y"]              = leftArrowY,
+		["width"]          = leftArrowW,
+		["height"]         = leftArrowH,
+		["type"]           = IEex_ControlStructType.BUTTON,
+		["bam"]            = "GUIBTACT",
+		["frameUnpressed"] = 48,
+		["framePressed"]   = 49,
+	})
+
+	local rightArrow = IEex_GetControlFromPanel(panel1Memory, 17)
+	local rightArrowX, rightArrowY, rightArrowW, rightArrowH = IEex_GetControlArea(rightArrow)
+	IEex_AddControlToPanel(quicklootPanel, {
+		["id"]             = 11,
+		["x"]              = rightArrowX,
+		["y"]              = rightArrowY,
+		["width"]          = rightArrowW,
+		["height"]         = rightArrowH,
+		["type"]           = IEex_ControlStructType.BUTTON,
+		["bam"]            = "GUIBTACT",
+		["frameUnpressed"] = 52,
+		["framePressed"]   = 53,
+	})
+end
+
+function IEex_InstallIEexOptions()
 
 	local screenOptions = IEex_GetEngineOptions()
 	local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
@@ -3003,135 +3156,11 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 	})
 
 	IEex_SetPanelActive(newOptionsPanel, false)
-
-end)
-
-function IEex_InstallActionIndicators()
-
-	local worldScreen = IEex_GetEngineWorld()
-	local chuResref = IEex_GetCHUResrefFromEngine(worldScreen)
-	local panel1 = IEex_GetPanelFromEngine(worldScreen, 1)
-	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1)
-
-	local actionIndicatorsPanel = IEex_AddPanelToEngine(worldScreen, {
-		["id"]     = IEex_ActionIndicatorsPanelID,
-		["x"]      = x1,
-		["y"]      = y1 - IEex_ActionIndicators_PanelHeight,
-		["width"]  = w1,
-		["height"] = IEex_ActionIndicators_PanelHeight,
-	})
-
-	for refI = 0, 5 do
-
-		local i = refI * 3
-		local referenceControl = IEex_GetControlFromPanel(panel1, refI)
-		local referenceControlX, _, referenceControlW = IEex_GetControlArea(referenceControl)
-
-		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i, "IEex_UI_Button")
-		IEex_AddControlToPanel(actionIndicatorsPanel, {
-			["id"]     = i,
-			["x"]      = referenceControlX + IEex_ActionIndicators_PrimarySlotOffsetX,
-			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_PrimarySlotOffsetY,
-			["width"]  = IEex_ActionIndicators_PrimarySlotSize,
-			["height"] = IEex_ActionIndicators_PrimarySlotSize,
-			["type"]   = IEex_ControlStructType.BUTTON,
-			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
-		})
-		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i), false)
-
-		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 1, "IEex_UI_Button")
-		IEex_AddControlToPanel(actionIndicatorsPanel, {
-			["id"]     = i + 1,
-			["x"]      = referenceControlX + IEex_ActionIndicators_SecondarySlotOffsetX,
-			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_SecondarySlotOffsetY,
-			["width"]  = IEex_ActionIndicators_SecondarySlotSize,
-			["height"] = IEex_ActionIndicators_SecondarySlotSize,
-			["type"]   = IEex_ControlStructType.BUTTON,
-			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
-		})
-		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i + 1), false)
-
-		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 2, "IEex_UI_Button")
-		IEex_AddControlToPanel(actionIndicatorsPanel, {
-			["id"]     = i + 2,
-			["x"]      = referenceControlX + IEex_ActionIndicators_TertiarySlotOffsetX,
-			["y"]      = math.max(0, IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_TertiarySlotOffsetY),
-			["width"]  = IEex_ActionIndicators_TertiarySlotSize,
-			["height"] = IEex_ActionIndicators_TertiarySlotSize,
-			["type"]   = IEex_ControlStructType.BUTTON,
-			["bam"]    = IEex_GetControlButtonBAM(referenceControl),
-		})
-		IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(actionIndicatorsPanel, i + 2), false)
-	end
 end
 
-function IEex_InstallQuickloot()
+-- Use this function to modify existing panels / controls. The engine has been semi-initialized at this point, and the
+-- passed `chuResref` signifies that the given .CHU has been fully created, and that its UI structures can be accessed.
 
-	local worldScreen = IEex_GetEngineWorld()
-
-	local panel1Memory = IEex_GetPanelFromEngine(worldScreen, 1)
-	local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
-
-	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
-	local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
-		["id"]              = 23,
-		["x"]               = x1,
-		["y"]               = y1 - h1,
-		["width"]           = w1,
-		["height"]          = h1,
-		["hasBackground"]   = 1,
-		["backgroundImage"] = "B3QKLOOT"
-	})
-
-	for i = 7, 16 do
-
-		local referenceControl = IEex_GetControlFromPanel(panel1Memory, i)
-		local copyControl = IEex_GetControlFromPanel(panel8Memory, i - 7)
-
-		local referenceControlX, referenceControlY = IEex_GetControlArea(referenceControl)
-		local _, _, copyControlW, copyControlH = IEex_GetControlArea(copyControl)
-
-		IEex_AddControlToPanel(quicklootPanel, {
-			["id"]     = IEex_GetControlID(copyControl),
-			["x"]      = referenceControlX + 1,
-			["y"]      = referenceControlY + 1,
-			["width"]  = copyControlW,
-			["height"] = copyControlH,
-			["type"]   = IEex_ControlStructType.BUTTON,
-			["bam"]    = IEex_GetControlButtonBAM(copyControl),
-		})
-	end
-
-	local leftArrow = IEex_GetControlFromPanel(panel1Memory, 6)
-	local leftArrowX, leftArrowY, leftArrowW, leftArrowH = IEex_GetControlArea(leftArrow)
-	IEex_AddControlToPanel(quicklootPanel, {
-		["id"]             = 10,
-		["x"]              = leftArrowX,
-		["y"]              = leftArrowY,
-		["width"]          = leftArrowW,
-		["height"]         = leftArrowH,
-		["type"]           = IEex_ControlStructType.BUTTON,
-		["bam"]            = "GUIBTACT",
-		["frameUnpressed"] = 48,
-		["framePressed"]   = 49,
-	})
-
-	local rightArrow = IEex_GetControlFromPanel(panel1Memory, 17)
-	local rightArrowX, rightArrowY, rightArrowW, rightArrowH = IEex_GetControlArea(rightArrow)
-	IEex_AddControlToPanel(quicklootPanel, {
-		["id"]             = 11,
-		["x"]              = rightArrowX,
-		["y"]              = rightArrowY,
-		["width"]          = rightArrowW,
-		["height"]         = rightArrowH,
-		["type"]           = IEex_ControlStructType.BUTTON,
-		["bam"]            = "GUIBTACT",
-		["frameUnpressed"] = 52,
-		["framePressed"]   = 53,
-	})
-end
-
--- Use this function to modify existing panels / controls
 function IEex_OnCHUInitialized(chuResref)
 
 	if chuResref == "GUIW08" or chuResref == "GUIW10" then
@@ -3512,6 +3541,85 @@ function IEex_OnCHUInitialized(chuResref)
 
 			IEex_SetPanelActive(newWizardSpellsPanel, false)
 		end
+
+	elseif chuResref == "GUIOPT" then
+
+		------------------
+		-- IEex Options --
+		------------------
+
+		if not IEex_Vanilla then
+			IEex_InstallIEexOptions()
+		end
+
+	elseif chuResref == "GUIKEYS" then
+
+		-----------------------
+		-- GUIKEYS Expansion --
+		-----------------------
+
+		if not IEex_Vanilla then
+
+			local screenKeys = IEex_GetEngineKeys()
+
+			local panel0 = IEex_GetPanelFromEngine(screenKeys, 0)
+			IEex_SetPanelMosaicResref(panel0, "B3KEYS")
+
+			local curNameControlId = 0x10000005 + 60
+			local curValueControlId = 0x10000005
+
+			for columnI = 0, 2 do
+
+				local firstValueControlOfColumn = IEex_GetControlFromPanel(panel0, curValueControlId)
+				local firstValueControlOfColumnX, firstValueControlOfColumnY, firstValueControlOfColumnW = IEex_GetControlArea(firstValueControlOfColumn)
+
+				-- Install left divider for column
+				local lDividerId = 6 + columnI * 2
+				IEex_AddControlOverride("GUIKEYS", 0, lDividerId, "IEex_UI_Button")
+				IEex_AddControlToPanel(panel0, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = lDividerId,
+					["x"] = firstValueControlOfColumnX - IEex_Hotkeys_ValueControlExpansion - 5,
+					["y"] = firstValueControlOfColumnY - 1,
+					["width"] = 5,
+					["height"] = 399,
+					["bam"] = "B3LDVIDR",
+					["sequence"] = columnI % 3,
+					["playLButtonDownSound"] = false,
+				})
+
+				-- Install right divider for column
+				local rDividerId = 7 + columnI * 2
+				IEex_AddControlOverride("GUIKEYS", 0, rDividerId, "IEex_UI_Button")
+				IEex_AddControlToPanel(panel0, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = rDividerId,
+					["x"] = firstValueControlOfColumnX + firstValueControlOfColumnW,
+					["y"] = firstValueControlOfColumnY - 1,
+					["width"] = 5,
+					["height"] = 399,
+					["bam"] = "B3RDVIDR",
+					["sequence"] = columnI % 2,
+					["playLButtonDownSound"] = false,
+				})
+
+				-- Increase keybind mapping widths (taken from name labels)
+				for i = 1, 20 do
+
+					local nameControl = IEex_GetControlFromPanel(panel0, curNameControlId)
+					local valueControl = IEex_GetControlFromPanel(panel0, curValueControlId)
+
+					local nameX, _, nameW = IEex_GetControlArea(nameControl)
+					local valueX, _, valueW = IEex_GetControlArea(valueControl)
+
+					IEex_SetControlArea(nameControl, nameX, nil, nameW - IEex_Hotkeys_ValueControlExpansion)
+					IEex_SetControlArea(valueControl, valueX - IEex_Hotkeys_ValueControlExpansion, nil, valueW + IEex_Hotkeys_ValueControlExpansion)
+
+					curNameControlId = curNameControlId + 1
+					curValueControlId = curValueControlId + 1
+				end
+			end
+		end
 	end
 end
 
@@ -3547,8 +3655,6 @@ function IEex_LoadOptions()
 
 	IEex_Helper_SetBridge(options, "highlightEmptyContainersInGray",
 		IEex_GetPrivateProfileInt("IEex Options", "Highlight Empty Containers in Gray", 1, ".\\Icewind2.ini") ~= 0 and true or false)
-
-	IEex_InitOptionButtons()
 end
 
 function IEex_WriteOptions()
@@ -3629,6 +3735,350 @@ function IEex_CScreenWorld_OnQuicklootButtonLClick()
 		IEex_Quickloot_Start()
 	end
 end
+
+-----------------------
+-- GUIKEYS Expansion --
+-----------------------
+
+IEex_Hotkeys_HardcodedMapDefaults = {
+	[00] = "I",
+	[01] = "R",
+	[02] = "G",
+	[03] = "J",
+	[04] = "M",
+	[05] = "S",
+	[06] = "O",
+	[07] = "C",
+	[08] = nil,
+	[09] = nil,
+	[10] = nil,
+	[11] = nil,
+	[12] = nil,
+	[13] = "D",
+	[14] = nil,
+	[15] = nil,
+	[16] = nil,
+	[17] = nil,
+	[18] = nil,
+	[19] = "V",
+	[20] = nil,
+	[21] = nil,
+	[22] = "L",
+	[23] = "H",
+	[24] = "T",
+	[25] = "X",
+	[26] = "Q",
+	[27] = "A",
+	[28] = "Y",
+	[29] = "Z",
+	[30] = ".",
+	[31] = "F",
+	[32] = "7",
+	[33] = "8",
+	[34] = "9",
+	[35] = "0",
+	[36] = "-",
+	[37] = "=",
+	[38] = nil,
+	[39] = nil,
+	[40] = nil,
+	[41] = nil,
+	[42] = nil,
+	[43] = nil,
+	[44] = nil,
+	[45] = nil,
+	[46] = nil,
+	[47] = nil,
+	[48] = nil,
+	[49] = nil,
+	[50] = nil,
+	[51] = nil,
+	[52] = nil,
+}
+
+IEex_Hotkeys_CustomBinding = {
+	TOGGLE_QUICKLOOT        =  0,
+	SCROLL_UP               =  1,
+	SCROLL_UP_ALT           =  2,
+	SCROLL_LEFT             =  3,
+	SCROLL_LEFT_ALT         =  4,
+	SCROLL_DOWN             =  5,
+	SCROLL_DOWN_ALT         =  6,
+	SCROLL_RIGHT            =  7,
+	SCROLL_RIGHT_ALT        =  8,
+	SCROLL_TOP_LEFT         =  9,
+	SCROLL_TOP_LEFT_ALT     = 10,
+	SCROLL_BOTTOM_LEFT      = 11,
+	SCROLL_BOTTOM_LEFT_ALT  = 12,
+	SCROLL_BOTTOM_RIGHT     = 13,
+	SCROLL_BOTTOM_RIGHT_ALT = 14,
+	SCROLL_TOP_RIGHT        = 15,
+	SCROLL_TOP_RIGHT_ALT    = 16,
+}
+
+IEex_Hotkeys_CustomBindings = {
+	[IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT]        = { ["iniSection"] = "IEex", ["iniKey"] = "Toggle Quickloot",          ["default"] = "`"        },
+	[IEex_Hotkeys_CustomBinding.SCROLL_UP]               = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Up",                 ["default"] = "Up"       },
+	[IEex_Hotkeys_CustomBinding.SCROLL_UP_ALT]           = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Up (Alt)",           ["default"] = "Keypad 8" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_LEFT]             = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Left",               ["default"] = "Left"     },
+	[IEex_Hotkeys_CustomBinding.SCROLL_LEFT_ALT]         = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Left (Alt)",         ["default"] = "Keypad 4" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_DOWN]             = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Down",               ["default"] = "Down"     },
+	[IEex_Hotkeys_CustomBinding.SCROLL_DOWN_ALT]         = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Down (Alt)",         ["default"] = "Keypad 2" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_RIGHT]            = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Right",              ["default"] = "Right"    },
+	[IEex_Hotkeys_CustomBinding.SCROLL_RIGHT_ALT]        = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Right (Alt)",        ["default"] = "Keypad 6" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT]         = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Left",           ["default"] = nil        },
+	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT_ALT]     = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Left (Alt)",     ["default"] = "Keypad 7" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT]      = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Bottom Left",        ["default"] = nil        },
+	[IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT_ALT]  = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Bottom Left (Alt)",  ["default"] = "Keypad 1" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT]     = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Bottom Right",       ["default"] = nil        },
+	[IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT] = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Bottom Right (Alt)", ["default"] = "Keypad 3" },
+	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT]        = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Right",          ["default"] = nil        },
+	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT]    = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Right (Alt)",    ["default"] = "Keypad 9" },
+}
+
+IEex_Hotkeys_CustomBindingsHandlers = {
+	[IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT] = IEex_CScreenWorld_OnQuicklootButtonLClick,
+}
+
+IEex_Hotkeys_ValueControlExpansion = 38
+
+IEex_Hotkeys_KeysScreenLayout = {
+
+	------------
+	-- Page 1 --
+	------------
+
+	-- Column 1
+	{ ["hardcodedMapIndex"] = -1, ["strref"] = 33478 },
+	{ ["hardcodedMapIndex"] =  0, ["strref"] = 16307 },
+	{ ["hardcodedMapIndex"] =  1, ["strref"] = 16306 },
+	{ ["hardcodedMapIndex"] =  3, ["strref"] = 16308 },
+	{ ["hardcodedMapIndex"] =  4, ["strref"] = 33505 },
+	{ ["hardcodedMapIndex"] =  5, ["strref"] = 17384 },
+	{ ["hardcodedMapIndex"] =  6, ["strref"] = 13696 },
+	{ ["hardcodedMapIndex"] =  7, ["strref"] = 13902 },
+	{ ["hardcodedMapIndex"] =  2, ["strref"] = 16313 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] =    -1 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] = 33501 },
+	{ ["hardcodedMapIndex"] =  8, ["strref"] = 15925 },
+	{ ["hardcodedMapIndex"] =  9, ["strref"] =  4974 },
+	{ ["hardcodedMapIndex"] = 10, ["strref"] =  4918 },
+	{ ["hardcodedMapIndex"] = 11, ["strref"] =  4688 },
+	{ ["hardcodedMapIndex"] = 12, ["strref"] =  4978 },
+	{ ["hardcodedMapIndex"] = 13, ["strref"] =  4933 },
+	{ ["hardcodedMapIndex"] = 14, ["strref"] =  4971 },
+	{ ["hardcodedMapIndex"] = 15, ["strref"] =  4968 },
+	{ ["hardcodedMapIndex"] = 16, ["strref"] =  4927 },
+
+	-- Column 2
+	{ ["hardcodedMapIndex"] = 17, ["strref"] = 15924 },
+	{ ["hardcodedMapIndex"] = 18, ["strref"] =  4666 },
+	{ ["hardcodedMapIndex"] = 19, ["strref"] =  4954 },
+	{ ["hardcodedMapIndex"] = 20, ["strref"] = 30289 },
+	{ ["hardcodedMapIndex"] = 21, ["strref"] = 30290 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] =    -1 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] = 33500 },
+	{ ["hardcodedMapIndex"] = 25, ["strref"] = 33506 },
+	{ ["hardcodedMapIndex"] = 26, ["strref"] = 33507 },
+	{ ["hardcodedMapIndex"] = 22, ["strref"] = 33508 },
+	{ ["hardcodedMapIndex"] = 23, ["strref"] = 32050 },
+	{ ["hardcodedMapIndex"] = 28, ["strref"] = 40248 },
+	{ ["hardcodedMapIndex"] = 24, ["strref"] = 40249 },
+	{ ["hardcodedMapIndex"] = 27, ["strref"] = 33509 },
+	{ ["hardcodedMapIndex"] = 29, ["strref"] = 11942 },
+	{ ["hardcodedMapIndex"] = 30, ["strref"] = 40250 },
+	{ ["hardcodedMapIndex"] = 31, ["strref"] = 40251 },
+	{ ["hardcodedMapIndex"] = 32, ["strref"] = 40252 },
+	{ ["hardcodedMapIndex"] = 33, ["strref"] = 40253 },
+	{ ["hardcodedMapIndex"] = 34, ["strref"] = 40254 },
+
+	-- Column 3
+	{ ["hardcodedMapIndex"] = 35, ["strref"] = 40255 },
+	{ ["hardcodedMapIndex"] = 36, ["strref"] = 40256 },
+	{ ["hardcodedMapIndex"] = 37, ["strref"] = 40273 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] =    -1 },
+	{ ["hardcodedMapIndex"] = -1, ["strref"] = 40257 },
+	{ ["hardcodedMapIndex"] = 41, ["strref"] = 40258 },
+	{ ["hardcodedMapIndex"] = 42, ["strref"] = 40259 },
+	{ ["hardcodedMapIndex"] = 43, ["strref"] = 40260 },
+	{ ["hardcodedMapIndex"] = 44, ["strref"] = 40261 },
+	{ ["hardcodedMapIndex"] = 38, ["strref"] = 40262 },
+	{ ["hardcodedMapIndex"] = 39, ["strref"] = 40263 },
+	{ ["hardcodedMapIndex"] = 40, ["strref"] = 40264 },
+	{ ["hardcodedMapIndex"] = 45, ["strref"] = 40265 },
+	{ ["hardcodedMapIndex"] = 46, ["strref"] = 40266 },
+	{ ["hardcodedMapIndex"] = 47, ["strref"] = 40267 },
+	{ ["hardcodedMapIndex"] = 48, ["strref"] = 40268 },
+	{ ["hardcodedMapIndex"] = 49, ["strref"] = 40269 },
+	{ ["hardcodedMapIndex"] = 50, ["strref"] = 40270 },
+	{ ["hardcodedMapIndex"] = 51, ["strref"] = 40271 },
+	{ ["hardcodedMapIndex"] = 52, ["strref"] = 40272 },
+
+	------------
+	-- Page 2 --
+	------------
+
+	-- Column 1
+	{                                                                          ["strref"] = ex_tra_55909 }, -- "Scrolling"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_UP,               ["strref"] = ex_tra_55910 }, -- "Scroll Up"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_LEFT,             ["strref"] = ex_tra_55911 }, -- "Scroll Left"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_DOWN,             ["strref"] = ex_tra_55912 }, -- "Scroll Down"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT,            ["strref"] = ex_tra_55913 }, -- "Scroll Right"
+	{                                                                                                    },
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_UP_ALT,           ["strref"] = ex_tra_55914 }, -- "Scroll Up (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_LEFT_ALT,         ["strref"] = ex_tra_55915 }, -- "Scroll Left (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_DOWN_ALT,         ["strref"] = ex_tra_55916 }, -- "Scroll Down (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT_ALT,        ["strref"] = ex_tra_55917 }, -- "Scroll Right (Alt)"
+	{                                                                                                    },
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT,         ["strref"] = ex_tra_55918 }, -- "Scroll Top Left"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT,      ["strref"] = ex_tra_55919 }, -- "Scroll Bottom Left"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT,     ["strref"] = ex_tra_55920 }, -- "Scroll Bottom Right"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT,        ["strref"] = ex_tra_55921 }, -- "Scroll Top Right"
+	{                                                                                                    },
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT_ALT,     ["strref"] = ex_tra_55922 }, -- "Scroll Top Left (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT_ALT,  ["strref"] = ex_tra_55923 }, -- "Scroll Bottom Left (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT, ["strref"] = ex_tra_55924 }, -- "Scroll Bottom Right (Alt)"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT,    ["strref"] = ex_tra_55925 }, -- "Scroll Top Right (Alt)"
+
+	-- Column 2
+	{                                                                          ["strref"] = ex_tra_55926 }, -- "IEex"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT,        ["strref"] = ex_tra_55927 }, -- "Toggle Quickloot"
+}
+
+function IEex_Extern_GiveEngineKeysScreenLayout()
+	return IEex_Hotkeys_KeysScreenLayout
+end
+
+IEex_Hotkeys_KeyToCustomMapIndex = {}
+
+-- This function is called by the engine whenever a custom hotkey binding is updated, (this includes initialization).
+--     deltaT = {
+--         { ["customMapIndex"] = ?, ["oldVirtualKey"] = ?, ["oldVirtualKeyHasCtrl"] = ?, ["newVirtualKey"] = ?, ["newVirtualKeyHasCtrl"] = ? },
+--         { ["customMapIndex"] = ?, ["oldVirtualKey"] = ?, ["oldVirtualKeyHasCtrl"] = ?, ["newVirtualKey"] = ?, ["newVirtualKeyHasCtrl"] = ? },
+--         ...
+--     }
+function IEex_Extern_KeysScreenOnCustomBindingsChanged(deltaT)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	for _, deltaEntry in ipairs(deltaT) do
+
+		local customMapIndex       = deltaEntry.customMapIndex
+		local oldVirtualKey        = deltaEntry.oldVirtualKey
+		local oldVirtualKeyHasCtrl = deltaEntry.oldVirtualKeyHasCtrl
+		local newVirtualKey        = deltaEntry.newVirtualKey
+		local newVirtualKeyHasCtrl = deltaEntry.newVirtualKeyHasCtrl
+
+		-- Using 0x100 (outside of VK_ range of 0xFF) to flag ctrl
+		if oldVirtualKeyHasCtrl then oldVirtualKey = bit.bor(oldVirtualKey, 0x100) end
+		if newVirtualKeyHasCtrl then newVirtualKey = bit.bor(newVirtualKey, 0x100) end
+
+		-- (Potentially) clear old mapping if it hasn't been changed already
+		if IEex_Hotkeys_KeyToCustomMapIndex[oldVirtualKey] == customMapIndex then
+			IEex_Hotkeys_KeyToCustomMapIndex[oldVirtualKey] = nil
+		end
+
+		-- Set new mapping
+		IEex_Hotkeys_KeyToCustomMapIndex[newVirtualKey] = newVirtualKey ~= 0 and customMapIndex or nil
+	end
+end
+
+function IEex_Hotkeys_KeyPressedListener(key)
+
+	if IEex_GetActiveEngine() ~= IEex_GetEngineWorld() or not IEex_IsWorldScreenAcceptingInput() then return end
+
+	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_CTRL) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_CTRL) then
+		key = bit.bor(key, 0x100)
+	end
+
+	local customMapIndex = IEex_Hotkeys_KeyToCustomMapIndex[key]
+	if customMapIndex == nil then return end
+
+	local func = IEex_Hotkeys_CustomBindingsHandlers[customMapIndex]
+	if func ~= nil then func() end
+end
+
+function IEex_Hotkeys_GetBoundCustomMapIndex(key)
+
+	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_CTRL) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_CTRL) then
+		key = bit.bor(key, 0x100)
+	end
+
+	return IEex_Hotkeys_KeyToCustomMapIndex[key]
+end
+
+IEex_Hotkeys_ScrollUpCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_UP, IEex_Hotkeys_CustomBinding.SCROLL_UP_ALT,
+}
+
+function IEex_Hotkeys_IsScrollUp(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollUpCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollLeftCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_LEFT, IEex_Hotkeys_CustomBinding.SCROLL_LEFT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollLeft(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollLeftCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollDownCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_DOWN, IEex_Hotkeys_CustomBinding.SCROLL_DOWN_ALT,
+}
+
+function IEex_Hotkeys_IsScrollDown(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollDownCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollRightCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_RIGHT, IEex_Hotkeys_CustomBinding.SCROLL_RIGHT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollRight(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollRightCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollTopLeftCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT, IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollTopLeft(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollTopLeftCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollBottomLeftCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT, IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollBottomLeft(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollBottomLeftCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollBottomRightCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT, IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollBottomRight(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollBottomRightCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_Hotkeys_ScrollTopRightCustomMapIndices = {
+	IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT, IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT,
+}
+
+function IEex_Hotkeys_IsScrollTopRight(customMapIndex)
+	return customMapIndex ~= nil and IEex_FindInTable(IEex_Hotkeys_ScrollTopRightCustomMapIndices, customMapIndex) ~= nil
+end
+
+IEex_AbsoluteOnce("IEex_Hotkeys", function()
+	IEex_Helper_RegisterKeysScreenHardcodedMapDefaults(IEex_Hotkeys_HardcodedMapDefaults)
+	IEex_Helper_RegisterKeysScreenCustomBindings(IEex_Hotkeys_CustomBindings)
+end)
+
+----------------
+-- OlvynChuru --
+----------------
 
 ex_current_menu_spell_level = 1
 ex_menu_in_second_replacement_step = false

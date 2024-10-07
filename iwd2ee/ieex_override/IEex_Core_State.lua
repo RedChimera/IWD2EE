@@ -161,7 +161,7 @@ function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 		--IEex_MessageBox(message)
 		return true
 	end
-	
+
 	if ex_listspll[resref] then
 		local spellLevel = ex_listspll[resref][7]
 		if spellLevel > 0 then
@@ -712,7 +712,7 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 	-- IEex_GetLuaState --
 	----------------------
 
-	IEex_WriteAssemblyAuto({[[
+	local IEex_GetLuaState = IEex_WriteAssemblyAuto({[[
 
 		$IEex_GetLuaState
 		!push_registers_iwd2
@@ -746,6 +746,8 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 		!pop_registers_iwd2
 		!ret
 	]]})
+
+	IEex_Helper_DefineAddress("IEex_JIT_GetLuaState", IEex_GetLuaState)
 end)
 
 function IEex_WriteDelayedPatches()

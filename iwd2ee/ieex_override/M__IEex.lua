@@ -15,6 +15,8 @@
 		dofile("override/IEex_Helper_Addresses.lua")
 		dofile("override/IEex_Helper_Patch.lua")
 
+		IEex_InSyncState = true
+
 		dofile("override/IEex_IWD2_State.lua")
 		dofile("override/IEex_IWD2_Patch.lua")
 

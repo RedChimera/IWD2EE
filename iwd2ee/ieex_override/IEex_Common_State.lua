@@ -480,6 +480,15 @@ function IEex_FindInTable(t, toFind)
 	return nil
 end
 
+function IEex_RemoveFromTable(t, toFind)
+	for i, v in ipairs(t) do
+		if v == toFind then
+			table.remove(t, i)
+			break
+		end
+	end
+end
+
 function IEex_ElementInTableMeetsCond(t, condFunc)
 	for _, v in ipairs(t) do
 		if condFunc(v) then

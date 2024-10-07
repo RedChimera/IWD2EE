@@ -1239,6 +1239,26 @@
 		IEex_EnableRDataProtection()
 	end
 
+	-------------------------------------------------------------------
+	-- Extend CScreenKeys (GUIKEYS.CHU) to allow for custom keybinds --
+	-------------------------------------------------------------------
+
+	if not IEex_Vanilla then
+		IEex_WriteAssembly(0x597740, { "!jmp_dword >IEex_Helper_CInfCursor_SetToolTipOverride                 !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x5A98F0, { "!jmp_dword >IEex_Helper_CInfGame_InitHotkeyMapOverride                !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x5A9B00, { "!jmp_dword >IEex_Helper_CInfGame_UpdateKeybindMappingOverride                        " })
+		IEex_WriteAssembly(0x639DC0, { "!jmp_dword >IEex_Helper_CScreenKeys_InitDueToUserInteractionOverride                 " })
+		IEex_WriteAssembly(0x639160, { "!jmp_dword >IEex_Helper_CScreenKeys_OnKeyDownProcessOverride          !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x639790, { "!jmp_dword >IEex_Helper_CScreenKeys_OnLButtonDownOverride                            " })
+		IEex_WriteAssembly(0x63A480, { "!jmp_dword >IEex_Helper_CScreenKeys_OnPanel1ButtonClickOverride       !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x63AA60, { "!jmp_dword >IEex_Helper_CScreenKeys_SetSelectedDisplayIndexOverride             !nop " })
+		IEex_WriteAssembly(0x63A910, { "!jmp_dword >IEex_Helper_CScreenKeys_SetStagedKeybindOverride          !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x63A7A0, { "!jmp_dword >IEex_Helper_CScreenKeys_UpdateHoverPalettesOverride                      " })
+		IEex_WriteAssembly(0x63A660, { "!jmp_dword >IEex_Helper_CScreenKeys_UpdateLabelPalettesOverride       !repeat(5,!nop)" })
+		IEex_WriteAssembly(0x639A50, { "!jmp_dword >IEex_Helper_CScreenKeys_UpdateMainPanelOverride           !repeat(2,!nop)" })
+		IEex_WriteAssembly(0x63ACA0, { "!jmp_dword >IEex_Helper_CUIControlButtonKeys_OnLButtonClickOverride             !nop " })
+	end
+
 	IEex_EnableCodeProtection()
 
 end)()
