@@ -1950,7 +1950,7 @@ function IEex_AddControlToPanel(CUIPanel, args)
 	if type == IEex_ControlStructType.BUTTON then
 		local playLButtonDownSound = args["playLButtonDownSound"]
 		if playLButtonDownSound ~= nil then
-			IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(CUIPanel, args.id))
+			IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(CUIPanel, args.id), playLButtonDownSound)
 		end
 	end
 end
