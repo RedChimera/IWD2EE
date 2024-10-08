@@ -348,6 +348,17 @@ function IEex_SetControlArea(CUIControl, x, y, w, h)
 	if h then IEex_WriteDword(CUIControl + 0x1A, h) end
 end
 
+function IEex_SetControlCustomHotkeyHintIndex(CUIControl, customMapIndex)
+	-- IEexHelper's reimplementation of the hotkey hint formatting routine uses
+	-- flag 0x8000 to differentiate between the engine's hardcoded hotkeys and
+	-- our custom ones.
+	IEex_SetControlHotkeyHintIndex(CUIControl, bit.bor(customMapIndex, 0x8000))
+end
+
+function IEex_SetControlHotkeyHintIndex(CUIControl, hotkeyIndex)
+	IEex_WriteWord(CUIControl + 0x4A, hotkeyIndex)
+end
+
 function IEex_SetControlXY(CUIControl, x, y)
 	if x then IEex_WriteDword(CUIControl + 0xE, x) end
 	if y then IEex_WriteDword(CUIControl + 0x12, y) end
@@ -1947,10 +1958,22 @@ function IEex_AddControlToPanel(CUIPanel, args)
 	IEex_AddControlStToPanel(CUIPanel, UI_Control_st)
 	IEex_Free(UI_Control_st)
 
+	local control = IEex_GetControlFromPanel(CUIPanel, args.id)
+
+	IEex_WriteArgs(control, args, {
+		{ "tooltipStrref",   0x3E, IEex_WriteType.DWORD, IEex_WriteFailType.NOTHING },
+		{ "hotkeyHintIndex", 0x4A, IEex_WriteType.WORD,  IEex_WriteFailType.NOTHING },
+	})
+
+	local customHotkeyHintIndex = args["customHotkeyHintIndex"]
+	if customHotkeyHintIndex ~= nil then
+		IEex_SetControlCustomHotkeyHintIndex(control, customHotkeyHintIndex)
+	end
+
 	if type == IEex_ControlStructType.BUTTON then
 		local playLButtonDownSound = args["playLButtonDownSound"]
 		if playLButtonDownSound ~= nil then
-			IEex_SetControlButtonPlayLButtonDownSound(IEex_GetControlFromPanel(CUIPanel, args.id), playLButtonDownSound)
+			IEex_SetControlButtonPlayLButtonDownSound(control, playLButtonDownSound)
 		end
 	end
 end
@@ -3357,6 +3380,8 @@ function IEex_OnCHUInitialized(chuResref)
 				["frameUnpressed"] = 0,
 				["framePressed"] = 1,
 				["frameDisabled"] = 0,
+				["tooltipStrref"] = ex_tra_55927,
+				["customHotkeyHintIndex"] = IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT,
 			})
 
 			IEex_AddControlOverride(chuResref, 22, 15, "IEex_UI_Button")
@@ -3372,6 +3397,8 @@ function IEex_OnCHUInitialized(chuResref)
 				["frameUnpressed"] = 0,
 				["framePressed"] = 1,
 				["frameDisabled"] = 0,
+				["tooltipStrref"] = ex_tra_55927,
+				["customHotkeyHintIndex"] = IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT,
 			})
 		end
 
