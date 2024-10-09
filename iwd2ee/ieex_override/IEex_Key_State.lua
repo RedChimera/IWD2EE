@@ -2020,7 +2020,7 @@ function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 
 			-- If the async thread is running really slow it might miss a keydown + keyup
 			-- This corrects missing exactly 1 keydown + keyup sequence for a key
-			local missedPress = not isDownRightNow and wasDown
+			local missedPress = not isDownRightNow and wasDown and not isDownBridge
 
 			-- Note key pressed event
 			if (isDownRightNow and not isDownBridge) or missedPress then
