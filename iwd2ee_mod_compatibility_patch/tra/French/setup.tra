@@ -1,0 +1,11 @@
+//TRA num 1-100
+@1    = ~IWD2EE Mod Compatibility Patch (Install AFTER all mods and only if you have a mod other than IWD2EE installed)~
+@2    = ~Mass patches; this could take some time...~
+@98   = ~IWD2EE is not currently installed.~
+@99   = ~The Widescreen Mod is not compatible with IWD2EE and will crash the game if installed with IWD2EE. Please uninstall it. IWD2EE already allows you to increase the game's resolution; you do not need the Widescreen Mod.~
+@100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
+Installing IWD2EE again without removing those files would corrupt various files.
+To install IWD2EE, do these steps in this order:
+1. Uninstall all your other mods.
+2. After you do that, look in the folder called "override" and delete everything from that folder.
+3. Install your mods again, including IWD2EE.~
