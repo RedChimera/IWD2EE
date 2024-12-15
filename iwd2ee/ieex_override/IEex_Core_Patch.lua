@@ -157,8 +157,12 @@
 		Unsure if this is needed, but let's keep it just in case. ;
 		@wait
 		!cmp_[dword]_byte ]], {IEex_AsyncInitialLock, 4}, [[ 00
-		!jz_dword >wait
+		!jnz_dword >break
+		!push_byte 01
+		!call >IEex_Helper_Sleep ; Without this sleep call Win11 24H2 freezes (never schedules the spawned thread to run) ;
+		!jmp_dword >wait
 
+		@break
 	]]})
 
 	-- Both invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()

@@ -1,5 +1,6 @@
 
 IEex_Debug_CompressTime = false
+IEex_Debug_ForceTracePatches = false
 IEex_Debug_LogButtonInvalidations = false
 IEex_Debug_LogPanelInvalidations = false
 IEex_Debug_Stutter = false
@@ -8,7 +9,7 @@ IEex_Debug_UpdateTimes = false
 
 function IEex_Debug_WriteTracePatches()
 
-	if not IEex_Debug_UpdateLoadTimes and not IEex_Debug_UpdateTimes then
+	if not IEex_Debug_ForceTracePatches and not IEex_Debug_UpdateLoadTimes and not IEex_Debug_UpdateTimes then
 		return
 	end
 
