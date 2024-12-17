@@ -1,0 +1,38 @@
+@56000=~Nous sommes entrés par des moyens magiques.~
+@56001=~Avez-vous de nouveau besoin de mes services ?~
+@56002=~Oui, veuillez rejoindre le groupe.~
+@56003=~Pas pour le moment.~
+@56004=~Ce curseur contrôle le niveau de difficulté à utiliser en combat. De gauche à droite, les paramètres sont les suivants :
+
+* Très facile : Les ennemis ont un malus de -4 aux jets d’attaque et de sauvegarde, et le groupe subit la moitié des dégâts.
+
+* Facile : Les ennemis ont un malus de -2 aux jets d’attaque et de sauvegarde, et le groupe subit les trois quarts des dégâts.
+
+* Normal : Ce paramètre n’a aucun changement ; Icewind Dale 2 : Enhanced Edition a été équilibré pour ce niveau de difficulté.
+
+* Difficile : Les ennemis ont un bonus d’attaque de +3 et infligent 50% de dégâts supplémentaires au groupe.
+
+* Très difficile : Les ennemis ont un bonus d’attaque de +9 et infligent le double de dégâts au groupe.
+
+De plus, il existe une difficulté encore plus élevée, Cœur de furie. Ce paramètre de difficulté est accessible en ouvrant Config.exe, en sélectionnant l’option "Mode Cœur de furie" et en commençant une nouvelle partie.
+
+* Cœur de furie : Les ennemis ont le triple de leurs Points de Vie de base plus 80 PV supplémentaires, +10 à toutes les valeurs de caractéristiques, +12 niveaux dans chacune de leurs classes, +9 en attaque, +5 aux jets de sauvegarde, infligent le double de dégâts au groupe et ont +10 au facteur de difficulté (challenge rating). Tout au long du jeu, de nombreux objets magiques sont remplacés par des versions plus puissantes.
+
+Icewind Dale 2: Enhanced Edition a certains modules optionnels qui réduisent les bonus accordés aux ennemis du mode Cœur de furie. Les bonus ci-dessus supposent qu’aucun module de ce type n’est installé.~
+@56005=~Absorption d’une Valeur de Caractéristique~
+@56006=~Les bonus raciaux supplémentaires pour les humains vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur humain juste après la création du personnage.~
+@56007=~Les bonus raciaux supplémentaires pour les aasimars vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur aasimar juste après la création du personnage.~
+@56008=~Les bonus raciaux supplémentaires pour les tieffelins vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur tieffelin juste après la création du personnage.~
+@56009=~Les bonus raciaux supplémentaires pour les elfes de la lune vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur elfe de la lune juste après la création du personnage.~
+@56010=~Les bonus raciaux supplémentaires pour les drows vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur drow juste après la création du personnage.~
+@56011=~Les bonus raciaux supplémentaires pour les elfes sauvages vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur elfe sauvage juste après la création du personnage.~
+@56012=~Les bonus raciaux supplémentaires pour les demi-elfes vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur demi-elfe juste après la création du personnage.~
+@56013=~Les bonus raciaux supplémentaires pour les nains d’écu vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur nain d’écu juste après la création du personnage.~
+@56014=~Les bonus raciaux supplémentaires pour les nains d’or vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur nain d’or juste après la création du personnage.~
+@56015=~Les bonus raciaux supplémentaires pour les nains gris vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur nain gris juste après la création du personnage.~
+@56016=~Les bonus raciaux supplémentaires pour les halfelins pieds-légers vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur halfelin pieds-légers juste après la création du personnage.~
+@56017=~Les bonus raciaux supplémentaires pour les halfelins vaillants vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur halfelin vaillants juste après la création du personnage.~
+@56018=~Les bonus raciaux supplémentaires pour les halfelins vifs-esprits vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur halfelin vifs-esprits juste après la création du personnage.~
+@56019=~Les bonus raciaux supplémentaires pour les gnomes des roches vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur gnome des roches juste après la création du personnage.~
+@56020=~Les bonus raciaux supplémentaires pour les gnomes des profondeurs vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur gnome des profondeurs juste après la création du personnage.~
+@56021=~Les bonus raciaux supplémentaires pour les demi-orques vont ici. Chaque effet de ce sort sera appliqué à tout personnage joueur demi-orque juste après la création du personnage.~

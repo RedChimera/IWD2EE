@@ -16,6 +16,7 @@ Languages:
 English
 Italian
 Russian
+French
 
 Components:
 
@@ -46,27 +47,28 @@ Components:
 25. Revised Battle Square
 26. Minor Damage Resistance for Armor and Shields
 27. Race Revisions
-28. Enemies give the same amount of experience regardless of the party's level
-29. Adjust encounter level-scaling
-30. Reduce enemy HP bonuses in Heart of Fury Mode
-31. Reduce enemy attack bonuses in Heart of Fury Mode
-32. Reduce enemy saving throw bonuses in Heart of Fury Mode
-33. Weaken allied summoned creatures in Heart of Fury Mode
-34. Have the party start with experience in Heart of Fury Mode
-35. Reduce the delay between sneak attacks
-36. Increase the level cap
-37. Always learn spells from scrolls successfully
-38. Add attacks of opportunity to the game
-39. Change the way ability scores are assigned at character creation
-40. Add more traps
-41. Add key bindings for automating buffing
+28. Revise racial level adjustment/ECL
+29. Enemies give the same amount of experience regardless of the party's level
+30. Adjust encounter level-scaling
+31. Reduce enemy HP bonuses in Heart of Fury Mode
+32. Reduce enemy attack bonuses in Heart of Fury Mode
+33. Reduce enemy saving throw bonuses in Heart of Fury Mode
+34. Weaken allied summoned creatures in Heart of Fury Mode
+35. Have the party start with experience in Heart of Fury Mode
+36. Reduce the delay between sneak attacks
+37. Increase the level cap
+38. Always learn spells from scrolls successfully
+39. Add attacks of opportunity to the game
+40. Change the way ability scores are assigned at character creation
+41. Add more traps
+42. Add key bindings for automating buffing
 
 --IWD2EE Core--
 
 The core component must be installed for any other component to be installed. It includes various quality of life changes.
 
 * Load times are much faster.
-* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game.
+* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game. You should play at 600p or 768p height to make the in-game UI take up the full height of your screen, and to keep the text somewhat readable. For 21:9 and other ultrawide displays, you can set a custom resolution (like 1835x768 or 1433x600) in the ddraw.ini file at the [iwd2] section.
 * IWD2EE includes a ddraw fix unless you already had one installed. This should improve performance.
 * Scrolling the screen should be smoother on some devices.
 * It is possible to scroll with the middle mouse button.
@@ -598,6 +600,8 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 @Improbabile68 translated IWD2EE into Italian.
 
 @paladin, klichko86, and rytomen translated IWD2EE into Russian.
+
+@WillScarlettOhara translated IWD2EE into French.
 
 Andrii Shafetov - aka @ashafetov - created IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.
 

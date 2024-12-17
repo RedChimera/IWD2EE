@@ -1,0 +1,201 @@
+//TRA num 1-100
+@0 = ~Noyau d'IWD2EE~
+@1 = ~Remaniement des classes~
+@2 = ~Restrictions concernant l'alignement des classes assouplies~
+@3 = ~Remaniement des sorts~
+@4 = ~Dons de predilection pour toutes les ecoles de magie~
+@5 = ~Remaniement des objets~
+@6 = ~Remaniement des creatures(difficulte+)~
+@7 = ~Meilleure progression du gain d'XP~
+@8 = ~Niveaux de difficulte completement retablis : le ND des ennemis est toujours egal a leur niveau~
+@9 = ~Niveaux de difficulte partiellement retablis : le ND des ennemis est egal ou legerement inferieur a leur niveau (recommande).~
+@10 = ~Alternative plus rapide aux quetes de la Palissade~
+@11 = ~Forteresse de la Horde plus rapide~
+@12 = ~Temple de Glace plus rapide~
+@13 = ~Village Itinerant plus rapide~
+@14 = ~Monastere du Corbeau Noir plus rapide~
+@15 = ~Ombre-Terre plus rapide~
+@16 = ~Oeil du Dragon plus rapide~
+@17 = ~Main Tranchée plus rapide~
+@18 = ~Plus de potions pour Oswald~
+@19 = ~Ajouter plus de parchemins au jeu~
+@20 = ~Resistances et immunites des creatures revues a la baisse~
+@21 = ~Correction du son de la metamorphose (a installer uniquement si votre druide emet des sons etranges apres la metamorphose ; sinon, inutile)~
+@22 = ~Jets de sauvegarde des ennemis ajustes a un niveau normal~
+@23 = ~Changer l'immunite aux coups critiques~
+@24 = ~Mode Mort subite~
+@25 = ~Meilleurs ennemis raciaux pour les rodeurs~
+@26 = ~Debloque tous les choix de couleur pour chaque race~
+@27 = ~Option d'intimidation de Xuki~
+@28 = ~Option non violente concernant Isair et Madae~
+@29 = ~Raccourcir la serie de quetes de la boucle temporelle de l'Oeil du Dragon a une seule bataille~
+@30 = ~Soudoyer Limha~
+@31 = ~Soudoyer Mirabel et Majrash~
+@32 = ~Diplomatie avec Guthma~
+@33 = ~Duper Harshom~
+@34 = ~Intimider Torak~
+@35 = ~Intimider le Geancephale~
+@36 = ~Duper Thorasskus~
+@37 = ~Duper Thvara~
+@38 = ~Composant principale des compagnons~
+@39 = ~Ameliorations cosmetiques de l'interface graphique et nouveaux ecrans de chargement~
+@40 = ~Champ de Bataille du Temple de Glace remanie~
+@41 = ~Resistance mineure aux degats pour les armures et les boucliers~
+@42 = ~Correction du script ChangeAIScript~
+@43 = ~Remaniement des races~
+@44 = ~Les ennemis donnent la meme quantite d'experience quel que soit le niveau du groupe~
+@45 = ~Ajuster le niveau des rencontres (difficulte++)~
+@46 = ~Toujours combattre au moins la version de niveau moyen d'une rencontre~
+@47 = ~Toujours combattre la version de haut niveau d'une rencontre~
+@48 = ~En mode Coeur de furie, reduire les bonus aux PV des creatures~
+@49 = ~En mode Coeur de furie, supprimer les bonus aux valeurs de caracteristiques des creatures alliees invoquees~
+@50 = ~Les ennemis donnent 25 * ND d'experience, assez pour qu'un groupe de six personnages atteigne le niveau 15-16 a la fin du jeu~
+@51 = ~Les ennemis donnent 35 * ND d'experience, assez pour qu'un groupe de six personnages atteigne le niveau 18-19 a la fin du jeu~
+@52 = ~En mode Coeur de furie, reduire les bonus a l'attaque des creatures~
+@53 = ~En mode Coeur de furie, reduire les bonus aux jets de sauvegarde des creatures~
+@54 = ~Les creatures en mode Coeur de furie subissent un malus de -3 a tous les jets de sauvegarde~
+@55 = ~Les creatures en mode Coeur de furie qui ont normalement 10 Des de Vie ou moins subissent un malus de -3 a tous les jets de sauvegarde~
+@56 = ~Les morts-vivants, les constructions, les objets, les elementaires et les vases deviennent immunises aux coups critiques ; toutes les autres creatures deviennent vulnerables aux coups critiques~
+@57 = ~Toutes les creatures deviennent vulnerables aux coups critiques~
+@58 = ~Les PNJ commencent avec de l'experience en rejoignant le groupe~
+@59 = ~En mode Coeur de furie, faire en sorte que le groupe commence le jeu avec plus d'experience~
+@60 = ~Commencer avec un total de 36 000 points d'experience repartis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 4 (recommande si vous avez installe certains des composants qui affaiblissent les creatures du mode Coeur de furie)~
+@61 = ~Commencer avec un total de 90 000 points d'experience repartis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 6~
+@62 = ~Commencer avec un total de 270 000 points d'experience repartis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 10~
+@63 = ~Reduire le delai entre chaque attaque sournoise~
+@64 = ~Revoir les ecoles opposees pour les magiciens specialistes~
+@65 = ~Le supprimer~
+@66 = ~Le reduire a 1 round~
+@67 = ~Theme principal en boucle~
+@68 = ~Les PNJ commencent avec l'experience moyenne du reste du groupe~
+@69 = ~Les PNJ commencent avec un cinquieme de l'experience totale du reste du groupe (ainsi, l'XP de depart des PNJ ne dependra pas de la taille du groupe)~
+@70 = ~Ajuster le niveau maximum~
+@71 = ~L'augmenter a 40~
+@72 = ~L'augmenter a 50~
+@73 = ~Permettre aux aasimars, tieffelins, drows, duergars et svirfnebelins de monter en niveau aussi vite que les autres races (pas d'ajustement de niveau) mais les affaiblir au niveau de puissance des autres races~
+@74 = ~Revoir les differences de gain d'XP des races~
+@75 = ~Toujours apprendre avec succes les sorts provenant de parchemins~
+@76 = ~Chaque membre du groupe commence le mode Coeur de furie avec 28 000 points d'experience, assez pour atteindre le niveau 8~
+@77 = ~Chaque membre du groupe commence le mode Coeur de furie avec 78 000 points d'experience, assez pour atteindre le niveau 13 (recommande)~
+@78 = ~Chaque membre du groupe commence le mode Coeur de furie avec 28 000 points d'experience, assez pour atteindre le niveau 8 (recommande)~
+@79 = ~Chaque membre du groupe commence le mode Coeur de furie avec 45 000 points d'experience, assez pour atteindre le niveau 10~
+@80 = ~Chaque membre du groupe commence le mode Coeur de furie avec 78 000 points d'experience, assez pour atteindre le niveau 13~
+@81 = ~Supprimer la limite d'invocation~
+@82 = ~Ajouter les attaques d'opportunite au jeu~
+@83 = ~Seuls les personnages ayant un certain don peuvent effectuer des attaques d'opportunite~
+@84 = ~Tout le monde peut effectuer des attaques d'opportunite~
+@85 = ~Changer la facon dont les valeurs de caracteristiques sont attribuees a la creation du personnage~
+@86 = ~Lancer les des pour les caracteristiques - Les boutons Plus/Moins sont desactivees, mais vous pouvez choisir a quelle valeur de caracteristique chaque nombre tire correspond (comme dans Le Temple du Mal Elementaire)~
+@87 = ~Lancer les des pour les caracteristiques - Boutons Plus/Moins actives (comme dans Baldur's Gate)~
+@88 = ~Ajout de nombreux objets a chaque zone du jeu ; cela pourrait prendre un certain temps...~
+@89 = ~Ajouter des pieges~
+@90 = ~Ajouter des raccourcis clavier pour automatiser l'application de buffs (voir le fichier ReadMe pour plus d'informations)~
+@91 = ~Plus d'options de persuasion~
+@92 = ~Ajouter des facons de progresser a travers certaines zones~
+@93 = ~Achat de points - Augmenter une valeur de caracteristique au-dela d'une certaine valeur necessite des points supplementaires, et elle ne peut pas etre inferieure a 8 (comme dans Neverwinter Nights)~
+@98 = ~Vous devez d'abord installer le noyau d'IWD2EE.~
+@99 = ~Le Widescreen Mod n'est pas compatible avec IWD2EE et fera planter le jeu s'il est aussi installe. Veuillez le desinstaller. IWD2EE vous permet deja d'augmenter la resolution du jeu ; vous n'avez pas besoin du Widescreen Mod.~
+@100 = ~IWD2EE n'a pas ete desinstalle correctement ; les fichiers de l'installation precedente sont toujours dans le dossier override.
+Installer IWD2EE une nouvelle fois sans supprimer ces fichiers pourrait corrompre divers fichiers.
+Pour installer IWD2EE, procedez comme suit :
+1. Desinstallez tous vos autres mods.
+2. Ensuite, allez dans le dossier ? override ? et supprimez tout ce qu'il contient.
+3. Reinstallez vos mods, y compris IWD2EE.~
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat antérieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE ? CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
+
+@-1063= "INSTALLATION ABANDONNEE"
+@-1064= "Abandon de l'installation de ["
+@-1065= "], retour a l'etat anterieur"
