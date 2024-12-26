@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOD: Icewind Dale 2: Enhanced Edition</title>
+    <meta name="description" content="A compilation of tweaks and fixes for Icewind Dale 2." />
+    <meta name="keywords" content="iwd2, iwd2ee, mod" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="light-theme">
+    <div id="top"></div>
+    <div id="language">
+        <ul>
+            <li>English</li>
+            <li title="French"><a href="IWD2EE_ReadMe-french.html">Français</a></li>
+            <li title="Italian"><a href="IWD2EE_ReadMe.html">Italiano</a></li>
+            <li title="Russian"><a href="IWD2EE_ReadMe.html">Русский</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <h1 class="title">Icewind Dale 2: Enhanced Edition</h1>
+        <div class="subtitle">This is the most recent semiOverhaul mod, containing most of the rebalancing components
+            and a few other tweaks.</div>
+        <hr />
+        <p class="about"><strong>Author: The Red Chimera Group</strong></p>
+        <ul id="globalnav" class="about">
+            <li><strong>Download</strong> (<a href="https://github.com/RedChimera/IWD2EE/releases/latest">GitHub</a>)
+            </li>
+            <li><strong>Discussion</strong> (<a
+                    href="https://forums.beamdog.com/discussion/87952/icewind-dale-2-enhanced-edition-is-released/p1">Beamdog</a>,
+                <a href="https://discord.gg/t7pWFx2B5Q">Discord</a>)
+            </li>
+            <li><a href="https://github.com/RedChimera/IWD2EE">Project</a></li>
+            <li id="version" style="display: none;"></li>
+            <!-- fetch the latest version number and date from github / hide until done to not slow down page loading -->
+        </ul>
+        <hr />
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#compatibility">Compatibility</a></li>
+                <li><a href="#credits">Credits</a></li>
+                <li><button id="themeToggle">Switch theme</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================== O V E R V I E W ================== -->
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the
+                game in a variety of ways. Classes, spells, items, creatures, and encounters are made more
+                interesting.IWD2EE changes over 300 spells and over 1,000 items, and it adds over 90 new spells, almost
+                200 new items, over 30 new feats, and several NPCs that can join the party. The mod fixes many of the
+                big issues with the original Icewind Dale 2: you no longer have to do large amounts of backtracking to
+                complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just
+                having lots of HP, and you can revise the experience system so you won't get zero experience for killing
+                enemies late in the game.</p>
+            <p>The big changes described above are only applied if you install certain components - Class Revisions,
+                Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. It is highly recommended
+                that you install these.</p>
+            <hr class="spacer" />
+            <p>Visit the <a
+                    href="https://forums.beamdog.com/discussion/76982/mod-icewind-dale-2-enhanced-edition">Beamdog
+                    Forums</a> if you have questions or download the latest version from <a
+                    href="https://github.com/OlvynChuru/IWD2EE/releases/latest">GitHub</a>.</p>
+            <div class="back">
+                <a class="novisit" href="#top">BACK TO TOP</a>
+            </div>
+        </section>
+
+        <!-- ================== I N S T A L L A T I O N ================== -->
+        <section id="installation">
+            <h2>Installation</h2>
+            <ol>
+                <li>Unzip all files into your IWD2 folder.</li>
+                <li>Double-click on the Setup-iwd2ee.exe application.</li>
+                <li>The WeiDu window will pop up. Follow the prompt and WeiDu will install the mod on your game. This
+                    can also reinstall or uninstall the mod.</li>
+                <li>In the IWD2 folder will appear a new program: IWD2EE.exe. Start the game by clicking on it. If you
+                    start the game via IWD2.exe, the game will not work right.</li>
+            </ol>
+            <p>If you are using any mods other than IWD2EE, you should also install the IWD2EE mod compatibility patch
+                which comes with IWD2EE. Install the patch after IWD2EE and after all other mods.</p>
+            <div class="back">
+                <a class="novisit" href="#top">BACK TO TOP</a>
+            </div>
+        </section>
+
+
+        <!-- ================== C O M P O N E N T S ================== -->
+        <section id="components">
+            <h2>Components</h2>
+
+            <p>The IWD2:EE mod features a variety of components that enhance and refine the gameplay. You can learn more
+                about each component below:</p>
+
+            <div class="gappedlist">
+                <h4><a href="#core">1. IWD2EE Core</a></h4>
+                <h4><a href="#classrev">2. Class Revisions</a></h4>
+                <h4><a href="#align">3. Looser Alignment Restrictions for Classes</a></h4>
+                <h4><a href="#spellrev">4. Spell Revisions</a></h4>
+                <h4><a href="#spellfocus">5. Spell Focus Feats for All Schools</a></h4>
+                <h4><a href="#itemrev">6. Item Revisions</a></h4>
+                <h4><a href="#creaturerev">7. Creature Revisions</a></h4>
+                <h4><a href="#xp">8. Better XP Progression</a></h4>
+                <h4><a href="#palisade">9. More Interesting Alternative to the Palisade Quests</a></h4>
+                <h4><a href="#progress">10. Add Additional Ways to Progress Through Certain Areas</a></h4>
+                <h4><a href="#wanderingvillage">11. Faster Wandering Village</a></h4>
+                <h4><a href="#dragoneye">12. Faster Dragon's Eye</a></h4>
+                <h4><a href="#timeloop">13. Shorten the Dragon's Eye time loop questline to a single battle</a></h4>
+                <h4><a href="#scrolls">14. Add more scrolls to the game</a></h4>
+                <h4><a href="#immunities">15. Revised Creature Immunities</a></h4>
+                <h4><a href="#savingthrows">16. More Accurate Saving Throws for Enemies</a></h4>
+                <h4><a href="#crithit">17. Revise Critical Hit Immunity</a></h4>
+                <h4><a href="#racial">18. Better Racial Enemies for Rangers</a></h4>
+                <h4><a href="#cosmetic">19. Cosmetic Tweaks</a></h4>
+                <h4><a href="#persuasion">20. More Persuasion Options</a></h4>
+                <h4><a href="#npccore">21. NPC Core</a></h4>
+                <h4><a href="#npcexp">22. NPCs start with experience</a></h4>
+                <h4><a href="#newgui">23. New GUI</a></h4>
+                <h4><a href="#looping">24. Looping Main Theme</a></h4>
+                <h4><a href="#battlesquare">25. Revised Battle Square</a></h4>
+                <h4><a href="#damageresist">26. Minor Damage Resistance for Armor and Shields</a></h4>
+                <h4><a href="#racerev">27. Race Revisions</a></h4>
+                <h4><a href="#racelevel">28. Revise racial level adjustment/ECL</a></h4>
+                <h4><a href="#enemyxp">29. Enemies give the same amount of experience regardless of the party's
+                        level</a></h4>
+                <h4><a href="#scaling">30. Adjust encounter level-scaling</a></h4>
+                <h4><a href="#hofhp">31. Reduce enemy HP bonuses in Heart of Fury Mode</a></h4>
+                <h4><a href="#hofattack">32. Reduce enemy attack bonuses in Heart of Fury Mode</a></h4>
+                <h4><a href="#hofsaving">33. Reduce enemy saving throw bonuses in Heart of Fury Mode</a></h4>
+                <h4><a href="#hofsummoned">34. Weaken allied summoned creatures in Heart of Fury Mode</a></h4>
+                <h4><a href="#hofpartyxp">35. Have the party start with experience in Heart of Fury Mode</a></h4>
+                <h4><a href="#delay">36. Reduce the delay between sneak attacks</a></h4>
+                <h4><a href="#levelcap">37. Increase the level cap</a></h4>
+                <h4><a href="#scrolllearn">38. Always learn spells from scrolls successfully</a></h4>
+                <h4><a href="#opportunity">39. Add attacks of opportunity to the game</a></h4>
+                <h4><a href="#abilityscores">40. Change the way ability scores are assigned at character creation</a>
+                </h4>
+                <h4><a href="#traps">41. Add more traps</a></h4>
+                <h4><a href="#buffing">42. Add key bindings for automating buffing</a></h4>
+            </div>
+
+
+            <div class="back">
+                <a class="novisit" href="#top">BACK TO TOP</a>
+            </div>
+
+            <section id="core">
+
+                <h3>1. IWD2EE Core</h3>
+                <p>The core component must be installed for any other component to be installed. It includes various
+                    quality of life changes.</p>
+                <ul>
+                    <li>Load times are much faster.</li>
+                    <li>IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO
+                        NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a
+                        menu opens that lets you set the game to a higher resolution. Note that higher resolution
+                        settings do not apply to menus; they only apply when you load a save game. You should play at
+                        600p or 768p height to make the in-game UI take up the full height of your screen, and to keep
+                        the text somewhat readable. For 21:9 and other ultrawide displays, you can set a custom
+                        resolution (like 1835x768 or 1433x600) in the ddraw.ini file at the [iwd2] section.</li>
+                    <li>IWD2EE includes the ddraw fix program unless you already had one installed. This should
+                        improve performance.</li>
+                    <li>Scrolling the screen should be smoother on some devices.</li>
+                    <li>It is possible to scroll with the middle mouse button.</li>
+                    <li>There is now a quickloot button.</li>
+                    <li>Right-clicking a spell or innate ability on the actionbar brings up its description (though
+                        most innate abilities don't have descriptions unless Class Revisions is installed).</li>
+                    <li>You can now go through dialogue as fast as you want; there's no longer a brief delay each
+                        time you choose a dialogue option.</li>
+                    <li>The time it takes to detect traps is reduced.</li>
+                    <li>The character record screen includes a Reform Party button.</li>
+                    <li>The options screen includes a button to access the new IEex Options menu (currently it
+                        includes an option to alter the fog of war so that it doesn't flicker).</li>
+                    <li>If a party member has enough experience to level up multiple times, you can choose how many
+                        times they level up at a time. This also allows you to divide the level ups among multiple
+                        classes (though you'll have to go through the level up process once for each class).</li>
+                    <li>Scrolls are highlighted in green when a wizard is selected who doesn't know the spell.</li>
+                    <li>If you do not have the vanilla option to rest until healed enabled, characters heal a number
+                        of HP equal to their level on rest, rather than only healing 1 HP.</li>
+                    <li>As long as you have the console enabled in IWD2's normal config menu, cheat keys will be
+                        enabled automatically without needing to enter a command.</li>
+                    <li>For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code
+                        in-game via the console or various hooks (and some of the new opcodes can call custom Lua
+                        functions), as well as a limited ability to modify the GUI. This opens up many possibilities
+                        for modding.</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="classrev">
+
+                <h3>2. Class Revisions</h3>
+                <p>This component revises the game's classes to make warriors, barbarians, and rogues much more
+                    viable, and it adds over 30 new feats to the game. This component is most balanced when combined
+                    with the Spell Revisions component.</p>
+
+                <h4>Barbarians</h4>
+                <ul>
+                    <li>Barbarian rage now grants immunity to fear, hopelessness, stun, paralysis, sleep, and
+                        unconsciousness.</li>
+                    <li>Barbarians start gaining damage resistance at level 2 rather than level 11, and their
+                        damage resistance from their class is doubled if they're wearing medium armor (hide
+                        armor or chain mail).</li>
+                    <li>Barbarian Rage now keeps improving after level 20.</li>
+                </ul>
+                <h4>Bards</h4>
+                <ul>
+                    <li>Bard songs should be more useful now. They're also spread out over more levels and scale
+                        with levels so bards no longer reach their peak at level 11.</li>
+                    <li>The songs can stack, but only if multiple bards sing at the same time.</li>
+                </ul>
+                <h5>Bard songs:</h5>
+                <ul>
+                    <li>
+                        <strong>Level 1: The Tale of Currant Strongheart:</strong> +1 to hit and damage and
+                        immunity to fear and hopelessness. Gains another +1 to hit and damage at levels 10, 25
+                        and 40.
+                    </li>
+                    <li>
+                        <strong>Level 3: The Song of Kaudies:</strong> All allies are immune to harmful
+                        sound-based spells and abilities.
+                    </li>
+                    <li>
+                        <strong>Level 5: Tymora's Melody:</strong> +1 luck, +2 to saving throws and rogue
+                        skills. Gives another +1 to luck and +2 to saving throws and rogue skills at levels 15
+                        and 35.
+                    </li>
+                    <li>
+                        <strong>Level 9: The Siren's Yearning:</strong> All enemies must make a Will save or be
+                        stunned for 1 round or until they take damage. The save DC is equal to the bard's level.
+                        This song also imposes a cumulative -1 penalty to Will saves for 10 rounds, every round.
+                    </li>
+                    <li>
+                        <strong>Level 13: The War Chant of Sith:</strong> +2 generic armor bonus, physical
+                        damage resistance of 3/-, and 3 HP healed every round. Increases to +4 AC, 6/- damage
+                        resistance, and 6 HP healed every round at level 25.
+                    </li>
+                    <li>
+                        <strong>Level 20: The Ballad of Three Heroes:</strong> +5 spell resistance, 5/-
+                        resistance to all forms of magical damage, and the effects of the Tale of Curran
+                        Strongheart, Tymora's Melody, and the War Chant of Sith. Increases to +10 spell
+                        resistance and 10/- resistance to magical damage at level 28.
+                    </li>
+                </ul>
+                <p>Creature Revisions also makes it so enemies early on use more sound-based spells and
+                    abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
+                </p>
+                <p>As in PnP, bards can, on certain level ups, replace one of their lower level spells with
+                    another spell of the same level.</p>
+                <h4>Clerics</h4>
+                <p>Clerics are not changed much by Class Revisions, but Spell Revisions improves the spontaneous
+                    casting and domain systems.</p>
+                <h4>Druids</h4>
+                <ul>
+                    <li>Druids get a new set of shapeshifting forms.</li>
+                    <li>The abilities of each form scale with the druid's level.</li>
+                </ul>
+                <h5>Druid shapeshifting forms:</h5>
+                <ul>
+                    <li>Level 5: Winter Wolf</li>
+                    <li>Level 7: Polar Bear</li>
+                    <li>Level 9: Giant Viper</li>
+                    <li>Level 11: Salamander or Frost Salamander</li>
+                    <li>Level 13: Shambling Mound</li>
+                    <li>Level 15: Fire, Water, Earth or Air Elemental</li>
+                    <li>Level 40: Black Dragon (Dragon Shape)</li>
+                </ul>
+                <p>The druid shapeshifting feats are also changed. They now allow druids to shapeshift into
+                    Blink Dogs, Rhinocerous Beetles, and a swarm of insects as in the Creeping Doom spell.</p>
+                <h4>Monks</h4>
+                <ul>
+                    <li>Monks now get much faster and more accurate unarmed attacks, and their attack damage
+                        progresses more logically.</li>
+                    <li>Their base damage caps at 1d8+5, but they start with 2 attacks per round and gain an
+                        additional attack per round every 3 levels (up to 18 attacks per round at level 49).
+                    </li>
+                    <li>Their Deflect Arrows ability now lets them take no damage from the first missile attack
+                        that would hit them each round.</li>
+                    <li>Wholeness of Body now restores HP equal to the character's monk level * their Wisdom
+                        bonus, and can be used once per 7 levels.</li>
+                    <li>Quivering Palm can affect enemies higher level than the monk, and monks gain an
+                        additional use of Quivering Palm every 6 levels after level 15.</li>
+                    <li>Monks also get Abundant Step at level 10, a teleportation effect.</li>
+                </ul>
+                <p>In addition, monk orders no longer limit multiclassing, and they have extra abilities.</p>
+                <h5>Monk of the Old Order:</h5>
+                <ul>
+                    <li>2nd level: The monk now adds their Wisdom bonus again to the DC of Stunning Attack.</li>
+                    <li>18th level: The monk now adds their Wisdom bonus again to the DC of Quivering Palm.</li>
+                </ul>
+                <h5>Monk of the Broken Ones:</h5>
+                <ul>
+                    <li>2nd level: The monk gains one use of Lay on Hands per day. Any level that would give the
+                        monk a use of Wholeness of Body instead gives them another use of Lay on Hands. When
+                        used by a Monk of the Broken Ones, Lay on Hands restores the same amount of HP as
+                        Wholeness of Body (monk level * Wisdom bonus) but can be used on other creatures as
+                        well.</li>
+                    <li>6th level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance
+                        is gained every 4 levels thereafter.</li>
+                </ul>
+                <h5>Monk of the Dark Moon:</h5>
+                <ul>
+                    <li>2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk
+                        levels after level 2, the monk gains another 1d6 sneak attack damage.</li>
+                </ul>
+                <h4>Fighters</h4>
+                <ul>
+                    <li>Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels,
+                        and can get Greater Weapon Focus in a weapon at level 8 and Greater Weapon
+                        Specialization at level 12.</li>
+                    <li>All warriors get better saving throws and stronger attacks.</li>
+                </ul>
+                <h4>Paladins</h4>
+                <ul>
+                    <li>Paladins get more spell slots, and they get them at lower levels.</li>
+                    <li>Paladins get an additional casting of Lay on Hands every 5 levels.</li>
+                    <li>Smite Evil is more powerful, and they get an additional casting of Smite Evil every 10
+                        levels.</li>
+                </ul>
+                <p>In addition, paladin orders no longer limit multiclassing, and they have extra abilities.</p>
+                <h5>Paladin of Ilmater:</h5>
+                <ul>
+                    <li>2nd level: The paladin can cast Shield Other (which halves the damage an ally takes,
+                        causing the paladin to take the other half) at will.</li>
+                    <li>6th level: The paladin's healing spells and abilities heal 50% more hit points if used
+                        on an ally other than the paladin.</li>
+                    <li>11th level: The bonus to healing spells and abilities is increased from 50% to 100%.
+                    </li>
+                </ul>
+                <h5>Paladin of Helm:</h5>
+                <ul>
+                    <li>2nd level: While using the Guard action, the paladin and all allies within 20 feet gain
+                        a +2 AC bonus.</li>
+                    <li>6th level: The AC bonus from using the Guard action increases to +4.</li>
+                    <li>11th level: While using the Guard action, the paladin can see through illusions as per
+                        True Sight.</li>
+                </ul>
+                <h5>Paladin of Mystra:</h5>
+                <ul>
+                    <li>2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell
+                        failure by 35%.</li>
+                    <li>6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane
+                        spell failure by a total of 105% (allowing them to cast arcane spells with no chance of
+                        failure while wearing the heaviest armor and shields).</li>
+                    <li>11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is
+                        increased by 20%. This stacks with feats like Spirit of Flame. This bonus applies to
+                        both spells like Fireball and abilities like Smite Evil.</li>
+                </ul>
+                <h4>Rangers:</h4>
+                <ul>
+                    <li>Rangers get more spell slots, and they get them at lower levels.</li>
+                    <li>They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than
+                        other classes, and they can gain a second rank in those feats for another attack per
+                        round.</li>
+                    <li>They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5
+                        rounds on a failed Reflex save.</li>
+                    <li>Set Natural Snare is much more effective than in the original game; the save DC now
+                        scales with the ranger's Wilderness Lore skill.</li>
+                </ul>
+                <h4>Rogues</h4>
+                <ul>
+                    <li>Rogues get +1 luck every 5 levels.</li>
+                    <li>They won't have the sustained damage output a warrior has, but they'll be able to land
+                        some very wicked sneak attacks (luck in IWD2 increases the chance of a critical hit).
+                    </li>
+                </ul>
+                <p>Class Revisions also revises some of the thieving skills:</p>
+                <ul>
+                    <li>
+                        <strong>Pick Pockets:</strong> As in PnP, pickpocketing someone involves two rolls: one
+                        to determine if you're caught, and the other to determine if you are able to take the
+                        item. Any item could potentially be stolen, including equipped items (the DC depends on
+                        the item slot and whether the item is equipped; stealing from one of their regular
+                        inventory slots is easy, but stealing an equipped weapon is very hard, and stealing an
+                        equipped suit of armor is basically impossible, with a DC of 70, on which a 20 doesn't
+                        guarantee success). In addition, when you pickpocket someone, you see a list of the
+                        droppable items they have in their inventory, along with the chance of stealing each one
+                        and the chance of getting away with it. Items that are easier to steal and less likely
+                        to get you caught are stolen first.
+                    </li>
+                    <li>
+                        <strong>Open Lock:</strong> The lockpicking system has been revised to be more like
+                        Baldur's Gate, in that picking locks is easier but forcing them open is harder, and
+                        there isn't much variance to the roll: if you aren't able to get it open after a couple
+                        of tries, you probably can't. Also, picking locks now gives you experience.
+                    </li>
+                    <li>
+                        <strong>Disable Device:</strong> Disarming traps gives you experience.
+                    </li>
+                </ul>
+                <h4>Sorcerers</h4>
+                <ul>
+                    <li>Sorcerers will no longer hit their peak at level 20 and then experience near-zero
+                        growth.</li>
+                    <li>As in PnP, sorcerers can, on certain level ups, replace one of their lower-level spells
+                        with another spell of the same level.</li>
+                </ul>
+                <h4>Wizards</h4>
+                <ul>
+                    <li>As in PnP, wizards can choose two new spells to learn on each level up, which can be of
+                        any spell level the wizard has access to.</li>
+                    <li>Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist
+                        wizards gain +2 to the DC of wizard spells they cast of their school, but this was a
+                        vanilla feature that wasn't documented in IWD2 until now).</li>
+                </ul>
+                <p>Although the inherent changes to clerics, sorcerers, and wizards aren't huge, all
+                    spellcasting classes benefit greatly from some the new feats, especially metamagic feats.
+                </p>
+
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="align">
+
+                <h3>3. Looser Alignment Restrictions for Classes</h3>
+                <p>Even IWD2's very broad class system can be restrictive in some ways, mostly in the lawful/chaotic
+                    axis. This component loosens a few of the restrictions, allowing certain classes to be
+                    compatible with more alignments:</p>
+                <ul>
+                    <li>Bards can be any alignment besides Lawful Neutral (previously could not be any lawful
+                        alignment).</li>
+                    <li>Monks of the Old Order can be any non-chaotic alignment.</li>
+                    <li>Monks of the Broken Ones can be Neutral Good.</li>
+                    <li>Monks of the Dark Moon can be Lawful Neutral, True Neutral, and Neutral Evil.</li>
+                    <li>Paladins of Ilmater and Mystra can be Neutral Good.</li>
+                    <li>Paladins of Helm can be Lawful Neutral.</li>
+                    <li>Rogues can be Lawful Good.</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="spellrev">
+
+                <h3>4. Spell Revisions</h3>
+                <p>This component significantly strengthens many underpowered spells. It also switches some spells
+                    to lower or higher levels and grants some spells to classes that previously could not cast them.
+                    Here are the main changes:</p>
+                <ul>
+                    <li>Over 90 new spells are added to the game. These include unused spells like Dimension Door,
+                        PnP spells that weren't included in the original game like Fly, Wall of Force, and Reverse
+                        Gravity, spells from other games like Mantle, Stygian Ice Storm and Isaac's Greater Missile
+                        Storm, as well as unusual ones like Identify Creature (a divination spell that tells you the
+                        stats of the target creature) and Auril's Blessing (which increases the power of your cold
+                        spells). Some of the new spells are bard-only, paladin-only, or ranger-only.</li>
+                    <li>Cleric domains have better spell choices. If a spell is in-theme with the kit (e.g.
+                        Moonblade and Wall of Moonlight for priests of Selune), they can cast it at a particularly
+                        low level as a domain spell.</li>
+                    <li>Clerics can spontaneously convert spells above 4th-level into healing/harming spells of the
+                        same level, rather than into Cure/Inflict Critical Wounds. Here is the full list:</li>
+                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Good Spell</th>
+                            <th>Evil Spell</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Cure Light Wounds</td>
+                            <td>Inflict Light Wounds</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cure Moderate Wounds</td>
+                            <td>Inflict Moderate Wounds</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Cure Serious Wounds</td>
+                            <td>Inflict Serious Wounds</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Cure Critical Wounds</td>
+                            <td>Inflict Critical Wounds</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Raise Dead</td>
+                            <td>Slay Living</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Heal</td>
+                            <td>Harm</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Resurrection</td>
+                            <td>Destruction</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Greater Restoration</td>
+                            <td>Energy Drain</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Mass Heal</td>
+                            <td>Mass Harm</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>Certain spells are available to more classes. Rangers and Paladins have much better spell
+                        choices. Spells that create magical weapons or give combat bonuses can be cast as
+                        lower-level spells by Rangers or Paladins than by Druids or Clerics (e.g. Rangers can cast
+                        Fire Seeds as a 4th-level spell, and Paladins can cast Spiritual Weapon as a 1st-level spell
+                        and Holy Power as a 3rd-level spell).</li>
+                    <li>Magical weapons like Flame Blade and Decastave have been improved. Most of them gain bonuses
+                        from Strength and proficiency (even ones that deal non-physical damage). Saving throws on
+                        magical weapons and touch attacks (e.g. Snakebite poison, Slay Living instant death) now
+                        have DCs that scale with the character's spellcasting ability and Spell Focus bonuses.</li>
+                    <li>Spells that weaken a creature rather than disabling it have a higher DC or no save at all
+                        (e.g. Deafness has no save since it simply gives 20% spell failure).</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="spellfocus">
+
+                <h3>5. Spell Focus Feats for All Schools</h3>
+                <p>In the unmodded game, spellcasters could only choose Spell Focus to empower Evocation,
+                    Necromancy, Transmutation, and Enchantment spells. This component expands those four feats to
+                    apply to the other four spell schools as well.</p>
+                <p>The new feats are:</p>
+                <ul>
+                    <li>Spell Focus: Evocation/Conjuration</li>
+                    <li>Spell Focus: Enchantment/Illusion</li>
+                    <li>Spell Focus: Necromancy/Divination</li>
+                    <li>Spell Focus: Transmutation/Abjuration</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="itemrev">
+
+                <h3>6. Item Revisions</h3>
+                <p>Normally, Icewind Dale 2's items are balanced terribly. There are just a few good items towering
+                    over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/-
+                    Spell Resistance). It's not even a low-magic game: you get tons of magic items, but most of them
+                    are terrible.</p>
+                <p>Item Revisions enhances most of the magical items in Icewind Dale 2, giving them a much larger
+                    variety of useful abilities. The purpose is primarily to empower weak items rather than to
+                    weaken strong items. Overall, the total number of magical items you obtain as loot in the game
+                    won't change much, but those items are more likely to be useful.</p>
+                <p>Item Revisions also adds many new items to the random loot tables, including powerful armor,
+                    shields, rings, amulets, and ammunition. </p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="creaturerev">
+
+                <h3>7. Creature Revisions</h3>
+                <p>This component enhances creatures and encounters throughout the game. Here are the main changes:
+                </p>
+                <ul>
+                    <li>Spellcasters are given better AI and new spell selections, including some of the new spells
+                        from Spell Revisions. They start combat with buffs on. They shouldn't be quite as tough as
+                        Sword Coast Stratagems spellcasters, though.</li>
+                    <li>Enemy clerics now use domain spells. Even clerics of enemy-only deities cast domain spells
+                        (e.g. priests of Auril have spells like Ice Storm, while priests of Xvim have acid spells).
+                    </li>
+                    <li>Enemies use more sensible items and attacks. Aurilite rangers shoot frost arrows, mind
+                        flayers drain Intelligence on hit, and large creatures have longer reach on their attacks.
+                    </li>
+                    <li>On Heart of Fury Mode, enemies are stronger in a variety of ways. Monsters' innate abilities
+                        have higher save DCs and/or deal more damage. Spellcasters cast higher-level spells than
+                        they do on normal difficulty settings.</li>
+                </ul>
+
+                <h5>Fixes:</h5>
+                <ul>
+                    <li>Harpies in Chapter 1 use their wail.</li>
+                    <li>Yuan-ti Half-breed Sorceresses in the battle for Kuldahar now cast spells.</li>
+                    <li>On Heart of Fury Mode, enemy monks have higher-level monk fists to reflect the fact that
+                        they are higher-level. </li>
+                    <li>On Heart of Fury Mode, creatures summoned by enemies now gain Heart of Fury Mode
+                        bonuses.</li>
+                </ul>
+
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="xp">
+
+                <h3>8. Better XP Progression</h3>
+                <p>In most RPGs, you gain levels at a roughly constant level over the course of the game. In IWD2,
+                    though, you gain XP and levels slower and slower as you progress in the game, which is the
+                    biggest reason why the late game is so much less fun than the early game. This is because many
+                    enemies are rigged to be a lower challenge rating than their actual level. By the time you're in
+                    the Severed Hand, you might be fighting critters that are level 17 but have a challenge rating
+                    of 9!</p>
+                <p>This component fixes that. There are two install options. The first option sets all creatures'
+                    challenge rating equal to their level, which results in extremely fast leveling as the game
+                    progresses. The second option, which is the recommended version, sets CR to slightly below their
+                    level after level 9. Neither option will affect early game enemies much, but midgame and endgame
+                    enemies will now grant XP appropriate to the challenge they pose.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="palisade">
+
+                <h3>9. More Interesting Alternative to the Palisade Quests</h3>
+                <p>This component offers a more exciting alternative to the quests you'd normally have to do at the
+                    Palisade. When you first talk to Shawford, rather than agree to do his "special assignments,"
+                    you can simply choose to stand guard at your posts until the goblins attack. This jumps you
+                    straight to the Palisade battle, which will be more difficult and involve more enemies (e.g.
+                    because you didn't repair the wall, and Isherwood couldn't pick off as many goblins before
+                    running out of arrows). If you manage to win this more difficult battle, you get extra
+                    experience equal to the experience you would've gotten for completing the quests.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="progress">
+
+                <h3>10. Add Additional Ways to Progress Through Certain Areas</h3>
+                <p>This component includes several changes that make certain areas more nonlinear and add some more
+                    opportunities to use certain niche spells and skills.</p>
+                <ul>
+                    <li>If you want to try attacking the Horde Fortress head on, you can bash open the gate to the
+                        inner fortress with a Knock spell. While inside, one of the enemies drops a wardstone that
+                        will open the gate to Guthma's cabin, though you could also sneak in by opening a grate on
+                        the roof. With the wardstone, you can also head into Goblin Warrens from the opposite
+                        direction you normally would, fight your way through, and come out the other side.</li>
+                    <li>Several locks in the Ice Temple that previously required keys or the lightning machine to
+                        open can be picked.</li>
+                    <li>It is possible to actually fight Aeij-Kllenzr't. Taunting them off the altar will begin the
+                        fight, though you can still skip the fight by banishing them with their true name. Fighting
+                        and defeating them will banish them and allow you to complete the quest with some additional
+                        rewards. This content requires Creature Revisions to be installed.</li>
+                    <li>In the Severed Hand, the door to the bridge between the War Tower and the Wizard Tower is
+                        unlocked from the start, so if you have a way to make the party fly or teleport, you can
+                        reach Orrick's study by going over the gap in the bridge.</li>
+                    <li>Riki no longer requires you to fight Iyachtu Xvim or make a deal with him to proceed to the
+                        final bosses. However, if you didn't defeat Iyachtu Xvim or ally with him, you will have to
+                        survive unkillable glabrezus while fighting the final bosses, and the bosses will be tougher
+                        in the second phase because you didn't purify the radiant pool.</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="wanderingvillage">
+
+                <h3>11. Faster Wandering Village</h3>
+                <p>This component reduces the backtracking required by the Wandering Village quests. You can now
+                    travel to all three sections of the Fell Wood the first time you go there (allowing you to meet
+                    the dryad, collect the horn, and fight the Will o' Wisps), rather than having to go through it
+                    three times for the three quests.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="dragoneye">
+
+                <h3>12. Faster Dragon's Eye</h3>
+                <p>This component reduces the backtracking necessary to get through Dragon's Eye by making the
+                    alchemy quests optional. You should now be able to fight your way through the third floor of
+                    Dragon's Eye without having to go back to previous floors.</p>
+                <ul>
+                    <li>A powerful mind-shielding spell like Impervious Sanctity of Mind or Mind Blank can allow you
+                        to pass under the Eye of Sseth without needing to become a histachii. (This is PnP-accurate;
+                        Mind Blank normally protects against an Antipathy spell).</li>
+                    <li>Opening the door in the third floor of Dragon's Eye no longer requires you to put poison in
+                        the four pools in the area; you just have to kill Thorasskus.</li>
+                    <li>The timed gate with the slime trap opens after 60 seconds rather than 24 in-game hours.</li>
+                </ul>
+                <p>The alchemy quests can still be completed; you can still make histachii brew and poison vials.
+                    These items still offer benefits: the histachii brew allows you to sneak past yuan-ti without
+                    them attacking you, and the poison vials can now be used as consumables to poison your weapon as
+                    per the Envenom Weapon ability.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="timeloop">
+
+                <h3>13. Shorten the Dragon's Eye time loop questline to a single battle</h3>
+                <p>This component simplifies the final area of Dragon's Eye. Rather than having to go through a long
+                    time travel quest, you just fight one battle to prevent Izbelah from casting Temporal Stasis.
+                    The component changes some dialogs in Chapter 5 to make it clear why you're fighting Izbelah.
+                </p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="scrolls">
+
+                <h3>14. Add more scrolls to the game</h3>
+                <p>This component adds relatively high-level mage scrolls to various spell vendors, including
+                    Elytharra, Zack Boosenberry, Suoma, Bered, and Sheemish. A solo wizard or a wizard in HoF mode
+                    will be able to learn high-end spells and keep pace with a sorcerer. This isn't too extreme:
+                    early-game vendors might have a couple of scrolls at 5th-7th level, but they won't have tons of
+                    9th-level scrolls.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="immunities">
+
+                <h3>15. Revised Creature Immunities</h3>
+                <p>This component revises the resistances of some creatures to be more reasonable. For example,
+                    slimes in Dragon's Eye aren't completely immune to physical damage, and iron golems and will o'
+                    wisps aren't completely immune to magic (they still have high spell resistance, though).</p>
+                <p>Elementals now have regular elemental immunities rather than undead immunities. Fiends now have
+                    regular fiendish immunities (e.g. immunity to poison) rather than undead immunities.</p>
+                <p>Trolls no longer fall down and have to be finished off by fire or acid; instead they regenerate
+                    faster and have more HP but take significantly more damage from fire and acid.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="savingthrows">
+
+                <h3>16. More Accurate Saving Throws for Enemies</h3>
+                <p>This component adjusts all enemy saving throws in the game, making them roughly equal to the
+                    player's saving throws at the same level. Thus, a level 10 enemy fighter will have similar
+                    saving throws to a level 10 fighter in the party.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="crithit">
+
+                <h3>17. Revise Critical Hit Immunity</h3>
+                <p>The vanilla game gives out immunity to critical hits to enemies that shouldn't have it, including
+                    fiends and certain random enemies. This component has two options: either you can give critical
+                    hit immunity to all undead, constructs, objects, elementals and oozes and remove it from all
+                    other creatures, or you can make all creatures vulnerable to critical hits.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="racial">
+
+                <h3>18. Better Racial Enemies for Rangers</h3>
+                <p>In the vanilla game, there were a lot of racial enemy choices that simply weren't very useful.
+                    Getting bonuses against yuan-ti and undead was simply better than getting bonuses against
+                    bugbears and hook horrors. This component gives the player the ability to choose from a new set
+                    of racial enemies:</p>
+                <ul>
+                    <li>Giant Insects</li>
+                    <li>Giant Arachnids</li>
+                    <li>Demons</li>
+                    <li>Goblinoids</li>
+                    <li>Giants</li>
+                    <li>Amorphous Beings</li>
+                    <li>Constructs</li>
+                    <li>Humans</li>
+                    <li>Animals</li>
+                    <li>Undead</li>
+                    <li>Aberrations</li>
+                    <li>Underdark Aberrations</li>
+                    <li>Yuan-ti</li>
+                    <li>Elementals</li>
+                    <li>Trolls</li>
+                    <li>Dragons</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="cosmetic">
+
+                <h3>19. Cosmetic Tweaks</h3>
+                <p>Currently, this component lets any race choose any of the available colors on character creation.
+                </p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="persuasion">
+
+                <h3>20. More Persuasion Options</h3>
+                <p>This component adds more opportunities in the game to use Bluff, Diplomacy, Intimidate, and other
+                    skills in dialogue.</p>
+                <details>
+                    <summary>SPOILERS:</summary>
+                    <ul>
+                        <li>In the fight with Torak, a character with high enough Intimidate can potentially
+                            intimidate some of Torak's minions into abandoning their leader, though it probably
+                            won't work on all of them.</li>
+                        <li>In the fight for Shaengarne Bridge, a character with high enough Intimidate can
+                            intimidate Xuki into surrendering and dropping her gear, though the other enemies will
+                            still have to be dealt with.</li>
+                        <li>It's possible to make a deal with Guthma to stop his attack on the Ten Towns and finish
+                            Chapter 1 without fighting Guthma, though it will require both Bluff and Diplomacy.</li>
+                        <li>It's possible for the party to Bluff their way out of the fight with Thvara.</li>
+                        <li>Suoma can be intimidated into telling the party of the dark treants early on, though it
+                            requires you to be rather mean. Once you've rescued the children from Limha, you can
+                            also persuade Suoma (using Diplomacy) to tell you of the dark treants. Either way, that
+                            will allow you to fight the dark treants and move on to the Cold Marshes earlier than
+                            normal.</li>
+                        <li>The party can bribe Limha into freeing the children and turning them back to human form.
+                            The cost is lower with higher Diplomacy.</li>
+                        <li>A character with an extremely high Search or Wilderness Lore skill can potentially find
+                            the exit to the Fell Wood without having to fight the Dark Treants.</li>
+                        <li>Before fighting Harshom, a character with arcane spellcasting who has high enough Bluff
+                            and very high Spellcraft and access to illusion spells can trick Harshom in order to
+                            gain advantage in the battle in some way. The check is easier to make if the character
+                            is an illusionist.</li>
+                        <li>When the party first enters the mind flayer stronghold, a character with very high
+                            Intimidate can intimidate the Elder Brain in response to their telepathic messages and
+                            convince them to let the party leave without a fight, provided they head straight to the
+                            exit.</li>
+                        <li>In the yuan-ti temple in Chult, it is possible to talk with Ojaiha and organize a truce,
+                            provided your Diplomacy is high enough. This will allow you to move on to the fight with
+                            Cedra's forces once you return to Kuldahar.</li>
+                        <li>In the Severed Hand, there is a new character in the throne room. A party member with an
+                            outrageously high Bluff skill can convince them to call back Isair and Madae to the
+                            Severed Hand and give you an audience, starting the final battle earlier than normal.
+                        </li>
+                        <li>Lastly, this component adds no fewer than five different dialogue paths to talk your way
+                            out of the final boss fight. They typically require the character talking to be very
+                            good at multiple pursuasion skills.</li>
+                    </ul>
+                </details>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="npccore">
+
+                <h3>21. NPC Core</h3>
+                <p>This component allows several existing NPCs to join the party: the fighter Reig, the rogue Black
+                    Geoffrey, the diviner Veira, the cleric Emma Moonblade, the troll Vrek Vileclaw, the goblin
+                    Vunarg, the rogue/illusionist Zack Boosenburry, the abishai Xhaan, the sorcerer Pairi, and the
+                    monk Sersa. </p>
+                <p>The NPCs do have banters and interjections, but overall the production value of IWD2EE's NPCs is
+                    definitely lower than the previous IWD2 NPC mod.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="npcexp">
+
+                <h3>22. NPCs start with experience</h3>
+                <p>NPCs start with the average experience of the rest of the party members. The second one makes
+                    them start with a fifth of the total experience of the party.</p>
+                <p>The point of the second option is to prevent certain exploits related to soloing. If you have the
+                    first option enabled, you could get pretty far into the game while soloing and reach a high
+                    level, and then recruit NPCs that were just as overleveled as your starting character. With the
+                    second option enabled, those NPCs will be at a reasonable level regardless of the previous size
+                    of the party.</p>
+                <p>The first option is recommended if you aren't planning on doing any XP exploits like that.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="newgui">
+
+                <h3>23. New GUI</h3>
+                <p>This component currently adds a new main menu screen and new chapter screens. There are no new
+                    buttons, but the GUI should look better.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="looping">
+
+                <h3>24. Looping Main Theme</h3>
+                <p>Normally IWD2's main theme does not loop. After 1 minute, it ends and you spend the rest of
+                    character creation with no music playing. This component edits the main theme to loop.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="battlesquare">
+
+                <h3>25. Revised Battle Square</h3>
+                <p>To get all the rewards for the Battle Square, one normally has to fight 25 battles per rank, to a
+                    total of 250 battles. Even if the party members are powerful enough to win all the battles, this
+                    is still very tedious.</p>
+                <p>This component makes it so one only has to beat a rank once (with 3 or more squares) to get the
+                    main reward for the rank. To get all the rewards, it will only take 30 battles rather than 250.
+                </p>
+                <p>In addition, this component allows you to go back to the Battle Square and finish it up in
+                    Chapter 5 when you return to the Ice Temple for Nickademus's favor.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="damageresist">
+
+                <h3>26. Minor Damage Resistance for Armor and Shields</h3>
+                <p>Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and
+                    shield in the game so they give physical damage resistance equal to half their Armor Class
+                    bonus, rounded down.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="racerev">
+
+                <h3>27. Race Revisions</h3>
+                <p>Race Revisions revises various races and subraces, giving them abilities that they're supposed to
+                    have in PnP:</p>
+                <ul>
+                    <li>Humans get 4 extra skill points at 1st level rather than 2.</li>
+                    <li>Elves can detect traps even when they aren't actively searching.</li>
+                    <li>Gnomes get a bonus to the DC of illusion spells they cast.</li>
+                    <li>Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are
+                        especially stable.</li>
+                    <li>Drow and Tieflings can cast Darkness once per day. Drow start proficient with crossbows
+                        instead of bows.</li>
+                    <li>Duergar can enlarge themselves once per day.</li>
+                </ul>
+                <p>Race Revisions also gives certain races a few new abilities:</p>
+                <ul>
+                    <li>Half-elves and Half-orcs now get an extra feat at 1st-level (this is the benefit they get
+                        for being half-human; previously all their benefits and drawbacks had to do with their
+                        elf/orc side).</li>
+                    <li>Elves may use Weapon Finesse with large swords.</li>
+                    <li>Dwarves start proficient in axes and hammers.</li>
+                    <li>Rock gnomes have +2 Intelligence instead of Constitution.</li>
+                    <li>Lightfoot halflings may add half their Dexterity modifier rather than their Strength
+                        modifier to the damage of a sling or thrown weapon (if the former is higher).</li>
+                    <li>Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown
+                        weapons, as one would with two-handed weapons. In addition, their stat penalty is to
+                        Intelligence rather than Strength.</li>
+                </ul>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="racelevel">
+                <h3>28. Revise racial level adjustment/ECL</h3>
+                <p>This component makes it so rather than certain subraces being one or more "levels behind" other
+                    characters, they get a certain penalty to XP. In practice, this means that these subraces don't
+                    level up that much slower than other characters early on, though at very high levels they lag behind
+                    a bit more.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">RETOUR EN HAUT</a>
+                </div>
+            </section>
+
+            <section id="enemyxp">
+
+                <h3>29. Enemies give the same amount of experience regardless of the party's level</h3>
+                <p>This component makes killing enemies give the same amount of experience no matter the party's
+                    level. This way, leveling up doesn't come with the dissatisfaction of enemies giving less
+                    experience, and there's no incentive to delay leveling up to increase experience gain. There are
+                    two options: either you can have enemies give experience equal to 25 * their challenge rating (a
+                    six-character party will reach about level 15 by the end of the game), or it can be 35 * their
+                    challenge rating (a six-character party will reach about level 18 by the end of the game).</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="scaling">
+
+                <h3>30. Adjust encounter level-scaling</h3>
+                <p>Icewind Dale 2 encounters often have additional enemies for a higher-level party. This component
+                    has two options: you can make it so you always fight at least the version of the encounter meant
+                    for a medium-level party, or you can make it so you always fight the version meant for a
+                    high-level party. The higher-level versions of encounters usually just have a couple more
+                    enemies or in some cases have tougher versions of enemies; they aren't impossible for a
+                    lower-level party to complete.</p>
+                <p>Note that this component does almost nothing in a Heart of Fury playthrough or a solo run,
+                    because in those playthroughs your character(s) are usually high enough level to trigger the
+                    high-level encounters anyway.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="hofhp">
+
+                <h3>31. Reduce the HP bonuses of creatures in Heart of Fury Mode</h3>
+                <p>Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue
+                    have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component reduces the HP on
+                    creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low
+                    level. It is balanced such that enemies early on will have way less HP than in the original HoF,
+                    but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but
+                    also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make
+                    up for it).</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="hofattack">
+
+                <h3>32. Reduce the attack bonuses of creatures in Heart of Fury Mode</h3>
+                <p>Enemies in Heart of Fury Mode have such high attack bonuses that it's near impossible for them to
+                    miss except on a 1. This component gives creatures outside the party a -9 attack penalty on
+                    Heart of Fury Mode. They will still have higher attack bonuses than they do on the next-hardest
+                    difficulty, but it won't be quite as extreme.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="hofsaving">
+
+                <h3>33. Reduce the saving throw bonuses of creatures in Heart of Fury Mode</h3>
+                <p>Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail saving throws if
+                    you're starting as a low-level party. This component gives a small saving throw penalty to
+                    creatures outside the party on Heart of Fury Mode.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="hofsummoned">
+
+                <h3>34. Weaken allied summoned creatures in Heart of Fury Mode</h3>
+                <p>In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high
+                    level more quickly, summoned creatures can be quite overpowered. This component makes it so
+                    summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of
+                    Fury Mode get (with the exception of +10 Constitution, which should at least make them decent
+                    meatshields), unless they are summoned by an enemy.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="hofpartyxp">
+
+                <h3>35. Have the party start with more experience on Heart of Fury Mode</h3>
+                <p>The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1 - even with some
+                    of those components installed that weaken HoF creatures. This component gives each party member
+                    some experience at the start of the game. The experience each character starts with is the same
+                    regardless of party size. You have choices of how much experience to start with.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="delay">
+
+                <h3>36. Reduce the delay after a sneak attack before the creature can be sneak attacked
+                    again</h3>
+                <p>Normally, once a rogue sneak attacks a creature, that creature becomes immune to sneak attacks
+                    for about 3 rounds. This component can either remove that immunity, allowing the creature to be
+                    sneak attacked again immediately, or reduce its duration to 1 round.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="levelcap">
+
+                <h3>37. Increase the level cap</h3>
+                <p>This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high
+                    levels if you're soloing or playing Heart of Fury Mode with a small party.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="scrolllearn">
+
+                <h3>38. Always learn spells from scrolls successfully</h3>
+                <p>This component lets all wizards successfully learn spells from scrolls 100% of the time.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="opportunity">
+
+                <h3>39. Add attacks of opportunity to the game</h3>
+                <p>This component allows characters to make attacks of opportunity in melee under certain
+                    conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they
+                    cast a spell.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="abilityscores">
+
+                <h3>40. Change the way ability scores are assigned at character creation</h3>
+                <p>This component has three options. Two of them allow you to roll for stats rather than use IWD2's
+                    normal point-buy system. The first one doesn't allow you to increment or decrement stats with
+                    the plus/minus buttons, but you can choose which ability score each number rolled is assigned to
+                    (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus
+                    buttons.</p>
+                <p>The third subcomponent lets you use the point-buy system of Neverwinter Nights, where increasing
+                    a stat above a certain value requires you to spend extra points, and the minimum for a stat is
+                    8.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="traps">
+
+                <h3>41. Add more traps</h3>
+                <p>This component adds more traps to the game, and makes certain existing traps somewhat more
+                    dangerous. Don't worry; this shouldn't turn IWD2 into Durlag's Tower. The point is to add twists
+                    to existing encounters and make trap-disarming skills more meaningful.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+
+            </section>
+
+            <section id="buffing">
+
+                <h3>42. Add key bindings for automating buffing</h3>
+                <p>This component adds a very fair system for automating buffing.</p>
+                <p>To use it, first press the "[" button to start recording spells, then have party members cast any
+                    number of spells, which must either target party members or target a point. Then press "[" again
+                    to finish recording.</p>
+                <p>After that, pressing the ";" button at any point will cause party members to cast the same spells
+                    that were previously recorded, in the same order, targeting the same party members as in the
+                    original recording. Spells that target a point will target the caster's location instead. If any
+                    of the recorded spells are not memorized at the time they would be cast, those spells are
+                    skipped.</p>
+                <p>Pressing the "]" button will erase the recording until you do a new one.</p>
+                <p>This system doesn't cheat in any way; the spells aren't cast instantly nor can you cast more than
+                    one spell per round unless you have Improved Alacrity. However, it should still speed up buffing
+                    somewhat and make it require less effort by the player. Once you have the spells recorded, you
+                    just have to press ";" without having to scroll through spell lists.</p>
+                <div class="back">
+                    <a class="novisit" href="#top">BACK TO TOP</a>
+                </div>
+            </section>
+        </section>
+
+        <!-- ================== C O M P A T I B I L I T Y ================== -->
+        <section id="compatibility">
+            <h2>Compatibility</h2>
+            <p>This section details the compatibility of IWD2EE with other mods.</p>
+            <ul>
+                <li>
+                    <h4>Widescreen Mod</h4>
+                    <p>The Widescreen Mod is NOT COMPATIBLE and WILL CRASH THE GAME if used with IWD2EE. IWD2EE
+                        includes a built-in way to set the game's resolution, so you don't need the Widescreen Mod.
+                    </p>
+                </li>
+                <li>
+                    <h4>Tweaks Anthology</h4>
+                    <p>Tweaks Anthology has components that are compatible with IWD2EE (if a component doesn't
+                        work in IWD2, there won't be an option to install it).</p>
+                </li>
+                <li>
+                    <h4>1 Pixel Productions</h4>
+                    <p>1 Pixel Productions apparently causes frequent crashes when installed with IWD2EE. IWD2EE
+                        already includes many of the new weapon animations from 1pp (adding those doesn't require
+                        patching the exe, so it's less risky).</p>
+                </li>
+                <li>
+                    <h4>IWD2 NPC</h4>
+                    <p>The IWD2 NPC mod is compatible with IWD2EE.</p>
+                </li>
+                <li>
+                    <h4>Light of Selune</h4>
+                    <p>Light of Selune is compatible with IWD2EE, however it does modify many of the same items that
+                        IWD2EE modifies.</p>
+                </li>
+                <li>
+                    <h4>Tactics4IWD2</h4>
+                    <p>Not recommended, as IWD2EE's Creature Revisions already gives significant boosts to enemies
+                        and the AI of spellcasters. This mod has many revised items, spells, and creatures that
+                        will overwrite IWD2EE's changes.</p>
+                </li>
+                <li>
+                    <h4>Undead Targos</h4>
+                    <p>Unnecessary as IWD2EE already includes a way to shorten the Targos questline while making the
+                        palisade battle more challenging.</p>
+                </li>
+                <li>
+                    <h4>Bonus Merchant for IWD2</h4>
+                    <p>The Bonus Merchant mod is compatible with IWD2EE. It is worth noting though that the mod has
+                        anachronisms in it; it references events of Baldur's Gate 2 even though Icewind Dale 2 starts
+                        over 50 years before Baldur's Gate 1.</p>
+                </li>
+                <li>
+                    <h4>IWD2-Ease</h4>
+                    <p>Here is a list of the components in IWD2-Ease that says which components are compatible with
+                        IWD2EE and which aren't.</p>
+                    <ul>
+                        <li>
+                            <h5>Bugfixes</h5>
+                            <p>Unnecessary as IWD2EE should already fix these bugs.</p>
+                        </li>
+                        <li>
+                            <h5>Infinite Stacking</h5>
+                            <p>Compatible.</p>
+                        </li>
+                        <li>
+                            <h5>Non-Combat War Chant of Sith</h5>
+                            <p>Unnecessary as IWD2EE already allows War Chant of Sith outside of combat.</p>
+                        </li>
+                        <li>
+                            <h5>Improved Holy Avenger</h5>
+                            <p>Unnecessary as IWD2EE already has its own version of the Holy Avenger.</p>
+                        </li>
+                        <li>
+                            <h5>Two-Handed Holy Avenger</h5>
+                            <p>Compatible (unlike the previous component, this just patches the Holy Avenger rather
+                                than overwriting it).</p>
+                        </li>
+                        <li>
+                            <h5>No Fists for Iron Body</h5>
+                            <p>Unnecessary as IWD2EE already allows you to use weapons while Iron Body is active.</p>
+                        </li>
+                        <li>
+                            <h5>Deep Gnome Starting XP</h5>
+                            <p>Unnecessary as IWD2EE already revises the level adjustment/ECL system and fixes
+                                this bug.</p>
+                        </li>
+                        <li>
+                            <h5>Improved Moonblades</h5>
+                            <p>Unnecessary as IWD2EE already revises the Moonblades in a similar way.</p>
+                        </li>
+                        <li>
+                            <h5>Improved Monk Fists</h5>
+                            <p>Unnecessary as IWD2EE already allows Monk Fists to be used with Weapon Finesse.</p>
+                        </li>
+                        <li>
+                            <h5>Collector's Edition Bonus Items</h5>
+                            <p>Unnecessary as IWD2EE already adds these items to the game.</p>
+                        </li>
+                        <li>
+                            <h5>No Alignment Class Restrictions</h5>
+                            <p>Unnecessary as IWD2EE already has an option to loosen alignment class restrictions.</p>
+                        </li>
+                        <li>
+                            <h5>Magic Weapon Finesse</h5>
+                            <p>Unnecessary as IWD2EE already allows certain conjured weapons to be used with Weapon
+                                Finesse.</p>
+                        </li>
+                        <li>
+                            <h5>Always Get Some XP Per Kill</h5>
+                            <p>Unnecessary as IWD2EE already includes components that make the game's XP system
+                                more reasonable.</p>
+                        </li>
+                        <li>
+                            <h5>Some Heart of Fury Items in Normal Mode</h5>
+                            <p>Compatible, but this component could potentially be unbalanced.</p>
+                        </li>
+                        <li>
+                            <h5>Stronger Bastard Swords</h5>
+                            <p>Unnecessary, as IWD2EE already improves bastard swords (the stronger bastard swords from
+                                the component are also ridiculously overpowered - you can buy a bastard sword in
+                                Targos that deals +5d6 acid damage per hit!).</p>
+                        </li>
+                        <li>
+                            <h5>All Items Identified</h5>
+                            <p>Compatible.</p>
+                        </li>
+                        <li>
+                            <h5>Non-Linear Teleporting</h5>
+                            <p>Compatible.</p>
+                        </li>
+                        <li>
+                            <h5>Armor and Shields Provide Damage Resistance</h5>
+                            <p>Incompatible with IWD2EE's component that also gives armor and shields damage
+                                resistance.</p>
+                        </li>
+                        <li>
+                            <h5>Include Forgotten Armor and Shields</h5>
+                            <p>Unnecessary as IWD2EE already adds most of these items to the game (this component
+                                is also unbalanced, as it hands you multiple +3 items for free in the prologue!).</p>
+                        </li>
+                        <li>
+                            <h5>Additional Druid Spells</h5>
+                            <p>Incompatible as this component prevents characters from learning the new spells that
+                                were added by IWD2EE. Unnecessary as IWD2EE already gives druids a lot of new
+                                spells, including many of the same spells that this component gives them.</p>
+                        </li>
+                        <li>
+                            <h5>Alternate Shapeshifting</h5>
+                            <p>Unnecessary as IWD2EE already revises druid shapeshifting.</p>
+                        </li>
+                        <li>
+                            <h5>Skip Battle Square</h5>
+                            <p>Unnecessary as IWD2EE already includes a component that greatly reduces the amount
+                                of time needed to earn the main Battle Square rewards.</p>
+                        </li>
+                        <li>
+                            <h5>Randomized Treasure</h5>
+                            <p>Compatible, but not recommended, as it could potentially hand you an overpowered
+                                weapon early on.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="back">
+                <a class="novisit" href="#top">BACK TO TOP</a>
+            </div>
+        </section>
+
+        <!-- ================== C R E D I T S ================== -->
+        <section id="credits">
+            <h2>Credits</h2>
+            <p><span class="pseudo">Chris Dix</span> (She/Her) - aka <span class="pseudo">@semiticgoddess</span> - was
+                the one who started the IWD2EE project and got the rest of the team together to work on it. She did the
+                initial work on the first half of IWD2EE's components and did most of the writing, including NPC
+                dialogue and potion descriptions.</p>
+            <p><span class="pseudo">@OlvynChuru</span> created the second half of IWD2EE's components, created all the
+                new items and almost all the new spells and feats. <span class="pseudo">OlvynChuru</span> was also
+                responsible for all the changes to encounters and enemy AI and most of the changes to feats, items, and
+                spells, as well as the Lua functions that are called by the new opcodes.</p>
+            <p><span class="pseudo">@Bubb</span> created most of the base functions and new opcodes that open new
+                possibilities for modding. <span class="pseudo">Bubb</span> was also responsible for many of IWD2EE's
+                greatest quality of life improvements, including quickloot, faster loading times, and built-in
+                widescreen capability.</p>
+            <p><span class="pseudo">@mrfearless</span> created the IEex loader that enables Lua functions to be run in
+                IWD2.</p>
+            <p><span class="pseudo">@kjeron</span> created many WeiDU functions that are used in IWD2EE's installation
+                to modify IWD2 files.</p>
+            <p><span class="pseudo">@CamDawg</span> revised some of IWD2EE's WeiDU files to run faster.</p>
+            <p><span class="pseudo">@Argent77</span> crafted the initial HTML template and stylesheet, which <span
+                    class="pseudo">@WillScarlettOhara</span> customized and expanded for this ReadMe.</p>
+            <p><span class="pseudo">@Improbabile68</span> translated IWD2EE into Italian.</p>
+            <p><span class="pseudo">@paladin</span>, <span class="pseudo">klichko86</span>, and <span
+                    class="pseudo">rytomen</span> translated IWD2EE into Russian.</p>
+            <p><span class="pseudo">@WillScarlettOhara</span> translated IWD2EE into French.</p>
+            <p><span class="pseudo">Andrii Shafetov</span> - aka <span class="pseudo">@ashafetov</span> - created
+                IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.</p>
+            <p><span class="pseudo">Igor Levchenko</span> - aka <span class="pseudo">@Igor_Levchenko</span> - painted
+                the portrait for Vrek Vileclaw.</p>
+            <p><span class="pseudo">@Vertis</span> created the image for the new quickloot panel.</p>
+            <p><span class="pseudo">@mleduque</span> fixed an OS-specific command in the WeiDU installation to maybe
+                work on Linux.</p>
+            <p>Several people on Discord, including <span class="pseudo">@Vertis</span>, <span
+                    class="pseudo">@rbaker</span>, and <span class="pseudo">@IcewindDale2</span> managed to generate AI
+                portraits for Reig Redwaters, Black Geoffrey, Veira, Emma Moonblade, Vunarg, Zack Boosenburry, and Sersa
+                when we were having trouble finding a real artist to do the portraits.</p>
+            <p>Credit goes to <span class="pseudo">Erephine</span> for allowing IWD2EE to use the animations from 1
+                Pixel Productions.</p>
+            <p>And lastly, credit goes to the over 300 people who playtested IWD2EE before release. Special thanks goes
+                to <span class="pseudo">@Gazoo</span>, <span class="pseudo">@Firecrow</span>, <span
+                    class="pseudo">@deeel</span>, <span class="pseudo">@IcewindDale2</span>, and <span
+                    class="pseudo">@Fallen Prince</span> for giving extensive feedback on our Discord.</p>
+            <div class="back">
+                <a class="novisit" href="#top">BACK TO TOP</a>
+            </div>
+        </section>
+    </main>
+    <!-- Fetch version number from github -->
+    <script>
+        fetch('https://api.github.com/repos/RedChimera/IWD2EE/releases/latest')
+            .then(response => response.json())
+            .then(data => {
+                const version = data.tag_name;
+                const publishedAt = new Date(data.published_at);
+
+                // Get the language of the page
+                const lang = document.documentElement.lang;
+
+                let formattedDate;
+
+                if (lang === 'fr-FR') {
+                    formattedDate = publishedAt.toLocaleDateString('fr-FR', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                    });
+                } else { // Assume English for other languages
+                    formattedDate = publishedAt.toLocaleDateString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                }
+
+                document.getElementById('version').textContent = "Version: " + version + " - " + formattedDate;
+                document.getElementById('version').style.display = 'inline'; // Show after loading
+            });
+    </script>
+    <!-- Button to switch theme -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Load theme from local storage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        } else {
+            // Default theme if none saved
+            body.classList.add('light-theme');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light-theme');
+            } else {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark-theme');
+            }
+        });
+    </script>
+</body>
+
+</html>

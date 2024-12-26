@@ -1,0 +1,390 @@
+@55000=~Niveau ~
+@55001=~Barbare~
+@55002=~Barde~
+@55003=~Prêtre~
+@55004=~Druide~
+@55005=~Guerrier~
+@55006=~Moine~
+@55007=~Paladin~
+@55008=~Rôdeur~
+@55009=~Roublard~
+@55010=~Ensorceleur~
+@55011=~Magicien~
+@55012=~Points de Vie : ~
+@55013=~Classe d’Armure : ~
+@55014=~CA contre les tranchants : ~
+@55015=~CA contre les perforants : ~
+@55016=~CA contre les contondants : ~
+@55017=~CA contre les projectiles : ~
+@55018=~Bonus d’attaque : ~
+@55019=~Attaques par round : ~
+@55020=~Valeurs de caractéristiques : ~
+@55021=~Force : ~
+@55022=~Dextérité : ~
+@55023=~Constitution : ~
+@55024=~Intelligence : ~
+@55025=~Sagesse : ~
+@55026=~Charisme : ~
+@55027=~Résistance aux tranchants : ~
+@55028=~Résistance aux perforants : ~
+@55029=~Résistance aux contondants : ~
+@55030=~Résistance aux projectiles : ~
+@55031=~Résistance au feu : ~
+@55032=~Résistance au froid : ~
+@55033=~Résistance à l’électricité : ~
+@55034=~Résistance à l’acide : ~
+@55035=~Résistance au poison : ~
+@55036=~Résistance aux dégâts magiques : ~
+@55037=~Résistance aux sorts : ~
+@55038=~Réduction des dégâts : ~
+@55039=~Jets de sauvegarde : ~
+@55040=~Vigueur : ~
+@55041=~Réflexes : ~
+@55042=~Volonté : ~
+@55043=~Compétence de Concentration : ~
+@55044=~Images miroir restantes : ~
+@55045=~Dégâts de Peau de pierre restants : ~
+@55046=~Temps d’incantation réduit de : ~
+@55047=~Dégâts d’attaque sournoise : ~
+@55048=~<EXICNAME> lance des sorts profanes comme s’il avait <EXICVAL1> niveaux de plus~
+@55049=~<EXICNAME> lance des sorts profanes avec <EXICVAL1> % de la durée normale~
+@55050=~<EXICNAME> lance des sorts divins comme s’il avait <EXICVAL1> niveaux de plus~
+@55051=~<EXICNAME> lance des sorts divins avec <EXICVAL1> % de la durée normale~
+@55052=~<EXICNAME> peut étendre des sorts jusqu’au niveau <EXICVAL1>~
+@55053=~<EXICNAME> peut maximiser des sorts jusqu’au niveau <EXICVAL1>~
+@55054=~<EXICNAME> peut accélérer des sorts jusqu’au niveau <EXICVAL1>~
+@55055=~<EXICNAME> peut sécuriser des sorts jusqu’au niveau <EXICVAL1>~
+@55056=~<EXICNAME> peut lancer plusieurs sorts par round~
+@55057=~<EXICNAME> peut voir les créatures invisibles~
+@55058=~<EXICNAME> est protégé des coups critiques~
+@55059=~<EXICNAME> est protégé des attaques sournoises~
+@55060=~<EXICNAME> inflige un maximum de dégâts à chaque coup~
+@55061=~<EXICNAME> peut effectuer une attaque sournoise à chaque coup~
+@55062=~<EXICNAME> ne peut pas être réduit en dessous de <EXICVAL1> PV~
+@55063=~Immunités : ~
+@55064=~rage de berserker~
+@55065=~charme~
+@55066=~dégâts~
+@55067=~guérison~
+@55068=~invisibilité~
+@55069=~défaillance due au moral~
+@55070=~peur~
+@55071=~poison~
+@55072=~silence~
+@55073=~sommeil~
+@55074=~lenteur~
+@55075=~étourdissement~
+@55076=~dissipation~
+@55077=~échec du sort~
+@55078=~cécité~
+@55079=~débilité~
+@55080=~maladie~
+@55081=~surdité~
+@55082=~fatigue~
+@55083=~intoxication~
+@55084=~paralysie~
+@55085=~téléportation~
+@55086=~confusion~
+@55087=~pétrification~
+@55088=~métamorphose~
+@55089=~Enchevêtrement~
+@55090=~Toile d’araignée~
+@55091=~Graisse~
+@55092=~immobilisation~
+@55093=~malus de mouvement~
+@55094=~effets vampiriques~
+@55095=~Sang Brûlant de Beltyn~
+@55096=~auras de salamandre~
+@55097=~regard de tyrannœuil~
+@55098=~Rage animale~
+@55099=~Sphère acide~
+@55100=~cri de harpie~
+@55101=~Regard de Chacal-Garou~
+@55102=~désespoir~
+@55103=~nausée~
+@55104=~affaiblissement~
+@55105=~domination~
+@55106=~Sphère résistante d’Otiluke~
+@55107=~blessure~
+@55108=~renversement~
+@55109=~mort instantanée~
+@55110=~Arrêt des morts-vivants~
+@55111=~Contrôle des morts-vivants~
+@55112=~bannissement~
+@55113=~absorption d’énergie~
+@55114=~<EXICNAME> ne peut pas être renvoyé~
+@55115=~Peaux de fer restantes : ~
+@55116=~Garde noir~
+@55180=~, 1 image restante~
+@55181=~, <EXASVAL3> images restantes~
+@55182=~, 1 dégât restant~
+@55183=~, <EXASVAL3> dégâts restants~
+@55184=~, 1 peau restante~
+@55185=~, <EXASVAL3> peaux restantes~
+@55186=~, 1 coup restant~
+@55187=~, <EXASVAL3> coups restants~
+@55190=~Sorts actifs sur <EXASNAME> :~
+@55191=~  <EXASVAL1> - 1 seconde restante~
+@55192=~  <EXASVAL1> - <EXASVAL2> secondes restantes~
+@55193=~  <EXASVAL1> - 1 round restant~
+@55194=~  <EXASVAL1> - <EXASVAL2> rounds restants~
+@55195=~  <EXASVAL1> - 1 heure restante~
+@55196=~  <EXASVAL1> - <EXASVAL2> heures restantes~
+@55197=~  <EXASVAL1> - 1 jour restant~
+@55198=~  <EXASVAL1> - <EXASVAL2> jours restants~
+
+@55301=~<EXWHACTION1>: <EXWHROLL1> <EXWHBONUS1> = <EXWHTOTAL1> : <EXWHHITMISS1>~
+@55302=~<EXWHACTION2>: <EXWHROLL2> <EXWHBONUS2> = <EXWHTOTAL2> : <EXWHHITMISS2>~
+@55303=~<EXWHACTION3>: <EXWHROLL3> <EXWHBONUS3> = <EXWHTOTAL3> : <EXWHHITMISS3>~
+@55304=~<EXWHACTION4>: <EXWHROLL4> <EXWHBONUS4> = <EXWHTOTAL4> : <EXWHHITMISS4>~
+@55305=~<EXWHACTION5>: <EXWHROLL5> <EXWHBONUS5> = <EXWHTOTAL5> : <EXWHHITMISS5>~
+@55306=~<EXWHACTION6>: <EXWHROLL6> <EXWHBONUS6> = <EXWHTOTAL6> : <EXWHHITMISS6>~
+@55307=~<EXWHACTION7>: <EXWHROLL7> <EXWHBONUS7> = <EXWHTOTAL7> : <EXWHHITMISS7>~
+@55308=~<EXWHACTION8>: <EXWHROLL8> <EXWHBONUS8> = <EXWHTOTAL8> : <EXWHHITMISS8>~
+@55309=~<EXWHACTION9>: <EXWHROLL9> <EXWHBONUS9> = <EXWHTOTAL9> : <EXWHHITMISS9>~
+@55310=~<EXWHACTION10>: <EXWHROLL10> <EXWHBONUS10> = <EXWHTOTAL10> : <EXWHHITMISS10>~
+@55311=~<EXWHACTION11>: <EXWHROLL11> <EXWHBONUS11> = <EXWHTOTAL11> : <EXWHHITMISS11>~
+@55312=~<EXWHACTION12>: <EXWHROLL12> <EXWHBONUS12> = <EXWHTOTAL12> : <EXWHHITMISS12>~
+@55313=~<EXWHACTION13>: <EXWHROLL13> <EXWHBONUS13> = <EXWHTOTAL13> : <EXWHHITMISS13>~
+@55314=~<EXWHACTION14>: <EXWHROLL14> <EXWHBONUS14> = <EXWHTOTAL14> : <EXWHHITMISS14>~
+@55315=~<EXWHACTION15>: <EXWHROLL15> <EXWHBONUS15> = <EXWHTOTAL15> : <EXWHHITMISS15>~
+@55316=~<EXWHACTION16>: <EXWHROLL16> <EXWHBONUS16> = <EXWHTOTAL16> : <EXWHHITMISS16>~
+@55317=~<EXWHACTION17>: <EXWHROLL17> <EXWHBONUS17> = <EXWHTOTAL17> : <EXWHHITMISS17>~
+@55318=~<EXWHACTION18>: <EXWHROLL18> <EXWHBONUS18> = <EXWHTOTAL18> : <EXWHHITMISS18>~
+@55319=~<EXWHACTION19>: <EXWHROLL19> <EXWHBONUS19> = <EXWHTOTAL19> : <EXWHHITMISS19>~
+@55320=~<EXWHACTION20>: <EXWHROLL20> <EXWHBONUS20> = <EXWHTOTAL20> : <EXWHHITMISS20>~
+@55321=~<EXWHACTION21>: <EXWHROLL21> <EXWHBONUS21> = <EXWHTOTAL21> : <EXWHHITMISS21>~
+@55322=~<EXWHACTION22>: <EXWHROLL22> <EXWHBONUS22> = <EXWHTOTAL22> : <EXWHHITMISS22>~
+@55323=~<EXWHACTION23>: <EXWHROLL23> <EXWHBONUS23> = <EXWHTOTAL23> : <EXWHHITMISS23>~
+@55324=~<EXWHACTION24>: <EXWHROLL24> <EXWHBONUS24> = <EXWHTOTAL24> : <EXWHHITMISS24>~
+@55325=~<EXWHACTION25>: <EXWHROLL25> <EXWHBONUS25> = <EXWHTOTAL25> : <EXWHHITMISS25>~
+@55326=~<EXWHACTION26>: <EXWHROLL26> <EXWHBONUS26> = <EXWHTOTAL26> : <EXWHHITMISS26>~
+@55327=~<EXWHACTION27>: <EXWHROLL27> <EXWHBONUS27> = <EXWHTOTAL27> : <EXWHHITMISS27>~
+@55328=~<EXWHACTION28>: <EXWHROLL28> <EXWHBONUS28> = <EXWHTOTAL28> : <EXWHHITMISS28>~
+@55329=~<EXWHACTION29>: <EXWHROLL29> <EXWHBONUS29> = <EXWHTOTAL29> : <EXWHHITMISS29>~
+@55330=~<EXWHACTION30>: <EXWHROLL30> <EXWHBONUS30> = <EXWHTOTAL30> : <EXWHHITMISS30>~
+@55331=~<EXWHACTION31>: <EXWHROLL31> <EXWHBONUS31> = <EXWHTOTAL31> : <EXWHHITMISS31>~
+@55332=~<EXWHACTION32>: <EXWHROLL32> <EXWHBONUS32> = <EXWHTOTAL32> : <EXWHHITMISS32>~
+@55333=~<EXWHACTION33>: <EXWHROLL33> <EXWHBONUS33> = <EXWHTOTAL33> : <EXWHHITMISS33>~
+@55334=~<EXWHACTION34>: <EXWHROLL34> <EXWHBONUS34> = <EXWHTOTAL34> : <EXWHHITMISS34>~
+@55335=~<EXWHACTION35>: <EXWHROLL35> <EXWHBONUS35> = <EXWHTOTAL35> : <EXWHHITMISS35>~
+@55336=~<EXWHACTION36>: <EXWHROLL36> <EXWHBONUS36> = <EXWHTOTAL36> : <EXWHHITMISS36>~
+@55337=~<EXWHACTION37>: <EXWHROLL37> <EXWHBONUS37> = <EXWHTOTAL37> : <EXWHHITMISS37>~
+@55338=~<EXWHACTION38>: <EXWHROLL38> <EXWHBONUS38> = <EXWHTOTAL38> : <EXWHHITMISS38>~
+@55339=~<EXWHACTION39>: <EXWHROLL39> <EXWHBONUS39> = <EXWHTOTAL39> : <EXWHHITMISS39>~
+@55340=~<EXWHACTION40>: <EXWHROLL40> <EXWHBONUS40> = <EXWHTOTAL40> : <EXWHHITMISS40>~
+/*
+@55301=~Attaque <EXWHNAME1> avec <EXWHWEAP1> : <EXWHHITMISS1>~
+@55302=~Attaque <EXWHNAME2> avec <EXWHWEAP2> : <EXWHHITMISS2>~
+@55303=~Attaque <EXWHNAME3> avec <EXWHWEAP3> : <EXWHHITMISS3>~
+@55304=~Attaque <EXWHNAME4> avec <EXWHWEAP4> : <EXWHHITMISS4>~
+@55305=~Attaque <EXWHNAME5> avec <EXWHWEAP5> : <EXWHHITMISS5>~
+@55306=~Attaque <EXWHNAME6> avec <EXWHWEAP6> : <EXWHHITMISS6>~
+@55307=~Attaque <EXWHNAME7> avec <EXWHWEAP7> : <EXWHHITMISS7>~
+@55308=~Attaque <EXWHNAME8> avec <EXWHWEAP8> : <EXWHHITMISS8>~
+@55309=~Attaque <EXWHNAME9> avec <EXWHWEAP9> : <EXWHHITMISS9>~
+@55310=~Attaque <EXWHNAME10> avec <EXWHWEAP10> : <EXWHHITMISS10>~
+@55311=~Attaque <EXWHNAME11> avec <EXWHWEAP11> : <EXWHHITMISS11>~
+@55312=~Attaque <EXWHNAME12> avec <EXWHWEAP12> : <EXWHHITMISS12>~
+@55313=~Attaque <EXWHNAME13> avec <EXWHWEAP13> : <EXWHHITMISS13>~
+@55314=~Attaque <EXWHNAME14> avec <EXWHWEAP14> : <EXWHHITMISS14>~
+@55315=~Attaque <EXWHNAME15> avec <EXWHWEAP15> : <EXWHHITMISS15>~
+@55316=~Attaque <EXWHNAME16> avec <EXWHWEAP16> : <EXWHHITMISS16>~
+@55317=~Attaque <EXWHNAME17> avec <EXWHWEAP17> : <EXWHHITMISS17>~
+@55318=~Attaque <EXWHNAME18> avec <EXWHWEAP18> : <EXWHHITMISS18>~
+@55319=~Attaque <EXWHNAME19> avec <EXWHWEAP19> : <EXWHHITMISS19>~
+@55320=~Attaque <EXWHNAME20> avec <EXWHWEAP20> : <EXWHHITMISS20>~
+@55321=~Attaque <EXWHNAME21> avec <EXWHWEAP21> : <EXWHHITMISS21>~
+@55322=~Attaque <EXWHNAME22> avec <EXWHWEAP22> : <EXWHHITMISS22>~
+@55323=~Attaque <EXWHNAME23> avec <EXWHWEAP23> : <EXWHHITMISS23>~
+@55324=~Attaque <EXWHNAME24> avec <EXWHWEAP24> : <EXWHHITMISS24>~
+@55325=~Attaque <EXWHNAME25> avec <EXWHWEAP25> : <EXWHHITMISS25>~
+@55326=~Attaque <EXWHNAME26> avec <EXWHWEAP26> : <EXWHHITMISS26>~
+@55327=~Attaque <EXWHNAME27> avec <EXWHWEAP27> : <EXWHHITMISS27>~
+@55328=~Attaque <EXWHNAME28> avec <EXWHWEAP28> : <EXWHHITMISS28>~
+@55329=~Attaque <EXWHNAME29> avec <EXWHWEAP29> : <EXWHHITMISS29>~
+@55330=~Attaque <EXWHNAME30> avec <EXWHWEAP30> : <EXWHHITMISS30>~
+@55331=~Attaque <EXWHNAME31> avec <EXWHWEAP31> : <EXWHHITMISS31>~
+@55332=~Attaque <EXWHNAME32> avec <EXWHWEAP32> : <EXWHHITMISS32>~
+@55333=~Attaque <EXWHNAME33> avec <EXWHWEAP33> : <EXWHHITMISS33>~
+@55334=~Attaque <EXWHNAME34> avec <EXWHWEAP34> : <EXWHHITMISS34>~
+@55335=~Attaque <EXWHNAME35> avec <EXWHWEAP35> : <EXWHHITMISS35>~
+@55336=~Attaque <EXWHNAME36> avec <EXWHWEAP36> : <EXWHHITMISS36>~
+@55337=~Attaque <EXWHNAME37> avec <EXWHWEAP37> : <EXWHHITMISS37>~
+@55338=~Attaque <EXWHNAME38> avec <EXWHWEAP38> : <EXWHHITMISS38>~
+@55339=~Attaque <EXWHNAME39> avec <EXWHWEAP39> : <EXWHHITMISS39>~
+@55340=~Attaque <EXWHNAME40> avec <EXWHWEAP40> : <EXWHHITMISS40>~
+*/
+@55351=~5 dégâts résistés d’une arme non magique~
+@55352=~10 dégâts résistés d’une arme d’enchantement inférieur à +2~
+@55353=~15 dégâts résistés d’une arme d’enchantement inférieur à +3~
+@55354=~20 dégâts résistés d’une arme d’enchantement inférieur à +4~
+@55355=~25 dégâts résistés d’une arme d’enchantement inférieur à +5~
+@55356=~30 dégâts résistés d’une arme d’enchantement inférieur à +6~
+@55357=~35 dégâts résistés d’une arme d’enchantement inférieur à +7~
+@55358=~40 dégâts résistés d’une arme d’enchantement inférieur à +8~
+@55359=~45 dégâts résistés d’une arme d’enchantement inférieur à +9~
+@55360=~50 dégâts résistés d’une arme d’enchantement inférieur à +10~
+@55370=~sonique~
+@55371=~magique~
+@55372=~énergie positive~
+@55373=~énergie négative~
+@55374=~psychique~
+@55375=~Jet d’attaque de contact ~
+@55376=~Jet d’attaque de contact à distance ~
+@55377=~Le corps de ce personnage a été détruit. Un sort de Résurrection sera nécessaire pour le ramener à la vie ; Rappel à la vie ne suffira pas.~
+@55378=~L’âme de ce personnage a été capturée. Le réceptacle de son âme doit être détruit avant qu’il ne puisse être ramené à la vie.~
+@55379=~Ce personnage ne peut pas être rappelé à la vie, mais peut être ressuscité par une magie plus puissante.~
+@55380=~Ce personnage ne peut pas être ni rappelé à la vie ni ressuscité.~
+@55381=~Ce personnage est mort depuis trop longtemps pour être rappelé à la vie par ce sort.~
+@55382=~Sort interrompu : Main gauche en cours d’utilisation.~
+@55383=~L’attaque a échoué en raison d’une différence de taille~
+@55384=~Dégâts évités grâce à l’éthéréité~
+@55385=~Dégâts évités grâce à l’incorporation~
+@55386=~de feu~
+@55387=~feu sacré~
+@55390=~Utilisation du don : Combat en aveugle - Réussie~
+@55391=~Utilisation du don : Combat en aveugle - Échouée !~
+@55392=~Manqué en raison de la dissimulation.~
+@55395=~Attaque d’opportunité~
+@55398=~Touché~
+@55399=~Manqué~
+
+@55401=~<EXSSFULL1>~
+@55402=~<EXSSFULL2>~
+@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> sort de <EXSSLEVELORNAME>~ //par exemple ~A regagné 1 sort de Projectile magique~ ou ~A perdu 1 sort de niveau 2~~
+@55432=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> sorts de <EXSSLEVELORNAME>~
+@55453=~A regagné ~
+@55454=~A perdu ~
+@55455=~et ~
+@55460=~Lancé avec un emplacement de sort de <EXMMLEVEL>~
+@55461=~niveau 1~
+@55462=~niveau 2~
+@55463=~niveau 3~
+@55464=~niveau 4~
+@55465=~niveau 5~
+@55466=~niveau 6~
+@55467=~niveau 7~
+@55468=~niveau 8~
+@55469=~niveau 9~
+@55470=~niveau 10~
+@55471=~niveau 11~
+@55472=~niveau 12~
+@55473=~niveau 13~
+@55474=~niveau 14~
+@55475=~niveau 15~
+@55476=~niveau 16~
+@55477=~niveau 17~
+@55478=~niveau 18~
+@55479=~niveau 19~
+@55480=~niveau 20~
+@55481=~Sort Contrecarré~
+@55482=~Vous n’avez pas de sort mémorisé qui puisse contrecarrer ce sort.~
+@55483=~Tente de contrecarrer le sort de <EXCSNAM1>~
+@55484=~Contresort raté : <EXCSNAM1> ne lance pas de sort~
+@55491=~Métamagie ratée : Vous n’avez aucun sort de <EXMMLEVEL> ou supérieur mémorisé~
+@55492=~Métamagie ratée : Il ne vous reste aucun sort de <EXMMLEVEL> ou supérieur~
+@55493=~Métamagie ratée : Le sort résultant est d’un niveau trop élevé~
+
+@55500=~<EXACVAL1> n’est pas un sort valide pour Contingence de soin~
+@55580=~Copie de sort ratée : <EXCPNAM1> ne lance pas de sort~
+@55581=~Copie de sort ratée : <EXCPVAL1> est d’un niveau trop élevé pour que vous puissiez le copier~
+@55582=~Copie de sort ratée : <EXCPVAL1> ne peut pas être copié~
+@55583=~<EXCPVAL1> copié avec Copie de sort~
+@55584=~<EXACVAL1> est d’un niveau trop élevé pour être stocké dans un Bâton à sort~
+@55585=~Les capacités innées ne peuvent pas être stockées dans un Bâton à sort~
+@55586=~<EXACVAL1> ne peut cibler que le lanceur et ne peut donc pas être stocké dans un Bâton à sort~
+@55587=~<EXACVAL1> ne peut pas être stocké dans un Bâton à sort~
+@55588=~<EXACVAL1> a été stocké dans un Bâton à sort et sera libéré en attaquant avec~
+@55590=~Un sort de cette école a déjà été stocké dans le séquenceur~
+@55591=~<EXACVAL1> est d’un niveau trop élevé pour Transfert de sorts~
+@55592=~<EXACVAL1> ne fonctionne pas avec Transfert de sorts~
+@55593=~Ce personnage a été investi de <EXACVAL1> ; il peut le lancer une fois~
+@55594=~<EXACVAL1> ne peut pas être stocké avec Incantation chantée~
+@55595=~<EXACVAL1> a été stocké dans ce personnage et sera libéré occasionnellement lorsque le barde chantera son chant de barde~
+@55596=~<EXACVAL1> ne peut pas être stocké dans ce séquenceur~
+@55597=~<EXACVAL1> a été stocké dans le séquenceur~
+@55598=~Le sort <EXACVAL1> a été stocké dans ce personnage et sera libéré dans les bonnes conditions~
+@55599=~Contingence déclenchée~
+
+@55601=~Immunisé~
+@55602=~Absorbé~
+@55603=~ (Liche)~
+@55604=~, +<EXRDVAL1> dégâts~
+@55605=~, -<EXRDVAL1> malus aux dégâts~
+@55606=~, jet minimum <EXRLVAL1>~
+@55607=~, jet maximum <EXRLVAL1>~
+
+@55701=~Échec du sort : Retour dans le temps n’a pas été initialisé pour commencer à suivre les effets sur ce personnage. C’est maintenant fait, donc le sort devrait fonctionner la prochaine fois que le personnage le lancera.~
+@55702=~Indemne~
+@55703=~À peine blessé~
+@55704=~Blessé~
+@55705=~Grièvement blessé~
+@55706=~Proche de la mort~
+@55707=~Enregistrement effacé~
+@55708=~Enregistrement des sorts~
+@55709=~Enregistrement terminé~
+@55710=~Enregistrement activé~
+@55711=~A enregistré <EXRCSPELL>~
+@55712=~A enregistré <EXRCSPELL> ciblant <EXRCTARGET>~
+@55713=~<EXRCSPELL> n’a pas été enregistré ; il doit cibler un membre du groupe ou un endroit~
+@55714=~Actuellement, il n’y a aucun sort enregistré à lancer~
+@55715=~Le sort~
+@55716=~Lancer le sort <EXCCSPELL>~
+@55717=~Ce mort-vivant a été renforcé et est devenu plus difficile à renvoyer~
+@55718=~Remarque : Actuellement, vous avez déjà des sorts enregistrés. Toutes les nouvelles actions que vous enregistrerez seront ajoutées à l’enregistrement existant. Si vous souhaitez enregistrer des sorts à partir de zéro, appuyez sur <EXRCKEYDELETE> pour supprimer l’enregistrement précédent, puis appuyez sur <EXRCKEYRECORD> pour recommencer.~
+@55751=~Total du jet : <EXRRTOTAL>\nTotal enregistré : <EXRRRECTOTAL>\n\n~
+@55752=~Valeurs de caractéristiques non attribuées :\n<EXRRUNALLOCATED>\n\n~
+@55753=~Appuyez sur Z pour relancer, X pour enregistrer, C pour rappeler et V pour réattribuer les valeurs de caractéristiques.\n\n~
+@55754=~Appuyez sur Z pour relancer, X pour enregistrer et C pour rappeler.\n\n~
+@55755=~Cliquez sur le bouton plus d’une valeur de caractéristique pour attribuer le nombre restant le plus élevé à cette valeur de caractéristique. Cliquez sur le bouton moins pour désallouer le nombre.\n\n~
+@55756=~Valeur de caractéristique suivante~
+@55757=~Relancer~
+@55758=~Enregistrer~
+@55759=~Rappeler~
+@55760=~Réattribuer~
+@55761=~Sélection de sort profane : Niveau 1~
+@55762=~Sélection de sort profane : Niveau 2~
+@55763=~Sélection de sort profane : Niveau 3~
+@55764=~Sélection de sort profane : Niveau 4~
+@55765=~Sélection de sort profane : Niveau 5~
+@55766=~Sélection de sort profane : Niveau 6~
+@55767=~Sélection de sort profane : Niveau 7~
+@55768=~Sélection de sort profane : Niveau 8~
+@55769=~Sélection de sort profane : Niveau 9~
+@55770=~Réinitialiser les sorts~
+@55771=~Vous ne pouvez pas apprendre plus de 24 sorts d’un même niveau de sort.~
+@55772=~Vous pouvez choisir <EXWLNUM> sorts à inscrire dans votre livre de sorts.~
+@55773=~Vous pouvez choisir jusqu’à 1 sort que vous connaissez, qui est d’au moins 2 niveaux inférieur au niveau de sort le plus élevé que vous pouvez lancer, et le remplacer par un sort différent du même niveau.~
+@55774=~Vous pouvez choisir jusqu’à <EXWLNUM> sorts que vous connaissez, qui sont d’au moins 2 niveaux inférieurs au niveau de sort le plus élevé que vous pouvez lancer, et les remplacer par des sorts différents du même niveau.~
+@55781=~Remplacement de sort : Niveau 1~
+@55782=~Remplacement de sort : Niveau 2~
+@55783=~Remplacement de sort : Niveau 3~
+@55784=~Remplacement de sort : Niveau 4~
+@55785=~Remplacement de sort : Niveau 5~
+@55786=~Remplacement de sort : Niveau 6~
+@55787=~Remplacement de sort : Niveau 7~
+@55788=~Remplacement de sort : Niveau 8~
+@55789=~Remplacement de sort : Niveau 9~
+
+@55801=~Vol à la tire réussi et non détecté~
+@55802=~Vol à la tire réussi mais détecté~
+@55803=~Vol à la tire raté mais non détecté~
+@55804=~Vol à la tire raté et détecté~
+@55805=~Vol à la tire raté car la cible n’a rien qui puisse être volé, mais vous n’avez pas été détecté~
+@55806=~Vol à la tire raté car la cible n’a rien qui puisse être volé, et vous avez été détecté~
+@55807=~Vol à la tire raté car la cible n’a rien que vous puissiez voler avec votre niveau de compétence actuel, mais vous n’avez pas été détecté~
+@55808=~Vol à la tire raté car la cible n’a rien que vous puissiez voler avec votre niveau de compétence actuel, et vous avez été détecté~
+@55809=~Vol à la tire raté car la cible n’a rien que vous puissiez voler avec votre niveau de compétence actuel~
+@55810=~Le mécanisme qui actionne cela n’a pas de serrure conventionnelle, mais il est peut-être encore possible de le défoncer.~
+@55811=~Cette porte est trop robuste pour être forcée, mais la serrure peut encore être crochetée.~
+@55812=~Ce conteneur est trop robuste pour être forcé, mais la serrure peut encore être crochetée.~
+@55813=~Cette porte n’a pas de serrure conventionnelle et est trop robuste pour être forcée, mais un sort de Déblocage peut encore l’ouvrir.~
+@55814=~Ce conteneur n’a pas de serrure conventionnelle et est trop robuste pour être forcé, mais un sort de Déblocage peut encore l’ouvrir.~
+
+@55901=~Options d’IEex~
+@55902=~Brouillard de guerre transparent~
+@55903=~Remplace le brouillard de guerre entrelacé par une version utilisant la transparence. Cela corrige le scintillement causé par l’implémentation vanilla.~
+@55904=~Reformer le groupe~
+@55905=~Indicateurs d’action~
+@55906=~Active les indicateurs d'action au-dessus des portraits des personnages. Ces indicateurs représentent visuellement l'action (ou les actions) actuellement effectuée(s) par un personnage.~
