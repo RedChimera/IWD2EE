@@ -15,3 +15,4 @@
 54900-54999: Better Racial Enemies
 55000-55999: Special Lua Strings
 56000-56999: Misc
+57000-57999: Typo corrections in non-English languages

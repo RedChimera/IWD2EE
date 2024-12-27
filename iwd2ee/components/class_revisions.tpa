@@ -173,9 +173,6 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_incorporeal_monk_fist_progression *=.*~ ~ex_incorporeal_monk_fist_progression = {[0] = "USFISTIN", [1] = "USMFII01", [2] = "USMFII02", [3] = "USMFII03", [4] = "USMFII04", [5] = "USMFII05", [6] = "USMFII06", [7] = "USMFII07", [8] = "USMFII08", [9] = "USMFII09", [10] = "USMFII10", [11] = "USMFII11", [12] = "USMFII12", [13] = "USMFII13", [14] = "USMFII14", [15] = "USMFII15", [16] = "USMFII16", [17] = "USMFII17", [18] = "USMFII18", [19] = "USMFII19", [20] = "USMFII20", [21] = "USMFII21", [22] = "USMFII22", [23] = "USMFII23", [24] = "USMFII24", [25] = "USMFII25", [26] = "USMFII26", [27] = "USMFII27", [28] = "USMFII28", [29] = "USMFII29", [30] = "USMFII30", [31] = "USMFII31", [32] = "USMFII32", [33] = "USMFII33", [34] = "USMFII34", [35] = "USMFII35", [36] = "USMFII36", [37] = "USMFII37", [38] = "USMFII38", [39] = "USMFII39", [40] = "USMFII40", [41] = "USMFII41", [42] = "USMFII42", [43] = "USMFII43", [44] = "USMFII44", [45] = "USMFII45", [46] = "USMFII46", [47] = "USMFII47", [48] = "USMFII48", [49] = "USMFII49", [50] = "USMFII50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_apr_progression *=.*~ ~ex_monk_apr_progression = {[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10] = 0, [11] = 0, [12] = 0, [13] = 1, [14] = 1, [15] = 1, [16] = 2, [17] = 2, [18] = 2, [19] = 3, [20] = 3, [21] = 3, [22] = 4, [23] = 4, [24] = 4, [25] = 5, [26] = 5, [27] = 5, [28] = 6, [29] = 6, [30] = 6, [31] = 7, [32] = 7, [33] = 7, [34] = 8, [35] = 8, [36] = 8, [37] = 9, [38] = 9, [39] = 9, [40] = 10, [41] = 10, [42] = 10, [43] = 11, [44] = 11, [45] = 11, [46] = 12, [47] = 12, [48] = 12, [49] = 13, [50] = 13, }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_disable_order_multiclass_restrictions *=.*~ ~ex_disable_order_multiclass_restrictions = true~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_wizard_spell_learning_on_level_up *=.*~ ~ex_wizard_spell_learning_on_level_up = true~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_sorcerer_spell_replacement_on_level_up *=.*~ ~ex_sorcerer_spell_replacement_on_level_up = true~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_bard_spell_replacement_on_level_up *=.*~ ~ex_bard_spell_replacement_on_level_up = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_weapon_finesse_damage_bonus *=.*~ ~ex_weapon_finesse_damage_bonus = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_pickpocketing *=.*~ ~ex_revised_pickpocketing = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_lockpicking *=.*~ ~ex_revised_lockpicking = true~
@@ -242,10 +239,10 @@ END
 // revised Animal Empathy and new strings
 
 COPY ~%mod_folder%/spl/SPIN108.spl~ ~override~
-  SAY NAME1 @895
-  SAY NAME2 @895
-  SAY UNIDENTIFIED_DESC @895
-  SAY IDENTIFIED_DESC @895
+  SAY NAME1 @813
+  SAY NAME2 @813
+  SAY UNIDENTIFIED_DESC @813
+  SAY IDENTIFIED_DESC @813
 COPY ~%mod_folder%/spl/USSTAE01.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE02.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE03.spl~ ~override~
@@ -667,7 +664,7 @@ COPY_EXISTING ~help02.2da~ ~override~
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~2~ BEGIN
-        SET strref = RESOLVE_STR_REF(@527)
+        SET strref = RESOLVE_STR_REF(@570)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~3~ BEGIN
@@ -1073,14 +1070,13 @@ STRING_SET 9567 @822
 STRING_SET 9566 @820
 STRING_SET 9565 @818
 STRING_SET 9564 @816
-STRING_SET 9562 @527
+STRING_SET 9562 @570
 STRING_SET 9559 @529
 STRING_SET 9561 @541
 STRING_SET 9560 @531
 STRING_SET 9558 @537
 STRING_SET 9557 @539
 STRING_SET 36 @535
-STRING_SET 35 @569
 STRING_SET 37695 @729
 
 STRING_SET 39846 @898
@@ -1159,7 +1155,7 @@ Disadvantages:
 STRING_SET 9556 @533
 STRING_SET 37 @525
 STRING_SET 36 @535
-STRING_SET 9563 @523
+STRING_SET 9563 @571
 
 // Copying over all the items involved in the revised shapeshifting forms.
 COPY ~%mod_folder%/itm/USSTDR07.itm~ ~override~

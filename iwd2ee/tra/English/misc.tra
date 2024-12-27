@@ -36,3 +36,10 @@ Icewind Dale 2: Enhanced Edition has certain optional components which reduce th
 @56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
 @56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
 @56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
+@56022=~MERCANTILE BACKGROUND:
+
+Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands.  You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
+
+Prerequisite: Human, deep gnome, or gray dwarf
+
+Benefit: You receive a 5% discount on buying items and a 10% mark up on selling items at stores.~

@@ -920,9 +920,6 @@ Questo incantesimo fa si' che un sentimento di rovina travolga il bersaglio. Per
 @6405=~Siamo venuti per essere pagati per il nostro lavoro alla fortezza a Shawford... e per tutte le altre missioni per le quali devi ancora pagarci.~
 @30070=~10 danni resistiti da un'arma non malvagia e non caotica~
 @30071=~15 danni resistiti da un'arma non malvagia e non caotica~
-
-//STRINGS THAT STILL NEED TRANSLATION
-
 @1031 = ~Nebbia di Eldath
 (Congiurazione) [Buono]
 Livello: Drd 7, Ilmater 8
@@ -1131,3 +1128,198 @@ Benefici: Anche dopo aver soddisfatto i requisiti iniziali, e' necessario ripete
 * Gli attacchi senz'armi sono sostituiti da un Tocco del Lich, che infligge 3d10+5 danni da freddo e paralizza il bersaglio per 10 round se il tiro salvezza fallisce (stessa DC dell'incantesimo Tocco del Lich).
 * Possiedi un'aura di paura; qualsiasi nemico entro 6 metri che sia di almeno 5 livelli inferiori deve effettuare un tiro salvezza sulla Volontà (DC 10 + modificatore di Carisma/Intelligenza) o fuggire per 1 round.
 * Possiedi un filatterio che immagazzina la tua forza vitale. Se muori, verrai automaticamente rianimato dopo 8 ore. Tuttavia, se tutti i membri del gruppo muoiono, i nemici distruggono il filatterio e la partita finisce.~
+
+//STRINGS THAT STILL NEED TRANSLATION
+
+@55905=~Action Indicators~
+@55906=~Enables action indicators above character portraits. These indicators visually represent the action(s) currently being performed by a character.~
+@55907=~Highlight Empty Containers in Gray~
+@55908=~Changes the highlight color of empty containers to gray, overriding the default green color. This helps differentiate containers that have already been looted by the party.~
+@55909=~Scrolling~
+@55910=~Scroll Up~
+@55911=~Scroll Left~
+@55912=~Scroll Down~
+@55913=~Scroll Right~
+@55914=~Scroll Up (Alt)~
+@55915=~Scroll Left (Alt)~
+@55916=~Scroll Down (Alt)~
+@55917=~Scroll Right (Alt)~
+@55918=~Scroll Top Left~
+@55919=~Scroll Bottom Left~
+@55920=~Scroll Bottom Right~
+@55921=~Scroll Top Right~
+@55922=~Scroll Top Left (Alt)~
+@55923=~Scroll Bottom Left (Alt)~
+@55924=~Scroll Bottom Right (Alt)~
+@55925=~Scroll Top Right (Alt)~
+@55926=~IEex~
+@55927=~Toggle Quickloot~
+@55393=~Sneak attack averted by Uncanny Dodge~
+@41650=~Oh, don't get me started.~
+@11583    = ~Protean Hammer +3~
+@11584    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+
+**************************************
+
+Bring potatoes. Will pay in gold.
+
+-Airon Broun
+
+**************************************
+
+Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment. 
+
+Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
+Option 1:
+  Corrosive Burst: +1d6 acid damage and 30% chance of +1d10 extra acid damage
+Option 2:
+  Flaming Burst: +1d6 fire damage and 20% chance of +2d10 extra fire damage
+Option 3:
+  Frost Burst: +1d6 cold damage and 10% chance of +3d10 extra cold damage
+Weight: 7 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@11585    = ~Masher +5~
+@11586    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+
+**************************************
+
+Bring potatoes. Will pay in gold.
+
+-Airon Broun
+
+**************************************
+
+Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment.
+
+Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Impact: Increases chance of scoring a critical hit
+  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
+Option 1:
+  Corrosive Burst: +1d6 acid damage and 60% chance of +2d10 extra acid damage
+Option 2:
+  Flaming Burst: +1d6 fire damage and 40% chance of +4d10 extra fire damage
+Option 3:
+  Frost Burst: +1d6 cold damage and 20% chance of +6d10 extra cold damage
+Weight: 7 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@56022=~MERCANTILE BACKGROUND:
+
+Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands.  You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
+
+Prerequisite: Human, deep gnome, or gray dwarf
+
+Benefit: You receive a 5% discount on buying items and a 10% mark up on selling items at stores.~
+@23088=~Retriever Claw~
+@24035=~Fire Ray~
+@24036=~Cold Ray~
+@24037=~Electricity Ray~
+@24038=~Petrification Ray~
+@1121    = ~Flesh to Stone
+(Transmutation)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: Fortitude negates
+
+This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead.~
+@38457     = ~Chaos Cast
+(Universal)
+Level: Sor/Wiz 4
+Range: Sight of Caster
+Duration: Special
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Special
+
+This spell casts a random wizard spell on the target creature, which could be a spell of any level between 5 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+
+The main advantage of Chaos Cast is that the random spell will be higher than level 4. The disadvantage is that the spell might not be useful in the current situation.~
+@30365=~Protected by Elemental Absorption~
+@35958     = ~Elemental Absorption~
+@36958     = ~Elemental Absorption
+(Abjuration)
+Level: Drd 9
+Range: Touch
+Duration: 12 rounds
+Casting Time: 9
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell allows the recipient to absorb elemental attacks, healing instead of taking damage. For the duration, if the target would take fire, cold, electrical or acid damage, they instead heal Hit Points equal to the damage they would have taken.~
+@37866     = ~Clone~
+@38866     = ~Clone
+(Necromancy)
+Level: Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent until used
+Casting Time: 20
+Area of Effect: 1 creature
+Saving Throw: None
+
+A dubious alternative to resurrection, this spell creates an inert duplicate of a party member. After the spell is cast, the clone requires 8 hours to grow into a suitable replacement for the original character. Once that time has passed, if the original character dies (or is already dead) while in the same area as the clone, their soul will be transferred to the clone, which will join the party with the exact same stats and abilities of the original character. A party member cannot have more than one inert clone in the same area at one time.
+
+Clone can be cast on a living party member, or it can be cast targeting a dead character's portrait.~
+@94     = ~Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems~
+@570    = ~BARD:
+
+The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
+* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
+* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
+* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
+* Many rogue like skills are class skills of the Bard.
+* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
+* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
+* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
+* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
+* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+
+A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+
+* 30th level: The bard can now do other actions while singing a bard song.
+
+Disadvantages:
+* Bards are not as effective in hand-to-hand combat as warriors or priests.
+* Bards have slower access to spells than a wizard or priest.~
+@571    = ~WIZARD:
+
+The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+
+Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-4
+
+Advantages:
+* Proficient with all simple weapons except for simple missile weapons.
+* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
+* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+
+Disadvantages:
+* Starts with no proficiencies in armor and is a very poor at melee c

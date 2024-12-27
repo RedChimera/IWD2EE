@@ -9,6 +9,11 @@ INTERJECT_COPY_TRANS2 ~11KOLUHM~ 17 ~INTERJECTUSVEIRJ1~
  = @41591
  == ~11KOLUHM~ @41592 
  END
+ 
+ADD_TRANS_TRIGGER ~12TARRAN~ 4 ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USREIG)")~
+
+EXTEND_BOTTOM ~12TARRAN~ 4 IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USREIG)")~
+ THEN EXTERN ~USREIGJ~ 95 END
 
 ADD_TRANS_TRIGGER ~12SHAWFO~ 32 ~!Global("US_Geoffrey_Convinced_To_Join","GLOBAL",1)~
 EXTEND_BOTTOM ~12SHAWFO~ 32 IF ~  Global("Palisade_Iron_Collar_Quest","GLOBAL",2)

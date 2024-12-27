@@ -93,11 +93,12 @@
 @91   = ~More Persuasion Options~
 @92   = ~Add Additional Ways to Progress Through Certain Areas~
 @93   = ~Point buy - Increasing an ability score above a certain value requires extra points, and they cannot be decreased below 8 (like in Neverwinter Nights)~
+@94   = ~Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems~
 @98   = ~You must first install the core component.~
 @99   = ~The Widescreen Mod is not compatible with IWD2EE and will crash the game if installed with IWD2EE. Please uninstall it. IWD2EE already allows you to increase the game's resolution; you do not need the Widescreen Mod.~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.
 To install IWD2EE, do these steps in this order:
-1. Uninstall all your other mods.
+1. Uninstall all your other mods (if any).
 2. After you do that, look in the folder called "override" and delete everything from that folder.
 3. Install your mods again, including IWD2EE.~

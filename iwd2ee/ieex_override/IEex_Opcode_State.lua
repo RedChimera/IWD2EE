@@ -293,6 +293,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local savingthrow = IEex_ReadDword(effectData + 0x3C)
 		local savebonus = IEex_ReadDword(effectData + 0x40)
 		local special = IEex_ReadDword(effectData + 0x44)
+		local resist_dispel = IEex_ReadDword(effectData + 0x58)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
 --[[
 		if opcode == 500 and resource == "MECOPYEQ" then
@@ -352,6 +353,23 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local sourceSpell = ex_source_spell[parent_resource]
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
+		end
+		if resist_dispel == 1 then
+			local spellResistancePenetration = IEex_ReadDword(effectData + 0xC8)
+			IEex_IterateActorEffects(sourceID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 288 and theparameter2 == 199 then
+					if (thespecial == 0 or thespecial == casterClass) and (theresource == "" or theresource == parent_resource or theresource == sourceSpell) then
+						spellResistancePenetration = spellResistancePenetration + theparameter1
+						IEex_WriteDword(effectData + 0xC8, spellResistancePenetration)
+					end
+				end
+			end)
 		end
 		if ex_trueschool[parent_resource] ~= nil then
 			school = ex_trueschool[parent_resource]
@@ -791,6 +809,16 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				IEex_WriteWord(creatureData + 0x5C0, minHP)
 				return true
 			end
+			if ex_current_ghostwalk_target_offset["" .. targetID] then
+				local ghostwalkTargetID = ex_current_ghostwalk_target_offset["" .. targetID][1]
+				local ghostwalkOffsetX = ex_current_ghostwalk_target_offset["" .. targetID][2]
+				local ghostwalkOffsetY = ex_current_ghostwalk_target_offset["" .. targetID][3]
+				local offsetString = ghostwalkOffsetX .. "." .. ghostwalkOffsetY
+				if ex_ghostwalk_offsets_taken["" .. ghostwalkTargetID] then
+					ex_ghostwalk_offsets_taken["" .. ghostwalkTargetID][offsetString] = nil
+				end
+				ex_current_ghostwalk_target_offset["" .. targetID] = nil
+			end
 		end
 		if opcode == 12 then
 			local altDamageList = ex_alternative_damage_type[damageType]
@@ -1042,7 +1070,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 
-		return false
 	end)
 
 	IEex_ScreenEffectsStats_Init = function(stats)

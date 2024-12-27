@@ -710,7 +710,7 @@ Saving Throw: None
 
 Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 2d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
 @1120    = ~Flesh to Stone~
-@1121    = ~Flesh to Stone 
+@1121    = ~Flesh to Stone
 (Transmutation)
 Level: Sor/Wiz 6
 Range: Sight of Caster
@@ -719,7 +719,7 @@ Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead or creatures who have been blinded.~
+This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead.~
 @1122    = ~Power Word: Silence~
 @1123    = ~Power Word: Silence 
 (Divination)
@@ -1024,7 +1024,7 @@ Casting Time: 9
 Area of Effect: 30-foot radius
 Saving Throw: None
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will suffer wracking pains throughout their body, reducing their Dexterity scores by 6 and impose a -6 penalty on attack rolls, skill checks and ability checks. This spell has no effect on blind creatures.
+This spell conjures forth a magical glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will suffer wracking pains throughout their body, reducing their Dexterity scores by 6 and imposing a -6 penalty on attack rolls and skill checks. This spell has no effect on blind creatures.
 ~
 @1546    = ~Symbol of Death~
 @1547    = ~Symbol of Death 
@@ -2944,7 +2944,7 @@ This ability may be used as a free action.~
 @30362=~... Symbol of Hopelessness.~
 @30363=~... Symbol of Stunning.~
 @30364=~... Teleport Step.~
-@30365=~~
+@30365=~Protected by Elemental Absorption~
 @30366=~~
 @30367=~~
 @30368=~~
@@ -4321,6 +4321,17 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
+@35958     = ~Elemental Absorption~
+@36958     = ~Elemental Absorption
+(Abjuration)
+Level: Drd 9
+Range: Touch
+Duration: 12 rounds
+Casting Time: 9
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell allows the recipient to absorb elemental attacks, healing instead of taking damage. For the duration, if the target would take fire, cold, electrical or acid damage, they instead heal Hit Points equal to the damage they would have taken.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination)
@@ -4649,9 +4660,9 @@ Casting Time: 1
 Area of Effect: Special
 Saving Throw: Special
 
-This spell casts a random wizard spell on the target creature, which could be a spell of any level between 1 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+This spell casts a random wizard spell on the target creature, which could be a spell of any level between 5 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
 
-The main advantage of Chaos Cast is that the random spell is more likely to be higher than level 4 than lower (since there are more levels above level 4 than below). The disadvantage is that the spell might not be useful in the current situation.~
+The main advantage of Chaos Cast is that the random spell will be higher than level 4. The disadvantage is that the spell might not be useful in the current situation.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -5087,6 +5098,19 @@ Saving Throw: Fortitude negates
 Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with +4 DC, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
 
 If True Polymorph is cast on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
+@37866     = ~Clone~
+@38866     = ~Clone
+(Necromancy)
+Level: Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent until used
+Casting Time: 20
+Area of Effect: 1 creature
+Saving Throw: None
+
+A dubious alternative to resurrection, this spell creates an inert duplicate of a party member. After the spell is cast, the clone requires 8 hours to grow into a suitable replacement for the original character. Once that time has passed, if the original character dies (or is already dead) while in the same area as the clone, their soul will be transferred to the clone, which will join the party with the exact same stats and abilities of the original character. A party member cannot have more than one inert clone in the same area at one time.
+
+Clone can be cast on a living party member, or it can be cast targeting a dead character's portrait.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

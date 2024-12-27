@@ -4334,6 +4334,34 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local numberOfAttacksString = IEex_FetchString(9458)
 	local criticalHitString = IEex_FetchString(41122)
 	local favoredClassString = IEex_FetchString(40310)
+	local acidString = IEex_FetchString(15578)
+	local coldString = IEex_FetchString(15546)
+	local electricityString = IEex_FetchString(15577)
+	local fireString = IEex_FetchString(15545)
+	local magicDamageString = IEex_FetchString(40319)
+	local poisonString = IEex_FetchString(5805)
+	local slashingString = IEex_FetchString(11768)
+	local piercingString = IEex_FetchString(11769)
+	local bludgeoningString = IEex_FetchString(11770)
+	local missileString = IEex_FetchString(11767)
+	local hasDamageImmunity = false
+	local damageImmunityList = {[0x0] = 0, [0x1] = 0, [0x2] = 0, [0x4] = 0, [0x8] = 0, [0x10] = 0, [0x20] = 0, [0x40] = 0, [0x80] = 0, [0x100] = 0, }
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		if theopcode == 288 and theparameter2 == 214 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if damageImmunityList[theparameter1] then
+				hasDamageImmunity = true
+				if bit.band(thesavingthrow, 0x10000) > 0 then
+					damageImmunityList[theparameter1] = 2
+				else
+					damageImmunityList[theparameter1] = 1
+				end
+			end
+		end
+	end)
 	local lookForClassNames = (descPanelNum == 0)
 	ex_current_record_on_weapon_statistics = false
 	IEex_IterateCPtrListNode(m_plstStrings, function(lineEntry, node)
@@ -5325,6 +5353,68 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				newLowestCriticalHitRoll = 1
 			end
 			line = string.gsub(line, "%d+%-", newLowestCriticalHitRoll .. "-")
+		elseif hasDamageImmunity and descPanelNum == 0 then
+			if string.match(line, bludgeoningString .. ":") then
+				if damageImmunityList[0x0] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x0] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, acidString .. ":") then
+				if damageImmunityList[0x1] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x1] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, coldString .. ":") then
+				if damageImmunityList[0x2] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x2] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, electricityString .. ":") then
+				if damageImmunityList[0x4] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x4] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, fireString .. ":") then
+				if damageImmunityList[0x8] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x8] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, piercingString .. ":") then
+				if damageImmunityList[0x10] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x10] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, poisonString .. ":") then
+				if damageImmunityList[0x20] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x20] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, magicDamageString .. ":") then
+				if damageImmunityList[0x40] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x40] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, missileString .. ":") then
+				if damageImmunityList[0x80] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x80] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			elseif string.match(line, slashingString .. ":") then
+				if damageImmunityList[0x100] == 1 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55601))
+				elseif damageImmunityList[0x100] == 2 then
+					line = string.gsub(line, "%d+", IEex_FetchString(ex_tra_55602))
+				end
+			end
 		end
 		-- do whatever changes you want to the line here
 		IEex_CString_Set(lineEntry + 0x4, line)

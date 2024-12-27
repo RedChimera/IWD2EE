@@ -1,0 +1,51 @@
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_wizard_spell_learning_on_level_up *=.*~ ~ex_wizard_spell_learning_on_level_up = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_sorcerer_spell_replacement_on_level_up *=.*~ ~ex_sorcerer_spell_replacement_on_level_up = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_bard_spell_replacement_on_level_up *=.*~ ~ex_bard_spell_replacement_on_level_up = true~
+
+COPY_EXISTING ~IEex_TRA.lua~ ~override~
+	SPRINT ex_str_ability_roll_total @55751
+	REPLACE_TEXTUALLY ~ex_str_ability_roll_total *=.*~ ~ex_str_ability_roll_total = "%ex_str_ability_roll_total%"~
+	SPRINT ex_str_ability_roll_unallocated @55752
+	REPLACE_TEXTUALLY ~ex_str_ability_roll_unallocated *=.*~ ~ex_str_ability_roll_unallocated = "%ex_str_ability_roll_unallocated%"~
+//	SPRINT ex_str_ability_roll_help_1 @55753
+//	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_1 *=.*~ ~ex_str_ability_roll_help_1 = "%ex_str_ability_roll_help_1%"~
+	SPRINT ex_str_ability_roll_help_2 @55755
+	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_2 *=.*~ ~ex_str_ability_roll_help_2 = "%ex_str_ability_roll_help_2%"~
+	ex_tra_55757 = RESOLVE_STR_REF(@55757)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55757 *=.*~ ~ex_tra_55757 = %ex_tra_55757%~
+	ex_tra_55758 = RESOLVE_STR_REF(@55758)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55758 *=.*~ ~ex_tra_55758 = %ex_tra_55758%~
+	ex_tra_55759 = RESOLVE_STR_REF(@55759)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55759 *=.*~ ~ex_tra_55759 = %ex_tra_55759%~
+	ex_tra_55760 = RESOLVE_STR_REF(@55760)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55760 *=.*~ ~ex_tra_55760 = %ex_tra_55760%~
+
+STRING_SET 9563 @523
+STRING_SET 9562 @527
+STRING_SET 35 @569
+
+// New descriptions for classes
+COPY_EXISTING ~help02.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~2~ BEGIN
+        SET strref = RESOLVE_STR_REF(@527)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~10~ BEGIN
+        SET strref = RESOLVE_STR_REF(@569)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~11~ BEGIN
+        SET strref = RESOLVE_STR_REF(@523)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY

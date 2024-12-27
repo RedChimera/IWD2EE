@@ -16,7 +16,6 @@ Languages:
 English
 Italian
 Russian
-French
 
 Components:
 
@@ -25,50 +24,51 @@ Components:
 3. Looser Alignment Restrictions for Classes
 4. Spell Revisions
 5. Spell Focus Feats for All Schools
-6. Item Revisions
-7. Creature Revisions
-8. Better XP Progression
-9. More Interesting Alternative to the Palisade Quests
-10. Add Additional Ways to Progress Through Certain Areas
-11. Faster Wandering Village
-12. Faster Dragon's Eye
-13. Shorten the Dragon's Eye time loop questline to a single battle
-14. Add more scrolls to the game
-15. Revised Creature Immunities
-16. More Accurate Saving Throws for Enemies
-17. Revise Critical Hit Immunity
-18. Better Racial Enemies for Rangers
-19. Cosmetic Tweaks
-20. More Persuasion Options
-21. NPC Core
-22. NPCs start with experience
-23. New GUI
-24. Looping Main Theme
-25. Revised Battle Square
-26. Minor Damage Resistance for Armor and Shields
-27. Race Revisions
-28. Revise racial level adjustment/ECL
-29. Enemies give the same amount of experience regardless of the party's level
-30. Adjust encounter level-scaling
-31. Reduce enemy HP bonuses in Heart of Fury Mode
-32. Reduce enemy attack bonuses in Heart of Fury Mode
-33. Reduce enemy saving throw bonuses in Heart of Fury Mode
-34. Weaken allied summoned creatures in Heart of Fury Mode
-35. Have the party start with experience in Heart of Fury Mode
-36. Reduce the delay between sneak attacks
-37. Increase the level cap
-38. Always learn spells from scrolls successfully
-39. Add attacks of opportunity to the game
-40. Change the way ability scores are assigned at character creation
-41. Add more traps
-42. Add key bindings for automating buffing
+6. Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems
+7. Item Revisions
+8. Creature Revisions
+9. Better XP Progression
+10. More Interesting Alternative to the Palisade Quests
+11. Add Additional Ways to Progress Through Certain Areas
+12. Faster Wandering Village
+13. Faster Dragon's Eye
+14. Shorten the Dragon's Eye time loop questline to a single battle
+15. Add more scrolls to the game
+16. Revised Creature Immunities
+17. More Accurate Saving Throws for Enemies
+18. Revise Critical Hit Immunity
+19. Better Racial Enemies for Rangers
+20. Cosmetic Tweaks
+21. More Persuasion Options
+22. NPC Core
+23. NPCs start with experience
+24. New GUI
+25. Looping Main Theme
+26. Revised Battle Square
+27. Minor Damage Resistance for Armor and Shields
+28. Race Revisions
+29. Revise level adjustment/ECL
+30. Enemies give the same amount of experience regardless of the party's level
+31. Adjust encounter level-scaling
+32. Reduce enemy HP bonuses in Heart of Fury Mode
+33. Reduce enemy attack bonuses in Heart of Fury Mode
+34. Reduce enemy saving throw bonuses in Heart of Fury Mode
+35. Weaken allied summoned creatures in Heart of Fury Mode
+36. Have the party start with experience in Heart of Fury Mode
+37. Reduce the delay between sneak attacks
+38. Increase the level cap
+39. Always learn spells from scrolls successfully
+40. Add attacks of opportunity to the game
+41. Change the way ability scores are assigned at character creation
+42. Add more traps
+43. Add key bindings for automating buffing
 
 --IWD2EE Core--
 
 The core component must be installed for any other component to be installed. It includes various quality of life changes.
 
 * Load times are much faster.
-* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game. You should play at 600p or 768p height to make the in-game UI take up the full height of your screen, and to keep the text somewhat readable. For 21:9 and other ultrawide displays, you can set a custom resolution (like 1835x768 or 1433x600) in the ddraw.ini file at the [iwd2] section.
+* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game.
 * IWD2EE includes a ddraw fix unless you already had one installed. This should improve performance.
 * Scrolling the screen should be smoother on some devices.
 * It is possible to scroll with the middle mouse button.
@@ -105,8 +105,6 @@ Level 13: The War Chant of Sith: +2 generic armor bonus, physical damage resista
 Level 20: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. Increases to +10 spell resistance and 10/- resistance to magical damage at level 28.
 
 Creature Revisions also makes it so enemies early on use more sound-based spells and abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
-
-As in PnP, bards can, on certain level ups, replace one of their lower level spells with another spell of the same level.
 
 Clerics: Clerics are not changed much by Class Revisions, but Spell Revisions improves the spontaneous casting and domain systems.
 
@@ -170,9 +168,9 @@ Paladin of Mystra:
 
 Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now scales with the ranger's Wilderness Lore skill.
 
-Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. As in PnP, sorcerers can, on certain level ups, replace one of their lower level spells with another spell of the same level.
+Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth.
 
-Wizards: As in PnP, wizards can choose two new spells to learn on each level up, which can be of any spell level the wizard has accessed. Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
+Wizards: Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
 
 Although the inherent changes to clerics, sorcerers, and wizards aren't huge, all spellcasting classes benefit greatly from some the new feats, especially metamagic feats.
 
@@ -222,6 +220,13 @@ Spell Focus: Evocation/Conjuration
 Spell Focus: Enchantment/Illusion
 Spell Focus: Necromancy/Divination
 Spell Focus: Transmutation/Abjuration
+
+--Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems--
+
+This component has two main features:
+
+* Wizards can choose two new spells to learn on each level up, which can be of any spell level the wizard has accessed.
+* Bards and sorcerers can, on certain level ups, replace one of their lower level spells with another spell of the same level.
 
 --Item Revisions--
 
@@ -596,6 +601,8 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 
 @CamDawg revised some of IWD2EE's WeiDU files to run faster.
+
+@Argent77 crafted the initial HTML template and stylesheet, which @WillScarlettOhara customized and expanded for this ReadMe.
 
 @Improbabile68 translated IWD2EE into Italian.
 

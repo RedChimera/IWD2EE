@@ -8052,11 +8052,13 @@ Damage:  1d8 + 3
 Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
-Special 1:
+Special:
+  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
+Option 1:
   Corrosive Burst: +1d6 acid damage and 30% chance of +1d10 extra acid damage
-Special 2:
+Option 2:
   Flaming Burst: +1d6 fire damage and 20% chance of +2d10 extra fire damage
-Special 3:
+Option 3:
   Frost Burst: +1d6 cold damage and 10% chance of +3d10 extra cold damage
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
@@ -8082,14 +8084,14 @@ Damage:  1d8 + 5
 Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
-Special 1:
+Special:
   Impact: Increases chance of scoring a critical hit
+  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
+Option 1:
   Corrosive Burst: +1d6 acid damage and 60% chance of +2d10 extra acid damage
-Special 2:
-  Impact: Increases chance of scoring a critical hit
+Option 2:
   Flaming Burst: +1d6 fire damage and 40% chance of +4d10 extra fire damage
-Special 3:
-  Impact: Increases chance of scoring a critical hit
+Option 3:
   Frost Burst: +1d6 cold damage and 20% chance of +6d10 extra cold damage
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer

@@ -711,12 +711,12 @@ Advantages:
 * Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
 * +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
 * 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
-* 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
 * Many rogue like skills are class skills of the Bard.
 * Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
 * 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
 * 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
 * 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
 * 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
 * 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
 * 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
@@ -1060,6 +1060,48 @@ Advantages:
 
 Disadvantages:
 * Starts with no proficiencies in armor and is very poor at melee combat.~
+@570    = ~BARD:
+
+The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
+* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
+* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
+* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
+* Many rogue like skills are class skills of the Bard.
+* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
+* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
+* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
+* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
+* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+
+A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+
+* 30th level: The bard can now do other actions while singing a bard song.
+
+Disadvantages:
+* Bards are not as effective in hand-to-hand combat as warriors or priests.
+* Bards have slower access to spells than a wizard or priest.~
+@571    = ~WIZARD:
+
+The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+
+Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-4
+
+Advantages:
+* Proficient with all simple weapons except for simple missile weapons.
+* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
+* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+
+Disadvantages:
+* Starts with no proficiencies in armor and is a very poor at melee combat.~
 @580    = ~
 
 Domain Spells:
@@ -1143,7 +1185,7 @@ Domain Spells:
 6: Boulder Roll, Divine Shell
 7: Antimagic Field, Lutzaen's Local Teleport
 8: Prismatic Spray, Reverse Gravity
-9: Elemental Legion, Teleport Step~
+9: Aegis, Elemental Legion~
 @587    = ~
 
 Domain Spells:

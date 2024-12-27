@@ -787,6 +787,9 @@ function IEex_LevelUp_ExtraFeatListener()
 					local screenCharacter = IEex_GetEngineCharacter()
 					local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
 					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					for i = 0, 29, 1 do
+						IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, i), 1)
+					end
 					-- Add to popup stack
 					IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
 					local trySetPanelEnabled = function(panel, enabled)
@@ -861,6 +864,9 @@ function IEex_LevelUp_ExtraFeatListener()
 						local screenCharacter = IEex_GetEngineCharacter()
 						local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
 						local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+						for i = 0, 29, 1 do
+							IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, i), 1)
+						end
 						-- Add to popup stack
 						IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
 						local trySetPanelEnabled = function(panel, enabled)

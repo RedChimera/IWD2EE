@@ -113,6 +113,7 @@ ex_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "
 ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
 ex_improved_uncanny_dodge_class_level = {[1] = 5, [9] = 6, }
+ex_enable_dynamic_gender_tokens = false
 ex_alternative_damage_type = {
 [0x80000] = {[0x0] = {ex_tra_55386, 0x0, ""}, [0x1] = {ex_tra_55387, 0x2, ""}},
 [0x400000] = {[0x0] = {ex_tra_55371, 0x0, ""}, [0x1] = {ex_tra_55372, 0x0, ""}, [0x2] = {ex_tra_55373, 0x0, ""}, [0x4] = {ex_tra_55374, 0x0, ""}, [0x8] = {ex_tra_55370, 0x1, ""}},

@@ -222,6 +222,10 @@ COPY_EXISTING ~63CWMAD1.itm~ ~override~ ~USHFCWM1.itm~ ~override~
 	SAY NAME1 @23087
 	SAY NAME2 @23087
 
+COPY_EXISTING ~USCWRETR.itm~ ~override~
+	SAY NAME1 @23088
+	SAY NAME2 @23088
+
 COPY_EXISTING ~USCWDRCH.itm~ ~override~
 	SAY NAME1 @23085
 	SAY NAME2 @23085
@@ -345,6 +349,22 @@ COPY_EXISTING ~usms035.spl~ ~override~
 COPY_EXISTING ~usms037.spl~ ~override~
 	SAY NAME1 @24034
 	SAY NAME2 @24034
+
+COPY_EXISTING ~usms038.spl~ ~override~
+	SAY NAME1 @24035
+	SAY NAME2 @24035
+
+COPY_EXISTING ~usms039.spl~ ~override~
+	SAY NAME1 @24036
+	SAY NAME2 @24036
+
+COPY_EXISTING ~usms040.spl~ ~override~
+	SAY NAME1 @24037
+	SAY NAME2 @24037
+
+COPY_EXISTING ~usms041.spl~ ~override~
+	SAY NAME1 @24038
+	SAY NAME2 @24038
 
 ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 
@@ -1482,9 +1502,10 @@ COPY_EXISTING ~50ABOMIN.cre~ ~override~
 	WRITE_BYTE proficiencysmallblade 2
 	WRITE_BYTE challengerating 16
 	WRITE_ASCII specialscript2 ~USYETI~ #8
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USENLARG~ slot=~boots~ mode=~replace~ END
+//	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USENLARG~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFAY~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFWB~ slot=~weapon2~ mode=~replace~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 savingthrow=0x100000 STR_VAR resource= EVAL ~MEENLARG~ END
 
 COPY_EXISTING ~50ABOMIN.cre~ ~override/USABOMIN.cre~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF52~ END
@@ -5383,11 +5404,62 @@ COPY_EXISTING ~USBEBILI.cre~ ~override~
 	SAY NAME1 @23076
 	SAY NAME2 @23076
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~rring~ mode=~replace~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USENLARG~ slot=~boots~ mode=~replace~ END
+//	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USENLARG~ slot=~boots~ mode=~replace~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 savingthrow=0x100000 STR_VAR resource= EVAL ~MEENLARG~ END
 
 COPY_EXISTING ~USBEBILI.cre~ ~override/USSBEBIL.cre~
 	WRITE_BYTE defaultvisibility 1
 	WRITE_ASCII specialscript2 ~USSBEBIL~ #8
+
+COPY_EXISTING ~63DMNCON.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=22 STR_VAR updatehp=~max~ END
+	WRITE_LONG animation 31235
+	WRITE_BYTE armorcolor 30
+	WRITE_BYTE leathercolor 30
+	WRITE_BYTE metalcolor 30
+	WRITE_BYTE minorcolor 30
+	WRITE_BYTE majorcolor 30
+	WRITE_BYTE skincolor 30
+	WRITE_SHORT armorclass 36
+	WRITE_BYTE strength 31
+	WRITE_BYTE dexterity 18
+	WRITE_BYTE constitution 14
+	WRITE_BYTE intelligence 3
+	WRITE_BYTE wisdom 11
+	WRITE_BYTE charisma 3
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE elecresistance 100
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE spellresistance 25
+	WRITE_BYTE magicfireresistance 10
+	WRITE_BYTE magiccoldresistance 100
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 10
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE enchantmentlevel 0
+	WRITE_BYTE alignment 51
+	WRITE_BYTE specifics 115
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x40001000
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencypolearm 3
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_BYTE challengerating 18
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~00CIGOL1~ slot=~rring~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWRETR~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x2000000
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 savingthrow=0x100000 STR_VAR resource= EVAL ~MEENLARG~ END
 
 COPY_EXISTING ~USWIGHTI.cre~ ~override~
 	SAY NAME1 @23009
@@ -6786,6 +6858,9 @@ COPY_EXISTING ~AR6201.are~ ~override~
 COPY_EXISTING ~AR6300.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Guard_Commander~ script_combat=~USHDRBLU~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~ApocalypticBoneguar_3~ cre_file=~67SKXVM~ dlg_file=~67BLOOK~ END
+
+COPY_EXISTING ~AR6302.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~63DMNCON~ script_special3=~00AATGN~ END
 
 COPY_EXISTING ~AR6304.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed1~ script_combat=~60YTPRIC~ END
