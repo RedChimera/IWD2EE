@@ -107,8 +107,6 @@ Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du 
 
 Révisions des créatures fait également en sorte que les ennemis utilisent davantage de sorts et de capacités basés sur le son au début du jeu (comme le cri des harpies dans le Chapitre 1), ce qui rend la Chanson des Kaudies plus utile.
 
-Comme dans le jeu de rôle papier, les bardes peuvent, à certaines augmentations de niveau, remplacer l’un de leurs sorts de niveau inférieur par un autre sort de même niveau.
-
 Prêtres : les prêtres ne sont pas beaucoup changés par Remaniement des classes, mais Remaniement des sorts améliore les mécaniques d'incantation spontanée et des domaines.
 
 Druides : les druides bénéficient d'un nouvel ensemble de formes dans lesquelles ils peuvent se métamorphoser. Les capacités de chaque forme varient en fonction du niveau du druide.
@@ -171,9 +169,9 @@ Paladin de Mystra :
 
 Rôdeurs : les rôdeurs obtiennent plus d’emplacements de sorts, et ils les obtiennent à des niveaux inférieurs. Ils peuvent obtenir les dons Combat à deux armes amélioré et Feu nourri à des niveaux inférieurs à ceux des autres classes, et ils peuvent obtenir un deuxième rang dans ces dons pour une autre attaque par round. Ils peuvent également utiliser Collets naturels tous les 6 niveaux, ce qui piège les ennemis pendant 5 rounds en cas d'échec à un jet de sauvegarde de Réflexes. Collets naturels est beaucoup plus efficace que dans le jeu d'origine ; le DD du jet de sauvegarde évolue désormais avec la compétence Sens de la nature du rôdeur.
 
-Ensorceleurs : les ensorceleurs n'atteindront plus leur apogée au niveau 20 et ne connaîtront plus ensuite une croissance quasi nulle. Comme dans le jeu de rôle papier, les ensorceleurs peuvent, durant certains passages de niveau, remplacer l'un de leurs sorts de niveau inférieur par un autre sort de même niveau.
+Ensorceleurs : les ensorceleurs n'atteindront plus leur apogée au niveau 20 et ne connaîtront plus ensuite une croissance quasi nulle.
 
-Magiciens : Comme dans le jeu de rôle papier, les magiciens peuvent choisir deux nouveaux sorts à apprendre à chaque augmentation de niveau, pouvant être de n'importe quel niveau de sort auquel le magicien a accès. Les magiciens généralistes gagnent désormais +1 au DD de tous les sorts de magicien qu'ils lancent (les magiciens spécialistes gagnent +2 au DD des sorts de magicien qu'ils lancent de leur école, mais il s'agissait d'un avantage dans le jeu vanilla qui n'avait pas été documentée dans IWD2 jusqu'à présent).
+Magiciens : les magiciens généralistes gagnent désormais +1 au DD de tous les sorts de magicien qu'ils lancent (les magiciens spécialistes gagnent +2 au DD des sorts de magicien qu'ils lancent de leur école, mais il s'agissait d'un avantage dans le jeu vanilla qui n'avait pas été documentée dans IWD2 jusqu'à présent).
 
 Bien que les modifications inhérentes aux prêtres, ensorceleurs et magiciens ne soient pas énormes, toutes les classes de lanceurs de sorts bénéficient grandement de certains des nouveaux dons, en particulier des dons de métamagie.
 
