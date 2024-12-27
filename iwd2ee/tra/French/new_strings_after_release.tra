@@ -1248,195 +1248,194 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
-//STRINGS THAT STILL NEED TRANSLATION
-
-@55907=~Highlight Empty Containers in Gray~
-@55908=~Changes the highlight color of empty containers to gray, overriding the default green color. This helps differentiate containers that have already been looted by the party.~
-@55909=~Scrolling~
-@55910=~Scroll Up~
-@55911=~Scroll Left~
-@55912=~Scroll Down~
-@55913=~Scroll Right~
-@55914=~Scroll Up (Alt)~
-@55915=~Scroll Left (Alt)~
-@55916=~Scroll Down (Alt)~
-@55917=~Scroll Right (Alt)~
-@55918=~Scroll Top Left~
-@55919=~Scroll Bottom Left~
-@55920=~Scroll Bottom Right~
-@55921=~Scroll Top Right~
-@55922=~Scroll Top Left (Alt)~
-@55923=~Scroll Bottom Left (Alt)~
-@55924=~Scroll Bottom Right (Alt)~
-@55925=~Scroll Top Right (Alt)~
+@55907=~Surligner en gris les conteneurs vides~
+@55908=~Modifie la couleur de surlignage des conteneurs vides en gris, remplaçant la couleur verte par défaut. Cela permet de différencier les conteneurs déjà pillés par le groupe.~
+@55909=~Défilement~
+@55910=~Défiler vers le haut~
+@55911=~Défiler vers la gauche~
+@55912=~Défiler vers le bas~
+@55913=~Défiler vers la droite~
+@55914=~Défiler vers le haut (Alt)~
+@55915=~Défiler vers la gauche (Alt)~
+@55916=~Défiler vers le bas (Alt)~
+@55917=~Défiler vers la droite (Alt)~
+@55918=~Défiler en haut à gauche~
+@55919=~Défiler en bas à gauche~
+@55920=~Défiler en bas à droite~
+@55921=~Défiler en haut à droite~
+@55922=~Défiler en haut à gauche (Alt)~
+@55923=~Défiler en bas à gauche (Alt)~
+@55924=~Défiler en bas à droite (Alt)~
+@55925=~Défiler en haut à droite (Alt)~
 @55926=~IEex~
-@55927=~Toggle Quickloot~
-@55393=~Sneak attack averted by Uncanny Dodge~
-@41650=~Oh, don't get me started.~
-@11583    = ~Protean Hammer +3~
-@11584    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+@55927=~Activer/Désactiver le butin rapide~
+@55393=~Attaque sournoise évitée par Esquive instinctive~
+@41650=~Oh, ne me lancez pas sur ce sujet.~
+@11583    = ~Marteau inconstant +3~
+@11584    = ~Ce marteau est l’œuvre d’un inventeur gnome fort ingénieux et quelque peu magicien nommé Airon Broune ; en fait, on ne fait que supposer qu’Airon était gnome, puisque personne à ce jour ne l’a jamais rencontré. Quoi qu’il en soit, il semble qu’il ait prit possession d’une échoppe abandonnée aux abords d’une petite ville, et ce du jour au lendemain : la boutique était en effet vide depuis des lustres et se retrouva soudain parée d’écriteaux indiquant, dans toutes les langues connues, qu’il valait mieux passer son chemin sans s’attarder. Le précédent propriétaire se précipita sur les lieux en apprenant la nouvelle, mais abandonna bien vite toute velléité d’expropriation lorsqu’il vit un gros sac d’or apparaître à ses pieds. Peu de temps après, de curieuses affiches étaient placardées en ville et toutes arboraient le même message :
 
 **************************************
 
-Bring potatoes. Will pay in gold.
+Achète patates. Paiement en or
 
--Airon Broun
-
-**************************************
-
-Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment. 
-
-Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
-
-STATISTICS:
-
-Damage:  1d8 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
-Option 1:
-  Corrosive Burst: +1d6 acid damage and 30% chance of +1d10 extra acid damage
-Option 2:
-  Flaming Burst: +1d6 fire damage and 20% chance of +2d10 extra fire damage
-Option 3:
-  Frost Burst: +1d6 cold damage and 10% chance of +3d10 extra cold damage
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@11585    = ~Masher +5~
-@11586    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+- Airon Broune
 
 **************************************
 
-Bring potatoes. Will pay in gold.
+Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées… La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement…
 
--Airon Broun
+Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu… et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
+
+PARAMÈTRES :
+
+Dégâts : 1d8 + 3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Contondant
+Spécial :
+  Inflige l'un des types de dégâts supplémentaires suivants. Vous pouvez changer le type de dégâts qu'il inflige en appuyant sur le bouton Capacités après avoir fait un clic droit sur cette arme dans l'écran Inventaire.
+Option 1 :
+  Explosion corrosive : +1d6 de dégâts d'acide et 30% de chances d’infliger 1d10 de dégâts supplémentaires d'acide
+Option 2 :
+  Explosion enflammée : +1d6 de dégâts de feu et 20% de chances d’infliger 2d10 de dégâts supplémentaires de feu
+Option 3 :
+  Explosion de givre : +1d6 de dégâts de froid et 10% de chances d’infliger 3d10 de dégâts supplémentaires de froid
+Poids : 3,18 kg (7 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@11585    = ~Broyeur +5~
+@11586    = ~Ce marteau est l’œuvre d’un inventeur gnome fort ingénieux et quelque peu magicien nommé Airon Broune ; en fait, on ne fait que supposer qu’Airon était gnome, puisque personne à ce jour ne l’a jamais rencontré. Quoi qu’il en soit, il semble qu’il ait prit possession d’une échoppe abandonnée aux abords d’une petite ville, et ce du jour au lendemain : la boutique était en effet vide depuis des lustres et se retrouva soudain parée d’écriteaux indiquant, dans toutes les langues connues, qu’il valait mieux passer son chemin sans s’attarder. Le précédent propriétaire se précipita sur les lieux en apprenant la nouvelle, mais abandonna bien vite toute velléité d’expropriation lorsqu’il vit un gros sac d’or apparaître à ses pieds. Peu de temps après, de curieuses affiches étaient placardées en ville et toutes arboraient le même message :
 
 **************************************
 
-Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment.
+Achète patates. Paiement en or
 
-Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
+- Airon Broune
 
-STATISTICS:
+**************************************
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increases chance of scoring a critical hit
-  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
-Option 1:
-  Corrosive Burst: +1d6 acid damage and 60% chance of +2d10 extra acid damage
-Option 2:
-  Flaming Burst: +1d6 fire damage and 40% chance of +4d10 extra fire damage
-Option 3:
-  Frost Burst: +1d6 cold damage and 20% chance of +6d10 extra cold damage
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@56022=~MERCANTILE BACKGROUND:
+Intrigués, quelques habitants décidèrent de tenter leur chance et de livrer des sacs de patates à la mystérieuse échoppe. Il fallait pour cela faire tomber les féculents dans une trappe spéciale située à l’arrière du magasin pour voir aussitôt apparaître un petit sac d’or, contenant environ cinq fois plus d’or qu’on pouvait en attendre. Les patates de meilleure qualité étaient encore mieux récompensées… La nouvelle ne tarda pas à s’ébruiter et ce furent bientôt des montagnes de patates qui furent livrées à la boutique ! Qu’importe la quantité livrée, un sac d’or apparaissait toujours en paiement…
 
-Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands.  You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
+Toutes les fermes des environs se mirent donc instantanément à la culture de la patate, chacune tentant de produire les plus grosses et les plus goûteuses. Ce petit manège dura quelques années et la qualité des patates livrées devint si exceptionnelle que bientôt ce ne furent plus des sacs d’or, mais des objets magiques qui apparurent en paiement. Ne comprenant pas la teneur de ce nouveau mode de paiement, les paysans arrêtèrent aussitôt de cultiver des patates et vendirent les objets récupérés au premier venu… et ce marteau en fait partie. On peut modifier ses fonctions en insérant simplement des plaques spéciales dans sa tête. Ce marteau dispose ainsi de plaques permettant de causer des dégâts supplémentaires de l’acide, du froid ou du feu.
 
-Prerequisite: Human, deep gnome, or gray dwarf
+PARAMÈTRES :
 
-Benefit: You receive a 5% discount on buying items and a 10% mark up on selling items at stores.~
-@23088=~Retriever Claw~
-@24035=~Fire Ray~
-@24036=~Cold Ray~
-@24037=~Electricity Ray~
-@24038=~Petrification Ray~
-@1121    = ~Flesh to Stone
+Dégâts : 1d8 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Contondant
+Spécial :
+  Impact : Augmente les chances de réussir un coup critique
+  Inflige l'un des types de dégâts supplémentaires suivants. Vous pouvez changer le type de dégâts qu'il inflige en appuyant sur le bouton Capacités après avoir fait un clic droit sur cette arme dans l'écran Inventaire.
+Option 1 :
+  Explosion corrosive : +1d6 dégâts d'acide et 60% de chances d’infliger 2d10 dégâts supplémentaires d'acide
+Option 2 :
+  Explosion enflammée : +1d6 dégâts de feu et 40% de chances d’infliger 4d10 dégâts supplémentaires de feu
+Option 3 :
+  Explosion de givre : +1d6 dégâts de froid et 20% de chances d’infliger 6d10 dégâts supplémentaires de froid
+Poids : 3,18 kg (7 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@56022=~ANTÉCÉDENTS DE MARCHAND :
+
+De puissantes caravanes marchandes et guildes d'artisans contrôlent la richesse et le commerce des terres de Féérune. Tu viens d'une famille experte dans un domaine commercial et qui connaît parfaitement la valeur de tout type de bien ou de marchandise.
+
+Prérequis : Humain, gnome des profondeurs ou nain gris
+
+Avantages : Vous bénéficiez d'une réduction de 5% sur l'achat d'articles et d'une majoration de 10% sur la vente d'articles dans les magasins.~
+@23088=~Griffe de Récupération~
+@24035=~Rayon de feu~
+@24036=~Rayon de froid~
+@24037=~Rayon d'électricité~
+@24038=~Rayon de pétrification~
+@1121    = ~Pétrification
 (Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Niveau : Ens/Mag 6
+Portée : portée de vue
+Durée : Permanent
+Temps d’incantation : 6
+Zone d’effet : 1 créature
+Jet de sauvegarde : Vigueur annule
 
-This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead.~
-@38457     = ~Chaos Cast
-(Universal)
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: Special
+Ce sort transforme une créature vivante en pierre en cas d’échec du jet de Vigueur. Les effets de ce sort peuvent être inversés avec le sort de magicien de niveau 6, Transmutation de la pierre en chair. Ce sort n’a aucun effet sur les morts-vivants.~
+@38457     = ~Lancer chaotique
+(Universel)
+Niveau : Ens/Mag 4
+Portée : portée de vue
+Durée : Spéciale
+Temps d’incantation : 1
+Zone d’effet : Spéciale
+Jet de sauvegarde : Spécial
 
-This spell casts a random wizard spell on the target creature, which could be a spell of any level between 5 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+Ce sort lance un sort de magicien aléatoire sur la créature ciblée, pouvant être un sort de n’importe quel niveau entre 5 et 8. La nature du sort dépend de la cible. Si la cible est un ennemi, elle recevra un sort nuisible, mais si la cible est un allié, elle recevra un sort bénéfique. Les restrictions de ciblage sont respectées (un sort qui n’affecte que le lanceur ne sera pas choisi à moins que la cible ne soit le lanceur).
 
-The main advantage of Chaos Cast is that the random spell will be higher than level 4. The disadvantage is that the spell might not be useful in the current situation.~
-@30365=~Protected by Elemental Absorption~
-@35958     = ~Elemental Absorption~
-@36958     = ~Elemental Absorption
+L’avantage principal de Lancer chaotique est que le sort aléatoire est plus susceptible d’être supérieur au niveau 4 que d’être inférieur (puisqu’il y a plus de niveaux au-dessus du niveau 4 qu’en dessous). L’inconvénient est que le sort peut s’avérer inutile le moment venu.~
+@30365=~Protégé par Absorption élémentaire~
+@35958     = ~Absorption élémentaire~
+@36958     = ~Absorption élémentaire
 (Abjuration)
-Level: Drd 9
-Range: Touch
-Duration: 12 rounds
-Casting Time: 9
-Area of Effect: 1 creature
-Saving Throw: None
+Niveau : Dru 9
+Portée : toucher
+Durée : 12 rounds
+Temps d'incantation : 9
+Zone d'effet : 1 créature
+Jet de sauvegarde : Aucun
 
-This spell allows the recipient to absorb elemental attacks, healing instead of taking damage. For the duration, if the target would take fire, cold, electrical or acid damage, they instead heal Hit Points equal to the damage they would have taken.~
+Ce sort permet au destinataire d'absorber les attaques élémentaires, se soignant au lieu de subir des dégâts. Pendant la durée, si la cible devait subir des dégâts de feu, de froid, d'électricité ou d'acide, elle récupère à la place des points de vie égaux aux dégâts qu'elle aurait subis.~
 @37866     = ~Clone~
 @38866     = ~Clone
-(Necromancy)
-Level: Sor/Wiz 8
-Range: Sight of Caster
-Duration: Permanent until used
-Casting Time: 20
-Area of Effect: 1 creature
-Saving Throw: None
+(Nécromancie)
+Niveau : Ens/Mag 8
+Portée : portée de vue
+Durée : permanente jusqu'à utilisation
+Temps d'incantation : 20
+Zone d'effet : 1 créature
+Jet de sauvegarde : Aucun
 
-A dubious alternative to resurrection, this spell creates an inert duplicate of a party member. After the spell is cast, the clone requires 8 hours to grow into a suitable replacement for the original character. Once that time has passed, if the original character dies (or is already dead) while in the same area as the clone, their soul will be transferred to the clone, which will join the party with the exact same stats and abilities of the original character. A party member cannot have more than one inert clone in the same area at one time.
+Alternative douteuse à la résurrection, ce sort crée un double inerte d'un membre du groupe. Une fois le sort lancé, le clone nécessite 8 heures pour se développer en un substitut adapté au personnage original. Une fois ce délai écoulé, si le personnage original meurt (ou est déjà mort) alors qu'il se trouve dans la même zone que le clone, son âme sera transférée dans le clone, qui rejoindra le groupe avec exactement les mêmes caractéristiques et capacités que le personnage original. Un membre du groupe ne peut pas avoir plus d’un clone inerte dans la même zone à la fois.  
 
-Clone can be cast on a living party member, or it can be cast targeting a dead character's portrait.~
-@94     = ~Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems~
-@570    = ~BARD:
+Clone peut être lancé sur un membre vivant du groupe ou en ciblant le portrait d’un personnage mort.~
+@94     = ~Ajouter les règles du JdR papier concernant l'apprentissage des sorts de magicien et le remplacement des sorts de barde/ensorceleur~
+@570    = ~BARDE :
 
-The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+La force du barde réside dans sa personnalité agréable et charmante. Avec elle et son intelligence, il se fraye un chemin dans le monde. Un barde est un musicien talentueux et un répertoire ambulant de ragots, de contes et de traditions. Il apprend un peu de tout ce qui croise son chemin ; c'est un touche-à-tout, mais un maître de rien. Bien que de nombreux bardes soient des vauriens, leurs histoires et leurs chansons sont les bienvenues presque partout.
 
-Hit Points per Level: 1-6
+Points de vie par niveau : 1-6
 
-Advantages:
-* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
-* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
-* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
-* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
-* Many rogue like skills are class skills of the Bard.
-* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
-* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
-* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
-* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
-* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
-* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
-* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+Avantages :
+* Compétent avec toutes les armes simples, les armures légères, les armures moyennes et les boucliers. Le barde est également compétent avec les grandes épées.
+* Gagne un point en Arcanes blindés, réduisant les chances d'échec de sorts arcaniques de 35 %.
+* +1 à Alchimie, Connaissance (Arcanes) et Art magique.
+* Niveau 2 : Lancement de sorts. Les bardes acquièrent la capacité de lancer des sorts arcaniques.
+* De nombreuses compétences de type roublard sont des compétences de classe du barde.
+* Chansons de barde. Les bardes ont la capacité de chanter des mélodies qui ont des effets magiques sur les créatures à moins de trente pieds. Au fur et à mesure qu'ils progressent en niveau, ils acquièrent des chansons supplémentaires. Les chansons sont décrites en détail ci-dessous.
+* Niveau 1 : Le conte de Curran Strongheart. Lorsqu'elle est jouée, cette chanson confère à tous les alliés du barde +1 bonus d'attaque, +1 dégât et l'immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
+* Niveau 3 : Le chant de Kaudies. Lorsqu'elle est jouée, cette chanson confère à tous les alliés du barde l'immunité aux sorts et aux capacités néfastes basés sur le son, y compris Commandement, Silence, Commandement supérieur, Parole sacrée, Blasphème, Mot de pouvoir : Sommeil, Éclatement sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Aveuglement, Grand cri, Lamentation de la banshee, Mot de pouvoir : Mort, lamentations de harpies et les effets réservés aux ennemis de Chanson, Prière et Récitation.
+* Niveau 5 : La mélodie de Tymora. Lorsqu'elle est jouée, cette chanson confère aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences Connaissance (Arcanes), Alchimie et compétences de roublard. Aux niveaux 15 et 35, cette chanson accorde +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux jets de compétence.
+* Niveau 9 : Le désir de la sirène. Lorsqu'elle est jouée, cette chanson inflige à chaque créature qui l'entend une pénalité cumulative de -1 à ses jets de sauvegarde de volonté pendant 10 tours et doit réussir un jet de sauvegarde de volonté ou être envoûtée, incapable d'agir pendant un tour ou jusqu'à ce qu'elle subisse des dégâts. Le DD du jet de sauvegarde de volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un DD de 15.
+* Niveau 13 : Le chant de guerre de Sith. Lorsqu'elle est jouée, cette chanson confère aux alliés du barde un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/-, et ils régénèrent 3 points de dégâts par tour au combat. Aux niveaux 28 et 45, cette chanson accorde +2 supplémentaires à la CA, une résistance aux dégâts physiques de 3/-, 3 points de vie soignés par tour.
+* Niveau 20 : La ballade des trois héros. Lorsqu'elle est jouée, cette chanson confère aux alliés du barde +5 à la résistance aux sorts, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du conte de Curran Strongheart, de la mélodie de Tymora et du chant de guerre de Sith. Aux niveaux 30 et 50, cette chanson accorde +5 supplémentaires à la résistance aux sorts et 5/- de résistance aux dégâts magiques.
 
-A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+Un barde ne peut pas bénéficier au groupe avec plus d'une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumuleront. Les créatures invoquées ne bénéficient pas des chansons de barde.
 
-* 30th level: The bard can now do other actions while singing a bard song.
+* Niveau 30 : Le barde peut maintenant effectuer d'autres actions tout en chantant une chanson de barde.
 
-Disadvantages:
-* Bards are not as effective in hand-to-hand combat as warriors or priests.
-* Bards have slower access to spells than a wizard or priest.~
-@571    = ~WIZARD:
+Inconvénients :
+* Les bardes ne sont pas aussi efficaces au corps à corps que les guerriers ou les prêtres.
+* Les bardes ont un accès plus lent aux sorts qu'un magicien ou un prêtre.~
+@571    = ~MAGICIEN :
 
-The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+Le magicien s'efforce d'être un maître des énergies magiques, les façonnant et les lançant sous forme de sorts. Pour ce faire, il étudie des langues étranges et des faits obscurs et consacre une grande partie de son temps à la recherche magique. Un magicien doit compter sur ses connaissances et son intelligence pour survivre. Les magiciens sont rarement vus en aventure sans une suite de combattants et d'hommes d'armes. Parce qu'il existe différents types (ou écoles) de magie, il existe différents types de magiciens. Cependant, le type le plus courant étudie tous les types de magie et apprend un large éventail de sorts. Sa vaste gamme le rend bien adapté aux exigences de l'aventure.
 
-Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+Remarque : Pour lancer un sort, un magicien doit avoir une Intelligence égale ou supérieure au niveau du sort plus 10. L'Intelligence est la statistique de lancement pour un magicien. Elle affecte son niveau maximal de lancement de sorts, les DD des jets de sauvegarde de sorts et le nombre de sorts bonus.
 
-Hit Points per Level: 1-4
+Points de vie par niveau : 1-4
 
-Advantages:
-* Proficient with all simple weapons except for simple missile weapons.
-* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
-* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+Avantages :
+* Compétent avec toutes les armes simples, sauf les armes de jet simples.
+* Reçoit une compétence bonus tous les cinq niveaux en plus des compétences normales accordées à toutes les classes de personnages tous les trois niveaux.
+* Si le personnage ne se spécialise pas dans une école de magie, il gagne un bonus de +1 au DD de tous ses sorts.
 
-Disadvantages:
-* Starts with no proficiencies in armor and is a very p
+Inconvénients :
+* Commence sans compétences en armure et est très mauvais au combat rapproché.~
+
