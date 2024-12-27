@@ -1248,8 +1248,9 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
+//Ajouts depuis la 3.3.3
 @55907=~Surbrillance en gris des conteneurs vides~
-@55908=~Change la couleur de surbrillance des conteneurs vides en gris, remplaçant la couleur verte par défaut. Cela permet de différencier les conteneurs déjà pillés par le groupe.~
+@55908=~Change la couleur de surbrillance des conteneurs vides en gris, remplaçant la couleur verte par défaut. Cela permet de différencier les conteneurs déjà pillés des conteneurs dans lesquels il reste des objets à récupérer.~
 @55909=~Défilement~
 @55910=~Défiler vers le haut~
 @55911=~Défiler vers la gauche~
@@ -1336,7 +1337,7 @@ Option 3 :
 Poids : 3,18 kg (7 lb)
 Compétence : Arme de guerre, marteau
 Type d’arme : À une main~
-@56022=~ANTÉCÉDENTS DE MARCHAND :
+@56022=~FIBRE COMMERCIALE :
 
 De puissantes caravanes marchandes et guildes d'artisans contrôlent la richesse et le commerce des terres de Féérune. Tu viens d'une famille experte dans un domaine commercial et qui connaît parfaitement la valeur de tout type de bien ou de marchandise.
 
