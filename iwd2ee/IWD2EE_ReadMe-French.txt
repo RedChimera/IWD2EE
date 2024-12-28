@@ -25,43 +25,44 @@ Composants:
 3. Restrictions concernant l’alignement des classes assouplies
 4. Remaniement des sorts
 5. Dons de prédilection pour toutes les écoles de magie
-6. Remaniement des objets
-7. Remaniement des créatures
-8. Meilleure progression du gain d'XP
-9. Alternative plus intéressante aux quêtes de la Palissade
-10. Ajouter des façons de progresser à travers certaines zones
-11. Village Itinérant plus rapide
-12. Œil du Dragon plus rapide
-13. Raccourcir la série de quêtes de la boucle temporelle de l'Œil du Dragon à une seule bataille
-14. Ajouter plus de parchemins au jeu
-15. Résistances et immunités des créatures revues à la baisse
-16. Jets de sauvegarde des ennemis ajustés à un niveau normal
-17. Changer l’immunité aux coups critiques
-18. Meilleurs ennemis raciaux pour les rôdeurs
-19. Débloque tous les choix de couleur pour chaque race
-20. Plus d’options de persuasion
-21. Composant principal des compagnons
-22. Les PNJ commencent avec de l’expérience en rejoignant le groupe
-23. Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement
-24. Thème principal en boucle
-25. Champ de Bataille du Temple de Glace remanié
-26. Résistance mineure aux dégâts pour les armures et les boucliers
-27. Remaniement des races
-28. Revoir les différences de gain d'XP des races
-29. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
-30. Ajuster le niveau des rencontres
-31. En mode Cœur de Furie, réduire les bonus aux PV des créatures
-32. En mode Cœur de Furie, réduire les bonus à l’attaque des créatures
-33. En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures
-34. En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées
-35. En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience
-36. Réduire le délai entre chaque attaque sournoise
-37. Ajuster le niveau maximum
-38. Toujours apprendre avec succès les sorts provenant de parchemins
-39. Tout le monde peut effectuer des attaques d'opportunité
-40. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage
-41. Ajouter plus de pièges
-42. Ajouter des raccourcis clavier pour automatiser l’application de buffs
+6. Ajouter les règles du JdR papier concernant l'apprentissage des sorts de magicien et le remplacement des sorts de barde/ensorceleur
+7. Remaniement des objets
+8. Remaniement des créatures
+9. Meilleure progression du gain d'XP
+10. Alternative plus intéressante aux quêtes de la Palissade
+11. Ajouter des façons de progresser à travers certaines zones
+12. Village Itinérant plus rapide
+13. Œil du Dragon plus rapide
+14. Raccourcir la série de quêtes de la boucle temporelle de l'Œil du Dragon à une seule bataille
+15. Ajouter plus de parchemins au jeu
+16. Résistances et immunités des créatures revues à la baisse
+17. Jets de sauvegarde des ennemis ajustés à un niveau normal
+18. Changer l’immunité aux coups critiques
+19. Meilleurs ennemis raciaux pour les rôdeurs
+20. Débloque tous les choix de couleur pour chaque race
+21. Plus d’options de persuasion
+22. Composant principal des compagnons
+23. Les PNJ commencent avec de l’expérience en rejoignant le groupe
+24. Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement
+25. Thème principal en boucle
+26. Champ de Bataille du Temple de Glace remanié
+27. Résistance mineure aux dégâts pour les armures et les boucliers
+28. Remaniement des races
+29. Revoir les différences de gain d'XP des races
+30. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
+31. Ajuster le niveau des rencontres
+32. En mode Cœur de Furie, réduire les bonus aux PV des créatures
+33. En mode Cœur de Furie, réduire les bonus à l’attaque des créatures
+34. En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures
+35. En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées
+36. En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience
+37. Réduire le délai entre chaque attaque sournoise
+38. Ajuster le niveau maximum
+39. Toujours apprendre avec succès les sorts provenant de parchemins
+40. Tout le monde peut effectuer des attaques d'opportunité
+41. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage
+42. Ajouter plus de pièges
+43. Ajouter des raccourcis clavier pour automatiser l’application de buffs
 
 --Noyau d’IWD2EE--
 
@@ -105,8 +106,6 @@ Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses a
 Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
 Révisions des créatures fait également en sorte que les ennemis utilisent davantage de sorts et de capacités basés sur le son au début du jeu (comme le cri des harpies dans le Chapitre 1), ce qui rend la Chanson des Kaudies plus utile.
-
-Comme dans le jeu de rôle papier, les bardes peuvent, à certaines augmentations de niveau, remplacer l’un de leurs sorts de niveau inférieur par un autre sort de même niveau.
 
 Prêtres : les prêtres ne sont pas beaucoup changés par Remaniement des classes, mais Remaniement des sorts améliore les mécaniques d'incantation spontanée et des domaines.
 
@@ -170,9 +169,9 @@ Paladin de Mystra :
 
 Rôdeurs : les rôdeurs obtiennent plus d’emplacements de sorts, et ils les obtiennent à des niveaux inférieurs. Ils peuvent obtenir les dons Combat à deux armes amélioré et Feu nourri à des niveaux inférieurs à ceux des autres classes, et ils peuvent obtenir un deuxième rang dans ces dons pour une autre attaque par round. Ils peuvent également utiliser Collets naturels tous les 6 niveaux, ce qui piège les ennemis pendant 5 rounds en cas d'échec à un jet de sauvegarde de Réflexes. Collets naturels est beaucoup plus efficace que dans le jeu d'origine ; le DD du jet de sauvegarde évolue désormais avec la compétence Sens de la nature du rôdeur.
 
-Ensorceleurs : les ensorceleurs n'atteindront plus leur apogée au niveau 20 et ne connaîtront plus ensuite une croissance quasi nulle. Comme dans le jeu de rôle papier, les ensorceleurs peuvent, durant certains passages de niveau, remplacer l'un de leurs sorts de niveau inférieur par un autre sort de même niveau.
+Ensorceleurs : les ensorceleurs n'atteindront plus leur apogée au niveau 20 et ne connaîtront plus ensuite une croissance quasi nulle.
 
-Magiciens : Comme dans le jeu de rôle papier, les magiciens peuvent choisir deux nouveaux sorts à apprendre à chaque augmentation de niveau, pouvant être de n'importe quel niveau de sort auquel le magicien a accès. Les magiciens généralistes gagnent désormais +1 au DD de tous les sorts de magicien qu'ils lancent (les magiciens spécialistes gagnent +2 au DD des sorts de magicien qu'ils lancent de leur école, mais il s'agissait d'un avantage dans le jeu vanilla qui n'avait pas été documentée dans IWD2 jusqu'à présent).
+Magiciens : les magiciens généralistes gagnent désormais +1 au DD de tous les sorts de magicien qu'ils lancent (les magiciens spécialistes gagnent +2 au DD des sorts de magicien qu'ils lancent de leur école, mais il s'agissait d'un avantage dans le jeu vanilla qui n'avait pas été documentée dans IWD2 jusqu'à présent).
 
 Bien que les modifications inhérentes aux prêtres, ensorceleurs et magiciens ne soient pas énormes, toutes les classes de lanceurs de sorts bénéficient grandement de certains des nouveaux dons, en particulier des dons de métamagie.
 
@@ -222,6 +221,13 @@ Dans le jeu non modifié, les lanceurs de sorts ne pouvaient choisir École de p
 École de prédilection : Enchantement/Illusion
 École de prédilection : Nécromancie/Divination
 École de prédilection : Transmutation/Abjuration
+
+--Ajouter les règles du JdR papier concernant l'apprentissage des sorts de magicien et le remplacement des sorts de barde/ensorceleur--
+
+Ce composant comporte deux fonctionnalités principales :
+
+* Les magiciens peuvent choisir deux nouveaux sorts à apprendre à chaque montée de niveau, quels que soient les niveaux de sorts auxquels ils ont accès.
+* Les bardes et les ensorceleurs peuvent, à certaines montées de niveau, remplacer un de leurs sorts de niveau inférieur par un autre sort du même niveau.
 
 --Remaniement des objets--
 
