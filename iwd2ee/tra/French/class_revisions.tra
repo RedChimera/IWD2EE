@@ -400,18 +400,18 @@ Avantage: Vous gagnez une capacité qui vous permet de feinter une créature adjac
 
 Ce don peut être pris deux fois. Lorsqu’il est pris une deuxième fois, le don devient Feinte améliorée, qui vous permet de feinter en tant qu’action libre une fois par round. Après avoir feinté pour la première fois dans un round, vous pouvez utiliser une autre capacité ou lancer un sort avant la fin du round. Feinte améliorée ajoute également +2 au Degré de Difficulté du jet de sauvegarde.~
 
-@343	= ~Attaque tourbillon~
-@344	= ~ATTAQUE TOURBILLON :
+@343	= ~Attaque en rotation~
+@344	= ~ATTAQUE EN ROTATION :
 
 Vous pouvez effectuer une attaque tournoyante pour frapper plusieurs ennemis autour de vous.
 
 Prérequis : Dex 13+, Int 13+, Expertise du combat, Esquive, Mobilité, Élan offensif, bonus d’attaque de base de 4 ou plus. Prendre le don une seconde fois nécessite 21+ Dex. Prendre le don une troisième fois nécessite 25+ Dex et 30 niveaux de rôdeur.
 
-Avantage : Vous gagnez la capacité Attaque tourbillon, utilisable une fois par round. En utilisant la capacité, vous effectuez une attaque avec chacune de vos armes contre chaque ennemi proche, renonçant à toutes les autres attaques pour le round. Le rayon de l’attaque dépend de la portée de votre arme.
+Avantage : Vous gagnez la capacité Attaque en rotation, utilisable une fois par round. En utilisant la capacité, vous effectuez une attaque avec chacune de vos armes contre chaque ennemi proche, renonçant à toutes les autres attaques pour le round. Le rayon de l’attaque dépend de la portée de votre arme.
 
-Lorsqu’il est pris une seconde fois, le don devient Attaque tourbillon améliorée, ce qui augmente le rayon de l’attaque de 1,5 mètres (5 pieds).
+Lorsqu’il est pris une seconde fois, le don devient Attaque en rotation améliorée, ce qui augmente le rayon de l’attaque de 1,5 mètres (5 pieds).
 
-Lorsqu’il est pris une troisième fois, le don devient Attaque Tourbillon Automatique, ce qui permet au personnage d’attaquer dans une zone d’effet avec chaque attaque de mêlée qu’il effectue.
+Lorsqu’il est pris une troisième fois, le don devient Attaque en rotation Automatique, ce qui permet au personnage d’attaquer dans une zone d’effet avec chaque attaque de mêlée qu’il effectue.
 
 Spécial : Un personnage avec 6 niveaux de rôdeur peut prendre les deux premiers rangs de ce don tant qu’il répond aux exigences de Dextérité (et peut prendre le troisième une fois qu’il atteint le niveau 30), en ignorant tous les autres prérequis.~
 @345	= ~Incantation animale~
@@ -905,7 +905,7 @@ Avantages :
 * Les rôdeurs peuvent choisir un Ennemi Juré au premier niveau. Ils gagnent alors +1 aux jets d’attaque et +4 aux dégâts contre les créatures de ce type. Les rôdeurs gagnent un Ennemi Juré supplémentaire tous les cinq niveaux, et le bonus d’attaque contre les anciens Ennemis Jurés augmente de 1.
 * Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s’ils possédaient les dons Ambidextrie et Combat à 2 armes.
 * Niveau 2 : Lancement de sorts. Les rôdeurs acquièrent la capacité de lancer des sorts.
-* Niveau 6 : Le rôdeur peut obtenir le don Attaque Tourbillon s’il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
+* Niveau 6 : Le rôdeur peut obtenir le don Attaque en rotation s’il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
 * Niveau 6 : Collets Naturels. Cette capacité pose un piège qui, lorsqu’il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d’échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
 * Niveau 7 : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile et Croissance d’épines.
 * Niveau 9 : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri, même s’il ne remplit pas les conditions préalables.
@@ -2238,7 +2238,7 @@ Poids : 1~
 @917	= ~Vous ne pouvez pas essayer de saisir l’ennemi à moins d’avoir au moins une main libre.~
 @918	= ~Feinte~
 @919	= ~Saisie~
-@920	= ~Attaque Tourbillon~
+@920	= ~Attaque en rotation~
 @921	= ~A dévié un projectile~
 @922	= ~Contresort~
 @923	= ~Attaque incorporelle~
@@ -2284,11 +2284,11 @@ Cette capacité peut être utilisée une fois par round. Si votre Dextérité est sup
 @949	= ~Feinte améliorée
 
 Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Volonté (Degré de Difficulté de 12 + votre compétence de Bluff). Le Degré de Difficulté est réduit de 4 chaque fois que quelqu’un a tenté de feinter la cible au cours des 10 derniers rounds. En cas d’échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure et subit des pénalités supplémentaires à la classe d’armure et aux jets d’attaque égales à un tiers de votre compétence de Bluff, arrondies à l’inférieur. La feinte améliorée peut être utilisée comme une action libre une fois par round.~
-@950	= ~Attaque Tourbillon
+@950	= ~Attaque en rotation
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l’attaque dépend de la portée de votre arme.~
-@951	= ~Attaque tourbillon améliorée~
-@952	= ~Attaque tourbillon améliorée
+@951	= ~Attaque en rotation améliorée~
+@952	= ~Attaque en rotation améliorée
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l’attaque est égal à la portée de votre arme plus 1,5 mètre (5 pieds).~
 @953	= ~Contresort
