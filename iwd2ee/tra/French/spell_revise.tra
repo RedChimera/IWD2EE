@@ -221,7 +221,7 @@ Temps d’incantation : 0
 Zone d’effet : 1 créature
 Jet de sauvegarde : aucun
 
-Lorsqu’un lanceur fait appel à ce sort, il plonge sa cible dans un sommeil similaire à un coma. La créature doit réussir un jet de Volonté pour ne pas s’endormir. Elle se réveille si on l’attaque. Ce sort n’a aucun effet sur les créatures sourdes.~
+Lorsqu’un lanceur fait appel à ce sort, il plonge sa cible dans un sommeil similaire à un coma. Il n'y a pas de jet de sauvegarde mais la créature se réveille si on l’attaque. Ce sort n’a aucun effet sur les créatures sourdes.~
 @1038 = ~Armure de la Mort~
 @1039 = ~Armure de la mort
 (Nécromancie)
