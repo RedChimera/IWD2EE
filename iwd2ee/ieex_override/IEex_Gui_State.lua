@@ -1427,7 +1427,7 @@ function IEex_Extern_BeforeWorldRender()
 			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8))) -- Container
 		then
 			IEex_Quickloot_Hide()
-		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 0)) then -- Main Panel
+		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 1)) then -- Main Panel
 			IEex_Quickloot_Show()
 		end
 
