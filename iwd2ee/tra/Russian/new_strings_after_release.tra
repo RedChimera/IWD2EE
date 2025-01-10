@@ -1234,172 +1234,172 @@
 
 //STRINGS THAT STILL NEED TRANSLATION
 
-@55393=~Sneak attack averted by Uncanny Dodge~
-@41650=~Oh, don't get me started.~
-@11583    = ~Protean Hammer +3~
-@11584    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+@55393=~Скрытая атака была предотвращена инстинктивным уклонением~
+@41650=~О, ты точно не хочешь, чтобы я начал говорить об этом!~
+@11583    = ~Многофункциональный молот +3~
+@11584    = ~Этот молот изготовил искусный гном-изобретатель и волшебник Айрон Броун. По правде говоря, никто доподлинно не знает, был Айрон гномом или нет, поскольку никто его не видел. По всей видимости, однажды ночью он занял заброшенную лавочку на окраине маленького городка. Долгое время магазин стоял пустым, а однажды просто оказался заколочен досками и вывесками на всех языках, призывающими прохожих проходить мимо. Разъярённый прежний владелец магазина потребовал, чтобы гном ушёл, но быстро отказался от своих прав на магазин, когда у его ног появился мешочек золота. На следующий день по всему посёлку начали появляться таинственные записки. Все они содержали одно и то же сообщение:
 
 **************************************
 
-Bring potatoes. Will pay in gold.
+Несите картошку. Плачу золотом.
 
--Airon Broun
-
-**************************************
-
-Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment. 
-
-Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
-
-STATISTICS:
-
-Damage:  1d8 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
-Option 1:
-  Corrosive Burst: +1d6 acid damage and 30% chance of +1d10 extra acid damage
-Option 2:
-  Flaming Burst: +1d6 fire damage and 20% chance of +2d10 extra fire damage
-Option 3:
-  Frost Burst: +1d6 cold damage and 10% chance of +3d10 extra cold damage
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@11585    = ~Masher +5~
-@11586    = ~This hammer was created by an ingenious gnomish inventor and wizard named Airon Broune. Actually no one really knows if Airon is a gnome or not because no one has actually seen him. Apparently overnight he had taken over an abandoned shop at the edge of small town. One day the shop was vacant and then the next it was boarded up tight with signs in every language telling passersby to go away. Infuriated, the previous owner demanded he leave, but quickly relinquished his claim to the shop when a large sack of gold appeared at his feet. The very next day, mysterious notes began to appear all over town. They all contained the same message and read as follows:
+Айрон Броун
 
 **************************************
 
-Bring potatoes. Will pay in gold.
+Несколько горожан, заинтригованные, решили принять предложение и принесли в магазин мешки с картошкой. Они засовывали картошку в жёлоб, расположенный в задней части магазина, и вскоре после этого появлялся небольшой мешок золота, стоимость, которого раз в пять превышала стоимость картофеля. Чем лучше было качество картофеля, тем больше золота появлялось. Вскоре новость распространилась по городу, и очень быстро вся картошка в округе была продана предприимчивому гному. Неважно сколько картофеля приносилось - в качестве оплаты всегда появлялся мешочек с золотом.
 
--Airon Broun
+Нет нужды говорить, что картошку спешно начали выращивать на всех фермах на многие мили вокруг. Каждый крестьянин пытался превзойти соседа и вырастить картофель покрупнее и повкуснее. Так продолжалось несколько лет, пока наконец качество картофеля не стало таким высоким, что вместо золота стали появляться волшебные предметы самого разного рода. Не догадываясь о магической природе этих вещей, крестьяне с отвращением продали их проезжим купцам, а картошку выращивать перестали. Одной из этих вещей был этот молот. Вставляя особые зачарованные пластины в головку молота, владелец может изменять его возможности. Так, к этому молоту прилагаются пластины, наносящие дополнительный урон кислотой, холодом или огнём.
+
+ПАРАМЕТРЫ:
+
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Наносит один из следующих видов дополнительного урона. Тип урона можно изменить, нажав кнопку "Свойства" после щелчка правой кнопкой мыши на этом оружии в экране снаряжения.
+Вариант 1:
+ Кислотные брызги: +1d6 урона кислотой и 30% вероятность нанести дополнительно 1d10 урона кислотой
+Вариант 2:
+ Вспышка пламени: +1d6 урона огнём и 20% вероятность нанести дополнительно +2d10 урона огнём
+Вариант 3:
+ Ледяное крошево: +1d6 урона холодом и 10% вероятность нанести дополнительно +3d10 урона холодом
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@11585    = ~Измельчитель +5~
+@11586    = ~Этот молот изготовил искусный гном-изобретатель и волшебник Айрон Броун. По правде говоря, никто доподлинно не знает, был Айрон гномом или нет, поскольку никто его не видел. По всей видимости, однажды ночью он занял заброшенную лавочку на окраине маленького городка. Долгое время магазин стоял пустым, а однажды просто оказался заколочен досками и вывесками на всех языках, призывающими прохожих проходить мимо. Разъярённый прежний владелец магазина потребовал, чтобы гном ушёл, но быстро отказался от своих прав на магазин, когда у его ног появился мешочек золота. На следующий день по всему посёлку начали появляться таинственные записки. Все они содержали одно и то же сообщение:
 
 **************************************
 
-Intrigued, a few townspeople decided to take him up on his offer and delivered sacks of potatoes to the shop. They would shove the potatoes into a delivery chute located in the back of the shop and then soon after a small sack of gold would appear, usually five times the going rate of the potatoes. The better the quality of the potatoes the more gold would appear. News soon spread of this wonderful offer and it was not long until every potato in town was sold to the curious gnome. No matter how many potatoes one delivered, there always appeared a sack of gold for payment.
+Несите картошку. Плачу золотом.
 
-Needless to say, every farm for miles around started growing potatoes. Each farmer would try to outdo the other by producing the biggest and tastiest potatoes. This continued on for years until finally, the quality of potatoes was so good that instead of gold appearing, magic items of all sorts would appear. Not realizing the magical nature of the items given, the farmers sold them to passing merchants in disgust and stopped farming potatoes altogether. This hammer is one such item. By inserting special enchanted plates into the head of the hammer, the user is able to modify the abilities of the hammer. This particular hammer comes with plates that will do extra acid, cold, or fire damage.
+Айрон Броун
 
-STATISTICS:
+**************************************
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increases chance of scoring a critical hit
-  Deals one of the following forms of extra damage. You can change which damage type it deals by pressing the Abilities button after right-clicking this weapon on the Inventory screen.
-Option 1:
-  Corrosive Burst: +1d6 acid damage and 60% chance of +2d10 extra acid damage
-Option 2:
-  Flaming Burst: +1d6 fire damage and 40% chance of +4d10 extra fire damage
-Option 3:
-  Frost Burst: +1d6 cold damage and 20% chance of +6d10 extra cold damage
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@56022=~MERCANTILE BACKGROUND:
+Несколько горожан, заинтригованные, решили принять предложение и принесли в магазин мешки с картошкой. Они засовывали картошку в жёлоб, расположенный в задней части магазина, и вскоре после этого появлялся небольшой мешок золота, стоимость, которого раз в пять превышала стоимость картофеля. Чем лучше было качество картофеля, тем больше золота появлялось. Вскоре новость распространилась по городу, и очень быстро вся картошка в округе была продана предприимчивому гному. Неважно сколько картофеля приносилось - в качестве оплаты всегда появлялся мешочек с золотом.
 
-Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands.  You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
+Нет нужды говорить, что картошку спешно начали выращивать на всех фермах на многие мили вокруг. Каждый крестьянин пытался превзойти соседа и вырастить картофель покрупнее и повкуснее. Так продолжалось несколько лет, пока наконец качество картофеля не стало таким высоким, что вместо золота стали появляться волшебные предметы самого разного рода. Не догадываясь о магической природе этих вещей, крестьяне с отвращением продали их проезжим купцам, а картошку выращивать перестали. Одной из этих вещей был этот молот. Вставляя особые зачарованные пластины в головку молота, владелец может изменять его возможности. Так, к этому молоту прилагаются пластины, наносящие дополнительный урон кислотой, холодом или огнём.
 
-Prerequisite: Human, deep gnome, or gray dwarf
+ПАРАМЕТРЫ:
 
-Benefit: You receive a 5% discount on buying items and a 10% mark up on selling items at stores.~
-@23088=~Retriever Claw~
-@24035=~Fire Ray~
-@24036=~Cold Ray~
-@24037=~Electricity Ray~
-@24038=~Petrification Ray~
-@1121    = ~Flesh to Stone
-(Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Импульс: увеличивает шанс критического удара
+ Наносит один из следующих видов дополнительного урона. Тип урона можно изменить, нажав кнопку "Свойства" после щелчка правой кнопкой мыши на этом оружии в экране снаряжения.
+Вариант 1:
+ Кислотные брызги: +1d6 урона кислотой и 60% вероятность нанести дополнительно 2d10 урона кислотой
+Вариант 2:
+ Вспышка пламени: +1d6 урона огнём и 40% вероятность нанести дополнительно 4d10 урона огнём
+Вариант 3:
+ Ледяное крошево: +1d6 урона холодом и 20% вероятность нанести дополнительно 6d10 урона холодом
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@56022=~ТОРГОВОЕ ПРОШЛОЕ
 
-This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead.~
-@38457     = ~Chaos Cast
-(Universal)
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
-Saving Throw: Special
+Влиятельные торговцы и судостроители контролируют торговлю и финансы Фаэруна. Вы выросли в семье, в которой прекрасно разбирались в торговле и прекрасно знали цену любому виду товаров.
 
-This spell casts a random wizard spell on the target creature, which could be a spell of any level between 5 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+Требования: человек, подземный гном или серый дварф
 
-The main advantage of Chaos Cast is that the random spell will be higher than level 4. The disadvantage is that the spell might not be useful in the current situation.~
-@30365=~Protected by Elemental Absorption~
-@35958     = ~Elemental Absorption~
-@36958     = ~Elemental Absorption
-(Abjuration)
-Level: Drd 9
-Range: Touch
-Duration: 12 rounds
-Casting Time: 9
-Area of Effect: 1 creature
-Saving Throw: None
+Действие: Вы получаете 5% скидку при покупке и 10% надбавку при продаже предметов в магазинах.~
+@23088=~Коготь ретривера~
+@24035=~Огненный луч~
+@24036=~Ледяной луч~
+@24037=~Электрический луч~
+@24038=~Луч окаменения~
+@1121    = ~Плоть в камень
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: постоянно
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell allows the recipient to absorb elemental attacks, healing instead of taking damage. For the duration, if the target would take fire, cold, electrical or acid damage, they instead heal Hit Points equal to the damage they would have taken.~
-@37866     = ~Clone~
-@38866     = ~Clone
-(Necromancy)
-Level: Sor/Wiz 8
-Range: Sight of Caster
-Duration: Permanent until used
-Casting Time: 20
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание превращает существо в камень. Успешный спасбросок стойкости позволяет избежать окаменения. Жертву можно вернуть к нормальному состоянию заклинанием 6-го уровня "Камень в плоть". Это заклинание не действует на нежить.~
+@38457     = ~Хаотическое заклинание
+(Универсальное)
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения:  1
+Зона действия: особая
+Спасбросок: особый
 
-A dubious alternative to resurrection, this spell creates an inert duplicate of a party member. After the spell is cast, the clone requires 8 hours to grow into a suitable replacement for the original character. Once that time has passed, if the original character dies (or is already dead) while in the same area as the clone, their soul will be transferred to the clone, which will join the party with the exact same stats and abilities of the original character. A party member cannot have more than one inert clone in the same area at one time.
+Это заклинание накладывает на целевое существо случайное заклинание волшебника, которое может быть заклинанием любого уровня от 5 до 8. Характер заклинания зависит от цели. Если цель - враг, она получит вредоносное заклинание, а если союзник - полезное. Ограничения по цели соблюдаются (заклинание, воздействующее только на заклинателя, не будет прочитано, если целью не является сам заклинатель).
 
-Clone can be cast on a living party member, or it can be cast targeting a dead character's portrait.~
+Основное преимущество этого заклинания состоит в том, что случайное заклинание будет выше 4-го уровня. Недостатком является то, что заклинание может оказаться бесполезным в текущей ситуации.~
+@30365=~Под защитой поглощения стихий~
+@35958     = ~Поглощение стихий~
+@36958     = ~Поглощение стихий
+(Отречение)
+Уровень: друид 9
+Дальность: прикосновение
+Длительность: 12 раундов
+Время чтения: 9
+Зона действия: 1 существо
+Спасбросок: нет
+
+Это заклинание позволяет поглощать стихийный урон, исцеляя вместо повреждения. В течение времени действия заклинания, если его цель получает урон от огня, холода, электричества или кислоты, она исцеляет количество пунктов здоровья, равное урону, который должна была получить.~
+@37866     = ~Клон~
+@38866     = ~Клон
+(Некромантия)
+Уровень: колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: постоянная, до использования
+Время чтения:  20
+Зона действия: 1 существо
+Спасбросок: нет
+
+Сомнительная альтернатива воскрешению, это заклинание создает неактивную копию одного из членов группы. После произнесения заклинания клону требуется 8 часов, чтобы вырасти в полноценную замену оригинальному персонажу. По истечении этого времени, если оригинальный персонаж умрет (или если он уже мертв), находясь в той же области, что и клон, его душа будет перенесена в клона, который присоединится к группе с теми же характеристиками и способностями, что и оригинальный персонаж. Каждый член группы не может иметь более одного неактивного клона в одной области.
+
+Это заклинание можно направить как на живого члена партии, так и на мертвого персонажа (его портрет).~
 @94     = ~Add PnP Wizard Spell Learning and Bard/Sorcerer Spell Replacement systems~
-@570    = ~BARD:
+@570    = ~БАРД:
 
-The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+Сила барда - в его приятной и обаятельной личности. С помощью неё и своей смекалки он прокладывает себе путь в этом мире. Бард - талантливый музыкант и ходячий кладезь сплетен, небылиц и преданий. Он узнаёт понемногу обо всём, что встречается на его пути; он мастер на все руки, но не мастер ни в одном деле. Хотя многие барды - негодяи, их историям и песням рады почти везде.
 
-Hit Points per Level: 1-6
+Пунктов здоровья на уровень: 1-6
 
-Advantages:
-* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
-* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
-* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
-* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
-* Many rogue like skills are class skills of the Bard.
-* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
-* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
-* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
-* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
-* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
-* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
-* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+Преимущества:
+* Владеет всеми видами простого оружия, умеет носить лёгкую и среднюю броню, а также пользоваться щитами. Бард также владеет большими мечами.
+* Получает один ранг в черте "Колдовство в доспехах", уменьшающей провал магических заклинаний на 35%.
+* +1 к навыкам "Алхимия", "Знание (Волшебство)" и "Колдовство".
+* 2-й уровень: владение заклинаниями. Барды получают способность произносить магические заклинания.
+* Многие навыки плутов являются классовыми навыками барда.
+* Песни бардов. Барды умеют петь мелодии, которые оказывают магическое воздействие на существ в радиусе тридцати футов. По мере повышения уровня они получают дополнительные песни. Песни подробно описаны ниже.
+* 1-й уровень: Сага о Курране Храброе Сердце. При исполнении все союзники барда получают +1 к атаке, +1 к урону и иммунитет к страху и чувству безнадёжности. Бонусы к атаке и урону увеличиваются на 1 на уровнях 10, 25 и 40.
+* 3-й уровень: Песня Каудиес. Когда бард играет эту песню, его союзники получают иммунитет к негативным заклинаниям и способностям, основанным на звуке, включая "Повеление", "Тишина", "Великое повеление", "Святое слово", "Богохульство", "Слово силы: Усыпить", "Взрыв звука", "Крик", "Слово силы: Тишина", "Слово силы: Ошеломить", "Слово силы: Ослепить", "Великий крик", "Вопль банши", "Слово силы: Убить", воплям гарпий, а также к негативным эффектам заклинаний "Песнь", "Молитва", и "Декламация".
+* 5-й уровень: Мелодия Тиморы. При исполнении "Мелодии Тиморы" союзники барда получают +1 к удаче, +1 к спасброскам и +2 к навыкам "Знание (Волшебство)", "Алхимия" и навыкам плута. На уровнях 15 и 35 эта песня даёт дополнительно +1 к удаче и спасброскам, а также +2 к проверке умений.
+* 9-й уровень: Стон Сирены. При исполнении песни каждое существо, услышавшее её, получает штраф -1 к спасброскам воли в течение 10 раундов (штраф суммируется со временем) и должно сделать спасбросок воли, иначе оказывается очарованным и не может предпринимать никаких действий, пока не пройдёт десять раундов или пока оно не получит урон. УС спасброска воли равен уровню барда. Так, УС спасброска песни барда 15-го уровня равен 15.
+* 13-й уровень: Боевая песнь Ситта. При исполнении этой песни союзники барда получают общий бонус к классу защиты +2, 3/- сопротивления физическому урону и восстанавливают 3 пункта здоровья в раунд в бою. На уровнях 28 и 45 эта песня даёт дополнительно +2 к классу защиты, 3/- сопротивления физическому урону, 3 пункта здоровья исцеления в раунд.
+* 20-й уровень: Баллада о трёх героях. При исполнении этой песни союзники барда получают +5 к сопротивлению магии, 5/- сопротивления всем видам магического урона, а также эффекты песен "Сага о Курране Храброе Сердце", "Мелодия Тиморы" и "Боевая песнь Ситта". На уровнях 30 и 50 эта песня даёт дополнительные +5 к сопротивлению магии и 5/- сопротивления магическому урону.
 
-A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+Бард не может играть более одной песни одновременно. Но если в партии есть несколько бардов, эффекты песен каждого из них будут суммироваться. Призванные существа не подвергаются эффектам песен барда.
 
-* 30th level: The bard can now do other actions while singing a bard song.
+* 30-й уровень: бард теперь может выполнять другие действия во время исполнения бардовской песни.
 
-Disadvantages:
-* Bards are not as effective in hand-to-hand combat as warriors or priests.
-* Bards have slower access to spells than a wizard or priest.~
-@571    = ~WIZARD:
+Недостатки:
+* Барды не так эффективны в рукопашном бою, как воины или священники.
+* Барды изучают заклинаниям медленнее, чем волшебники или священники.~
+@571    = ~ВОЛШЕБНИК:
 
-The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+Волшебник стремится стать мастером магических энергий, формируя их и превращая в заклинания. Для этого он изучает странные языки и малопонятные факты и посвящает большую часть своего времени магическим исследованиям. Чтобы выжить, волшебник должен полагаться на знания и смекалку. Волшебников редко можно встретить в приключениях без свиты бойцов и вооружённых людей. Поскольку существуют различные виды (или школы) магии, то и волшебники бывают разные. Однако, в большинстве своём волшебники изучают все виды магии и владеют широким спектром заклинаний. Благодаря своей разносторонним способностям волшебник прекрасно справляется с трудностями в приключениях.
 
-Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+ПРИМЕЧАНИЕ: чтобы произнести заклинание, волшебник должен обладать интеллектом, равным или превышающим уровень заклинания плюс 10. Интеллект - это главная характеристика волшебника. Он влияет на максимальный уровень заклинаний, сложность спасбросков против заклинаний волшебника и количество дополнительных заклинаний.
 
-Hit Points per Level: 1-4
+Пунктов здоровья на уровень: 1-4
 
-Advantages:
-* Proficient with all simple weapons except for simple missile weapons.
-* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
-* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+Преимущества:
+* Владеет всеми видами простого оружия, кроме простого метательного.
+* Получает дополнительную черту каждые пять уровней в дополнение к обычным чертам, которые даются всем классам персонажей каждые три уровня.
+* Если персонаж не специализируется на какой-либо школе магии, он получает бонус +1 к УС спасбросков всех своих заклинаний.
 
-Disadvantages:
-* Starts with no proficiencies in armor and is a very poor at melee combat.~
+Недостатки:
+* Не умеет носить доспехи и плохо сражается в ближнем бою.~
