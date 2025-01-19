@@ -89,7 +89,7 @@ Ce composant doit être installé pour que tout autre composant puisse l'être. 
 
 Ce composant revoit les classes du jeu pour rendre les guerriers, les barbares et les roublards beaucoup plus viables, et il ajoute plus de 30 nouveaux dons au jeu. Ce composant est plus équilibré lorsqu’il est combiné avec le composant Remaniement des sorts.
 
-Barbares : la rage barbare immunise désormais contre la peur, le désespoir, l'étourdissement, la paralysie, le sommeil et l'inconscience. De plus, les barbares commencent à acquérir une résistance aux dégâts au niveau 2 au lieu du niveau 11, et leur résistance aux dégâts provenant de leur classe est doublée s’ils portent une armure intermédiaire (armure de peau ou cotte de mailles). La rage barbare continue de s'améliorer après le niveau 20.
+Barbares : la rage barbare immunise désormais contre la peur, le désespoir, l'étourdissement, la paralysie, le sommeil, la confusion et l'inconscience. De plus, les barbares commencent à acquérir une résistance aux dégâts au niveau 2 au lieu du niveau 11, et leur résistance aux dégâts provenant de leur classe est doublée s’ils portent une armure intermédiaire (armure de peau ou cotte de mailles). La rage barbare continue de s'améliorer après le niveau 20.
 
 Bardes : les chants de barde devraient être plus utiles maintenant. De plus, ils sont répartis sur plus de niveaux et évoluent au fil des niveaux afin que les bardes n’atteignent plus leur apogée au niveau 11. Les chansons peuvent se cumuler, mais uniquement si plusieurs bardes chantent en même temps.
 
