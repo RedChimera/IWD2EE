@@ -2,8 +2,8 @@
 (function()
 
 	-- Special globals required to spin up Async state.
-	IEex_AsyncInitialLock = IEex_Malloc(0x4)
-	IEex_WriteDword(IEex_AsyncInitialLock, 0x0)
+	IEex_AsyncInitialLockPtr = IEex_Malloc(0x4)
+	IEex_WriteDword(IEex_AsyncInitialLockPtr, 0x0)
 
 	IEex_AsyncSharedMemoryPtr = IEex_Malloc(0x4)
 	IEex_WriteDword(IEex_AsyncSharedMemoryPtr, 0x0)
@@ -156,7 +156,7 @@
 		; This spins the Sync thread until the Async state is done initializing.
 		Unsure if this is needed, but let's keep it just in case. ;
 		@wait
-		!cmp_[dword]_byte ]], {IEex_AsyncInitialLock, 4}, [[ 00
+		!cmp_[dword]_byte ]], {IEex_AsyncInitialLockPtr, 4}, [[ 00
 		!jnz_dword >break
 		!push_byte 01
 		!call >IEex_Helper_Sleep ; Without this sleep call Win11 24H2 freezes (never schedules the spawned thread to run) ;
@@ -165,45 +165,13 @@
 		@break
 	]]})
 
-	-- Both invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()
-	-- using the Async state. Also directly exposes IEex_ReadDword, IEex_ReadString,
-	-- and IEex_ExposeToLua so the Async state can initialize itself.
+	-- Invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()
 	IEex_HookRestore(0x7928E0, 0, 6, {[[
 
 		!push_all_registers_iwd2
 
-		!push_byte 00
-		!push_dword *IEex_ReadDword
 		!push_dword *_g_lua_async
-		!call >_lua_pushcclosure
-		!add_esp_byte 0C
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_ReadDword"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_setglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_dword *IEex_ReadString
-		!push_dword *_g_lua_async
-		!call >_lua_pushcclosure
-		!add_esp_byte 0C
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_ReadString"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_setglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_dword *IEex_ExposeToLua
-		!push_dword *_g_lua_async
-		!call >_lua_pushcclosure
-		!add_esp_byte 0C
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_ExposeToLua"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_setglobal
-		!add_esp_byte 08
+		!call >Hardcoded_initLuaState
 
 		!push_byte 00
 		!push_dword ]], {IEex_WriteStringAuto("override\\IEex_Async.lua"), 4}, [[

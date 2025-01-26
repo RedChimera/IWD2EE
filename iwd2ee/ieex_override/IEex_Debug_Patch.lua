@@ -1,15 +1,18 @@
 
 IEex_Debug_CompressTime = false
+IEex_Debug_EnableThreadWatcher = false
 IEex_Debug_ForceTracePatches = false
 IEex_Debug_LogButtonInvalidations = false
 IEex_Debug_LogPanelInvalidations = false
 IEex_Debug_Stutter = false
-IEex_Debug_UpdateLoadTimes = false
-IEex_Debug_UpdateTimes = false
+--IEex_Debug_UpdateLoadTimes = false
+--IEex_Debug_UpdateTimes = false
 
 function IEex_Debug_WriteTracePatches()
 
-	if not IEex_Debug_ForceTracePatches and not IEex_Debug_UpdateLoadTimes and not IEex_Debug_UpdateTimes then
+	if not IEex_Debug_EnableThreadWatcher and not IEex_Debug_ForceTracePatches
+		and not IEex_Debug_UpdateLoadTimes and not IEex_Debug_UpdateTimes
+	then
 		return
 	end
 
@@ -32,13 +35,17 @@ function IEex_Debug_WriteTracePatches()
 
 	parseLargeLua("override/IEex_Trace.lua")
 
-	if IEex_Debug_UpdateTimes then
-		IEex_Helper_RegisterTrace("CChitin_AsynchronousUpdate", 0x78F0E0, 66) -- AI
-		IEex_Helper_RegisterTrace("CChitin_SynchronousUpdate", 0x790B70, 33)  -- Render
-	end
+	-- if IEex_Debug_UpdateTimes then
+	-- 	IEex_Helper_RegisterTrace("CChitin_AsynchronousUpdate", 0x78F0E0, 66) -- AI
+	-- 	IEex_Helper_RegisterTrace("CChitin_SynchronousUpdate", 0x790B70, 33)  -- Render
+	-- end
 
-	if IEex_Debug_UpdateLoadTimes then
-		IEex_Helper_RegisterTrace("CInfGame_LoadGame", 0x5AB190, 0)
+	-- if IEex_Debug_UpdateLoadTimes then
+	-- 	IEex_Helper_RegisterTrace("CInfGame_LoadGame", 0x5AB190, 0)
+	-- end
+
+	if IEex_Debug_EnableThreadWatcher then
+		IEex_Helper_LaunchThreadWatcher()
 	end
 end
 
@@ -80,10 +87,9 @@ end
 			!jb_dword >no_log
 
 			!push_eax
-			!push_byte 01
 			!push_dword ]], {IEex_WriteStringAuto("Stutter -> %d"), 4}, [[
-			!call >_SDL_Log
-			!add_esp_byte 0C
+			!call >IEex_Helper_logV
+			!add_esp_byte 08
 
 			@no_log
 			!pop_all_registers_iwd2

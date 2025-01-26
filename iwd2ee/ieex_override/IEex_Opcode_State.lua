@@ -25,7 +25,7 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 	local offhandIndex = IEex_Call(0x726800, {}, sourceShare, 0x0)
 	-- m_equipment[offhandIndex]
 	local offhandItem = IEex_ReadDword(sourceShare + 0x4AD8 + offhandIndex * 4)
-	local m_curItemSlotNum = IEex_ReadByte(sourceShare + 0x4BA4, 0)
+	local m_curItemSlotNum = IEex_ReadByte(sourceShare + 0x4BA4)
 
 	local bIsOffhand = false
 
@@ -46,16 +46,16 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 		local weaponWrapper = IEex_DemandRes(weaponRes, "ITM")
 		if weaponWrapper:isValid() then
 			local weaponData = weaponWrapper:getData()
-			itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+			itemType = IEex_ReadWord(weaponData + 0x1C)
 			if ex_item_type_critical[itemType] ~= nil then
 				baseCriticalMultiplier = ex_item_type_critical[itemType][2]
 				criticalMultiplier = baseCriticalMultiplier
 			end
 			local effectOffset = IEex_ReadDword(weaponData + 0x6A)
-			local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+			local numGlobalEffects = IEex_ReadWord(weaponData + 0x70)
 			for i = 0, numGlobalEffects - 1, 1 do
 				local offset = weaponData + effectOffset + i * 0x30
-				local theopcode = IEex_ReadWord(offset, 0x0)
+				local theopcode = IEex_ReadWord(offset)
 				local theparameter2 = IEex_ReadDword(offset + 0x8)
 				local thesavingthrow = IEex_ReadDword(offset + 0x24)
 				if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
@@ -69,10 +69,10 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 			if launcherWrapper:isValid() then
 				local launcherData = launcherWrapper:getData()
 				local effectOffset = IEex_ReadDword(launcherData + 0x6A)
-				local numGlobalEffects = IEex_ReadWord(launcherData + 0x70, 0x0)
+				local numGlobalEffects = IEex_ReadWord(launcherData + 0x70)
 				for i = 0, numGlobalEffects - 1, 1 do
 					local offset = launcherData + effectOffset + i * 0x30
-					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theopcode = IEex_ReadWord(offset)
 					local theparameter2 = IEex_ReadDword(offset + 0x8)
 					local thesavingthrow = IEex_ReadDword(offset + 0x24)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
@@ -205,15 +205,15 @@ end
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
-	if IEex_ReadByte(summonerData + 0x4, 0x0) == 0x31 then
+	if IEex_ReadByte(summonerData + 0x4) == 0x31 then
 		IEex_WriteDword(summonedData + 0x72C, IEex_ReadDword(summonerData + 0x700))
 		if bit.band(savingthrow, 0x100000) > 0 then
 			IEex_WriteDword(summonedData + 0x740, bit.bor(IEex_ReadDword(summonedData + 0x740), 0x100000))
 		end
 	end
-	IEex_WriteByte(summonedData + 0x730, IEex_ReadByte(effectData + 0xC4, 0x0))
-	IEex_WriteByte(summonedData + 0x731, IEex_ReadByte(effectData + 0xC5, 0x0))
-	IEex_WriteByte(summonedData + 0x732, IEex_ReadByte(effectData + 0xC6, 0x0))
+	IEex_WriteByte(summonedData + 0x730, IEex_ReadByte(effectData + 0xC4))
+	IEex_WriteByte(summonedData + 0x731, IEex_ReadByte(effectData + 0xC5))
+	IEex_WriteByte(summonedData + 0x732, IEex_ReadByte(effectData + 0xC6))
 	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
 	IEex_WriteDword(summonedData + 0x734, internalFlags)
 	local summonedID = IEex_GetActorIDShare(summonedData)
@@ -307,7 +307,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				if resWrapper:isValid() then
 					local itemData = resWrapper:getData()
 					if itemData > 0 then
-						local itemCategory = IEex_ReadWord(itemData + 0x1C, 0x0)
+						local itemCategory = IEex_ReadWord(itemData + 0x1C)
 						local itemMatchesType = false
 						for k, v in ipairs(me_item_type_slots[itemCategory]) do
 							if v == slotToMatchType then
@@ -316,11 +316,11 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						end
 						if itemMatchesType or slotToMatchType == -1 then
 							local effectOffset = IEex_ReadDword(itemData + 0x6A)
-							local firstGlobalEffectIndex = IEex_ReadWord(itemData + 0x6E, 0x0)
-							local numGlobalEffects = IEex_ReadWord(itemData + 0x70, 0x0)
+							local firstGlobalEffectIndex = IEex_ReadWord(itemData + 0x6E)
+							local numGlobalEffects = IEex_ReadWord(itemData + 0x70)
 							if numGlobalEffects > effectIndex then
 								local offset = effectOffset + (firstGlobalEffectIndex + effectIndex) * 0x30
-								opcode = IEex_ReadWord(itemData + offset, 0x0)
+								opcode = IEex_ReadWord(itemData + offset)
 								IEex_WriteDword(effectData + 0xC, opcode)
 								parameter1 = IEex_ReadDword(itemData + offset + 0x4)
 								IEex_WriteDword(effectData + 0x18, parameter1)
@@ -348,7 +348,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		if bit.band(internalFlags, 0x2000000) > 0 then return false end
 		local school = IEex_ReadDword(effectData + 0x48)
 		local restype = IEex_ReadDword(effectData + 0x8C)
-		local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+		local casterClass = IEex_ReadByte(effectData + 0xC5)
 		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 		local sourceSpell = ex_source_spell[parent_resource]
 		if sourceSpell == nil then
@@ -405,28 +405,28 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				local criticalMultiplier = baseCriticalMultiplier
 				local itemType = 0
 				local headerType = 0
-				local currentHeader = IEex_ReadByte(sourceData + 0x4BA6, 0x0)
+				local currentHeader = IEex_ReadByte(sourceData + 0x4BA6)
 				local exhitIndexList = {}
 				local onCriticalHitEffectList = {}
 				local weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
 				if weaponWrapper:isValid() then
 					local weaponData = weaponWrapper:getData()
-					itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+					itemType = IEex_ReadWord(weaponData + 0x1C)
 					if ex_item_type_critical[itemType] ~= nil then
 						baseCriticalMultiplier = ex_item_type_critical[itemType][2]
 						criticalMultiplier = baseCriticalMultiplier
 					end
-					if currentHeader >= IEex_ReadSignedWord(weaponData + 0x68, 0x0) then
+					if currentHeader >= IEex_ReadSignedWord(weaponData + 0x68) then
 						currentHeader = 0
 					end
-					headerType = IEex_ReadByte(weaponData + 0x82 + currentHeader * 0x38, 0x0)
+					headerType = IEex_ReadByte(weaponData + 0x82 + currentHeader * 0x38)
 					local effectOffset = IEex_ReadDword(weaponData + 0x6A)
-					local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
-					local numHeaderEffects = IEex_ReadWord(weaponData + 0x82 + currentHeader * 0x38 + 0x1E, 0x0)
-					local headerFirstEffectIndex = IEex_ReadWord(weaponData + 0x82 + currentHeader * 0x38 + 0x20, 0x0)
+					local numGlobalEffects = IEex_ReadWord(weaponData + 0x70)
+					local numHeaderEffects = IEex_ReadWord(weaponData + 0x82 + currentHeader * 0x38 + 0x1E)
+					local headerFirstEffectIndex = IEex_ReadWord(weaponData + 0x82 + currentHeader * 0x38 + 0x20)
 					for i = 0, numHeaderEffects - 1, 1 do
 						local offset = weaponData + effectOffset + (headerFirstEffectIndex + i) * 0x30
-						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theopcode = IEex_ReadWord(offset)
 						local theparameter2 = IEex_ReadDword(offset + 0x8)
 						local theresource = IEex_ReadLString(offset + 0x14, 8)
 						if theopcode == 500 and theresource == "MEEXHIT" then
@@ -435,14 +435,14 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					end
 					for i = 0, numGlobalEffects - 1, 1 do
 						local offset = weaponData + effectOffset + i * 0x30
-						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theopcode = IEex_ReadWord(offset)
 						local theparameter2 = IEex_ReadDword(offset + 0x8)
 						local thesavingthrow = IEex_ReadDword(offset + 0x24)
 						if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
-							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
+							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
@@ -473,17 +473,17 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				if launcherWrapper:isValid() then
 					local launcherData = launcherWrapper:getData()
 					local effectOffset = IEex_ReadDword(launcherData + 0x6A)
-					local numGlobalEffects = IEex_ReadWord(launcherData + 0x70, 0x0)
+					local numGlobalEffects = IEex_ReadWord(launcherData + 0x70)
 					for i = 0, numGlobalEffects - 1, 1 do
 						local offset = launcherData + effectOffset + i * 0x30
-						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theopcode = IEex_ReadWord(offset)
 						local theparameter2 = IEex_ReadDword(offset + 0x8)
 						local thesavingthrow = IEex_ReadDword(offset + 0x24)
 						if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
-							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
+							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
@@ -523,7 +523,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						IEex_WriteWord(effectData + 0x1E, theparameter1)
 						parameter2 = IEex_ReadDword(effectData + 0x1C)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
-						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
+						local matchHeader = IEex_ReadWord(eData + 0x48)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
 						local thesourceID = IEex_ReadDword(eData + 0x110)
 						if (theparameter1 == 0 or exhitIndexList[theparameter1] ~= nil) and spellRES ~= "" and (matchHeader == 0 or matchHeader == headerType) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -549,7 +549,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
 								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
 							end
-							local usesLeft = IEex_ReadWord(eData + 0x4A, 0x0)
+							local usesLeft = IEex_ReadWord(eData + 0x4A)
 							if usesLeft == 1 then
 								local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
 								table.insert(sourceExpired, theparent_resource)
@@ -562,8 +562,8 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					elseif theopcode == 500 and theresource == "MEWEPENC" then
 						local theweaponRES = IEex_ReadLString(eData + 0x1C, 8)
 						local thesavingthrow = IEex_ReadDword(eData + 0x40)
-						local theenchantment = IEex_ReadWord(eData + 0x48, 0x0)
-						local theheaderType = IEex_ReadSignedByte(eData + 0x4A, 0x0)
+						local theenchantment = IEex_ReadWord(eData + 0x48)
+						local theheaderType = IEex_ReadSignedByte(eData + 0x4A)
 						if (theweaponRES == "" or theweaponRES == weaponRES or theweaponRES == launcherRES) and (bit.band(thesavingthrow, 0x20000000) == 0 or theheaderType == -1 or theheaderType == itemType) and (bit.band(thesavingthrow, 0x20000000) > 0 or theheaderType == 0 or theheaderType == headerType) and theenchantment > special and (bit.band(thesavingthrow, 0x10000000) == 0 or not exhitIndexList[2001]) then
 							special = theenchantment
 							IEex_WriteDword(effectData + 0x44, special)
@@ -645,9 +645,9 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					local slotData = IEex_ReadDword(creatureData + 0x4AD8 + i * 0x4)
 					if slotData > 0 then
 						local itemRES = IEex_ReadLString(slotData + 0xC, 8)
-						local charges1 = IEex_ReadWord(slotData + 0x18, 0x0)
-						local charges2 = IEex_ReadWord(slotData + 0x1A, 0x0)
-						local charges3 = IEex_ReadWord(slotData + 0x1C, 0x0)
+						local charges1 = IEex_ReadWord(slotData + 0x18)
+						local charges2 = IEex_ReadWord(slotData + 0x1A)
+						local charges3 = IEex_ReadWord(slotData + 0x1C)
 						local slotFlags = IEex_ReadDword(slotData + 0x20)
 						local resWrapper = IEex_DemandRes(itemRES, "ITM")
 						local itemData = 0
@@ -672,7 +672,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				containerX = IEex_ReadDword(containerData + 0x6)
 				containerY = IEex_ReadDword(containerData + 0xA)
 				currentDistance = IEex_GetDistance(actorX, actorY, containerX, containerY)
-				if currentDistance < 20 and currentDistance < shortestDistance and IEex_ReadWord(containerData + 0x5CA, 0x0) == 4 then
+				if currentDistance < 20 and currentDistance < shortestDistance and IEex_ReadWord(containerData + 0x5CA) == 4 then
 					shortestDistance = currentDistance
 					closestContainer = containerData
 				end
@@ -691,7 +691,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				if theopcode == 288 and theparameter2 == 187 and theparent_resource == "MEOLDITM" then
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thevvcresource = IEex_ReadLString(eData + 0x70, 8)
-					local theoldItemSlot = IEex_ReadWord(eData + 0x62, 0x0)
+					local theoldItemSlot = IEex_ReadWord(eData + 0x62)
 					local thecasterlvl = IEex_ReadDword(eData + 0xC8)
 					local theinternalFlags = bit.bor(IEex_ReadDword(eData + 0xD0), IEex_ReadDword(eData + 0xD8))
 					table.insert(oldItemSlotList, {theoldItemSlot, thevvcresource, thecasterlvl, thesavingthrow, theinternalFlags})
@@ -823,7 +823,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		if opcode == 12 then
 			local altDamageList = ex_alternative_damage_type[damageType]
 			local altDamageBits = math.floor(bit.band(parameter3, 0x78000000) / 0x8000000)
-			local resistance = IEex_ReadSignedWord(creatureData + ex_damage_resistance_stat_offset[damageType], 0x0)
+			local resistance = IEex_ReadSignedWord(creatureData + ex_damage_resistance_stat_offset[damageType])
 			if altDamageList then
 				local altDamage = altDamageList[altDamageBits]
 				if altDamage then

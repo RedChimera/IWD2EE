@@ -557,7 +557,7 @@ function IEex_Chargen_ExtraFeatListener()
 			ex_randomizer = math.random(6)
 			local panelID = IEex_GetEngineCreateCharPanelID()
 			if panelID == -1 then return end
-			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+			local racePlusSub = IEex_ReadByte(share + 0x26) * 0x10000 + IEex_ReadByte(share + 0x3E3D)
 			if panelID == 4 or panelID == 53 then
 				if not ex_ability_scores_initialized then
 					ex_ability_scores_initialized = true
@@ -585,7 +585,7 @@ function IEex_Chargen_ExtraFeatListener()
 					elseif ex_new_ability_score_system == 3 then
 						IEex_WriteDword(chargenData + 0x4EA, ex_new_ability_score_total_points)
 						for i = 1, 6, 1 do
-							currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+							currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i] + currentAbilityScores[i])
 						end
 					end
 					IEex_EngineCreateCharUpdatePopupPanel()
@@ -593,10 +593,10 @@ function IEex_Chargen_ExtraFeatListener()
 				if panelID == 4 and ex_new_ability_score_system == 1 then
 					local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
 					IEex_IterateCPtrList(panelData + 0x4, function(controlData)
-						local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+						local controlIndex = IEex_ReadByte(controlData + 0xA)
 						if ex_chargen_ability_buttons_pressed[controlIndex] ~= nil then
 							local buttonWasPressed = ex_chargen_ability_buttons_pressed[controlIndex]
-							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134) > 0)
 							if buttonWasPressed and not buttonIsPressed then
 								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
 									local a = math.floor(controlIndex / 2) - 7
@@ -638,10 +638,10 @@ function IEex_Chargen_ExtraFeatListener()
 				elseif panelID == 4 and ex_new_ability_score_system == 3 then
 					local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
 					IEex_IterateCPtrList(panelData + 0x4, function(controlData)
-						local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+						local controlIndex = IEex_ReadByte(controlData + 0xA)
 						if ex_chargen_ability_buttons_pressed[controlIndex] ~= nil then
 							local buttonWasPressed = ex_chargen_ability_buttons_pressed[controlIndex]
-							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134) > 0)
 							if buttonWasPressed or buttonIsPressed then
 --[[
 								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
@@ -651,7 +651,7 @@ function IEex_Chargen_ExtraFeatListener()
 									end
 								elseif controlIndex == 17 or controlIndex == 19 or controlIndex == 21 or controlIndex == 23 or controlIndex == 25 or controlIndex == 27 then
 									local a = math.floor(controlIndex / 2) - 7
-									local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[a], 0x0)
+									local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[a])
 									if currentAbilityScores[a] ~ then
 										table.insert(unallocatedAbilityScores, currentAbilityScores[a] - racialAbilityBonuses[a])
 										table.sort(unallocatedAbilityScores)
@@ -719,7 +719,7 @@ function IEex_Chargen_ExtraFeatListener()
 		local share = IEex_GetActorShare(ex_chargen_current_actorID)
 		if share > 0 then
 			local extraFlags = IEex_ReadDword(share + 0x740)
-			local totalLevel = IEex_ReadByte(share + 0x626, 0x0)
+			local totalLevel = IEex_ReadByte(share + 0x626)
 			if bit.band(extraFlags, 0x40) == 0 and totalLevel <= 1 then
 				extraFlags = bit.bor(extraFlags, 0x40)
 				IEex_WriteDword(share + 0x740, extraFlags)
@@ -850,8 +850,8 @@ function IEex_LevelUp_ExtraFeatListener()
 						maxSpell2DA = IEex_2DADemand("MXSPLSOR")
 					end
 					ex_menu_max_castable_level = 0
-					local m_nSizeX = IEex_ReadWord(maxSpell2DA + 0x20, 0x0)
-					local m_nSizeY = IEex_ReadWord(maxSpell2DA + 0x22, 0x0)
+					local m_nSizeX = IEex_ReadWord(maxSpell2DA + 0x20)
+					local m_nSizeY = IEex_ReadWord(maxSpell2DA + 0x22)
 					if replacementCasterLevel > 0 and replacementCasterLevel <= m_nSizeY then
 						for i = 0, m_nSizeX - 1, 1 do
 							local numSpellsAtLevel = tonumber(IEex_2DAGetAt(maxSpell2DA, i, (replacementCasterLevel - 1)))
@@ -913,21 +913,21 @@ function IEex_LevelUp_ExtraFeatListener()
 		end
 		if share > 0 then
 			if ex_disable_order_multiclass_restrictions then
-				IEex_WriteByte(share + 0x89F, bit.band(IEex_ReadByte(share + 0x89F, 0x0), 0xF3))
+				IEex_WriteByte(share + 0x89F, bit.band(IEex_ReadByte(share + 0x89F), 0xF3))
 			end
 			if panelID == 54 then
 				if ex_starting_level[1] == -1 then
 					for i = 1, 12, 1 do
-						ex_starting_level[i] = IEex_ReadByte(share + i + 0x625, 0x0)
+						ex_starting_level[i] = IEex_ReadByte(share + i + 0x625)
 					end
-					ex_starting_skill_points = IEex_ReadByte(share + 0x8A3, 0x0)
+					ex_starting_skill_points = IEex_ReadByte(share + 0x8A3)
 				end
 				local panelData = IEex_ReadDword(IEex_ReadDword(levelUpData + 0x632) + 0x8)
 				IEex_IterateCPtrList(panelData + 0x4, function(controlData)
-					local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+					local controlIndex = IEex_ReadByte(controlData + 0xA)
 					if controlIndex >= 2 and controlIndex <= 12 then
 						local buttonWasPressed = ex_levelup_class_selection_buttons_pressed[controlIndex]
-						local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+						local buttonIsPressed = (IEex_ReadByte(controlData + 0x134) > 0)
 						if buttonIsPressed and not buttonWasPressed then
 							if ex_true_xp == -1 then
 								ex_true_xp = IEex_ReadDword(share + 0x5B4)
@@ -935,7 +935,7 @@ function IEex_LevelUp_ExtraFeatListener()
 							end
 							local ecl = ex_starting_level[1]
 							if not IEex_Modules["EX_LVADJ"] then
-								local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_GetActorStat(actorID, 93)
+								local racePlusSub = IEex_ReadByte(share + 0x26) * 0x10000 + IEex_GetActorStat(actorID, 93)
 								local defaultLevelAdjustment = {[0x10001] = 1, [0x10002] = 1, [0x20001] = 2, [0x40002] = 2, [0x60001] = 3, }
 								if defaultLevelAdjustment[racePlusSub] ~= nil then
 									ecl = ecl + defaultLevelAdjustment[racePlusSub]
@@ -971,17 +971,17 @@ function IEex_LevelUp_ExtraFeatListener()
 					ex_true_xp = -1
 					ex_true_xp_adjusted = -1
 				end
-				if IEex_ReadByte(share + 0x626, 0x0) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
-					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626, 0x0) - ex_starting_level[1]
+				if IEex_ReadByte(share + 0x626) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
+					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626) - ex_starting_level[1]
 					for i = 2, 12, 1 do
-						if IEex_ReadByte(share + i + 0x625, 0x0) > ex_starting_level[i] then
+						if IEex_ReadByte(share + i + 0x625) > ex_starting_level[i] then
 							ex_class_level_up["class"] = i - 1
 						end
 					end
 				end
 			end
 
---			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+--			local racePlusSub = IEex_ReadByte(share + 0x26) * 0x10000 + IEex_ReadByte(share + 0x3E3D)
 --[[
 			if panelID == 7 then
 				if not ex_ability_scores_initialized then
@@ -1013,10 +1013,10 @@ function IEex_LevelUp_ExtraFeatListener()
 				if panelID == 4 and ex_new_ability_score_system == 1 then
 					local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
 					IEex_IterateCPtrList(panelData + 0x4, function(controlData)
-						local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+						local controlIndex = IEex_ReadByte(controlData + 0xA)
 						if ex_chargen_ability_buttons_pressed[controlIndex] ~= nil then
 							local buttonWasPressed = ex_chargen_ability_buttons_pressed[controlIndex]
-							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134) > 0)
 							if buttonWasPressed and not buttonIsPressed then
 								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
 									local a = math.floor(controlIndex / 2) - 7
@@ -1069,10 +1069,10 @@ function IEex_LevelUp_ExtraFeatListener()
 			end
 --]]
 			if panelID == 55 then
-				local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+				local racePlusSub = IEex_ReadByte(share + 0x26) * 0x10000 + IEex_ReadByte(share + 0x3E3D)
 				if not ex_levelup_extra_skill_points_granted then
 					ex_levelup_extra_skill_points_granted = true
-					local skillPointsRemaining = IEex_ReadByte(levelUpData + 0x798, 0x0)
+					local skillPointsRemaining = IEex_ReadByte(levelUpData + 0x798)
 					IEex_IterateActorEffects(actorID, function(eData)
 						local theopcode = IEex_ReadDword(eData + 0x10)
 						local theresource = IEex_ReadLString(eData + 0x30, 8)
@@ -1218,7 +1218,7 @@ function IEex_Chargen_Reroll()
 		local share = IEex_GetActorShare(actorID)
 		if share > 0 then
 			local panelID = IEex_GetEngineCreateCharPanelID()
-			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+			local racePlusSub = IEex_ReadByte(share + 0x26) * 0x10000 + IEex_ReadByte(share + 0x3E3D)
 			if panelID == 4 then
 				if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
 					IEex_WriteDword(chargenData + 0x4EA, 0)
@@ -1268,7 +1268,7 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 		local abilityScoreTotal = 0
 		local recordedAbilityScoreTotal = 0
 		for i = 1, 6, 1 do
-			currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
+			currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i])
 			abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
 			if currentAbilityScores[i] == 0 then
 				abilityScoreTotal = abilityScoreTotal + racialAbilityBonuses[i]
@@ -1320,7 +1320,7 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 		local infoStrref = 17247
 		local textAreaData = 0
 		IEex_IterateCPtrList(IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8) + 0x4, function(controlData)
-			if IEex_ReadByte(controlData + 0xA, 0x0) == 29 then
+			if IEex_ReadByte(controlData + 0xA) == 29 then
 				textAreaData = controlData
 			end
 		end)
@@ -1352,7 +1352,7 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 		IEex_SetTextAreaToStrref(chargenData, 4, 29, infoStrref)
 	elseif ex_new_ability_score_system == 3 then
 		for i = 1, 6, 1 do
-			local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
+			local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i])
 			if newAbilityScore > currentAbilityScores[i] then
 				for j = currentAbilityScores[i] + 1, newAbilityScore, 1 do
 					local cost = ex_new_ability_score_increase_cost[j - racialAbilityBonuses[i]]
@@ -1400,11 +1400,11 @@ function IEex_DeathwatchListener()
 				end
 			end
 			if deathwatchActive then
-				IEex_SetToken("EXHPSTATE1", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
-				IEex_SetToken("EXHPSTATE2", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
-				IEex_SetToken("EXHPSTATE3", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
-				IEex_SetToken("EXHPSTATE4", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
-				IEex_SetToken("EXHPSTATE5", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE1", IEex_ReadSignedWord(share + 0x5C0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE2", IEex_ReadSignedWord(share + 0x5C0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE3", IEex_ReadSignedWord(share + 0x5C0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE4", IEex_ReadSignedWord(share + 0x5C0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE5", IEex_ReadSignedWord(share + 0x5C0) .. "/" .. IEex_GetActorStat(actorID, 1))
 			else
 				IEex_SetToken("EXHPSTATE1", ex_str_uninjured)
 				IEex_SetToken("EXHPSTATE2", ex_str_barely_injured)
@@ -1488,7 +1488,7 @@ function IEex_ArcaneSightListener(key)
 					end
 				elseif theopcode == 288 then
 					if theparameter2 == 251 and theresource == "MEBOULSH" then
-						local theNumUses = IEex_ReadSignedWord(eData + 0x4A, 0x0)
+						local theNumUses = IEex_ReadSignedWord(eData + 0x4A)
 						if theNumUses == 1 then
 							extraString = ex_str_arcane_sight_b_magic_stone
 						elseif theNumUses > 0 then
@@ -1503,7 +1503,7 @@ function IEex_ArcaneSightListener(key)
 					local resWrapper = IEex_DemandRes(theparent_resource, "SPL")
 					if resWrapper:isValid() then
 						local spellData = resWrapper:getData()
---						local spellType = IEex_ReadWord(spellData + 0x1C, 0x0)
+--						local spellType = IEex_ReadWord(spellData + 0x1C)
 --						local spellLevel = IEex_ReadDword(spellData + 0x34)
 						local spellNameRef = IEex_ReadDword(spellData + 0x8)
 
@@ -1571,7 +1571,7 @@ function IEex_AbilityScoreCapListener()
 					if statID == 37 then
 						statID = 36
 					end
-					if IEex_ReadSignedWord(share + 0x974 + j * 0x2, 0x0) == 40 then
+					if IEex_ReadSignedWord(share + 0x974 + j * 0x2) == 40 then
 						local fullStatValue = IEex_GetActorFullStat(actorID, statID)
 						IEex_WriteWord(share + 0x974 + j * 0x2, fullStatValue)
 						IEex_WriteWord(share + 0x17CC + j * 0x2, fullStatValue)

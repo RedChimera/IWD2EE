@@ -43,7 +43,7 @@ CAIAction =>
 ----------------------------
 
 function IEex_GetActionID(actionData)
-	return IEex_ReadWord(actionData, 0)
+	return IEex_ReadWord(actionData)
 end
 
 function IEex_SetActionID(actionData, id)
@@ -348,8 +348,8 @@ function EXAPPLSP(actionData, creatureData)
 			end
 		end
 		local spellRES = IEex_GetActorSpellRES(sourceID)
-		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
-		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)
+		local casterClass = IEex_ReadByte(creatureData + 0x530)
+		local casterDomain = IEex_ReadByte(creatureData + 0x531)
 		local classSpellLevel = IEex_ReadDword(creatureData + 0x534)
 		if (actionID == 31 or actionID == 95) and IEex_IsPartyMember(sourceID) and spellRES ~= "SPIN108" then
 			local sourceHasSpell = false
@@ -445,7 +445,7 @@ function EXAPPLSP(actionData, creatureData)
 				elseif actionID == 95 then
 					targetID = sourceID
 				end
-				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+				local casterClass = IEex_ReadByte(creatureData + 0x530)
 				if casterClass < 0 then 
 					casterClass = 0
 				end

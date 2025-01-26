@@ -66,7 +66,7 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 		print("[IEex_OnGameObjectAdded] Engine attempted to add invalid object?")
 		return
 	end
-	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+	if IEex_ReadByte(share + 0x4) ~= 0x31 then return end
 
 	ex_cre_initializing[actorID] = true
 	ex_cre_effects_initializing[actorID] = true
@@ -89,7 +89,7 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 	if ex_record_temporal_position[share] ~= nil then
 		ex_record_temporal_position[share] = nil
 	end
-	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+	if IEex_ReadByte(share + 0x4) ~= 0x31 then return end
 
 	ex_cre_initializing[actorID] = nil
 	ex_cre_effects_initializing[actorID] = nil
@@ -105,7 +105,7 @@ end
 function IEex_Extern_OnUpdateTempStats(share)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if share == 0x0 then return end
-	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+	if IEex_ReadByte(share + 0x4) ~= 0x31 then return end
 end
 
 function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
@@ -119,7 +119,7 @@ end
 function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	-- Restrict customization if not PC
-	return (IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
+	return (IEex_ReadByte(creatureData + 0x24) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
 end
 
 -- Return:
@@ -214,15 +214,15 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			if statID == 37 then
 				statID = 36
 			end
-			if IEex_ReadSignedWord(creatureData + 0x974 + i * 0x2, 0x0) == 40 then
+			if IEex_ReadSignedWord(creatureData + 0x974 + i * 0x2) == 40 then
 				IEex_WriteWord(creatureData + 0x974 + i * 0x2, IEex_GetActorFullStat(targetID, statID))
 			end
 		end
 	end
-	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
+	local tempFlags = IEex_ReadWord(creatureData + 0x9FA)
 	if bit.band(tempFlags, 0x4) > 0 then
 		IEex_WriteWord(creatureData + 0x9FA, bit.band(tempFlags, 0xFFFB))
-		IEex_WriteWord(creatureData + 0x97E, IEex_ReadSignedWord(creatureData + 0x97E, 0x0) - ex_courteous_magocracy_charisma_bonus)
+		IEex_WriteWord(creatureData + 0x97E, IEex_ReadSignedWord(creatureData + 0x97E) - ex_courteous_magocracy_charisma_bonus)
 	end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
@@ -351,7 +351,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 })
 --]]
 	end
-	if IEex_GetActorState(targetID, 0x10) and bit.band(IEex_ReadByte(creatureData + 0x8A0, 0x0), 0x1) == 0 and tick % 3 == 0 then
+	if IEex_GetActorState(targetID, 0x10) and bit.band(IEex_ReadByte(creatureData + 0x8A0), 0x1) == 0 and tick % 3 == 0 then
 		if IEex_GetActorStat(targetID, 104) > 0 or IEex_GetActorSpellState(targetID, 192) then
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
@@ -386,8 +386,8 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	local visualHeight = IEex_ReadDword(creatureData + 0xE)
-	local speed = IEex_ReadSignedWord(creatureData + 0x722, 0x0)
-	if bit.band(extraFlags, 0x6100) == 0x4000 and visualHeight == 0 and speed == 0 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false and not IEex_GetActorSpellState(targetID, 218) then return end
+	local speed = IEex_ReadSignedWord(creatureData + 0x722)
+	if bit.band(extraFlags, 0x6100) == 0x4000 and visualHeight == 0 and speed == 0 and IEex_ReadSignedByte(creatureData + 0x5622) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false and not IEex_GetActorSpellState(targetID, 218) then return end
 
 --[[
 	local areaData = IEex_ReadDword(creatureData + 0x12)
@@ -402,7 +402,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 				IEex_WriteByte(areaData + 0x870, -65)
 				IEex_WriteByte(areaData + 0x87A, 115)
 				IEex_WriteByte(areaData + 0xB16, 1)
-				local visualRange = IEex_ReadSignedWord(areaData + 0x86E, 0x0)
+				local visualRange = IEex_ReadSignedWord(areaData + 0x86E)
 
 				if IEex_GetActorSpellState(targetID, 215) then
 					IEex_DS(visualRange)

@@ -147,7 +147,7 @@ ex_original_projectile = {}
 ex_projectile_flags = {}
 function IEex_Extern_OnProjectileDecode(esp)
 	IEex_AssertThread(IEex_Thread.Async)
-	local missileIndex = IEex_ReadWord(esp + 0x4, 0)
+	local missileIndex = IEex_ReadWord(esp + 0x4)
 	local generalProjectileType = IEex_ProjectileType[missileIndex]
 	local source = IEex_DecodeProjectileSources[IEex_ReadDword(esp)]
 	if source == nil then return end
@@ -162,7 +162,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 --[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
-			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E) + 1
 			if CGameAIBase <= 65535 then
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
@@ -209,8 +209,8 @@ function IEex_Extern_OnProjectileDecode(esp)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
-				local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
-				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
+				local thecondition = IEex_ReadWord(eData + 0x48)
+				local thelimit = IEex_ReadWord(eData + 0x4A)
 				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x4000000) > 0 then
 						missileIndex = theparameter1 + 1
@@ -232,7 +232,7 @@ me_projectile_actor = 0xDEFA
 function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	IEex_AssertThread(IEex_Thread.Async)
 	ex_projectile_flags[CProjectile] = {["Metamagic"] = 0}
-	local missileIndex = IEex_ReadWord(esp + 0x4, 0)
+	local missileIndex = IEex_ReadWord(esp + 0x4)
 	local generalProjectileType = IEex_ProjectileType[missileIndex]
 	local source = IEex_DecodeProjectileSources[IEex_ReadDword(esp)]
 --	IEex_DS("source ptr: " .. IEex_ReadDword(esp) .. ", missileIndex: " .. missileIndex)
@@ -261,7 +261,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 --[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
-			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E) + 1
 			if CGameAIBase <= 65535 then
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
@@ -275,7 +275,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 --[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
-			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E) + 1
 			if CGameAIBase <= 65535 then
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
@@ -289,7 +289,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 --[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
-			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E) + 1
 			if CGameAIBase <= 65535 then
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
@@ -358,8 +358,8 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
-				local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
-				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
+				local thecondition = IEex_ReadWord(eData + 0x48)
+				local thelimit = IEex_ReadWord(eData + 0x4A)
 				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x1000000) > 0 and generalProjectileType >= 6 and generalProjectileType <= 8 then
 						if bit.band(thesavingthrow, 0x100) > 0 then
@@ -416,33 +416,33 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 		end
 		if areaMult ~= 100 then
 			if generalProjectileType == 6 then
-				IEex_WriteWord(CProjectile + 0x2AE, math.floor(IEex_ReadWord(CProjectile + 0x2AE, 0x0) * areaMult / 100))
+				IEex_WriteWord(CProjectile + 0x2AE, math.floor(IEex_ReadWord(CProjectile + 0x2AE) * areaMult / 100))
 			elseif generalProjectileType == 7 then
-				IEex_WriteWord(CProjectile + 0x2CE, math.floor(IEex_ReadWord(CProjectile + 0x2CE, 0x0) * areaMult / 100))
+				IEex_WriteWord(CProjectile + 0x2CE, math.floor(IEex_ReadWord(CProjectile + 0x2CE) * areaMult / 100))
 			elseif generalProjectileType == 8 then
-				IEex_WriteWord(CProjectile + 0x2A0, math.floor(IEex_ReadWord(CProjectile + 0x2A0, 0x0) * areaMult / 100))
+				IEex_WriteWord(CProjectile + 0x2A0, math.floor(IEex_ReadWord(CProjectile + 0x2A0) * areaMult / 100))
 			end
 		end
 		if speedMult ~= 100 then
-			IEex_WriteWord(CProjectile + 0x70, math.floor(IEex_ReadWord(CProjectile + 0x70, 0x0) * speedMult / 100))
+			IEex_WriteWord(CProjectile + 0x70, math.floor(IEex_ReadWord(CProjectile + 0x70) * speedMult / 100))
 		end
 		if rangeMult ~= 100 then
 			if generalProjectileType == 6 then
-				IEex_WriteWord(CProjectile + 0x2B0, math.floor(IEex_ReadWord(CProjectile + 0x2B0, 0x0) * rangeMult / 100))
+				IEex_WriteWord(CProjectile + 0x2B0, math.floor(IEex_ReadWord(CProjectile + 0x2B0) * rangeMult / 100))
 			elseif generalProjectileType == 7 then
-				IEex_WriteWord(CProjectile + 0x2D2, math.floor(IEex_ReadWord(CProjectile + 0x2D2, 0x0) * rangeMult / 100))
+				IEex_WriteWord(CProjectile + 0x2D2, math.floor(IEex_ReadWord(CProjectile + 0x2D2) * rangeMult / 100))
 			elseif generalProjectileType == 8 then
-				IEex_WriteWord(CProjectile + 0x2A2, math.floor(IEex_ReadWord(CProjectile + 0x2A2, 0x0) * rangeMult / 100))
+				IEex_WriteWord(CProjectile + 0x2A2, math.floor(IEex_ReadWord(CProjectile + 0x2A2) * rangeMult / 100))
 			end
 		end
 		if durationSet ~= -1 then
-			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) > 0 then
+			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0) > 0 then
 				IEex_WriteWord(CProjectile + 0x4C0, durationSet)
 			end
 		end
 		if durationMult ~= 100 then
-			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) > 0 then
-				IEex_WriteWord(CProjectile + 0x4C0, math.floor(IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) * durationMult / 100))
+			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0) > 0 then
+				IEex_WriteWord(CProjectile + 0x4C0, math.floor(IEex_ReadSignedWord(CProjectile + 0x4C0) * durationMult / 100))
 			end
 		end
 	end
@@ -461,7 +461,7 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 	local sourceID = IEex_ReadDword(CGameEffect + 0x10C)
 	local CGameAIBase = IEex_GetActorShare(sourceID)
 	local source = 0
---	IEex_DS("missileIndex: " .. IEex_ReadWord(CProjectile + 0x6E, 0x0) + 1)
+--	IEex_DS("missileIndex: " .. IEex_ReadWord(CProjectile + 0x6E) + 1)
 --[[
 	local sourceRES = ""
 	if (source == 0 or source == 1 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
@@ -475,7 +475,7 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 		IEex_WriteDword(CGameEffect + 0xD4, internalFlags)
 		if IEex_ReadDword(CGameEffect + 0xC) == 500 and IEex_ReadLString(CGameEffect + 0x2C, 8) == "METELEFI" and IEex_GetActorSpellState(sourceID, 246) then
 			local areaMult = 100
-			local missileIndex = IEex_ReadWord(CProjectile + 0x6E, 0x0) + 1
+			local missileIndex = IEex_ReadWord(CProjectile + 0x6E) + 1
 			local generalProjectileType = IEex_ProjectileType[missileIndex]
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
@@ -485,8 +485,8 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
-					local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
-					local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
+					local thecondition = IEex_ReadWord(eData + 0x48)
+					local thelimit = IEex_ReadWord(eData + 0x4A)
 					if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 						if bit.band(thesavingthrow, 0x1000000) > 0 and generalProjectileType >= 6 and generalProjectileType <= 8 then
 							areaMult = math.floor(areaMult * theparameter1 / 100)
@@ -618,8 +618,8 @@ function EXMETAMA(actionData, creatureData)
 				end
 			end)
 		end
-		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
-		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)
+		local casterClass = IEex_ReadByte(creatureData + 0x530)
+		local casterDomain = IEex_ReadByte(creatureData + 0x531)
 		local casterType = IEex_CasterClassToType[casterClass]
 --[[
 		if casterType == 2 and casterDomain > 0 then
@@ -635,7 +635,7 @@ function EXMETAMA(actionData, creatureData)
 			end
 
 		end
-		local classSpellLevel = IEex_ReadByte(creatureData + 0x534, 0x0)
+		local classSpellLevel = IEex_ReadByte(creatureData + 0x534)
 		local newSpellLevel = classSpellLevel + metamagicLevelModifier
 		local spells = IEex_FetchSpellInfo(sourceID, casterTypes)
 		local noSpellsFound = true
@@ -729,7 +729,7 @@ function EXMETAMA(actionData, creatureData)
 })
 		end
 		if spellAvailable and ex_quicken_spell[sourceID] then
-			local castCounter = IEex_ReadSignedWord(creatureData + 0x54E8, 0x0)
+			local castCounter = IEex_ReadSignedWord(creatureData + 0x54E8)
 			if castCounter ~= -1 then
 				ex_quicken_spell[sourceID] = nil
 			end
@@ -932,7 +932,7 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -982,7 +982,7 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1029,7 +1029,7 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1074,7 +1074,7 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1124,7 +1124,7 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1187,7 +1187,7 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1236,7 +1236,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if (source == 11 or source == 12 or source == 13 or source == 14) and IEex_GetActorSpellState(actorID, 246) then
-			local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
+			local projectileIndex = IEex_ReadWord(projectileData + 0x6E)
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -1245,17 +1245,17 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
-					local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
-					local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
+					local thecondition = IEex_ReadWord(eData + 0x48)
+					local thelimit = IEex_ReadWord(eData + 0x4A)
 					if (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 						if bit.band(thesavingthrow, 0x4000000) > 0 and theparameter1 == projectileIndex then
 							local generalProjectileType = IEex_ProjectileType[projectileIndex + 1]
 							if generalProjectileType == 6 then
-								IEex_WriteWord(projectileData + 0x2AE, math.floor(IEex_ReadWord(projectileData + 0x2AE, 0x0) * 1.5))
+								IEex_WriteWord(projectileData + 0x2AE, math.floor(IEex_ReadWord(projectileData + 0x2AE) * 1.5))
 							elseif generalProjectileType == 7 then
-								IEex_WriteWord(projectileData + 0x2CE, math.floor(IEex_ReadWord(projectileData + 0x2CE, 0x0) * 1.5))
+								IEex_WriteWord(projectileData + 0x2CE, math.floor(IEex_ReadWord(projectileData + 0x2CE) * 1.5))
 							elseif generalProjectileType == 8 then
-								IEex_WriteWord(projectileData + 0x2A0, math.floor(IEex_ReadWord(projectileData + 0x2A0, 0x0) * 1.5))
+								IEex_WriteWord(projectileData + 0x2A0, math.floor(IEex_ReadWord(projectileData + 0x2A0) * 1.5))
 							end
 						end
 					end
@@ -1265,7 +1265,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C, 0x0) >= 1 and IEex_ReadWord(spellData + 0x1C, 0x0) <= 2 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x40000) == 0 and IEex_ReadWord(spellData + 0x1C) >= 1 and IEex_ReadWord(spellData + 0x1C) <= 2 then
 
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
@@ -1286,14 +1286,14 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 					if source ~= 4 and source < 11 and ex_widen_spell[actorID] ~= nil then
 						ex_widen_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x40000)
-						local missileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0) + 1
+						local missileIndex = IEex_ReadWord(projectileData + 0x6E) + 1
 						local generalProjectileType = IEex_ProjectileType[missileIndex]
 						if generalProjectileType == 6 then
-							IEex_WriteWord(projectileData + 0x2AE, math.floor(IEex_ReadWord(projectileData + 0x2AE, 0x0) * 1.5))
+							IEex_WriteWord(projectileData + 0x2AE, math.floor(IEex_ReadWord(projectileData + 0x2AE) * 1.5))
 						elseif generalProjectileType == 7 then
-							IEex_WriteWord(projectileData + 0x2CE, math.floor(IEex_ReadWord(projectileData + 0x2CE, 0x0) * 1.5))
+							IEex_WriteWord(projectileData + 0x2CE, math.floor(IEex_ReadWord(projectileData + 0x2CE) * 1.5))
 						elseif generalProjectileType == 8 then
-							IEex_WriteWord(projectileData + 0x2A0, math.floor(IEex_ReadWord(projectileData + 0x2A0, 0x0) * 1.5))
+							IEex_WriteWord(projectileData + 0x2A0, math.floor(IEex_ReadWord(projectileData + 0x2A0) * 1.5))
 						end
 					end
 				else
@@ -1352,7 +1352,7 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 		local actorID = IEex_GetActorIDShare(creatureData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		local matchProjectile = IEex_ReadDword(originatingEffectData + 0x18)
-		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (matchProjectile == -1 or IEex_ReadWord(projectileData + 0x6E, 0x0) == matchProjectile) then
+		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (matchProjectile == -1 or IEex_ReadWord(projectileData + 0x6E) == matchProjectile) then
 			local savebonus = IEex_ReadDword(originatingEffectData + 0x40)
 			local sourceSpell = IEex_ReadLString(originatingEffectData + 0x90, 8)
 			if ex_source_spell[sourceSpell] ~= nil then
@@ -1397,7 +1397,7 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 		if ex_is_boulder_shot[actorID] == nil then
 			ex_is_boulder_shot[actorID] = {}
 		end
-		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44, 0x0)
+		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44)
 		local functionIdentifier = IEex_ReadLString(originatingEffectData + 0x90, 8)
 		local newMissileIndex = missileIndex
 		local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
@@ -1408,7 +1408,7 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 			projectileMatched = true
 			newMissileIndex = ex_match_missile_index[matchMissileIndexTable][missileIndex]
 		end
-		local thelimit = IEex_ReadSignedWord(originatingEffectData + 0x46, 0x0)
+		local thelimit = IEex_ReadSignedWord(originatingEffectData + 0x46)
 		if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) or not projectileMatched or (bit.band(savingthrow, 0x200000) == 0 and (source < 11 or source > 14)) then
 			ex_is_boulder_shot[actorID][functionIdentifier] = nil
 			if bit.band(savingthrow, 0x100000) > 0 then
@@ -1454,19 +1454,19 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
-		local damageType = IEex_ReadWord(effectData + 0x1E, 0x0)
-		local damageEnchantment = IEex_ReadWord(effectData + 0x44, 0x0)
+		local damageType = IEex_ReadWord(effectData + 0x1E)
+		local damageEnchantment = IEex_ReadWord(effectData + 0x44)
 		local functionIdentifier = IEex_ReadLString(originatingEffectData + 0x90, 8)
-		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44, 0x0)
+		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44)
 		if ex_is_boulder_shot[actorID][functionIdentifier] ~= nil and opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" then
 			ex_is_boulder_shot[actorID][functionIdentifier] = nil
 			if ex_new_projectile_damage_type[matchMissileIndexTable] ~= nil and ex_new_projectile_damage_type[matchMissileIndexTable][damageType] ~= nil then
 				damageType = ex_new_projectile_damage_type[matchMissileIndexTable][damageType]
 				IEex_WriteWord(effectData + 0x1E, damageType)
 			end
-			local damageBonus = IEex_ReadSignedByte(originatingEffectData + 0x18, 0x0)
-			local dicesize = IEex_ReadByte(originatingEffectData + 0x19, 0x0)
-			local dicenumber = IEex_ReadByte(originatingEffectData + 0x1A, 0x0)
+			local damageBonus = IEex_ReadSignedByte(originatingEffectData + 0x18)
+			local dicesize = IEex_ReadByte(originatingEffectData + 0x19)
+			local dicenumber = IEex_ReadByte(originatingEffectData + 0x1A)
 			local luck = 0
 --[[
 			local luck = IEex_GetActorStat(actorID, 32)
@@ -1502,7 +1502,7 @@ IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
 	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (IEex_ReadLString(effectData + 0x6C, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8) or IEex_ReadLString(effectData + 0x74, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8)) then
-			local newDamageType = IEex_ReadWord(originatingEffectData + 0x18, 0x0)
+			local newDamageType = IEex_ReadWord(originatingEffectData + 0x18)
 			IEex_WriteWord(effectData + 0x1E, newDamageType)
 		end
 	end,
@@ -1523,7 +1523,7 @@ IEex_MutatorGlobalFunctions["METIMESL"] = {
 		if ex_time_slow_speed_divisor ~= 0x7FFFFFFF then
 			local timeSlowed = IEex_CheckGlobalEffect(0x2)
 			if timeSlowed then
-				IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70, 0x0) / ex_time_slow_speed_divisor))
+				IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70) / ex_time_slow_speed_divisor))
 			end
 		end
 	end,
@@ -1540,7 +1540,7 @@ IEex_MutatorGlobalFunctions["USPR954"] = {
 		if ex_true_spell[sourceRES] ~= nil then
 			sourceRES = ex_true_spell[sourceRES]
 		end
-		local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
+		local projectileIndex = IEex_ReadWord(projectileData + 0x6E)
 --		if sourceRES == "USPR954" and source ~= 8 then
 		if projectileIndex == 308 then
 		end

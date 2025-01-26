@@ -141,7 +141,7 @@ function IEex_Dev_DumpControlVFTables()
 
 						-- CResUI_GetControl
 						local controlInfo = IEex_Call(0x4014C0, {controlIndex, panelIndex}, CResUI, 0x0)
-						local controlID = IEex_ReadWord(controlInfo, 0)
+						local controlID = IEex_ReadWord(controlInfo)
 
 						if not willCauseCrash(resref, panelID, controlID) then
 

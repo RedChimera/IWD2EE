@@ -36,39 +36,16 @@ function IEex_Extern_CreateAsyncState()
 
 	IEex_AssertThread(IEex_Thread.Sync, true)
 
-	-- Figure size of asyncSharedMemory
-	IEex_LabelCount = 0
-	IEex_LabelTotalKeyLength = 0
-	for key, _ in pairs(IEex_GlobalAssemblyLabels) do
-		IEex_LabelCount = IEex_LabelCount + 1
-		IEex_LabelTotalKeyLength = IEex_LabelTotalKeyLength + #key + 1
-	end
-	local asyncSharedMemory = IEex_Malloc(0xC + IEex_LabelCount * 0x8)
-
-	IEex_WriteDword(asyncSharedMemory, IEex_AsyncState)
-	IEex_WriteDword(asyncSharedMemory + 0x4, IEex_LabelCount)
-	IEex_WriteDword(asyncSharedMemory + 0x8, IEex_AsyncInitialLock)
-
-	-- Write all Sync labels to shared memory so the Async state can initialize itself
-	local currentEntryPointer = asyncSharedMemory + 0xC
-	local currentKeysMemPointer = IEex_Malloc(IEex_LabelTotalKeyLength)
-
-	for key, val in pairs(IEex_GlobalAssemblyLabels) do
-		IEex_WriteString(currentKeysMemPointer, key)
-		IEex_WriteDword(currentEntryPointer, currentKeysMemPointer)
-		IEex_WriteDword(currentEntryPointer + 0x4, val)
-		currentEntryPointer = currentEntryPointer + 0x8
-		currentKeysMemPointer = currentKeysMemPointer + #key + 1
-	end
+	local asyncSharedMemory = IEex_Malloc(0x4)
+	IEex_WriteDword(asyncSharedMemory, IEex_AsyncInitialLockPtr)
 
 	IEex_WriteDword(IEex_AsyncSharedMemoryPtr, asyncSharedMemory)
-
 end
 
 -- Called by IEexHelper when it is handling thread creation
 -- function IEex_Extern_PostAsyncThreadCreated()
 -- 	IEex_AssertThread(IEex_Thread.Sync, true)
--- 	while IEex_ReadByte(IEex_AsyncInitialLock) == 0 do
+-- 	while IEex_ReadByte(IEex_AsyncInitialLockPtr) == 0 do
 -- 		IEex_Helper_Sleep(1)
 -- 	end
 -- end
@@ -96,7 +73,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	if needReturn then return end
 
 	IEex_TracebackPrint("[!]", "[!]    ", "IEex detected crash; debug info:", 1)
-	IEex_DumpCrashThreadStack(EXCEPTION_POINTERS, "[!]     ")
+	IEex_DumpCrashThreadStack(EXCEPTION_POINTERS, "LPRINT: [!]     ")
 
 	local timeFormat = "%x_%X"
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")
@@ -181,10 +158,10 @@ function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 
 	local mageKits = bit.band(kit, 0x7FC0)
 	local unusableKits = IEex_Flags({
-		bit.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
-		bit.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
-		bit.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
-		IEex_ReadByte(itemData + 0x2F, 0)
+		bit.lshift(IEex_ReadByte(itemData + 0x29), 24),
+		bit.lshift(IEex_ReadByte(itemData + 0x2B), 16),
+		bit.lshift(IEex_ReadByte(itemData + 0x2D), 8),
+		IEex_ReadByte(itemData + 0x2F)
 	})
 
 	resWrapper:free()
@@ -238,9 +215,9 @@ function IEex_GetFeatCountFromBaseStats(baseStats, featID)
 		-- Abuse function's simple indexing and pretend like I have a sprite
 		return IEex_Call(IEex_Label("CGameSprite::GetFeatCount"), {featID}, baseStats - 0x5A4, 0x0)
 	elseif featID <= 111 then
-		return IEex_ReadByte(baseStats + 0x1EB + (featID - 0x4B), 0)
+		return IEex_ReadByte(baseStats + 0x1EB + (featID - 0x4B))
 	else
-		return IEex_ReadByte(baseStats + 0x300 + (featID - 0x70), 0)
+		return IEex_ReadByte(baseStats + 0x300 + (featID - 0x70))
 	end
 end
 
@@ -276,7 +253,7 @@ function IEex_GetSpriteFeatCount(sprite, featID)
 		if offset == nil or offset <= 0 then
 			return 1
 		else
-			local featCount = IEex_ReadSignedByte(sprite + offset, 0x0)
+			local featCount = IEex_ReadSignedByte(sprite + offset)
 			if featCount < 1 then
 				featCount = 1
 				IEex_WriteByte(sprite + offset, featCount)
@@ -606,7 +583,7 @@ function IEex_IndexAllResources()
 	while currentIndex ~= limit do
 		local resref = IEex_ReadLString(unknownSubstruct2 + currentAddress, 8)
 		if resref ~= "" then
-			local type = IEex_ReadWord(unknownSubstruct2 + currentAddress + 0x12, 0)
+			local type = IEex_ReadWord(unknownSubstruct2 + currentAddress + 0x12)
 			local typeBucket = IEex_IndexedResources[type]
 			if not typeBucket then
 				typeBucket = {}
@@ -638,18 +615,18 @@ function IEex_MapSpellsToScrolls()
 			if resWrapper:isValid() then
 
 				local data = resWrapper:getData()
-				local category = IEex_ReadWord(data + 0x1C, 0)
-				local abilitiesNum = IEex_ReadWord(data + 0x68, 0)
+				local category = IEex_ReadWord(data + 0x1C)
+				local abilitiesNum = IEex_ReadWord(data + 0x68)
 
 				if category == 11 and abilitiesNum >= 2 then
 
 					local secondAbilityAddress = data + IEex_ReadDword(data + 0x64) + 0x38
-					local secondAbilityEffectCount = IEex_ReadWord(secondAbilityAddress + 0x1E, 0)
+					local secondAbilityEffectCount = IEex_ReadWord(secondAbilityAddress + 0x1E)
 
 					if secondAbilityEffectCount >= 1 then
-						local effectIndex = IEex_ReadWord(secondAbilityAddress + 0x20, 0)
+						local effectIndex = IEex_ReadWord(secondAbilityAddress + 0x20)
 						local effectAddress = data + IEex_ReadDword(data + 0x6A) + effectIndex * 0x30
-						if IEex_ReadWord(effectAddress, 0) == 147 then
+						if IEex_ReadWord(effectAddress) == 147 then
 							local spellResref = IEex_ReadLString(effectAddress + 0x14, 8)
 							IEex_SpellToScroll[spellResref:upper()] = resref
 						end
@@ -676,7 +653,7 @@ function IEex_LoadInitial2DAs()
 	local feats2DA = IEex_2DADemand("B3FEATS")
 
 	local idColumn = IEex_2DAFindColumn(feats2DA, "ID")
-	local maxRowIndex = IEex_ReadWord(feats2DA + 0x20, 1) - 1
+	local maxRowIndex = IEex_ReadWord(feats2DA + 0x22) - 1
 
 	local previousID = 74
 	for rowIndex = 0, maxRowIndex, 1 do
@@ -692,7 +669,7 @@ function IEex_LoadInitial2DAs()
 
 	local skills2DA = IEex_2DADemand("SKILLS")
 
-	IEex_NEW_SKILLS_SIZE = tonumber(IEex_2DAGetAt(skills2DA, IEex_2DAFindColumn(skills2DA, "ID"), IEex_ReadWord(skills2DA + 0x20, 1) - 1)) + 1
+	IEex_NEW_SKILLS_SIZE = tonumber(IEex_2DAGetAt(skills2DA, IEex_2DAFindColumn(skills2DA, "ID"), IEex_ReadWord(skills2DA + 0x22) - 1)) + 1
 --	print(IEex_NEW_SKILLS_SIZE)
 end
 
