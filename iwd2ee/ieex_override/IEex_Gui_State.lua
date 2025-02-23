@@ -3978,6 +3978,24 @@ end
 
 IEex_Hotkeys_KeyToCustomMapIndex = {}
 
+-- Hardcode scrolling keys to defaults in IEex_Vanilla mode
+IEex_AbsoluteOnce("IEex_InitKeyToCustomMapIndex", function()
+	if not IEex_Vanilla then return end
+	if not IEex_InAsyncState then return false end
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.UP]      = IEex_Hotkeys_CustomBinding.SCROLL_UP
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD8] = IEex_Hotkeys_CustomBinding.SCROLL_UP_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.LEFT]    = IEex_Hotkeys_CustomBinding.SCROLL_LEFT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD4] = IEex_Hotkeys_CustomBinding.SCROLL_LEFT_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.DOWN]    = IEex_Hotkeys_CustomBinding.SCROLL_DOWN
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD2] = IEex_Hotkeys_CustomBinding.SCROLL_DOWN_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.RIGHT]   = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD6] = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD7] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD1] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD3] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT
+	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD9] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT
+end)
+
 -- This function is called by the engine whenever a custom hotkey binding is updated, (this includes initialization).
 --     deltaT = {
 --         { ["customMapIndex"] = ?, ["oldVirtualKey"] = ?, ["oldVirtualKeyHasCtrl"] = ?, ["newVirtualKey"] = ?, ["newVirtualKeyHasCtrl"] = ? },
