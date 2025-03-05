@@ -1,10 +1,10 @@
 
 IEex_ReadByte = IEex_ReadU8
 IEex_ReadWord = IEex_ReadU16
-IEex_ReadDword = IEex_ReadU32
 
 IEex_ReadSignedByte = IEex_Read8
 IEex_ReadSignedWord = IEex_Read16
+IEex_ReadDword = IEex_Read32
 
 IEex_DefineAssemblyLabel("_g_lua", IEex_Label("Hardcoded_InternalLuaState"))
 IEex_DefineAssemblyLabel("_lua_createtable", IEex_Label("Hardcoded_lua_createtable"))
