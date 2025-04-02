@@ -17,7 +17,7 @@ function IEex_Extern_SetupAsyncState(asyncSharedMemory)
 	IEex_ExposeToLua(IEex_Label("IEex_ScreenToClientLua"), "IEex_ScreenToClient")
 
 	-- Init helper dll for Async state
-	IEex_DllCall("IEexHelper", "ExposeFunctions", {IEex_Label("_g_lua_async")}, nil, 0x0)
+	IEex_OpenLuaBindings("IEexHelper")
 
 	-- Note async thread id
 	IEex_Helper_SetBridge("IEex_ThreadBridge", "Async", IEex_GetCurrentThread())

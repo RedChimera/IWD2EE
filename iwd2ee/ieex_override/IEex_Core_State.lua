@@ -682,7 +682,6 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 
 	-- Rest of special async globals in IEex_Core_Patch
 	IEex_AsyncState = IEex_Call(IEex_Label("_luaL_newstate"), {}, nil, 0x0)
-	IEex_Call(IEex_Label("_luaL_openlibs"), {IEex_AsyncState}, nil, 0x4)
 	IEex_DefineAssemblyLabel("_g_lua_async", IEex_AsyncState)
 
 	----------------------
