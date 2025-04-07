@@ -129,3 +129,6 @@ Poids : 0~
 
 //26997: Missing word "NOUS allons"
 @57030	=~Assez bien, vu les circonstances. Je crois que nous allons pouvoir défendre Targos.~
+
+//31698: Better translation
+@57031	=~Parfait. Dans ce cas, je vais vous dire ce que vous avez à y gagner dès que je vous aurai expliqué ce qu’il faut faire. Un misérable gobelin du nom de Kruntur refuse de me transmettre un message rédigé par mes maîtres. Si jamais je n’exécutais pas l’ordre qui m’y est donné, je subirais la fureur de mes maîtres et cette idée réussit à terrifier même une créature comme moi.~
