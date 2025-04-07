@@ -7519,12 +7519,28 @@ Spécial :
 Poids : 2,27 kg (5 lb)
 Compétence : Arme courante, masse
 Type d’arme : À une main~
-//@11397	= ~Brasamical vers le Sud~
-@11398	= ~Patte de Singe de Discipline +3~
-@11399	= ~Patte de Singe de Préjudice Extrême +5~
+//@11397	= ~Patte de Singe de Discipline~
+@11398	= ~Sprawg, le capitaine néo-orog, est actuellement l’instructeur de stratégie martiale des nouvelles recrues de la Légion de la Chimère. En tant que tel, il avait besoin d’un outil permettant de rendre ses élèves obéissants et ordonnés. C’est ainsi que la Patte de Singe de Discipline fut créée.
+
+La Patte de Singe de Discipline porte très bien son nom. Elle est principalement constituée d’un énorme bras pétrifié de singe, coupé au niveau de l’épaule. C’est à cet endroit qu’une sorte de poignée a été insérée, comme miraculeusement soudée dans l’os. A l’autre bout, la patte ouverte applique les sentences. Lorsqu’elle entre en action, la victime est non seulement gravement blessée, mais se trouve en plus dans un état de peur panique ou de confusion très intenses. Une fois ces symptômes disparus, il y a fort à parier que celui ou celle qui en a pâti deviendra particulièrement sage, surtout lorsqu’il sera en classe.
+
+PARAMÈTRES :
+
+Dégâts : 1d6  +3
+Bonus d’attaque : +3
+Enchantement : +3
+Type de dégâts : Contondants
+Spécial :
+  Vitesse : Une attaques supplémentaire par round
+  Sort : 15 % de chances de lancer le sort Émotion : Terreur sur la cible pendant 5 rounds (DD de Volonté de 19)
+  Sort : 5 % de chances de lancer le sort Confusion sur la cible pendant 9 rounds (DD de Volonté de 19)
+Poids : 1,36 kg (3 lb)
+Compétence : Arme courante, masse
+Type d’arme : À une main~
+//@11399	= ~Patte de Singe de Préjudice Extrême~
 @11400	= ~Sprawg, le capitaine néo-orog, est actuellement l’instructeur de stratégie martiale des nouvelles recrues de la Légion de la Chimère. En tant que tel, il avait besoin d’un outil permettant de rendre ses élèves obéissants et ordonnés. C’est ainsi que la Patte de Singe de Préjudice Extrême fut créée.
 
-La Patte de Singe de Préjudice Extrême porte très bien son nom. Elle est principalement constituée d’un énorme bras immobile de singe, coupé au niveau de l’épaule. C’est à cet endroit qu’une sorte d’étau a été inséré, comme miraculeusement soudé dans l’os. A l’autre bout, la patte ouverte applique les sentences. Lorsqu’elle entre en action, la victime est non seulement gravement blessée, mais se trouve en plus dans un état de peur panique ou de confusion très intense. Une fois ces symptômes dissous, il y a fort à parier que celui ou celle qui en a pâti deviendra particulièrement sage, surtout lorsqu’il sera en classe.
+La Patte de Singe de Préjudice Extrême porte très bien son nom. Elle est principalement constituée d’un énorme bras immobile de singe, coupé au niveau de l’épaule. C’est à cet endroit qu’une sorte d’étau a été inséré, comme miraculeusement soudé dans l’os. A l’autre bout, la patte ouverte applique les sentences. Lorsqu’elle entre en action, la victime est non seulement gravement blessée, mais se trouve en plus dans un état de peur panique ou de confusion très intenses. Une fois ces symptômes dissous, il y a fort à parier que celui ou celle qui en a pâti deviendra particulièrement sage, surtout lorsqu’il sera en classe.
 
 PARAMÈTRES :
 
