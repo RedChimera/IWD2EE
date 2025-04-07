@@ -126,3 +126,6 @@ Poids : 0~
 
 //14771: "Protection de pavois" traduction de "Shielded"
 @57029	=~<PROTEGE> par un bouclier~
+
+//26997: Missing word "NOUS allons"
+@57030	=~Assez bien, vu les circonstances. Je crois que nous allons pouvoir défendre Targos.~
