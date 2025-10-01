@@ -3364,7 +3364,7 @@ function EXDAMAGE(effectData, creatureData)
 				isImmuneToSneakAttack = false
 			end
 			local uncannyDodgeLevel = 0
-			if IEex_GetActorStat(targetID, 96) >= ex_improved_uncanny_dodge_class_level[1] or IEex_GetActorStat(targetID, 104) >= ex_improved_uncanny_dodge_class_level[9] then
+			if (IEex_GetActorStat(targetID, 96) >= ex_improved_uncanny_dodge_class_level[1] or IEex_GetActorStat(targetID, 104) >= ex_improved_uncanny_dodge_class_level[9]) and bit.band(stateValue, 0x29) == 0 then
 				uncannyDodgeLevel = IEex_GetActorStat(targetID, 96) + IEex_GetActorStat(targetID, 104)
 			end
 			if bit.band(savingthrow, 0x880000) > 0 and (canSneakAttackOnEveryHit or canSneakAttackOnNextHit or IEex_IsValidBackstabDirection(sourceID, targetID) or bit.band(stateValue, 0x80140029) ~= 0 or isSleeping or IEex_GetActorSpellState(targetID, 183) or IEex_GetActorSpellState(targetID, 186)) and not isImmuneToSneakAttack and (bit.band(savingthrow, 0x60000) > 0 or bit.band(savingthrow, 0x800000) > 0 or (bit.band(savingthrow, 0x60000) == 0 and canSneakAttackWithSpells)) then
@@ -6986,6 +6986,7 @@ function MEMODDUR(effectData, creatureData)
 				IEex_WriteWord(projectileData + 0x70, 1000)
 			end)
 		end
+
 		IEex_IterateTemporals(targetID, function(temporalData)
 			local remainingDuration = IEex_ReadSignedWord(temporalData + 0x9C, 0x0)
 			local elapsedDuration = IEex_ReadSignedWord(temporalData + 0x10E, 0x0)
@@ -7001,7 +7002,9 @@ function MEMODDUR(effectData, creatureData)
 				IEex_WriteWord(temporalData + 0x10E, elapsedDuration)
 			end
 		end)
+
 	end
+
 end
 
 function MEHIDECR(effectData, creatureData)
@@ -7417,6 +7420,7 @@ function MEDARKNE(effectData, creatureData)
 ["timing"] = timing,
 ["duration"] = duration,
 ["parameter1"] = attackPenalty,
+["savingthrow"] = 0x10000,
 ["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
 ["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
 ["internal_flags"] = internalFlags,
@@ -7425,7 +7429,65 @@ function MEDARKNE(effectData, creatureData)
 })
 	end
 
+end
 
+function MEDARKSP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local state = IEex_ReadDword(effectData + 0x44)
+	local doApply = false
+	local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+	if bit.band(stateValue, 0x40000) ~= 0 then
+		doApply = true
+	else
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 54 and bit.band(thesavingthrow, 0x10000) > 0 then
+				doApply = true
+			end
+		end)
+	end
+	local invert = (bit.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	if doApply then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["casterlvl"] = casterlvl,
+["parent_resource"] = spellRES,
+["internal_flags"] = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4)),
+["source_id"] = sourceID
+})
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["casterlvl"] = casterlvl,
+["parent_resource"] = spellRES,
+["internal_flags"] = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4)),
+["source_id"] = sourceID
+})
+			end
+		end
+	end
 end
 
 function MEPOLYMO(effectData, creatureData)
@@ -11580,7 +11642,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			end
 		end
 	end
-	if (IEex_ReadByte(creatureData + 0x4C53, 0x0) == 2 or IEex_ReadByte(creatureData + 0x26, 0x0) == 2) and IEex_ReadByte(creatureData + 0x24, 0x0) <= 30 and tick % ex_detect_traps_period == 0 then
+	if (IEex_ReadByte(creatureData + 0x4C53, 0x0) == 2 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 and ex_elf_automatic_search)) and IEex_ReadByte(creatureData + 0x24, 0x0) <= 30 and tick % ex_detect_traps_period == 0 then
 		local searchSkill = IEex_GetActorStat(targetID, 28)
 		local searchRadius = ex_detect_traps_radius + searchSkill * ex_detect_traps_radius_increase_per_search_skill_point
 		if searchRadius > 400 then
@@ -11588,6 +11650,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		end
 		local targetX, targetY = IEex_GetActorLocation(targetID)
 		local areaData = IEex_ReadDword(creatureData + 0x12)
+		local autoPause = false
 		IEex_IterateIDs(areaData, 0x11, function(id)
 			local share = IEex_GetActorShare(id)
 			if IEex_ReadWord(share + 0x896, 0x0) > 0 and IEex_ReadLString(share + 0x864, 8) ~= "" then
@@ -11598,7 +11661,10 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					trapDetectDifficulty = trapDetectDifficulty - 1000
 				end
 				if trapDetectDifficulty ~= 100 and searchSkill + 4 >= math.floor(trapDetectDifficulty / 5) and IEex_GetDistanceIsometric(targetX, targetY, trapX, trapY) <= searchRadius then
-					IEex_WriteWord(share + 0x898, 1)
+					if IEex_ReadWord(share + 0x898, 0x0) == 0 then
+						autoPause = true
+						IEex_WriteWord(share + 0x898, 1)
+					end
 					IEex_WriteWord(share + 0x8D0, 313)
 				end
 			end
@@ -11614,7 +11680,10 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					trapDetectDifficulty = trapDetectDifficulty - 1000
 				end
 				if trapDetectDifficulty ~= 100 and searchSkill + 4 >= math.floor(trapDetectDifficulty / 5) and IEex_GetDistanceIsometric(targetX, targetY, trapX, trapY) <= searchRadius then
-					IEex_WriteWord(share + 0x64E, 1)
+					if IEex_ReadWord(share + 0x64E, 0x0) == 0 then
+						autoPause = true
+						IEex_WriteWord(share + 0x64E, 1)
+					end
 					IEex_WriteWord(share + 0x664, 313)
 				end
 			end
@@ -11630,11 +11699,17 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					trapDetectDifficulty = trapDetectDifficulty - 1000
 				end
 				if trapDetectDifficulty ~= 100 and searchSkill + 4 >= math.floor(trapDetectDifficulty / 5) and IEex_GetDistanceIsometric(targetX, targetY, trapX, trapY) <= searchRadius then
-					IEex_WriteWord(share + 0x614, 1)
+					if IEex_ReadWord(share + 0x614, 0x0) == 0 then
+						autoPause = true
+						IEex_WriteWord(share + 0x614, 1)
+					end
 					IEex_WriteWord(share + 0x626, 313)
 				end
 			end
 		end)
+		if autoPause then
+			IEex_Call(IEex_ReadDword(IEex_ReadDword(creatureData) + 0xB0), {0x80}, creatureData, 0x0)
+		end
 	end
 	if targetID == IEex_GetActorIDCharacter(0) then
 --[[
@@ -12331,7 +12406,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 })
 		end
 	end
-	if bit.band(extraFlags, 0x20000) == 0 then
+	if bit.band(extraFlags, 0x20000) == 0 and ex_feat_name_id["ME_EXTEND_SPELL"] then
 		extraFlags = bit.bor(extraFlags, 0x20000)
 		IEex_WriteDword(creatureData + 0x740, extraFlags)
 		local extendSpellFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_EXTEND_SPELL"], 0x0)
@@ -15389,6 +15464,28 @@ function MESPLPRC(effectData, creatureData)
 	end
 end
 
+function EXADVREC(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local special = IEex_ReadDword(effectData + 0x44)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local thespecial = IEex_ReadDword(eData + 0x48)
+		local theparameter3 = IEex_ReadDword(eData + 0x60)
+		if theopcode == 288 and theparameter2 == 197 and (special <= 0 or (special == thespecial and bit.band(thesavingthrow, 0x10000) > 0)) then
+			while parameter1 > 0 and theparameter3 > 0 do
+				parameter1 = parameter1 - 1
+				theparameter3 = theparameter3 - 1
+				IEex_WriteDword(effectData + 0x18, parameter1)
+				IEex_WriteDword(eData + 0x60, theparameter3)
+			end
+		end
+	end)
+end
+
 function MEMIRRIM(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -16246,6 +16343,124 @@ function METORNAT(effectData, creatureData)
 })
 end
 
+function MEPRISWL(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local distX = targetX - sourceX
+	local distY = targetY - sourceY
+	local dist = math.floor((distX ^ 2 + distY ^ 2) ^ .5)
+	local orientation = 0
+	if dist == 0 then
+		dist = 1
+	end
+	local angle = 90
+	if deltaX ~= 0 then
+		angle = math.deg(math.atan(distY / distX))
+		for i = 1, 9, 1 do
+			if (angle >= key_angles[i] and angle - 11.25 <= key_angles[i]) or (angle <= key_angles[i] and angle + 11.25 >= key_angles[i]) then
+				angle = key_angles[i]
+				orientation = i - 1
+			end
+		end
+	else
+		if deltaY >= 0 then
+			angle = key_angles[1]
+			orientation = 0
+		else
+			angle = key_angles[9]
+			orientation = 8
+		end
+	end
+	
+	local betweenWallsX = math.floor(math.cos(math.rad(angle)) * 20)
+	local betweenWallsY = math.floor(math.sin(math.rad(angle)) * 20)
+	for k, v in ipairs(key_angles) do
+		if angle == v then
+		end
+	end
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local alreadyActive = false
+	local notLoaded = true
+	IEex_IterateIDs(areaData, 0x30, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "PRISW1" or scriptName == areaRES .. "PRISW2" or scriptName == areaRES .. "PRISW3" or scriptName == areaRES .. "PRISW4" or scriptName == areaRES .. "PRISW5" or scriptName == areaRES .. "PRISW6" or scriptName == areaRES .. "PRISW7" then
+			notLoaded = false
+			if bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+				alreadyActive = true
+			end
+		end
+	end)
+	if alreadyActive or notLoaded then return end
+
+	IEex_IterateIDs(areaData, 0x31, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+		if scriptName == areaRES .. "AREAGL" then
+			IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["resource"] = spellRES,
+["parameter2"] = 230,
+["parameter3"] = orientation,
+["special"] = 0x80000,
+["savingthrow"] = 0x10000,
+["casterlvl"] = casterlvl,
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["internal_flags"] = internalFlags,
+["source_target"] = currentID,
+["source_id"] = sourceID,
+})
+		end
+	end)
+	for i = 1, 7, 1 do
+		IEex_Eval('Activate(\"' .. areaRES .. 'PRISW' .. i .. '\")',sourceID)
+	end
+	IEex_IterateIDs(areaData, 0x30, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		for i = 1, 7, 1 do
+			if scriptName == areaRES .. "PRISW" .. i then
+				if distX >= 0 then
+					IEex_WriteDword(staticData + 0x6, targetX + (betweenWallsX * (7 - i)))
+					IEex_WriteDword(staticData + 0xA, targetY + (betweenWallsY * (7 - i)))
+					IEex_WriteWord(staticData + 0x8E, targetX + (betweenWallsX * (7 - i)))
+					IEex_WriteWord(staticData + 0x90, targetY + (betweenWallsY * (7 - i)))
+				else
+					IEex_WriteDword(staticData + 0x6, targetX - (betweenWallsX * (7 - i)))
+					IEex_WriteDword(staticData + 0xA, targetY - (betweenWallsY * (7 - i)))
+					IEex_WriteWord(staticData + 0x8E, targetX - (betweenWallsX * (7 - i)))
+					IEex_WriteWord(staticData + 0x90, targetY - (betweenWallsY * (7 - i)))
+				end
+				IEex_WriteWord(staticData + 0x180, orientation)
+				IEex_WriteDword(staticData + 0x190, 1)
+			end
+		end
+	end)
+end
+
 function MEREVGRV(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 0x1)
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -16493,6 +16708,240 @@ function MEGRVGLB(effectData, creatureData)
 })
 	end
 end
+staticsToStop = {}
+function EXVISEFF(effectData, creatureData, isSpecialCall)
+	local constantID = IEex_ReadDword(effectData + 0x5C)
+	if not isSpecialCall and constantID ~= 0 then return end
+--	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local visualEffectName = IEex_ReadLString(effectData + 0x18, 8)
+	local visualEffectRES = visualEffectName
+	local visualEffectLocZ = 0
+	local visualEffectFlags = 0x3
+	local visualEffectCycle = 0
+	local visualEffectBlankFrames = 0
+	local visualEffectEnlarge = false
+	local visualEffectEnlargeOnLargeTarget = false
+	local visualEffect = ex_custom_visual_effects[visualEffectName]
+	if visualEffect then 
+		visualEffectRES = visualEffect["animationResRef"]
+		visualEffectLocZ = visualEffect["locZ"]
+		visualEffectFlags = visualEffect["appearanceFlags"]
+		visualEffectCycle = visualEffect["cycle"]
+		visualEffectEnlarge = visualEffect["enlarge"]
+		visualEffectEnlargeOnLargeTarget = visualEffect["enlargeOnLargeTarget"]
+		if visualEffect["blankFrames"] then
+			visualEffectBlankFrames = visualEffect["blankFrames"]
+		end
+	end
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local initializing = false
+	if constantID == 0 then
+		constantID = IEex_GetGlobal("EX_CONSTANT_ID") + 1
+		IEex_WriteDword(effectData + 0x5C, constantID)
+		IEex_SetGlobal("EX_CONSTANT_ID", constantID)
+		initializing = true
+	end
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+	if not IEex_IsSprite(sourceID, true) then
+		sourceX = IEex_ReadDword(effectData + 0x7C)
+		sourceY = IEex_ReadDword(effectData + 0x80)
+	end
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local isLarge = false
+	if bit.band(savingthrow, 0x10000) > 0 then
+		targetX, targetY = IEex_GetActorLocation(targetID)
+		local animationData = IEex_ReadDword(creatureData + 0x50F0)
+		if animationData > 0 then
+			isLarge = (math.abs(IEex_ReadDword(animationData + 0x10)) >= 32)
+		end
+	end
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
+	if timing == 4096 and initializing then
+		if bit.band(savingthrow, 0x20000) > 0 then
+			local numFrames = 0
+			local resWrapper = IEex_DemandRes(visualEffectRES, "BAM")
+			if resWrapper:isValid() then
+				local bamData = resWrapper:getData()
+				local numFrameEntries = IEex_ReadSignedWord(bamData + 0x8, 0x0)
+				local frameEntriesOffset = IEex_ReadDword(bamData + 0xC)
+				numFrames = IEex_ReadSignedWord(bamData + frameEntriesOffset + numFrameEntries * 0xC + visualEffectCycle * 0x4, 0x0)
+			end
+			resWrapper:free()
+			duration = time_applied + numFrames - visualEffectBlankFrames
+			IEex_WriteDword(effectData + 0x24, duration)
+		end
+	end
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local previousAreaRES = IEex_ReadLString(effectData + 0x6C, 8)
+	local inactiveExists = false
+	local activeExists = false
+	local gotEffect = false
+	if areaRES ~= previousAreaRES then
+		IEex_IterateIDs(areaData, 0x31, function(currentID)
+			local currentShare = IEex_GetActorShare(currentID)
+			local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+			if scriptName == areaRES .. "AREAGL" then
+				if bit.band(savingthrow, 0x10000) == 0 then
+					IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = visualEffectName,
+["parameter2"] = 230,
+["parameter3"] = constantID,
+["parameter4"] = duration,
+["savingthrow"] = 0x20000,
+["casterlvl"] = casterlvl,
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["source_id"] = sourceID,
+})
+					IEex_IterateActorEffects(currentID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						local thesourceID = IEex_ReadDword(eData + 0x110)
+						if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x20000) > 0 and theresource == visualEffectName and IEex_ReadDword(eData + 0x114) == 0 then
+							gotEffect = true
+						end
+					end)
+				else
+					IEex_IterateActorEffects(currentID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						local thesourceID = IEex_ReadDword(eData + 0x110)
+						if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x40000) > 0 and theresource == visualEffectName and thesourceID == targetID and IEex_ReadDword(eData + 0x114) == 0 then
+							IEex_WriteDword(eData + 0x114, 1)
+						end
+					end)
+					IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = visualEffectName,
+["parameter2"] = 230,
+["parameter3"] = constantID,
+["parameter4"] = duration,
+["savingthrow"] = 0x40000,
+["casterlvl"] = casterlvl,
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["internal_flags"] = internalFlags,
+["source_target"] = currentID,
+["source_id"] = targetID,
+})
+					IEex_IterateActorEffects(currentID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						local thesourceID = IEex_ReadDword(eData + 0x110)
+						if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x40000) > 0 and theresource == visualEffectName and IEex_ReadDword(eData + 0x114) == 0 then
+							gotEffect = true
+						end
+					end)
+				end
+			end
+		end)
+		if gotEffect then
+			IEex_WriteLString(effectData + 0x6C, areaRES, 8)
+		end
+	end
+	if not initializing then
+		IEex_IterateIDs(areaData, 0x30, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			if scriptName == areaRES .. visualEffectName .. constantID then
+				local appearanceFlags = IEex_ReadWord(staticData + 0xA2, 0x0)
+				if bit.band(appearanceFlags, 0x1) > 0 then
+					activeExists = true
+					if bit.band(savingthrow, 0x10000) > 0 then
+						IEex_WriteDword(staticData + 0x6, targetX)
+						IEex_WriteDword(staticData + 0xA, targetY + 10)
+						IEex_WriteWord(staticData + 0x8E, targetX)
+						IEex_WriteWord(staticData + 0x90, targetY + 10)
+						if (visualEffectEnlarge and visualEffectEnlarge ~= 0) or (visualEffectEnlargeOnLargeTarget and visualEffectEnlargeOnLargeTarget ~= 0 and isLarge) then
+							IEex_WriteWord(staticData + 0x190, 1)
+						else
+							IEex_WriteWord(staticData + 0x190, 0)
+						end
+					end
+				end
+			end
+		end)
+	end
+	
+	if not activeExists and IEex_ReadDword(effectData + 0x110) == 0 then
+		IEex_IterateIDs(areaData, 0x30, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, #(areaRES .. visualEffectName))
+			if scriptName == areaRES .. visualEffectName then
+				local appearanceFlags = IEex_ReadWord(staticData + 0xA2, 0x0)
+				if bit.band(appearanceFlags, 0x1) == 0 then
+					inactiveExists = true
+					IEex_WriteLString(staticData + 0x6E, areaRES .. visualEffectName .. constantID, 32)
+					IEex_WriteDword(staticData + 0x6, targetX)
+					IEex_WriteDword(staticData + 0xA, targetY)
+					IEex_WriteWord(staticData + 0x8E, targetX)
+					IEex_WriteWord(staticData + 0x90, targetY)
+					IEex_WriteWord(staticData + 0x17E, 0)
+					if visualEffectCycle then
+						IEex_WriteWord(staticData + 0x180, visualEffectCycle)
+					end
+					if (visualEffectEnlarge and visualEffectEnlarge ~= 0) or (visualEffectEnlargeOnLargeTarget and visualEffectEnlargeOnLargeTarget ~= 0 and isLarge) then
+						IEex_WriteWord(staticData + 0x190, 1)
+					else
+						IEex_WriteWord(staticData + 0x190, 0)
+					end
+					IEex_WriteWord(staticData + 0xA2, bit.bor(appearanceFlags, 0x1))
+					if bit.band(savingthrow, 0x10000) == 0 then
+						IEex_WriteDword(effectData + 0x110, 1)
+					end
+				end
+			end
+		end)
+	end
+	if not inactiveExists and not activeExists and (initializing or (bit.band(savingthrow, 0x10000) > 0 and IEex_ReadDword(effectData + 0x110) == 0)) then
+		IEex_CreateStatic(areaData, {
+["name"] = areaRES .. visualEffectName .. constantID,
+["locX"] = targetX,
+["locY"] = targetY,
+["locZ"] = visualEffectLocZ,
+["animationResRef"] = visualEffectRES,
+["appearanceFlags"] = bit.band(visualEffectFlags, 0xFFFE),
+})
+		IEex_IterateIDs(areaData, 0x30, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			if scriptName == areaRES .. visualEffectName .. constantID then
+				IEex_WriteWord(staticData + 0x17E, 0)
+				if visualEffectCycle then
+					IEex_WriteWord(staticData + 0x180, visualEffectCycle)
+				end
+				if (visualEffectEnlarge and visualEffectEnlarge ~= 0) or (visualEffectEnlargeOnLargeTarget and visualEffectEnlargeOnLargeTarget ~= 0 and isLarge) then
+					IEex_WriteWord(staticData + 0x190, 1)
+				else
+					IEex_WriteWord(staticData + 0x190, 0)
+				end
+				IEex_WriteWord(staticData + 0xA2, bit.bor(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1))
+			end
+		end)
+	end
+end
 
 ex_tornado_speed = 15
 ex_current_tornado_delta = nil
@@ -16542,19 +16991,26 @@ function MEAREAGL(effectData, creatureData, isSpecialCall)
 			end
 		end
 	end
+
 	if IEex_ReadByte(creatureData + 0x758, 0x0) ~= 1 then
 		IEex_WriteByte(creatureData + 0x758, 1)
-		local notLoaded = true
-		IEex_IterateIDs(areaData, 0x30, function(staticID)
-			local staticData = IEex_GetActorShare(staticID)
-			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
-			if scriptName == areaRES .. "TORNAD" then
-				notLoaded = false
-			end
-		end)
-		if notLoaded then
-			for k, v in pairs(ex_global_statics) do
-				IEex_CreateStatic(areaData, {
+		local firstGlobalStatic = ""
+		for k, v in pairs(ex_global_statics) do
+			firstGlobalStatic = k
+			break
+		end
+		if firstGlobalStatic ~= "" then
+			local notLoaded = true
+			IEex_IterateIDs(areaData, 0x30, function(staticID)
+				local staticData = IEex_GetActorShare(staticID)
+				local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+				if scriptName == areaRES .. firstGlobalStatic then
+					notLoaded = false
+				end
+			end)
+			if notLoaded then
+				for k, v in pairs(ex_global_statics) do
+					IEex_CreateStatic(areaData, {
 ["name"] = areaRES .. k,
 ["locX"] = 0,
 ["locY"] = 0,
@@ -16562,27 +17018,98 @@ function MEAREAGL(effectData, creatureData, isSpecialCall)
 ["animationResRef"] = v["animationResRef"],
 ["appearanceFlags"] = v["appearanceFlags"],
 })
+				end
 			end
 		end
 	end
+	local staticsToCheck = {}
+	
+	local stopStatics = false
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theparameter2 = IEex_ReadDword(eData + 0x20)
 		local thesavingthrow = IEex_ReadDword(eData + 0x40)
-		if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x10000) > 0 and IEex_ReadDword(eData + 0x114) == 0 then
-			local thespecial = IEex_ReadDword(eData + 0x48)
-			globalEffectFlags = bit.bor(globalEffectFlags, thespecial)
-			local theresource = IEex_ReadLString(eData + 0x30, 8)
-			local thecasterlvl = IEex_ReadDword(eData + 0xC8)
-			local theinternalFlags = IEex_ReadDword(eData + 0xD8)
-			local thesourceID = IEex_ReadDword(eData + 0x110)
-			globalEffectInfo[thespecial] = {{IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}, thecasterlvl, theinternalFlags, thesourceID}
---[[
-			globalEffectInfo[thespecial] = {theresource, thecasterlvl, theinternalFlags, thesourceID}
-			if thespecial == 0x20000 then
-				globalEffectInfo[thespecial][1] = {IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}
+		if theopcode == 288 and theparameter2 == 230 and IEex_ReadDword(eData + 0x114) == 0 then
+			if bit.band(thesavingthrow, 0x10000) > 0 then
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				globalEffectFlags = bit.bor(globalEffectFlags, thespecial)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local theorientation = IEex_ReadDword(eData + 0x60)
+				local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+				local theinternalFlags = IEex_ReadDword(eData + 0xD8)
+				local thesourceID = IEex_ReadDword(eData + 0x110)
+				local thesourceX = IEex_ReadDword(eData + 0x80)
+				local thesourceY = IEex_ReadDword(eData + 0x84)
+				globalEffectInfo[thespecial] = {{IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}, thecasterlvl, theinternalFlags, thesourceID, thesourceX, thesourceY, theorientation}
+	--[[
+				globalEffectInfo[thespecial] = {theresource, thecasterlvl, theinternalFlags, thesourceID}
+				if thespecial == 0x20000 then
+					globalEffectInfo[thespecial][1] = {IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}
+				end
+	--]]
+			elseif bit.band(thesavingthrow, 0x20000) > 0 then
+				local constantID = IEex_ReadDword(eData + 0x60)
+				local visualEffectName = IEex_ReadLString(eData + 0x30, 8)
+				staticsToCheck[areaRES .. visualEffectName .. constantID] = visualEffectName
+				local originalEndPoint = IEex_ReadDword(eData + 0x64)
+				if IEex_GetGameTick() >= originalEndPoint and originalEndPoint ~= 0 then
+					staticsToStop[areaRES .. visualEffectName .. constantID] = true
+					IEex_WriteDword(eData + 0x114, 1)
+				end
+			elseif bit.band(thesavingthrow, 0x40000) > 0 then
+				local thesourceID = IEex_ReadDword(eData + 0x110)
+				local sourceShare = IEex_GetActorShare(thesourceID)
+				local constantID = IEex_ReadDword(eData + 0x60)
+				local visualEffectName = IEex_ReadLString(eData + 0x30, 8)
+				staticsToCheck[areaRES .. visualEffectName .. constantID] = visualEffectName
+				if not IEex_IsSprite(thesourceID, true) then
+					staticsToStop[areaRES .. visualEffectName .. constantID] = true
+					IEex_WriteDword(eData + 0x114, 1)
+				else
+					local foundSourceEffect = false
+					IEex_IterateActorEffects(thesourceID, function(eDataB)
+						local theopcodeB = IEex_ReadDword(eDataB + 0x10)
+						local thetimingB = IEex_ReadDword(eDataB + 0x24)
+						local thedurationB = IEex_ReadDword(eDataB + 0x28)
+						local constantIDB = IEex_ReadDword(eDataB + 0x60)
+						local theresourceB = IEex_ReadLString(eDataB + 0x30, 8)
+						if theopcodeB == 500 and theresourceB == "EXVISEFF" and constantIDB == constantID and IEex_ReadDword(eDataB + 0x114) == 0 then
+							foundSourceEffect = true
+							if thetimingB == 4096 and IEex_GetGameTick() >= thedurationB then
+								staticsToStop[areaRES .. visualEffectName .. constantID] = true
+								IEex_WriteDword(eDataB + 0x114, 1)
+							end
+						end
+					end)
+					if not foundSourceEffect then
+						staticsToStop[areaRES .. visualEffectName .. constantID] = true
+						IEex_WriteDword(eData + 0x114, 1)
+					end
+				end
 			end
---]]
+		end
+	end)
+	IEex_IterateIDs(areaData, 0x30, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if staticsToStop[scriptName] then
+			if bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+--				IEex_Eval('Deactivate(\"' .. scriptName .. '\")',targetID)
+				IEex_WriteWord(staticData + 0xA2, bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0xFFFE))
+			else
+				staticsToStop[scriptName] = nil
+			end		
+			
+		elseif staticsToCheck[scriptName] then
+			local visualEffect = ex_custom_visual_effects[staticsToCheck[scriptName]]
+			if visualEffect then
+				if visualEffect["cycle"] then
+					IEex_WriteWord(staticData + 0x180, visualEffect["cycle"])
+				end
+				if visualEffect["enlarge"] and visualEffect["enlarge"] ~= 0 then
+					IEex_WriteWord(staticData + 0x190, 1)
+				end
+			end
 		end
 	end)
 	IEex_WriteDword(creatureData + 0x738, globalEffectFlags)
@@ -16722,6 +17249,47 @@ function MEAREAGL(effectData, creatureData, isSpecialCall)
 --		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL3' .. '\")',targetID)
 --		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL4' .. '\")',targetID)
 	end
+	if bit.band(globalEffectFlags, 0x80000) > 0 then
+		local targetX = 0
+		local targetY = 0
+		IEex_IterateIDs(areaData, 0x30, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			for i = 1, 7, 1 do
+				if scriptName == areaRES .. "PRISW" .. i then
+				targetX = IEex_ReadDword(staticData + 0x6)
+				targetY = IEex_ReadDword(staticData + 0xA)
+				local orientation = globalEffectInfo[0x80000][7]
+				IEex_WriteWord(staticData + 0x180, orientation)
+				IEex_WriteWord(staticData + 0x190, 1)
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 0x52505355,
+["parameter2"] = 0x305349 + 0x10000 * i,
+["parameter3"] = orientation,
+["special"] = 0x82001E,
+["savingthrow"] = 0x300000,
+["resource"] = "MERECTSP",
+["casterlvl"] = globalEffectInfo[0x80000][2],
+["internal_flags"] = globalEffectInfo[0x80000][3],
+["parent_resource"] = "USPRIS" .. i,
+["source_target"] = targetID,
+["source_id"] = globalEffectInfo[0x80000][4],
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX,
+["target_y"] = targetY
+})
+				end
+			end
+		end)
+	elseif bit.band(previousGlobalEffectFlags, 0x80000) > 0 then
+		for i = 1, 7, 1 do
+			IEex_Eval('Deactivate(\"' .. areaRES .. 'PRISW' .. i .. '\")',targetID)
+		end
+	end
 end
 
 function MECRIT(effectData, creatureData)
@@ -16731,7 +17299,7 @@ function MECRIT(effectData, creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	if bit.band(savingthrow, 0x100000) > 0 then return end
-	local matchItemType = IEex_ReadWord(effectData + 0x44, 0x0)
+	local matchItemType = IEex_ReadSignedWord(effectData + 0x44, 0x0)
 	local totalUses = IEex_ReadSignedWord(effectData + 0x46, 0x0)
 	local uses = IEex_ReadSignedWord(effectData + 0x5C, 0x0)
 	if totalUses > 0 and uses >= totalUses then return end
@@ -16761,6 +17329,69 @@ function MECRIT(effectData, creatureData)
 	IEex_WriteByte(creatureData + 0x936, IEex_ReadByte(creatureData + 0x936, 0x0) + parameter1)
 	IEex_WriteByte(creatureData + 0x178E, IEex_ReadByte(creatureData + 0x178E, 0x0) + parameter1)
 end
+
+function MEAMBIDE(effectData, creatureData)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+--	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MECRIT", 5) then return end
+--	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local eliminateAllPenalties = (bit.band(savingthrow, 0x10000) > 0)
+	local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+	local rightHandPenaltyAdjust = 2
+	local leftHandPenaltyAdjust = 6
+	if eliminateAllPenalties then
+		rightHandPenaltyAdjust = rightHandPenaltyAdjust + 4
+		leftHandPenaltyAdjust = leftHandPenaltyAdjust + 4
+	end
+	if weaponSlot == 43 or weaponSlot == 45 or weaponSlot == 47 or weaponSlot == 49 then
+		local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+		local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+		local rangerTWF = false
+		local rangerLevel = IEex_ReadByte(creatureData + 0x62E, 0x0)
+		if rangerLevel > 0 then
+			local armorData = IEex_ReadDword(creatureData + 0x4ADC)
+			if armorData > 0 then
+				local armorRES = IEex_ReadLString(armorData + 0xC, 8)
+				local resWrapper = IEex_DemandRes(armorRES, "ITM")
+				if resWrapper:isValid() then
+					local itemData = resWrapper:getData()
+					local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+					if itemType == 60 or itemType == 61 or itemType == 67 then
+						rangerTWF = true
+					end
+				end
+				resWrapper:free()
+			end
+		end
+		local offhandData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4 + 0x4)
+		if offhandData <= 0 then return end
+		local weaponRES = IEex_ReadLString(offhandData + 0xC, 8)
+		local resWrapper = IEex_DemandRes(weaponRES, "ITM")
+		if resWrapper:isValid() then
+			local itemData = resWrapper:getData()
+			local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+			if itemType == 12 or itemType == 41 or itemType == 47 or itemType == 49 or itemType == 53 then
+				resWrapper:free()
+				return
+			elseif (itemType == 16 or itemType == 19) and eliminateAllPenalties then
+				rightHandPenaltyAdjust = rightHandPenaltyAdjust - 2
+				leftHandPenaltyAdjust = leftHandPenaltyAdjust - 2
+			end
+		end
+		resWrapper:free()
+		if rangerTWF or bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 then
+			leftHandPenaltyAdjust = leftHandPenaltyAdjust - 4
+		end
+		if rangerTWF or bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0 then
+			rightHandPenaltyAdjust = rightHandPenaltyAdjust - 2
+			leftHandPenaltyAdjust = leftHandPenaltyAdjust - 2
+		end
+	end
+	IEex_WriteByte(creatureData + 0x9F8, IEex_ReadSignedByte(creatureData + 0x9F8, 0x0) + rightHandPenaltyAdjust)
+	IEex_WriteByte(creatureData + 0x9FC, IEex_ReadSignedByte(creatureData + 0x9FC, 0x0) + leftHandPenaltyAdjust)
+end
+
 ex_stat_offset = {
 [1] = {0x924, 2},
 [3] = {0x92E, 2},
@@ -17746,6 +18377,15 @@ function MEAPRBON(effectData, creatureData)
 	local animationData = IEex_ReadDword(creatureData + 0x50F0)
 	if animationData <= 0 then return end
 	local movementRate = IEex_ReadByte(animationData + 0x6, 0x0)
+	local extraSpellResistance = IEex_GetActorStat(targetID, 95) - ex_innate_spell_resistance_cap
+	if extraSpellResistance > 0 then
+		local race = IEex_ReadByte(creatureData + 0x26, 0x0)
+		local subrace = IEex_GetActorStat(targetID, 93)
+		if (race == 2 or race == 6) and subrace == 1 then
+			local spellResistance = IEex_ReadWord(creatureData + 0x94A, 0x0)
+			IEex_WriteWord(creatureData + 0x94A, spellResistance - extraSpellResistance)
+		end
+	end
 	local barbarianLevel = IEex_GetActorStat(targetID, 96)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
 	if barbarianLevel > 0 then
@@ -19817,6 +20457,60 @@ function MEPSTAIR(effectData, creatureData)
 })
 end
 
+function MEREND(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	local special = IEex_ReadDword(effectData + 0x44)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local canRend = false
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter1 = IEex_ReadDword(eData + 0x1C)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local theresource = IEex_ReadLString(eData + 0x30, 8)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local thespecial = IEex_ReadDword(eData + 0x48)
+		local thesourceID = IEex_ReadDword(eData + 0x110)
+		if theopcode == 0 and bit.band(thesavingthrow, 0x400000) > 0 then
+			if thesourceID == targetID and (thespecial ~= special or special == -1 or thespecial == -1) then
+				canRend = true
+			end
+			IEex_WriteDword(eData + 0x114, 1)
+		end
+	end)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	if canRend then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+	else
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 0,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["savingthrow"] = 0x400000,
+["special"] = special,
+["parent_resource"] = parent_resource,
+["source_id"] = targetID
+})
+	end
+end
+
 function MERECTSP(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -19834,7 +20528,8 @@ function MERECTSP(effectData, creatureData)
 	local targetX = IEex_ReadDword(effectData + 0x84)
 	local targetY = IEex_ReadDword(effectData + 0x88)
 	local sourceData = IEex_GetActorShare(sourceID)
-	if sourceData > 0 then
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if sourceData > 0 and bit.band(savingthrow, 0x200000) == 0 then
 		sourceX = IEex_ReadDword(sourceData + 0x6)
 		sourceY = IEex_ReadDword(sourceData + 0xA)
 		if targetID ~= sourceID then
@@ -19846,10 +20541,10 @@ function MERECTSP(effectData, creatureData)
 	if parameter1 <= 0 then return end
 	local length = IEex_ReadWord(effectData + 0x44, 0x0)
 	local width = IEex_ReadWord(effectData + 0x46, 0x0)
-	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
 	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local angle = key_angles[IEex_ReadDword(effectData + 0x5C) + 1]
 	local distX = targetX - sourceX
 	local distY = targetY - sourceY
 	local dist = math.floor((distX ^ 2 + distY ^ 2) ^ .5)
@@ -19857,7 +20552,12 @@ function MERECTSP(effectData, creatureData)
 	local deltaY = 0
 	local cornerDeltaX = 0
 	local cornerDeltaY = 0
-	if dist ~= 0 then
+	if bit.band(savingthrow, 0x200000) > 0 then
+		deltaX = math.floor(length * math.cos(math.rad(angle)))
+		deltaY = math.floor(length * math.sin(math.rad(angle)))
+		cornerDeltaX = math.floor(width * math.sin(math.rad(angle)))
+		cornerDeltaY = math.floor(width * math.cos(math.rad(angle))) * -1
+	elseif dist ~= 0 then
 		deltaX = math.floor(length * distX / dist)
 		deltaY = math.floor(length * distY / dist)
 		cornerDeltaX = math.floor(width * distY / dist)
@@ -19937,7 +20637,7 @@ function MERECTSP(effectData, creatureData)
 					end
 				end
 				if inAOE then
-					if currentID ~= sourceID or bit.band(savingthrow, 0x200000) == 0 then
+					if currentID ~= sourceID or bit.band(savingthrow, 0x100000) == 0 then
 						IEex_ApplyEffectToActor(currentID, {
 ["opcode"] = 402,
 ["target"] = 2,
@@ -21687,11 +22387,15 @@ function MEFINDTR(effectData, creatureData)
 	end
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local areaData = IEex_ReadDword(creatureData + 0x12)
+	local autoPause = false
 	IEex_IterateIDs(areaData, 0x11, function(id)
 		local containerData = IEex_GetActorShare(id)
 		if special <= 0 or IEex_GetDistance(targetx, targety, IEex_ReadDword(containerData + 0x6), IEex_ReadDword(containerData + 0xA)) < special then
 			if bit.band(IEex_ReadDword(containerData + 0x88E), 0x20) == 0 and IEex_ReadWord(containerData + 0x892, 0x0) ~= 100 and IEex_ReadWord(containerData + 0x896, 0x0) > 0 then
-				IEex_WriteWord(containerData + 0x898, 1)
+				if IEex_ReadWord(containerData + 0x898, 0x0) == 0 then
+					autoPause = true
+					IEex_WriteWord(containerData + 0x898, 1)
+				end
 				IEex_WriteWord(containerData + 0x8D0, 362)
 			end
 		end
@@ -21701,7 +22405,10 @@ function MEFINDTR(effectData, creatureData)
 		if special <= 0 or IEex_GetDistance(targetx, targety, IEex_ReadDword(doorData + 0x6), IEex_ReadDword(doorData + 0xA)) < special then
 			local doorFlags = IEex_ReadDword(doorData + 0x5C4)
 			if bit.band(doorFlags, 0x8) > 0 and (bit.band(doorFlags, 0x80) == 0 or bit.band(doorFlags, 0x100) > 0) and bit.band(doorFlags, 0x2000) == 0 and IEex_ReadWord(doorData + 0x648, 0x0) ~= 100 and IEex_ReadWord(doorData + 0x64C, 0x0) > 0 then
-				IEex_WriteWord(doorData + 0x64E, 1)
+				if IEex_ReadWord(doorData + 0x64E, 0x0) == 0 then
+					autoPause = true
+					IEex_WriteWord(doorData + 0x64E, 1)
+				end
 				IEex_WriteWord(doorData + 0x664, 362)
 			end
 		end
@@ -21711,11 +22418,17 @@ function MEFINDTR(effectData, creatureData)
 		if special <= 0 or IEex_GetDistance(targetx, targety, IEex_ReadDword(triggerData + 0x6), IEex_ReadDword(triggerData + 0xA)) < special then
 			local triggerFlags = IEex_ReadDword(triggerData + 0x5D6)
 			if IEex_ReadWord(triggerData + 0x598, 0x0) == 0 and bit.band(triggerFlags, 0x8) > 0 and bit.band(triggerFlags, 0x100) == 0 and IEex_ReadWord(triggerData + 0x60E, 0x0) ~= 100 and IEex_ReadWord(triggerData + 0x612, 0x0) > 0 then
-				IEex_WriteWord(triggerData + 0x614, 1)
+				if IEex_ReadWord(triggerData + 0x614, 0x0) == 0 then
+					autoPause = true
+					IEex_WriteWord(triggerData + 0x614, 1)
+				end
 				IEex_WriteWord(triggerData + 0x626, 263)
 			end
 		end
 	end)
+	if autoPause then
+		IEex_Call(IEex_ReadDword(IEex_ReadDword(creatureData) + 0xB0), {0x80}, creatureData, 0x0)
+	end
 end
 
 function MENPCXP(effectData, creatureData)
@@ -27224,6 +27937,48 @@ function MERESCOD(effectData, creatureData, isSpecialCall)
 ["savingthrow"] = 0x20000,
 ["resource"] = "MERAISED",
 ["source_target"] = sourceID,
+["source_id"] = sourceID
+})
+	end
+end
+
+function MEFOOLSM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, true) then return end
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local stat = IEex_ReadDword(effectData + 0x44)
+	local sourceStat = IEex_GetActorStat(sourceID, stat)
+	local targetStat = IEex_GetActorStat(targetID, stat)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	if bit.band(savingthrow, 0x10000) > 0 then
+		sourceStat = math.floor((sourceStat - 10) / 2)
+		targetStat = math.floor((targetStat - 10) / 2)
+	end
+	if sourceStat > targetStat then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = sourceStat - targetStat,
+["parameter2"] = parameter2,
+["savingthrow"] = 0x10000,
+["resource"] = "EXDAMAGE",
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+	elseif targetStat > sourceStat then
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = targetStat - sourceStat,
+["parameter2"] = parameter2,
+["savingthrow"] = 0x10000,
+["resource"] = "EXDAMAGE",
+["parent_resource"] = parent_resource,
 ["source_id"] = sourceID
 })
 	end

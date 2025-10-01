@@ -38,8 +38,33 @@ Icewind Dale 2: Enhanced Edition has certain optional components which reduce th
 @56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
 @56022=~MERCANTILE BACKGROUND:
 
-Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands.  You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
+Powerful trading costers and craft builds control the wealth and commerce of Faerun's lands. You come from a family that excels at a particular trade and knows well the value of any kind of trade good or commodity.
 
 Prerequisite: Human, deep gnome, or gray dwarf
 
 Benefit: You receive a 5% discount on buying items and a 10% mark up on selling items at stores.~
+@56023=~This letter is written on weathered parchment and sealed with wax. The exterior contains the following text, written with a shaky hand: "From Garradun Tanner, to my beloved Raina, care of Captain Mariner, Neverwinter"
+
+You could potentially open the letter and view its contents, though reading someone else's love letter would be very rude.
+
+Weight: 0 lb.~
+@56024=~You might want to have a look at this letter I obtained from Garradun Tanner.~
+@56025=~You might want to have a look at this letter I obtained from that shapeshifter.~
+@56026=~Best show it to Denham - it smells of treachery, it does. Denham! Look at this.~
+@56027=~I got this letter from Garradun Tanner. It is very suspicious.~
+@56028=~...here you are. This should do the trick. Thank you for bringing this to our attention. You probably just saved many lives. I sent Ulbrec the original letter, but I wrote a copy of the original text for your reference. Do you need anything else?~
+@56029=~Garradun's Letter (Copy)~
+@56030=~This parchment contains a copy of the text from the spy Garradun's letter. The text is brief and to the point, as follows:
+
+Targos: Three or fewer ships, perhaps a few dozen infantry and archers. Two priests at the temple pavilion, with recruits drawn in from Luskan. The goblin's seizure of the waterways seems to have closed off the passage of further reinforcements. I have heard no mention of planned reinforcements from elsewhere into the city. The diviner in Targos should be taken care of by our friends from Luskan.
+
+Bremen: The city should fall soon. Targos is unable to move ships across the bay thanks to our scrag allies. According to wounded soldiers from Bremen, they will not be able to hold out. You should be able to pull in forces from the north without worrying about attacks from Bremen.
+
+Bryn Shander: With our forces in the field and the Shaengarne Ford held, the capital is unable to effectively provide the peripheral towns with supplies. The bugbears' use of hit and run tactics against caravans moving between the Ten-Towns has made it almost impossible for them to reinforce each other. Lonelywood has sent almost all of its able-bodied men south to Bryn Shander instead of sending them to Targos. The same has happened in Easthaven. Both towns should be ripe for taking should we choose to enlarge our grasp of the region. Perhaps three to four hundred men wait in Bryn Shander along with a handful of volunteers from Clan Battlehammer. Most of those are militia, with a few experienced mercenaries among them. We need not worry about Silverymoon and the other communities to the east. Only two volunteers have arrived, and those are already out of the action.
+
+Weight: 0 lb.~
+@56031=~Resistance: <EXARDAMR>/- Physical Damage Resistance~
+//The two strings below must be translated to be indentical to the line in the description of an armor or shield that states its armor or shield bonus, minus the number. The mod runs code that checks the description of armor and shields for a line that includes one of these strings and puts the above string right below them.
+@56032=~Armor Bonus:~
+@56033=~Shield Bonus:~
+@56034=~Generic Armor Bonus:~

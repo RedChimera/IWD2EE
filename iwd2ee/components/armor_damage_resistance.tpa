@@ -1,5 +1,8 @@
 //NOTES
 //
+OUTER_SPRINT stringarmor @56032
+OUTER_SPRINT stringshield @56033
+OUTER_SPRINT stringgeneric @56034
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 //Armor and shields grant resistance to physical damage equal to half their armor/shield bonus, rounded down
@@ -19,6 +22,24 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			us_offset += effectsize
 		END
 		PATCH_IF (us_bonus > 0) BEGIN
+			READ_LONG 0x54 us_desc
+			PATCH_IF (us_desc <= 0) BEGIN
+				READ_LONG 0x50 us_desc
+			END
+			SPRINT stringdamageresistance @56031
+			INNER_PATCH_SAVE stringdamageresistance ~%stringdamageresistance%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~<EXARDAMR>~ ~%us_bonus%~
+			END
+			GET_STRREF us_desc description_old
+			INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~%stringgeneric%~ ~ulgiash~
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(%stringarmor%.*\)~ ~\1
+%stringdamageresistance%~
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~ulgiash~ ~%stringgeneric%~
+			END
+			INNER_ACTION BEGIN
+				STRING_SET_EVALUATE us_desc ~%description_new%~
+			END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
@@ -39,6 +60,22 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			us_offset += effectsize
 		END
 		PATCH_IF (us_bonus > 0) BEGIN
+			READ_LONG 0x54 us_desc
+			PATCH_IF (us_desc <= 0) BEGIN
+				READ_LONG 0x50 us_desc
+			END
+			SPRINT stringdamageresistance @56031
+			INNER_PATCH_SAVE stringdamageresistance ~%stringdamageresistance%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~<EXARDAMR>~ ~%us_bonus%~
+			END
+			GET_STRREF us_desc description_old
+			INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~%stringshield%~ ~%stringshield%
+%stringdamageresistance%~
+			END
+			INNER_ACTION BEGIN
+				STRING_SET_EVALUATE us_desc ~%description_new%~
+			END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END

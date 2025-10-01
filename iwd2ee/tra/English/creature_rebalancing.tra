@@ -11,6 +11,7 @@
 @20008=~Singing Battlesong: Bladesong - Extra Attacks Per Round and Combat Bonuses~
 @20009=~Greater Death Armor~
 @20010=~Applies Soul Eater with each hit~
+@20011=~Rended~
 
 @21001=~Ruin~
 @21002=~Greater Ruin~
@@ -126,12 +127,12 @@ Weight:  0 lb.~
 @23063=~20 damage resisted from non-good, non-lawful, non-cold-iron weapon~
 @23064=~YOU KNOW MY NAME?!~
 @23065=~Aeij-Kllenzr't, I invoke your true name, Caged Fury, and command you to come out from the altar and face us in battle!~
-@23066=~Yes, I do, apparently.  Farewell.~
-@23067=~*THAT* IS ALL YOU ARE WILLING TO DO WITH MY TRUE NAME?  VERY WELL!  IT IS TIME FOR A DEMONSTRATION OF MY POWER!~
-@23068=~WHO ARE *YOU* TO SPEAK TO A GODDESS IN THAT MANNER?!  I WILL PUNISH YOUR HUBRIS RIGHT HERE AND NOW!~
-@23069=~You defeated Aeij-Kllenzr't, banishing him from Auril's altar.~
+@23066=~Yes, I do, apparently. Farewell.~
+@23067=~*THAT* IS ALL YOU ARE WILLING TO DO WITH MY TRUE NAME? VERY WELL! IT IS TIME FOR A DEMONSTRATION OF MY POWER!~
+@23068=~WHO ARE *YOU* TO SPEAK TO A GODDESS IN THAT MANNER?! I WILL PUNISH YOUR HUBRIS RIGHT HERE AND NOW!~
+@23069=~You defeated Aeij-Kllenzr't, banishing them from Auril's altar.~
 @23070=~As Aeij-Kllenzr't dies, you feel a rush of energy through your bodies, giving you a burst of health and vitality - and additional resistance to electrical attacks.~
-@23071=~We found one of Auril's altars in a secluded room on the bottom floor of the ice temple.  The altar contained the spirit of a tempest named Aeij-Kllenzr't who was pretending to be Auril, and we banished him from it by invoking his true name, Caged Fury.~
+@23071=~We found one of Auril's altars in a secluded room on the bottom floor of the ice temple.  The altar contained the spirit of a tempest named Aeij-Kllenzr't who was pretending to be Auril, and we banished them from it by invoking their true name, Caged Fury.~
 @23072=~Abishai Claw~
 @23073=~Winter Wolf Breath~
 @23074=~15 damage resisted except from a good-aligned piercing weapon~

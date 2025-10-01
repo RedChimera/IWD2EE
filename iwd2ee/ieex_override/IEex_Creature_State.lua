@@ -208,6 +208,35 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	end
 --]]
 	if not IEex_IsSprite(targetID, true) and not IEex_IsPartyMember(targetID) then return end
+	local animation = IEex_ReadDword(creatureData + 0x5C4)
+	if ex_replacement_animations[animation] then
+		IEex_WriteDword(creatureData + 0x5C4, ex_replacement_animations[animation])
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_replacement_animations[animation],
+["parameter2"] = 2,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = ex_replacement_animations[animation],
+["parameter2"] = 0,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+--[[
+		local animationData = IEex_ReadDword(creatureData + 0x50F0)
+		if animationData > 0 then
+			IEex_WriteWord(animationData + 0x4, ex_replacement_animations[animation])
+		end
+--]]
+	end
 	if ex_full_ability_score_cap > 40 then
 		for i = 0, 5, 1 do
 			local statID = 37 + i

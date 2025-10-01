@@ -436,7 +436,17 @@ function EXAPPLSP(actionData, creatureData)
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
 			local spellFlags = IEex_ReadDword(spellData + 0x18)
-			if bit.band(spellFlags, 0x10000000) > 0 then
+			local preventDueToTimeStop = false
+			if bit.band(spellFlags, 0x200000) > 0 and IEex_CheckGlobalEffect(0x2) then
+				IEex_SetActionID(actionData, 0)
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = ex_tra_55494,
+["source_id"] = sourceID
+})
+			elseif bit.band(spellFlags, 0x10000000) > 0 then
 				local targetX = IEex_GetActionPointX(actionData)
 				local targetY = IEex_GetActionPointY(actionData)
 				if actionID == 31 then

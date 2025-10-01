@@ -295,6 +295,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local special = IEex_ReadDword(effectData + 0x44)
 		local resist_dispel = IEex_ReadDword(effectData + 0x58)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
+		local weaponEnchantment = 0
 --[[
 		if opcode == 500 and resource == "MECOPYEQ" then
 			local effectIndex = parameter1
@@ -420,6 +421,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						currentHeader = 0
 					end
 					headerType = IEex_ReadByte(weaponData + 0x82 + currentHeader * 0x38, 0x0)
+					weaponEnchantment = IEex_ReadDword(weaponData + 0x60)
 					local effectOffset = IEex_ReadDword(weaponData + 0x6A)
 					local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
 					local numHeaderEffects = IEex_ReadWord(weaponData + 0x82 + currentHeader * 0x38 + 0x1E, 0x0)
@@ -444,6 +446,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
 							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
+							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -485,6 +488,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
 							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
+							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -522,6 +526,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) == 0 then
 						IEex_WriteWord(effectData + 0x1E, theparameter1)
 						parameter2 = IEex_ReadDword(effectData + 0x1C)
+						damageType = bit.band(parameter2, 0xFFFF0000)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
@@ -834,7 +839,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					end
 				end
 			end
-
+			local maxEnchantment = IEex_ReadWord(creatureData + 0x758)
 			local onDamageEffectList = {}
 			local resistanceOpcode = ex_damage_resistance_opcode[damageType]
 			if not resistanceOpcode then
@@ -845,8 +850,8 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
-				local thetypesChecked = IEex_ReadDword(eData + 0x48)
-				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thetypesChecked, 0x2000) > 0) or bit.band(thetypesChecked * 0x10000, damageType) > 0) and (bit.band(thetypesChecked, 0x4000000) == 0 or bit.band(thetypesChecked, 0x78000000) == bit.band(parameter3, 0x78000000)) then
+				local thetypesChecked = bit.band(IEex_ReadDword(eData + 0x48), 0x0000FFFF)
+				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thetypesChecked, 0x2000) > 0) or bit.band(thetypesChecked * 0x10000, damageType) > 0) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000)) then
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					if theresource ~= "" then
 						local thecasterlvl = IEex_ReadDword(eData + 0xC8)
@@ -857,7 +862,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 							newEffectTarget = sourceID
 							newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
 							newEffectTargetY = IEex_ReadDword(effectData + 0x80)
-						elseif (bit.band(thesavingthrow, 0x8000000) > 0) then
+						elseif (bit.band(thesavingthrow, 0x2000000) > 0) then
 							newEffectTarget = IEex_GetActorSummonerID(targetID)
 						end
 						local newEffectSource = sourceID
@@ -873,8 +878,21 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				elseif theopcode == resistanceOpcode and bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000) and theparameter1 == 0 and theparameter2 == 0 then
 					local thespecial = IEex_ReadDword(eData + 0x48)
 					resistance = resistance + thespecial
+				elseif theopcode == 436 and theparameter2 > maxEnchantment then
+					maxEnchantment = theparameter2
 				end
 			end)
+			if maxEnchantment > weaponEnchantment and maxEnchantment > 0 and parent_resource == "IEEX_DAM" and IEex_IsSprite(sourceID, true) then
+				IEex_SetToken("EXDRENLV", maxEnchantment)
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_tra_55350,
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+			end
 			for k, v in ipairs(onDamageEffectList) do
 				IEex_ApplyEffectToActor(v[3], {
 ["opcode"] = 402,
@@ -1046,7 +1064,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 
-		if (timing == 0 or timing == 3 or timing == 4) and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil or casterClass > 0) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
+		if (timing == 0 or timing == 3 or timing == 4) and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil or casterClass > 0) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) and ex_duration_cannot_be_changed[sourceSpell] == nil then
 			local durationMultiplier = 100
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)

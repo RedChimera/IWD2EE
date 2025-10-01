@@ -150,6 +150,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_almost_dead *=.*~ ~ex_str_almost_dead = "%ex_str_almost_dead%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+	ex_tra_55350 = RESOLVE_STR_REF(@55350)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55350 *=.*~ ~ex_tra_55350 = %ex_tra_55350%~
 	ex_tra_55370 = RESOLVE_STR_REF(@55370)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55370 *=.*~ ~ex_tra_55370 = %ex_tra_55370%~
 	ex_tra_55371 = RESOLVE_STR_REF(@55371)
@@ -196,6 +198,10 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55483 *=.*~ ~ex_tra_55483 = %ex_tra_55483%~
 	ex_tra_55484 = RESOLVE_STR_REF(@55484)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55484 *=.*~ ~ex_tra_55484 = %ex_tra_55484%~
+	ex_tra_55494 = RESOLVE_STR_REF(@55494)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55494 *=.*~ ~ex_tra_55494 = %ex_tra_55494%~
+	ex_tra_55495 = RESOLVE_STR_REF(@55495)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55495 *=.*~ ~ex_tra_55495 = %ex_tra_55495%~
 	ex_tra_55500 = RESOLVE_STR_REF(@55500)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55500 *=.*~ ~ex_tra_55500 = %ex_tra_55500%~
 	ex_tra_55580 = RESOLVE_STR_REF(@55580)
@@ -833,6 +839,10 @@ STRING_SET 8794 @56005
 //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
 
+COPY_EXISTING_REGEXP ~usrend.*\.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20011 parameter1=RESOLVE_STR_REF(@20011) END
+	BUT_ONLY_IF_IT_CHANGES
+
 //Fixed a vanilla bug where these summoned creatures had no script.
 COPY_EXISTING ~00SCAT.cre~ ~override~ ~00SDRAT.cre~ ~override~ ~00SABOR.cre~ ~override~
 	WRITE_ASCII combatscript ~00AATGN~ #8
@@ -919,6 +929,25 @@ COPY_EXISTING ~11RAGNIB.sto~ ~override~
 	REMOVE_STORE_ITEM ~00POTN10~
 	ADD_STORE_ITEM ~00POTN10~ BEFORE ~00POTN20~ #1 #0 #0 ~IDENTIFIED~ #20 UNLIMITED
 
+COPY_EXISTING ~20DERETH.sto~ ~override~
+	REMOVE_STORE_ITEM ~SPPR306Z~
+	ADD_STORE_ITEM ~SPPR306Z~ BEFORE ~SPPR502Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~AR2000.are~ ~override~
+	READ_LONG 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII (offset + 0x20) doorid (5)
+		PATCH_IF (~%doorid%~ STRING_EQUAL ~DOOR1~) BEGIN
+			WRITE_LONG (offset + 0x8c) 30
+			READ_LONG (offset + 0x28) thedoorflags
+			thedoorflags|=0x200000
+			WRITE_LONG (offset + 0x28) thedoorflags
+			SAY (offset + 0x98) @4008
+		END
+	END
+
 COPY_EXISTING ~20ARTE.sto~ ~override~
 	REMOVE_STORE_ITEM ~00GBAG03~ ~00PBAG01~ ~00SBAG04~
 	ADD_STORE_ITEM ~00GBAG03~ BEFORE ~00AROW01~ #0 #0 #0 ~IDENTIFIED~ #1
@@ -962,10 +991,26 @@ EXTEND_TOP ~20sabri1.bcs~ ~.../script.baf~
 
 COMPILE ~%mod_folder%/dlg/USDLGMOD.d~
 
+STRING_SET 26838 @56028
+
+COPY_EXISTING ~11GARRAD.cre~ ~override~
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11GENGLE~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~11GENGLE~ slot=~inv4~ mode=~replace~ END
+
 COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USDISPEL",~
 	END
+
+COPY_EXISTING ~11GENGLE.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @56023
+	SAY IDENTIFIED_DESC @56023
+
+COPY_EXISTING ~USGENGOL.itm~ ~override~
+	SAY NAME1 @56029
+	SAY NAME2 @56029
+	SAY UNIDENTIFIED_DESC @56030
+	SAY IDENTIFIED_DESC @56030
 
 COPY_EXISTING ~AR5005.are~ ~override~ //Making it more difficult to skip the trigger that brings out the dragon
 	READ_SHORT 0x6A thenumtriggers

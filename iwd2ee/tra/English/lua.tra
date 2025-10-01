@@ -215,6 +215,7 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55350=~Damage resisted from weapon of less than +<EXDRENLV> enchantment~
 @55351=~5 damage resisted from nonmagical weapon~
 @55352=~10 damage resisted from weapon of less than +2 enchantment~
 @55353=~15 damage resisted from weapon of less than +3 enchantment~
@@ -286,6 +287,8 @@
 @55491=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher memorized~
 @55492=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher remaining~
 @55493=~Metamagic failed: The resulting spell is too high level~
+@55494=~Spell failed: This spell cannot be cast while time is stopped.~
+@55495=~Advanced Slots: ~
 
 @55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
 @55580=~Copy Spell failed: <EXCPNAM1> is not casting a spell~
@@ -313,8 +316,8 @@
 @55603=~ (Lich)~
 @55604=~, +<EXRDVAL1> damage~
 @55605=~, -<EXRDVAL1> damage penalty~
-@55606=~, minimum roll <EXRLVAL1>~
-@55607=~, maximum roll <EXRLVAL1>~
+@55606=~, minimum roll of <EXRLVAL1>~
+@55607=~, maximum roll of <EXRLVAL1>~
 
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
 @55702=~Uninjured~

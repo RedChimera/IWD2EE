@@ -1094,6 +1094,26 @@ COPY_EXISTING ~20MALARH.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR616~ END
 
+COPY_EXISTING ~20TROICE.cre~ ~override~ ~30ICETRL.cre~ ~override~ ~41RTROIC.cre~ ~override~ ~41TROICE.cre~ ~override~ ~51TROIC.cre~ ~override~
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFTI~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCXHFTI~ slot=~shield1~ mode=~replace~ END
+
+COPY_EXISTING ~30FIRTLG.cre~ ~override~ ~30FIRTRL.cre~ ~override~
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFTF~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCXHFTF~ slot=~shield1~ mode=~replace~ END
+
+COPY_EXISTING ~30TROLL.cre~ ~override~ ~41TROSNO.cre~ ~override~ ~50TROSH.cre~ ~override~ ~50TROSN.cre~ ~override~ ~50TROSNR.cre~ ~override~ ~50TROSS.cre~ ~override~ ~50TROSSH.cre~ ~override~ ~00SDSCG.cre~ ~override~ ~00SSCG.cre~ ~override~ ~00SSHSCG.cre~ ~override~ ~00SSSCG.cre~ ~override~
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFTR~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCXHFTR~ slot=~shield1~ mode=~replace~ END
+
+COPY_EXISTING ~50TROSG.cre~ ~override~ ~50TROSGR.cre~ ~override~ ~61DTROLL.cre~ ~override~ ~61TROLL.cre~ ~override~ ~61XTROLL.cre~ ~override~ ~41SDSCG.cre~ ~override~ ~41SSCG.cre~ ~override~ ~41SSSCG.cre~ ~override~
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFTG~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCXHFTG~ slot=~shield1~ mode=~replace~ END
+
 COPY_EXISTING ~21ELFMGE.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=5 STR_VAR updatehp=~max~ END
 	WRITE_BYTE skillconcentration 3
@@ -1550,7 +1570,7 @@ COPY_EXISTING ~40GBLKA.cre~ ~override~ ~41GBLKA.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWVERB~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CISHLD~ slot=~shield1~ mode=~replace~ END
 
-COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~ ~override~
+COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~ ~override~ ~USSGIFOM.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=8 STR_VAR updatehp=~average~ END
 	WRITE_SHORT armorclass 12
 	WRITE_BYTE dexterity 12
@@ -1561,6 +1581,7 @@ COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~
 	WRITE_BYTE challengerating 10
 	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFFO~ slot=~weapon1~ mode=~replace~ END
+	IF_EXISTS
 
 COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 STR_VAR updatehp=~max~ END
@@ -2924,7 +2945,7 @@ COPY_EXISTING ~52BERED.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=190 target=0 timing=9 parameter1=4 STR_VAR parent_resource=~FE_32_1~ END
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter1=1 parameter2=193 STR_VAR resource=~USIMPINI~ parent_resource=~FE_32_1~ END
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter1=1 parameter2=193 special=2 STR_VAR resource=~USIMPINI~ parent_resource=~FE_32_1~ END
 		LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00ROBE03~ slot=~armor~ mode=~replace~ END
 	END
@@ -5349,7 +5370,7 @@ COPY_EXISTING ~USPITFIE.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=190 target=0 timing=9 parameter1=4 STR_VAR parent_resource=~FE_32_1~ END
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter1=1 parameter2=193 STR_VAR resource=~USIMPINI~ parent_resource=~FE_32_1~ END
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter1=1 parameter2=193 special=2 STR_VAR resource=~USIMPINI~ parent_resource=~FE_32_1~ END
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=20 STR_VAR class=~wizard~ resource=~SPWI206~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=20 STR_VAR class=~wizard~ resource=~SPWI508~ END
@@ -5491,7 +5512,7 @@ COPY_EXISTING ~USSHADVO.cre~ ~override~
 	SAY NAME1 @23001
 	SAY NAME2 @23001
 
-COPY_EXISTING ~USSHADVO.itm~ ~override~ ~USWIGHTW.itm~ ~override~
+COPY_EXISTING ~USSHADVO.itm~ ~override~ ~USCWWIGW.itm~ ~override~ ~USCXWIGW.itm~ ~override~
 	SAY NAME1 @23002
 	SAY NAME2 @23002
 
@@ -6190,6 +6211,7 @@ COPY_EXISTING ~65IYTXM.cre~ ~override~
 	ulgiash|=0x2
 	WRITE_LONG feats3 ulgiash
 	WRITE_BYTE skillconcentration 25
+	WRITE_BYTE skillsearch 50
 	WRITE_BYTE skillspellcraft 25
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencylargesword 3
@@ -6575,6 +6597,9 @@ COPY_EXISTING ~63MOURN.cre~ ~override~
 		ulgiash|=0x200
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USAMUL54~ slot=~amulet~ mode=~replace~ END
 	END
 
 COPY_EXISTING ~63PHAEN.cre~ ~override~
@@ -7179,6 +7204,14 @@ USCWHFMH	USCWMOHR
 USCWHFAY	USCWAYET
 USCWHFI1	63CWISA1
 USCWHFM1	63CWMAD1
+USCWHFTR	USCWTROL
+USCWHFTG	USCWTROG
+USCWHFTI	USCWTROI
+USCWHFTF	USCWTROF
+USCXHFTR	USCXTROL
+USCXHFTG	USCXTROG
+USCXHFTI	USCXTROI
+USCXHFTF	USCXTROF
 ~
 UNLESS ~USCWHFMO~
 
@@ -7246,6 +7279,14 @@ USCWHFMH	USHFCWMH
 USCWHFAY	USHFCWAY
 USCWHFI1	USHFCWI1
 USCWHFM1	USHFCWM1
+USCWHFTR	USHFCWTR
+USCWHFTG	USHFCWTG
+USCWHFTI	USHFCWTI
+USCWHFTF	USHFCWTF
+USCXHFTR	USHFCXTR
+USCXHFTG	USHFCXTG
+USCXHFTI	USHFCXTI
+USCXHFTF	USHFCXTF
 ~
 UNLESS ~USCWHFMO~
 
