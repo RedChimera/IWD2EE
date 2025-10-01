@@ -2821,15 +2821,16 @@ Special:
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
-@10609    = ~Tower Shield of Magic Force Resistance +3~
+@10609    = ~Tower Shield of Magic Force Resistance +4~
 @10610    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +5
+Shield Bonus: +8
 Armor Bonus: +1 vs. missile weapons
 Special:  
   Resistance: 25/- magic damage resistance
+  Attack Penalty: -2
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
@@ -2844,12 +2845,12 @@ Special:
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 15 lb.~
-@10613    = ~Large Shield of Electrical Resistance +3~
+@10613    = ~Large Shield of Electrical Resistance +4~
 @10614    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +5
+Shield Bonus: +6
 Special:
   Resistance: 30/- electrical resistance
 Armor Check Penalty:  -2
@@ -8705,28 +8706,28 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11721    = ~Rabbit Slayer +3~
+@11721    = ~Rabbit Slayer +2~
 @11722    = ~The famed halfling hunter Herrian Smallhill was well known for his ability to fell large numbers of rabbits in a single day. Though Herrian repeatedly was challenged to displays of "real" hunting skill, he always returned to his home near Corm Orp to provide rabbits for his community. A noble elven hunter named Shidan Imraith challenged the halfling to a hunting contest in 1197 DR. When Herrian emerged at the victor, the proud elf became so enraged that he ordered his men to kill the halfling. Though Imraith's house was disgraced for the action and Shidan was brought to justice, Herrian's fine yew bow disappeared.
 
 STATISTICS:
 
-Damage: +3 (missile)
-Attack Bonus: +3 
+Damage: +2 (missile)
+Attack Bonus: +2
 Special:
   Speed: 2 extra attacks per round
   Special: Reduced range compared to other bows
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11723    = ~Furious Rabbit Slayer +5~
+@11723    = ~Furious Rabbit Slayer +3~
 @11724    = ~The famed halfling hunter Herrian Smallhill was well known for his ability to fell large numbers of rabbits in a single day. Though Herrian repeatedly was challenged to displays of "real" hunting skill, he always returned to his home near Corm Orp to provide rabbits for his community. A noble elven hunter named Shidan Imraith challenged the halfling to a hunting contest in 1197 DR. When Herrian emerged at the victor, the proud elf became so enraged that he ordered his men to kill the halfling. Though Imraith's house was disgraced for the action and Shidan was brought to justice, Herrian's fine yew bow disappeared.
 
 STATISTICS:
 
-Damage: +5 (missile)
-Attack Bonus: +5 
+Damage: +3 (missile)
+Attack Bonus: +3
 Special:
-  Speed: Attacks per round doubled; this allows the character to exceed the limit of 5 attacks per round
+  Speed: 3 extra attacks per round
   Special: Reduced range compared to other bows
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -9337,7 +9338,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: 4d6 (magic; Fortitude DC 20 for half)
+Damage: 4d6 (sonic; Fortitude DC 20 for half)
 Special:
   Does not require ammo; attacks in the form of a Shout
   Automatically hits but cannot critically hit
@@ -9351,7 +9352,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: 12d6 (magic; Fortitude DC 27 for half)
+Damage: 12d6 (sonic; Fortitude DC 27 for half)
 Special:
   Does not require ammo; attacks in the form of a Great Shout
   Automatically hits but cannot critically hit
@@ -11904,7 +11905,7 @@ Arcane Spell Failure:  10%
 Resistance:
   50/-  Acid Resistance
 Weight: 10 lb.~
-@12483    = ~Hide Armor of Rage +3~
+@12483    = ~Hide Armor of Recklessness +3~
 @12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
 
 STATISTICS:
@@ -11915,7 +11916,8 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Constant Effect: Wearer is under effects similar to the spell Emotion: Rage (+2 attack, +4 damage, +2 Will saves, -2 Armor Class penalty)
+  Damage Bonus: +4
+  Generic Armor Penalty: -4
 Weight: 10 lb.~
 @12485    = ~Hide Armor of Great Vitality +5~
 @12486    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
@@ -11949,7 +11951,7 @@ Weight: 5 lb.~
 
 STATISTICS:
 
-Medium Armor
+Light Armor
 Armor Bonus: +6
 Max Dex Bonus:  +6
 Armor Check Penalty:  -0
@@ -13792,7 +13794,7 @@ Special:
   Spell Power: User may cast Symbol of Pain 1/day
   Spellward: Immune to the spell Symbol of Pain
 Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Polearm
+Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 @12847    = ~The Icon of Pain +5~
 @12848    = ~The temple of Loviatar in the Vale of Wailing Women, called the Black Spires of the Maiden, has always enjoyed the freedom from good-aligned churches that so many other evil temples long for. However, the large temple requires a huge body of standing soldiers to protect it from attackers and spies. The head of the temple guard is known as the Whip of Obedience. He used to be traditionally equipped with a magical halberd called the Icon of Pain. When the temple guards saw the Icon pass them on their rounds, they took a little more care in their duties. Unfortunately for the Whip, a clever human thief from Elturel decided to capture the Icon as a personal challenge. The thief, whose name is still unknown, succeeded at his task and sold the Icon to the church of Bane. The Banites held the Icon out of contempt for the late Whip's incompetence. Eventually, the Icon was lost when the desert temple where it was held, the Obsidian Chapel, was sacked by Bedine raiders.
@@ -13808,7 +13810,7 @@ Special:
   Spell Power: User may cast Symbol of Pain 3/day
   Spellward: Immune to the spell Symbol of Pain
 Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Polearm
+Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 @12849    = ~Robe of the Watcher~
 @12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
@@ -14167,13 +14169,89 @@ Resistance:  20/- Acid Resistance
 All acid damage dealt by the character is increased by 20%
 Weight:  3 lb.~
 @12917    = ~Wizard Robe of Force Resistance~
-@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance. The name is a misnomer, as these robes are more useful for strengthening magic than for resisting it.
+@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance.
 
 STATISTICS:
 
 Resistance:  20/- Magic Damage Resistance
 All magic damage dealt by the character is increased by 20%
 Weight:  3 lb.~
+@12919    = ~Inconsequence +3~
+@12920    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Good: +1d6 damage against evil creatures. Counts as a good-aligned weapon.
+  Evil: +1d6 damage against good creatures. Counts as an evil-aligned weapon.
+  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
+Weight: 4 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12921    = ~Inconsequence +5~
+@12922    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Good: +2d6 damage against evil creatures. Counts as a good-aligned weapon.
+  Evil: +2d6 damage against good creatures. Counts as an evil-aligned weapon.
+  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
+Weight: 4 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12923    = ~Foolsmiter +2~
+@12924    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+
+Damage:  1d8 + 2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Foolsmiting: If the wielder has a higher Intelligence bonus than the target, the hammer deals extra damage to the target equal to the difference in Intelligence bonus between the wielder and the target. If the wielder has a lower Intelligence bonus than the target, they take the damage instead.
+Weight: 15 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12925    = ~Foolsmiter +5~
+@12926    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Foolsmiting: If the wielder has higher Intelligence than the target, the hammer deals extra damage to the target equal to the difference in Intelligence between the wielder and the target. If the wielder has lower Intelligence than the target, they take the damage instead.
+Weight: 15 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12927    = ~Ring of Pain Amplification~
+@12928    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+
+STATISTICS:
+
+Vulnerability: -5 Slashing Resistance
+Vulnerability: -5 Piercing Resistance
+Vulnerability: -5 Crushing Resistance
+Regeneration: User regenerates 1 hit point per second
+Special: Can only be removed by a Remove Curse spell~
+@12929    = ~Ring of Torture~
+@12930    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+
+STATISTICS:
+
+Vulnerability: -10 Slashing Resistance
+Vulnerability: -10 Piercing Resistance
+Vulnerability: -10 Crushing Resistance
+Regeneration: User regenerates 3 hit points per second
+Special: Can only be removed by a Remove Curse spell~
 @19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

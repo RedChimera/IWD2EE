@@ -1,3 +1,11 @@
+ex_custom_visual_effects = {
+["USLESHIE"] = {["locZ"] = 1, ["animationResRef"] = "USLESHIE", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = true, },
+["USSPLTRN"] = {["locZ"] = 1, ["animationResRef"] = "USSPLTRN", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = true, },
+["USSPLTRA"] = {["locZ"] = 1, ["animationResRef"] = "USSPLTRA", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = true, },
+["USEDRAIN"] = {["locZ"] = 1, ["animationResRef"] = "USEDRAIN", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, },
+["USAURBLS"] = {["locZ"] = 0, ["animationResRef"] = "USAURBLS", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USSNDBST"] = {["locZ"] = 0, ["animationResRef"] = "USSNDBST", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+}
 IEex_NEW_WEAPON_PROFICIENCY_COUNT = 3
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
@@ -86,6 +94,7 @@ ex_no_summoning_limit = false
 ex_no_apr_limit = false
 ex_shadowstep_brightness_max = 180
 ex_full_ability_score_cap = 40
+ex_innate_spell_resistance_cap = 30
 ex_max_skill_points_saved_for_next_level = 1
 ex_disable_party_hof_bonus_bug = true
 ex_construct_race = 156
@@ -93,6 +102,7 @@ ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
 ex_clone_delay = 2400
 ex_time_slow_speed_divisor = 0x7FFFFFFF
+ex_replacement_animations = {[0x6203] = 0x6103, [0x6212] = 0x6112, [0x6213] = 0x6113, [0x6214] = 0x6114, }
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
 ex_fixed_duration_spell_list = {["SPWI105"] = true, ["SPWI101"] = true, ["SPWI213"] = true, ["SPWI215"] = true, }
@@ -104,12 +114,13 @@ ex_no_imbue_spell_list = {["USWI454"] = true, ["USWI456"] = true, }
 ex_true_spell = {["USMS035"] = "USWI256", ["USMS037"] = "SPPR510", ["USIP114"] = "SPPR114", ["USIP250"] = "SPPR250", ["USIP251"] = "SPPR213", ["USIP302"] = "SPPR302", ["USIP350"] = "SPPR350", ["USIP428"] = "SPPR428", ["USIP517"] = "SPPR517", ["USIP602"] = "SPPR602", ["USIP704"] = "SPPR704", ["USIP729"] = "SPPR729", ["USIW211"] = "SPWI211", ["USIW220"] = "SPWI220", ["USIW316"] = "SPWI316", ["USIW318"] = "SPWI318", ["USIW404"] = "SPWI404", ["USIW405"] = "SPWI405", ["USIW411"] = "SPWI411", ["USIW419"] = "SPWI419", ["USIW424"] = "SPWI424", ["USIW504"] = "SPWI504", ["USIW507"] = "SPWI507", ["USIW509"] = "SPWI509", ["USIW605"] = "SPWI605", ["USIW612"] = "SPWI612", ["USIW615"] = "SPWI615", ["USIW617"] = "SPWI617", ["USIW705"] = "SPWI705", ["USIW708"] = "SPWI708", ["USIW719"] = "SPWI719", ["USIW808"] = "SPWI808", ["USIW810"] = "SPWI810", ["USIW910"] = "SPWI910", ["USIW951"] = "SPWI905", ["USIP152"] = "USPR152", ["USIP951"] = "USPR951", ["USIP952"] = "USPR952", ["USIW751"] = "USWI751", ["USIW765"] = "SPWI713", ["USIW951"] = "SPWI905", }
 ex_alternate_spell_level_list = {["USWI352"] = 0, ["SPWI302"] = 0, ["USWI960"] = 0, ["USES001"] = 10, ["USES002"] = 10, ["USES003"] = 10, ["USES004"] = 10, ["USES005"] = 10, ["USES006"] = 10, ["USES007"] = 10, ["USES008"] = 10, ["USES009"] = 10, ["USES010"] = 10, ["USES011"] = 10, ["USES012"] = 10, ["USES013"] = 10, ["USES014"] = 10, ["USES015"] = 10, ["USES016"] = 10, ["USIP114"] = 1, ["USIP250"] = 2, ["USIP251"] = 2, ["USIP302"] = 4, ["USIP350"] = 3, ["USIP428"] = 2, ["USIP517"] = 3, ["USIP602"] = 6, ["USIP704"] = 7, ["USIP729"] = 9, ["USIW211"] = 2, ["USIW220"] = 2, ["USIW316"] = 3, ["USIW318"] = 3, ["USIW404"] = 4, ["USIW405"] = 4, ["USIW411"] = 3, ["USIW419"] = 3, ["USIW424"] = 4, ["USIW504"] = 5, ["USIW507"] = 5, ["USIW509"] = 5, ["USIW605"] = 6, ["USIW612"] = 6, ["USIW615"] = 6, ["USIW617"] = 6, ["USIW705"] = 7, ["USIW708"] = 7, ["USIW719"] = 4, ["USIW808"] = 8, ["USIW810"] = 5, ["USIW910"] = 9, ["USIW951"] = "SPWI905", ["USIP152"] = 1, ["USIW810"] = 5, ["USIP651"] = 6, ["USIP652"] = 6, ["USIP751"] = 7, ["USIP752"] = 7, ["USIP851"] = 8, ["USIP951"] = 9, ["USIP952"] = 9, ["USIW751"] = 7, ["USIW754"] = 6, ["USIW765"] = 7, ["USIW851"] = 8, ["USIW951"] = 9, }
 ex_ethereal_sources = {["USCLUBGH"] = true, }
+ex_duration_cannot_be_changed = {["USWI959"] = true, }
 ex_feat_name_id = {}
 ex_skill_name = {[0] = "ALCHEMY", [1] = "ANIMAL_EMPATHY", [2] = "BLUFF", [3] = "CONCENTRATION", [4] = "DIPLOMACY", [5] = "DISABLE_DEVICE", [6] = "HIDE", [7] = "INTIMIDATE", [8] = "KNOWLEDGE_ARCANA", [9] = "MOVE_SILENTLY", [10] = "OPEN_LOCK", [11] = "PICK_POCKET", [12] = "SEARCH", [13] = "SPELLCRAFT", [14] = "USE_MAGIC_DEVICE", [15] = "WILDERNESS_LORE",}
 ex_listspll = {}
 ex_listdomn = {}
 ex_trueschool = {}
-ex_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI318D"] = "SPWI318", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI903D"] = "SPWI903", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", }
+ex_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI318D"] = "SPWI318", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI903D"] = "SPWI903", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", ["USPRIS1"] = "USWI867", ["USPRIS2"] = "USWI867", ["USPRIS3"] = "USWI867", ["USPRIS4"] = "USWI867", ["USPRIS5"] = "USWI867", ["USPRIS6"] = "USWI867", ["USPRIS7"] = "USWI867", }
 ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
 ex_improved_uncanny_dodge_class_level = {[1] = 5, [9] = 6, }
@@ -298,7 +309,7 @@ ex_augury_spells = {
 ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, ["MEIMPALA"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, ["MESPLSTC"] = true, }
-ex_on_tick_functions = {["MEHGTMOD"] = -1, ["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEBASEAN"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEHGTMOD"] = -1, ["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEBASEAN"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["EXVISEFF"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
@@ -390,25 +401,21 @@ ex_new_projectile_damage_type = {
 [12] = {[0x0] = 0x40, [0x10] = 0x40, [0x80] = 0x40, [0x200] = 0x40, [0x400] = 0x40, [0x800] = 0x40}, -- Turn bullets into Magic Stones
 }
 ex_kit_spells = {
-[2] = {[0x8] = "", [0x10] = "USMNKWHM", [0x20] = "USMNK02N"},
+[2] = {[0x8] = "", [0x10] = "USMNKWHM", [0x20] = "USMNKWHN"},
+[4] = {[0x8] = "", [0x10] = "", [0x20] = "USMNK02N"},
 [6] = {[0x8] = "", [0x10] = "USMNK06M", [0x20] = "USMNK02N"},
-[7] = {[0x8] = "USMNKWHL", [0x10] = "USMNKWHM", [0x20] = "USMNKWHL"},
-[10] = {[0x8] = "", [0x10] = "USMNK10M", [0x20] = "USMNK02N"},
+[7] = {[0x8] = "USMNKWHL", [0x10] = "USMNKWHM", [0x20] = "USMNKWHN"},
+[10] = {[0x8] = "", [0x10] = "USMNK10M", [0x20] = "USMNK10N"},
 [14] = {[0x8] = "", [0x10] = "USMNK10M", [0x20] = "USMNK02N"},
 [18] = {[0x8] = "", [0x10] = "USMNK10M", [0x20] = "USMNK02N"},
+[22] = {[0x8] = "", [0x10] = "USMNK10M", [0x20] = "USMNK02N"},
 [101] = {[0x1] = "USPAL01L", [0x2] = "USPAL01M", [0x4] = "USPAL01N"},
 [106] = {[0x1] = "USPAL06L", [0x2] = "USPAL06M", [0x4] = "USPAL06N"},
 [111] = {[0x1] = "USPAL11L", [0x2] = "USPAL11M", [0x4] = "USPAL11N"},
 }
 ex_global_statics = {
-["COFL"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORL", ["appearanceFlags"] = 0x2, },
-["COFR"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORR", ["appearanceFlags"] = 0x2, },
-["COFB"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORB", ["appearanceFlags"] = 0x2, },
-["COFT"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORT", ["appearanceFlags"] = 0x2, },
-["TORNAD"] = {["locZ"] = 1, ["animationResRef"] = "WHIRLWX", ["appearanceFlags"] = 0x2, },
-["GRVGLB"] = {["locZ"] = 1, ["animationResRef"] = "USGRVGLB", ["appearanceFlags"] = 0x2, },
-}
 
+}
 ex_chaos_cast_enemy = {
 [1] = {"SPWI101", "SPWI103", "SPWI104", "SPWI105", "SPWI112", "SPWI115", "SPWI116", "SPWI117", "SPWI118", "SPWI119", "SPWI121", "SPWI122", "SPWI224", "SPWI226", "USWI154", "USWI251", },
 [2] = {"SPWI205", "SPWI211", "SPWI215", "SPWI217", "SPWI218", "SPWI220", "SPWI222", "SPWI225", "SPWI630", "USWI256", },
@@ -428,7 +435,7 @@ ex_chaos_cast_ally = {
 [5] = {"SPPR219", "SPWI522", "SPWI523", "SPWI624", "USWI552", "USWI553", },
 [6] = {"SPWI623", },
 [7] = {"SPPR424", "SPWI709", "USWI860", },
-[8] = {"SPWI712", "SPWI804", "USWI855", },
+[8] = {"SPWI712", "SPWI804", },
 [9] = {"USWI952", "USWI958", },
 }
 ex_chaos_cast_self = {

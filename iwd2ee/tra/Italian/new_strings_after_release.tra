@@ -1326,3 +1326,381 @@ Vantaggi:
 
 Svantaggi:
 * Inizia senza alcuna competenza nelle armature ed e' carente nel combattimento corpo a corpo.~
+
+//Strings to be translated:
+
+@222    = ~Expertise
+
+When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
+@525    = ~BARBARIAN:
+
+From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
+
+Hit points per level: 1-12
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
+* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
+* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
+* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
+* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 AC penalty.
+* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
+* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
+* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
+* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
+
+Disadvantages:
+* Barbarians gain feats at a slower rate than fighters.
+* Barbarians do not start with proficiency in heavy armor.~
+@977    = ~Barbarian Rage
+
+By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
+@978    = ~Greater Barbarian Rage
+
+By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+
+The bonuses increase at higher levels:
+
+21st level: +8 to Strength and Constitution and +4 to Will saves.
+25th level: +10 to Strength and Constitution and +5 to Will saves.
+29th level: +12 to Strength and Constitution and +6 to Will saves.~
+@4008 = ~This tall rock could potentially be knocked down, either with brute force or a Knock spell.~
+@55350=~Damage resisted from weapon of less than +<EXDRENLV> enchantment~
+@565    = ~MONK OF THE DARK MOON:
+
+Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
+
+Advantages:
+* 2nd level: The monk gains one use of Darkness per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Darkness. The DC is equal to 15 + Wisdom bonus + half the character's monk level. The monk also adds half their monk level to the DC of any other Darkness spell or ability they cast. The monk can see perfectly even in magical darkness.
+* 10th level: The monk gains +1 damage against any enemy that is blinded or has their vision impaired by a Darkness effect. For every 8 monk levels after level 10, the monk gains another +1 damage against enemies in these situations.~
+@984    = ~Darkness
+
+This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.
+
+When used by a Monk of the Dark Moon, Darkness has a DC of 15 + Wisdom bonus + half the character's monk level. Any other Darkness spell or ability used by a Monk of the Dark Moon also gains a bonus to DC equal to half the character's monk level.~
+@585    = ~
+
+Domain Spells:
+1: Identify, Identify Creature
+2: Arcane Sight, Clairvoyance
+3: Legend Lore, Moment of Prescience
+4: True Seeing, Shout
+5: Power Word: Heal, Power Word: Silence
+6: Power Word: Stun, Omnipresence
+7: Great Shout, Symbol of Hopelessness
+8: Power Word: Kill, Symbol of Death
+9: Executioner's Eyes, Mass Omnivision~
+@55494=~Spell failed: This spell cannot be cast while time is stopped.~
+@38959     = ~Time Stop
+(Transmutation)
+Level: Sor/Wiz 9
+Range: Caster
+Duration: 3 rounds
+Casting Time: 9
+Area of Effect: Entire area
+Saving Throw: None
+
+This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time. Time Stop cannot be cast while time is already stopped, and its duration is unaffected by items or abilities.~
+@729    = ~STUNNING ATTACK:
+
+You know how to strike opponents in vulnerable areas.
+
+Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
+
+Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your monk level if any + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
+@20011=~Rended~
+@41651=~Vrek's natural weapon has become stronger.~
+@41652=~Xhaan's natural weapon has become stronger.~
+@4807   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS: 
+
+Damage: 1d6 + 1
+Attack Bonus: +1
+Enchantment: +1
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4809   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4819   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +2 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +2
+Attack Bonus: +2
+Enchantment: +2
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +1d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4821   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+ 
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +1d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4833   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+
+STATISTICS:
+
+Damage: 5d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +3
+Attack Bonus: +3
+Enchantment: +3
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +1d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4850   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +4 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +4
+Attack Bonus: +4
+Enchantment: +4
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +1d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4852   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +2d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4853   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +3d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4856   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +4d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4857   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +5d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4858   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +6d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4866   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+
+STATISTICS:
+
+Damage: 3d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4867   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+
+STATISTICS:
+
+Damage: 4d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4868   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+
+STATISTICS:
+
+Damage: 6d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4869   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+
+STATISTICS:
+
+Damage: 7d6 +5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@12483    = ~Hide Armor of Recklessness +3~
+@12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +7
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Special:
+  Damage Bonus: +4
+  Generic Armor Penalty: -4
+Weight: 10 lb.~
+@35156     = ~Lesser Entropy Shield~
+@36156     = ~Lesser Entropy Shield
+(Abjuration)
+Level: Clr 1
+Range: Caster
+Duration: 10 rounds/level
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+A weaker version of the 6th-level spell Divine Shell, this spell creates a magicial field around the caster that has a 20% chance to deflect missile attacks aimed at the caster. This includes not just ranged weapon attacks, but also certain spells, including Chromatic Orb, Magic Missile, Melf's Acid Arrow, Flame Arrow, Alicorn Lance, Icelance, Lance of Disruption, Mordenkainen's Force Missiles, Vitriolic Sphere, Otiluke's Freezing Sphere, and Sol's Searing Orb.~
+@37867     = ~Prismatic Wall~
+@38867     = ~Prismatic Wall
+(Abjuration)
+Level: Sor/Wiz 8
+Range: 5 feet
+Duration: 10 rounds
+Casting Time: 12
+Area of Effect: 40-foot long, 28-foot thick wall
+Saving Throw: None
+
+One of the few abjuration spells that is capable of harm, this spell creates a thick, shimmering wall composed of seven layers of different colors. The wall can be passed through, but any creature other than the caster that walks through the wall will suffer a harmful effect for each layer they pass through.
+
+The  effects of the seven colored layers are akin to a Prismatic Spray spell: red (inflicts 10d6 hit points of fire damage, Reflex for half), orange (10d6 hit points of acid damage, Reflex save for half), yellow (10d6  hit points of electrical damage, Reflex for half), green (Fortitude save or die - survivors still take 20 hit points of poison damage), blue (Fortitude or turn to stone), indigo (Will save or go insane), or violet (Will save or be warped to another plane and back again instantaneously with the lasting effects of having 5 levels drained). All saves made against this spell have -8 DC.
+
+A creature that passes through a layer of the wall cannot be affected by that layer again for 10 rounds. Only one prismatic wall can be active at a time.~
+@56023=~This letter is written on weathered parchment and sealed with wax. The exterior contains the following text, written with a shaky hand: "From Garradun Tanner, to my beloved Raina, care of Captain Mariner, Neverwinter"
+
+You could potentially open the letter and view its contents, though reading someone else's love letter would be very rude.
+
+Weight: 0 lb.~
+@56024=~You might want to have a look at this letter I obtained from Garradun Tanner.~
+@56025=~You might want to have a look at this letter I obtained from that shapeshifter.~
+@56026=~Best show it to Denham - it smells of treachery, it does. Denham! Look at this.~
+@56027=~I got this letter from Garradun Tanner. It is very suspicious.~
+@56028=~...here you are. This should do the trick. Thank you for bringing this to our attention. You probably just saved many lives. I sent Ulbrec the original letter, but I wrote a copy of the original text for your reference. Do you need anything else?~
+@56029=~Garradun's Letter (Copy)~
+@56030=~This parchment contains a copy of the text from the spy Garradun's letter. The text is brief and to the point, as follows:
+
+Targos: Three or fewer ships, perhaps a few dozen infantry and archers. Two priests at the temple pavilion, with recruits drawn in from Luskan. The goblin's seizure of the waterways seems to have closed off the passage of further reinforcements. I have heard no mention of planned reinforcements from elsewhere into the city. The diviner in Targos should be taken care of by our friends from Luskan.
+
+Bremen: The city should fall soon. Targos is unable to move ships across the bay thanks to our scrag allies. According to wounded soldiers from Bremen, they will not be able to hold out. You should be able to pull in forces from the north without worrying about attacks from Bremen.
+
+Bryn Shander: With our forces in the field and the Shaengarne Ford held, the capital is unable to effectively provide the peripheral towns with supplies. The bugbears' use of hit and run tactics against caravans moving between the Ten-Towns has made it almost impossible for them to reinforce each other. Lonelywood has sent almost all of its able-bodied men south to Bryn Shander instead of sending them to Targos. The same has happened in Easthaven. Both towns should be ripe for taking should we choose to enlarge our grasp of the region. Perhaps three to four hundred men wait in Bryn Shander along with a handful of volunteers from Clan Battlehammer. Most of those are militia, with a few experienced mercenaries among them. We need not worry about Silverymoon and the other communities to the east. Only two volunteers have arrived, and those are already out of the action.
+
+Weight: 0 lb.~
+@56031=~Resistance: <EXARDAMR>/- Physical Damage Resistance~
+//The two strings below must be translated to be indentical to the line in the description of an armor or shield that states its armor or shield bonus, minus the number. The mod runs code that checks the description of armor and shields for a line that includes one of these strings (but doesn't include the "Generic Armor Bonus:" line) and puts the above string right below them.
+@56032=~Armor Bonus:~
+@56033=~Shield Bonus:~
+@56034=~Generic Armor Bonus:~

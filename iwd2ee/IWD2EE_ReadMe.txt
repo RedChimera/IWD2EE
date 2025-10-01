@@ -401,7 +401,7 @@ Race Revisions revises various races and subraces, giving them abilities that th
 Race Revisions also gives certain races a few new abilities:
 * Half-elves and Half-orcs now get an extra feat at 1st-level (this is the benefit they get for being half-human; previously all their benefits and drawbacks had to do with their elf/orc side).
 * Elves may use Weapon Finesse with large swords.
-* Dwarves start proficient in axes and hammers.
+* Dwarves start proficient with axes and hammers.
 * Rock gnomes have +2 Intelligence instead of Constitution.
 * Lightfoot halflings may add half their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
 * Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons. In addition, their stat penalty is to Intelligence rather than Strength.

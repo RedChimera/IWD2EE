@@ -1387,7 +1387,7 @@ Casting Time: 6
 Area of Effect: 1 creature 
 Saving Throw: None 
 
-This spell grants a +30 magic damage resistance bonus for the duration of the spell.
+This spell grants 30/- magic damage resistance for the duration of the spell.
 ~
 @1665    = ~Translocation Trick~
 @1666    = ~Translocation Trick
@@ -3842,6 +3842,17 @@ Area of Effect: 20-foot radius
 Saving Throw: None
 
 This spell allows allied creatures to move silently without leaving footprints. Affected creatures gain a +10 bonus to Move Silently checks.~
+@35156     = ~Lesser Entropy Shield~
+@36156     = ~Lesser Entropy Shield
+(Abjuration)
+Level: Clr 1
+Range: Caster
+Duration: 10 rounds/level
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+A weaker version of the 6th-level spell Divine Shell, this spell creates a magicial field around the caster that has a 20% chance to deflect missile attacks aimed at the caster. This includes not just ranged weapon attacks, but also certain spells, including Chromatic Orb, Magic Missile, Melf's Acid Arrow, Flame Arrow, Alicorn Lance, Icelance, Lance of Disruption, Mordenkainen's Force Missiles, Vitriolic Sphere, Otiluke's Freezing Sphere, and Sol's Searing Orb.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -3885,7 +3896,7 @@ Casting Time: 6
 Area of Effect: 20-foot radius
 Saving Throw: None
 
-This spell makes all metal in the area of effect extremely hot. Creatures take 2d6 fire damage for each hand they are holding a metal weapon or shield in. In addition, they take 4d6 fire damage if they are wearing chainmail, splint mail, half-plate or full plate armor.
+This spell makes all metal in the area of effect extremely hot. Creatures take 2d6 fire damage for each hand they are holding a metal weapon or shield in. In addition, they take 4d6 fire damage if they are wearing chainmail, splint mail, half-plate, field plate or full plate armor.
 
 A creature also takes 10d6 fire damage if they are under the effect of Iron Skins, and 20d6 fire damage if they are under the effect of Iron Body or are otherwise made of metal (though note that iron golems are immune to fire).~
 @35258     = ~Make Whole~
@@ -5111,6 +5122,21 @@ Saving Throw: None
 A dubious alternative to resurrection, this spell creates an inert duplicate of a party member. After the spell is cast, the clone requires 8 hours to grow into a suitable replacement for the original character. Once that time has passed, if the original character dies (or is already dead) while in the same area as the clone, their soul will be transferred to the clone, which will join the party with the exact same stats and abilities of the original character. A party member cannot have more than one inert clone in the same area at one time.
 
 Clone can be cast on a living party member, or it can be cast targeting a dead character's portrait.~
+@37867     = ~Prismatic Wall~
+@38867     = ~Prismatic Wall
+(Abjuration)
+Level: Sor/Wiz 9
+Range: 5 feet
+Duration: 10 rounds
+Casting Time: 12
+Area of Effect: 40-foot long, 28-foot thick wall
+Saving Throw: None
+
+One of the few abjuration spells that is capable of harm, this spell creates a thick, shimmering wall composed of seven layers of different colors. The wall can be passed through, but any creature other than the caster that walks through the wall will suffer a harmful effect for each layer they pass through.
+
+The  effects of the seven colored layers are akin to a Prismatic Spray spell: red (inflicts 10d6 hit points of fire damage, Reflex for half), orange (10d6 hit points of acid damage, Reflex save for half), yellow (10d6  hit points of electrical damage, Reflex for half), green (Fortitude save or die - survivors still take 20 hit points of poison damage), blue (Fortitude or turn to stone), indigo (Will save or go insane), or violet (Will save or be warped to another plane and back again instantaneously with the lasting effects of having 5 levels drained). All saves made against this spell have -8 DC.
+
+A creature that passes through a layer of the wall cannot be affected by that layer again for 10 rounds. Only one prismatic wall can be active at a time.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
@@ -5126,7 +5152,7 @@ This spell is the ultimate form of invisibility. While under the effect of Perfe
 @38953     = ~Improved Alacrity
 (Transmutation)
 Level: Clr 9, Drd 9, Sor/Wiz 9
-Range: Caster 
+Range: Caster
 Duration: 6 rounds
 Casting Time: 5
 Area of Effect: Caster
@@ -5198,7 +5224,7 @@ Casting Time: 9
 Area of Effect: Entire area
 Saving Throw: None
 
-This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time.~
+This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time. Time Stop cannot be cast while time is already stopped, and its duration is unaffected by items or abilities.~
 @37960     = ~Mordenkainen's Disjunction~
 @38960     = ~Mordenkainen's Disjunction
 (Abjuration)

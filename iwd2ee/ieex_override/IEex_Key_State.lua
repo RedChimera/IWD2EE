@@ -554,6 +554,10 @@ function IEex_Chargen_ExtraFeatListener()
 		ex_chargen_current_actorID = actorID
 		local share = IEex_GetActorShare(actorID)
 		if share > 0 then
+			local animation = IEex_ReadDword(share + 0x5C4)
+			if ex_replacement_animations[animation] then
+				IEex_WriteDword(share + 0x5C4, ex_replacement_animations[animation])
+			end
 			ex_randomizer = math.random(6)
 			local panelID = IEex_GetEngineCreateCharPanelID()
 			if panelID == -1 then return end

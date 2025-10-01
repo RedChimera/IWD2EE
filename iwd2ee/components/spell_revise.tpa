@@ -2334,6 +2334,12 @@ COPY_EXISTING ~uspr154.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36154
 	SAY IDENTIFIED_DESC @36154
 
+COPY_EXISTING ~uspr156.spl~ ~override~
+	SAY NAME1 @35156
+	SAY NAME2 @35156
+	SAY UNIDENTIFIED_DESC @36156
+	SAY IDENTIFIED_DESC @36156
+
 COPY_EXISTING ~uspr252.spl~ ~override~
 	SAY NAME1 @35252
 	SAY NAME2 @35252
@@ -2894,6 +2900,7 @@ COPY_EXISTING ~usp02l01.spl~ ~override~
 	SAY IDENTIFIED_DESC @30126
 
 COPY_EXISTING ~usp02l01.itm~ ~override~
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 	SAY NAME1 @30120
 	SAY NAME2 @30120
 
@@ -2904,6 +2911,7 @@ COPY_EXISTING ~usp03l01.spl~ ~override~
 	SAY IDENTIFIED_DESC @30127
 
 COPY_EXISTING ~usp03l01.itm~ ~override~
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 	SAY NAME1 @30121
 	SAY NAME2 @30121
 
@@ -2914,6 +2922,7 @@ COPY_EXISTING ~usp04l01.spl~ ~override~
 	SAY IDENTIFIED_DESC @30128
 
 COPY_EXISTING ~usp04l01.itm~ ~override~
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 	SAY NAME1 @30122
 	SAY NAME2 @30122
 
@@ -3375,6 +3384,12 @@ COPY_EXISTING ~usclone.cre~ ~override~
 	SAY NAME1 @37866
 	SAY NAME2 @37866
 
+COPY_EXISTING ~uswi867.spl~ ~override~
+	SAY NAME1 @37867
+	SAY NAME2 @37867
+	SAY UNIDENTIFIED_DESC @38867
+	SAY IDENTIFIED_DESC @38867
+
 COPY_EXISTING ~uswi952.spl~ ~override~
 	SAY NAME1 @37952
 	SAY NAME2 @37952
@@ -3632,6 +3647,21 @@ COPY_EXISTING ~effdm1.spl~ ~override~ ~effdm2.spl~ ~override~
 
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_bypass_spell_deflection = {~ ~ex_bypass_spell_deflection = {["SPWI302"] = true, ["USWI352"] = true, ["EFFDM2"] = true, ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_global_statics = {~ ~ex_global_statics = {
+["COFL"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORL", ["appearanceFlags"] = 0x2, },
+["COFR"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORR", ["appearanceFlags"] = 0x2, },
+["COFB"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORB", ["appearanceFlags"] = 0x2, },
+["COFT"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORT", ["appearanceFlags"] = 0x2, },
+["TORNAD"] = {["locZ"] = 1, ["animationResRef"] = "WHIRLWX", ["appearanceFlags"] = 0x2, },
+["GRVGLB"] = {["locZ"] = 1, ["animationResRef"] = "USGRVGLB", ["appearanceFlags"] = 0x2, },
+["PRISW1"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW1", ["appearanceFlags"] = 0x2, },
+["PRISW2"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW2", ["appearanceFlags"] = 0x2, },
+["PRISW3"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW3", ["appearanceFlags"] = 0x2, },
+["PRISW4"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW4", ["appearanceFlags"] = 0x2, },
+["PRISW5"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW5", ["appearanceFlags"] = 0x2, },
+["PRISW6"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW6", ["appearanceFlags"] = 0x2, },
+["PRISW7"] = {["locZ"] = 0, ["animationResRef"] = "USPRISW7", ["appearanceFlags"] = 0x2, },
+~
 
 OUTER_SPRINT stringlevel @1980
 OUTER_SPRINT stringbrd @1981
@@ -4412,6 +4442,7 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~USWI955Z~ #1 #1 #0 ~IDENTIFIED~ #2
 
 COPY_EXISTING ~53MYRVEK.sto~ ~override~
+	ADD_STORE_ITEM ~USWI867Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI865Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI858Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI860Z~ #1 #1 #0 ~IDENTIFIED~ #1

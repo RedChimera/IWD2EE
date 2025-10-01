@@ -124,7 +124,7 @@ By using this ability, the monk assumes an incorporeal state for 5 rounds. While
 When you use this ability, you may choose to gain a damage bonus of up to +5 with melee weapons, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus. This ability can be used at will as a free action, and the bonuses and penalties last until you use this ability again.~
 @222    = ~Expertise
 
-When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus. This ability can be used at will as a free action, and the bonuses and penalties last until you use this ability again.~
+When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
 @223    = ~Arterial Strike
 
 While this ability is active, your sneak attacks deal 1d6 less damage initially but deal 10 bleeding damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), you sacrifice another 1d6 points to deal another 10 damage over the 10 rounds. This ability can be activated or deactivated at will as a free action.~
@@ -685,7 +685,7 @@ Hit points per level: 1-12
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
 * Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
 * 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
@@ -1037,7 +1037,8 @@ Advantages:
 Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
 
 Advantages:
-* 2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.~
+* 2nd level: The monk gains one use of Darkness per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Darkness. The DC is equal to 15 + Wisdom bonus + half the character's monk level. The monk also adds half their monk level to the DC of any other Darkness spell or ability they cast. The monk can see perfectly even in magical darkness.
+* 10th level: The monk gains +1 damage against any enemy that is blinded or has their vision impaired by a Darkness effect. For every 8 monk levels after level 10, the monk gains another +1 damage against enemies in these situations.~
 @566    = ~Monk of the Black Raven~
 @567    = ~MONK OF THE BLACK RAVEN:
 
@@ -1167,13 +1168,13 @@ Domain Spells:
 Domain Spells:
 1: Identify, Identify Creature
 2: Arcane Sight, Clairvoyance
-3: Dispel Magic, Remove Magic
+3: Legend Lore, Moment of Prescience
 4: True Seeing, Shout
 5: Power Word: Heal, Power Word: Silence
-6: Power Word: Stun, Spell Sequencer
+6: Power Word: Stun, Omnipresence
 7: Great Shout, Symbol of Hopelessness
 8: Power Word: Kill, Symbol of Death
-9: Executioner's Eyes, Wail of the Banshee~
+9: Executioner's Eyes, Mass Omnivision~
 @586    = ~
 
 Domain Spells:
@@ -1649,7 +1650,7 @@ You know how to strike opponents in vulnerable areas.
 
 Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
 
-Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
+Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your monk level if any + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
 @730    = ~DODGE:
 
 You are adept at dodging blows.
@@ -2393,10 +2394,10 @@ When this ability is used, all of the character's unarmed attacks in the next ro
 This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + Wisdom modifier + half the monk's level). Constructs and undead cannot be affected.~
 @977    = ~Barbarian Rage
 
-By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
+By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
 @978    = ~Greater Barbarian Rage
 
-By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
 
 The bonuses increase at higher levels:
 
@@ -2410,7 +2411,11 @@ With this ability, the monk can regain hit points equal to their monk level time
 @981    = ~In cramped fighting situations, use spears, halberds, quarterstaves, greatswords, and two-handed axes to attack enemies from a distance. Spears in particular have the longest reach of these weapons.~
 @982    = ~If you have difficulty with a battle, try using spells like Bless, Cat's Grace, Haste, and Emotion: Hope before you engage the enemy.~
 @983    = ~Right-click the inventory button to toggle quickloot, which lets you pick up items much faster.~
-@984    = ~~
+@984    = ~Darkness
+
+This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.
+
+When used by a Monk of the Dark Moon, Darkness has a DC of 15 + Wisdom bonus + half the character's monk level. Any other Darkness spell or ability used by a Monk of the Dark Moon also gains a bonus to DC equal to half the character's monk level.~
 @985    = ~~
 @986    = ~~
 @987    = ~~

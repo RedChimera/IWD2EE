@@ -1,2 +1,15 @@
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_enable_autobuffing_keys.*~ ~ex_enable_autobuffing_keys = true~
+
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+	COPY_EXISTING_REGEXP ~sppr[0-9][0-9][0-9]\.spl~ ~override~ ~spwi[0-9][0-9][0-9]\.spl~ ~override~ ~uspr[0-9][0-9][0-9]\.spl~ ~override~ ~uswi[0-9][0-9][0-9]\.spl~ ~override~
+		READ_SHORT 0x94 thecastingtime ELSE 0
+		LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+		READ_LONG 0x6A effectoffset
+		WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+		UNLESS ~MEONCAST~
+
+	INCLUDE ~%mod_folder%/components/final_patches.tpa~
+
+END

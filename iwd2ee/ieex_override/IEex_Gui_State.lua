@@ -3978,24 +3978,6 @@ end
 
 IEex_Hotkeys_KeyToCustomMapIndex = {}
 
--- Hardcode scrolling keys to defaults in IEex_Vanilla mode
-IEex_AbsoluteOnce("IEex_InitKeyToCustomMapIndex", function()
-	if not IEex_Vanilla then return end
-	if not IEex_InAsyncState then return false end
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.UP]      = IEex_Hotkeys_CustomBinding.SCROLL_UP
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD8] = IEex_Hotkeys_CustomBinding.SCROLL_UP_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.LEFT]    = IEex_Hotkeys_CustomBinding.SCROLL_LEFT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD4] = IEex_Hotkeys_CustomBinding.SCROLL_LEFT_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.DOWN]    = IEex_Hotkeys_CustomBinding.SCROLL_DOWN
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD2] = IEex_Hotkeys_CustomBinding.SCROLL_DOWN_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.RIGHT]   = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD6] = IEex_Hotkeys_CustomBinding.SCROLL_RIGHT_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD7] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_LEFT_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD1] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_LEFT_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD3] = IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT
-	IEex_Hotkeys_KeyToCustomMapIndex[IEex_KeyIDS.NUMPAD9] = IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT
-end)
-
 -- This function is called by the engine whenever a custom hotkey binding is updated, (this includes initialization).
 --     deltaT = {
 --         { ["customMapIndex"] = ?, ["oldVirtualKey"] = ?, ["oldVirtualKeyHasCtrl"] = ?, ["newVirtualKey"] = ?, ["newVirtualKeyHasCtrl"] = ? },
@@ -4317,6 +4299,7 @@ ex_current_record_actorID = 0
 ex_current_record_weapon_die_number = 0
 ex_current_record_weapon_die_size = 0
 ex_previous_line_was_race = false
+ex_checking_bonus_spells = false
 ex_current_record_on_weapon_statistics = false
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
@@ -4330,6 +4313,8 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
 		IEex_WriteByte(creatureData + 0x781, math.floor(armoredArcanaFeatCount / ex_armored_arcana_multiplier))
 	end
+	local levelString = IEex_FetchString(7192)
+	local bonusSpellsString = IEex_FetchString(10344)
 	local damageString = IEex_FetchString(39518)
 	local damagePotentialString = IEex_FetchString(41120)
 	local castingFailureString = IEex_FetchString(41390)
@@ -4679,52 +4664,86 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 				end
 			end
-		local expertiseCount = IEex_ReadDword(creatureData + 0x4C54)
-		if expertiseCount > 0 then
-			local actionID = IEex_ReadWord(creatureData + 0x476, 0x0)
-			if actionID ~= 3 and actionID ~= 94 and actionID ~= 98 and actionID ~= 105 and actionID ~= 134 and actionID ~= 27 then
-				local isRanged = false
-				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
-				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
-				local weaponRES = ""
-				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
-				local weaponWrapper = 0
-				if slotData > 0 then
-					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
-					weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
-					if weaponWrapper:isValid() then
-						local itemData = weaponWrapper:getData()
-						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
-						if weaponHeader >= numHeaders then
-							weaponHeader = 0
-						end
-						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
-						local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
-						if headerType == 2 then
-							isRanged = true
+			local expertiseCount = IEex_ReadDword(creatureData + 0x4C54)
+			if expertiseCount > 0 then
+				local actionID = IEex_ReadWord(creatureData + 0x476, 0x0)
+				if actionID ~= 3 and actionID ~= 94 and actionID ~= 98 and actionID ~= 105 and actionID ~= 134 and actionID ~= 27 then
+					local isRanged = false
+					local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+					local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+					local weaponRES = ""
+					local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+					local weaponWrapper = 0
+					if slotData > 0 then
+						weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+						weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+						if weaponWrapper:isValid() then
+							local itemData = weaponWrapper:getData()
+							local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+							if weaponHeader >= numHeaders then
+								weaponHeader = 0
+							end
+							headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+							local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+							if headerType == 2 then
+								isRanged = true
+							end
 						end
 					end
-				end
-				if not isRanged then
-					if string.match(line, expertiseString .. ":") then
-						line = string.gsub(line, "%d+", 0)
-					elseif string.match(line, genericString .. ":") then
-						local genericAC = string.match(line, "%d+")
-						if string.match(line, "%-") then
-							genericAC = genericAC * -1
-						end
-						genericAC = genericAC + expertiseCount
-						if genericAC > 0 then
-							line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
-						elseif genericAC < 0 then
-							line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
-						else
-							line = ""
+					if not isRanged then
+						if string.match(line, expertiseString .. ":") then
+							line = string.gsub(line, "%d+", 0)
+						elseif string.match(line, genericString .. ":") then
+							local genericAC = string.match(line, "%d+")
+							if string.match(line, "%-") then
+								genericAC = genericAC * -1
+							end
+							genericAC = genericAC + expertiseCount
+							if genericAC > 0 then
+								line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+							elseif genericAC < 0 then
+								line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+							else
+								line = ""
+							end
 						end
 					end
 				end
 			end
-		end
+		elseif string.match(line, bonusSpellsString) then
+			ex_checking_bonus_spells = true
+		elseif ex_checking_bonus_spells and line == "" then
+			ex_checking_bonus_spells = false
+			if IEex_GetActorSpellState(targetID, 197) then
+				local advancedSlotsList = {}
+				IEex_IterateActorEffects(targetID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local theparameter3 = IEex_ReadDword(eData + 0x60)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					if theopcode == 288 and theparameter2 == 197 and bit.band(thesavingthrow, 0x10000) > 0 then
+						if not advancedSlotsList[thespecial] then
+							advancedSlotsList[thespecial] = {theparameter1 - theparameter3, theparameter1}
+						else
+							advancedSlotsList[thespecial] = {advancedSlotsList[thespecial][1] + theparameter1 - theparameter3, advancedSlotsList[thespecial][2] + theparameter1}
+						end
+					end
+				end)
+				if #advancedSlotsList > 0 then
+					line = IEex_FetchString(ex_tra_55495)
+				end
+				local firstAdvancedSlot = true
+				for k, v in ipairs(advancedSlotsList) do
+					if not firstAdvancedSlot then
+						line = line .. ", "
+					end
+					line = line .. levelString .. " +" .. k .. ": " .. v[1] .. "/" .. v[2]
+					firstAdvancedSlot = false
+				end
+			end
 		elseif descPanelNum == 1 and string.match(line, castingFailureString .. ":") then
 			local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
 			local castingFailure = string.match(line, "%d+")
@@ -5222,7 +5241,6 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 												proficiencyBonus = proficiencyBonus * -1
 											end
 											if strengthBonus == 0 then
-												IEex_DS(proficiencyBonus .. " vs " .. finesseDifference)
 												if proficiencyBonus == finesseDifference then
 													line = string.gsub(line, proficiencyString, dexterityString)
 												else

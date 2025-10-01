@@ -1080,8 +1080,6 @@ STRING_SET 36 @535
 STRING_SET 37695 @729
 
 STRING_SET 39846 @898
-STRING_SET 24899 @899
-STRING_SET 25053 @899
 STRING_SET 20438 @900
 /*
 STRING_SET 9554 ~LIGHTFOOT HALFLING:
@@ -1390,12 +1388,14 @@ COPY_EXISTING_REGEXP ~USW01L.*\.itm~ ~override~
 
 COPY_EXISTING_REGEXP ~USW02L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=7 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW03L.*\.itm~ ~override~
 	SAY NAME1 @149
 	SAY NAME2 @149
 	SAY DESC @149
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=9 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW04L.*\.itm~ ~override~
 	SAY NAME1 @207
@@ -1411,42 +1411,52 @@ COPY_EXISTING_REGEXP ~USW05L.*\.itm~ ~override~
 
 COPY_EXISTING_REGEXP ~USW06L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=13 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW07L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=15 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW08L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=15 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW09L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=15 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW10L.*\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=15 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW21L.*\.itm~ ~override~
 	SAY NAME1 @206
 	SAY NAME2 @206
 	SAY DESC @206
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=5 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW22L.*\.itm~ ~override~
 	SAY NAME1 @158
 	SAY NAME2 @158
 	SAY DESC @158
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=5 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW23L.*\.itm~ ~override~
 	SAY NAME1 @151
 	SAY NAME2 @151
 	SAY DESC @151
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=8 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
 
 COPY_EXISTING_REGEXP ~USW30L.*\.itm~ ~override~
 	SAY NAME1 @156
 	SAY NAME2 @156
 	SAY DESC @156
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=40 STR_VAR resource=~MEPOLYBL~ END
+	LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
+
 
 COPY_EXISTING ~00CWYUT2.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=1 STR_VAR resource=~MEPOLYBL~ END
@@ -1590,6 +1600,12 @@ COPY_EXISTING ~USMNKLAY.spl~ ~override~
   SAY NAME2 @926
   SAY UNIDENTIFIED_DESC @955
   SAY IDENTIFIED_DESC @955
+
+COPY_EXISTING ~USMNKDRK.spl~ ~override~
+  SAY NAME1 @37256
+  SAY NAME2 @37256
+  SAY UNIDENTIFIED_DESC @984
+  SAY IDENTIFIED_DESC @984
 
 COPY_EXISTING ~USPALSHO.spl~ ~override~
   SAY NAME1 @927
