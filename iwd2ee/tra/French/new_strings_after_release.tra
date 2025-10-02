@@ -1486,13 +1486,13 @@ Niveau 29 : +12 en Force et en Constitution et +6 aux jets de sauvegarde de Volo
 Les membres de l’Ordre de la Lune Noire vénèrent Shar la Sombre Dame, déesse de la nuit. Leur formation monastique guide leurs pouvoirs spirituels et personnels.
 
 Avantages :
-* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au DD de tout autre sort de Ténèbres ou capacité qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
+* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au DD de tout autre sort ou capacité Ténèbres qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
 * Niveau 10 : Le moine gagne +1 point de dégâts contre tout ennemi qui est aveuglé ou dont la vision est altérée par l'effet de Ténèbres. Pour chaque tranche de 8 niveaux de moine après le niveau 10, le moine gagne +1 point de dégâts supplémentaire contre les ennemis dans ces situations.~
 @984 = ~Ténèbres
 
 Cette capacité crée une obscurité magique dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur ou être considérées comme aveuglées. Les créatures dotées de la vision dans le noir ne sont pas aveuglées, mais elles ne peuvent voir qu'avec une capacité limitée à travers l'obscurité magique, subissant un malus de -4 aux jets d'attaque en cas d'échec de leur jet de sauvegarde. Les créatures ayant une vision dans le noir supérieure de 36 mètres (comme les drows, les nains gris ou les gnomes des profondeurs) ne subissent qu'un malus de -2 aux jets d'attaque. Les démons et les créatures immunisées à la cécité ne sont pas affectés.
 
-Lorsqu'elle est utilisée par un Moine de la Lune Noire, la capacité Ténèbres a un degré de difficulté (DD) de 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Tout autre sort de Ténèbres ou capacité utilisé par un Moine de la Lune Noire bénéficie également d'un bonus au DD égal à la moitié du niveau de moine du personnage.~
+Lorsqu'elle est utilisée par un Moine de la Lune Noire, Ténèbres a un degré de difficulté (DD) de 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Tout autre sort ou capacité Ténèbres utilisé par un Moine de la Lune Noire bénéficie également d'un bonus au DD égal à la moitié du niveau de moine du personnage.~
 @585 = ~
 
 Sorts du domaine :
@@ -1523,7 +1523,7 @@ Vous savez comment frapper les adversaires dans des zones vulnérables.
 Prérequis : Dex 13+, Sag 13+, bonus de base à l’attaque de +8 ou plus.
 
 Avantage : Lorsque vous attaquez avec Attaque étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau + modificateur de Sag), en plus d’infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
-@20011=~Lacéré~
+@20011=~<LACERE>~
 @41651=~L'arme naturelle de Vrek est devenue plus puissante.~
 @41652=~L'arme naturelle de Xhaan est devenue plus puissante.~
 @4807 = ~Vrek préfère utiliser ses griffes déchiquetées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manipuler. Les griffes de Vrek frappent comme des armes +1 afin de surmonter la réduction de dégâts.
