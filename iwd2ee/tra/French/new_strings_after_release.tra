@@ -886,7 +886,7 @@ Niveau 17+ : 1d8+5
 * Niveau 11 : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d’être immunisé contre tous les poisons.
 * Niveau 13 : Ame de diamant. Le moine acquiert de la résistance aux sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
 * Niveau 15 : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d’une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + moitié du niveau du moine). Les constructions, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
-* Niveau 19 : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
+* Niveau 19 : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus à la CA et de bouclier.
 * Niveau 20 : Perfection de l’être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l’affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu’il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d’un bonus d’altération de +1 (ou plus), par un sort ou par une forme d’énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
 Désavantages :
@@ -910,7 +910,7 @@ Désavantages :
 
 PARAMÈTRES :
 
-Bonus d’armure : +5
+Bonus à la CA : +5
 Bonus de Dextérité maxi : Aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
@@ -926,7 +926,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus d’armure : +9
+Bonus à la CA : +9
 Bonus de Dextérité maxi : Aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
@@ -943,7 +943,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus d’armure : +18
+Bonus à la CA : +18
 Bonus de Dextérité maxi : Aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
@@ -960,7 +960,7 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus d’armure : +24
+Bonus à la CA : +24
 Bonus de Dextérité maxi : Aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
@@ -1237,7 +1237,7 @@ Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité… t
 Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
 Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
-* Bonus d’armure de +5.
+* Bonus à la CA de +5.
 * +2 en Intelligence, Sagesse et Charisme.
 * Immunité au froid, à l’électricité, au poison, aux maladies, aux saignements, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification et aux effets de métamorphose nuisibles (Transformation fonctionne toujours).
 * Résistance de 5/- aux dégâts tranchants et perforants, réduction des dégâts de 5/+1.
@@ -1440,380 +1440,385 @@ Avantages :
 Désavantages :
 * Débute sans aucune compétence en armure, très médiocre en combat au corps à corps.~
 
-//Strings to be translated:
+//Ajouts depuis la 3.3.4:
 
-@222    = ~Expertise
+@222	= ~Expertise du combat
 
-When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
-@525    = ~BARBARIAN:
+Lorsque vous utilisez cette capacité, vous pouvez choisir de gagner un bonus à la classe d’armure allant jusqu’à +5, et une pénalité d’attaque équivalente. Le bonus choisi ne peut excéder le bonus de base à l’attaque du personnage et ne s'applique que lorsque vous attaquez avec une arme de mêlée.~
+@525	= ~BARBARE :
 
-From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
+Des terres gelées du Nord et des jungles infernales du Sud viennent des guerriers dont la bravoure n’a d’égale que l’implacabilité. Ces barbares, bien que manquant de discipline, voire de compétences, peuvent devenir des adversaires particulièrement coriaces s’ils entrent dans une rage de berserker.
 
-Hit points per level: 1-12
+Points de vie par niveau : 1-12
 
-Advantages:
-* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
-* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
-* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
-* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
-* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
-* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 AC penalty.
-* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
-* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
-* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
-* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
+Avantages :
+* Compétent avec toute arme courante et martiale, ainsi qu’avec les armures légères ou moyennes et les boucliers.
+* Rage de berserker : peut entrer dans cet état une fois par jour tous les 4 niveaux (à partir du 1er niveau avec un seul accès de rage). La rage leur confère +4 en Force et Constitution (qui s’ajoutent à d’autres bonus de Force et de Constitution), ainsi qu’une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité à la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure un nombre de rounds égal à 3 plus le bonus de Constitution (nouvellement boosté) du barbare. Après la rage, le barbare sera fatigué pendant 3 rounds, subissant une pénalité de -2 en Force et Dextérité.
+* Déplacement accéléré : le barbare gagne 3 mètres en déplacement par rapport à un personnage normal, à condition de ne pas être encombré ou de ne pas porter une armure lourde.
+* Niveau 2 : Réduction des dégâts. Le barbare gagne 1/- point de résistance aux dégâts tranchants, perforants et contondants. Il ou elle gagne 1/- point de résistance supplémentaire aux niveaux 5, 8, 11 et tous les 3 niveaux suivants. Si le barbare porte une armure moyenne, la réduction des dégâts accordée par cette capacité est doublée.
+* Niveau 2 : Esquive instinctive. Les barbares conservent leur bonus de Dextérité à la classe d’armure s’ils sont attaqués par des ennemis invisibles.
+* Niveau 5 : Esquive instinctive améliorée. Le barbare ne peut subir d’attaque sournoise venant d’un roublard, sauf si ce dernier est supérieur de 4 niveaux (ou plus) au barbare.
+* Niveau 15 : Rage de grand berserker. La rage de berserker se transforme en "rage de grand berserker", se traduisant par 6 points de bonus en Force et en Constitution, + 3 points de bonus aux jets de sauvegarde. La pénalité de 2 points à la classe d’armure est maintenue.
+* Niveau 20 : Rage sans fatigue. Le barbare n’est plus fatigué après une rage.
+* Niveau 21 : Rage puissante. La capacité de rage du barbare accorde désormais +8 en Force et Constitution et +4 aux jets de sauvegarde de Volonté.
+* Niveau 25 : La rage du barbare accorde désormais +10 en Force et Constitution et +5 aux jets de sauvegarde de Volonté.
+* Niveau 29 : La rage du barbare accorde désormais +12 en Force et Constitution et +6 aux jets de sauvegarde de Volonté.
 
-Disadvantages:
-* Barbarians gain feats at a slower rate than fighters.
-* Barbarians do not start with proficiency in heavy armor.~
-@977    = ~Barbarian Rage
+Désavantages :
+* Le barbare acquiert des dons à une cadence plus lente que le guerrier.
+* Le barbare débute sans aucune compétence en armures lourdes.~
+@977	= ~Rage de berserker
 
-By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
-@978    = ~Greater Barbarian Rage
+En entrant en rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d’autres bonus à la Force et à la Constitution), ainsi qu’une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant trois rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.~
+@978	= ~Rage de grand berserker
 
-By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+En entrant en rage, le barbare gagne +6 en Force et Constitution (qui se cumulent avec d’autres bonus à la Force et à la Constitution), ainsi qu’une pénalité de -2 à la classe d’armure, +3 aux jets de sauvegarde de Volonté, et une immunité contre la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant 3 rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.
 
-The bonuses increase at higher levels:
+Les bonus augmentent aux niveaux supérieurs :
 
-21st level: +8 to Strength and Constitution and +4 to Will saves.
-25th level: +10 to Strength and Constitution and +5 to Will saves.
-29th level: +12 to Strength and Constitution and +6 to Will saves.~
-@4008 = ~This tall rock could potentially be knocked down, either with brute force or a Knock spell.~
-@55350=~Damage resisted from weapon of less than +<EXDRENLV> enchantment~
-@565    = ~MONK OF THE DARK MOON:
+Niveau 21 : +8 en Force et en Constitution et +4 aux jets de sauvegarde de Volonté.
+Niveau 25 : +10 en Force et en Constitution et +5 aux jets de sauvegarde de Volonté.
+Niveau 29 : +12 en Force et en Constitution et +6 aux jets de sauvegarde de Volonté.~
+@4008 = ~Ce grand rocher obstrue le passage et pourrait être dégagé, soit par la force brute, soit en utilisant un sort de Déblocage.~
+@55350=~Dégâts résistés d'une arme ayant un enchantement inférieur à +<EXDRENLV>~
+@565 = ~MOINE DE LA LUNE NOIRE :
 
-Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
+Les membres de l’Ordre de la Lune Noire vénèrent Shar la Sombre Dame, déesse de la nuit. Leur formation monastique guide leurs pouvoirs spirituels et personnels.
 
-Advantages:
-* 2nd level: The monk gains one use of Darkness per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Darkness. The DC is equal to 15 + Wisdom bonus + half the character's monk level. The monk also adds half their monk level to the DC of any other Darkness spell or ability they cast. The monk can see perfectly even in magical darkness.
-* 10th level: The monk gains +1 damage against any enemy that is blinded or has their vision impaired by a Darkness effect. For every 8 monk levels after level 10, the monk gains another +1 damage against enemies in these situations.~
-@984    = ~Darkness
+Avantages :
+* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au DD de tout autre sort de Ténèbres ou capacité qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
+* Niveau 10 : Le moine gagne +1 point de dégâts contre tout ennemi qui est aveuglé ou dont la vision est altérée par l'effet de Ténèbres. Pour chaque tranche de 8 niveaux de moine après le niveau 10, le moine gagne +1 point de dégâts supplémentaire contre les ennemis dans ces situations.~
+@984 = ~Ténèbres
 
-This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.
+Cette capacité crée une obscurité magique dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur ou être considérées comme aveuglées. Les créatures dotées de la vision dans le noir ne sont pas aveuglées, mais elles ne peuvent voir qu'avec une capacité limitée à travers l'obscurité magique, subissant un malus de -4 aux jets d'attaque en cas d'échec de leur jet de sauvegarde. Les créatures ayant une vision dans le noir supérieure de 36 mètres (comme les drows, les nains gris ou les gnomes des profondeurs) ne subissent qu'un malus de -2 aux jets d'attaque. Les démons et les créatures immunisées à la cécité ne sont pas affectés.
 
-When used by a Monk of the Dark Moon, Darkness has a DC of 15 + Wisdom bonus + half the character's monk level. Any other Darkness spell or ability used by a Monk of the Dark Moon also gains a bonus to DC equal to half the character's monk level.~
-@585    = ~
+Lorsqu'elle est utilisée par un Moine de la Lune Noire, la capacité Ténèbres a un degré de difficulté (DD) de 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Tout autre sort de Ténèbres ou capacité utilisé par un Moine de la Lune Noire bénéficie également d'un bonus au DD égal à la moitié du niveau de moine du personnage.~
+@585 = ~
 
-Domain Spells:
-1: Identify, Identify Creature
-2: Arcane Sight, Clairvoyance
-3: Legend Lore, Moment of Prescience
-4: True Seeing, Shout
-5: Power Word: Heal, Power Word: Silence
-6: Power Word: Stun, Omnipresence
-7: Great Shout, Symbol of Hopelessness
-8: Power Word: Kill, Symbol of Death
-9: Executioner's Eyes, Mass Omnivision~
-@55494=~Spell failed: This spell cannot be cast while time is stopped.~
-@38959     = ~Time Stop
+Sorts du domaine :
+1 : Identification, Identification de créature
+2 : Vision magique, Clairvoyance
+3 : Mythes et légendes, Moment de prescience
+4 : Vision véritable, Cri
+5 : Mot de pouvoir : Guérison, Mot de pouvoir : Silence
+6 : Mot de pouvoir : Étourdissement, Omniprésence
+7 : Grand cri, Symbole du désespoir
+8 : Mot de pouvoir : Mort, Symbole de mort
+9 : Expertise de bourreau, Vision omnisciente de groupe~
+@55494=~Échec du sort : Ce sort ne peut être lancé lorsque le temps est arrêté.~
+@38959 	= ~Arrêt du temps
 (Transmutation)
-Level: Sor/Wiz 9
-Range: Caster
-Duration: 3 rounds
-Casting Time: 9
-Area of Effect: Entire area
-Saving Throw: None
+Niveau : Ens/Mag 9
+Portée : lanceur
+Durée : 3 rounds
+Temps d’incantation : 9
+Zone d’effet : Toute la zone
+Jet de sauvegarde : aucun
 
-This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time. Time Stop cannot be cast while time is already stopped, and its duration is unaffected by items or abilities.~
-@729    = ~STUNNING ATTACK:
+Ce sort arrête le temps pour tout le monde sauf pour le lanceur. Toutes les autres créatures ne peuvent ni bouger ni agir, tandis que le lanceur peut agir pendant trois rounds de temps apparent. Arrêt du temps ne peut être lancé si le temps est déjà arrêté et sa durée n'est affectée par aucun objet ou capacité.~
+@729	= ~ATTAQUE ÉTOURDISSANTE :
 
-You know how to strike opponents in vulnerable areas.
+Vous savez comment frapper les adversaires dans des zones vulnérables.
 
-Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
+Prérequis : Dex 13+, Sag 13+, bonus de base à l’attaque de +8 ou plus.
 
-Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your monk level if any + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
-@20011=~Rended~
-@41651=~Vrek's natural weapon has become stronger.~
-@41652=~Xhaan's natural weapon has become stronger.~
-@4807   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
+Avantage : Lorsque vous attaquez avec Attaque étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau + modificateur de Sag), en plus d’infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
+@20011=~Lacéré~
+@41651=~L'arme naturelle de Vrek est devenue plus puissante.~
+@41652=~L'arme naturelle de Xhaan est devenue plus puissante.~
+@4807 = ~Vrek préfère utiliser ses griffes déchiquetées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manipuler. Les griffes de Vrek frappent comme des armes +1 afin de surmonter la réduction de dégâts.
 
-STATISTICS: 
+PARAMÈTRES:
 
-Damage: 1d6 + 1
-Attack Bonus: +1
-Enchantment: +1
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4809   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 1d6 + 1
+Bonus d'attaque : +1
+Enchantement : +1
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4809 = ~Vrek préfère utiliser ses griffes déchiquetées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manipuler. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES:
 
-Damage: 1d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4819   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +2 weapon for the purposes of overcoming damage reduction.
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4819 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +2 pour la réduction des dégâts.
 
-STATISTICS:
+PARAMÈTRES:
 
-Damage: 1d6 +2
-Attack Bonus: +2
-Enchantment: +2
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4821   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
- 
-STATISTICS:
+Dégâts: 1d6 +2
+Bonus d’attaque: +2
+Enchantement: +2
+Type de dégâts: Tranchants
+Spécial:
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Givre: +1d6 dégâts de froid
+Poids: 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4821 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 pour la réduction des dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4833   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts: 1d6 +5
+Bonus d’attaque: +5
+Enchantement: +5
+Type de dégâts: Tranchants
+Spécial:
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Givre: +1d6 dégâts de froid
+Poids: 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4833 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
-Damage: 5d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 5d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde).
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4849 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4850   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +4 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Givre : +1d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4850 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +4 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +4
-Attack Bonus: +4
-Enchantment: +4
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4852   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 4
+Bonus d'attaque : +4
+Enchantement : +4
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Givre : +1d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4852 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +2d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4853   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Givre : +2d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4853 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +3d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4856   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Givre : +3d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4856 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +4d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4857   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Givre : +4d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4857 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +5d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4858   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Givre : +5d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4858 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +6d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4866   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Givre : +6d6 dégâts de froid
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4866 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
-Damage: 3d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4867   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 3d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4867 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
-Damage: 4d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4868   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 4d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4868 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
-Damage: 6d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4869   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 6d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4869 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
-Damage: 7d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@12483    = ~Hide Armor of Recklessness +3~
-@12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+PARAMÈTRES:
 
-STATISTICS:
+Dégâts : 7d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@12483 = ~Armure de peau de Témérité +3~
+@12484 = ~L’armure de peau se compose de plusieurs couches de cuir. Elle est assez simple à fabriquer et protège bien du froid, même si elle est rigide et entrave un peu les mouvements. Elle est principalement utilisée par les guerriers et les chasseurs des tribus barbares du Nord.
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Damage Bonus: +4
-  Generic Armor Penalty: -4
-Weight: 10 lb.~
-@35156     = ~Lesser Entropy Shield~
-@36156     = ~Lesser Entropy Shield
+PARAMÈTRES :
+
+Armure moyenne
+Bonus à la CA : +7
+Bonus max de Dextérité : +4
+Malus de jet d’armure : -3
+Echec des sorts profanes : 20%
+Spécial :
+  Bonus aux dégâts : +4
+  Malus à la classe d'armure générique : -4
+Poids : 4,54 kg (10 lb)~
+@35156 = ~Bouclier d'Entropie Mineur~
+@36156 = ~Bouclier d'Entropie Mineur
 (Abjuration)
-Level: Clr 1
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+Niveau : Prê 1
+Portée : lanceur
+Durée : 10 rounds/niveau
+Temps d'incantation : 1
+Zone d'effet : lanceur
+Jet de sauvegarde : aucun
 
-A weaker version of the 6th-level spell Divine Shell, this spell creates a magicial field around the caster that has a 20% chance to deflect missile attacks aimed at the caster. This includes not just ranged weapon attacks, but also certain spells, including Chromatic Orb, Magic Missile, Melf's Acid Arrow, Flame Arrow, Alicorn Lance, Icelance, Lance of Disruption, Mordenkainen's Force Missiles, Vitriolic Sphere, Otiluke's Freezing Sphere, and Sol's Searing Orb.~
-@37867     = ~Prismatic Wall~
-@38867     = ~Prismatic Wall
+Version moins puissante du sort de niveau 6 Carapace Divine, ce sort crée un champ magique autour du lanceur qui a 20 % de chances de dévier les attaques de projectile visant le lanceur. Cela inclut non seulement les attaques d'armes à distance, mais aussi certains sorts, dont Orbe Chromatique, Projectile Magique, Flèche Acide de Melf, Flèche Enflammée, Lance d'alicorne, Lance de glace, Lance de destruction, Projectiles de force de Mordenkainen, Sphère acide, Sphère glaciale d'Otiluke et Orbe desséchant de Sol.~
+
+@37867     = ~Mur Prismatique~
+@38867 = ~Mur Prismatique
 (Abjuration)
-Level: Sor/Wiz 8
-Range: 5 feet
-Duration: 10 rounds
-Casting Time: 12
-Area of Effect: 40-foot long, 28-foot thick wall
-Saving Throw: None
+Niveau : Ens/Mag 8
+Portée : 1,5 mètre (5 pieds)
+Durée : 10 rounds
+Temps d'incantation : 12
+Zone d'effet : Mur de 12 mètres (40 pieds) de long et 8,5 mètres (28 pieds) d'épaisseur
+Jet de sauvegarde : aucun
 
-One of the few abjuration spells that is capable of harm, this spell creates a thick, shimmering wall composed of seven layers of different colors. The wall can be passed through, but any creature other than the caster that walks through the wall will suffer a harmful effect for each layer they pass through.
+L'un des rares sorts d'abjuration capable de nuire, ce sort crée un mur épais et chatoyant composé de sept couches de couleurs différentes. Le mur peut être traversé, mais toute créature autre que le lanceur qui franchit le mur subira un effet néfaste pour chaque couche traversée.
 
-The  effects of the seven colored layers are akin to a Prismatic Spray spell: red (inflicts 10d6 hit points of fire damage, Reflex for half), orange (10d6 hit points of acid damage, Reflex save for half), yellow (10d6  hit points of electrical damage, Reflex for half), green (Fortitude save or die - survivors still take 20 hit points of poison damage), blue (Fortitude or turn to stone), indigo (Will save or go insane), or violet (Will save or be warped to another plane and back again instantaneously with the lasting effects of having 5 levels drained). All saves made against this spell have -8 DC.
+Les effets des sept couches colorées sont similaires à ceux du sort Rayons prismatiques : rouge (inflige 10d6 points de dégâts de feu, jet de Réflexes pour moitié), orange (10d6 points de dégâts d’acide, jet de Réflexes pour moitié), jaune (10d6 points de dégâts électriques, jet de Réflexes pour moitié), vert (jet de Vigueur ou mort - les survivants subissent tout de même 20 points de dégâts de poison), bleu (jet de Vigueur ou transformation en pierre), indigo (jet de Volonté ou folie), ou violet (jet de Volonté ou transport vers un autre plan et retour instantané avec la perte de 5 niveaux). Tous les jets de sauvegarde contre ce sort subissent un malus de -8 au Degré de Difficulté.
 
-A creature that passes through a layer of the wall cannot be affected by that layer again for 10 rounds. Only one prismatic wall can be active at a time.~
+Une créature qui traverse une couche du mur ne peut plus être affectée par cette couche pendant 10 rounds. Un seul mur prismatique peut être actif à la fois.~
 @56023=~This letter is written on weathered parchment and sealed with wax. The exterior contains the following text, written with a shaky hand: "From Garradun Tanner, to my beloved Raina, care of Captain Mariner, Neverwinter"
 
 You could potentially open the letter and view its contents, though reading someone else's love letter would be very rude.
 
 Weight: 0 lb.~
-@56024=~You might want to have a look at this letter I obtained from Garradun Tanner.~
-@56025=~You might want to have a look at this letter I obtained from that shapeshifter.~
-@56026=~Best show it to Denham - it smells of treachery, it does. Denham! Look at this.~
-@56027=~I got this letter from Garradun Tanner. It is very suspicious.~
-@56028=~...here you are. This should do the trick. Thank you for bringing this to our attention. You probably just saved many lives. I sent Ulbrec the original letter, but I wrote a copy of the original text for your reference. Do you need anything else?~
-@56029=~Garradun's Letter (Copy)~
-@56030=~This parchment contains a copy of the text from the spy Garradun's letter. The text is brief and to the point, as follows:
+@56023=~Cette lettre est écrite sur un parchemin usé et scellée à la cire. L'extérieur contient le texte suivant, écrit d'une main tremblante : « De Garradun Tanneur, à ma bien-aimée Raina, aux bons soins du Capitaine Mariner, Padhiver »
 
-Targos: Three or fewer ships, perhaps a few dozen infantry and archers. Two priests at the temple pavilion, with recruits drawn in from Luskan. The goblin's seizure of the waterways seems to have closed off the passage of further reinforcements. I have heard no mention of planned reinforcements from elsewhere into the city. The diviner in Targos should be taken care of by our friends from Luskan.
+Vous pourriez potentiellement ouvrir la lettre et en consulter le contenu, bien que lire la lettre d'amour de quelqu'un d'autre serait très impoli.
 
-Bremen: The city should fall soon. Targos is unable to move ships across the bay thanks to our scrag allies. According to wounded soldiers from Bremen, they will not be able to hold out. You should be able to pull in forces from the north without worrying about attacks from Bremen.
+Poids : 0 lb.~
+@56024=~Vous devriez peut-être jeter un œil à cette lettre que j'ai obtenue de Garradun Tanneur.~
+@56025=~Vous devriez peut-être jeter un œil à cette lettre que j'ai obtenue de ce métamorphe.~
+@56026=~Mieux vaut montrer ça à Denham : ça sent la trahison, ça. Denham ! Regarde ça.~
+@56027=~J'ai obtenu cette lettre de Garradun Tanneur. Elle est très suspecte.~
+@56028=~... tenez. Cela devrait suffire. Merci de nous avoir signalé ceci. Vous avez probablement sauvé de nombreuses vies. J'ai envoyé la lettre originale à Ulbrec, mais j'en ai fait une copie pour vous. Avez-vous besoin d'autre chose ?~
+@56029=~Lettre de Garradun (Copie)~
+@56030=~Ce parchemin contient une copie du texte de la lettre de l'espion Garradun. Le texte est bref et direct, comme suit :
 
-Bryn Shander: With our forces in the field and the Shaengarne Ford held, the capital is unable to effectively provide the peripheral towns with supplies. The bugbears' use of hit and run tactics against caravans moving between the Ten-Towns has made it almost impossible for them to reinforce each other. Lonelywood has sent almost all of its able-bodied men south to Bryn Shander instead of sending them to Targos. The same has happened in Easthaven. Both towns should be ripe for taking should we choose to enlarge our grasp of the region. Perhaps three to four hundred men wait in Bryn Shander along with a handful of volunteers from Clan Battlehammer. Most of those are militia, with a few experienced mercenaries among them. We need not worry about Silverymoon and the other communities to the east. Only two volunteers have arrived, and those are already out of the action.
+Targos : Trois navires ou moins, peut-être quelques dizaines d'archers et de soldats à pied. Deux prêtres au pavillon du temple, avec les recrues arrivées de Luskan. Le contrôle des voies navigables par les gobelins semble avoir coupé la route à davantage d'assistance. Je n'ai pas entendu nouvelle de l'arrivée prévue de renforts autre part dans la ville. Nos amis de Luskan devraient s'occuper du devin de Targos.
 
-Weight: 0 lb.~
+Bremen : La cité devrait bientôt tomber. Targos est dans l'incapacité de faire traverser la baie à ses navires à cause de nos alliés tourmentés. Si l'on en croit les soldats blessés arrivés de Bremen, ils ne pourront pas tenir. Vous devriez pouvoir détacher des contingents du nord sans craindre d'attaques de ce côté.
+
+Bryn Shander : Les terres étant occupées par nos armées et le Gué de Shaengarne tenu, la capitale ne peut plus approvisionner efficacement les villes périphériques. La tactique de harcèlement employée par les gobelours contre les caravanes reliant les Dix-Cités a rendu pratiquement impossible toute assistance entre elles. Bois-Isolé a envoyé presque tous ses hommes valides au sud vers Bryn Shander au lieu de les dépêcher vers Targos. Il en est allé de même au Havre du Levant. Les deux villes sont mûres pour être prises si nous décidons d'élargir notre emprise sur la région. Peut-être trois à quatre cents hommes nous attendent-ils à Bryn Shander, aux côtés d'une poignée de volontaires du Clan Marteau-de-Guerre. La plupart sont des miliciens, peu d'entre eux des mercenaires expérimentés. Il n'est nul besoin de nous soucier de Lunargent et des autres communautés de l'est. Seuls deux volontaires sont arrivés, et ils ne sont déjà plus de la partie.
+
+Poids : 0 lb.~
 @56031=~Resistance: <EXARDAMR>/- Physical Damage Resistance~
+@56031=~Résistance : <EXARDAMR>/- Résistance aux Dégâts Physiques~
 //The two strings below must be translated to be indentical to the line in the description of an armor or shield that states its armor or shield bonus, minus the number. The mod runs code that checks the description of armor and shields for a line that includes one of these strings (but doesn't include the "Generic Armor Bonus:" line) and puts the above string right below them.
-@56032=~Armor Bonus:~
-@56033=~Shield Bonus:~
-@56034=~Generic Armor Bonus:~
+@56032=~Bonus à la CA :~
+@56033=~Bonus de bouclier :~
+@56034=~Bonus à la CA générique :~
