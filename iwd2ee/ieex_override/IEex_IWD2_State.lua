@@ -31902,6 +31902,15 @@ function MEGENTOK(actionData, creatureData)
 	if actionID == 139 then
 		playerID = sourceID
 	end
+	if not IEex_IsSprite(playerID, true) then
+		 for i = 0, 5, 1 do
+			if IEex_IsSprite(IEex_GetActorIDCharacter(i), false) then
+				playerID = IEex_GetActorIDCharacter(i)
+				break;
+			end
+		 end
+		 if not IEex_IsSprite(playerID, true) then return end
+	end
 	local playerGender = IEex_ReadSignedByte(IEex_GetActorShare(playerID) + 0x34, 0x0)
 	if playerGender < 1 or playerGender > 2 then
 		playerGender = 1
@@ -31913,6 +31922,18 @@ end
 
 if ex_enable_dynamic_gender_tokens then
 	IEex_AddActionHookGlobal("MEGENTOK")
+	IEex_AddScreenEffectsGlobal("MEGENTOE", function(effectData, creatureData)
+		local targetID = IEex_GetActorIDShare(creatureData)
+		local opcode = IEex_ReadDword(effectData + 0xC)
+		if opcode ~= 139 and opcode ~= 283 then return false end
+		local playerGender = IEex_ReadSignedByte(creatureData + 0x34, 0x0)
+		if playerGender < 1 or playerGender > 2 then
+			playerGender = 1
+		end
+		for key, value in pairs(ex_dynamic_gender_tokens) do
+			IEex_SetToken(key, IEex_FetchString(value[playerGender]))
+		end
+	end)
 end
 
 function MERECACT(actionData, creatureData)

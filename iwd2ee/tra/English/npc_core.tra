@@ -267,7 +267,7 @@ Special:
 Weight: 0 lb.~
 @4838   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +2 weapons for the purposes of overcoming damage reduction.
 
-STATISTICS: 
+STATISTICS:
 
 Damage: 1d6 + 2
 Attack Bonus: +2
@@ -393,20 +393,6 @@ Damage Type: Slashing
 Special:
  Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
  Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 8d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4846   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
-
-STATISTICS:
-
-Damage: 5d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 10d6 + 1.5x Strength bonus damage
 Weight: 0 lb.
 Required Feat: Simple Weapon, Touch Attack
 Type: One-handed~
@@ -675,7 +661,20 @@ Special:
 Weight: 0 lb.
 Feat Requirement: Simple Weapon, Touch Attack
 Type: One-handed~
+@4870   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
 
+STATISTICS:
+
+Damage: 5d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 10d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
 
 //TRA num range @5000 to @5299
 

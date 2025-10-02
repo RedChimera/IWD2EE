@@ -1755,3 +1755,228 @@ Weight: 0 lb.~
 @56032=~Armor Bonus:~
 @56033=~Shield Bonus:~
 @56034=~Generic Armor Bonus:~
+@12917    = ~Wizard Robe of Force Resistance~
+@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance.
+
+STATISTICS:
+
+Resistance:  20/- Magic Damage Resistance
+All magic damage dealt by the character is increased by 20%
+Weight:  3 lb.~
+@12919    = ~Inconsequence +3~
+@12920    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Good: +1d6 damage against evil creatures. Counts as a good-aligned weapon.
+  Evil: +1d6 damage against good creatures. Counts as an evil-aligned weapon.
+  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
+Weight: 4 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12921    = ~Inconsequence +5~
+@12922    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Good: +2d6 damage against evil creatures. Counts as a good-aligned weapon.
+  Evil: +2d6 damage against good creatures. Counts as an evil-aligned weapon.
+  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
+Weight: 4 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12923    = ~Foolsmiter +2~
+@12924    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+
+Damage:  1d8 + 2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Foolsmiting: If the wielder has a higher Intelligence bonus than the target, the hammer deals extra damage to the target equal to the difference in Intelligence bonus between the wielder and the target. If the wielder has a lower Intelligence bonus than the target, they take the damage instead.
+Weight: 15 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12925    = ~Foolsmiter +5~
+@12926    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Foolsmiting: If the wielder has higher Intelligence than the target, the hammer deals extra damage to the target equal to the difference in Intelligence between the wielder and the target. If the wielder has lower Intelligence than the target, they take the damage instead.
+Weight: 15 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12927    = ~Ring of Pain Amplification~
+@12928    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+
+STATISTICS:
+
+Vulnerability: -5 Slashing Resistance
+Vulnerability: -5 Piercing Resistance
+Vulnerability: -5 Crushing Resistance
+Regeneration: User regenerates 1 hit point per second
+Special: Can only be removed by a Remove Curse spell~
+@12929    = ~Ring of Torture~
+@12930    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+
+STATISTICS:
+
+Vulnerability: -10 Slashing Resistance
+Vulnerability: -10 Piercing Resistance
+Vulnerability: -10 Crushing Resistance
+Regeneration: User regenerates 3 hit points per second
+Special: Can only be removed by a Remove Curse spell~
+@4838   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +2 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 + 2
+Attack Bonus: +2
+Enchantment: +2
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4839   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +3 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 + 3
+Attack Bonus: +3
+Enchantment: +3
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4840   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +4 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 + 4
+Attack Bonus: +4
+Enchantment: +4
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4842   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 2d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 4d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4843   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 3d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 6d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4846   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 4d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 8d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4847   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 6d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 12d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4848   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 7d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 14d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 1d6 +3
+Attack Bonus: +3
+Enchantment: +3
+Damage Type: Slashing
+Special:
+ Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
+ Frost: +1d6 cold damage
+Weight: 0 lb.
+Feat Requirement: Simple Weapon, Touch Attack
+Type: One-handed~
+@4870   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+
+STATISTICS:
+
+Damage: 5d6 + 5
+Attack Bonus: +5
+Enchantment: +5
+Damage Type: Slashing
+Special:
+ Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
+ Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 10d6 + 1.5x Strength bonus damage
+Weight: 0 lb.
+Required Feat: Simple Weapon, Touch Attack
+Type: One-handed~
+@55495=~Advanced Slots: ~
