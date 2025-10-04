@@ -817,6 +817,7 @@ Résistance : 20/- à la résistance aux dégâts magiques
 Tous les dégâts magiques infligés par le personnage augmentent de 20%
 Poids : 1,5 lb (0,68 kg)~
 
+
 @38359	= ~Bagou
 (Enchantement)
 Niveau : Bar 3
@@ -1526,7 +1527,7 @@ Avantage : Lorsque vous attaquez avec Attaque étourdissante, cela oblige un enne
 @20011=~<LACERE>~
 @41651=~L'arme naturelle de Vrek est devenue plus puissante.~
 @41652=~L'arme naturelle de Xhaan est devenue plus puissante.~
-@4807 = ~Vrek préfère utiliser ses griffes déchiquetées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manipuler. Les griffes de Vrek frappent comme des armes +1 afin de surmonter la réduction de dégâts.
+@4807 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +1 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
 
@@ -1540,7 +1541,7 @@ Spécial :
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
 Type : à une main~
-@4809 = ~Vrek préfère utiliser ses griffes déchiquetées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manipuler. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
+@4809 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
 
@@ -1554,7 +1555,7 @@ Spécial :
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
 Type : à une main~
-@4819 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +2 pour la réduction des dégâts.
+@4819 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +2 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
 
@@ -1563,12 +1564,12 @@ Bonus d’attaque: +2
 Enchantement: +2
 Type de dégâts: Tranchants
 Spécial:
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
 Compétence : arme courante, attaque de contact
 Type : à une main~
-@4821 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 pour la réduction des dégâts.
+@4821 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
 
@@ -1577,7 +1578,7 @@ Bonus d’attaque: +5
 Enchantement: +5
 Type de dégâts: Tranchants
 Spécial:
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1591,7 +1592,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde).
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1605,7 +1606,7 @@ Bonus d'attaque : +3
 Enchantement : +3
 Type de dégâts : Tranchants
 Spécial :
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1619,7 +1620,7 @@ Bonus d'attaque : +4
 Enchantement : +4
 Type de dégâts : Tranchants
 Spécial :
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1633,7 +1634,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme aligné sur le mal et aligné sur la loi pour la réduction des dégâts
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +2d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1647,7 +1648,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +3d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1661,7 +1662,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +4d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1675,7 +1676,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +5d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1689,7 +1690,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +6d6 dégâts de froid
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1703,7 +1704,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1717,7 +1718,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1731,7 +1732,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1745,7 +1746,7 @@ Bonus d'attaque : +5
 Enchantement : +5
 Type de dégâts : Tranchants
 Spécial :
- Compte comme étant d'alignement mauvais et loyal aux fins de surmonter la réduction de dégâts
+ Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Compétence : arme courante, attaque de contact
@@ -1825,228 +1826,232 @@ Poids : 0 lb.~
 
 //Strings to translate for v3.3.4:
 
-@12917    = ~Wizard Robe of Force Resistance~
-@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance.
+@12917    = ~Robe de mage de Résistance à la Force~
+@12918 = ~De toutes les robes de résistance, la Robe de mage de Résistance à la Force est l’une des plus rares. Elles sont rares non pas parce qu’elles sont inutiles, mais parce qu’elles sont beaucoup plus difficiles à créer que les autres robes de résistance.
 
-STATISTICS:
+PARAMÈTRES:
 
-Resistance:  20/- Magic Damage Resistance
-All magic damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@12919    = ~Inconsequence +3~
-@12920    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+Résistance : 20/- Résistance aux Dégâts Magiques
+Tous les dégâts magiques infligés par le personnage augmentent de 20%
+Poids : 1,5 lb (0,68 kg)~
+@12919 = ~Inconséquence +3~
+@12920 = ~Ce marteau fut créé par Phellep, un pseudo-prophète vivant en marge de la société. Pour lui, les actions des hommes en tant qu'individus n'avaient pas d'influence sur le sort de l'humanité. Il rejetait donc tout concept de bien et de mal et préférait ne pas prendre part aux événements politiques et sociaux. Ce marteau, dont il ne se séparait jamais, lui servait à abattre les portes des églises, qu'il appelait les "antres des imbéciles et des idiots".
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  1d8 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Good: +1d6 damage against evil creatures. Counts as a good-aligned weapon.
-  Evil: +1d6 damage against good creatures. Counts as an evil-aligned weapon.
-  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12921    = ~Inconsequence +5~
-@12922    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+Dégâts : 1d8 + 3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Contondants
+Spécial :
+ Bien : +1d6 dégâts contre les créatures mauvaises. Compte comme une arme d'alignement bon.
+ Mal : +1d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
+ Protection magique : Immunité aux sorts Châtiment divin, Ténèbres infernales, Parole divine et Blasphème.
+Poids : 1,81 kg (4 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@12921    = ~Inconséquence +5~
+@12922 = ~Ce marteau fut créé par Phellep, un pseudo-prophète vivant en marge de la société. Pour lui, les actions des hommes en tant qu'individus n'avaient pas d'influence sur le sort de l'humanité. Il rejetait donc tout concept de bien et de mal et préférait ne pas prendre part aux événements politiques et sociaux. Ce marteau, dont il ne se séparait jamais, lui servait à abattre les portes des églises, qu'il appelait les "antres des imbéciles et des idiots".
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Good: +2d6 damage against evil creatures. Counts as a good-aligned weapon.
-  Evil: +2d6 damage against good creatures. Counts as an evil-aligned weapon.
-  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12923    = ~Foolsmiter +2~
-@12924    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+Dégâts : 1d8 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Contondants
+Spécial :
+ Bien : +2d6 dégâts contre les créatures mauvaises. Compte comme une arme d'alignement bon.
+ Mal : +2d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
+ Protection magique : Immunité aux sorts Châtiment divin, Ténèbres infernales, Parole divine et Blasphème.
+Poids : 1,81 kg (4 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@12923 = ~Châtiment des Fous +2~
+@12924 = ~Le Châtiment des Fous possède une énorme tête en pierre en forme de bloc rectangulaire. De légères traces de sang et de chair sont visibles sur toutes les faces de la tête du marteau. Le manche est fait d'un bois épais qui semble trop fragile pour supporter le poids de la tête du marteau. Le Châtiment des Fous possède un enchantement unique : il frappe plus fort contre les ennemis plus stupides que son porteur. Cependant, l'enchantement a un autre revers : si le porteur est plus stupide que sa cible, il subit lui aussi des dégâts.
 
-Damage:  1d8 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Foolsmiting: If the wielder has a higher Intelligence bonus than the target, the hammer deals extra damage to the target equal to the difference in Intelligence bonus between the wielder and the target. If the wielder has a lower Intelligence bonus than the target, they take the damage instead.
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12925    = ~Foolsmiter +5~
-@12926    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+PARAMÈTRES :
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Foolsmiting: If the wielder has higher Intelligence than the target, the hammer deals extra damage to the target equal to the difference in Intelligence between the wielder and the target. If the wielder has lower Intelligence than the target, they take the damage instead.
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12927    = ~Ring of Pain Amplification~
-@12928    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+Dégâts : 1d8 + 2
+Bonus d'attaque : +2
+Enchantement : +2
+Type de dégâts : Contondants
+Spécial :
+ Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
+Poids : 6,8 kg (15 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@12925    = ~Châtiment des Fous +5~
+@12926    = ~Le Châtiment des Fous possède une énorme tête en pierre en forme de bloc rectangulaire. De légères traces de sang et de chair sont visibles sur toutes les faces de la tête du marteau. Le manche est fait d'un bois épais qui semble trop fragile pour supporter le poids de la tête du marteau. Le Châtiment des Fous possède un enchantement unique : il frappe plus fort contre les ennemis plus stupides que son porteur. Cependant, l'enchantement a un autre revers : si le porteur est plus stupide que sa cible, il subit lui aussi des dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Vulnerability: -5 Slashing Resistance
-Vulnerability: -5 Piercing Resistance
-Vulnerability: -5 Crushing Resistance
-Regeneration: User regenerates 1 hit point per second
-Special: Can only be removed by a Remove Curse spell~
-@12929    = ~Ring of Torture~
-@12930    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+Dégâts : 1d8 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Contondants
+Spécial :
+ Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
+Poids : 6,8 kg (15 lb)
+Compétence : Arme de guerre, marteau
+Type d’arme : À une main~
+@12927 = ~Anneau d'Amplification de la Douleur~
+@12928 = ~Cet anneau maudit se fond avec le doigt auquel il est passé et seul le sort Délivrance des Malédictions peut l'en faire tomber s'il est utilisé sur son porteur, faute de quoi celui-ci subit des dommages supplémentaires à chaque attaque tant que l'anneau est actif. On sait que les Lovitariens créent ces objets et les distribuent dans tous les royaumes pour leur amusement personnel.
 
-STATISTICS:
+PARAMÈTRES :
 
-Vulnerability: -10 Slashing Resistance
-Vulnerability: -10 Piercing Resistance
-Vulnerability: -10 Crushing Resistance
-Regeneration: User regenerates 3 hit points per second
-Special: Can only be removed by a Remove Curse spell~
-@4838   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +2 weapons for the purposes of overcoming damage reduction.
+Vulnérabilité : -5 Résistance aux Dégâts Tranchants
+Vulnérabilité : -5 Résistance aux Dégâts Perforants
+Vulnérabilité : -5 Résistance aux Dégâts Contondants
+Régénération : L'utilisateur regagne 1 point de vie par seconde
+Spécial : Ne peut être retiré que par un sort de Dissipation de la Malédiction~
+@12929 = ~Anneau de Torture~
+@12930    = ~Cet anneau maudit se fond avec le doigt auquel il est passé et seul le sort Délivrance des Malédictions peut l'en faire tomber s'il est utilisé sur son porteur, faute de quoi celui-ci subit des dommages supplémentaires à chaque attaque tant que l'anneau est actif. On sait que les Lovitariens créent ces objets et les distribuent dans tous les royaumes pour leur amusement personnel.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 1d6 + 2
-Attack Bonus: +2
-Enchantment: +2
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4839   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +3 weapons for the purposes of overcoming damage reduction.
+Vulnérabilité : -10 Résistance aux Dégâts Tranchants
+Vulnérabilité : -10 Résistance aux Dégâts Perforants
+Vulnérabilité : -10 Résistance aux Dégâts Contondants
+Régénération : L'utilisateur regagne 3 point de vie par seconde
+Spécial : Ne peut être retiré que par un sort de Dissipation de la Malédiction~
+@4838 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +2 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 1d6 + 3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4840   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +4 weapons for the purposes of overcoming damage reduction.
+Dégâts : 1d6 + 2
+Bonus d'attaque : +2
+Enchantement : +2
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4839 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +3 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 1d6 + 4
-Attack Bonus: +4
-Enchantment: +4
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4842   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 1d6 + 3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4840 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +4 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 2d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 4d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4843   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 1d6 + 4
+Bonus d'attaque : +4
+Enchantement : +4
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4842 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 3d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 6d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4846   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 2d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 4d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4843 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 4d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 8d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4847   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 3d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 6d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4846 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 6d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 12d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4848   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 4d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 8d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4847 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 7d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 14d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+Dégâts : 6d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 12d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4848 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage: 1d6 +3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4870   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Dégâts : 7d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 14d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4849 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
-STATISTICS:
+PARAMÈTRES:
 
-Damage: 5d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 10d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@55495=~Advanced Slots: ~
+Dégâts: 1d6 +3
+Bonus d’attaque: +3
+Enchantement: +3
+Type de dégâts: Tranchants
+Spécial:
+ Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
+ Givre: +1d6 dégâts de froid
+Poids: 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@4870 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
+
+PARAMÈTRES :
+
+Dégâts : 5d6 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Tranchants
+Spécial :
+ Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
+ Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 10d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
+Poids : 0 lb.
+Compétence : arme courante, attaque de contact
+Type : à une main~
+@55495=~Emplacements de Sorts Supérieurs : ~
