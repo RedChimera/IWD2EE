@@ -1798,6 +1798,8 @@ Type:  One-handed~
 @12923    = ~Foolsmiter +2~
 @12924    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
 
+STATISTICS:
+
 Damage:  1d8 + 2
 Attack Bonus:  +2
 Enchantment:  +2
@@ -1809,6 +1811,8 @@ Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
 @12925    = ~Foolsmiter +5~
 @12926    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+
+STATISTICS:
 
 Damage:  1d8 + 5
 Attack Bonus:  +5

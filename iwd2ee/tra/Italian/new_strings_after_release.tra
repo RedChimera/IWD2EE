@@ -1300,7 +1300,7 @@ Vantaggi:
 * 1° livello: La storia di Curran Cuoresaldo. Quando viene suonata, tutti gli alleati del bardo ottengono +1 Bonus d'Attacco, +1 danno e immunita' alla paura e alla disperazione. Bonus d'Attacco e danno aumentano di 1 ai livelli 10, 25 e 40.
 * 3° livello: La Canzone di Kaudies. Quando viene suonata, gli alleati del bardo sono immuni agli incantesimi e alle abilita' dannosi basati sul suono, tra cui Comando, Silenzio, Comando Superiore, Parola Sacra, Blasfemia, Parola del Potere: Dormire, Esplosione Sonora, Grido, Parola del Potere: Silenzio, Parola del Potere: Stordire, Parola del potere: Accecare, Grido Potente, Lamento della banshee, Parola del potere: uccisione, Canto dell'arpia e gli effetti riservati ai nemici di Canto, Preghiera e Recitazione.
 * 5° livello: Melodia di Tymora. Quando viene suonata, la Melodia di Tymora da' agli alleati del bardo +1 fortuna, +1 tiri salvezza e +2 alle loro Conoscenze (arcane), Alchimia e Abilita' da Ladro. Ai livelli 15 e 35, questa canzone garantisce un ulteriore +1 alla fortuna e ai tiri salvezza e un +2 alle prove di abilita'.
-* 9° livello: Lo Struggimento della Sirena. Quando viene suonata, ogni creatura che ascolta la canzone subisce una penalita' cumulativa di -1 ai tiri salvezza sulla Volonta' per 10 round e deve effettuare un tiro salvezza sulla Volonta' o verra' intrappolata, incapace di agire per un round o finché non subisce danni. La CD del tiro salvezza sulla Volonta' e' pari al livello del bardo. Quindi, il canto di un bardo di livello 15 ha una CD di 15.
+* 9° livello: Lo Struggimento della Sirena. Quando viene suonata, ogni creatura che ascolta la canzone subisce una penalita' cumulativa di -1 ai tiri salvezza sulla Volonta' per 10 round e deve effettuare un tiro salvezza sulla Volonta' o verra' intrappolata, incapace di agire per un round o finche non subisce danni. La CD del tiro salvezza sulla Volonta' e' pari al livello del bardo. Quindi, il canto di un bardo di livello 15 ha una CD di 15.
 * 13° livello: Il Canto di Guerra di Sith. Quando viene suonata, gli alleati del bardo ottengono un bonus di armatura generico +2, una resistenza al danno fisico di 3/- e rigenerano 3 punti di danno per round in combattimento. Ai livelli 28 e 45, questa canzone garantisce un ulteriore +2 alla CA, 3/- resistenza ai danni fisici, 3 punti ferita curati per round.
 * 20° livello: La Ballata dei Tre Eroi. Gli alleati del bardo ottengono +5 resistenza agli incantesimi, 5/- resistenza a tutte le forme di danno magico e gli effetti del Racconto di Curran Cuoresaldo, della Melodia di Tymora e del Canto di Guerra di Sith. Ai livelli 30 e 50, questa canzone garantisce +5 resistenza agli incantesimi aggiuntiva e resistenza 5/- ai danni magici.
 
@@ -1313,7 +1313,7 @@ Svantaggi:
 * I bardi accedono agli incantesimi piu' lentamente di un mago o di un chierico.~
 @571    = ~MAGO:
 
-Il mago cerca di diventare un maestro delle energie magiche, plasmandole e lanciandole come incantesimi. Per farlo, studia lingue strane e fatti oscuri e dedica molto del suo tempo alla ricerca magica. Un mago deve affidarsi alla conoscenza e all'arguzia per sopravvivere. Raramente si vedono maghi avventurarsi senza un seguito di combattenti e uomini d'arme. Poiché esistono diversi tipi (o scuole) di magia, esistono diversi tipi di maghi. Tuttavia, il tipo piu' comune studia tutti i tipi di magia e impara un'ampia varieta' di incantesimi. La sua ampia gamma lo rende adatto alle esigenze dell'avventura.
+Il mago cerca di diventare un maestro delle energie magiche, plasmandole e lanciandole come incantesimi. Per farlo, studia lingue strane e fatti oscuri e dedica molto del suo tempo alla ricerca magica. Un mago deve affidarsi alla conoscenza e all'arguzia per sopravvivere. Raramente si vedono maghi avventurarsi senza un seguito di combattenti e uomini d'arme. Poiche esistono diversi tipi (o scuole) di magia, esistono diversi tipi di maghi. Tuttavia, il tipo piu' comune studia tutti i tipi di magia e impara un'ampia varieta' di incantesimi. La sua ampia gamma lo rende adatto alle esigenze dell'avventura.
 
 Nota: Per lanciare un incantesimo, un mago deve possedere un'Intelligenza pari o superiore al livello dell'incantesimo piu' 10. L'Intelligenza e' la statistica di lancio di un mago.  Influisce sul livello massimo di incantesimo, sulle prove di tiro salvezza e sul numero di incantesimi bonus.
 
@@ -1329,606 +1329,606 @@ Svantaggi:
 
 //Strings to be translated:
 
-@222    = ~Expertise
+@222    = ~Competenza
 
-When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
-@525    = ~BARBARIAN:
+Quando usi questa abilita, puoi scegliere di ottenere un bonus alla CA fino a +5 e una penalita all'attacco dello stesso valore. Il bonus che scegli non puo superare il tuo bonus di attacco base e si applica solo quando attacchi con un'arma da mischia.~
+@525    = ~BARBARO:
 
-From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
+Dalle gelide distese del nord e dalle giungle infernali del sud provengono guerrieri coraggiosi, persino temerari. Sebbene non sia disciplinato o abile come un combattente normale, il barbaro puo lanciarsi volontariamente in una furia berserker, diventando un avversario piu resistente e forte.
 
-Hit points per level: 1-12
+Punti ferita per livello: 1-12
 
-Advantages:
-* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
-* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
-* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
-* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
-* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
-* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 AC penalty.
-* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
-* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
-* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
-* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
+Vantaggi:
+* Competente con tutte le armi semplici e marziali, le armature leggere, le armature medie e gli scudi.
+* Furia barbarica: puo infuriarsi una volta al giorno ogni 4 livelli (inizia al 1° livello con un uso). La furia gli conferisce +4 alla Forza e alla Costituzione (che si sommano ad altri bonus alla Forza e alla Costituzione), oltre a una penalita di -2 alla CA, +2 ai tiri salvezza di Volonta e immunita a paura, stordimento, sonno, incantesimo, dominazione, confusione, incoscienza, paralisi, debolezza mentale e disperazione. La rabbia dura un numero di round pari a 3 piu il bonus di Costituzione (recentemente migliorato) del barbaro. Dopo aver dato sfogo alla rabbia, il barbaro sara affaticato per tre round, con una penalita di -2 alla Forza e alla Destrezza.
+* Movimento veloce: i barbari possono muoversi 10 piedi piu velocemente di un personaggio standard, a condizione che non siano appesantiti o indossino armature pesanti.
+* 2° livello: Riduzione del danno. Il barbaro ottiene 1/- punto di resistenza ai danni da taglio, da perforazione e da contusione. Ottiene 1/- punto di resistenza aggiuntivo ai livelli 5, 8, 11 e ogni 3 livelli successivi. Se il barbaro indossa un'armatura media, la riduzione del danno concessa da questa caratteristica e raddoppiata.
+* 2° livello: Schivata prodigiosa. I barbari mantengono il loro bonus di Destrezza alla Classe Armatura se vengono attaccati da nemici invisibili.
+* 5° livello: Schivata prodigiosa migliorata. I barbari non possono essere attaccati di sorpresa dai ladri a meno che l'attaccante non abbia almeno quattro livelli in piu rispetto al barbaro.
+* 15° livello: Furia Maggiore. Tutte le furie del barbaro diventano furie maggiori, che aumentano i bonus di Forza e Costituzione a +6 e il bonus ai tiri salvezza a +3. Continua comunque a ricevere la penalita di -2 alla Classe Armatura.
+* 20° livello: Rabbia instancabile. Il barbaro non e piu affaticato dopo una rabbia.
+* 21° livello: Rabbia potente. L'abilita rabbia del barbaro ora garantisce +8 alla Forza e alla Costituzione e +4 ai tiri salvezza di Volonta.
+* 25° livello: La rabbia barbarica ora garantisce +10 alla Forza e alla Costituzione e +5 ai tiri salvezza di Volonta.
+* 29° livello: la rabbia del barbaro ora garantisce +12 alla Forza e alla Costituzione e +6 ai tiri salvezza di Volonta.
 
-Disadvantages:
-* Barbarians gain feats at a slower rate than fighters.
-* Barbarians do not start with proficiency in heavy armor.~
-@977    = ~Barbarian Rage
+Svantaggi:
+* I barbari ottengono talenti a un ritmo piu lento rispetto ai combattenti.
+* I barbari non iniziano con la competenza nell'uso delle armature pesanti.~
+@977    = ~Rabbia barbarica
 
-By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
-@978    = ~Greater Barbarian Rage
+Entrando in uno stato di rabbia, il barbaro ottiene +4 alla Forza e alla Costituzione (che si sommano ad altri bonus alla Forza e alla Costituzione), oltre a una penalita di -2 alla CA, +2 ai tiri salvezza sulla Volonta e immunita a paura, stordimento, sonno, incantesimo, dominazione, confusione, incoscienza, paralisi, debolezza mentale e disperazione. La rabbia dura 3 round + un numero di round pari al bonus di Costituzione (appena migliorato) del barbaro. Dopo aver dato sfogo alla sua rabbia, il barbaro sara affaticato per tre round, subendo una penalita di -2 alla Forza e alla Destrezza.~
+@978    = ~Rabbia barbarica maggiore
 
-By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+Entrando in uno stato di rabbia, il barbaro ottiene +6 alla Forza e alla Costituzione (che si sommano ad altri bonus alla Forza e alla Costituzione), oltre a una penalita di -2 alla CA, +3 ai tiri salvezza di Volonta e immunita a paura, stordimento, sonno, incantesimo, dominazione, confusione, incoscienza, paralisi, debolezza mentale e disperazione. La rabbia dura 3 round + un numero di round pari al bonus di Costituzione (recentemente migliorato) del barbaro. Dopo aver dato sfogo alla sua rabbia, il barbaro sara affaticato per tre round, subendo una penalita di -2 alla Forza e alla Destrezza.
 
-The bonuses increase at higher levels:
+I bonus aumentano ai livelli piu alti:
 
-21st level: +8 to Strength and Constitution and +4 to Will saves.
-25th level: +10 to Strength and Constitution and +5 to Will saves.
-29th level: +12 to Strength and Constitution and +6 to Will saves.~
-@4008 = ~This tall rock could potentially be knocked down, either with brute force or a Knock spell.~
-@55350=~Damage resisted from weapon of less than +<EXDRENLV> enchantment~
-@565    = ~MONK OF THE DARK MOON:
+21° livello: +8 alla Forza e alla Costituzione e +4 ai tiri salvezza sulla Volonta.
+25° livello: +10 alla Forza e alla Costituzione e +5 ai tiri salvezza sulla Volonta.
+29° livello: +12 alla Forza e alla Costituzione e +6 ai tiri salvezza sulla Volonta.~
+@4008 = ~Questa alta roccia potrebbe essere abbattuta, sia con la forza bruta che con un incantesimo Scassinare.~
+@55350=~Danni resistiti da armi con incantesimo inferiore a +<EXDRENLV>~
+@565    = ~MONACO DELLA LUNA OSCURA:
 
-Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
+I membri dell'Ordine della Luna Oscura venerano Shar, dea dell'oscurita e della perdita. Usano il loro addestramento monastico come percorso verso il potere personale e spirituale.
 
-Advantages:
-* 2nd level: The monk gains one use of Darkness per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Darkness. The DC is equal to 15 + Wisdom bonus + half the character's monk level. The monk also adds half their monk level to the DC of any other Darkness spell or ability they cast. The monk can see perfectly even in magical darkness.
-* 10th level: The monk gains +1 damage against any enemy that is blinded or has their vision impaired by a Darkness effect. For every 8 monk levels after level 10, the monk gains another +1 damage against enemies in these situations.~
-@984    = ~Darkness
+Vantaggi:
+* 2° livello: il monaco ottiene un uso di Oscurita al giorno. Qualsiasi livello che darebbe al monaco un uso di Integrita Fisica gli conferisce invece un altro uso di Oscurita. La CD e pari a 15 + bonus di Saggezza + meta del livello monaco del personaggio. Il monaco aggiunge anche meta del proprio livello monaco alla CD di qualsiasi altro incantesimo o abilita di Oscurita che lancia. Il monaco puo vedere perfettamente anche nell'oscurita magica.
+* 10° livello: il monaco ottiene +1 ai danni contro qualsiasi nemico accecato o con la vista compromessa da un effetto Oscurita. Per ogni 8 livelli di monaco dopo il 10°, il monaco ottiene un altro +1 ai danni contro i nemici in queste situazioni.~
+@984    = ~Oscurita
 
-This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.
+Questa abilita crea un'oscurita magica nell'area d'effetto. Le creature prive di visione nel buio devono superare un tiro salvezza di Costituzione o saranno effettivamente accecate. Le creature con visione nel buio non vengono accecate, ma anche loro hanno una capacita limitata di vedere attraverso l'oscurita magica, subendo una penalita di -4 agli attacchi in caso di fallimento del tiro salvezza. Le creature con una visione nel buio superiore a 120 piedi (ad esempio drow, nani grigi o gnomi profondi) subiscono solo una penalita di -2 agli attacchi. I diavoli e le creature immuni alla cecita non sono influenzati.
 
-When used by a Monk of the Dark Moon, Darkness has a DC of 15 + Wisdom bonus + half the character's monk level. Any other Darkness spell or ability used by a Monk of the Dark Moon also gains a bonus to DC equal to half the character's monk level.~
+Quando viene usato da un Monaco della Luna Oscura, Oscurita ha una CD di 15 + bonus di Saggezza + meta del livello di monaco del personaggio. Qualsiasi altro incantesimo o abilita di Oscurita usato da un Monaco della Luna Oscura ottiene anche un bonus alla CD pari alla meta del livello di monaco del personaggio.~
 @585    = ~
 
-Domain Spells:
-1: Identify, Identify Creature
-2: Arcane Sight, Clairvoyance
-3: Legend Lore, Moment of Prescience
-4: True Seeing, Shout
-5: Power Word: Heal, Power Word: Silence
-6: Power Word: Stun, Omnipresence
-7: Great Shout, Symbol of Hopelessness
-8: Power Word: Kill, Symbol of Death
-9: Executioner's Eyes, Mass Omnivision~
-@55494=~Spell failed: This spell cannot be cast while time is stopped.~
-@38959     = ~Time Stop
-(Transmutation)
-Level: Sor/Wiz 9
-Range: Caster
-Duration: 3 rounds
-Casting Time: 9
-Area of Effect: Entire area
-Saving Throw: None
+Incantesimi di dominio:
+1: Identificare, Identificare creatura
+2: Visione arcana, Chiaroveggenza
+3: Conoscenza delle leggende, Momento di prescienza
+4: Visione del vero, Grido
+5: Parola di potere: Guarire, Parola di potere: Silenzio
+6: Parola di potere: Stordire, Onnipresenza
+7: Grido potente, Simbolo della disperazione
+8: Parola di potere: uccidere, Simbolo di morte
+9: Occhi del boia, Omnivisione di massa~
+@55494=~Incantesimo fallito: questo incantesimo non puo essere lanciato mentre il tempo e fermo.~
+@38959     = ~Arresto del tempo
+(Trasmutazione)
+Livello: Str/Mag 9
+Raggio d'azione: Incantatore
+Durata: 3 round
+Tempo di lancio: 9
+Area d'effetto: Intera area
+Tiro salvezza: Nessuno
 
-This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time. Time Stop cannot be cast while time is already stopped, and its duration is unaffected by items or abilities.~
-@729    = ~STUNNING ATTACK:
+Questo incantesimo ferma il tempo per tutti e tutto tranne che per il lanciatore. Tutte le altre creature non possono muoversi ne agire, mentre il lanciatore puo agire per tre round di tempo apparente. Fermare il tempo non puo essere lanciato mentre il tempo e gia fermo e la sua durata non e influenzata da oggetti o abilita.~
+@729    = ~ATTACCO STORDENTE:
 
-You know how to strike opponents in vulnerable areas.
+Sai come colpire gli avversari nei punti vulnerabili.
 
-Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
+Prerequisiti: Destrezza 13+, Saggezza 13+, bonus di attacco base +8 o superiore.
 
-Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your monk level if any + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
-@20011=~Rended~
-@41651=~Vrek's natural weapon has become stronger.~
-@41652=~Xhaan's natural weapon has become stronger.~
-@4807   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
+Vantaggio:  Quando attacchi con Attacco Stordente, costringi un nemico danneggiato dal tuo attacco a mani nude a effettuare un tiro salvezza di Costituzione (CD 10 + meta del tuo livello di monaco, se ne hai uno + modificatore di Saggezza), oltre a infliggere danni normalmente.  Se il difensore fallisce il tiro salvezza, rimane stordito per 1 round.  Un personaggio stordito non puo agire e puo essere colpito automaticamente. Puoi tentare un attacco stordente una volta al giorno per ogni quattro livelli raggiunti.~
+@20011=~Sminuzzato~
+@41651=~L'arma naturale di Vrek e diventata piu potente.~
+@41652=~L'arma naturale di Xhaan e diventata piu potente.~
+@4807   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi troppo ingombranti da impugnare. Gli artigli di Vrek colpiscono come armi +1 allo scopo di superare la riduzione del danno.
 
-STATISTICS: 
+STATISTICHE: 
 
-Damage: 1d6 + 1
-Attack Bonus: +1
-Enchantment: +1
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4809   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 1d6 + 1
+Bonus di attacco: +1
+Incantesimo: +1
+Tipo di danno: Taglio
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi quando brandisce questi artigli.
+Lacerazione: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo lacera, infliggendo un danno aggiuntivo di 2d6 + 1,5x bonus di Forza.
+Peso: 0 .
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4809   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi troppo ingombranti da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4819   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +2 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 + 5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+Lacerazione: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo lacera, infliggendo un danno aggiuntivo di 2d6 + 1,5x bonus di Forza.
+Peso: 0 .
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4819   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +2 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +2
-Attack Bonus: +2
-Enchantment: +2
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4821   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +2
+Bonus di attacco: +2
+Incantesimo: +2
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +1d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4821   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
  
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4833   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +1d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4833   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Ora che Xhaan e stato promosso a cornugon, i suoi attacchi con gli artigli sono piu potenti.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 5d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+Danno: 5d6 +5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Ferita infernale: infligge 4 punti danno aggiuntivi per round per 10 round (senza possibilita di salvezza).
+Peso: 0 .
+Requisiti per il talento: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4849   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +3 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4850   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +4 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +3
+Bonus di attacco: +3
+Incantesimo: +3
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +1d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4850   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +4 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +4
-Attack Bonus: +4
-Enchantment: +4
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4852   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +4
+Bonus di attacco: +4
+Incantesimo: +4
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +1d6 danni da freddo.
+Peso: 0 .
+Requisiti per il talento: Arma semplice, Attacco tattile
+Tipo: A una mano
+Requisiti per il talento: Arma semplice, Attacco tattile
+Tipo: A una mano~
+@4852   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +2d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4853   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +2d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4853   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +3d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4856   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +3d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4856   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +4d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4857   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +4d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4857   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +5d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4858   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato malvagio e legale ai fini del superamento della riduzione del danno.
+ Gelo: +5d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4858   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +6d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4866   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+Danno: 1d6 +5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineato al male e allineato al legale ai fini del superamento della riduzione del danno.
+ Gelo: +6d6 danni da freddo.
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano.~
+@4866   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Ora che Xhaan e stato promosso a cornugon, i suoi attacchi con gli artigli sono piu potenti.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 3d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4867   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+Danno: 3d6 +5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineamento maligno e legale ai fini del superamento della riduzione del danno.
+ Ferita infernale: infligge 2 punti di danno aggiuntivi per round per 10 round (senza tiro salvezza).
+Peso: 0 .
+Requisiti per il talento: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4867   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Ora che Xhaan e stato promosso a cornugon, i suoi attacchi con gli artigli sono piu potenti.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 4d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 2 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4868   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+Danno: 4d6 +5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineamento maligno e legale ai fini del superamento della riduzione del danno.
+ Ferita infernale: infligge 2 punti di danno aggiuntivi per round per 10 round (senza possibilita di salvezza).
+Peso: 0 .
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4868   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Ora che Xhaan e stato promosso a cornugon, i suoi attacchi con gli artigli sono piu potenti.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 6d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4869   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
+Danno: 6d6 +5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineamento maligno e legale ai fini del superamento della riduzione del danno.
+ Ferita infernale: infligge 4 punti danno aggiuntivi per round per 10 round (senza tiro salvezza).
+Peso: 0 .
+Requisiti per il talento: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4869   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma utilizza gli artigli come arma principale. Ora che Xhaan e stato promosso a cornugon, i suoi attacchi con gli artigli sono piu potenti.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 7d6 +5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@12483    = ~Hide Armor of Recklessness +3~
-@12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+Danno: 7d6 +5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Taglio
+Speciale:
+ Conta come allineamento maligno e legale ai fini del superamento della riduzione del danno.
+ Ferita infernale: infligge 4 punti danno aggiuntivi per round per 10 round (senza possibilita di salvezza).
+Peso: 0 .
+Requisiti per il talento: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@12483    = ~Armatura di Pelle della Temerarieta +3~
+@12484    = ~L'armatura di pelle e composta da diversi strati di pelle. Sebbene sia rigida e limiti i movimenti, e relativamente semplice da realizzare e offre una buona protezione dal freddo. e comunemente indossata dai guerrieri e dai cacciatori delle tribu barbariche del nord.
 
-STATISTICS:
+STATISTICHE:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Damage Bonus: +4
-  Generic Armor Penalty: -4
-Weight: 10 lb.~
-@35156     = ~Lesser Entropy Shield~
-@36156     = ~Lesser Entropy Shield
-(Abjuration)
-Level: Clr 1
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+Armatura media
+Bonus armatura: +7
+Bonus massimo Destrezza:  +4
+Penalita al tiro armatura:  -3
+Fallimento incantesimo arcano:  20%
+Speciale:
+  Bonus danno: +4
+  Penalita armatura generica: -4
+Peso: 10 ~
+@35156     = ~Scudo Entropico Minore~
+@36156     = ~Scudo Entropico Minore
+(Abiurazione)
+Livello: Chi 1
+Raggio d'azione: Incantatore
+Durata: 10 round/livello
+Tempo di lancio: 1
+Area d'effetto: Incantatore
+Tiro salvezza: Nessuno
 
-A weaker version of the 6th-level spell Divine Shell, this spell creates a magicial field around the caster that has a 20% chance to deflect missile attacks aimed at the caster. This includes not just ranged weapon attacks, but also certain spells, including Chromatic Orb, Magic Missile, Melf's Acid Arrow, Flame Arrow, Alicorn Lance, Icelance, Lance of Disruption, Mordenkainen's Force Missiles, Vitriolic Sphere, Otiluke's Freezing Sphere, and Sol's Searing Orb.~
-@37867     = ~Prismatic Wall~
-@38867     = ~Prismatic Wall
-(Abjuration)
-Level: Sor/Wiz 8
-Range: 5 feet
-Duration: 10 rounds
-Casting Time: 12
-Area of Effect: 40-foot long, 28-foot thick wall
-Saving Throw: None
+Versione piu debole dell'incantesimo di 6° livello Scudo divino, questo incantesimo crea un campo magico attorno all'incantatore che ha il 20% di probabilita di deviare gli attacchi a distanza diretti contro di lui. Cio include non solo gli attacchi con armi a distanza, ma anche alcuni incantesimi, tra cui Sfera cromatica, Missile magico, Freccia acida di Melf, Freccia di fuoco, Lancia alicorno, Lancia di ghiaccio, Lancia di distruzione, Dardi di forza di Mordenkainen, Sfera al vetriolo, Sfera congelante di Otiluke e Sfera incandescente di Sol.~
+@37867     = ~Muro Prismatico~
+@38867     = ~Muro prismatico
+(Abiurazione)
+Livello: Str/Mago 8
+Raggio d'azione: 1,5 metri
+Durata: 10 round
+Tempo di lancio: 12
+Area d'effetto: muro lungo 12 metri e spesso 8,5 metri
+Tiro salvezza: nessuno
 
-One of the few abjuration spells that is capable of harm, this spell creates a thick, shimmering wall composed of seven layers of different colors. The wall can be passed through, but any creature other than the caster that walks through the wall will suffer a harmful effect for each layer they pass through.
+Uno dei pochi incantesimi di abiurazione in grado di causare danni, questo incantesimo crea un muro spesso e scintillante composto da sette strati di colori diversi. Il muro puo essere attraversato, ma qualsiasi creatura diversa dal lanciatore che lo attraversa subira un effetto dannoso per ogni strato attraversato.
 
-The  effects of the seven colored layers are akin to a Prismatic Spray spell: red (inflicts 10d6 hit points of fire damage, Reflex for half), orange (10d6 hit points of acid damage, Reflex save for half), yellow (10d6  hit points of electrical damage, Reflex for half), green (Fortitude save or die - survivors still take 20 hit points of poison damage), blue (Fortitude or turn to stone), indigo (Will save or go insane), or violet (Will save or be warped to another plane and back again instantaneously with the lasting effects of having 5 levels drained). All saves made against this spell have -8 DC.
+Gli effetti dei sette strati colorati sono simili a quelli dell'incantesimo Spruzzo prismatico: rosso (infligge 10d6 punti ferita di danno da fuoco, Riflessi per meta), arancione (10d6 punti ferita di danno da acido, Riflessi per meta), giallo (10d6  punti ferita di danni da elettricita, Reflex per meta), verde (salvezza di Costituzione o morte - i sopravvissuti subiscono comunque 20 punti ferita di danni da veleno), blu (Constituzione o trasformazione in pietra), indaco (salvezza di Volonta o follia), o viola (salvezza di Volonta o teletrasporto istantaneo in un altro piano e ritorno con effetti permanenti pari a 5 livelli persi). Tutti i tiri salvezza effettuati contro questo incantesimo hanno un DC di -8.
 
-A creature that passes through a layer of the wall cannot be affected by that layer again for 10 rounds. Only one prismatic wall can be active at a time.~
-@56023=~This letter is written on weathered parchment and sealed with wax. The exterior contains the following text, written with a shaky hand: "From Garradun Tanner, to my beloved Raina, care of Captain Mariner, Neverwinter"
+Una creatura che attraversa uno strato del muro non puo essere influenzata nuovamente da quello strato per 10 round. Solo un muro prismatico puo essere attivo alla volta.~
+@56023=~Questa lettera e scritta su pergamena consumata dal tempo e sigillata con ceralacca. All'esterno e riportato il seguente testo, scritto con mano tremante: “Da Garradun Tanner, alla mia amata Raina, presso il Capitano Mariner, Neverwinter”.
 
-You could potentially open the letter and view its contents, though reading someone else's love letter would be very rude.
+Potresti aprire la lettera e leggerne il contenuto, anche se leggere la lettera d'amore di qualcun altro sarebbe molto scortese.
 
-Weight: 0 lb.~
-@56024=~You might want to have a look at this letter I obtained from Garradun Tanner.~
-@56025=~You might want to have a look at this letter I obtained from that shapeshifter.~
-@56026=~Best show it to Denham - it smells of treachery, it does. Denham! Look at this.~
-@56027=~I got this letter from Garradun Tanner. It is very suspicious.~
-@56028=~...here you are. This should do the trick. Thank you for bringing this to our attention. You probably just saved many lives. I sent Ulbrec the original letter, but I wrote a copy of the original text for your reference. Do you need anything else?~
-@56029=~Garradun's Letter (Copy)~
-@56030=~This parchment contains a copy of the text from the spy Garradun's letter. The text is brief and to the point, as follows:
+Peso: 0.~
+@56024=~Forse ti interessera dare un'occhiata a questa lettera che ho ricevuto da Garradun Tanner.~
+@56025=~Forse ti interessera dare un'occhiata a questa lettera che ho ricevuto da quel mutaforma.~
+@56026=~Meglio mostrarla a Denham: c'e puzza di tradimento, davvero. Denham! Guarda qui.~
+@56027=~Ho ricevuto questa lettera da Garradun Tanner. e molto sospetta.~
+@56028=~...ecco qua. Questo dovrebbe bastare. Grazie per avercelo segnalato. Probabilmente hai appena salvato molte vite. Ho inviato la lettera originale a Ulbrec, ma ho scritto una copia del testo originale per tuo riferimento. Hai bisogno di altro?~
+@56029=~Lettera di Garradun (copia)~
+@56030=~Questa pergamena contiene una copia del testo della lettera dello spia Garradun. Il testo e breve e conciso, come segue:
 
-Targos: Three or fewer ships, perhaps a few dozen infantry and archers. Two priests at the temple pavilion, with recruits drawn in from Luskan. The goblin's seizure of the waterways seems to have closed off the passage of further reinforcements. I have heard no mention of planned reinforcements from elsewhere into the city. The diviner in Targos should be taken care of by our friends from Luskan.
+Targos: Tre o meno navi, forse qualche dozzina di fanti e arcieri. Due sacerdoti al padiglione del tempio, con reclute provenienti da Luskan. Il sequestro delle vie navigabili da parte dei goblin sembra aver bloccato il passaggio di ulteriori rinforzi. Non ho sentito parlare di rinforzi in arrivo da altre parti della citta. Il divinatore di Targos dovrebbe essere gestito dai nostri amici di Luskan.
 
-Bremen: The city should fall soon. Targos is unable to move ships across the bay thanks to our scrag allies. According to wounded soldiers from Bremen, they will not be able to hold out. You should be able to pull in forces from the north without worrying about attacks from Bremen.
+Bremen: La citta dovrebbe cadere presto. Targos non e in grado di spostare le navi attraverso la baia grazie ai nostri alleati scrag. Secondo i soldati feriti di Bremen, non saranno in grado di resistere. Dovreste essere in grado di attirare le forze dal nord senza preoccuparvi degli attacchi da Bremen.
 
-Bryn Shander: With our forces in the field and the Shaengarne Ford held, the capital is unable to effectively provide the peripheral towns with supplies. The bugbears' use of hit and run tactics against caravans moving between the Ten-Towns has made it almost impossible for them to reinforce each other. Lonelywood has sent almost all of its able-bodied men south to Bryn Shander instead of sending them to Targos. The same has happened in Easthaven. Both towns should be ripe for taking should we choose to enlarge our grasp of the region. Perhaps three to four hundred men wait in Bryn Shander along with a handful of volunteers from Clan Battlehammer. Most of those are militia, with a few experienced mercenaries among them. We need not worry about Silverymoon and the other communities to the east. Only two volunteers have arrived, and those are already out of the action.
+Bryn Shander: Con le nostre forze sul campo e il guado di Shaengarne presidiato, la capitale non e in grado di rifornire efficacemente le citta periferiche. L'uso da parte dei bugbear di tattiche mordi e fuggi contro le carovane che si spostano tra le Dieci Citta ha reso quasi impossibile per loro rinforzarsi a vicenda. Lonelywood ha inviato quasi tutti i suoi uomini abili a sud, a Bryn Shander, invece che a Targos. Lo stesso e accaduto a Easthaven. Entrambe le citta dovrebbero essere pronte per essere conquistate, se decidessimo di ampliare il nostro controllo sulla regione. Forse tre o quattrocento uomini attendono a Bryn Shander insieme a una manciata di volontari del Clan Battlehammer. La maggior parte di loro sono miliziani, con alcuni mercenari esperti tra loro. Non dobbiamo preoccuparci di Silverymoon e delle altre comunita a est. Sono arrivati solo due volontari, che sono gia fuori combattimento.
 
-Weight: 0 lb.~
-@56031=~Resistance: <EXARDAMR>/- Physical Damage Resistance~
+Peso: 0.~
+@56031=~Resistenza: <EXARDAMR>/- Resistenza ai Danni Fisici~
 //The two strings below must be translated to be indentical to the line in the description of an armor or shield that states its armor or shield bonus, minus the number. The mod runs code that checks the description of armor and shields for a line that includes one of these strings (but doesn't include the "Generic Armor Bonus:" line) and puts the above string right below them.
-@56032=~Armor Bonus:~
-@56033=~Shield Bonus:~
-@56034=~Generic Armor Bonus:~
+@56032=~Bonus Armatura:~
+@56033=~Bonus Scudo:~
+@56034=~Bonus Generico Armatura:~
 
 //Strings to translate for v3.3.4:
 
-@12917    = ~Wizard Robe of Force Resistance~
-@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance.
+@12917    = ~Tunica da Mago della Resistenza~
+@12918    = ~Tra tutti gli abiti resistenti, quelli da mago resistenti alla forza sono tra i piu rari. Non perche non siano utili, ma perche sono molto piu difficili da creare rispetto agli altri.
 
-STATISTICS:
+STATISTICHE:
 
-Resistance:  20/- Magic Damage Resistance
-All magic damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@12919    = ~Inconsequence +3~
-@12920    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+Resistenza:  20/- Resistenza ai danni magici
+Tutti i danni magici inflitti dal personaggio aumentano del 20%
+Peso:  3~
+@12919    = ~Irrilevanza +3~
+@12920    = ~Questo martello e stato realizzato da un sedicente profeta del rifiuto provvidenziale. Il suo nome era Phellep e credeva che le azioni dell'individuo non avessero alcuna importanza per il destino dell'umanita nel suo complesso. Di conseguenza, rifiutava i concetti di bene e male, adottando invece un atteggiamento di indifferenza forzata e di astensione dall'attivita sociale, morale e politica. Il martello che portava con se era usato per battere sulle porte delle chiese, che lui chiamava “i covi degli stolti e degli uomini senza cervello”.
 
-STATISTICS:
+STATISTICHE:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Good: +1d6 damage against evil creatures. Counts as a good-aligned weapon.
-  Evil: +1d6 damage against good creatures. Counts as an evil-aligned weapon.
-  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12921    = ~Inconsequence +5~
-@12922    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
+Danno:  1d8 + 3
+Bonus di attacco:  +3
+Incantesimo:  +3
+Tipo di danno:  Contundente
+Speciale:
+  Buono: +1d6 di danno contro le creature malvagie. Conta come un'arma di allineamento buono.
+  Malvagio: +1d6 danni contro le creature buone. Conta come un'arma di allineamento malvagio.
+  Resistenza agli incantesimi: Immunita agli incantesimi Colpo sacro, Piaga profana, Parola sacra e Blasfemia.
+Peso: 4.
+Requisiti:  Arma marziale, Martello.
+Tipo:  A una mano~
+@12921    = ~Irrilevante +5~
+@12922    = ~Questo martello e stato realizzato da un sedicente profeta del rifiuto provvidenziale. Il suo nome era Phellep e credeva che le azioni dei singoli individui non avessero alcuna influenza sul destino dell'umanita nel suo complesso. Di conseguenza, rifiutava i concetti di bene e male, adottando invece un atteggiamento di indifferenza forzata e astensione dall'attivita sociale, morale e politica. Il martello che portava con se era usato per colpire le porte delle chiese, che lui chiamava “i covi degli stolti e degli uomini senza cervello”.
 
-STATISTICS:
+STATISTICHE:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Good: +2d6 damage against evil creatures. Counts as a good-aligned weapon.
-  Evil: +2d6 damage against good creatures. Counts as an evil-aligned weapon.
-  Spellward: Immunity to the spells Holy Smite, Unholy Blight, Holy Word, and Blasphemy
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12923    = ~Foolsmiter +2~
-@12924    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+Danno:  1d8 + 5
+Bonus di attacco:  +5
+Incantesimo:  +5
+Tipo di danno:  Contundente
+Speciale:
+  Buono: +2d6 di danno contro le creature malvagie. Conta come un'arma di allineamento buono.
+  Malvagio: +2d6 danni contro le creature buone. Conta come un'arma di allineamento malvagio.
+  Resistente agli incantesimi: Immunita agli incantesimi Colpo Sacro, Piaga Profana, Parola Sacra e Blasfemia
+Peso: 4.
+Requisiti:  Arma Marziale, Martello
+Tipo:  A una mano~
+@12923    = ~Schivasciocco +2~
+@12924    = ~Lo Schivasciocco ha un'enorme testa di pietra a forma di blocco rettangolare. Lievi tracce di sangue e sangue sono presenti su tutti i lati della testa del martello. Il manico e di legno spesso che sembra troppo debole per sostenere il peso della testa del martello. Lo  Schivasciocco ha un incantesimo unico: colpisce piu forte contro i nemici che sono piu stupidi di chi lo brandisce. Tuttavia, l'incantesimo ha un altro risvolto: se chi lo brandisce e piu stupido del bersaglio di un attacco, anche chi lo brandisce subisce danni.
 
-Damage:  1d8 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Foolsmiting: If the wielder has a higher Intelligence bonus than the target, the hammer deals extra damage to the target equal to the difference in Intelligence bonus between the wielder and the target. If the wielder has a lower Intelligence bonus than the target, they take the damage instead.
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12925    = ~Foolsmiter +5~
-@12926    = ~The Foolsmiter has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. The Foolsmiter has a unique enchantment: it hits harder against foes that are stupider than the wielder. However, the enchantment has another twist: if the wielder is stupider than the target of an attack, the wielder takes damage as well.
+Danno:  1d8 + 2
+Bonus di attacco:  +2
+Incantesimo:  +2
+Tipo di danno:  Contundente
+Speciale:
+  Forgiasciocco: se chi lo brandisce ha un bonus di Intelligenza superiore al bersaglio, il martello infligge al bersaglio un danno aggiuntivo pari alla differenza tra il bonus di Intelligenza di chi lo brandisce e quello del bersaglio. Se chi lo brandisce ha un bonus di Intelligenza inferiore al bersaglio, subisce invece il danno.
+Peso: 15.
+Requisiti:  Arma marziale, Martello
+Tipo:  A una mano~
+@12925    = ~Schivasciocco +5~
+@12926    = ~Lo Schivasciocco ha un'enorme testa di pietra a forma di blocco rettangolare. Lievi tracce di sangue e sangue coagulato sono presenti su tutti i lati della testa del martello. Il manico e di legno spesso che sembra troppo debole per sostenere il peso della testa del martello. Lo Schivasciocco ha un incantesimo unico: colpisce piu forte contro i nemici che sono piu stupidi di chi lo brandisce. Tuttavia, l'incantesimo ha un altro risvolto: se chi lo brandisce e piu stupido del bersaglio di un attacco, anche chi lo brandisce subisce danni.
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Foolsmiting: If the wielder has higher Intelligence than the target, the hammer deals extra damage to the target equal to the difference in Intelligence between the wielder and the target. If the wielder has lower Intelligence than the target, they take the damage instead.
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12927    = ~Ring of Pain Amplification~
-@12928    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+Danno:  1d8 + 5
+Bonus di attacco:  +5
+Incantesimo:  +5
+Tipo di danno:  Contundente
+Speciale:
+  Forgiasciocco: se chi lo brandisce ha un'Intelligenza superiore al bersaglio, il martello infligge al bersaglio un danno aggiuntivo pari alla differenza di Intelligenza tra chi lo brandisce e il bersaglio. Se chi lo brandisce ha un'Intelligenza inferiore al bersaglio, subisce invece il danno.
+Peso: 15.
+Requisiti:  Arma marziale, Martello
+Tipo:  A una mano~
+@12927    = ~Anello dell'Amplificazione del Dolore~
+@12928    = ~Questo anello maledetto si fonde con il dito di chi lo indossa e puo essere rimosso solo con un incantesimo che annulla la maledizione. Finche viene indossato, chi lo indossa subisce danni aggiuntivi da tutti gli attacchi. Spesso regalato alle vittime di terribili torture, l'anello rigenera anche chi lo indossa, permettendogli di sopportare ancora piu dolore senza morire. I Lovitari sono noti per creare questi oggetti e distribuirli in tutti i regni per il proprio divertimento.
 
-STATISTICS:
+STATISTICHE:
 
-Vulnerability: -5 Slashing Resistance
-Vulnerability: -5 Piercing Resistance
-Vulnerability: -5 Crushing Resistance
-Regeneration: User regenerates 1 hit point per second
-Special: Can only be removed by a Remove Curse spell~
-@12929    = ~Ring of Torture~
-@12930    = ~This cursed ring fuses itself to the wearer's finger, only coming off if a spell is used to remove the curse. While it is in use, the wearer suffers extra damage from all attacks. Often given to the victims of horrific torture, the ring also regenerates the wearer, allowing them to suffer even more pain without dying. Lovitarians are known to create these items and distribute them throughout the realms for their own amusement.
+Vulnerabilita: -5 Resistenza ai danni taglienti
+Vulnerabilita: -5 Resistenza ai danni perforanti
+Vulnerabilita: -5 Resistenza ai danni contundenti
+Rigenerazione: Chi lo indossa rigenera 1 punto ferita al secondo.
+Speciale: Puo essere rimosso solo con un incantesimo di Rimuovi Maledizione~
+@12929    = ~Anello della Tortura~
+@12930    = ~Questo anello maledetto si fonde con il dito di chi lo indossa e puo essere rimosso solo con un incantesimo che annulla la maledizione. Finche e in uso, chi lo indossa subisce danni aggiuntivi da tutti gli attacchi. Spesso dato alle vittime di torture orribili, l'anello rigenera anche chi lo indossa, permettendogli di soffrire ancora di piu senza morire. I Lovitari sono noti per creare questi oggetti e distribuirli in tutti i regni per il proprio divertimento.
 
-STATISTICS:
+STATISTICHE:
 
-Vulnerability: -10 Slashing Resistance
-Vulnerability: -10 Piercing Resistance
-Vulnerability: -10 Crushing Resistance
-Regeneration: User regenerates 3 hit points per second
-Special: Can only be removed by a Remove Curse spell~
-@4838   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +2 weapons for the purposes of overcoming damage reduction.
+Vulnerabilita: -10 Resistenza ai danni taglienti
+Vulnerabilita: -10 Resistenza ai danni perforanti
+Vulnerabilita: -10 Resistenza ai danni contundenti
+Rigenerazione: L'utente rigenera 3 punti ferita al secondo.
+Speciale: Puo essere rimosso solo con un incantesimo di Rimuovi Maledizione~
+@4838   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +2 allo scopo di superare la riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 + 2
-Attack Bonus: +2
-Enchantment: +2
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4839   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +3 weapons for the purposes of overcoming damage reduction.
+Danno: 1d6 + 2
+Bonus di attacco: +2
+Incantesimo: +2
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi quando brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 2d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4839   = ~Vrek preferisce usare i suoi artigli seghettati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +3 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 + 3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4840   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +4 weapons for the purposes of overcoming damage reduction.
+Danno: 1d6 + 3
+Bonus di attacco: +3
+Incantesimo: +3
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 2d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4840   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +4 allo scopo di superare la riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 + 4
-Attack Bonus: +4
-Enchantment: +4
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 2d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4842   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 1d6 + 4
+Bonus di attacco: +4
+Incantesimo: +4
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi quando brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 2d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4842   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 2d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 4d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4843   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 2d6 + 5
+Bonus d'attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 4d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4843   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per mani umanoidi troppo ingombranti da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 3d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 6d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4846   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 3d6 + 5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi quando brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 6d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4846   = ~Vrek preferisce usare i suoi artigli seghettati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 4d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 8d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4847   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 4d6 + 5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 8d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4847   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per mani umanoidi troppo ingombranti da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 6d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 12d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4848   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 6d6 + 5
+Bonus attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi quando brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 12d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4848   = ~Vrek preferisce usare i suoi artigli seghettati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +5 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 7d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 14d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@4849   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +3 weapon for the purposes of overcoming damage reduction.
+Danno: 7d6 + 5
+Bonus di attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+ Squarcio: se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 14d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4849   = ~Xhaan preferisce combattere con gli artigli, poiche non ha mai avuto bisogno di armi nelle innumerevoli vite che ha vissuto nei Nove Inferi. Puo comunque usare uno scudo o un'arma nella mano secondaria, ma usa gli artigli come arma principale. Essendo un essere extraplanare, gli artigli di Xhaan colpiscono come un'arma +3 ai fini del superamento della riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 1d6 +3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type: Slashing
-Special:
- Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
- Frost: +1d6 cold damage
-Weight: 0 lb.
-Feat Requirement: Simple Weapon, Touch Attack
-Type: One-handed~
-@4870   = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+Danno: 1d6 +3
+Bonus di attacco: +3
+Incantesimo: +3
+Tipo di danno: Tagliente
+Speciale:
+ Conta come allineato al male e allineato al legale ai fini del superamento della riduzione del danno.
+ Gelo: +1d6 danni da freddo.
+Peso: 0.
+Requisiti per le abilita: Arma semplice, Attacco con il tocco.
+Tipo: A una mano~
+@4870   = ~Vrek preferisce usare i suoi artigli frastagliati in combattimento, trovando le armi convenzionali progettate per le mani umanoidi scomode da impugnare. Gli artigli di Vrek colpiscono come armi +5 allo scopo di superare la riduzione del danno.
 
-STATISTICS:
+STATISTICHE:
 
-Damage: 5d6 + 5
-Attack Bonus: +5
-Enchantment: +5
-Damage Type: Slashing
-Special:
- Vrek is treated as having Ambidexterity and Two-Weapon Fighting while wielding these claws
- Rend: If Vrek hits an enemy with both claws in a single round, he rends that enemy, dealing an additional 10d6 + 1.5x Strength bonus damage
-Weight: 0 lb.
-Required Feat: Simple Weapon, Touch Attack
-Type: One-handed~
-@55495=~Advanced Slots: ~
+Danno: 5d6 + 5
+Bonus d'attacco: +5
+Incantesimo: +5
+Tipo di danno: Tagliente
+Speciale:
+ Vrek e considerato come se avesse Ambidestria e Combattimento con due armi mentre brandisce questi artigli.
+ Squarcio: Se Vrek colpisce un nemico con entrambi gli artigli in un singolo round, lo squarcia, infliggendo un danno aggiuntivo di 10d6 + 1,5x bonus di Forza.
+Peso: 0.
+Talento richiesto: Arma semplice, Attacco con tocco
+Tipo: A una mano~
+@55495=~Slot Restanti: ~
