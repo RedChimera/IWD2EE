@@ -1259,6 +1259,79 @@
 		IEex_WriteAssembly(0x63ACA0, { "!jmp_dword >IEex_Helper_CUIControlButtonKeys_OnLButtonClickOverride             !nop " })
 	end
 
+	---------------------------------------------
+	-- Allow spontaneous casting customization --
+	---------------------------------------------
+
+	if not IEex_Vanilla then
+
+		IEex_HookReturnNOPs(0x5915F4, 15, IEex_FlattenTable({
+			{[[
+				!cmp_byte:[ebp+byte] 3A 00 ; m_bDisabled ;
+				!jnz_dword :59162B
+
+				!mark_esp
+				!push_all_registers_iwd2
+			]]},
+			IEex_GenLuaCall("IEex_Extern_AttemptSpontaneousCast", {
+				["args"] = {
+					{"!marked_esp !push([esp+0x10])"}, -- sprite
+					{"!push(ebp)"},                    -- buttonData
+				},
+				["returnType"] = IEex_LuaCallReturnType.Boolean,
+			}),
+			{[[
+				!jmp_dword >no_error
+
+				@call_error
+				!xor_eax_eax
+
+				@no_error
+				!test_eax_eax
+				!pop_all_registers_iwd2
+
+				!jz_dword :59162B
+			]]},
+		}))
+
+		-- Disable cleric-enforcing asserts
+		IEex_WriteAssembly(0x7167BB, {"!jmp_byte"})
+		IEex_WriteAssembly(0x7167D9, {"!jmp_byte"})
+
+		IEex_HookReturnNOPs(0x716841, 24, IEex_FlattenTable({
+			{[[
+				!mark_esp
+				!push(eax)
+				!push(ecx)
+				!push(edx)
+				!push(esi)
+				!push(edi)
+
+				!push(-1) ; [esp-0x18] returnValues.row ;
+				!push(-1) ; [esp-0x1C] returnValues.column ;
+			]]},
+			IEex_GenLuaCall("IEex_Extern_GetSpontaneousCastColumnAndRow", {
+				["args"] = {
+					{"!marked_esp !push([esp+0x14])"},               -- sprite
+					{"!marked_esp !push([esp+0x90])"},               -- buttonData
+					{"!marked_esp !lea(eax,[esp-0x1C]) !push(eax)"}, -- returnValues
+				},
+			}),
+			{[[
+				@call_error
+				!marked_esp !mov(ebp,[esp-0x1C]) ; ebp holds the SPONCAST.2DA column ;
+				!marked_esp !mov(ebx,[esp-0x18]) ; ebx holds the SPONCAST.2DA row ;
+
+				!add(esp,8) !adjust_marked_esp(-8)
+				!pop(edi)
+				!pop(esi)
+				!pop(edx)
+				!pop(ecx)
+				!pop(eax)
+			]]},
+		}))
+	end
+
 	IEex_EnableCodeProtection()
 
 end)()

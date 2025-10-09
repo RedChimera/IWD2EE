@@ -4103,6 +4103,77 @@ IEex_AbsoluteOnce("IEex_Hotkeys", function()
 	IEex_Helper_RegisterKeysScreenCustomBindings(IEex_Hotkeys_CustomBindings)
 end)
 
+-------------------------------
+-- Spontaneous Casting Hooks --
+-------------------------------
+
+-- CButtonData:
+--   [+0x0]    | m_icon                 | CResRef
+--   [+0x8]    | m_name                 | int
+--   [+0xC]    | m_launcherIcon         | CResRef
+--   [+0x14]   | m_launcherName         | int
+--   [+0x18]   | m_count                | short
+--   [+0x1A]   | m_abilityId            | CAbilityId
+--     [+0x1A] | m_itemType             | short
+--     [+0x1C] | m_itemNum              | short
+--     [+0x1E] | m_abilityNum           | short
+--     [+0x20] | m_res                  | CResRef
+--     [+0x28] | m_targetType           | byte
+--     [+0x29] | m_targetCount          | byte
+--     [+0x2A] | m_toolTip              | int
+--     [+0x2E] | nUnknown               | int
+--     [+0x32] | m_nTooltipSuffixStrref | int
+--     [+0x36] | m_nClass               | byte
+--     [+0x37] | m_nSpellLevel          | byte
+--     [+0x38] | m_nKitOrdinal          | short
+--   [+0x3A]   | m_bDisabled            | byte
+--   [+0x3B]   | m_bHasCharges          | byte
+
+-- Return:
+--	 true  - Treat button press as a spontaneous cast
+--	 false - Handle button press as normal
+function IEex_Extern_AttemptSpontaneousCast(sprite, buttonData)
+
+	local spellClass = IEex_ReadByte(buttonData + 0x36)
+	local spellKitOrdinal = IEex_ReadWord(buttonData + 0x38)
+
+	if spellClass == 3 and spellKitOrdinal == 0 then
+		-- Cleric spell
+		return true
+	end
+
+	-- if spellClass == 4 then
+	-- 	-- Druid spell
+	-- 	return true
+	-- end
+
+	return false
+end
+
+function IEex_Extern_GetSpontaneousCastColumnAndRow(sprite, buttonData, returnValues)
+
+	-- 0 = first column/row
+	local column = -1
+	local row = -1
+
+	local spellClass = IEex_ReadByte(buttonData + 0x36)
+	local spellLevel = IEex_ReadByte(buttonData + 0x37)
+
+	if spellClass == 3 then
+		-- Cleric spell
+		column = bit.band(IEex_Call(0x584EB0, {sprite}, nil, 0x4), 0xFF) -- 0 = non-evil, 1 = evil
+		row = spellLevel - 1
+	-- elseif spellClass == 4 then
+	-- 	-- Druid spell
+	-- 	column = 2
+	-- 	row = spellLevel - 1
+	end
+
+	-- Pass the values back to the hook
+	IEex_WriteDword(returnValues, column)
+	IEex_WriteDword(returnValues + 0x4, row + 1)
+end
+
 ----------------
 -- OlvynChuru --
 ----------------
