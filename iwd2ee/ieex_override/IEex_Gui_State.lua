@@ -4142,10 +4142,10 @@ function IEex_Extern_AttemptSpontaneousCast(sprite, buttonData)
 		return true
 	end
 
-	-- if spellClass == 4 then
+	if spellClass == 4 and ex_enable_druid_spontaneous_casting then
 	-- 	-- Druid spell
-	-- 	return true
-	-- end
+		return true
+	end
 
 	return false
 end
@@ -4163,10 +4163,10 @@ function IEex_Extern_GetSpontaneousCastColumnAndRow(sprite, buttonData, returnVa
 		-- Cleric spell
 		column = bit.band(IEex_Call(0x584EB0, {sprite}, nil, 0x4), 0xFF) -- 0 = non-evil, 1 = evil
 		row = spellLevel - 1
-	-- elseif spellClass == 4 then
+	elseif spellClass == 4 then
 	-- 	-- Druid spell
-	-- 	column = 2
-	-- 	row = spellLevel - 1
+		column = 2
+		row = spellLevel - 1
 	end
 
 	-- Pass the values back to the hook

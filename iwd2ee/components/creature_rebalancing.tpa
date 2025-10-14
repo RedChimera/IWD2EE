@@ -91,6 +91,9 @@ ACTION_IF !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 
 END
 
+COPY_EXISTING ~spin259.spl~ ~override~
+	WRITE_SHORT 0x22 0
+
 COPY_EXISTING ~31ORCSH0.bcs~ ~override/31ORCSH4.bcs~ ~31ORCSH0.bcs~ ~override/31ORCSH5.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS0.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS1.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS00.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS01.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS03.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS04.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS09.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS10.bcs~
 
 COPY_EXISTING ~30WCHDR0.bcs~ ~override/31ORCS02.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS05.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS06.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS07.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS08.bcs~
@@ -3155,6 +3158,8 @@ COPY_EXISTING ~53DROPR.cre~ ~override~
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~00CIARMD~ slot=~armor~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~00CHAN03~ slot=~inv8~ mode=~replace~ END
 
 COPY_EXISTING ~53DRIDPR.cre~ ~override~ ~53DRIPRH.cre~ ~override~ ~53VIDRPR.cre~ ~override~ ~53VIDRP2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=12 END
@@ -5721,6 +5726,7 @@ COPY_EXISTING ~66DSHERI.cre~ ~override~
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000
 	WRITE_LONG feats2 ulgiash
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=99 equip=0 STR_VAR item=~00CWSHE1~ slot=~quiver1~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=99 equip=1 STR_VAR item=~USCWHDU2~ slot=~quiver2~ END
@@ -5769,7 +5775,7 @@ COPY_EXISTING ~62HADR.cre~ ~override~ ~62HADR2.cre~ ~override~ ~63BHDR.cre~ ~ove
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE challengerating 17
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDT89~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 equip=0 STR_VAR item=~USCWHDB2~ slot=~quiver2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 equip=0 STR_VAR item=~USCWHDB3~ slot=~quiver3~ END
@@ -5821,7 +5827,7 @@ COPY_EXISTING ~62HADRR.cre~ ~override~ ~65RHDR.cre~ ~override~ ~66RHDR.cre~ ~ove
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE challengerating 17
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDT89~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 equip=0 STR_VAR item=~USCWHDR2~ slot=~quiver2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 equip=0 STR_VAR item=~USCWHDR3~ slot=~quiver3~ END
@@ -5876,7 +5882,7 @@ COPY_EXISTING ~63GRDCOM.cre~ ~override~
 	ulgiash|=0x82000
 	WRITE_LONG feats2 ulgiash
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIARMA 00CWVIP1~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDT87~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=99 equip=0 STR_VAR item=~00CWSHE1~ slot=~quiver1~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=99 equip=1 STR_VAR item=~USCWHDU2~ slot=~quiver2~ END
@@ -5923,10 +5929,12 @@ COPY_EXISTING ~63DRACE.cre~ ~override~
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE challengerating 20
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~00CWSHE3~ slot=~quiver1~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDB2~ slot=~quiver2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDB3~ slot=~quiver3~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDT87~ slot=~inv7~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI402~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI305~ END
@@ -5975,7 +5983,7 @@ COPY_EXISTING ~66VYXEIN.cre~ ~override~
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE challengerating 20
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~00SWDT88~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDR2~ slot=~quiver2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDR3~ slot=~quiver3~ END
@@ -6027,7 +6035,7 @@ COPY_EXISTING ~67NALAK.cre~ ~override~
 	WRITE_BYTE proficiencybow 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE challengerating 20
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~00SWDT88~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHDRA~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDR2~ slot=~quiver2~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=100 STR_VAR item=~USCWHDR3~ slot=~quiver3~ END
@@ -6723,6 +6731,7 @@ COPY_EXISTING ~AR3100.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31HOBE~ script_combat=~00AATBN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31BUGB00~ script_special2=~USBUGBEA~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~08_Bug_04~ script_combat=~00AATGN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~08_Bug_07~ script_combat=~00AATGN~ END
 
 COPY_EXISTING ~AR3101.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31ORCWD2~ script_special2=~30WCHDR0~ END

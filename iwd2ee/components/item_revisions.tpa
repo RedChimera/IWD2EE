@@ -4707,6 +4707,8 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		PATCH_IF ((theheaderflags BAND 0x00020000) = 0x00020000) BEGIN
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=1 savingthrow=0x100000 STR_VAR resource=~MECRIT~ END
 		END
+	END ELSE PATCH_IF (theitemtype=23) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=(0 - 1) savingthrow=0x100000 STR_VAR resource=~MECRIT~ END
 	END
 	UNLESS ~MECRIT~
 	BUT_ONLY_IF_IT_CHANGES

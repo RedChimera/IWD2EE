@@ -1558,6 +1558,7 @@ OUTER_SET ref_holy_weapon = RESOLVE_STR_REF(@35555)
 OUTER_SET ref_flame_shots = RESOLVE_STR_REF(@35354)
 OUTER_SET ref_guidance = RESOLVE_STR_REF(@35154)
 OUTER_SET ref_perception_filter = RESOLVE_STR_REF(@37356)
+OUTER_SET ref_oxs_fortitude = RESOLVE_STR_REF(@1726)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -1597,6 +1598,7 @@ APPEND ~STATDESC.2da~
 180	%ref_flame_shots%
 181	%ref_guidance%
 182	%ref_perception_filter%
+183	%ref_oxs_fortitude%
 ~
 
 VERBOSE

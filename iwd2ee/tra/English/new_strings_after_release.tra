@@ -1984,3 +1984,35 @@ Weight: 0 lb.
 Required Feat: Simple Weapon, Touch Attack
 Type: One-handed~
 @55495=~Advanced Slots: ~
+@531    = ~DRUID:
+
+The druid serves the cause of nature and neutrality; the wilderness is his community. He uses his special powers to protect it and to preserve balance in the world.
+
+NOTE: Wisdom is the casting statistic for a druid. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
+* Druids can cast powerful offensive and healing spells.
+* Spontaneous Casting: Druids can convert their spells to Summon Nature's Ally spells of the same level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest Summon Nature's Ally spell of the same level.
+* 2nd level: Woodland Stride. The druid becomes immune to Entangle, Web, and Spike Growth.
+* At 5th level, Druids start gaining Wild Shape abilities, which let them turn themselves into animals, magical beasts, elementals, and other forms. At higher levels, Druids gain additional options for forms and can use Wild Shape additional times per day.
+* 5th level: Wild Shape: Winter Wolf. The druid gains the ability to shapeshift into a winter wolf. While in winter wolf form, the Druid is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.
+* 5th level: The Druid is high enough level to choose two special feats: Wild Shape: Blink Dog, and Wild Shape: Creeping Doom.
+* 7th level: Wild Shape: Polar Bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.
+* 8th level: The Druid is high enough level to choose another special feat: Wild Shape: Rhinoceros Beetle.
+* 9th level: Wild Shape: Giant Viper. While in giant viper form, the Druid's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). Every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +1 AC, and the save DC against its poison increases by 3.
+* 9th level: Immunity to Poison. The druid becomes immune to all forms of poison.
+* 11th level: Elemental Shape: Salamander. While in salamander form, the Druid is immune to fire, weak to cold, and radiates an aura of extreme heat that deals 2d6 fire damage to nearby creatures per round. Every 5 levels thereafter, the damage of the salamander form's fire aura is increased by 1d6.
+* 11th level: Elemental Shape: Frost Salamander. While in frost salamander form, the Druid is immune to cold, weak to fire, and radiates an aura of extreme cold that deals 2d6 cold damage to nearby creatures per round. Every 5 levels thereafter, the damage of the frost salamander form's cold aura is increased by 1d6.
+* 13th level: Wild Shape: Shambling Mound. While in shambling mound form, the Druid is immune to electricity, resistant to bludgeoning damage, and has a 50% chance with each attack to engulf the target (Fortitude DC 17),  immobilizing them, blinding them, and dealing 3d4 extra damage over the next round. Every 3 levels thereafter, the shambler form gains +1 Strength, +2 Constitution, the chance to engulf is increased by 10%, and the save DC against it is increased by 3.
+* 15th level: Elemental Shape: Fire Elemental. While in fire elemental form, the Druid is immune to fire, weak to cold, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the fire elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Earth Elemental. While in earth elemental form, the Druid has 5/- physical damage resistance as well as damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. In addition, whenever the Druid is above a stone floor, they can burrow into the floor to avoid attacks, coming up to attack or cast a spell. Every 5 levels thereafter, the earth elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Water Elemental. While in water elemental form, the Druid is immune to fire and acid, weak to electricity, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the water elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Air Elemental. While in air elemental form, the Druid is resistant to electricity and has damage reduction 5/+1. It deals less damage than the other elemental forms but has high AC and Dexterity. Every 5 levels thereafter, the air elemental form gains +2 Strength, +2 Dexterity, +1 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 40th level: Dragon Shape: Black Dragon. The Druid gains the ability to shapeshift into an adult black dragon. While in black dragon form, the Druid is immune to acid and has extremely high AC. The Druid will only attack twice per round but will deal massive damage per hit at long range. 
+
+Disadvantages:
+* Druids do not have access to many powerful defensive spells.
+* Druids are not as powerful as fighters, rangers, paladins, or barbarians in combat.~

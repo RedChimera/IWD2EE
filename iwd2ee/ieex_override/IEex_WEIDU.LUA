@@ -48,6 +48,7 @@ ex_enable_autobuffing_keys = false
 ex_autobuffing_key_record = 219
 ex_autobuffing_key_activate = 186
 ex_autobuffing_key_delete = 221
+ex_enable_druid_spontaneous_casting = false
 ex_wizard_spell_learning_on_level_up = false
 ex_wizard_spells_learned_per_level_up = 2
 ex_sorcerer_spell_replacement_on_level_up = false
@@ -401,7 +402,7 @@ ex_new_projectile_damage_type = {
 [12] = {[0x0] = 0x40, [0x10] = 0x40, [0x80] = 0x40, [0x200] = 0x40, [0x400] = 0x40, [0x800] = 0x40}, -- Turn bullets into Magic Stones
 }
 ex_kit_spells = {
-[2] = {[0x8] = "", [0x10] = "USMNKWHM", [0x20] = "USMNKWHN"},
+[2] = {[0x8] = "", [0x10] = "USMNKWHM", [0x20] = "USMNKWN2"},
 [4] = {[0x8] = "", [0x10] = "", [0x20] = "USMNK02N"},
 [6] = {[0x8] = "", [0x10] = "USMNK06M", [0x20] = "USMNK02N"},
 [7] = {[0x8] = "USMNKWHL", [0x10] = "USMNKWHM", [0x20] = "USMNKWHN"},

@@ -32667,6 +32667,22 @@ function IEex_HasMeleeWeaponEquipped(BCSObject)
 	return hasMeleeWeaponEquipped
 end
 
+function IEex_HasEffectRES(BCSObject, spellRES)
+	local sourceID = IEex_Lua_ActorID
+	local sourceData = IEex_GetActorShare(sourceID)
+	local checkID = IEex_GetBCSObjectID(IEex_Lua_ActorID, BCSObject)
+	if not IEex_IsSprite(checkID, false) then return false end
+	local checkData = IEex_GetActorShare(checkID)
+	local hasEffect = false
+	IEex_IterateActorEffects(checkID, function(eData)
+		local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+		if theparent_resource == spellRES then
+			hasEffect = true
+		end
+	end)
+	return hasEffect
+end
+
 function IEex_IsImmuneToOpcode(BCSObject, match_opcode)
 	local sourceID = IEex_Lua_ActorID
 	local sourceData = IEex_GetActorShare(sourceID)

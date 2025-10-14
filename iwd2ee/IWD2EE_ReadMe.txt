@@ -120,6 +120,8 @@ Level 40: Black Dragon (Dragon Shape)
 
 The druid shapeshifting feats are also changed. They now allow druids to shapeshift into Blink Dogs, Rhinocerous Beetles, and a swarm of insects as in the Creeping Doom spell.
 
+Druids can also now spontaneously cast Summon Nature's Ally spells.
+
 Rogues: Rogues get +1 luck every 5 levels. They won't have the sustained damage output a warrior has, but they'll be able to land some very wicked sneak attacks (luck in IWD2 increases the chance of a critical hit).
 
 Class Revisions also revises some of the thieving skills:

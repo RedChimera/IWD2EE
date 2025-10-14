@@ -770,6 +770,7 @@ Hit Points per Level: 1-8
 Advantages:
 * Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
 * Druids can cast powerful offensive and healing spells.
+* Spontaneous Casting: Druids can convert their spells to Summon Nature's Ally spells of the same level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest Summon Nature's Ally spell of the same level.
 * 2nd level: Woodland Stride. The druid becomes immune to Entangle, Web, and Spike Growth.
 * At 5th level, Druids start gaining Wild Shape abilities, which let them turn themselves into animals, magical beasts, elementals, and other forms. At higher levels, Druids gain additional options for forms and can use Wild Shape additional times per day.
 * 5th level: Wild Shape: Winter Wolf. The druid gains the ability to shapeshift into a winter wolf. While in winter wolf form, the Druid is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.
