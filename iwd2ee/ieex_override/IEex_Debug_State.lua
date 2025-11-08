@@ -17,6 +17,91 @@ function IEex_Debug_GiveAllWizardSpells()
 	end
 end
 
+function IEex_Debug_GiveRandomItems()
+
+	local actorID = IEex_GetActorIDSelected()
+	if not IEex_IsSprite(actorID) then return end
+
+	local sprite = IEex_GetActorShare(actorID)
+	local items = sprite + 0x4AD8
+
+	local itemsResrefs = IEex_IndexedResources[IEex_FileExtensionToType("ITM")]
+	local numItems = #itemsResrefs
+
+	local shouldGiveItem = function(itemData)
+		local itemFlags = IEex_ReadDword(itemData + 0x18)
+		if bit.band(itemFlags, 0x4) == 0 then return false end
+		local itemIcon = IEex_ReadLString(itemData + 0x3A, 8)
+		if itemIcon == "" or itemIcon:lower() == "temp" then return false end
+		return true
+	end
+
+	local resolveSlot = function(rowIndex, columnIndex, slotIndex)
+
+		local slot = items + slotIndex * 0x4
+		local existingItem = IEex_ReadDword(slot)
+
+		if existingItem ~= 0x0 then
+			IEex_DestructCItem(existingItem)
+			IEex_Free(existingItem)
+		end
+
+		while true do
+
+			local randomItemResref = itemsResrefs[math.random(numItems)]
+
+			local wrapper = IEex_DemandRes(randomItemResref, "ITM")
+			local willCrash = not wrapper:isValid()
+			wrapper:free()
+
+			if not willCrash then
+
+				local item = IEex_CreateCItem(randomItemResref, 0, 0, 0, 0, 1)
+
+				if IEex_IsCItemResValid(item) then
+
+					local itemData = IEex_DemandCItem(item)
+
+					if itemData ~= 0x0 and shouldGiveItem(itemData) then
+
+						local resolvedResref = IEex_GetCItemResref(item)
+						local strOut = string.format("%-8s", resolvedResref)
+
+						if resolvedResref ~= randomItemResref then
+							strOut = string.format("%s | from %-8s", strOut, randomItemResref)
+						else
+							strOut = strOut.." |              "
+						end
+
+						local nameStrref = IEex_ReadDword(itemData + 0xC)
+						print(string.format("Slot %d, INV[%d,%d] = %s | %s", slotIndex, rowIndex, columnIndex, strOut, IEex_FetchString(nameStrref)))
+
+						IEex_UndemandCItem(item)
+						IEex_WriteDword(slot, item)
+						break
+					end
+
+					IEex_UndemandCItem(item)
+				end
+
+				IEex_DestructCItem(item)
+				IEex_Free(item)
+			end
+		end
+	end
+
+	for rowIndex = 1, 2 do
+		local rowSlotBase = 18 + rowIndex - 1
+		for columnIndex = 1, 8 do
+			resolveSlot(rowIndex, columnIndex, rowSlotBase + (columnIndex - 1) * 2)
+		end
+	end
+
+	for columnIndex = 1, 8 do
+		resolveSlot(3, columnIndex, 33 + columnIndex)
+	end
+end
+
 ------------------------------------
 -- IEex_Debug_CompressTime = true --
 ------------------------------------

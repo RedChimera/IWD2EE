@@ -491,3 +491,18 @@ function IEex_Extern_OnAfterConstructSprite(sprite)
 	end
 --]]
 end
+
+-- Return:
+--	 true  => Sprite can use the item
+--	 false => Sprite cannot use the item. When returning this value, the function must also
+--            call `IEex_WriteDword(strDesc, <strref>)` to set the displayed error message.
+function IEex_Extern_CheckItemUsable(sprite, item, strDesc)
+
+	-- local itemData = IEex_DemandCItem(item)
+	-- print(string.format("resref: %s, name: %s", IEex_GetCItemResref(item), IEex_FetchString(IEex_ReadDword(itemData + 0xC))))
+	-- IEex_UndemandCItem(item)
+	-- IEex_WriteDword(strDesc, 9382)
+
+	-- Original behavior
+	return IEex_Call(IEex_Label("CInfGame::CheckItemUsable"), {0, strDesc, item, sprite}, IEex_GetGameData(), 0x0) ~= 0
+end

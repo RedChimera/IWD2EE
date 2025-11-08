@@ -761,14 +761,14 @@ function IEex_ActionIndicators_GetPrimaryIcons(sprite, action, actionID)
 
 		-- Read item ability icon
 		if item ~= 0x0 then
-			IEex_DemandCItem(item)
+			IEex_SafeDemandCItem(item)
 			local ability = IEex_GetCItemAbilityNum(item, abilityNum)
 			if ability == 0x0 then
-				IEex_DecrementCItemDemands(item)
+				IEex_SafeUndemandCItem(item)
 				return
 			end
 			local abilityIcon = IEex_ReadLString(ability + 0x4, 8)
-			IEex_DecrementCItemDemands(item)
+			IEex_SafeUndemandCItem(item)
 			return {
 				{"STONSLOT", 0, 0},
 				{abilityIcon, 1, 0, IEex_ActionIndicators_PrimarySlotDimension, IEex_ActionIndicators_PrimarySlotDimension},
@@ -787,24 +787,24 @@ function IEex_ActionIndicators_GetPrimaryIcons(sprite, action, actionID)
 
 		-- Read launcher item ability icon
 		if launcherItem ~= 0x0 then
-			IEex_DemandCItem(launcherItem)
+			IEex_SafeDemandCItem(launcherItem)
 			local launcherAbility = IEex_GetCItemAbilityNum(launcherItem, 0)
 			if launcherAbility ~= 0x0 then
 				local launcherAbilityIcon = IEex_ReadLString(launcherAbility + 0x4, 8)
 				table.insert(toReturn, {launcherAbilityIcon, 1, 0, IEex_ActionIndicators_PrimarySlotDimension, IEex_ActionIndicators_PrimarySlotDimension})
 			end
-			IEex_DecrementCItemDemands(launcherItem)
+			IEex_SafeUndemandCItem(launcherItem)
 		end
 
 		-- Read item ability icon
 		if item ~= 0x0 then
-			IEex_DemandCItem(item)
+			IEex_SafeDemandCItem(item)
 			local ability = IEex_GetCItemAbilityNum(item, abilityNum)
 			if ability ~= 0x0 then
 				local abilityIcon = IEex_ReadLString(ability + 0x4, 8)
 				table.insert(toReturn, {abilityIcon, 1, 0, IEex_ActionIndicators_PrimarySlotDimension, IEex_ActionIndicators_PrimarySlotDimension})
 			end
-			IEex_DecrementCItemDemands(item)
+			IEex_SafeUndemandCItem(item)
 		end
 
 		return toReturn

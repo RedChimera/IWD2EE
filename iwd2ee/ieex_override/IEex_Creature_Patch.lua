@@ -405,6 +405,65 @@
 		!jmp_dword :72DFC3
 	]])
 
+	-------------------------------------------
+	-- Allow item usability to be customized --
+	-------------------------------------------
+
+	IEex_HookReplaceFunctionMaintainOriginal(0x5B9D20, 7, "CInfGame::CheckItemUsable", IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_CheckItemUsable", {
+			["args"] = {
+				{"!marked_esp !push([esp+0x4])"}, -- sprite
+				{"!marked_esp !push([esp+0x8])"}, -- item
+				{"!marked_esp !push([esp+0xC])"}, -- strDesc
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!mov(eax,1)
+
+			@no_error
+			!pop_registers_iwd2
+			!ret(0x10)
+		]]},
+	}))
+
+	-- Replace inlined call to CInfGame::CheckItemUsable() in CInfGame::SwapItemPersonal()
+	IEex_HookJumpOnFail(0x5B8334, 0, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_CheckItemUsable", {
+			["args"] = {
+				{"!marked_esp !push([esp+0x10])"},                  -- sprite
+				{"!marked_esp !mov(eax,[esp+0x10C]) !push([eax])"}, -- item
+				{"!marked_esp !push([esp+0x110])"},                 -- strDesc
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!mov(eax,1)
+
+			@no_error
+			!test(eax,eax)
+			!pop_registers_iwd2
+			!jnz_dword >jmp_success
+
+			!xor(ebx,ebx)
+			!jmp_dword :5B9AD7
+		]]},
+	}))
+
 	IEex_EnableCodeProtection()
 
 end)()

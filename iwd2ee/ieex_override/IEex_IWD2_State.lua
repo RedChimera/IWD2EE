@@ -576,9 +576,9 @@ function IEex_IsActorSolelySelected(actorID)
 end
 
 function IEex_CanSpriteUseItem(sprite, resref)
-	local CItem = IEex_DemandCItemResref(resref)
+	local CItem = IEex_CreateAndDemandCItem(resref)
 	local junkPtr = IEex_Malloc(0x4)
-	-- CInfGame_CheckIfSpriteCanUseItem
+	-- CInfGame_CheckItemUsable
 	local result = IEex_Call(0x5B9D20, {0x0, junkPtr, CItem, sprite}, IEex_GetGameData(), 0x0)
 	IEex_Free(junkPtr)
 	IEex_DumpCItem(CItem)

@@ -128,6 +128,7 @@ function IEex_DemandRes(resref, extension)
 
 	local IEex_CustomResDemand = {
 		[0x3EA] = 0x401400, -- CHU
+		[0x3ED] = 0x4015B0, -- ITM
 	}
 
 	local extensionType = IEex_FileExtensionToType(extension)
@@ -148,51 +149,76 @@ function IEex_DemandRes(resref, extension)
 	return IEex_ResWrapper:new(resref, pRes)
 end
 
-function IEex_DemandCItemResref(resref)
+function IEex_CreateAndDemandCItem(resref, useCount1, useCount2, useCount3, wear, flags)
+	local CItem = IEex_CreateCItem(resref, useCount1, useCount2, useCount3, wear, flags)
+	IEex_Call(0x4015B0, {}, IEex_ReadDword(CItem + 0x8), 0x0) -- CResItem_Demand
+	return CItem
+end
+
+function IEex_CreateCItem(resref, useCount1, useCount2, useCount3, wear, flags)
 
 	local resrefMem = IEex_Malloc(0x8)
 	IEex_WriteLString(resrefMem, resref, 8)
 
 	local CItem = IEex_Malloc(0xEE)
+
 	-- CItem_Construct
 	IEex_Call(0x4E7E90, {
-		0x0, -- flags
-		0x0, -- wear
-		0x0, -- useCount3
-		0x0, -- useCount2
-		0x0, -- useCount1
+		flags     or 0, -- flags
+		wear      or 0, -- wear
+		useCount3 or 0, -- useCount3
+		useCount2 or 0, -- useCount2
+		useCount1 or 0, -- useCount1
 		IEex_ReadDword(resrefMem + 0x4), -- resref (2/2)
 		IEex_ReadDword(resrefMem + 0x0), -- resref (1/2)
 	}, CItem, 0x0)
 
-	-- CResItem_Demand
-	IEex_Call(0x4015B0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
 	IEex_Free(resrefMem)
-
 	return CItem
 end
 
-function IEex_DumpCItem(CItem)
-	-- CResItem_DecrementDemands
-	IEex_Call(0x401BA0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
+function IEex_DemandCItem(CItem)
+	local res = IEex_ReadDword(CItem + 0x8)
+	IEex_Call(0x4015B0, {}, res, 0x0) -- CResItem_Demand
+	return IEex_ReadDword(res + 0x58)
+end
+
+function IEex_DestructCItem(CItem)
 	-- CItem_Destruct (handles both CRes_DecrementRequests and CResourceManager_DumpResObject)
 	IEex_Call(0x4E8180, {}, CItem, 0x0)
+end
+
+function IEex_DumpCItem(CItem)
+	IEex_UndemandCItem(CItem)
+	IEex_DestructCItem(CItem)
 	IEex_Free(CItem)
-end
-
-function IEex_DemandCItem(CItem)
-	-- CItem_Demand
-	IEex_Call(0x4E82B0, {}, CItem, 0x0)
-end
-
-function IEex_DecrementCItemDemands(CItem)
-	-- CItem_DecrementDemands
-	IEex_Call(0x4E82F0, {}, CItem, 0x0)
 end
 
 function IEex_GetCItemAbilityNum(CItem, abilityNum)
 	-- CItem_GetAbilityNum
 	return IEex_Call(0x4E9610, {abilityNum}, CItem, 0x0)
+end
+
+function IEex_GetCItemResref(CItem)
+	return IEex_ReadLString(CItem + 0xC, 8)
+end
+
+function IEex_IsCItemResValid(CItem)
+	return IEex_ReadDword(CItem + 0x8) ~= 0x0
+end
+
+function IEex_SafeDemandCItem(CItem)
+	-- CItem_Demand
+	IEex_Call(0x4E82B0, {}, CItem, 0x0)
+end
+
+function IEex_SafeUndemandCItem(CItem)
+	-- CItem_DecrementDemands
+	IEex_Call(0x4E82F0, {}, CItem, 0x0)
+end
+
+function IEex_UndemandCItem(CItem)
+	IEex_Call(0x401BA0, {}, IEex_ReadDword(CItem + 0x8), 0x0) -- CResItem_DecrementDemands
 end
 
 ---------

@@ -198,3 +198,17 @@ function B3STSPAM(effectData, creatureData)
 		IEex_Call(0x7FBE4E, {i}, creatureData + 0x7130, 0x0) -- CPtrList_AddTail()
 	end
 end
+
+function IEex_Dev_DumpInvalidItems()
+
+	for _, itemResref in ipairs(IEex_IndexedResources[IEex_FileExtensionToType("ITM")]) do
+
+		local wrapper = IEex_DemandRes(itemResref, "ITM")
+
+		if not wrapper:isValid() then
+			print(string.format("Bad ITM: %s", itemResref))
+		end
+
+		wrapper:free()
+	end
+end

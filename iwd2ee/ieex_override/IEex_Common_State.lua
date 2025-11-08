@@ -1,4 +1,6 @@
 
+math.randomseed(os.time())
+
 -------------
 -- Options --
 -------------
