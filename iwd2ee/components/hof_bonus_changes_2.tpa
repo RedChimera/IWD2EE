@@ -1,0 +1,90 @@
+//NOTES
+
+APPEND ~RT_NORM.2da~
+~
+USHFMODA	No_Drop
+USHFMODB	No_Drop
+~
+UNLESS ~USHFMODA~
+
+APPEND ~RT_FURY.2da~
+~
+USHFMODA	USHFMDA
+USHFMODB	USHFMDB
+~
+UNLESS ~USHFMODA~
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
+
+	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmoda.itm~ ~00rthf01.itm~ ~override/ushfmodb.itm~
+/*
+	OUTER_FOR (i = 0; i <= 8; ++i) BEGIN
+		COPY_EXISTING ~ushfmda.itm~ ~override/ushfmda%i%.itm~ ~ushfmdb.itm~ ~override/ushfmdb%i%.itm~
+			LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=123 opcode=143 parameter1=i STR_VAR resource=~USHFMODP~ END
+	END
+*/
+	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+		READ_BYTE 0x303 theattributes
+		PATCH_IF (theattributes BAND 0x00000011) = 0x00000000 BEGIN
+			READ_SSHORT 0x26 themaxhp
+			PATCH_IF themaxhp <= 60 BEGIN
+				TEXT_SPRINT hofitem ~USHFMODA~
+				READ_BYTE 0x8a thelevel
+				READ_BYTE 0x26a theconstitution
+				PATCH_IF (themaxhp * 3 - 100 + (thelevel + 12) * (theconstitution / 2)) = 0 BEGIN
+					themaxhp += 1
+					WRITE_SHORT 0x26 themaxhp
+				END
+			END
+			ELSE BEGIN
+				TEXT_SPRINT hofitem ~USHFMODB~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END
+								ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		UNLESS ~USHOFMOD[AB]~
+		BUT_ONLY_IF_IT_CHANGES
+
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA USHFMODB~ END
+		IF_EXISTS
+END
+
+COPY_EXISTING_REGEXP ~ushfmd[ab]\.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=500 match_parameter1=500 probability2=0 STR_VAR match_resource=~MEHFMDHP~ END

@@ -155,6 +155,17 @@ Lolth:
 
 Note: Drider priestesses do not have Lolth domain spells, as part of the punishment from Lolth that turned them into driders. Only the drow priestess you find north of Malavon's camp has domain spells.
 
+Vhaeraun:
+1: Cat's Grace, Sleep
+2: Darkness, Blur
+3: Invisibility Sphere, Mirror Image
+4: Blink, Improved Invisibility
+5: Lutzaen's Local Teleport, Steal Spells
+6: Greater Shadow Conjuration, Steal Effects
+7: Mass Haste, Shades
+8: Mass Invisibility, Simulacrum
+9: Black Blade of Disaster, Perfect Invisibility
+
 Malar:
 1: Hunter's Mark, Summon Nature's Ally I
 2: Beast Claw, Summon Nature's Ally II
@@ -180,7 +191,7 @@ Myrkul:
 Sseth:
 1: Charm Person, Perception Filter
 2: Horror, Snakebite
-3: Dire Charm, Poison
+3: Poison, Summon Nature's Ally IV (always summons a giant viper)
 4: Cloud of Pestilence, Vipergout
 5: Cloudkill, Dolorous Decay
 6: Sseth's Scales, Sseth's Venom

@@ -248,6 +248,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end
 	end
+	if ex_barbarian_exceed_strength_cap_level ~= -1 and IEex_GetActorStat(targetID, 96) >= ex_barbarian_exceed_strength_cap_level then
+		if IEex_ReadSignedWord(creatureData + 0x974, 0x0) == 40 then
+			IEex_WriteWord(creatureData + 0x974, IEex_GetActorFullStat(targetID, 36))
+		end
+	end
 	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
 	if bit.band(tempFlags, 0x4) > 0 then
 		IEex_WriteWord(creatureData + 0x9FA, bit.band(tempFlags, 0xFFFB))
@@ -258,6 +263,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	if ex_cre_initializing[targetID] then
 		ex_cre_initializing[targetID] = nil
 		if targetID == IEex_GetActorIDCharacter(0) then
+			ex_no_teleport_room_strings_printed = {}
 			ex_dead_pc_equipment_record = {}
 			ex_reform_party_button_added = 0
 			for bt = 0, 30, 1 do
@@ -502,7 +508,25 @@ function IEex_Extern_CheckItemUsable(sprite, item, strDesc)
 	-- print(string.format("resref: %s, name: %s", IEex_GetCItemResref(item), IEex_FetchString(IEex_ReadDword(itemData + 0xC))))
 	-- IEex_UndemandCItem(item)
 	-- IEex_WriteDword(strDesc, 9382)
-
+	local useMagicDevice = IEex_GetActorStat(IEex_GetActorIDShare(sprite), 94)
+	if ex_enable_use_magic_device_item_usability and useMagicDevice > 0 then
+		local itemData = IEex_DemandCItem(item)
+		if itemData > 0 then
+--			local price = IEex_ReadDword(itemData + 0x34)
+--			local extraDC = IEex_ReadSignedByte(itemData + 0x72, 0x0)
+			local useMagicDeviceCheckDC = IEex_ReadSignedByte(itemData + 0x72, 0x0)
+			IEex_UndemandCItem(item)
+--			local useMagicDeviceCheckDC = math.ceil(math.sqrt(price / 1000) * 1.5 + ex_use_magic_device_item_usability_base_dc) + extraDC
+			if useMagicDevice >= useMagicDeviceCheckDC then
+				return true
+			else
+				IEex_SetToken("USIUVAL1", useMagicDeviceCheckDC)
+				IEex_WriteDword(strDesc, ex_tra_55816)
+			end
+		end
+	end
+	
+--	IEex_WriteDword(strDesc, 9382)
 	-- Original behavior
 	return IEex_Call(IEex_Label("CInfGame::CheckItemUsable"), {0, strDesc, item, sprite}, IEex_GetGameData(), 0x0) ~= 0
 end

@@ -431,7 +431,7 @@ When drunk, the syrup creates an anti-magic field around the user's body, automa
 STATISTICS:
 
 Dispels all dispellable effects on the drinker
-Resistance: 15/- Spell Resistance
+Spell Resistance: Set to 25
 25% Spell Failure
 Weight: 1 lb.~
 @54750     = ~Burning Syrup~
@@ -442,7 +442,7 @@ When drunk, the syrup creates an anti-magic field around the user's body, automa
 STATISTICS:
 
 Dispels all dispellable effects on the drinker
-Resistance: 30/- Spell Resistance
+Spell Resistance: Set to 35
 50% Spell Failure
 Weight: 1 lb.~
 @4752     = ~Snake Lymph~

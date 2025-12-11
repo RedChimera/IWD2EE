@@ -88,7 +88,7 @@ Prerequisite: 8 Levels of Druid~
 @209    = ~Winter Wolf Breath~
 @210    = ~Talos' Blessing
 
-For 5 rounds, all electrical damage dealt by the priest is increased by 30%.~
+For 1 round per cleric level, all electrical damage dealt by the priest's spells and abilities is increased by 30%.~
 @211    = ~Tempus' Mastery
 
 The recipient gains +6 attack and damage with all weapons for 3 rounds.~
@@ -127,10 +127,10 @@ When you use this ability, you may choose to gain a damage bonus of up to +5 wit
 When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
 @223    = ~Arterial Strike
 
-While this ability is active, your sneak attacks deal 1d6 less damage initially but deal 10 bleeding damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), you sacrifice another 1d6 points to deal another 10 damage over the 10 rounds. This ability can be activated or deactivated at will as a free action.~
+While this ability is active, your sneak attacks deal 10 bleeding damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), you deal another 10 damage over the 10 rounds. This ability can be activated or deactivated at will as a free action., but it cannot be active at the same time as Hamstring.~
 @224    = ~Hamstring
 
-While this ability is active, your sneak attacks deal 2d6 less damage but reduce the target's movement speed by 50% for 10 rounds (no save). This ability can be activated or deactivated at will as a free action.~
+While this ability is active, your sneak attacks reduce the target's movement speed by 50% for 10 rounds (no save). Since this is a nonmagical effect, it bypasses Freedom of Movement. This ability can be activated or deactivated at will as a free action, but it cannot be active at the same time as Arterial Strike.~
 @225    = ~Rapid Shot
 
 While this ability is active, you gain an additional attack per round with any ranged weapon other than a crossbow. This attack is made at your full attack bonus. However, all your attacks are made at a -2 penalty. This ability can be activated or deactivated at will as a free action.~
@@ -220,7 +220,7 @@ This feat may be taken up to four times. Each time, you become able to extend a 
 
 Your sneak attacks are especially deadly.
 
-Prerequisite: 5 levels of rogue
+Prerequisite: 3 levels of rogue per rank in the feat (3, 6, 9, 12, 15)
 
 Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be taken up to five times.~
 @309    = ~Improved Two-Weapon Fighting~
@@ -248,7 +248,7 @@ You have been trained in the way of the kensei, or "sword-saint." You specialize
 
 Prerequisite: 1 level of fighter
 
-Benefit: You gain +1 to attack and damage per 3 fighter levels (minimum of +1) and a +2 generic AC bonus. These bonuses only function when you are not wearing armor (robes are acceptable) and are wielding one or more melee weapons (excluding unarmed attacks and most shapeshifted attacks) without a shield.
+Benefit: You gain +1 to attack and damage per 3 fighter levels (minimum of +1) and a +2 generic AC bonus. These bonuses only function when you are not wearing armor (robes are acceptable) and are wielding one or more melee weapons (excluding unarmed attacks and most shapeshifted attacks) without a shield. The +2 AC bonus does not stack with a monk's AC bonus from Wisdom.
 
 Special: You may only take this feat as a 1st-level character.~
 @315    = ~Knockdown~
@@ -463,9 +463,9 @@ Benefit: You gain the Persistent Spell ability, usable at will as a free action.
 
 You may quickly cast an extra spell each round.
 
-Prerequisites: The ability to cast 3rd-level spells.
+Prerequisites: The ability to cast 5th-level spells.
 
-Benefit: You gain the Quicken Spell ability, usable at will as a free action. Using it allows you to instantly cast a spell, even if you've already cast a spell for the round. The quickened spell takes up a spell slot two levels higher. Only one spell can be quickened per round.~
+Benefit: You gain the Quicken Spell ability, usable at will as a free action. Using it allows you to instantly cast a spell, even if you've already cast a spell for the round. The quickened spell takes up a spell slot four levels higher. Only one spell can be quickened per round.~
 @359    = ~Safe Spell~
 @360    = ~METAMAGIC, SAFE SPELL:
 
@@ -539,9 +539,11 @@ Benefit: Whenever you hit a creature with a melee attack, you move twice as fast
 
 You can dodge attacks particularly well while moving.
 
-Prerequisites: Dex 13+, Dodge
+Prerequisites: Dex 13+, Dodge. Taking the feat a second time requires Dex 21+ and Spring Attack.
 
-Benefit: While moving, you gain a +4 Armor Class bonus. This bonus is doubled against attacks of opportunity due to moving out of an enemy's weapon range.~
+Benefit: While moving, you gain a +4 Armor Class bonus. This bonus is doubled against attacks of opportunity due to moving out of an enemy's weapon range.
+
+When taken a second time, the feat prevents you from provoking any attacks of opportunity due to moving out of an enemy's weapon range.~
 @373    = ~Defensive Roll~
 @374    = ~DEFENSIVE ROLL:
 
@@ -555,9 +557,11 @@ Benefit: If you would be hit by an attack or damaging spell that would kill you,
 
 You know how to take advantage of an ally's distraction of your enemy to land an additional attack on the enemy.
 
-Prerequisite: 10 Levels of Rogue, Combat Reflexes
+Prerequisite: 10 levels of Rogue, Combat Reflexes. Taking the feat a second time requires 16 levels of Rogue.
 
-Benefit: If an ally would hit an enemy in melee while you are also attacking that enemy in melee, you may make an attack of opportunity against that enemy.~
+Benefit: If an ally would hit an enemy in melee while you are also attacking that enemy in melee, you may make an attack of opportunity against that enemy.
+
+When taken a second time, the feat causes every attack of opportunity you make to become a sneak attack.~
 @377    = ~OPPORTUNIST:
 
 You know how to take advantage of an ally's distraction of your enemy to land an additional attack on the enemy.
@@ -639,7 +643,7 @@ Benefit: Even after you meet the initial requirements, you must take this feat f
 * +8 bonus to Hide, Move Silently, and Search.
 * You can be turned, but count as 4 levels higher against turning effects.
 * You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
-* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* Your unarmed attacks are replaced with a Lich Touch, which deals 1d8+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
 * You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
 * You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
 @390    = ~LICHDOM:
@@ -656,9 +660,29 @@ Benefit: Even after you meet the initial requirements, you must take this feat f
 * +8 bonus to Hide, Move Silently, and Search.
 * You can be turned, but count as 4 levels higher against turning effects.
 * You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
-* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* Your unarmed attacks are replaced with a Lich Touch, which deals 1d8+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
 * You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
 * You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@391    = ~Lingering Damage~
+@392    = ~LINGERING DAMAGE:
+
+Your sneak attacks continue to deal damage even after you strike.
+
+Prerequisite: Crippling Strike, 30 levels of rogue
+
+Benefit: If you deal damage with a sneak attack, you deal the same damage to that enemy again one round later.~
+@393    = ~Arcane Archer~
+@394    = ~ARCANE ARCHER:
+
+You are trained as an arcane archer and know how to shoot spells as arrows.
+
+Prerequisite: Elf or half-elf, 1 level of wizard or sorcerer, and proficiency in bows (if drow or half-elf)
+
+Benefit: You gain the Imbue Arrow ability, usable as a free action. If you use it and then attempt to cast an offensive ranged wizard or sorcerer spell of 5th-level or lower that involves a projectile traveling from the caster, instead of being cast, it will be stored in an arrow that is created in an empty ammo slot (consuming a use of the spell). That arrow has an enchantment equal to the level of the spell. When fired, the arrow uses the same projectile and area of effect as the spell, and deals the physical damage of the arrow in addition to the effects of the spell (as if cast at the character's wizard or sorcerer level) to all creatures it hits. This ability can be used once per day, plus once more for every two points of base attack bonus.
+
+However, your spells have -4 DC when cast without imbuing them.
+
+Special: You may only take this feat as a 1st-level character.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -685,16 +709,15 @@ Hit points per level: 1-12
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts a number of rounds equal to 3 plus the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness for 3 rounds. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
 * Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
 * 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
-* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
-* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 AC penalty.
-* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
-* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
-* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
-* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
+* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is higher level than the barbarian. Barbarian rage now lasts a number of additional rounds equal to the barbarian's newly improved Constitution bonus.
+* 11th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the Strength and Constitution bonuses to +6 and the Will save bonus to +3. He or she still receives the -2 AC penalty.
+* 17th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
+* 20th level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves. For every 4 levels after level 20, barbarian rage will grant an additional +2 to Strength and Constitution and +1 to Will saves.
+* 21st level: Limitless Strength. The barbarian can now increase their Strength past 40.
 
 Disadvantages:
 * Barbarians gain feats at a slower rate than fighters.
@@ -713,13 +736,13 @@ Advantages:
 * 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
 * Many rogue like skills are class skills of the Bard.
 * Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
-* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
-* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
-* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at level 5 and every 5 levels thereafter.
+* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, Void Sound, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
+* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, and +2 to skill checks (in addition to the +1 to skill checks granted by the luck). At level 15 and every 10 levels thereafter, this song grants an additional +1 to luck and +2 to skill checks.
 * 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
-* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
-* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
-* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+* 9th level: The Siren's Yearning. When played, every enemy that hears the song must make a Will save or be enthralled, unable to take action for one round or until they take damage. The Will save DC is equal to 10 + 1/2 bard level + Charisma bonus.
+* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At level 18 and every 10 levels thereafter, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 40th level: The Ballad of Three Heroes. When played, the bard's allies gain 10/- resistance to all forms of magical damage, spell resistance set to 35 if lower, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 50, this song sets spell resistance to 40 if lower and grants another 10/- resistance to magical damage.
 
 A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
 
@@ -841,7 +864,7 @@ Level 17+: 1d8+5
 
 * Ki Strike: At level 5, the monk's unarmed attack is empowered with ki, and gains +1 enchantment with corresponding bonuses to attack and damage. This enchantment bonus increases by +1 every 3 levels after level 5, up to +5 at level 17.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
-* When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. If the monk is shapeshifted, they will only gain this benefit if their monk level is greater than or equal to the minimum level required to shapeshift into that form.
+* When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. This bonus may not exceed the character's monk level.
 * Stunning Attacks: When this ability is used, all of the monk's unarmed attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half the monk's level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
 * Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
@@ -918,12 +941,9 @@ Advantages:
 * Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted. Shortswords, throwing daggers, darts, shortbows, composite shortbows, light crossbows, slings, clubs and unarmed attacks deal an extra die of sneak attack damage. Melee daggers deal two extra dice of sneak attack damage.
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
-* 6th level: Improved Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
-* 10th level: Bonus Feat. The rogue gains a bonus feat, and also gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist.
-* 13th level: Bonus Feat.
-* 16th level: Bonus Feat.
-* 19th level: Bonus Feat.
-* 22th level: Bonus Feat. This is the last bonus feat, as by this point the rogue can obtain all five of the special feats first obtainable at level 10.
+* 6th level: Improved Uncanny Dodge. Rogues can't be Sneak Attacked by another rogue unless the attacker is higher level.
+* 8th level: Disarm Complex Traps. Rogues of this level or higher are the only characters who can disarm traps with a DC of 20 or higher.
+* 10th level: Bonus Feat. The rogue gains a bonus feat, and also gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist. The rogue gains another bonus feat every 3 levels after level 10.
 * Rogues gain +1 to luck every 5 levels.
 
 Disadvantages:
@@ -961,7 +981,7 @@ Talos the Destroyer is the god of storms and destruction. The bane of many range
 Advantages:
 
 * 5/- Electrical Resistance
-* Talos' Blessing 1/Day (for 5 rounds, all electrical damage dealt by the priest is increased by 30%)~
+* Talos' Blessing 1/Day (for 1 round per cleric level, all electrical damage dealt by the priest's spells and abilities is increased by 30%)~
 @545    = ~BATTLEGUARD OF TEMPUS:
 
 The Lord of Battles, Tempus, is worshipped by warriors across the Faerun. As war can be found in almost every civilized part of the world, so too can the Battleguards of Tempus. Battleguards fight bravely and inspire their comrades to deeds of valor. They are known for their bravery and stubborn nature.
@@ -1018,7 +1038,7 @@ Paladins of Mystra insure that the powers of the goddess of magic are not used f
 Advantages:
 * 2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
 * 6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
-* 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force. This bonus applies to both spells like Fireball and abilities like Smite Evil.~
+* 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin's spells and abilities is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force.~
 @563    = ~MONK OF THE OLD ORDER:
 
 Members of the Old Order do not worship any particular deity, but are fond of philosophical debates and introspection.
@@ -1059,6 +1079,7 @@ Hit Points per Level: 1-4
 Advantages:
 * Proficient with all simple weapons.
 * 6th level: The sorcerer may replace one of their known spells with another spell of the same level. They may do this once again every 2 levels after level 6. The sorcerer can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the sorcerer reaches 6th level), though they can replace 8th-level spells starting at level 20, and 9th-level spells starting at level 22.
+* 16th-level: When the sorcerer uses one or more metamagic abilities, the new level of the spell will be one level lower than it would be otherwise, to a minimum of one level higher than the original level. For example, Empower Spell will only increase the spell's level by 1, while Empower Spell plus Maximize Spell will increase the spell's level by 4.
 
 Disadvantages:
 * Starts with no proficiencies in armor and is very poor at melee combat.~
@@ -1435,7 +1456,7 @@ Your skill with sneak attacks allows you to cause a bleeding wound.
 
 Prerequisite: At least one level of rogue, base attack bonus +4 or higher.
 
-Benefit:  Allows the rogue to sacrifice 1d6 points of sneak attack damage to inflict a bleeding wound that causes deals an extra 10 damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), the rogue sacrifices another 1d6 points to deal another 10 damage over the 10 rounds.~
+Benefit: Gives the rogue an ability that causes their sneak attacks to inflict a bleeding wound that causes deals an extra 10 damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), the rogue deals another 10 damage over the 10 rounds. This ability cannot be active at the same time as Hamstring.~
 @703    = ~Grapple~
 @704    = ~GRAPPLE:
 
@@ -1656,11 +1677,71 @@ Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your u
 
 You are adept at dodging blows.
 
-Prerequisite: Dex 13+. Taking the feat a second time requires Dex 25+, Improved Evasion, and Defensive Roll.
+Prerequisite: Dex 13+. Taking the feat a second time requires 18 levels of rogue, Dex 25+, Improved Evasion, and Defensive Roll.
 
 Benefit: You receive a +1 dodge bonus to armor class against attacks from an opponent.
 
 When taken a second time, the feat also allows you to automatically dodge the first attack that would hit you each round.~
+@731    = ~IMPROVED CRITICAL:
+
+You are especially adept at causing critical hits.
+
+Prerequisite: Base attack bonus +8 or higher.
+
+Benefit: When determining criticals, the base threat range of the weapon being wielded is doubled. An axe will critically hit on a 19-20, a longsword on a 17-20, and a scimitar on a 15-20.~
+@732    = ~Improved Bard Song~
+@733    = ~IMPROVED BARD SONG:
+
+Your bardic music especially resonates with the listeners.
+
+Prerequisite: At least three levels of bard.
+
+Benefit: Any bard song you play that affects allies grants an additional +1 bonus to AC, attack, damage, saving throws, and skill checks. Any bard song you play that affects enemies gains +2 DC.~
+@734    = ~HAMSTRING:
+
+When making a sneak attack, your character can maim their target in such a way that their movement is significantly decreased.
+
+Prerequisite: At least three levels of rogue.
+
+Benefit:  Gives the rogue an ability that causes their sneak attacks to reduce the target's movement speed by 50% for 10 rounds. This is a nonmagical effect that bypasses Freedom of Movement. This ability cannot be active at the same time as Arterial Strike.~
+@735    = ~POWER ATTACK:
+
+You can make exceptionally powerful melee attacks.
+
+Prerequisite: Str 13+
+
+Benefit: On your action, before making attack rolls for a round, you may choose to subtract a number from all melee attack rolls and add the same number to all melee damage rolls, or twice that number if you are wielding a two-handed weapon. This number may not exceed your base attack bonus. The penalty on attacks and bonus on damage apply until your next action.~
+@736    = ~SNAKE BLOOD:
+
+The taint of the yuan-ti runs in your veins.  No outward signs give away your heritage, but you are something more - or less - than entirely human.
+
+Prerequisite: Human
+
+Benefit: Your race changes to yuan-ti pureblood. This race has the following traits:
+
+Favored Class: Ranger
+
+Advantages:
+* +2 Dexterity.
+* +2 Intelligence.
+* +2 Charisma.
+* Spell resistance of 6 + character level.
+* +1 dodge bonus against all creatures.
+* +2 bonus on Fortitude saving throws against poison.
+* +1 bonus on all Reflex saving throws.
+* Free Blind-Fight feat after character creation.
+* Entangle 1/Day.
+* Hold Animal 1/Day.
+* Charm Person 1/Day.
+* Spook 1/Day.
+* Darkness 1/Day.
+* At will, can polymorph self into a giant viper. In this form, the character's attacks will poison the target on a failed Fortitude save. This form becomes more powerful as the character levels up. If the character uses a druid wildshape ability to turn into a giant viper, their druid level is doubled for purposes of determining the power of the form.
+* Darkvision.
+
+Disadvantages:
+* -25% Experience Penalty: Yuan-ti purebloods are slightly more powerful and gain 25% less experience than other races.
+
+Special: You may only take this feat as a 1st-level character.~
 @783    = ~Human~
 @784    = ~HUMAN:
 
@@ -1823,8 +1904,7 @@ Advantages:
 
 
 Disadvantages:
-* -2 Strength.
-~
+* -2 Strength.~
 @801    = ~Deep Gnome~
 @802    = ~DEEP GNOME:
 
@@ -2089,7 +2169,6 @@ Advantages:
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus on Will saves against spells and spell-like abilities.
 * +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
-* +2 to Search checks.
 * Spell resistance of 6 + character level.
 * Immunity to Sleep magic.
 * Proficient with large swords and crossbows (but not bows)
@@ -2114,6 +2193,7 @@ Advantages:
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
 * +4 racial bonus on Move Silently checks. Gray dwarves excel in stealthy movement.
+* Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are especially stable.
 * +4 dodge bonus against giants.
 * Immune to paralysis (still vulnerable to stunning attacks).
 * Invisibility 1/day.
@@ -2143,6 +2223,7 @@ Advantages:
 * Stonecunning: +2 racial bonus on Search checks.
 * +2 racial bonus on Hide checks, which improves to +4 in darkened areas underground.
 * Darkvision.
+* The character's Illusion spells gain +2 DC (stacks with Spell Focus)
 
 Disadvantages:
 * -2 Strength.
@@ -2234,6 +2315,11 @@ Disadvantages:
 * -4 Charisma.
 * -25% Experience Penalty: Deep gnomes are slightly more powerful and gain 25% less experience than other races.
 ~
+@841    = ~USE MAGIC DEVICE (Cha; Trained Only; Bard, Rogue Only):
+
+This skill allows a bard or rogue to use items normally forbidden to them. If the character's skill is greater than or equal to the threshold stated in an item's description, the character can use that item even if they do not meet its class, race, alignment, or ability score requirements. The threshold depends on the base price of the item and other factors.
+
+Wands and scrolls are an exception; if the character cannot use them normally, rather than using the threshold system as above, they must roll a check with this skill. If the character fails to activate the item, that charge is destroyed and the user takes 1-6 points of magical damage per level of the effect they were attempting to invoke.~
 @890    = ~Dodged the attack~
 @891    = ~Which lich appearance would you like to use?~
 @892    = ~Black lich.~
@@ -2253,15 +2339,15 @@ Weight: 1~
 @902    = ~Poison Weapon~
 @903    = ~Knockdown~
 @904    = ~Attempts Knockdown~
-@905    = ~Sneak Attack with Crippling Strike (-1 Str)~
-@906    = ~Sneak Attack with Crippling Strike (-2 Str)~
-@907    = ~Sneak Attack with Crippling Strike (-3 Str)~
-@908    = ~Sneak Attack with Crippling Strike (-4 Str)~
-@909    = ~Sneak Attack with Crippling Strike (-5 Str)~
-@910    = ~Sneak Attack with Crippling Strike (-6 Str)~
-@911    = ~Sneak Attack with Crippling Strike (-7 Str)~
-@912    = ~Sneak Attack with Crippling Strike (-8 Str)~
-@913    = ~Sneak Attack with Crippling Strike (-9 Str)~
+@905    = ~~
+@906    = ~~
+@907    = ~~
+@908    = ~~
+@909    = ~~
+@910    = ~~
+@911    = ~~
+@912    = ~~
+@913    = ~~
 @914    = ~Sneak Attack with Crippling Strike (-10 Str)~
 @915    = ~Attempts Trip Attack~
 @916    = ~Attempts Grapple~
@@ -2278,16 +2364,26 @@ Weight: 1~
 @927    = ~Shield Other~
 @928    = ~Enlarge Self~
 @929    = ~Death Attack~
-@930    = ~Death Attack with Crippling Strike (-1 Str)~
-@931    = ~Death Attack with Crippling Strike (-2 Str)~
-@932    = ~Death Attack with Crippling Strike (-3 Str)~
-@933    = ~Death Attack with Crippling Strike (-4 Str)~
-@934    = ~Death Attack with Crippling Strike (-5 Str)~
-@935    = ~Death Attack with Crippling Strike (-6 Str)~
-@936    = ~Death Attack with Crippling Strike (-7 Str)~
-@937    = ~Death Attack with Crippling Strike (-8 Str)~
-@938    = ~Death Attack with Crippling Strike (-9 Str)~
-@939    = ~Death Attack with Crippling Strike (-10 Str)~
+@930    = ~Entangle
+
+When an Entangle spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. It causes vines to sprout forth from the ground to wrap, twist, and entwine any creatures in the area of effect, preventing movement. Creatures must make a Reflex save every round in order to move through the entangled area. The DC is 11 + half level + Charisma bonus. Entangled creatures can still perform normal actions but cannot move and suffer a -2 penalty to Armor Class and attack rolls, as well as a 50% chance of spell failure. All creatures within the area of effect who make their Reflex save move at half rate.~
+@931    = ~Charm Person
+
+This spell charms a single humanoid of man-size or smaller for 5 rounds. The person receives a Will save to avoid the effect; the DC is 11 + half level + Charisma bonus. If the spell recipient fails their saving throw, they regards the caster as a trusted friend and ally to be heeded and protected. The caster may give them orders, and the charmed individual will carry them out as quickly as possible.~
+@932    = ~Spook
+
+A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful Will save, it panics for 3 rounds. The base DC is 11 + Charisma bonus, though it also gets +1 for every two experience levels of the caster, to a maximum of +6 at 12th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Spook does not affect undead or constructs.~
+@933    = ~Hold Animal
+
+This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as remorhazes. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. The DC is 12 + half level + Charisma bonus. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@934    = ~Polymorph: Giant Viper~
+@935    = ~Polymorph: Giant Viper
+
+The character shapeshifts into a giant viper. While in giant viper form, the character's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). At level 12 and every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +1 AC, and the save DC against its poison increases by 3.~
+@936    = ~~
+@937    = ~~
+@938    = ~~
+@939    = ~~
 @940    = ~Skills represent a variety of abilities, and you get better at them as you go up in level.  You have been given skill points to distribute among your skills.~
 @941    = ~Grapple
 
@@ -2353,7 +2449,7 @@ This metamagic prevents the next spell you cast from harming allies. It will tak
 This metamagic increases the damage, healing, and number of creatures summoned by the next spell you cast by 50% (rounded down). It will take up a spell slot two levels higher. Metamagic abilities can be used as a free action any number of times per day.~
 @963    = ~Quicken Spell
 
-This metamagic allows you to instantly cast your next spell, even if you've already cast a spell for the round. It will take up a spell slot two levels higher. You may only quicken one spell per round. Metamagic abilities can be used as a free action any number of times per day.~
+This metamagic allows you to instantly cast your next spell, even if you've already cast a spell for the round. It will take up a spell slot four levels higher. You may only quicken one spell per round. Metamagic abilities can be used as a free action any number of times per day.~
 @964    = ~Persistent Spell
 
 This metamagic causes the next spell you cast to last 8 hours. It will take up a spell slot six levels higher. Persistent Spell cannot affect spells that have a base duration of less than five rounds. Metamagic abilities can be used as a free action any number of times per day.~
@@ -2377,7 +2473,7 @@ By using this ability, the paladin will attempt to smite evil with their next me
 Upon completion of this ability, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead creatures and monsters vulnerable to bright light take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Fortitude save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save).~
 @971    = ~Darkness
 
-This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
+This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. The DC is 12 + half level + Charisma bonus. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
 @972    = ~Invisibility
 
 This ability turns the character invisible and makes them undetectable by normal vision or darkvision. The spell remains in effect until 10 minutes per level have expired, it is magically broken or dispelled, or until the character talks to or attacks any creature. Thus they can open doors, eat, climb stairs, etc., but if they attack or cast a spell, they immediately become visible (although the invisibility enables them to attack first).~
@@ -2395,7 +2491,7 @@ When this ability is used, all of the character's unarmed attacks in the next ro
 This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + Wisdom modifier + half the monk's level). Constructs and undead cannot be affected.~
 @977    = ~Barbarian Rage
 
-By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
+By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds. If the character has at least 5 barbarian levels, the rage also lasts a number of additional rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
 @978    = ~Greater Barbarian Rage
 
 By entering a rage, the barbarian gains +6 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +3 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
@@ -2417,8 +2513,12 @@ With this ability, the monk can regain hit points equal to their monk level time
 This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.
 
 When used by a Monk of the Dark Moon, Darkness has a DC of 15 + Wisdom bonus + half the character's monk level. Any other Darkness spell or ability used by a Monk of the Dark Moon also gains a bonus to DC equal to half the character's monk level.~
-@985    = ~~
-@986    = ~~
+@985    = ~Imbue Arrow~
+@986    = ~Imbue Arrow
+
+If you use this ability and then attempt to cast an offensive ranged wizard or sorcerer spell of 5th-level or lower that involves a projectile traveling from the caster, instead of being cast, it will be stored in an arrow that is created in an empty ammo slot (consuming a use of the spell). That arrow has an enchantment equal to the level of the spell. When fired, the arrow uses the same projectile and area of effect as the spell, and deals the physical damage of the arrow in addition to the effects of the spell (as if cast at the character's wizard or sorcerer level with the same DC) to all creatures it hits. 
+
+The following spells can be imbued: Magic Missile, Chromatic Orb, Larloch's Minor Drain, Ice Dagger, Melf's Acid Arrow, Agannazar's Scorcher, Snilloc's Snowball Swarm, Ray of Enfeeblement, Flame Arrow, Fireball, Lightning Bolt, Skull Trap, Icelance, Lance of Disruption, Mordenkainen's Force Missiles, Shout, Vitriolic Sphere, Cone of Cold, and Symbol of Pain.~
 @987    = ~~
 @988    = ~~
 @989    = ~~

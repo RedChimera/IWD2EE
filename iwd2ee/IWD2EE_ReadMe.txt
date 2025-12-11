@@ -50,9 +50,9 @@ Components:
 29. Revise level adjustment/ECL
 30. Enemies give the same amount of experience regardless of the party's level
 31. Adjust encounter level-scaling
-32. Reduce enemy HP bonuses in Heart of Fury Mode
-33. Reduce enemy attack bonuses in Heart of Fury Mode
-34. Reduce enemy saving throw bonuses in Heart of Fury Mode
+32. Adjust enemy HP bonuses in Heart of Fury Mode
+33. Adjust enemy attack bonuses in Heart of Fury Mode
+34. Adjust enemy saving throw bonuses in Heart of Fury Mode
 35. Weaken allied summoned creatures in Heart of Fury Mode
 36. Have the party start with experience in Heart of Fury Mode
 37. Reduce the delay between sneak attacks
@@ -75,6 +75,7 @@ The core component must be installed for any other component to be installed. It
 * There is now a quickloot button.
 * Right-clicking a spell or innate ability on the actionbar brings up its description (though most innate abilities don't have descriptions unless Class Revisions is installed).
 * You can now go through dialogue as fast as you want; there's no longer a brief delay each time you choose a dialogue option.
+* Many cutscenes can be skipped by pressing ESC.
 * The time it takes to detect traps is reduced.
 * The character record screen includes a Reform Party button.
 * The options screen includes a button to access the new IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker).
@@ -92,17 +93,17 @@ Barbarians: Barbarian rage now grants immunity to fear, hopelessness, stun, para
 
 Bards: Bard songs should be more useful now. They're also spread out over more levels and scale with levels so bards no longer reach their peak at level 11. The songs can stack, but only if multiple bards sing at the same time.
 
-Level 1: The Tale of Currant Strongheart: +1 to hit and damage and immunity to fear and hopelessness. Gains another +1 to hit and damage at levels 10, 25 and 40.
+Level 1: The Tale of Currant Strongheart: +1 to hit and damage and immunity to fear and hopelessness. Gains another +1 to hit and damage at level 5 and every 5 levels thereafter.
 
 Level 3: The Song of Kaudies: All allies are immune to harmful sound-based spells and abilities.
 
-Level 5: Tymora's Melody: +1 luck, +2 to saving throws and rogue skills. Gives another +1 to luck and +2 to saving throws and rogue skills at levels 15 and 35.
+Level 5: Tymora's Melody: +1 luck, +2 to saving throws and rogue skills. Gives another +1 to luck and +2 to saving throws and rogue skills at level 15 and every 10 levels thereafter.
 
-Level 9: The Siren's Yearning: All enemies must make a Will save or be stunned for 1 round or until they take damage. The save DC is equal to the bard's level. This song also imposes a cumulative -1 penalty to Will saves for 10 rounds, every round.
+Level 9: The Siren's Yearning: When played, every enemy that hears the song must make a Will save or be enthralled, unable to take action for one round or until they take damage. The Will save DC is equal to 10 + 1/2 bard level + Charisma bonus.
 
-Level 13: The War Chant of Sith: +2 generic armor bonus, physical damage resistance of 3/-, and 3 HP healed every round. Increases to +4 AC, 6/- damage resistance, and 6 HP healed every round at level 25.
+Level 13: The War Chant of Sith: +2 generic armor bonus, physical damage resistance of 3/-, and 3 HP healed every round. At level 18 and every 10 levels thereafter, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
 
-Level 20: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. Increases to +10 spell resistance and 10/- resistance to magical damage at level 28.
+Level 40: The Ballad of Three Heroes: 10/- resistance to all forms of magical damage, spell resistance set to 35 if lower, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 50, this song sets spell resistance to 40 if lower and grants another 10/- resistance to magical damage.
 
 Creature Revisions also makes it so enemies early on use more sound-based spells and abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
 
@@ -145,7 +146,8 @@ Monk of the Broken Ones:
 6th level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance is gained every 4 levels thereafter.
 
 Monk of the Dark Moon:
-2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.
+2nd level: The monk gains one use of Darkness per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Darkness. The DC is equal to 15 + Wisdom bonus + half the character's monk level. The monk also adds half their monk level to the DC of any other Darkness spell or ability they cast. The monk can see perfectly even in magical darkness.
+10th level: The monk gains +1 damage against any enemy that is blinded or has their vision impaired by a Darkness effect. For every 8 monk levels after level 10, the monk gains another +1 damage against enemies in these situations.
 
 Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and can get Greater Weapon Focus in a weapon at level 8 and Greater Weapon Specialization at level 12. All warriors get better saving throws and stronger attacks.
 
@@ -170,7 +172,7 @@ Paladin of Mystra:
 
 Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now scales with the ranger's Wilderness Lore skill.
 
-Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth.
+Sorcerers: At level 16, Sorcerers become better at using the metamagic feats added by this component, gaining the ability the use metamagic without increasing the level of the spell as much. Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth.
 
 Wizards: Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
 
@@ -422,17 +424,35 @@ Icewind Dale 2 encounters often have additional enemies for a higher-level party
 
 Note that this component does almost nothing in a Heart of Fury playthrough or a solo run, because in those playthroughs your character(s) are usually high enough level to trigger the high-level encounters anyway.
 
---Reduce the HP bonuses of creatures in Heart of Fury Mode--
+--Adjust the HP bonuses of creatures in Heart of Fury Mode--
 
-Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
+Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! The first subcomponent reduces the HP of most enemies in Heart of Fury Mode, though it increases the HP of a small number of extremely high-level enemies. This subcomponent is designed for a party starting HoF at a low level. Here are the cutoff points, based on a creature's original level prior to receiving HoF bonuses:
 
---Reduce the attack bonuses of creatures in Heart of Fury Mode--
+1-19: Decreased HP. Very low-level enemies like goblins will have significantly decreased HP.
+25+: Increased HP.
 
-Enemies in Heart of Fury Mode have such high attack bonuses that it's near impossible for them to miss except on a 1. This component gives creatures outside the party a -9 attack penalty on Heart of Fury Mode. They will still have higher attack bonuses than they do on the next-hardest difficulty, but it won't be quite as extreme.
+The second subcomponent only applies the HP increase on extremely high-level enemies.
 
---Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode--
+--Adjust the attack bonuses of creatures in Heart of Fury Mode--
 
-Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail saving throws if you're starting as a low-level party. This component gives a small saving throw penalty to creatures outside the party on Heart of Fury Mode.
+The first subcomponent is aimed at allowing parties starting HoF at a low level to have a chance at getting enough AC on a character to be able to dodge enemy attacks at least some of the time. It decreases the attack bonuses of low-level enemies on HoF, but starts increasing the attack of high-level enemies beyond vanilla HoF as by that point the party is very high level and has plenty of tools at their disposal to increase AC. Here are the cutoff points, based on a creature's original level prior to receiving HoF bonuses:
+
+1-4: -12 attack.
+5-9: -6 attack.
+15-19: +6 attack.
+20+: +12 attack.
+
+The second subcomponent only applies the attack increases on level 15+ enemies.
+
+--Adjust the Saving Throw bonuses of creatures in Heart of Fury Mode--
+
+Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail saving throws if you're starting as a low-level party. The first subcomponent gives a small saving throw penalty to low-level enemies on Heart of Fury Mode, though it starts to increase saving throws on higher-level enemies beyond vanilla HoF, as by that point the enemies need to have more of a defense against spells like Wail of the Banshee or Mass Domination that just instantly win a fight if everybody fails their save. Here are the cutoff points, based on a creature's original level prior to receiving HoF bonuses:
+
+1-9: -3 to all saves.
+15-19: +3 to all saves.
+20+: +6 to all saves.
+
+The second subcomponent only applies the save increases on level 15+ enemies.
 
 --Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode--
 
@@ -611,6 +631,8 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 @paladin, klichko86, and rytomen translated IWD2EE into Russian.
 
 @WillScarlettOhara translated IWD2EE into French.
+
+@DanielCarvalho translated IWD2EE into Portuguese.
 
 Andrii Shafetov - aka @ashafetov - created IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.
 

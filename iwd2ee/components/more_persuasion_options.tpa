@@ -36,6 +36,7 @@ COMPILE ~%mod_folder%/dlg/USDLPMOD.d~
 COPY_EXISTING ~63RUINL.cre~ ~override/USSTSHRL.cre~
 	SAY NAME1 @4001
 	SAY NAME2 @4001
+	WRITE_ASCII scriptname ~USSTSHRL~ #32
 	WRITE_ASCII teamscript ~00T02ET~ #8
 	WRITE_ASCII combatscript ~62NORSHC~ #8
 	WRITE_ASCII movementscript ~00T02M~ #8
@@ -59,3 +60,23 @@ END
 
 >>>>>>>>
 EXTEND_BOTTOM ~BALDUR.bcs~ ~.../script.baf~
+
+COPY_EXISTING ~AR6305.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~\([^t]Global(\"StartCutscene_63cFB01\",\"MYAREA\",1)\)~ ~\1
+Global("US_Argos_Bluff","GLOBAL",0)~
+	END
+
+<<<<<<<< .../script.baf
+IF
+	Global("StartCutscene_63cFB01","MYAREA",1)
+	Global("US_Argos_Bluff","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("StartCutscene_63cFB01","MYAREA",2)
+		SetGlobal("SH_Teleported_To_6303","GLOBAL",2)
+		StartCutScene("USCFB01")
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~ar6305.bcs~ ~.../script.baf~

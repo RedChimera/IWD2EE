@@ -153,8 +153,9 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 		local resource = IEex_ReadLString(pEffect + 0x2C, 8)
 		local savingthrow = IEex_ReadDword(pEffect + 0x3C)
 		local special = IEex_ReadDword(pEffect + 0x44)
+		local resist_dispel = IEex_ReadDword(pEffect + 0x58)
 		local parent_resource = IEex_ReadLString(pEffect + 0x90, 8)
-		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Parameter3: " .. parameter3 .. ", Special: " .. special .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
+		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Parameter3: " .. parameter3 .. ", Special: " .. special .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Dispel Resistance: " .. resist_dispel .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
 	end
 	if IEex_IsSprite(sourceID, true) then
 		local sourceData = IEex_GetActorShare(sourceID)
@@ -251,10 +252,10 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local targetID = IEex_GetActorIDShare(creatureData)
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
 		local opcode = IEex_ReadDword(effectData + 0xC)
+		if opcode == 40 or opcode == 74 then return true end
 --[[
 		if targetID == IEex_GetActorIDCharacter(0) then
 
-			IEex_DS(opcode)
 			if opcode == 20 then
 				IEex_PrintData(effectData, 0xD0)
 			end
@@ -296,6 +297,11 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local resist_dispel = IEex_ReadDword(effectData + 0x58)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
 		local weaponEnchantment = 0
+		if resist_dispel == 1 then
+			local resourceFlags = IEex_ReadDword(effectData + 0x98)
+			resourceFlags = bit.band(resourceFlags, 0xFFFFFBFF)
+			IEex_WriteDword(effectData + 0x98, resourceFlags)
+		end
 --[[
 		if opcode == 500 and resource == "MECOPYEQ" then
 			local effectIndex = parameter1
@@ -589,7 +595,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 								local thespecial = IEex_ReadDword(eData + 0x48)
 								damageMultiplier = damageMultiplier + theparameter1
 								local theresource = IEex_ReadLString(eData + 0x30, 8)
-								if (theresource == "" or theresource == parent_resource) and (bit.band(thesavingthrow, 0x20000) == 0 or bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000)) then
+								if (theresource == "" or theresource == parent_resource) and (bit.band(thesavingthrow, 0x20000) == 0 or bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000)) and bit.band(thesavingthrow, 0x40000) == 0 then
 									if bit.band(thesavingthrow, 0x100000) == 0 then
 										damageMultiplier = damageMultiplier + thespecial
 									else
@@ -1087,7 +1093,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				IEex_WriteDword(effectData + 0x24, duration)
 			end
 		end
-
 	end)
 
 	IEex_ScreenEffectsStats_Init = function(stats)

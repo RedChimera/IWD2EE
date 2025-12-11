@@ -135,7 +135,7 @@ STATISTICS:
 
 Generic Armor Bonus: +1
 Special:
- All fire damage dealt by the wearer is increased by 15%
+ Fire damage dealt by the wearer's spells and abilities is increased by 15%
  Spell Power:  Can cast the spell Fireball (at level 10) three times per day
 Weight: 1 lb.~
 //@10050    = ~Sunfire Talisman~
@@ -146,7 +146,7 @@ STATISTICS:
 Generic Armor Bonus: +3
 Special:
  Resistance: 30/-  Fire Resistance
- All fire damage dealt by the wearer is increased by 30%
+ Fire damage dealt by the wearer's spells and abilities is increased by 30%
  Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
 Weight: 1 lb.~
 //@10052    = ~Gohoin's Charm~
@@ -524,7 +524,7 @@ Weight: 0 lb.~
 STATISTICS:
 
 Resistance:  50/- Cold Resistance
-All cold damage dealt by the wearer is increased by 30%
+Cold damage dealt by the wearer's spells and abilities is increased by 20%
 Weight: 0 lb.~
 //@10148    = ~Ring of Greater Regeneration~
 @10149    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -560,7 +560,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Spell Resistance: Set to 18
+Spell Resistance: Set to 22 if lower
 Weight: 0 lb.~
 @10158    = ~Ring of Cold Resistance~
 @10159    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -624,25 +624,25 @@ In any event, the Circle of Ice died a quick, silent death in Luskan, but the me
 
 These small bands of Cold Reflection appear to be made of crystallized ice, very cold to the touch, and they cannot be seen by a wizard unless the wizard knows they are there. 
 
-If your band contains one that fancies him or herself a wizard slayer, perhaps these rings may be used for the purpose they were intended... but without the shortsightedness of foolish merchants handicapping your efforts. 
+If your band contains one that fancies him or herself a wizard slayer, perhaps these rings may be used for the purpose they were intended... but without the shortsightedness of foolish merchants handicapping your efforts.
  
 STATISTICS:
 
-Spell Resistance: Set to 20
+Spell Resistance: Set to 26 if lower
 Weight: 0 lb.~
 //@10174    = ~Cold Steel Reflection~
 @10175    = ~During the formation of the Circle of Ice resistance movement against the wizards of the Hosttower of the Arcane, many special rings were forged for the wizard slayers of the organization to help them fend off the magical powers of their opponents. 
 
 The organization and the forging of the rings was sponsored by a merchant from Waterdeep whose name has been burned from the annals of history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
 
-There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander. 
+There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander.
 
 This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself. 
 
 STATISTICS:
 
 Special:
-  Spell Resistance: Set to 32
+  Spell Resistance: Set to 36 if lower
   Spell Power:  Can cast the 6th level Wizard Spell Globe of Invulnerability (at level 30) once per day
 Weight: 0 lb.~
 @10176    = ~Harshom's Ring of Summoning~
@@ -834,9 +834,9 @@ After several months of studying the various effects of wilting magic, elemental
 
 STATISTICS:
 
-Armor Class:  +5 (armor)
+Armor Class:  +3 (armor)
 Special:
-  Cold and magic damage dealt by the wearer from most sources is increased by 20%
+  Cold and magic damage dealt by the wearer's spells and abilities is increased by 20%
 Weight:  3 lb.~
 //@10238    = ~Elven Sewn Gloves~
 //@10239    = ~Item description can remain the same; if new description is needed put it here~
@@ -874,9 +874,9 @@ Many of these bands were scattered throughout Faerun in the wake of the destruct
 STATISTICS:
 
 Damage reduction 5/+1
-Focus: Wearer deals maximum damage with each hit
+Focus: If the wearer has 15 or more levels of fighter or monk, they deal maximum damage with each hit
 Weight: 1 lb.
-Minimum Wisdom of 14 Required~
+Minimum Wisdom of 13 Required~
 //@10250    = ~Bands of the Master~
 @10251    = ~When the last kensei of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh. The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensei.
 
@@ -888,9 +888,9 @@ STATISTICS:
 
 Attack Bonus: +3
 Damage Bonus: +3
-Focus: Wearer deals maximum damage with each hit
+Focus: If the wearer has 20 or more levels of fighter or monk, they deal maximum damage with each hit
 Weight: 1 lb.
-Minimum Wisdom of 16 Required~
+Minimum Wisdom of 13 Required~
 //@10252    = ~The Lions of Arkamadis~
 @10253    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis. Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
 
@@ -1008,14 +1008,14 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Electrical damage dealt by wearer from most sources is increased by 20%
+Electrical damage dealt by wearer's spells and abilities is increased by 15%
 Weight: 3 lb.~
 @10284    = ~Conductive Arcs of Disredain~
 @10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
 
 STATISTICS:
 
-Electrical damage dealt by wearer from most sources is increased by 40%
+Electrical damage dealt by wearer's spells and abilities is increased by 30%
 Weight: 3 lb.~
 //@10286    = ~Black Goat Girdle~
 @10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects. Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
@@ -1420,6 +1420,7 @@ Generic Armor Bonus:  +4
 Special:
   Resistance: 15/- Cold Resistance
   White Wyrm's Breath: breathe a cone of frost for 16d8 points of cold damage (Reflex DC 24 + twice wearer's Charisma bonus for half) 1/day
+  All cone of cold projectiles (including breath attacks) emitted from the wearer have significantly increased area of effect
 Weight: 3 lb.~
 
 //@10383    = ~Wizard Robe of Cold Resistance~
@@ -1428,7 +1429,7 @@ Weight: 3 lb.~
 STATISTICS:
 
 Resistance:  20/- Cold Resistance
-All cold damage dealt by the character is increased by 20%
+All cold damage dealt by the character's spells and abilities is increased by 20%
 Weight:  3 lb.~
 //@10385    = ~Knave's Robe~
 @10386    = ~A favorite among thief-wizards, the Knave's Robe has been enchanted to shield its wearer from the blades and poisons of any darkened alley.
@@ -1456,7 +1457,7 @@ STATISTICS:
 
 Armor Class:  +5 vs. Bludgeoning
 Saving Throw Bonus:  +5 on Will saves
-Safe Spells: When the wearer casts an area of effect spell, allies make saving throws against the spell with -5 DC and will take no damage on a successful save, or half damage on a failed save.
+Safe Spells: When the wearer casts an area of effect spell, allies make saving throws against the spell with -5 DC.
 Weight:  4 lb.~
 //@10391    = ~Robe of the Good Archmagi~
 @10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.
@@ -1464,7 +1465,7 @@ Weight:  4 lb.~
 STATISTICS:
 
 Generic Armor Bonus: +5
-Spell Resistance: +10
+Spell Resistance: Set to 25 if lower
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
 Weight:  6 lb.~
@@ -1474,7 +1475,7 @@ Weight:  6 lb.~
 STATISTICS:
 
 Generic Armor Bonus: +5
-Spell Resistance: +10
+Spell Resistance: Set to 25 if lower
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
 Weight:  6 lb.~
@@ -1484,7 +1485,7 @@ Weight:  6 lb.~
 STATISTICS:
 
 Generic Armor Bonus: +5
-Spell Resistance: +10
+Spell Resistance: Set to 25 if lower
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
 Weight:  6 lb.~
@@ -1494,7 +1495,7 @@ Weight:  6 lb.~
 STATISTICS:
 
 Resistance:  20/- Fire Resistance
-All fire damage dealt by the character is increased by 20%
+All fire damage dealt by the character's spells and abilities is increased by 20%
 Weight:  3 lb.~
 //@10399    = ~Wizard Robe of Electrical Resistance~
 @10400    = ~While seen with less frequency than some other Wizard Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind.
@@ -1502,7 +1503,7 @@ Weight:  3 lb.~
 STATISTICS:
 
 Resistance:  20/- Electrical Resistance
-All electrical damage dealt by the character is increased by 20%
+All electrical damage dealt by the character's spells and abilities is increased by 20%
 Weight:  3 lb.~
 //@10401    = ~Robe of Enfusing~
 @10402    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
@@ -1777,7 +1778,7 @@ Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  Spell Resistance: Set to 12
+  Spell Resistance: Set to 15 if lower
 Weight: 10 lb.~
 @10455    = ~Shadowed Leather Armor +1~
 @10456    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe. That kind of leather offers no better protection than common clothing. Magical enchantments enhance the protective abilities of this leather armor.
@@ -2502,6 +2503,7 @@ Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
   Resistance: 5/- Magic Damage Resistance
+  Spell Resistance: Set to 21 if lower
   Light Weight
 Weight: 20 lb.~
 @10561    = ~Duergar-Forged Armor of Warding +6~
@@ -2516,7 +2518,7 @@ Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
   Resistance: 10/- Magic Damage Resistance
-  Spell Resistance: +5
+  Spell Resistance: Set to 32 if lower
   Light Weight
 Weight: 20 lb.~
 //@10563    = ~Owl's Feather~
@@ -2725,7 +2727,7 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  +2 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
+  Evil creatures have a -2 penalty to hit the wearer, and the save DC of their spells and abilities used against the wearer is reduced by 2 (stacks with Protection from Evil)
   Spellward: Immunity to Unholy Blight and Blasphemy
 Weight: 50 lb.~
 @10587    = ~Celestial Aura~
@@ -2743,7 +2745,7 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  +4 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
+  Evil creatures have a -4 penalty to hit the wearer, and the save DC of their spells and abilities used against the wearer is reduced by 4 (stacks with Protection from Evil)
   Wearer is under the effect of Holy Aura
   Resistance: 20/- Fire Resistance
   Saving Throw Bonus: +3 to Fortitude saves
@@ -2801,7 +2803,7 @@ STATISTICS:
 
 Shield Bonus: +6
 Special:
-  Spell Resistance: Set to 18
+  Spell Resistance: Set to 22 if lower
   Attack Penalty: -2
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
@@ -2845,14 +2847,14 @@ Special:
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 15 lb.~
-@10613    = ~Large Shield of Electrical Resistance +4~
+@10613    = ~Large Shield of Spell Cover +4~
 @10614    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
 Shield Bonus: +6
 Special:
-  Resistance: 30/- electrical resistance
+  The bearer is unaffected by harmful area of effect spells cast by their allies
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 6 lb.~
@@ -3319,15 +3321,17 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-@10713    = ~Dagger of Lesser Spell Resistance~
-@10714    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+@10713    = ~Dagger of Sneak Attacks +1~
+@10714    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.
 
 STATISTICS:
 
-Damage:  1d4
+Damage:  1d4 + 1
+Attack Bonus:  +1
+Enchantment:  +1
 Damage Type:  Piercing
 Special:
-  Spell Resistance: Set to 12
+  Sneak attacks deal an additional 1d6 damage
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3626,8 +3630,7 @@ Attack Bonus: +2
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  Shield Bonus: +6 
-  Spell Resistance: +5
+  Shield Bonus: +6
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -4269,8 +4272,8 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
-//@10873    = ~Longsword of Resistance +1~
-@10874    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10873    = ~Longsword +1, Defender~
+@10874    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting.
 
 STATISTICS:
 
@@ -4279,7 +4282,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Slashing
 Special:
-  Spell Resistance: Set to 13
+  Generic Armor Bonus: +2
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4440,7 +4443,7 @@ Type:  One-handed~
 //@10893    = ~"Cera Sumat," Holy Avenger~
 @10894    = ~The holy avenger is the paladin's ultimate weapon against the forces of evil. There are few creatures on the Lower Planes that would not hesitate to confront a holy warrior wielding such a weapon... and this one, perhaps more so than others. Once, it was nothing more than a simple iron sword, but through the courage and faith of one man, it became something more.
 
-The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child. 
+The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child.
 
 The times in which Old Duke Ehld lived were ones of great upheaval, and the servitors of Bane were strong, crushing all that stood in their way. Entire kingdoms feared their wrath, and to speak out against them meant death, so many remained silent and turned their eyes from the evils of Bane and his servants. 
 
@@ -4471,7 +4474,7 @@ Attack Bonus: +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
-  Spell Resistance: Set to 26
+  Spell Resistance: Set to 30 if lower
   Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
   Dispelling: Dispel Magic on target with each hit (Will DC 21). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
@@ -4511,7 +4514,7 @@ Attack Bonus: +10
 Enchantment:  +10
 Damage Type:  Slashing
 Special:
-  Spell Resistance: Set to 38
+  Spell Resistance: Set to 40 if lower
   Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
   Dispelling: Dispel Magic on target with each hit (Will DC 32). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
@@ -4871,8 +4874,7 @@ Damage:  1d6
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
-  Flame: +3d6 fire damage
-  Spell Resistance: +10
+  Flame: +4d6 fire damage
   Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
@@ -4914,7 +4916,7 @@ Enchantment:  +1
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit has a 10% chance to create a Goodberry in the wielder's third quick item slot
+  Each hit has a 10% chance to create a Goodberry in one of the wielder's quick item slots, or in a regular inventory slot if there are no empty quick item slots
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4929,7 +4931,7 @@ Enchantment:  +3
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit has a 20% chance to create a Goodberry in the wielder's third quick item slot
+  Each hit has a 20% chance to create a Goodberry in one of the wielder's quick item slots, or in a regular inventory slot if there are no empty quick item slots
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -5357,7 +5359,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Spell Resistance: +10
+  Spell Resistance: Set to 37 if lower
   Lower Resistance: Each hit lowers the target's Spell Resistance by 5 for 10 rounds (Will DC 37, cumulative)
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
@@ -5438,12 +5440,12 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Magic damage dealt by wearer from most sources is increased by 30%
+  Electrical damage dealt by the wearer's spells and abilities is increased by 20%
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
-@11081    = ~Delnar's Magic Staff~
-@11082    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Magic Staff is notable for the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+@11081    = ~Delnar's Lightning Staff~
+@11082    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Lightning Staff is notable for the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
 
 STATISTICS:
 
@@ -5452,7 +5454,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Magic damage dealt by wearer from most sources is increased by 50%
+  Electrical damage dealt by the wearer's spells and abilities is increased by 40%
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -8002,7 +8004,7 @@ Special:
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
-@11577    = ~Hammer of Spell Resistance +3~
+@11577    = ~Hammer of Resistance +3~
 @11578    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. 
 
 STATISTICS:
@@ -8012,7 +8014,9 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
-  Spell Resistance: Set to 17
+  Resistance: 4/- Slashing Resistance
+  Resistance: 4/- Piercing Resistance
+  Resistance: 4/- Bludgeoning Resistance
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
@@ -8866,7 +8870,7 @@ Attack Bonus: +2
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-//@11749    = ~Spellward Longbow +2~
+@11749    = ~Longbow of Acid and Flame +2~
 @11750    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
@@ -8874,7 +8878,7 @@ STATISTICS:
 Damage:  +3 (missile)
 Attack Bonus: +2
 Special:
-  Spell Resistance: Set to 15
+  Any instance of fire or acid damage from the wielder's spells, abilities or ammunition deals an additional 5 points of damage (for sources that deal fire or acid damage multiple times, this damage is added each time).
   Spellward: Protection from the spells Melf's Acid Arrow and Flame Arrow
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -8951,7 +8955,7 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11763    = ~Sophia's Flight +2~
+@11763    = ~Sophia's Flight~
 @11764    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast. According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course). Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow. As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time. The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
 
 The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
@@ -8961,12 +8965,14 @@ Whatever the tale, the bow has a range unmatched by many other bows in the realm
 STATISTICS:
 
 Damage:  +3 (missile)
-Attack Bonus:  +4
-Special: Half again the range of a normal bow.
+Attack Bonus:  +2
+Special: 
+  Half again the range of a normal bow
+  Composite: Gains Strength bonus to damage, up to a maximum of +4
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11765    = ~Sophia's Arc +5~
+@11765    = ~Sophia's Arc~
 @11766    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast. According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course). Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow. As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time. The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
 
 The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
@@ -8976,8 +8982,10 @@ Whatever the tale, the bow has a range unmatched by many other bows in the realm
 STATISTICS:
 
 Damage:  +6 (missile)
-Attack Bonus:  +8
-Special: Half again the range of a normal bow.
+Attack Bonus:  +5
+Special:
+  Half again the range of a normal bow.
+  Composite: Gains Strength bonus to damage, up to a maximum of +7
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -9758,13 +9766,13 @@ Special:
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
 Type:  One-handed~
-//@11901    = ~Sling of Spell Resistance~
-@11902    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+@11901    = ~Sling of Magic Force~
+@11902    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends.
 
 STATISTICS:
 
 Special:
-  Spell Resistance: Set to 12
+  Magic Force: Bullets fired from this sling deal +1d4 magic damage
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
 Type:  One-handed~
@@ -9822,7 +9830,7 @@ STATISTICS:
 Damage:  +5 (missile)
 Attack Bonus:  +5
 Special:
-  Gains Wisdom bonus to attack and damage
+  Gains Wisdom bonus to attack
   Spell Power: Can cast the spell Greater Restoration 1/Day
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
@@ -11885,7 +11893,7 @@ Weight: 2 lb.~
 STATISTICS:
 
 Light Armor
-Armor Bonus: +10
+Armor Bonus: +9
 Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
@@ -12115,7 +12123,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Spell Power: Can cast Black Blade of Disaster (lasting 30 rounds) 1/Day
+Spell Power: Can cast Black Blade of Disaster (lasting 30 rounds) 1/Day. If the character has at least 17 levels of ranger, they instead create a Black Blade of Disaster in each hand.
 Weight: 0 lb.~
 @12521    = ~Ring of Maximizing~
 @12522    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -12129,7 +12137,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Fire damage dealt by wearer from most sources is increased by 50%
+Fire damage dealt by wearer's spells and abilities is increased by 50%
 Resistance:  25/- Fire Resistance
 Weight:  3 lb.~
 @12525    = ~Robe of Vecna~
@@ -12175,7 +12183,7 @@ STATISTICS:
 
 Shield Bonus: +9
 Special:
-  Spell Resistance: Set to 24
+  Spell Resistance: Set to 28 if lower
   Attack Penalty: -2
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
@@ -12202,7 +12210,7 @@ Special:
 Armor Check Penalty:  -1
 Arcane Spell Failure:  5%
 Weight:  1 lb.~
-@12537    = ~Haste Shield +5~
+@12537    = ~Shield of Speed +5~
 @12538    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
@@ -12210,7 +12218,7 @@ STATISTICS:
 Shield Bonus: +6
 Armor Bonus:  +1 vs. missile weapons
 Special:
-  Constant Effect: Bearer is under the effects of the spell Haste
+  Speed: 1 additional attack per combat round
 Armor Check Penalty:  -1
 Arcane Spell Failure:  5%
 Weight: 3 lb.~
@@ -12556,13 +12564,13 @@ Arcane Spell Failure:  0%
 Special:
   Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
 Weight: 9 lb.~
-@12591    = ~Exquisite Black Swan Armor +5~
+@12591    = ~Exquisite Black Swan Armor +3~
 @12592    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced. This suit of armor was one of them. Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers. The armor was later stolen from the Hand by Maiden Ilmadia.
 
 STATISTICS:
 
 No Armor Proficiency Required
-Armor Bonus: +12
+Armor Bonus: +10
 Max Dex Bonus:  None
 Armor Check Penalty:  -0
 Arcane Spell Failure:  0%
@@ -13122,9 +13130,9 @@ After several months of studying the various effects of wilting magic, elemental
 
 STATISTICS:
 
-Armor Class:  +10 (armor)
-Special:  
-  Cold and magic damage dealt by the wearer from most sources is increased by 40%
+Armor Class:  +7 (armor)
+Special:
+  Cold and magic damage dealt by the wearer's spells and abilities is increased by 40%
 Weight:  3 lb.~
 @12695    = ~Chainmail of the Shield +2~
 @12696    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
@@ -13813,23 +13821,23 @@ Weight: 14 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 @12849    = ~Robe of the Watcher~
-@12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+@12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells. The Spell Resistance granted by the robe works best to bolster a wearer who already has spell resistance, such as a drow.
 
 STATISTICS:
 
 Generic Armor Bonus:  +4
-Spell Resistance: +8
+Spell Resistance: +3
 Immunity to blindness and confusion
 Spell Power: Can cast True Seeing 1/day
 When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog do not harm allies
 Weight:  3 lb.~
 @12851    = ~Robe of the Dark Watcher~
-@12852    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+@12852    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells. The Spell Resistance granted by the robe works best to bolster a wearer who already has spell resistance, such as a drow.
 
 STATISTICS:
 
 Generic Armor Bonus:  +6
-Spell Resistance: +12
+Spell Resistance: +5
 Immunity to blindness and confusion
 Spell Power: Can cast True Seeing 1/day
 When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog deal maximum damage and do not harm allies
@@ -13861,7 +13869,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Generic Armor Bonus: +8
+Generic Armor Bonus: +5
 Weight: 1 lb.~
 @12861    = ~Earplugs~
 @12862    = ~This is a pair of earplugs made of beeswax. The main practical application of earplugs is to protect against monsters such as harpies or sirens that sing magical songs in combat.
@@ -14102,21 +14110,21 @@ Weight: 2 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 //@12901    = ~Gauntlets of Infernal Damnation~
-@12902    = ~Cursed by a malefic priestess of Beshaba, goddess of bad luck, these hard black leather gloves affix themselves to whoever tries them on.  Despite the extremely nasty nature of the gloves, wealthy adventurers sometimes buy the distinctive gauntlets to place in their treasure hordes, waiting for a greedy thief to try them on.
+@12902    = ~Cursed by a malefic priestess of Beshaba, goddess of bad luck, these hard black leather gloves affix themselves to whoever tries them on. Despite the extremely nasty nature of the gloves, wealthy adventurers sometimes buy the distinctive gauntlets to place in their treasure hordes, waiting for a greedy thief to try them on.
 
 STATISTICS:
 
-Constant Effect: Wearer is under the effect of Shroud of Flame
+Constant Effect: Wearer is under the effect of Shroud of Flame, except it will not harm blue-circled creatures
 Special: Can only be removed by a Remove Curse spell~
 //@12903    = ~Bone Talisman~
-@12904    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+@12904    = ~Bone talismans are highly coveted among practitioners of necromancy. The charm is created from a piece of bone taken from the remains of a slain vampire. Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
 
 STATISTICS:
 
 Special: When cast by the wearer, Larloch's Minor Drain drains an additional 10 hit points, and Vampiric Touch drains an additional 20 hit points
 Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
 //@12905    = ~Bone Talisman~
-@12906    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+@12906    = ~Bone talismans are highly coveted among practitioners of necromancy. The charm is created from a piece of bone taken from the remains of a slain vampire. Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
 
 STATISTICS:
 
@@ -14133,7 +14141,7 @@ Cold Resistance: 50/-~
 Strength: +24
 Cold Resistance: 100/-~
 @12911    = ~Pikeman's End~
-@12912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+@12912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands. Kath was fond of destroying peasant militias to send a warning to other communities. He used this sword to that end. When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation. Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted. Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
 
 STATISTICS:
 
@@ -14147,7 +14155,7 @@ Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
 @12913    = ~Pikeman's Ruin~
-@12914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+@12914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands. Kath was fond of destroying peasant militias to send a warning to other communities. He used this sword to that end. When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation. Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted. Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
 
 STATISTICS:
 
@@ -14166,7 +14174,7 @@ Type:  Two-handed~
 STATISTICS:
 
 Resistance:  20/- Acid Resistance
-All acid damage dealt by the character is increased by 20%
+All acid damage dealt by the character's spells and abilities is increased by 20%
 Weight:  3 lb.~
 @12917    = ~Wizard Robe of Force Resistance~
 @12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance.
@@ -14174,7 +14182,7 @@ Weight:  3 lb.~
 STATISTICS:
 
 Resistance:  20/- Magic Damage Resistance
-All magic damage dealt by the character is increased by 20%
+All magic damage dealt by the character's spells and abilities is increased by 20%
 Weight:  3 lb.~
 @12919    = ~Inconsequence +3~
 @12920    = ~This hammer was made by a self-styled prophet of providential rejection. His name was Phellep, and he believed that the actions of the individual were of no consequence to the fate of humanity as a whole. As a result, he rejected concepts of good and evil, instead adopting an attitude of enforced indifference and abstention from social, moral, and political activity. The hammer he carried with him was used to pound on the doors of churches, what he called "the dens of fools and mindless men."
@@ -14252,6 +14260,44 @@ Vulnerability: -10 Piercing Resistance
 Vulnerability: -10 Crushing Resistance
 Regeneration: User regenerates 3 hit points per second
 Special: Can only be removed by a Remove Curse spell~
+@12931    = ~The Salamander's Tongue +3~
+@12932    = ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner.
+
+The exact origins of the blade are unknown, but it is believed that the first owner of the weapon was a respected and feared gnomish thief and assassin from Westgate named Turlam Shallowhill. Turlam was killed in a fight with a rival, a halfling called Deder Seven Fingers. Deder kept the weapon as a trophy, not knowing its powers until after it was stolen by an underling, a fellow halfling named Kreshinal Blackhound. Kreshinal fled to Selgaunt with the dagger for five years, relying on its powers to hide him from divination. Kreshinal lost the dagger in a botched gambling scam, and was killed by Deder's agents within the month. Deder attempted to reclaim the dagger from the Sembian criminals who had captured it. He succeeded at routing the thieves and reclaiming his dagger, but he focused so much attention on the blade that he didn't notice that the Sembian criminals had employed a priest of Mask to infiltrate and break down his interests in Westgate. The ensuing war between the Westgate and Selgaunt factions ended when the priest of Mask, Pieter the Feeble, made the two sides so paranoid that they ate themselves away from the inside. Pieter grabbed the dagger when he had the opportunity and escaped to Hillsfar, confident that the unorganized demihuman supporters of the late Deder Seven Fingers wouldn't follow him to a place so hostile to their kind.
+
+In yet another scam, Pieter sold the blade to a Mulmaster Hawk while luring other potential buyers to an auction in Hillsfar. Pieter and his associates murdered the buyers at the fake auction and made off with the cash, hiding under the cover of an Amulet of Non-Detection. The Mulmaster Hawk who purchased the blade was supposedly killed by priestesses of Umberlee who were angry at the assassin's refusal to pay tribute to the Bitch Queen. Years of factional fighting between the Umberlants are believed to have transported the blade as much as three thousand miles away from its humble beginnings in Sembia. The whereabouts of Pieter the Feeble and his goons are currently unknown.
+
+STATISTICS:
+
+Damage:  1d4 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type: Piercing
+Weight: 1 lb.
+Special:
+  Sneak attacks with this weapon deal an additional 4d6 fire damage. This replaces the extra 2d6 damage that a dagger would normally deal on a sneak attack.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12933    = ~The Salamander's Tongue +5~
+@12934    = ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner.
+
+The exact origins of the blade are unknown, but it is believed that the first owner of the weapon was a respected and feared gnomish thief and assassin from Westgate named Turlam Shallowhill. Turlam was killed in a fight with a rival, a halfling called Deder Seven Fingers. Deder kept the weapon as a trophy, not knowing its powers until after it was stolen by an underling, a fellow halfling named Kreshinal Blackhound. Kreshinal fled to Selgaunt with the dagger for five years, relying on its powers to hide him from divination. Kreshinal lost the dagger in a botched gambling scam, and was killed by Deder's agents within the month. Deder attempted to reclaim the dagger from the Sembian criminals who had captured it. He succeeded at routing the thieves and reclaiming his dagger, but he focused so much attention on the blade that he didn't notice that the Sembian criminals had employed a priest of Mask to infiltrate and break down his interests in Westgate. The ensuing war between the Westgate and Selgaunt factions ended when the priest of Mask, Pieter the Feeble, made the two sides so paranoid that they ate themselves away from the inside. Pieter grabbed the dagger when he had the opportunity and escaped to Hillsfar, confident that the unorganized demihuman supporters of the late Deder Seven Fingers wouldn't follow him to a place so hostile to their kind.
+
+In yet another scam, Pieter sold the blade to a Mulmaster Hawk while luring other potential buyers to an auction in Hillsfar. Pieter and his associates murdered the buyers at the fake auction and made off with the cash, hiding under the cover of an Amulet of Non-Detection. The Mulmaster Hawk who purchased the blade was supposedly killed by priestesses of Umberlee who were angry at the assassin's refusal to pay tribute to the Bitch Queen. Years of factional fighting between the Umberlants are believed to have transported the blade as much as three thousand miles away from its humble beginnings in Sembia. The whereabouts of Pieter the Feeble and his goons are currently unknown.
+
+STATISTICS:
+
+Damage:  1d4 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type: Piercing
+Weight: 1 lb.
+Special:
+  Sneak attacks with this weapon deal an additional 6d6 fire damage. This replaces the extra 2d6 damage that a dagger would normally deal on a sneak attack.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12935    = ~Black Dragon Scales~
+@12936    = ~These heavy scales glisten under the light and are warm to the touch. There are a significant number of them salvaged from the corpse of the Guardian... perhaps they might be useful in the formation of some kind of armor.~
 @19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
@@ -14262,5 +14308,10 @@ Special: Can only be removed by a Remove Curse spell~
 @19907    = ~Malakar deflected a slashing attack~
 @19908    = ~Avoided damage~
 @19909    = ~Pikeman's End deflected a piercing attack~
-@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
-@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
+@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream. The process was difficult and painful but left our alchemist strangely invigorated.~
+@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream. The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
+@19912    = ~Can you make anything out of these scales we obtained from the Guardian?~
+@19913    = ~The Guardian was a dragon? I remember Iselore talking about the Guardian, but I had no idea what kind of creature he spoke of. Aye, I should be able to make light armor out of these scales. It'll be 5000 gold pieces for the work.~
+@19914    = ~Very well, here are the scales and the gold.~
+@19915    = ~Maybe another time. Farewell.~
+@19916    = ~All done. Here is the armor. Wear it well, friend.~

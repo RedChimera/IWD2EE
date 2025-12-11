@@ -57,7 +57,7 @@ Saving Throw: None
 
 Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained. Tortoise Shell can only affect allies.~
 @1010    = ~Circle of Bones~
-@1011    = ~Circle of Bones 
+@1011    = ~Circle of Bones
 (Necromancy)
 Level: Clr 3
 Range: Caster
@@ -66,9 +66,9 @@ Casting Time: 3
 Area of Effect: 3-foot radius
 Saving Throw: None
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round. This spell does not provoke an attack of opportunity.~
+This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round, ignoring spell resistance. This spell does not provoke an attack of opportunity. Circle of Bones cannot be active at the same time as Circle of Blades, as the bones and blades get in each other's way.~
 @1012    = ~Mold Touch~
-@1013    = ~Mold Touch 
+@1013    = ~Mold Touch
 (Transmutation)
 Level: Drd 3
 Range: Touch
@@ -122,9 +122,9 @@ Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell grants the target a 15/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell.~
+This spell grants the target a 15/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell. This spell cannot be cast by evil characters.~
 @1020    = ~Smashing Wave~
-@1021    = ~Smashing Wave 
+@1021    = ~Smashing Wave
 (Evocation)
 Level: Drd 5, Rgr 5
 Range: 40 feet
@@ -133,7 +133,7 @@ Casting Time: 5
 Area of Effect: 5-foot wide wave
 Saving Throw: Reflex half
 
-This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be pushed back and knocked down for 1 round.~
+This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be pushed back and knocked down for 1 round. Creatures of Elemental Fire are extremely vulnerable to this spell, taking double damage. This spell bypasses spell resistance.~
 @1022    = ~Circle of Blades~
 @1023    = ~Circle of Blades
 (Evocation)
@@ -144,7 +144,7 @@ Casting Time: 9
 Area of Effect: 3-foot radius
 Saving Throw: Reflex half
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity.~
+This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, bypassing spell resistance, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity. Circle of Blades cannot be active at the same time as Circle of Bones, as the bones and blades get in each other's way.~
 @1024    = ~Spiritual Wrath~
 @1025    = ~Spiritual Wrath 
 (Evocation)
@@ -268,7 +268,7 @@ Casting Time: 6
 Area of Effect: 30-foot radius
 Saving Throw: Reflex half
 
-This spell, which may only be cast outdoors, brings forth a magical rain that saturates the area of effect. The rain grants 5/- resistance to fire but a -5 weakness to cold and electricity damage, and deals 2d3 points of magic damage to all cold and fire-using/dwelling creatures. In addition, all creatures in the area of effect are struck by bolts of lightning that deal 2d6 electricity damage, with a Reflex save for half damage. Flame Blade spells, Shroud of Flame, and salamander auras are also extinguished.~
+This spell, which may only be cast outdoors, brings forth a magical rain that saturates the area of effect. The rain grants 5/- resistance to fire but a -5 weakness to cold and electricity damage, and deals 8d6 points of cold damage to creatures of Elemental Fire. In addition, all creatures in the area of effect are struck by bolts of lightning that deal 2d6 electricity damage, with a Reflex save for half damage. Flame Blade spells, Shroud of Flame, and salamander auras are also extinguished.~
 @1044    = ~Dispel Magic~
 @1045    = ~Dispel Magic 
 (Abjuration) 
@@ -550,31 +550,31 @@ Casting Time: 3
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell creates a lance of force, extending from the caster to a specified point 60 feet in the distance. Any creatures in the lance's path take 5d4 points of nonmagical crushing damage, +2 points of damage per level of the caster (maximum of +50). Victims can Reflex save for half damage.~
+This spell creates a lance of force, extending from the caster to a specified point 60 feet in the distance. Any creatures in the lance's path take 5d4 points of piercing damage, +2 points of damage per level of the caster (maximum of +50). Victims can Reflex save for half damage. This spell bypasses spell resistance.~
 @1092    = ~Ice Storm~
 @1093    = ~Ice Storm
-(Evocation) 
+(Evocation)
 Level: Drd 4, Sor/Wiz 4
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4 
 Area of Effect: 20-foot radius
-Saving Throw: None 
+Saving Throw: None
 
 When this spell is cast, shards of ice smash down on all targets in the area of effect, doing 4d6 points of crushing damage and 4d6 points of cold damage.~
 @1094    = ~Improved Invisibility~
-@1095    = ~Improved Invisibility 
+@1095    = ~Improved Invisibility
 (Illusion)
 Level: Brd 5, Rgr 4, Sor/Wiz 4, Mask 4
-Range: Touch 
+Range: Touch
 Duration: 1 round / level
-Casting Time: 4 
+Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
 This spell is similar to the Invisibility spell, but the recipient is able to attack, either with missile, melee weapons or spells, and remain unseen. However, telltale traces, a shimmering, allow an observant opponent to attack the invisible spell recipient. These traces are only noticeable when specifically looked for (after the invisible character has made his presence known).~
 @1096    = ~Spirit Armor~
-@1097    = ~Spirit Armor 
+@1097    = ~Spirit Armor
 (Necromancy)
 Level: Brd 4, Sor/Wiz 4
 Range: Touch
@@ -640,7 +640,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: Will negates 
 
-The domination spell enables the caster to control the actions of any creature while the spell is in effect. This control is maintained through a telepathic link between the caster and the victim. The target gets a Will save with +2 DC in order to avoid the effect.~
+The domination spell enables the caster to control the actions of any creature while the spell is in effect. This control is maintained through a telepathic link between the caster and the victim. The target gets a Will save with +2 DC in order to avoid the effect. This spell bypasses spell resistance.~
 @1108    = ~Hold Monster~
 @1109    = ~Hold Monster
 (Enchantment)
@@ -688,18 +688,18 @@ Using this spell, a wizard may reduce the spell resistance of a target creature.
 @1116    = ~Phantom Blade~
 @1117    = ~Phantom Blade 
 (Evocation)
-Level: Brd 5, Pal 3, Sor/Wiz 5, Mask 6
+Level: Brd 5, Sor/Wiz 5
 Range: Caster
 Duration: 20 rounds
 Casting Time: 5
 Area of Effect: Special
 Saving Throw: None
 
-This spell creates a translucent, shadowlike, weightless area of magical force extending from the fingers of one of the caster's hands. This silent construct can be wielded as a longsword and may strike targets from a short distance away.
+This spell creates a translucent, shadowlike, weightless area of magical force extending from the fingers of one of the caster's hands. This silent construct can be wielded as a longsword using the Martial Weapon: Large Sword proficiency.
 
-The phantom blade deals 1d8+3 damage with a +3 bonus to attack and strikes as a +6 weapon for the purposes of bypassing weapon immunities, and inflicts an additional 1d10 magic damage (or 1d10+10 damage if the target is undead). Due to its etheric nature, it ignores armor and shield bonuses, though it still strikes harder depending on the wielder's Strength. Although the phantom blade appears as a longsword, it uses the small blade proficiency and can be used with Weapon Finesse. This sword can only be used by the caster and remains in her hand for the duration or until dispelled.~
+The phantom blade deals 3d8 magic damage per hit and strikes as a +6 weapon for the purposes of bypassing weapon immunities. It has no bonus to attack, but due to its etheric nature, it ignores armor and shield bonuses, though it still strikes harder depending on the wielder's Strength. Uniquely, it can also strike ghosts and other incorporeal creatures consistently, and can even connect if the wielder or the target is ethereal at the moment due to a Blink spell. This sword can only be used by the caster and remains in their hand for the duration or until dispelled.~
 @1118    = ~Ball Lightning~
-@1119    = ~Ball Lightning 
+@1119    = ~Ball Lightning
 (Evocation)
 Level: Drd 5, Rgr 4, Sor/Wiz 5, Talos 5
 Range: Caster 
@@ -763,7 +763,7 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: Special
 
-This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long. It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell. The sword acts as a +10 weapon, dealing 2d12+10 damage per strike with a +10 attack bonus. Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
+This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long. It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell. The sword acts as a +6 weapon, dealing 2d12+6 damage per strike with a +6 attack bonus. Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
 @1130    = ~Otiluke's Freezing Sphere~
 @1131    = ~Otiluke's Freezing Sphere 
 (Evocation)
@@ -1001,7 +1001,7 @@ Saving Throw: None
 
 A brilliant, divine radiance surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding evil creatures when they strike the subjects. This abjuration has four effects:
 First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
-Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
+Second, the warded creatures' Spell Resistance is set to 25 if lower.
 Third, the abjuration protects the creatures against charm and domination spells.
 Fourth, any creature of evil alignment who strikes (melee only) those protected by the Holy Aura must make a Fortitude save or be blinded for 3 round.
 Holy Aura cannot be cast by evil characters.~
@@ -1212,7 +1212,7 @@ Casting Time: 7
 Area of Effect: 15-foot radius
 Saving Throw: Reflex partial
 
-This spell allows the caster to evoke dazzling beams of intensely hot light. Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of magic damage, or 16d6 damage over 4 rounds. A successful Reflex save negates the blindness and reduces the damage by half. Undead creatures, fungi, mold, oozes, slimes and other fungoid creatures caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round. This spell bypasses spell resistance.~
+This spell allows the caster to evoke dazzling beams of intensely hot light. Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of fire damage, or 16d6 damage over 4 rounds. A successful Reflex save negates the blindness and reduces the damage by half. Drow and gray dwarves take 8d6 damage per round and get no save against the blindness. Undead creatures, fungi, and oozes caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round. This spell bypasses the spell resistance of creatures such as drow that are vulnerable to the spell.~
 @1621    = ~Great Shout~
 @1622    = ~Great Shout
 (Evocation)
@@ -1362,7 +1362,7 @@ Range: 20 feet + 2 feet/level
 Duration: Instantaneous
 Casting Time: 0
 Area of Effect: Caster
-Saving Throw: None 
+Saving Throw: None
 
 This spell teleports the caster to any point within the range of the spell. The point can be outside the caster's visual range, but it must be a location the party has seen.~
 @1661    = ~Spook~
@@ -1373,10 +1373,9 @@ Range: Sight of Caster
 Duration: 3 rounds
 Casting Time: 1
 Area of Effect: 1 creature
-Saving Throw: Will negates 
+Saving Throw: Will negates
 
-A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful Will save, it panics. The DC gets +1 for every two experience levels of the caster, to a maximum of +6 at 12th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Spook does not affect undead.
-~
+A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful Will save, it panics. The DC gets +1 for every two experience levels of the caster, to a maximum of +6 at 12th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Spook does not affect undead or constructs.~
 @1663    = ~Protection from Magic Energy~
 @1664    = ~Protection from Magic Energy 
 (Abjuration) 
@@ -1433,9 +1432,9 @@ Casting Time: 9
 Area of Effect: Special 
 Saving Throw: None
 
-This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the zombie summoned by this spell.
+This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the zombie summoned by this spell. This spell cannot be cast by good clerics, though sorcerers and wizards may cast it regardless of alignment.
 
-WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras. The effects of their auras may harm your own party members if they fall within the area of affect.~
+WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras. The effects of their auras may harm your own party members if they fall within the area of effect.~
 @1674    = ~Animate Skeleton~
 @1675    = ~Animate Skeleton 
 (Necromancy) 
@@ -1446,7 +1445,7 @@ Casting Time: 9
 Area of Effect: Special 
 Saving Throw: None 
 
-This spell brings forth a long-dead skeleton from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the skeleton summoned by this spell.~
+This spell brings forth a long-dead skeleton from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the skeleton summoned by this spell. This spell cannot be cast by good clerics, though sorcerers and wizards may cast it regardless of alignment.~
 @1676    = ~Break Enchantment~
 @1677    = ~Break Enchantment
 (Abjuration) 
@@ -1460,15 +1459,15 @@ Saving Throw: None
 Upon casting this spell, the caster is able to remove cursed items from the target. Break Enchantment also dispels all spells from the Enchantment school, whether their effects are positive or negative.~
 @1678    = ~Otiluke's Resilient Sphere~
 @1679    = ~Otiluke's Resilient Sphere 
-(Evocation) 
+(Evocation)
 Level: Sor/Wiz 4
 Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 1
 Area of Effect: 1 creature
-Saving Throw: None
+Saving Throw: Reflex negates
 
-When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world.~
+When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. A non-allied creature can make a Reflex save with +8 DC to dodge the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world. This spell bypasses spell resistance.~
 @1680    = ~Color Spray~
 @1681    = ~Color Spray 
 (Illusion)
@@ -1485,7 +1484,7 @@ Up to 2: Unconscious for 5 rounds
 3 or 4: Blinded for 3 rounds
 5 or more: Stunned for 1 round
 
-A successful Will save with +2 DC will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
+A successful Will save will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
 @1682    = ~Alicorn Lance~
 @1683    = ~Alicorn Lance
 (Evocation)
@@ -1496,7 +1495,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell creates a silver-hued, partially ethereal lance shaped in the form of an alicorn (a unicorn horn). The spellcaster chooses a target and the alicorn lance instantaneously fires at it, inflicting 4d6 points of piercing damage, plus another 1d6 damage per 5 levels. Although the alicorn lance dissipates after it strikes, it leaves a silvery radiance around the target that makes it easier to see and hit, giving it a -2 armor penalty for 3 rounds.~
+This spell creates a silver-hued, partially ethereal lance shaped in the form of an alicorn (a unicorn horn). The spellcaster chooses a target and the alicorn lance instantaneously fires at it, inflicting 4d6 points of piercing damage, plus another 1d6 damage per 5 levels. Although the alicorn lance dissipates after it strikes, it leaves a silvery radiance around the target that makes it easier to see and hit, giving it a -2 armor penalty for 3 rounds. Spell resistance can stop the silvery radiance effect but not the physical damage.~
 @1684    = ~Beast Claw~
 @1685    = ~Beast Claw
 (Transmutation)
@@ -1504,10 +1503,10 @@ Level: Drd 2, Rgr 2
 Range: Sight of Caster
 Duration: 3 rounds + 1 round / level
 Casting Time: 5
-Area of Effect: 1 animal
+Area of Effect: 20-foot radius
 Saving Throw: None
 
-This spell empowers the attacks of any animal, granting it +3 to hit and damage until the duration runs out. At level 10, this spell also grants the animal a +1 enhancement bonus, causing its natural attack to strike as a +1 weapon (1d12 base slashing damage). At levels 20 and 30, this bonus increases to +2 and +3.~
+This spell empowers the attacks of any allied animal in the area of effect, granting it +3 to hit and damage until the duration runs out. At level 8, this spell also grants the animals a +1 enhancement bonus, causing their natural attacks to strike as a +1 weapon (1d12 base slashing damage). At levels 12 and 16, this bonus increases to +2 and +3.~
 @1686    = ~Spiritual Weapon~
 @1687    = ~Spiritual Weapon
 (Evocation)
@@ -1516,7 +1515,7 @@ Range: Caster
 Duration: 10 rounds + 1 round / level
 Casting Time: 5
 Area of Effect: Caster
-Saving Throw: None 
+Saving Throw: None
 
 By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals an additional 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and the electricity damage increases to 1d8. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
 ~
@@ -1709,14 +1708,14 @@ Saving Throw: Fortitude partial
 The caster utters the finger of death incantation, points his index finger at the creature to be slain, and unless the victim makes a Fortitude save, the victim dies instantly. Even if the save is successful, however, the brush with death still inflicts 3d6 + 1 point/level of damage.
 ~
 @1732    = ~Reflected Image~
-@1733    = ~Reflected Image 
+@1733    = ~Reflected Image
 (Illusion) 
 Level: Brd 1, Sor/Wiz 1, Mask 1
 Range: Sight of Caster
 Duration: 24 hours
 Casting Time: 0
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
 Upon casting this spell, the caster creates an image of the target that will travel along beside him or her. The image will perform all of the actions that the target does, forcing opponents to guess which image to attack. The image will disappear with a successful Dispel Magic, when attacked or when the spell duration runs out.~
 @1734    = ~Ghost Armor~
@@ -1724,10 +1723,10 @@ Upon casting this spell, the caster creates an image of the target that will tra
 (Conjuration)
 Level: Brd 3, Sor/Wiz 3, Selune 4
 Range: Touch
-Duration: 5 rounds + 2 rounds/level
-Casting Time: 3 
+Duration: 10 rounds + 2 rounds/level
+Casting Time: 3
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
 This spell creates a magical field of force with the strength of half-plate armor (armor bonus +7). It is cumulative with Dexterity effects and shield bonuses. The Ghost Armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until dispelled or until the duration runs out.~
 
@@ -1757,7 +1756,7 @@ This spell evaporates moisture from the bodies of every living creature within t
 ~
 @1749    = ~Stinking Cloud~
 @1750    = ~Stinking Cloud
-(Necromancy) 
+(Necromancy)
 Level Sor/Wiz 3
 Range: Medium
 Duration: 10 rounds
@@ -1967,8 +1966,7 @@ Casting Time: 9
 Area of Effect: 20-foot radius
 Saving Throw: Will negates
 
-This spell forces all creatures not allied with the caster in the area of effect to Will save or be dominated as if affected by the spell Dominate Person. Undead are unaffected by this spell.
-~
+This spell forces all creatures not allied with the caster in the area of effect to Will save or be dominated as if affected by the spell Dominate Person. Undead are unaffected by this spell. This spell bypasses spell resistance.~
 
 @1831    = ~Elemental Barrier~
 @1832    = ~Elemental Barrier
@@ -1980,8 +1978,7 @@ Casting Time: 8
 Area 'of Effect: 1 creature
 Saving Throw: None 
 
-This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
-~
+This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.~
 @1833    = ~Sunscorch~
 @1834    = ~Sunscorch
 (Evocation)
@@ -1992,7 +1989,7 @@ Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: Reflex half
 
-Upon completion of this spell, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead creatures and monsters vulnerable to bright light take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Reflex save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save).~
+Upon completion of this spell, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead, fungi, oozes, and drow and gray dwarves take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Reflex save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save). This spell bypasses the spell resistance of creatures such as drow that are vulnerable to the spell.~
 @1837    = ~Holy Word~
 @1838    = ~Holy Word
 (Conjuration) [Good]
@@ -2006,7 +2003,7 @@ Saving Throw: None
 When uttered, this spell turns the cleric into a bridge between his god and the Material Plane, allowing him to funnel magical energy to smite all creatures of non-good alignment in the area of effect. The effects differ according to the target's level:
 
   Less than 4 - Death
-  4 to 7 - Stunned for 10 rounds  
+  4 to 7 - Stunned for 10 rounds
   8 to 11 - Loses 7 Str for 5 rounds and stunned for 1 round. 
   12 and up - Stunned for 1 round.
 
@@ -2033,17 +2030,16 @@ There is no saving throw. This spell may only be cast by evil characters. Deaf c
 @1849    = ~Greater Shield of Lathander~
 @1850    = ~Greater Shield of Lathander
 (Conjuration) [Good]
-Level: Clr 7, Pal 6, Lathander 6
+Level: Clr 8, Pal 6, Lathander 6
 Range: Touch
 Duration: 3 rounds
-Casting Time: 7
+Casting Time: 8
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell grants damage reduction of 30/- to all forms of damage for the duration of the spell as well as +30 spell resistance.
-~
+This spell grants damage reduction of 30/- to all forms of damage and sets Spell Resistance to 40 if lower for the duration of the spell. This spell cannot be cast by evil characters.~
 @1851    = ~Meteor Swarm~
-@1852    = ~Meteor Swarm 
+@1852    = ~Meteor Swarm
 (Evocation) 
 Level: Sor/Wiz 9, Lathander 9
 Range: Sight of Caster
@@ -2403,9 +2399,9 @@ Range: Caster
 Duration: 20 rounds
 Casting Time: 1
 Area of Effect: Caster
-Saving Throw: None 
+Saving Throw: None
 
-This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor bonus, +15 spell resistance, and +5 to all saves.~
+This spell grants the caster a 5/- bonus to all damage resistances, a +5 generic armor bonus, spell resistance set to 30 if lower, and +5 to all saves.~
 
 @1976     = ~Instant~
 @1977     = ~1 round~
@@ -2446,7 +2442,7 @@ This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor 
 STATISTICS:
 
 Damage:  1d6 + 1
-Attack Bonus:  +1 
+Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Missile (piercing)
 Special:
@@ -2945,13 +2941,13 @@ This ability may be used as a free action.~
 @30363=~... Symbol of Stunning.~
 @30364=~... Teleport Step.~
 @30365=~Protected by Elemental Absorption~
-@30366=~~
-@30367=~~
-@30368=~~
-@30369=~~
-@30370=~~
-@30371=~~
-@30372=~~
+@30366=~... Mummy Dust.~
+@30367=~... Lightning Convergeance.~
+@30368=~... True Living Lightning.~
+@30369=~... Verdigris.~
+@30370=~... Clone.~
+@30371=~... Crown of Vermin.~
+@30372=~... Rain of Fire.~
 @30373=~~
 @30374=~~
 @30375=~~
@@ -3000,7 +2996,9 @@ Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-This spell enhances the caster's sling bullets. Any bullet the caster throws will deal magic damage instead of physical damage, and will deal an additional 1d4+1 damage. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).~
+This spell enhances the caster's sling bullets. Any bullet the caster throws will deal an additional 1d4+1 damage, and nonmagical bullets will be treated as +1 weapons. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).
+
+Although rangers normally cast spells at half their caster level, Magic Stone will be cast at a ranger's full caster level.~
 @31107     = ~Protection from Evil~
 @32107     = ~Protection from Evil
 (Abjuration) [Good]
@@ -3011,7 +3009,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
+This spell forms a magic barrier around the target creature, giving evil creatures a -2 penalty to hit them, and reducing the save DC of spells and abilities from evil creatures that would hit them by 2. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
 (Abjuration)
@@ -3056,6 +3054,18 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 Barkskin causes a creature's skin to become as tough as bark, granting a +3 generic AC bonus (+4 at 6th level and +5 at 12th level) for the duration of the spell.~
+@31204     = ~Charm Person or Animal~
+@32204     = ~Charm Person or Animal
+(Enchantment) 
+Level: Drd 2
+Range: Sight of Caster
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: 1 Medium-sized or smaller Humanoid or 1 Animal
+Saving Throw: Will negates
+
+This spell affects any single person or animal it is cast upon.  The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others.
+Thus, a 10th-level fighter could be charmed, but an ogre could not. If the save is failed, the victim regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out without question.  Creatures remember everything while charmed and thus will usually be hostile to the caster upon expiration of the spell. The target's Spell Resistance, if any, does not affect this spell.~
 @31212     = ~Slow Poison~
 @32212     = ~Slow Poison
 (Conjuration) 
@@ -3191,7 +3201,7 @@ Casting Time: 4
 Area of Effect: 1 creature 
 Saving Throw: Will negates
 
-This spell enables the caster to invade the mind of the target creature, allowing the caster to will the creature into whatever actions he so desires.  The target creature will resist the effects if a successful Will save with +2 DC is made.  While a creature is dominated in such a manner, its mind is cloudy and thought is hampered - spellcasting is impossible and attack bonuses are made with a -2 penalty.~
+This spell enables the caster to invade the mind of the target creature, allowing the caster to will the creature into whatever actions he so desires.  The target creature will resist the effects if a successful Will save with +2 DC is made.  While a creature is dominated in such a manner, its mind is cloudy and thought is hampered - spellcasting is impossible and attack bonuses are made with a -2 penalty. This spell bypasses spell resistance.~
 @31408     = ~Magic Circle Against Evil~
 @32408     = ~Magic Circle Against Evil
 (Abjuration) [Good]
@@ -3202,7 +3212,7 @@ Casting Time: 7
 Area of Effect: 10-foot radius
 Saving Throw: None
 
-When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving them +2 AC and +2 to Saving Throws against evil creatures, as well as immunity to charm and domination effects from such creatures.~
+When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving evil creatures a -2 penalty to hit them, and reducing the save DC of spells and abilities from evil creatures that would hit them by 2, as well as immunity to charm and domination effects.~
 @31409     = ~Cloak of Fear~
 @32409     = ~Cloak of Fear
 (Conjuration)
@@ -3225,6 +3235,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Fortitude negates
 
 This spell transforms the air in a 20-foot radius into sickening, grayish mists.  The caster and non-living creatures are immune to the effects of the cloud.  Every round of exposure to the disease-ridden air causes the loss of 4 points of Strength, Dexterity, and Constitution. Creatures within the afflicted area must make a Fortitude save every round to avoid the debilitating effects of the cloud. The effects will last 1 turn.  Cloud of Pestilence can only be cast by evil characters.~
+@31422     = ~Thorn Spray~
+@32422     = ~Thorn Spray
+(Transmutation)
+Level: Drd 4
+Range: Special
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: 30-foot long, 25-foot wide cone
+Saving Throw: Reflex half
+
+By means of this spell, the caster can cause a spray of barbs, spikes, thorns, and spines to spring forth from his hand.  The thorn spray inflicts 6d10 piercing damage to all creatures within the area of effect with a Reflex save for half damage. This damage bypasses spell resistance.~
 @31423     = ~Wall of Moonlight~
 @32423     = ~Wall of Moonlight
 (Evocation)
@@ -3311,7 +3332,7 @@ Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: Reflex half
 
-Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness with +4 DC. Undead creatures are particularly vulnerable to this spell and take double damage.~
+Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness with +4 DC. Undead creatures are particularly vulnerable to this spell and take double damage. This spell bypasses the spell resistance of creatures such as drow that are vulnerable to it.~
 @31616     = ~Dolorous Decay~
 @32616     = ~Dolorous Decay
 (Necromancy) 
@@ -3420,7 +3441,7 @@ Area of Effect: 1 creature
 Saving Throw: Will negates 
 
 This spell affects any single person it is cast upon. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. The person receives a Will save to avoid the effect.  If the spell recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out as quickly as possible.
-If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed.~
+If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed. The target's Spell Resistance, if any, does not affect this spell.~
 @33122     = ~Ice Dagger~
 @34122     = ~Ice Dagger
 (Evocation)
@@ -3508,7 +3529,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Will negates
 
-This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants.~
+This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants. This spell bypasses spell resistance.~
 @34321     = ~Invisibility Sphere
 (Illusion) 
 Level: Brd 3, Sor/Wiz 3, Mask 3
@@ -3946,8 +3967,7 @@ This spell temporarily gives the ranger a quiver containing an unlimited supply 
 
 Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
 
-Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
-
+Note: The ranger must have an empty ammunition slot for the quiver to be created. Otherwise, the spell will fail.~
 @35353     = ~Recall Party~
 @36353     = ~Recall Party
 (Conjuration)
@@ -4010,7 +4030,9 @@ Casting Time: 4
 Area of Effect: Caster
 Saving Throw: None
 
-This spell turns the caster's sling bullets into boulders. While the spell is active, if the caster launches a bullet, it instantly turns into a large boulder that retains the speed of the original bullet. The boulder inflicts an additional 7d4 damage if it hits (on top of the former damage of the bullet). Only a limited number of bullets can be turned into boulders before the spell ends: up to one per 2 levels.~
+This spell turns the caster's sling bullets into boulders. While the spell is active, if the caster launches a bullet, it instantly turns into a large boulder that retains the speed of the original bullet. The boulder inflicts an additional 7d4 damage if it hits (on top of the former damage of the bullet). Only a limited number of bullets can be turned into boulders before the spell ends: up to one per 3 levels.
+
+Although rangers normally cast spells at half their caster level, Pebbles to Boulders will be cast at a ranger's full caster level.~
 @35551     = ~Supreme Speed~
 @36551     = ~Supreme Speed
 (Transmutation)
@@ -4246,7 +4268,7 @@ Saving Throw: None
 
 A malevolent darkness surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding good creatures when they strike the subjects. This abjuration has four effects:
 First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
-Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
+Second, the warded creatures' Spell Resistance is set to 25 if lower.
 Third, the abjuration protects the creatures against charm and domination spells.
 Fourth, any creature of good alignment who strikes (melee only) those protected by the Unholy Aura must make a Fortitude save or be blinded for 3 round.
 Unholy Aura can only be cast by evil characters.~
@@ -4320,7 +4342,7 @@ Casting Time: 9
 Area of Effect: 15-foot radius
 Saving Throw: None
 
-A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors.~
+A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors and bypasses spell resistance.~
 @35957     = ~Summon Deva~
 @36957     = ~Summon Deva
 (Conjuration)
@@ -4423,7 +4445,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
+Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature. This spell bypasses spell resistance.~
 @37252     = ~Sound Burst~
 @38252     = ~Sound Burst
 (Evocation)
@@ -4595,7 +4617,7 @@ This spell greatly increases the character's ability to fool others. For the dur
 (Transmutation) 
 Level: Brd 5, Sor/Wiz 4
 Range: Sight of Caster
-Duration: 4 rounds
+Duration: 10 rounds
 Casting Time: 1
 Area of Effect: 15-foot radius
 Saving Throw: None
@@ -4750,7 +4772,7 @@ Casting Time: 4
 Area of Effect: All creatures in path of boulder
 Saving Throw: Reflex partial
 
-Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
+Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder bypasses spell resistance and always travels due south from the caster.~
 @37654     = ~Songcasting~
 @38654     = ~Songcasting
 (Universal)
@@ -4974,7 +4996,7 @@ Casting Time: 8
 Area of Effect: 1 creature
 Saving Throw: Will negates
 
-This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw with +4 DC. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
+This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw with +4 DC. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave bypasses spell resistance can even affect undead and constructs.~
 @37854     = ~Army of Images~
 @38854     = ~Army of Images
 (Illusion)

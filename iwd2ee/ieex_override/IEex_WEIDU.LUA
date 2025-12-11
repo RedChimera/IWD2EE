@@ -5,6 +5,24 @@ ex_custom_visual_effects = {
 ["USEDRAIN"] = {["locZ"] = 1, ["animationResRef"] = "USEDRAIN", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, },
 ["USAURBLS"] = {["locZ"] = 0, ["animationResRef"] = "USAURBLS", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
 ["USSNDBST"] = {["locZ"] = 0, ["animationResRef"] = "USSNDBST", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USVERDI1"] = {["locZ"] = 0, ["animationResRef"] = "USVERDIA", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = true, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USVERDI2"] = {["locZ"] = 0, ["animationResRef"] = "USVERDIA", ["appearanceFlags"] = 0x2, ["cycle"] = 1, ["enlarge"] = true, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USVERDI3"] = {["locZ"] = 0, ["animationResRef"] = "USVERDIA", ["appearanceFlags"] = 0x2, ["cycle"] = 2, ["enlarge"] = true, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USVERDIC"] = {["locZ"] = 1, ["animationResRef"] = "USVERDIC", ["appearanceFlags"] = 0x2, ["cycle"] = 1, ["enlarge"] = false, ["enlargeOnLargeTarget"] = true, },
+["USCVERMA"] = {["locZ"] = 1, ["animationResRef"] = "USCVERMA", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USENTANX"] = {["locZ"] = 1, ["animationResRef"] = "USENTANX", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USTELEFI"] = {["locZ"] = 0, ["animationResRef"] = "USTELEFI", ["appearanceFlags"] = 0x2, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USDARKN1"] = {["locZ"] = 1, ["animationResRef"] = "USDARKNE", ["appearanceFlags"] = 0x4, ["cycle"] = 0, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USDARKN2"] = {["locZ"] = 1, ["animationResRef"] = "USDARKNE", ["appearanceFlags"] = 0x4, ["cycle"] = 1, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USDARKN3"] = {["locZ"] = 1, ["animationResRef"] = "USDARKNE", ["appearanceFlags"] = 0x4, ["cycle"] = 2, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USDARKN4"] = {["locZ"] = 1, ["animationResRef"] = "USDARKNE", ["appearanceFlags"] = 0x4, ["cycle"] = 3, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+["USDARKN5"] = {["locZ"] = 1, ["animationResRef"] = "USDARKNE", ["appearanceFlags"] = 0x4, ["cycle"] = 4, ["enlarge"] = false, ["enlargeOnLargeTarget"] = false, ["blankFrames"] = 10, },
+}
+ex_lingering_aoe = {
+[6256] = {["radius"] = 200, ["visualEffectFrequency"] = 1, ["visualEffectNameList"] = {"USDARKN1", "USDARKN2", "USDARKN3", "USDARKN4", "USDARKN5", }, },
+[6451] = {["radius"] = 256, ["visualEffectFrequency"] = 1.6, ["visualEffectNameList"] = {"USTELEFI"}, },
+[10023] = {["radius"] = 512, ["visualEffectFrequency"] = 1.6, ["visualEffectNameList"] = {"USVERDI1", "USVERDI2", "USVERDI3"}, },
+[10024] = {["radius"] = 256, ["visualEffectFrequency"] = 1.2, ["visualEffectNameList"] = {"USCVERMA"}, },
 }
 IEex_NEW_WEAPON_PROFICIENCY_COUNT = 3
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
@@ -20,14 +38,17 @@ ex_subrace_name = {[0x10000] = "HUMAN", [0x10001] = "HUMAN_AASIMAR", [0x10002] =
 ex_extra_feat_races = {[0x10000] = 1, [0x10001] = 0, [0x10002] = 0, [0x20000] = 0, [0x20001] = 0, [0x20002] = 0, [0x30000] = 0, [0x40000] = 0, [0x40001] = 0, [0x40002] = 0, [0x50000] = 0, [0x50001] = 1, [0x50002] = 0, [0x60000] = 0, [0x60001] = 0, [0x70000] = 0, }
 ex_extra_skill_point_races = {[0x10000] = 4, [0x10001] = 0, [0x10002] = 0, [0x20000] = 0, [0x20001] = 0, [0x20002] = 0, [0x30000] = 0, [0x40000] = 0, [0x40001] = 0, [0x40002] = 0, [0x50000] = 0, [0x50001] = 0, [0x50002] = 0, [0x60000] = 0, [0x60001] = 0, [0x70000] = 0, }
 ex_darkvision_races = {[0x10000] = 0, [0x10001] = 1, [0x10002] = 1, [0x20000] = 0, [0x20001] = 2, [0x20002] = 0, [0x30000] = 0, [0x40000] = 1, [0x40001] = 1, [0x40002] = 2, [0x50000] = 0, [0x50001] = 0, [0x50002] = 0, [0x60000] = 1, [0x60001] = 2, [0x70000] = 1, }
-ex_darkvision_animations = {[0x7F02] = 1, [0xA100] = 1, [0xC000] = 3, [0xC500] = 3, [0xE000] = 1, [0xE012] = 1, [0xE022] = 1, [0xE038] = 1, [0xE048] = 1, [0xE7C9] = 3, [0xEB08] = 1, [0xEB18] = 3, [0xEB28] = 1, [0xEB39] = 3, [0xEB49] = 3, [0xE8C8] = 1, [0xE8D8] = 1, [0xEC33] = 1, [0xED09] = 3, [0xEA20] = 1, [0xE278] = 1, [0x2300] = 2, [0x7F05] = 1, [0x7F06] = 1, [0x6405] = 1, [0x1201] = 1, [0xF50B] = 2, [0xF51B] = 2, [0x7F27] = 2, [0x7F29] = 2, [0xE3A8] = 1, [0x7320] = 1, [0x7321] = 1, [0xE218] = 1, [0xE228] = 1, [0x7310] = 1, [0x7302] = 1, [0xE238] = 1, [0xE298] = 1, [0x7600] = 1, [0xE269] = 1, [0xE289] = 1, [0xE928] = 1, [0xE308] = 1, [0xE318] = 1, [0xE15A] = 2, [0xED19] = 1, [0x8000] = 1, [0xE408] = 1, [0xE412] = 1, [0xE498] = 1, [0xE428] = 1, [0xE432] = 1, [0xE468] = 1, [0xE488] = 1, [0xE479] = 1, [0x7F07] = 1, [0xE528] = 1, [0xE51D] = 1, [0x7F04] = 1, [0xE249] = 1, [0xEC4B] = 1, [0xEC5B] = 1, [0x8100] = 1, [0xE068] = 1, [0x7F03] = 1, [0xEFE3] = 3, [0xEFA3] = 3, [0xEFB3] = 3, [0xEFC3] = 3, [0xEFD3] = 3, [0xEFF3] = 3, [0xEF0D] = 1, [0xEF50] = 3, [0xEF60] = 3, [0xEF70] = 3, [0xED28] = 3, [0xEB69] = 1, [0xEB79] = 1, [0xEF1D] = 1, [0xEF0D] = 1, [0x7F01] = 1, [0xE708] = 1, [0xE388] = 1, [0xE39C] = 1, [0xEBA9] = 2, [0xEB99] = 2, [0xE868] = 1, [0xE868] = 1, [0xE888] = 1, [0xE878] = 1, [0xE8D9] = 1, [0x9000] = 1, [0x7000] = 1, [0xE818] = 1, [0xE808] = 1, [0xE822] = 1, [0xE838] = 1, [0xE842] = 1, [0xE859] = 1, [0xE8F9] = 1, [0x7F08] = 1, [0x7F10] = 1, [0x7F2E] = 3, [0xE050] = 1, [0xF40B] = 1, [0xF41B] = 1, [0xEBD8] = 1, [0xEBE8] = 1, [0xEB51] = 3, [0xE908] = 1, [0xE918] = 1, [0xEC2B] = 1, [0xEBB1] = 3, [0x6403] = 1, [0xF008] = 1, [0xE62C] = 1, [0xF019] = 1, [0x7F32] = 1, [0x7900] = 3, [0x7902] = 3, [0x7903] = 3, [0x7901] = 3, [0x7A00] = 1, [0x7A01] = 1, [0x7A02] = 1, [0x7F2F] = 1, [0x7A03] = 1, [0x7A04] = 1, [0xE449] = 2, [0xE459] = 2, [0xEBCD] = 1, [0xE718] = 1, [0xE728] = 1, [0xE7E8] = 1, [0xE738] = 1, [0xE759] = 2, [0xE7F9] = 2, [0xE3BB] = 1, [0xE252] = 1, [0xE329] = 1, [0xE359] = 1, [0xE369] = 1, [0xF029] = 1, [0xEF91] = 1, [0x7B03] = 1, [0xEF28] = 1, [0xA000] = 1, [0x1001] = 1, [0xE76C] = 1, [0xF10E] = 1, [0xF11E] = 1, [0xE8B9] = 1, [0xE8A1] = 1, }
-ex_darkvision_attack_penalty = {[0] = -99, [1] = -4, [2] = -2, [3] = 0}
+ex_darkvision_animations = {[0x7F02] = 2, [0xA100] = 1, [0xC000] = 3, [0xC500] = 3, [0xE000] = 1, [0xE012] = 1, [0xE022] = 1, [0xE038] = 1, [0xE048] = 1, [0xE7C9] = 3, [0xEB08] = 1, [0xEB18] = 3, [0xEB28] = 1, [0xEB39] = 3, [0xEB49] = 3, [0xE8C8] = 1, [0xE8D8] = 1, [0xEC33] = 1, [0xED09] = 3, [0xEA20] = 1, [0xE278] = 1, [0x2300] = 2, [0x7F05] = 1, [0x7F06] = 1, [0x6405] = 1, [0x1201] = 1, [0xF50B] = 2, [0xF51B] = 2, [0x7F27] = 2, [0x7F29] = 2, [0xE3A8] = 1, [0x7320] = 1, [0x7321] = 1, [0xE218] = 1, [0xE228] = 1, [0x7310] = 1, [0x7302] = 1, [0xE238] = 1, [0xE298] = 1, [0x7600] = 1, [0xE269] = 1, [0xE289] = 1, [0xE928] = 1, [0xE308] = 1, [0xE318] = 1, [0xE15A] = 2, [0xED19] = 1, [0x8000] = 1, [0xE408] = 1, [0xE412] = 1, [0xE498] = 1, [0xE428] = 1, [0xE432] = 1, [0xE468] = 1, [0xE488] = 1, [0xE479] = 1, [0x7F07] = 1, [0xE528] = 1, [0xE51D] = 1, [0x7F04] = 1, [0xE249] = 1, [0xEC4B] = 1, [0xEC5B] = 1, [0x8100] = 1, [0xE068] = 1, [0x7F03] = 1, [0xEFE3] = 3, [0xEFA3] = 3, [0xEFB3] = 3, [0xEFC3] = 3, [0xEFD3] = 3, [0xEFF3] = 3, [0xEF0D] = 1, [0xEF50] = 3, [0xEF60] = 3, [0xEF70] = 3, [0xED28] = 3, [0xEB69] = 1, [0xEB79] = 1, [0xEF1D] = 1, [0xEF0D] = 1, [0x7F01] = 1, [0xE708] = 1, [0xE388] = 1, [0xE39C] = 1, [0xEBA9] = 2, [0xEB99] = 2, [0xE868] = 1, [0xE868] = 1, [0xE888] = 1, [0xE878] = 1, [0xE8D9] = 1, [0x9000] = 1, [0x7000] = 1, [0xE818] = 1, [0xE808] = 1, [0xE822] = 1, [0xE838] = 1, [0xE842] = 1, [0xE859] = 1, [0xE8F9] = 1, [0x7F08] = 1, [0x7F10] = 1, [0x7F2E] = 3, [0xE050] = 1, [0xF40B] = 1, [0xF41B] = 1, [0xEBD8] = 1, [0xEBE8] = 1, [0xEB51] = 3, [0xE908] = 1, [0xE918] = 1, [0xEC2B] = 1, [0xEBB1] = 3, [0x6403] = 1, [0xF008] = 1, [0xE62C] = 1, [0xF019] = 1, [0x7F32] = 1, [0x7900] = 3, [0x7902] = 3, [0x7903] = 3, [0x7901] = 3, [0x7A00] = 1, [0x7A01] = 1, [0x7A02] = 1, [0x7F2F] = 1, [0x7A03] = 1, [0x7A04] = 1, [0xE449] = 2, [0xE459] = 2, [0xEBCD] = 1, [0xE718] = 1, [0xE728] = 1, [0xE7E8] = 1, [0xE738] = 1, [0xE759] = 2, [0xE7F9] = 2, [0xE3BB] = 1, [0xE252] = 1, [0xE329] = 1, [0xE359] = 1, [0xE369] = 1, [0xF029] = 1, [0xEF91] = 1, [0x7B03] = 1, [0xEF28] = 1, [0xA000] = 1, [0x1001] = 1, [0xE76C] = 1, [0xF10E] = 1, [0xF11E] = 1, [0xE8B9] = 1, [0xE8A1] = 1, }
+ex_darkvision_attack_penalty = {[0] = -99, [1] = -4, [2] = -2, [3] = 0, [4] = -99}
 --If the revised pickpocketing system is enabled, the DC of a Pick Pockets check to steal an item is 20 + the difficulty of the particular item slot.
 ex_pick_pocket_slot_difficulty = {[0] = 4, [1] = 50, [2] = 6, [3] = 20, [4] = 6, [5] = 8, [6] = 6, [7] = 4, [8] = 4, [10] = 32767, [11] = 0, [12] = 0, [13] = 0, [14] = 0, [15] = 0, [16] = 0, [17] = 0, [18] = 0, [19] = 0, [20] = 0, [21] = 0, [22] = 0, [23] = 0, [24] = 0, [25] = 0, [26] = 0, [27] = 0, [28] = 0, [29] = 0, [30] = 0, [31] = 0, [32] = 0, [33] = 0, [34] = 0, [35] = 0, [36] = 0, [37] = 0, [38] = 0, [39] = 0, [40] = 0, [41] = 0, [42] = 32767, [43] = 8, [44] = 10, [45] = 8, [46] = 10, [47] = 8, [48] = 10, [49] = 8, [50] = 10, }
 --If the revised pickpocketing system is enabled, the DC of a Pick Pockets check to not be caught is 10 + the difficulty of the particular item slot.
 ex_pick_pocket_slot_stealth_difficulty = {[0] = 10, [1] = 60, [2] = 10, [3] = 60, [4] = 10, [5] = 20, [6] = 10, [7] = 15, [8] = 15, [10] = 32767, [11] = 0, [12] = 0, [13] = 0, [14] = 0, [15] = 0, [16] = 0, [17] = 0, [18] = 0, [19] = 0, [20] = 0, [21] = 0, [22] = 0, [23] = 0, [24] = 0, [25] = 0, [26] = 0, [27] = 0, [28] = 0, [29] = 0, [30] = 0, [31] = 0, [32] = 0, [33] = 0, [34] = 0, [35] = 0, [36] = 0, [37] = 0, [38] = 0, [39] = 0, [40] = 0, [41] = 0, [42] = 32767, [43] = 2, [44] = 6, [45] = 2, [46] = 6, [47] = 2, [48] = 6, [49] = 2, [50] = 6, }
 ex_pick_pocket_state_difficulty_adjust = {[0x1] = -10, [0x8] = -10, [0x20] = -10, [0x2000] = -2, [0x10000] = -2, [0x40000] = -6, [0x100000] = -4, [0x800000] = -4, }
 ex_pick_pocket_state_stealth_difficulty_adjust = {[0x1] = -6, [0x8] = -10, [0x20] = -2, [0x2000] = -2, [0x10000] = -2, [0x40000] = -6, [0x100000] = -4, [0x800000] = -4, }
+ex_hof_lock_difficulty_increase_based_on_chapter = {0, 0, 0, 0, 0, 0, 0}
+ex_hof_trap_difficulty_increase_based_on_chapter = {0, 0, 0, 0, 0, 0, 0}
+ex_hof_trap_detection_difficulty_increase_based_on_chapter = {0, 0, 0, 0, 0, 0, 0}
 --[[
 Values for ex_new_ability_score_system:
 0: Vanilla IWD2
@@ -48,6 +69,7 @@ ex_enable_autobuffing_keys = false
 ex_autobuffing_key_record = 219
 ex_autobuffing_key_activate = 186
 ex_autobuffing_key_delete = 221
+ex_skip_cutscene_key = 27
 ex_enable_druid_spontaneous_casting = false
 ex_wizard_spell_learning_on_level_up = false
 ex_wizard_spells_learned_per_level_up = 2
@@ -57,10 +79,18 @@ ex_sorcerer_spell_replacement_progression = {0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1,
 ex_bard_spell_replacement_on_level_up = false
 ex_bard_spell_replacement_levels_behind = 6
 ex_bard_spell_replacement_progression = {0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, }
+ex_barbarian_rage_progression = {[0] = 4, [15] = 6, }
+ex_barbarian_rage_extra_duration_level = -1
+ex_greater_rage_level = 15
+ex_tireless_rage_level = 20
+ex_arterial_strike_progression = {[0] = {1, 1}, }
+ex_hamstring_sneak_attack_cost = 2
+ex_crippling_strike_progression = {[0] = 1, [6] = 2, [9] = 3, [12] = 4, [15] = 5, [18] = 6, [21] = 7, [24] = 8, [27] = 9, [30] = 10, [33] = 11, [36] = 12, [39] = 13, [42] = 14, [45] = 15, [48] = 16, }
 ex_monk_fist_progression = {[0] = "00FIST", [1] = "00MFIST1", [2] = "00MFIST1", [3] = "00MFIST1", [4] = "00MFIST2", [5] = "00MFIST2", [6] = "00MFIST2", [7] = "00MFIST2", [8] = "00MFIST3", [9] = "00MFIST3", [10] = "00MFIST4", [11] = "00MFIST4", [12] = "00MFIST5", [13] = "00MFIST6", [14] = "00MFIST6", [15] = "00MFIST6", [16] = "00MFIST7", [17] = "00MFIST7", [18] = "00MFIST7", [19] = "00MFIST7", [20] = "00MFIST7", [21] = "00MFIST8", [22] = "00MFIST8", [23] = "00MFIST8", [24] = "00MFIST8", [25] = "00MFIST8", [26] = "00MFIST9", [27] = "00MFIST9", [28] = "00MFIST9", [29] = "00MFIST9", [30] = "00MFIST9", [31] = "00MFIST9", [32] = "00MFIST9", [33] = "00MFIST9", [34] = "00MFIST9", [35] = "00MFIST9", [36] = "00MFIST9", [37] = "00MFIST9", [38] = "00MFIST9", [39] = "00MFIST9", [40] = "00MFIST9", [41] = "00MFIST9", [42] = "00MFIST9", [43] = "00MFIST9", [44] = "00MFIST9", [45] = "00MFIST9", [46] = "00MFIST9", [47] = "00MFIST9", [48] = "00MFIST9", [49] = "00MFIST9", [50] = "00MFIST9", }
 ex_incorporeal_monk_fist_progression = {[0] = "00FIST", [1] = "00MFIST1", [2] = "00MFIST1", [3] = "00MFIST1", [4] = "00MFIST2", [5] = "00MFIST2", [6] = "00MFIST2", [7] = "00MFIST2", [8] = "00MFIST3", [9] = "00MFIST3", [10] = "00MFIST4", [11] = "00MFIST4", [12] = "00MFIST5", [13] = "00MFIST6", [14] = "00MFIST6", [15] = "00MFIST6", [16] = "00MFIST7", [17] = "00MFIST7", [18] = "00MFIST7", [19] = "00MFIST7", [20] = "00MFIST7", [21] = "00MFIST8", [22] = "00MFIST8", [23] = "00MFIST8", [24] = "00MFIST8", [25] = "00MFIST8", [26] = "00MFIST9", [27] = "00MFIST9", [28] = "00MFIST9", [29] = "00MFIST9", [30] = "00MFIST9", [31] = "00MFIST9", [32] = "00MFIST9", [33] = "00MFIST9", [34] = "00MFIST9", [35] = "00MFIST9", [36] = "00MFIST9", [37] = "00MFIST9", [38] = "00MFIST9", [39] = "00MFIST9", [40] = "00MFIST9", [41] = "00MFIST9", [42] = "00MFIST9", [43] = "00MFIST9", [44] = "00MFIST9", [45] = "00MFIST9", [46] = "00MFIST9", [47] = "00MFIST9", [48] = "00MFIST9", [49] = "00MFIST9", [50] = "00MFIST9", }
 ex_monk_apr_progression = {[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10] = 0, [11] = 0, [12] = 0, [13] = 0, [14] = 0, [15] = 0, [16] = 0, [17] = 0, [18] = 0, [19] = 0, [20] = 0, [21] = 0, [22] = 0, [23] = 0, [24] = 0, [25] = 0, [26] = 0, [27] = 0, [28] = 0, [29] = 0, [30] = 0, [31] = 0, [32] = 0, [33] = 0, [34] = 0, [35] = 0, [36] = 0, [37] = 0, [38] = 0, [39] = 0, [40] = 0, [41] = 0, [42] = 0, [43] = 0, [44] = 0, [45] = 0, [46] = 0, [47] = 0, [48] = 0, [49] = 0, [50] = 0, }
 ex_special_monk_weapon_types = {[0] = true, [16] = true, [24] = true, [26] = true, [28] = true, }
+ex_monk_bonus_ac_cannot_exceed_monk_level = false
 ex_elven_chainmail_counts_as_unarmored = false
 ex_disable_order_multiclass_restrictions = false
 ex_weapon_finesse_damage_bonus = false
@@ -68,6 +98,8 @@ ex_revised_pickpocketing = false
 ex_revised_lockpicking = false
 ex_revised_trap_disarming = false
 ex_revised_trap_detecting = true
+ex_rogue_level_to_disarm_difficult_traps = 0
+ex_difficult_trap_minimum_difficulty = 255
 ex_elf_automatic_search = false
 ex_elf_large_sword_weapon_finesse = false
 ex_lightfoot_halfling_thrown_dexterity_bonus_to_damage = false
@@ -87,17 +119,29 @@ ex_disarm_trap_xp_multiplier = 2
 ex_detect_traps_period = 3
 ex_detect_traps_radius = 200
 ex_detect_traps_radius_increase_per_search_skill_point = 5
+ex_enable_use_magic_device_item_usability = false
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
 ex_anyone_immune_to_critical_hits_is_immune_to_sneak_attacks = false
+ex_3e_improved_critical = false
+ex_double_power_attack_damage_for_two_handed_weapons = false
 ex_spell_focus_component_installed = false
+--[[
+Values for ex_incorporeal_miss_functionality
+0: Being incorporeal does not give attacks a chance to miss
+1: Being incorporeal gives incoming attacks a 50% chance to miss
+2: Being incorporeal gives incoming attacks a 50% chance to miss, but does not stack with concealment
+--]]
+ex_incorporeal_miss_functionality = 1
 ex_no_summoning_limit = false
 ex_no_apr_limit = false
 ex_shadowstep_brightness_max = 180
 ex_full_ability_score_cap = 40
-ex_innate_spell_resistance_cap = 30
+ex_barbarian_exceed_strength_cap_level = -1
+ex_innate_spell_resistance_level_cap = 30
 ex_max_skill_points_saved_for_next_level = 1
 ex_disable_party_hof_bonus_bug = true
+ex_snake_blood_subrace = false
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
@@ -115,6 +159,7 @@ ex_no_imbue_spell_list = {["USWI454"] = true, ["USWI456"] = true, }
 ex_true_spell = {["USMS035"] = "USWI256", ["USMS037"] = "SPPR510", ["USIP114"] = "SPPR114", ["USIP250"] = "SPPR250", ["USIP251"] = "SPPR213", ["USIP302"] = "SPPR302", ["USIP350"] = "SPPR350", ["USIP428"] = "SPPR428", ["USIP517"] = "SPPR517", ["USIP602"] = "SPPR602", ["USIP704"] = "SPPR704", ["USIP729"] = "SPPR729", ["USIW211"] = "SPWI211", ["USIW220"] = "SPWI220", ["USIW316"] = "SPWI316", ["USIW318"] = "SPWI318", ["USIW404"] = "SPWI404", ["USIW405"] = "SPWI405", ["USIW411"] = "SPWI411", ["USIW419"] = "SPWI419", ["USIW424"] = "SPWI424", ["USIW504"] = "SPWI504", ["USIW507"] = "SPWI507", ["USIW509"] = "SPWI509", ["USIW605"] = "SPWI605", ["USIW612"] = "SPWI612", ["USIW615"] = "SPWI615", ["USIW617"] = "SPWI617", ["USIW705"] = "SPWI705", ["USIW708"] = "SPWI708", ["USIW719"] = "SPWI719", ["USIW808"] = "SPWI808", ["USIW810"] = "SPWI810", ["USIW910"] = "SPWI910", ["USIW951"] = "SPWI905", ["USIP152"] = "USPR152", ["USIP951"] = "USPR951", ["USIP952"] = "USPR952", ["USIW751"] = "USWI751", ["USIW765"] = "SPWI713", ["USIW951"] = "SPWI905", }
 ex_alternate_spell_level_list = {["USWI352"] = 0, ["SPWI302"] = 0, ["USWI960"] = 0, ["USES001"] = 10, ["USES002"] = 10, ["USES003"] = 10, ["USES004"] = 10, ["USES005"] = 10, ["USES006"] = 10, ["USES007"] = 10, ["USES008"] = 10, ["USES009"] = 10, ["USES010"] = 10, ["USES011"] = 10, ["USES012"] = 10, ["USES013"] = 10, ["USES014"] = 10, ["USES015"] = 10, ["USES016"] = 10, ["USIP114"] = 1, ["USIP250"] = 2, ["USIP251"] = 2, ["USIP302"] = 4, ["USIP350"] = 3, ["USIP428"] = 2, ["USIP517"] = 3, ["USIP602"] = 6, ["USIP704"] = 7, ["USIP729"] = 9, ["USIW211"] = 2, ["USIW220"] = 2, ["USIW316"] = 3, ["USIW318"] = 3, ["USIW404"] = 4, ["USIW405"] = 4, ["USIW411"] = 3, ["USIW419"] = 3, ["USIW424"] = 4, ["USIW504"] = 5, ["USIW507"] = 5, ["USIW509"] = 5, ["USIW605"] = 6, ["USIW612"] = 6, ["USIW615"] = 6, ["USIW617"] = 6, ["USIW705"] = 7, ["USIW708"] = 7, ["USIW719"] = 4, ["USIW808"] = 8, ["USIW810"] = 5, ["USIW910"] = 9, ["USIW951"] = "SPWI905", ["USIP152"] = 1, ["USIW810"] = 5, ["USIP651"] = 6, ["USIP652"] = 6, ["USIP751"] = 7, ["USIP752"] = 7, ["USIP851"] = 8, ["USIP951"] = 9, ["USIP952"] = 9, ["USIW751"] = 7, ["USIW754"] = 6, ["USIW765"] = 7, ["USIW851"] = 8, ["USIW951"] = 9, }
 ex_ethereal_sources = {["USCLUBGH"] = true, }
+ex_conjured_ranger_dual_wield = {["FBLADE"] = true, ["IBLADE"] = true, ["MOONBLA"] = true, ["PBLADE"] = true, ["BBODISA"] = true, }
 ex_duration_cannot_be_changed = {["USWI959"] = true, }
 ex_feat_name_id = {}
 ex_skill_name = {[0] = "ALCHEMY", [1] = "ANIMAL_EMPATHY", [2] = "BLUFF", [3] = "CONCENTRATION", [4] = "DIPLOMACY", [5] = "DISABLE_DEVICE", [6] = "HIDE", [7] = "INTIMIDATE", [8] = "KNOWLEDGE_ARCANA", [9] = "MOVE_SILENTLY", [10] = "OPEN_LOCK", [11] = "PICK_POCKET", [12] = "SEARCH", [13] = "SPELLCRAFT", [14] = "USE_MAGIC_DEVICE", [15] = "WILDERNESS_LORE",}
@@ -125,11 +170,12 @@ ex_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "
 ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
 ex_improved_uncanny_dodge_class_level = {[1] = 5, [9] = 6, }
+ex_improved_uncanny_dodge_level_difference = 4
 ex_enable_dynamic_gender_tokens = false
 ex_alternative_damage_type = {
 [0x80000] = {[0x0] = {ex_tra_55386, 0x0, ""}, [0x1] = {ex_tra_55387, 0x2, ""}},
 [0x400000] = {[0x0] = {ex_tra_55371, 0x0, ""}, [0x1] = {ex_tra_55372, 0x0, ""}, [0x2] = {ex_tra_55373, 0x0, ""}, [0x4] = {ex_tra_55374, 0x0, ""}, [0x8] = {ex_tra_55370, 0x1, ""}},
-}
+[0x1000000] = {[0x0] = {ex_tra_55369, 0x0, ""}, [0x1] = {10912, 0x1, ""}},}
 ex_alternative_damage_token = {
 [0x0] = "EXDAMBLU", [0x10000] = "EXDAMACI", [0x20000] = "EXDAMCOL", [0x40000] = "EXDAMELE", [0x80000] = "EXDAMFIR", [0x100000] = "EXDAMPIE", [0x200000] = "EXDAMPOI", [0x400000] = "EXDAMMAG", [0x800000] = "EXDAMMIS", [0x1000000] = "EXDAMSLA", [0x2000000] = "EXDAMPIE", [0x4000000] = "EXDAMBLU", [0x8000000] = "EXDAMBLU", [0x10000000] = "EXDAMMAG", [0x20000000] = "EXDAMBLE", [0x40000000] = "EXDAMDIS", 
 }
@@ -307,10 +353,31 @@ ex_augury_spells = {
 ["USWI956"] = {["opcode"] = 12, ["savingthrow"] = 2048, ["savebonus"] = 4, }, 
 ["USWI960"] = {["opcode"] = 58, }, 
 }
-ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
+ex_imbue_arrow_item = {
+["SPWI112"] = {[1] = "USAA1121", [3] = "USAA1122", [5] = "USAA1123", [7] = "USAA1124", [9] = "USAA1125", },
+["SPWI118"] = {[1] = "USAA118", },
+["SPWI119"] = {[1] = "USAA119", },
+["SPWI122"] = {[1] = "USAA122", },
+["SPWI211"] = {[1] = "USAA211", },
+["SPWI217"] = {[1] = "USAA217", },
+["SPWI220"] = {[1] = "USAA220", },
+["SPWI226"] = {[1] = "USAA226", },
+["SPWI303"] = {[1] = "USAA303", },
+["SPWI304"] = {[1] = "USAA304", },
+["SPWI308"] = {[1] = "USAA308", },
+["SPWI313"] = {[1] = "USAA313", },
+["SPWI318"] = {[1] = "USAA318", },
+["SPWI319"] = {[1] = "USAA319", },
+["SPWI422"] = {[1] = "USAA4221", [10] = "USAA4222", [13] = "USAA4223", [16] = "USAA4224", [19] = "USAA4225", [22] = "USAA4226", [25] = "USAA4227", },
+["SPWI423"] = {[1] = "USAA423", },
+["SPWI424"] = {[1] = "USAA424", },
+["SPWI504"] = {[1] = "USAA504", },
+["SPPR714"] = {[1] = "USAA714", },
+}
+ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USAA217"] = {["TargetSpell"] = "USAA217D", ["PathSpell"] = "USAA217E", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, ["MEIMPALA"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, ["MESPLSTC"] = true, }
-ex_on_tick_functions = {["MEHGTMOD"] = -1, ["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEBASEAN"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["EXVISEFF"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEHGTMOD"] = -1, ["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEBASEAN"] = 1, ["MEGHOSTW"] = 1, ["MEIMBUEL"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEBLEEDW"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["EXVISEFF"] = 2, ["EXLNGAOE"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
@@ -399,7 +466,7 @@ ex_match_missile_index = {
 }
 ex_new_projectile_damage_type = {
 [11] = {[0x10] = 0x0, [0x80] = 0x0, [0x200] = 0x0, [0x400] = 0x0, [0x800] = 0x0}, -- Turn bullets into boulders
-[12] = {[0x0] = 0x40, [0x10] = 0x40, [0x80] = 0x40, [0x200] = 0x40, [0x400] = 0x40, [0x800] = 0x40}, -- Turn bullets into Magic Stones
+[12] = {[0x0] = nil, [0x10] = nil, [0x80] = nil, [0x200] = nil, [0x400] = nil, [0x800] = nil}, -- Turn bullets into Magic Stones
 }
 ex_kit_spells = {
 [2] = {[0x8] = "", [0x10] = "USMNKWHM", [0x20] = "USMNKWN2"},
@@ -415,7 +482,6 @@ ex_kit_spells = {
 [111] = {[0x1] = "USPAL11L", [0x2] = "USPAL11M", [0x4] = "USPAL11N"},
 }
 ex_global_statics = {
-
 }
 ex_chaos_cast_enemy = {
 [1] = {"SPWI101", "SPWI103", "SPWI104", "SPWI105", "SPWI112", "SPWI115", "SPWI116", "SPWI117", "SPWI118", "SPWI119", "SPWI121", "SPWI122", "SPWI224", "SPWI226", "USWI154", "USWI251", },

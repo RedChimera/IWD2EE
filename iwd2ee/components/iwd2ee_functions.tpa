@@ -974,9 +974,9 @@ END
 				ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
 			DEFINE_ASSOCIATIVE_ARRAY	classes	BEGIN
 				~bard~			, 0x3ba , 0x4b6	=> ~ba~
-				~cleric~		, 0x3de , 0x4da => ~cl~ 
+				~cleric~		, 0x3de , 0x4da => ~cl~
 				~druid~			, 0x402 , 0x4fe => ~dr~
-				~paladin~		, 0x426 , 0x522 => ~pa~ 
+				~paladin~		, 0x426 , 0x522 => ~pa~
 				~ranger~		, 0x44a , 0x546 => ~ra~
 				~sorcerer~	, 0x46e , 0x56a => ~so~
 				~wizard~		, 0x492 , 0x58e => ~wi~
@@ -999,6 +999,23 @@ END
 			WRITE_LONG	0x5fa (THIS - offset * 0x10)	//	Abilities offset
 			WRITE_LONG	0x602	(THIS - offset * 0x10)	//	Songs offset
 			WRITE_LONG	0x60a	(THIS - offset * 0x10)	//	Shapes offset
+			WRITE_LONG	0x612	(THIS - offset * 0x10)	//	Item Slots offset
+			WRITE_LONG	0x616	(THIS - offset * 0x10)	//	Items offset
+			WRITE_LONG	0x61e	(THIS - offset * 0x10)	//	Effects offset
+			DEFINE_ASSOCIATIVE_ARRAY	classesb	BEGIN
+				~innate~		, 0x5fa , 0x5fe => ~ab~
+				~song~		, 0x602 , 0x606 => ~sng~
+				~shape~		, 0x60a , 0x60e => ~shp~
+			END
+			SET	offset = 0
+			PHP_EACH	classesb	AS	label => pre	BEGIN
+				WRITE_LONG	label_1	(THIS - offset * 0x10)
+				PATCH_IF	! ~%class%~	STRING_CONTAINS_REGEXP ~%label%~	BEGIN
+					DELETE_BYTES	($~%pre%~(~off~) - offset * 0x10) 	($~%pre%~(~num~) * 0x10)
+					WRITE_LONG	label_2 0
+					SET	offset += $~%pre%~(~num~)
+				END
+			END
 			WRITE_LONG	0x612	(THIS - offset * 0x10)	//	Item Slots offset
 			WRITE_LONG	0x616	(THIS - offset * 0x10)	//	Items offset
 			WRITE_LONG	0x61e	(THIS - offset * 0x10)	//	Effects offset
@@ -1851,7 +1868,6 @@ BEGIN
 			idrow = 0
 			FOR (i = 0; i < numrows; ++i) BEGIN
 				READ_2DA_ENTRY i 1 6 iid
-				PATCH_PRINT ~%iid%~
 				idrow = i
 				PATCH_IF iid = id BEGIN
 					featfound = 1

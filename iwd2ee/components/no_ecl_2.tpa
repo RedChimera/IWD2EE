@@ -72,6 +72,46 @@ STRING_SET 5388 @837
 STRING_SET 5394 @838
 STRING_SET 5416 @834
 STRING_SET 5662 @840
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~41~ BEGIN
+
+	LAF EXTEND_FEAT_IWD2 INT_VAR id=59 offset=0 descref=RESOLVE_STR_REF(@736) max=1 STR_VAR script=~Feats_SnakeBlood~ prerequisite_script=~Feats_SnakeBlood~ END
+
+	COPY ~%mod_folder%/spl/FE_59_1.spl~ ~override~
+
+	COPY_EXISTING ~B3RACE.2DA~ ~override~
+		PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~36~ BEGIN
+			REPLACE_TEXTUALLY ~\(165[ %TAB%]+[0-9]+[ %TAB%]+1\)~ ~\1
+168    27189     8~
+		END ELSE BEGIN
+			REPLACE_TEXTUALLY ~\(STRREF[ %TAB%]+FAVORED_CLASS\)~ ~\1
+168    27189     8~
+		END
+/*
+	COPY_EXISTING ~feats.2da~ ~override~
+	  COUNT_2DA_COLS num_cols
+	  READ_2DA_ENTRIES_NOW rows num_cols
+	  FOR (row = 0; row < rows; ++row) BEGIN
+	    READ_2DA_ENTRY_FORMER rows row 0 label
+	    PATCH_MATCH ~%label%~ WITH
+	      ~SNAKE_BLOOD~ BEGIN
+	        SET strref = RESOLVE_STR_REF(@736)
+	        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+	      END
+        DEFAULT
+	    END
+	  END
+	  SET_2DA_ENTRIES_NOW rows_out num_cols
+*/
+	COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_snake_blood_subrace *=.*~ ~ex_snake_blood_subrace = true~
+
+	APPEND ~RACERSMD.2da~
+~YUANTI					0		0		0		0		6		0			0			0			0			0			0~
+
+END
+
+
 /*
 <<<<<<<< .../script.baf
 IF

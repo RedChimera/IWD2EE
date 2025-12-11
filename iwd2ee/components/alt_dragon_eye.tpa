@@ -4,6 +4,72 @@ COPY ~%mod_folder%/are/are_alt_dragon_eye~ ~override~
 
 COPY ~%mod_folder%/bcs/bcs_alt_dragon_eye~ ~override~
 
+COPY_EXISTING ~AR6104.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 STR_VAR fj_structure_type=~actor~ fj_name= EVAL ~%SOURCE_RES%AREAGL~ fj_cre_resref=~USAREAGL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name= EVAL ~%SOURCE_RES%AREAGL~ END
+	READ_SHORT 0x6A numtriggers
+	READ_LONG 0x6C triggeroffset
+	FOR (i = 0; i < numtriggers; ++i) BEGIN
+		READ_SHORT (triggeroffset + 0x20) triggertype
+		READ_SHORT (triggeroffset + 0x68) trapdetectiondifficulty
+		READ_SHORT (triggeroffset + 0x6C) istrapped
+		PATCH_IF istrapped > 0 AND triggertype = 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (triggeroffset + 0x68) (trapdetectiondifficulty + 1000)
+		END
+		triggeroffset += 0xC4
+	END
+	READ_SHORT 0x84 numcontainers
+	READ_LONG 0x80 containeroffset
+	FOR (i = 0; i < numcontainers; ++i) BEGIN
+		READ_SHORT (containeroffset + 0x2C) trapdetectiondifficulty
+		READ_SHORT (containeroffset + 0x30) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (containeroffset + 0x2C) (trapdetectiondifficulty + 1000)
+		END
+		containeroffset += 0xC0
+	END
+	READ_SHORT 0xB4 numdoors
+	READ_LONG 0xB8 dooroffset
+	READ_LONG 0x8C vertexoffset
+	FOR (i = 0; i < numdoors; ++i) BEGIN
+		READ_SHORT (dooroffset + 0x6C) trapdetectiondifficulty
+		READ_SHORT (dooroffset + 0x70) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (dooroffset + 0x6C) (trapdetectiondifficulty + 1000)
+		END
+
+		READ_SSHORT (dooroffset + 0x3E) boundingboxopenbottom
+		PATCH_IF boundingboxopenbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x38) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3A) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3C) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3E) (0 - 1)
+			READ_LONG (dooroffset + 0x2C) firstvertexindexopen
+			READ_SHORT (dooroffset + 0x30) numverticesopen
+			FOR (j = 0; j < numverticesopen; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
+		READ_SSHORT (dooroffset + 0x46) boundingboxclosedbottom
+		PATCH_IF boundingboxclosedbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x40) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x42) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x44) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x46) (0 - 1)
+			READ_SHORT (dooroffset + 0x32) numverticesclosed
+			READ_LONG (dooroffset + 0x34) firstvertexindexclosed
+			FOR (j = 0; j < numverticesclosed; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
+		dooroffset += 0xC8
+	END
+	UNLESS ~USAREAGL~
+
 COMPILE ~%mod_folder%/dlg/USSTLPP.d~ ~%mod_folder%/dlg/USSTLPL.d~ ~%mod_folder%/dlg/USSTLPJ.d~ ~%mod_folder%/dlg/USSTLPI.d~ ~%mod_folder%/dlg/USSTLPV.d~
 
 COMPILE ~%mod_folder%/dlg/61ARCHON.d~
@@ -13,11 +79,11 @@ COMPILE ~%mod_folder%/dlg/60ISELOR.d~
 //COMPILE ~%mod_folder%/dlg/61NHEERO.d~
 
 // This overwrites a now-unneeded journal entry so we can add an entry about the new Izbelah fight. There should be a reference to it in the text of USSTLPI.dlg, Izbelah's custom dialog.
-STRING_SET 36025 ~In the lava chamber, we encountered Lord Pyros, a fire giant, a salamander, a yuan-ti halfbreed man named Venomin, and Izbelah arguing over a "Temporal Stasis" spell that Izbelah designed to prevent a volcanic eruption from destroying Dragon's Eye.  It seems that Lord Pyros and his friends in the lava chamber were afraid that the spell would stop time or cause some other catastrophe, but Izbelah thought it was worth the risk because her home was at stake.  In the end, Izbelah decided Lord Pyros was secretly planning to destroy Dragon's Eye, and even accused him of hiring us as assassins!~
-STRING_SET 29274 ~Iselore told us that the Legion of the Chimera forces are using Dragon's Eye as a route to Kuldahar.  He believes that at the base of the Dragon's Eye volcano, we will be able to enter the Fields of Slaughter.  From there, we can access the Severed Hand.  Iselore also has warned us that someone inside Dragon's Eye is using magic to fiddle with time.  Whatever they're up to, I doubt it's good news.~
-STRING_SET 35006 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
-STRING_SET 35071 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, instantly disintegrating nearly every living thing inside.  Shortly thereafter the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
-STRING_SET 35074 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption.  Thorasskus then informed High Sorceress Izbelah who hastily researched a spell to prevent it, but she hasn't been seen since.~
+STRING_SET 36025 @6409
+STRING_SET 29274 @6410
+STRING_SET 35006 @6411
+STRING_SET 35071 @6412
+STRING_SET 35074 @6413
 
 COPY_EXISTING ~61VENOMI.CRE~ ~override~
 	READ_LONG 0x10 thecreflags

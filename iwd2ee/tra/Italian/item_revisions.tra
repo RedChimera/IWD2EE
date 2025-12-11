@@ -11465,7 +11465,7 @@ Peso: 0,90 Kg~
 STATISTICHE:
 
 Armatura leggera
-Bonus all'Armatura: +10
+Bonus all'Armatura: +9
 Bonus Destrezza massimo: +6
 Penalita' Armatura alla Prova: -0
 Fallimento degli Incantesimi Arcani: 10 %
@@ -12135,13 +12135,13 @@ Fallimento degli Incantesimi Arcani: 0%
 Speciale:
 Le abilita' di lancio di incantesimi e di ladro possono essere eseguite senza penalita' derivanti dall'indossare un'armatura.
 Peso: 4,05 Kg~
-@12591=~Armatura Squisita del Cigno Nero +5~
+@12591=~Armatura Squisita del Cigno Nero +3~
 @12592=~Quest'armatura fu forgiata dal fabbro nano Karador e da un incantatore elfo conosciuto come Elameth dei Cinque Alberi.  Nel periodo di collaborazione tra la Mano di Seldarine e le Sale di Dorn furono prodotte molte meraviglie.  Quest'armatura era una di esse.  L'armatura  eccezionalmente leggera e di ottima fattura fu originariamente indossata da una femmina elfa che era un'ufficiale nella Mano Mozzata ed e' per questo che gli orchi non la presero quando saccheggiarono le torri.  In seguito l'armatura fu sottratta alla Mano dalla Vergine Ilmadia.
 
 STATISTICHE:
 
 Non Richiede Competenza nelle Armature
-Bonus all'Armatura: +12
+Bonus all'Armatura: +10
 Bonus Destrezza Massimo: Nessuno
 Penalita' Armatura alla Prova: -0
 Fallimento degli Incantesimi Arcani: 0%
@@ -13432,7 +13432,7 @@ Peso: 0,45 Kg~
 
 STATISTICHE:
 
-Bonus all'Armatura Generico: +8
+Bonus all'Armatura Generico: +5
 Peso: 0,45 Kg~
 @12861=~Tappi per le Orecchie~
 @12862=~Questo e' un paio di tappi per le orecchie fatti di cera d'api. La principale applicazione pratica dei tappi per le orecchie e' la protezione da mostri come arpie o sirene che cantano canzoni magiche in combattimento.

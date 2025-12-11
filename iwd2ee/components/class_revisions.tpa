@@ -127,7 +127,7 @@ COPY ~%mod_folder%/tables/CLABRN01.2da~ ~override~
 COPY ~%mod_folder%/tables/CLABTH01.2da~ ~override~
 //COPY ~%mod_folder%/tables/FEATREQ.2da~ ~override~
 COPY ~%mod_folder%/tables/feats.2da~ ~override~
-COPY ~%mod_folder%/tables/FEATCLAS.2da~ ~override~
+COPY ~%mod_folder%/tables/tables_xp_cap/FEATCLAS.2da~ ~override~
 COPY ~%mod_folder%/tables/FEATLVL.2da~ ~override~
 COPY ~%mod_folder%/tables/LVLFEAT.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTSONG.2da~ ~override~
@@ -159,6 +159,20 @@ COPY ~%mod_folder%/tables/SPLBRDKN.2da~ ~override~
 COPY ~%mod_folder%/tables/SPLSRCKN.2da~ ~override~
 COPY ~%mod_folder%/tables/WSPECIAL.2da~ ~override~
 
+COPY_EXISTING ~USFARAR1.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=RESOLVE_STR_REF(@393) STR_VAR match_resource=~MECLSNAM~ END
+
+COPY_EXISTING ~USFASSA1.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=RESOLVE_STR_REF(@384) STR_VAR match_resource=~MECLSNAM~ END
+
+COPY_EXISTING ~USFKENS1.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=RESOLVE_STR_REF(@313) STR_VAR match_resource=~MECLSNAM~ END
+
+COPY_EXISTING ~CLABSR01.2da~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(ABILITY10.*\)~ ~\1
+ABILITY11	****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         AP_USSRCMMB  ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****         ****~
+
+
 COPY_EXISTING ~SKILLPTS.2da~ ~override~
 	SET_2DA_ENTRY 0 2 12 ~3~
 	SET_2DA_ENTRY 0 8 12 ~3~
@@ -174,6 +188,15 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_fist_progression *=.*~ ~ex_monk_fist_progression = {[0] = "00FIST", [1] = "USMFIS01", [2] = "USMFIS02", [3] = "USMFIS03", [4] = "USMFIS04", [5] = "USMFIS05", [6] = "USMFIS06", [7] = "USMFIS07", [8] = "USMFIS08", [9] = "USMFIS09", [10] = "USMFIS10", [11] = "USMFIS11", [12] = "USMFIS12", [13] = "USMFIS13", [14] = "USMFIS14", [15] = "USMFIS15", [16] = "USMFIS16", [17] = "USMFIS17", [18] = "USMFIS18", [19] = "USMFIS19", [20] = "USMFIS20", [21] = "USMFIS21", [22] = "USMFIS22", [23] = "USMFIS23", [24] = "USMFIS24", [25] = "USMFIS25", [26] = "USMFIS26", [27] = "USMFIS27", [28] = "USMFIS28", [29] = "USMFIS29", [30] = "USMFIS30", [31] = "USMFIS31", [32] = "USMFIS32", [33] = "USMFIS33", [34] = "USMFIS34", [35] = "USMFIS35", [36] = "USMFIS36", [37] = "USMFIS37", [38] = "USMFIS38", [39] = "USMFIS39", [40] = "USMFIS40", [41] = "USMFIS41", [42] = "USMFIS42", [43] = "USMFIS43", [44] = "USMFIS44", [45] = "USMFIS45", [46] = "USMFIS46", [47] = "USMFIS47", [48] = "USMFIS48", [49] = "USMFIS49", [50] = "USMFIS50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_incorporeal_monk_fist_progression *=.*~ ~ex_incorporeal_monk_fist_progression = {[0] = "USFISTIN", [1] = "USMFII01", [2] = "USMFII02", [3] = "USMFII03", [4] = "USMFII04", [5] = "USMFII05", [6] = "USMFII06", [7] = "USMFII07", [8] = "USMFII08", [9] = "USMFII09", [10] = "USMFII10", [11] = "USMFII11", [12] = "USMFII12", [13] = "USMFII13", [14] = "USMFII14", [15] = "USMFII15", [16] = "USMFII16", [17] = "USMFII17", [18] = "USMFII18", [19] = "USMFII19", [20] = "USMFII20", [21] = "USMFII21", [22] = "USMFII22", [23] = "USMFII23", [24] = "USMFII24", [25] = "USMFII25", [26] = "USMFII26", [27] = "USMFII27", [28] = "USMFII28", [29] = "USMFII29", [30] = "USMFII30", [31] = "USMFII31", [32] = "USMFII32", [33] = "USMFII33", [34] = "USMFII34", [35] = "USMFII35", [36] = "USMFII36", [37] = "USMFII37", [38] = "USMFII38", [39] = "USMFII39", [40] = "USMFII40", [41] = "USMFII41", [42] = "USMFII42", [43] = "USMFII43", [44] = "USMFII44", [45] = "USMFII45", [46] = "USMFII46", [47] = "USMFII47", [48] = "USMFII48", [49] = "USMFII49", [50] = "USMFII50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_apr_progression *=.*~ ~ex_monk_apr_progression = {[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10] = 0, [11] = 0, [12] = 0, [13] = 1, [14] = 1, [15] = 1, [16] = 2, [17] = 2, [18] = 2, [19] = 3, [20] = 3, [21] = 3, [22] = 4, [23] = 4, [24] = 4, [25] = 5, [26] = 5, [27] = 5, [28] = 6, [29] = 6, [30] = 6, [31] = 7, [32] = 7, [33] = 7, [34] = 8, [35] = 8, [36] = 8, [37] = 9, [38] = 9, [39] = 9, [40] = 10, [41] = 10, [42] = 10, [43] = 11, [44] = 11, [45] = 11, [46] = 12, [47] = 12, [48] = 12, [49] = 13, [50] = 13, }~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_barbarian_rage_progression *=.*~ ~ex_barbarian_rage_progression = {[0] = 4, [15] = 6, [20] = 8, [24] = 10, [28] = 12, [32] = 14, [36] = 16, [40] = 18, [44] = 20, [48] = 22, }~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_barbarian_rage_extra_duration_level *=.*~ ~ex_barbarian_rage_extra_duration_level = 5~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_greater_rage_level *=.*~ ~ex_greater_rage_level = 11~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tireless_rage_level *=.*~ ~ex_tireless_rage_level = 17~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_barbarian_exceed_strength_cap_level *=.*~ ~ex_barbarian_exceed_strength_cap_level = 21~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_arterial_strike_progression *=.*~ ~ex_arterial_strike_progression = {[0] = {1, 0}, [7] = {2, 0}, [13] = {3, 0}, [19] = {4, 0}, [25] = {5, 0}, [31] = {6, 0}, [37] = {7, 0}, [43] = {8, 0}, [49] = {9, 0}, }~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_hamstring_sneak_attack_cost *=.*~ ~ex_hamstring_sneak_attack_cost = 0~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_crippling_strike_progression *=.*~ ~ex_crippling_strike_progression = {[0] = 1, [6] = 2, [9] = 3, [12] = 4, [15] = 5, [18] = 6, [21] = 7, [24] = 8, [27] = 9, [30] = 10, [33] = 11, [36] = 12, [39] = 13, [42] = 14, [45] = 15, [48] = 16, }~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_bonus_ac_cannot_exceed_monk_level *=.*~ ~ex_monk_bonus_ac_cannot_exceed_monk_level = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_disable_order_multiclass_restrictions *=.*~ ~ex_disable_order_multiclass_restrictions = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_enable_druid_spontaneous_casting *=.*~ ~ex_enable_druid_spontaneous_casting = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_weapon_finesse_damage_bonus *=.*~ ~ex_weapon_finesse_damage_bonus = true~
@@ -181,10 +204,19 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_lockpicking *=.*~ ~ex_revised_lockpicking = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_trap_disarming *=.*~ ~ex_revised_trap_disarming = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_trap_detecting *=.*~ ~ex_revised_trap_detecting = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_rogue_level_to_disarm_difficult_traps *=.*~ ~ex_rogue_level_to_disarm_difficult_traps = 8~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_difficult_trap_minimum_difficulty *=.*~ ~ex_difficult_trap_minimum_difficulty = 100~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_hof_lock_difficulty_increase_based_on_chapter *=.*~ ~ex_hof_lock_difficulty_increase_based_on_chapter = {15, 30, 45, 60, 75, 90, 105}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_hof_trap_difficulty_increase_based_on_chapter *=.*~ ~ex_hof_trap_difficulty_increase_based_on_chapter = {15, 30, 45, 60, 75, 90, 105}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_hof_trap_detection_difficulty_increase_based_on_chapter *=.*~ ~ex_hof_trap_detection_difficulty_increase_based_on_chapter = {15, 30, 45, 60, 75, 90, 105}~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_dash_movement_multiplier *=.*~ ~ex_dash_movement_multiplier = 133~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_pnp_ranged_penalty_without_precise_shot_to_avoid_hitting_ally *=.*~ ~ex_pnp_ranged_penalty_without_precise_shot_to_avoid_hitting_ally = -4~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_paladin_charisma_save_bonus_level *=.*~ ~ex_paladin_charisma_save_bonus_level = 2~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_max_skill_points_saved_for_next_level *=.*~ ~ex_max_skill_points_saved_for_next_level = 5~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_improved_uncanny_dodge_level_difference *=.*~ ~ex_improved_uncanny_dodge_level_difference = 0~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_enable_use_magic_device_item_usability *=.*~ ~ex_enable_use_magic_device_item_usability = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_3e_improved_critical *=.*~ ~ex_3e_improved_critical = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_double_power_attack_damage_for_two_handed_weapons *=.*~ ~ex_double_power_attack_damage_for_two_handed_weapons = true~
 
 COPY_EXISTING_REGEXP ~00MFIST.*\.itm~ ~override~ ~USMFIS[0-5][0-9]\.itm~ ~override~
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=1 END
@@ -253,6 +285,7 @@ COPY ~%mod_folder%/spl/USSTAE04.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE05.spl~ ~override~
 
 STRING_SET 27114 @814
+STRING_SET 24116 @841
 
 // patch wyverns, spiders, beetles, chimeras, yetis, and remorhazes to be animals so they're subject to Animal Empathy
 
@@ -571,6 +604,18 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@715)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
+      ~IMPROVED_CRITICAL~ BEGIN
+        SET strref = RESOLVE_STR_REF(@731)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~HAMSTRING~ BEGIN
+        SET strref = RESOLVE_STR_REF(@734)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~POWER_ATTACK~ BEGIN
+        SET strref = RESOLVE_STR_REF(@735)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
       DEFAULT
     END
   END
@@ -586,7 +631,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@303) descref=RESOLVE_STR_REF(
 //LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@305) descref=RESOLVE_STR_REF(@306) max=4 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ prerequisite_script=~Prereq_ExtendSpell~ featspl_1=~USFEXSP1~ featspl_2=~USFEXSP1~ featspl_3=~USFEXSP1~ featspl_4=~USFEXSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@351) descref=RESOLVE_STR_REF(@352) max=1 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ featspl_1=~USFEXSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@341) descref=RESOLVE_STR_REF(@342) max=2 STR_VAR name=~ME_FEINT~ script=~Feats_Feint~ featspl_1=~USFFEIN1~ featspl_2=~USFFEIN2~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@307) descref=RESOLVE_STR_REF(@308) max=5 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ script=~Feats_ImprovedSneakAttack~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@307) descref=RESOLVE_STR_REF(@308) max=5 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ script=~Feats_ImprovedSneakAttack~ prerequisite_script=~Prereq_ImprovedSneakAttack~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@309) descref=RESOLVE_STR_REF(@310) max=2 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ script=~Feats_ImprovedTwoWeaponFighting~ prerequisite_script=~Prereq_ImprovedTwoWeaponFighting~ featspl_1=~USFITWF1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@311) descref=RESOLVE_STR_REF(@312) max=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ script=~Feats_ImprovedUnarmedAbilities~ featspl_1=~USFUNAB1~ featspl_2=~USFUNAB1~ featspl_3=~USFUNAB1~ featspl_4=~USFUNAB1~ featspl_5=~USFUNAB1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@313) descref=RESOLVE_STR_REF(@314) max=1 STR_VAR name=~ME_KENSEI~ script=~Feats_Kensei~ featspl_1=~USFKENS1~ END
@@ -595,7 +640,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@317) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@319) descref=RESOLVE_STR_REF(@320) max=1 STR_VAR name=~ME_MASTER_OF_MAGIC_FORCE~ script=~Feats_MasterOfMagicForce~ featspl_1=~USFMOMF1~ END
 //LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@321) descref=RESOLVE_STR_REF(@322) max=3 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ prerequisite_script=~Prereq_MaximizeSpell~ featspl_1=~USFMASP1~ featspl_2=~USFMASP1~ featspl_3=~USFMASP1~ featspl_4=~USFMASP1~ featspl_5=~USFMASP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@353) descref=RESOLVE_STR_REF(@354) max=1 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ featspl_1=~USFMASP1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@323) descref=RESOLVE_STR_REF(@324) max=1 STR_VAR name=~ME_MOBILITY~ script=~Feats_Mobility~ featspl_1=~USFMOBI1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@323) descref=RESOLVE_STR_REF(@324) max=2 STR_VAR name=~ME_MOBILITY~ script=~Feats_Mobility~ prerequisite_script=~Prereq_Mobility~ featspl_1=~USFMOBI1~ featspl_2=~USFMOBI2~ END
 //LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@325) descref=RESOLVE_STR_REF(@326) max=5 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ prerequisite_script=~Prereq_QuickenSpell~ featspl_1=~USFQUSP1~ featspl_2=~USFQUSP1~ featspl_3=~USFQUSP1~ featspl_4=~USFQUSP1~ featspl_5=~USFQUSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@357) descref=RESOLVE_STR_REF(@358) max=1 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ featspl_1=~USFQUSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@327) descref=RESOLVE_STR_REF(@328) max=1 STR_VAR name=~ME_RAPID_RELOAD~ script=~Feats_RapidReload~ featspl_1=~USFRARL1~ END
@@ -622,6 +667,8 @@ INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~
 
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@386) descref=RESOLVE_STR_REF(@387) max=3 STR_VAR name=~ME_FAST_HEALING~ script=~Feats_FastHealing~ prerequisite_script=~Prereq_FastHealing~ featspl_1=~USFFASH1~ featspl_2=~USFFASH1~ featspl_3=~USFFASH1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@388) descref=RESOLVE_STR_REF(@389) max=5 STR_VAR name=~ME_LICHDOM~ script=~Feats_Lichdom~ prerequisite_script=~Prereq_Lichdom~ featspl_5=~USFLICH3~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@391) descref=RESOLVE_STR_REF(@392) max=1 STR_VAR name=~ME_LINGERING_DAMAGE~ script=~Feats_LingeringDamage~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@393) descref=RESOLVE_STR_REF(@394) max=1 STR_VAR name=~ME_ARCANE_ARCHER~ script=~Feats_ArcaneArcher~ featspl_1=~USFARAR1~ END
 
 LAF EXTEND_FEAT_IWD2 INT_VAR id=9 offset=0x70C descref=RESOLVE_STR_REF(@712) max=2 STR_VAR script=~Feats_CombatCasting~ prerequisite_script=~Prereq_CombatCasting~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=48 offset=0x70D descref=RESOLVE_STR_REF(@713) max=2 STR_VAR script=~Feats_PreciseShot~ prerequisite_script=~Prereq_PreciseShot~ END
@@ -647,6 +694,7 @@ LAF EXTEND_FEAT_IWD2 INT_VAR id=0 offset=0 max=1 STR_VAR script=~Feats_MasterOfM
 LAF EXTEND_FEAT_IWD2 INT_VAR id=2 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=51 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=65 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=36 offset=0 nameref=RESOLVE_STR_REF(@732) descref=RESOLVE_STR_REF(@733) max=1 STR_VAR script=~Feats_ImprovedBardSong~ prerequisite_script=~Feats_ImprovedBardSong~ END
 
 COPY ~%mod_folder%/tables/WSPECIA2.2da~ ~override/WSPECIAL.2da~
 
@@ -1544,6 +1592,28 @@ COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
 STRING_SET 8829 @699
 STRING_SET 8792 @900
 
+COPY_EXISTING ~USII105.spl~ ~override~
+  SAY UNIDENTIFIED_DESC @930
+  SAY IDENTIFIED_DESC @930
+
+COPY_EXISTING ~SPIN119.spl~ ~override~
+  SAY UNIDENTIFIED_DESC @931
+  SAY IDENTIFIED_DESC @931
+
+COPY_EXISTING ~USII121.spl~ ~override~
+  SAY UNIDENTIFIED_DESC @932
+  SAY IDENTIFIED_DESC @932
+
+COPY_EXISTING ~USII305.spl~ ~override~
+  SAY UNIDENTIFIED_DESC @933
+  SAY IDENTIFIED_DESC @933
+
+COPY_EXISTING ~USWS03Y.spl~ ~override~
+  SAY NAME1 @934
+  SAY NAME2 @934
+  SAY UNIDENTIFIED_DESC @935
+  SAY IDENTIFIED_DESC @935
+
 COPY_EXISTING ~USCONCOC.spl~ ~override~
   SAY NAME1 @901
   SAY NAME2 @901
@@ -1709,6 +1779,8 @@ COPY_EXISTING ~SPIN189.spl~ ~override~
   SAY IDENTIFIED_DESC @970
 
 COPY_EXISTING ~SPIN190.spl~ ~override~
+  SAY NAME1 @37256
+  SAY NAME2 @37256
   SAY UNIDENTIFIED_DESC @971
   SAY IDENTIFIED_DESC @971
 
@@ -1842,6 +1914,127 @@ COPY_EXISTING ~USLICHF2.spl~ ~override~
 		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
 		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 header=(i - 1) dicenumber=levelcheck END
 	END
+
+COPY_EXISTING ~USIMBUE.spl~ ~override~
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point=1 opcode=139 target=2 timing=1 parameter1=RESOLVE_STR_REF(@985) END
+  SAY NAME1 @985
+  SAY NAME2 @985
+  SAY UNIDENTIFIED_DESC @986
+  SAY IDENTIFIED_DESC @986
+
+COPY_EXISTING_REGEXP ~USAA112.*\.itm~ ~override~
+  SAY NAME1 @56038
+  SAY NAME2 @56038
+  SAY UNIDENTIFIED_DESC @56038
+  SAY IDENTIFIED_DESC @56038
+
+COPY_EXISTING ~USAA118.itm~ ~override~
+  SAY NAME1 @56039
+  SAY NAME2 @56039
+  SAY UNIDENTIFIED_DESC @56039
+  SAY IDENTIFIED_DESC @56039
+
+COPY_EXISTING ~USAA119.itm~ ~override~
+  SAY NAME1 @56040
+  SAY NAME2 @56040
+  SAY UNIDENTIFIED_DESC @56040
+  SAY IDENTIFIED_DESC @56040
+
+COPY_EXISTING ~USAA122.itm~ ~override~
+  SAY NAME1 @56041
+  SAY NAME2 @56041
+  SAY UNIDENTIFIED_DESC @56041
+  SAY IDENTIFIED_DESC @56041
+
+COPY_EXISTING ~USAA211.itm~ ~override~
+  SAY NAME1 @56042
+  SAY NAME2 @56042
+  SAY UNIDENTIFIED_DESC @56042
+  SAY IDENTIFIED_DESC @56042
+
+COPY_EXISTING ~USAA217.itm~ ~override~
+  SAY NAME1 @56043
+  SAY NAME2 @56043
+  SAY UNIDENTIFIED_DESC @56043
+  SAY IDENTIFIED_DESC @56043
+
+COPY_EXISTING ~USAA220.itm~ ~override~
+  SAY NAME1 @56044
+  SAY NAME2 @56044
+  SAY UNIDENTIFIED_DESC @56044
+  SAY IDENTIFIED_DESC @56044
+
+COPY_EXISTING ~USAA226.itm~ ~override~
+  SAY NAME1 @56045
+  SAY NAME2 @56045
+  SAY UNIDENTIFIED_DESC @56045
+  SAY IDENTIFIED_DESC @56045
+
+COPY_EXISTING ~USAA303.itm~ ~override~
+  SAY NAME1 @56046
+  SAY NAME2 @56046
+  SAY UNIDENTIFIED_DESC @56046
+  SAY IDENTIFIED_DESC @56046
+
+COPY_EXISTING ~USAA304.itm~ ~override~
+  SAY NAME1 @56047
+  SAY NAME2 @56047
+  SAY UNIDENTIFIED_DESC @56047
+  SAY IDENTIFIED_DESC @56047
+
+COPY_EXISTING ~USAA308.itm~ ~override~
+  SAY NAME1 @56048
+  SAY NAME2 @56048
+  SAY UNIDENTIFIED_DESC @56048
+  SAY IDENTIFIED_DESC @56048
+
+COPY_EXISTING ~USAA313.itm~ ~override~
+  SAY NAME1 @56049
+  SAY NAME2 @56049
+  SAY UNIDENTIFIED_DESC @56049
+  SAY IDENTIFIED_DESC @56049
+
+COPY_EXISTING ~USAA318.itm~ ~override~
+  SAY NAME1 @56050
+  SAY NAME2 @56050
+  SAY UNIDENTIFIED_DESC @56050
+  SAY IDENTIFIED_DESC @56050
+
+COPY_EXISTING ~USAA319.itm~ ~override~
+  SAY NAME1 @56051
+  SAY NAME2 @56051
+  SAY UNIDENTIFIED_DESC @56051
+  SAY IDENTIFIED_DESC @56051
+
+COPY_EXISTING_REGEXP ~USAA422.*\.itm~ ~override~
+  SAY NAME1 @56052
+  SAY NAME2 @56052
+  SAY UNIDENTIFIED_DESC @56052
+  SAY IDENTIFIED_DESC @56052
+
+COPY_EXISTING ~USAA423.itm~ ~override~
+  SAY NAME1 @56053
+  SAY NAME2 @56053
+  SAY UNIDENTIFIED_DESC @56053
+  SAY IDENTIFIED_DESC @56053
+
+COPY_EXISTING ~USAA424.itm~ ~override~
+  SAY NAME1 @56054
+  SAY NAME2 @56054
+  SAY UNIDENTIFIED_DESC @56054
+  SAY IDENTIFIED_DESC @56054
+
+COPY_EXISTING ~USAA504.itm~ ~override~
+  SAY NAME1 @56055
+  SAY NAME2 @56055
+  SAY UNIDENTIFIED_DESC @56055
+  SAY IDENTIFIED_DESC @56055
+
+COPY_EXISTING ~USAA714.itm~ ~override~
+  SAY NAME1 @56056
+  SAY NAME2 @56056
+  SAY UNIDENTIFIED_DESC @56056
+  SAY IDENTIFIED_DESC @56056
 
 COPY_EXISTING ~FE_13_1.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@921) STR_VAR match_resource=~MEDEFLEC~ END
@@ -2630,5 +2823,42 @@ COPY_EXISTING ~GUIREC.chu~ ~override~
 			END
 		END
 	END
+
+OUTER_SPRINT stringumdthreshold @56036
+OUTER_SPRINT stringweight @56037
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_LONG 0x18 theitemflags
+	READ_SHORT 0x1c theitemcategory
+
+	PATCH_IF (theitemflags BAND 0x04000044) == 0x00000044 AND theitemcategory != 11 AND theitemcategory != 35 BEGIN
+		READ_LONG 0x34 theprice
+		READ_BYTE 0x72 theumddc
+		theumddc += (((theprice / 1000) ** (1 2)) + 5) * 3 / 2
+		PATCH_IF theumddc > 255 BEGIN
+			theumddc = 255
+		END
+		WRITE_BYTE 0x72 theumddc
+		theitemflags |= 0x4000000
+		WRITE_LONG 0x18 theitemflags
+		READ_LONG 0x1e theitemunusability
+//			READ_BYTE 0x2b theitemunusability2
+//			READ_BYTE 0x2d theitemunusability3
+//			READ_BYTE 0x2f theitemunusability4
+		READ_BYTE 0x2a theminintelligence
+		READ_BYTE 0x2c themindexterity
+		READ_BYTE 0x2e theminwisdom
+		READ_BYTE 0x30 theminconstitution
+		READ_BYTE 0x32 themincharisma
+		READ_LONG IDENTIFIED_DESC us_desc
+		PATCH_IF ((theitemunusability BAND 0x3F83F102) > 0 OR theminintelligence > 0 OR themindexterity > 0 OR theminwisdom > 0 OR theminconstitution > 0 OR themincharisma > 0) AND us_desc > 0 BEGIN
+
+			GET_STRREF us_desc description_old
+			INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([%WNL%%MNL%%LNL%]\)+\(%stringweight%.*\)~ ~\1%stringumdthreshold% %theumddc%\1\2~
+			END
+				SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

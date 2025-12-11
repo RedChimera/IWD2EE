@@ -596,23 +596,31 @@ function EXMETAMA(actionData, creatureData)
 				end
 			end
 		end)
+		local doNotReduceBelowOne = false
 		if hasMetamagic and IEex_GetActorSpellState(sourceID, 240) then
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
 				local thespecial = IEex_ReadDword(eData + 0x48)
 				if theopcode == 288 and theparameter2 == 240 and (theresource == "" or metamagicModifiers[theresource] ~= nil) then
+					if bit.band(thesavingthrow, 0x10000) > 0 then
+						doNotReduceBelowOne = true
+					end
 					local metamagicCostReduction = theparameter1
+					if metamagicCostReduction > metamagicLevelModifier then
+						metamagicCostReduction = metamagicLevelModifier
+					end
+					if metamagicCostReduction == metamagicLevelModifier and doNotReduceBelowOne then
+						metamagicCostReduction = metamagicLevelModifier - 1
+					end
 					if metamagicModifiers[theresource] ~= nil then
 						if metamagicCostReduction > metamagicModifiers[theresource] then
 							metamagicCostReduction = metamagicModifiers[theresource]
 						end
 						metamagicModifiers[theresource] = metamagicModifiers[theresource] - metamagicCostReduction
-					end
-					if metamagicCostReduction > metamagicLevelModifier then
-						metamagicCostReduction = metamagicLevelModifier
 					end
 					metamagicLevelModifier = metamagicLevelModifier - metamagicCostReduction
 				end
@@ -1337,6 +1345,15 @@ IEex_MutatorGlobalFunctions["MEMETAGL"] = {
 			end
 			IEex_WriteDword(effectData + 0xCC, internalFlags)
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
+			local heightenSpellLevel = ex_projectile_flags[projectileData]["HeightenSpellLevel"]
+			if heightenSpellLevel and heightenSpellLevel > 0 then
+				local power = IEex_ReadDword(effectData + 0x14)
+				if power > 0 then
+					power = power + heightenSpellLevel
+					IEex_WriteDword(effectData + 0x14, power)
+				end
+				IEex_WriteDword(effectData + 0x40, IEex_ReadDword(effectData + 0x40) + heightenSpellLevel * 2)
+			end
 		end
 	end,
 }
@@ -1565,6 +1582,22 @@ IEex_MutatorGlobalFunctions["USWI252"] = {
 	end,
 }
 
+IEex_MutatorGlobalFunctions["USWI706"] = {
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_true_spell[sourceRES] ~= nil then
+			sourceRES = ex_true_spell[sourceRES]
+		end
+		if sourceRES == "SPWI706" and source ~= 8 then
+			IEex_WriteWord(projectileData + 0x2CE, IEex_ReadWord(projectileData + 0x2CE, 0x0) * 2)
+		end
+	end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
+}
+
 IEex_MutatorGlobalFunctions["USWI858"] = {
 	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
@@ -1575,6 +1608,22 @@ IEex_MutatorGlobalFunctions["USWI858"] = {
 		end
 		if sourceRES == "USWI858" and source ~= 8 then
 			IEex_WriteWord(projectileData + 0x2B2, 37)
+		end
+	end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
+}
+
+IEex_MutatorGlobalFunctions["USES025"] = {
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_true_spell[sourceRES] ~= nil then
+			sourceRES = ex_true_spell[sourceRES]
+		end
+		if sourceRES == "USES025" and source ~= 8 then
+			IEex_WriteWord(projectileData + 0x2CE, IEex_ReadWord(projectileData + 0x2AE, 0x0) * 2)
 		end
 	end,
 	["effectMutator"] = function(source, creatureData, projectileData, effectData)

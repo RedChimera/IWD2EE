@@ -12241,7 +12241,7 @@ Poids : 0,91 kg (2 lb)~
 PARAMÈTRES :
 
 Armure légère
-Bonus à la CA : +10
+Bonus à la CA : +9
 Bonus max de Dextérité : +6
 Malus de jet d’armure : -0
 Echec des sorts profanes : 10 %
@@ -12911,13 +12911,13 @@ Echec des sorts profanes : 0%
 Spécial :
   Permet de lancer des sorts et de faire appel aux compétences de voleur sans pénalité d’armure.
 Poids : 4,08 kg (9 lb)~
-@12591	= ~Exquise Armure de Cygne Noir +5~
+@12591	= ~Exquise Armure de Cygne Noir +3~
 @12592	= ~Cette armure a été conçue par le forgeron nain Karador et un enchanteur elfe nommé Elameth des Cinq Arbres. De nombreux objets ont été créés à l’époque de la coopération entre la Main de la Séluné et Profondorn, et cette armure est l’un d’eux. D’une légèreté et d’une beauté exceptionnelle, elle fut à l’origine portée par une femme maréchal de la Main Tranchée, ce qui explique pourquoi les orques ne s’en emparèrent pas lorsqu’ils mirent les tours à sac. L’armure fut ensuite volée par Ilmadia.
 
 PARAMÈTRES :
 
 Aucune compétence d’armure requise.
-Bonus à la CA : +12
+Bonus à la CA : +10
 Bonus max de Dextérité : aucun
 Malus de jet d’armure : -0
 Echec des sorts profanes : 0%
@@ -14215,7 +14215,7 @@ Poids : 0,45 kg (1 lb)~
 
 PARAMÈTRES :
 
-Bonus d’armure générique : +8
+Bonus d’armure générique : +5
 Poids : 0,45 kg (1 lb)~
 @12861 = ~Bouchons d’oreille~
 @12862 = ~Il s’agit d’une paire de bouchons d’oreille en cire d’abeille. La principale application pratique des bouchons d’oreille est de se protéger contre les monstres tels que les harpies ou les sirènes qui chantent des chansons magiques au combat.

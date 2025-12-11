@@ -105,6 +105,26 @@ LANGUAGE   ~French~
            ~iwd2ee/tra/French/new_strings_after_release.tra~
            ~iwd2ee/tra/French/typo.tra~
 
+LANGUAGE   ~Portuguese~
+           ~Portuguese~
+           ~iwd2ee/tra/Portuguese/setup.tra~
+           ~iwd2ee/tra/Portuguese/class_revisions.tra~
+           ~iwd2ee/tra/Portuguese/loose_alignment.tra~
+           ~iwd2ee/tra/Portuguese/spell_revise.tra~
+           ~iwd2ee/tra/Portuguese/spell_focus.tra~
+           ~iwd2ee/tra/Portuguese/item_revisions.tra~
+           ~iwd2ee/tra/Portuguese/creature_rebalancing.tra~
+           ~iwd2ee/tra/Portuguese/faster_areas.tra~
+           ~iwd2ee/tra/Portuguese/z_concoct_potions.tra~
+		   ~iwd2ee/tra/Portuguese/npc_core.tra~
+           ~iwd2ee/tra/Portuguese/revised_battle_square.tra~
+           ~iwd2ee/tra/Portuguese/lua.tra~
+           ~iwd2ee/tra/Portuguese/racial_enemies.tra~
+           ~iwd2ee/tra/Portuguese/misc.tra~
+           ~iwd2ee/tra/Portuguese/more_persuasion_options.tra~
+           ~iwd2ee/tra/Portuguese/new_strings_after_release.tra~
+           ~iwd2ee/tra/Portuguese/typo.tra~
+
 //IWD2EE Core
 BEGIN @0 DESIGNATED 1000
       INCLUDE ~%mod_folder%/components/initial_modifications.tpa~      //IWD2EE Core
@@ -432,29 +452,42 @@ SUBCOMPONENT @45
 
       INCLUDE ~%mod_folder%/components/high_level_encounters_2.tpa~ //~Always fight the high-level version of an encounter~
 
-//Reduce the HP bonuses of creatures in Heart of Fury Mode
+//Adjust the HP bonuses of creatures in Heart of Fury Mode
 
-BEGIN @48 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 46
+BEGIN @76 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 46
+SUBCOMPONENT @48
 
-      INCLUDE ~%mod_folder%/components/hof_bonus_changes_1.tpa~ //~Reduce the HP bonuses of creatures in Heart of Fury Mode~
+      INCLUDE ~%mod_folder%/components/hof_bonus_changes_1.tpa~ //~Low and medium-level enemies have decreased HP, extremely high-level enemies have increased HP~
 
-//Reduce the attack bonuses of creatures in Heart of Fury Mode
+BEGIN @77 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 97
+SUBCOMPONENT @48
 
-BEGIN @52 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 47
+      INCLUDE ~%mod_folder%/components/hof_bonus_changes_2.tpa~ //~Extremely high-level enemies have increased HP~
 
-      INCLUDE ~%mod_folder%/components/hof_attack_changes_1.tpa~ //~Reduce the attack bonuses of creatures in Heart of Fury Mode~
+//Adjust the attack bonuses of creatures in Heart of Fury Mode
 
-//Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode
+BEGIN @60 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 47
+SUBCOMPONENT @52
+
+      INCLUDE ~%mod_folder%/components/hof_attack_changes_1.tpa~ //~Low-level enemies have decreased attack, high-level enemies have increased attack~
+
+BEGIN @61 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 98
+SUBCOMPONENT @52
+
+      INCLUDE ~%mod_folder%/components/hof_attack_changes_2.tpa~ //~High-level enemies have increased attack~
+
+//Adjust the Saving Throw bonuses of creatures in Heart of Fury Mode
 
 BEGIN @54 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 48
 SUBCOMPONENT @53
 
-      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //~Creatures in Heart of Fury Mode get -3 to all saves~
+      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //~Low-level enemies have decreased saves, high-level enemies have increased saves~
 
 BEGIN @55 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 49
 SUBCOMPONENT @53
 
-      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //~Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves~
+      INCLUDE ~%mod_folder%/components/hof_save_changes_2.tpa~ //~High-level enemies have increased saves~
+
 
 //Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
 

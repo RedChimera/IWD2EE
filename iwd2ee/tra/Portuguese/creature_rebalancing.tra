@@ -1,0 +1,177 @@
+//TRA num range
+
+
+@20001 = ~Dano de frio aumentado em 50%~
+@20002 = ~Dano de frio aumentado em 100%~
+@20003 = ~Dano de frio aumentado em 150%~
+@20004 = ~Dano de frio aumentado em 200%~
+@20005 = ~Escamas aprimoradas (Bônus de Armadura +15)~
+@20006 = ~Protegido por Armadura Épica de Mago (Bônus de Armadura +20)~
+@20007 = ~Protegido por Epic Warding (Redução de Dano 50/+10)~
+@20008 = ~Cantar a Canção de Batalha: Bladesong - Ataques Extras por Rodada e Bônus de Combate~
+@20009 = ~Armadura da Morte Maior~
+@20010 = ~Aplica Devorador de Almas com cada golpe~
+
+@21001 = ~Ruína~
+@21002 = ~Ruína Maior~
+@21003 = ~Epic Warding~
+@21004 = ~Armadura Épica de Mago~
+@21005 = ~Explosão de Animus~
+@21006 = ~Pestilência~
+@21007 = ~Destruição em Massa~
+@21008 = ~Tempestade Xvimiana~
+@21009 = ~Drenagem de Energia em Massa~
+@21010 = ~Pensamento da Morte~
+@21011 = ~Raio Vivente~
+@21012 = ~Criar Inumano Invernal~
+@21013 = ~Tempestade de Animus~
+@21014 = ~Mísseis Múltiplos~
+@21015 = ~Arma Devoradora de Alma~
+@21016 = ~Velocidade Aprimorada~
+
+@21152 = ~Marca do Caçador~
+@21651 = ~Veneno de Sseth~
+@21652 = ~Escamas de Sseth~
+@21751 = ~Redemoinho de Auril~
+@21752 = ~Mordida de Cobra Maior~
+@21851 = ~Ódio Total~
+@21852 = ~Tempestade de Sseth~
+@21951 = ~Benção de Auril~
+@21952 = ~Doença Plena em Massa~
+@22651 = ~Enxame de Bola de Neve Infernal~
+@22751 = ~Tempestade Glacial Estígia~
+@22754 = ~Armadura da Morte Maior~
+@22851 = ~Fortitude Troll Maior~
+
+@23001 = ~Sombra do Vazio~
+@23002 = ~Fogo de Murcha~
+@23003 = ~É difícil dizer, mas esta nota gravemente queimada foi cuidadosamente escrita em um pedaço de fino pergaminho. Ela diz o seguinte:
+
+Thagro:
+
+Depois de ler esta mensagem, distribua-a para seus trabalhadores:
+
+A rainha tem se comportado de maneira estranha ultimamente - acredito que sua estação de acasalamento pode estar se aproximando. Portanto, de agora em diante, mantenha todos os machos afastados dela até novo aviso. Deixe que ela guarde o bloqueio, se preferir.
+
+Quanto aos machos, continue treinando-os para cavar através do gelo. Precisaremos escavar áreas maiores enquanto Nickademus recupera suas forças para que ele possa construir postos avançados de Legionário. Lembre-se sempre de mantê-los bem descansados e bem alimentados; caso contrário, serão inúteis para nós e poderão representar uma ameaça séria. Sinta-se à vontade para treinar um deles para atacar ou seguir você, caso precise de proteção.
+
+Além disso, meus DELICADOS golems de cristal são bastante caros e NÃO são fontes de sua diversão! Se eu pegar QUALQUER uma das suas irmãs de tempestade atirando pedras contra eles novamente, você terá que me responder pessoalmente!
+
+Uma última coisa - mantenha-se alerta! De acordo com Sherincal, aqueles bastardos Malarite nos falharam no Rio Shaengarne, então a oposição pode atacar a qualquer momento.
+
+Em nome de Auril,
+
+Oria.
+
+Peso: 0 kg.~
+@23004 = ~Aparição Maior~
+@23005 = ~Marilith~
+@23006 = ~Marilith Maior~
+@23007 = ~Gelugon Maior~
+@23008 = ~Feiticeira Orc~
+@23009 = ~Inumano Imbuído~
+@23010 = ~Harpia Demoníaca~
+@23011 = ~Harpia Infernal~
+@23012 = ~Cavaleiro de Gelo Negro~
+@23013 = ~Inumano Invernal~
+@23014 = ~Golem de Adamantina~
+@23015 = ~Fomoriano Maior~
+@23016 = ~Nariniano~
+@23017 = ~Larva dos Sonhos~
+@23018 = ~Lâmina de Marilith~
+@23019 = ~Monstro fétido! Não falarei meu nome para você! Volte para os fogos ardentes dos Nove Infernos!~
+@23020 = ~Sim, você é um gelugon. Você só perde em poder para os formidáveis demônios do abismo dos baatezu. Os gelugons vêm das camadas gélidas da Estígia e Cânia, nos Nove Infernos; posso dizer pela sua cor mais clara que você é de Cânia. Suas principais funções incluem espionar e ser guarda de elite. Se você provar ser um gelugon formidável, o que tenho certeza que é, receberá a honra de ser lançado no Poço do Inferno Congelante por 1001 dias, e então...~
+@23021 = ~Pelo que posso perceber, você é um diabo. Acredito que os diabos vêm dos Nove Infernos. Por que isso é relevante?~
+@23022=~Devo dizer que nunca conheci um mortal tão conhecedor da Guerra Sangrenta e dos habitantes de Baator. Respeito isso. Aliás, vou deixá-lo viver, como recompensa pelo seu conhecimento impressionante. Agora, tenho coisas para resolver. Adeus, <CHARNAME>, mas saiba que, se nos encontrarmos novamente, eu o consumirei.~
+@23023=~Típico herói mortal. Bem, eu já estava ficando com um pouco de fome de qualquer forma. Gentis-demônios, depois de vocês...~
+@23024=~Espada Larga do Cavaleiro da Morte~
+@23025=~Humph. Ele era o chefe, mas Vrek o derrotou na batalha. Agora ele zomba do chefe. Vrek governa aqui agora!~
+@23026=~Elemental do Fogo Gigante~
+@23027=~Elemental do Fogo Ancião~
+@23028=~Elemental da Terra Gigante~
+@23029=~Elemental da Água Gigante~
+@23030=~Elemental da Água Maior~
+@23031=~Elemental da Água Ancião~
+@23032=~CHEGA!~
+@23033=~Você luta de forma impressionante, mortal. Você deu um golpe moderado na minha essência. Vai demorar um pouco antes que eu consiga manifestar meu avatar novamente.~
+@23034=~Vocês lutam de forma impressionante, mortais. Vocês deram um golpe moderado na minha essência. Vai demorar um pouco antes que eu consiga manifestar meu avatar novamente.~
+@23035=~MAS NÃO PENSEM QUE VÃO ESCAPAR COM ISSO! EU ODEIO VOCÊS, E QUANDO EU ME RECUPERAR, VOU PROCURÁ-LOS PARA ME VINGAR!~
+@23036=~Vocês derrotaram o avatar de um deus, um dos inimigos mais poderosos que existem. Bem feito.~
+@23037=~A princípio, em sua grande fúria, disseram que iriam me despedaçar por tal insulto. Então, quando recuperaram um pouco da compostura, decidiram me trancar aqui embaixo, no escuro, e me torturar com ilusões criadas por aquele monstro horrível! Houve momentos em que desejei que tivessem me despedaçado...~
+@23038=~Libertamos um gnomo, chamado Puddy Talltale, da tortura de uma criatura de pesadelos. No entanto, mesmo tendo destrancado sua cela, ele disse que não sairia a menos que houvesse uma maneira segura de levá-lo para sua casa em Brin Shander. Prometemos encontrar uma passagem segura para Puddy, pois concordamos que ele não sobreviveria sozinho por muito tempo nos Vales gelados.~
+@23039=~Recupere-se! Olhe, o monstro está morto! Eu não sou uma ilusão!~
+@23040=~Cajado de Poder~
+@23041=~Devorar cérebro~
+@23042=~Sombra Maior~
+@23043=~10 de dano resistido por arma não de prata~
+@23044=~15 de dano resistido por arma não de prata~
+@23045=~20 de dano resistido por arma não de prata~
+@23046=~Aeij-Kllenzr't~
+@23047=~Golem de Gelo~
+@23048=~O abishai branco estreita seus olhos de safira famintos, examinando você de cima a baixo. Seus lábios se curvam em o que pode ser um sorriso cruel, mas ele não diz nada.~
+@23049=~Estocada de Wyvern~
+@23050=~Sopro do Wyrm Branco~
+@23051=~Wyvern Maior~
+@23052=~5 de dano resistido por arma sem alinhamento bom~
+@23053=~10 de dano resistido por arma sem alinhamento bom~
+@23054=~15 de dano resistido por arma sem alinhamento bom~
+@23055=~20 de dano resistido por arma sem alinhamento bom~
+@23056=~5 de dano resistido por arma sem alinhamento bom, nem caótico, nem de prata~
+@23057=~10 de dano resistido por arma sem alinhamento bom, nem caótico, nem  de prata~
+@23058=~15 de dano resistido por arma sem alinhamento bom, nem caótico, nem  de prata~
+@23059=~20 de dano resistido por arma sem alinhamento bom, nem caótico, nem de prata~
+@23060=~5 de dano resistido por arma sem alinhamento bom, nem legal, não de ferro-frio~
+@23061=~10 de dano resistido por arma sem alinhamento bom, nem legal, não de ferro-frio~
+@23062=~15 de dano resistido por arma sem alinhamento bom, nem legal, não de ferro-frio~
+@23063=~20 de dano resistido por arma sem alinhamento bom, nem legal, não de ferro-frio~
+@23064=~VOCÊ SABE MEU NOME?!~
+@23065=~Aeij-Kllenzr't, invoco seu verdadeiro nome, Fúria Enjaulada, e ordeno que saia do altar e nos enfrente em batalha!~
+@23066=~Sim, aparentemente, eu sei. Adeus.~
+@23067=~*ISSO* É TUDO O QUE VOCÊ ESTÁ DISPOSTO A FAZER COM MEU NOME VERDADEIRO? MUITO BEM! É HORA DE UMA DEMONSTRAÇÃO DO MEU PODER!~
+@23068=~QUEM É *VOCÊ* PARA FALAR COM UMA DEUSA DESSA MANEIRA?! EU VOU PUNIR SUA ARROGÂNCIA AGORA MESMO!~
+@23069=~Você derrotou Aeij-Kllenzr't, banindo-o do altar de Auril.~
+@23070=~Enquanto Aeij-Kllenzr't morre, você sente uma onda de energia através de seus corpos, dando-lhe um aumento de saúde e vitalidade - e resistência adicional a ataques elétricos.~
+@23071=~Encontramos um dos altares de Auril em uma sala isolada no andar inferior do templo de gelo. O altar continha o espírito de uma tempestade chamada Aeij-Kllenzr't, que se passava por Auril, e o banimos de lá invocando seu verdadeiro nome, Fúria Enjaulada.~
+@23072=~Garra de Abishai~
+@23073=~Sopro do Lobo Invernal~
+@23074=~15 de dano resistido, exceto por uma arma perfurante de alinhamento bom~
+@23075=~20 de dano resistido, exceto por uma arma perfurante de alinhamento bom~
+@23076=~Bebilith~
+@23077=~Mordida de Bebilith~
+@23078=~Espada do Cavaleiro da Morte~
+@23079=~Diabo da Fossa~
+@23080=~Mordida do Diabo da Fossa~
+@23081=~Beijo de Sseth~
+@23082=~Mohrg~
+@23083=~Toque de Mohrg~
+@23084=~Dretch~
+@23085=~Garra de Dretch~
+@23086=~Cimitarra de Icor Fantasmagórico~
+@23087=~Estrela da Manhã da Fúria Xvimiana~
+@23088=~Garra do Recuperador~
+
+
+@24002=~Chamar Cavaleiros Matadores~
+@24003=~Chamar Gelugon~
+@24004=~Dor Maior~
+@24005=~Dança das Lâminas - Ataque Extra e Bônus de Combate~
+@24006=~Animar Mortos Errantes~
+@24007=~Pesadelo~
+@24008=~Pesadelo Maior~
+@24009=~Remover Magia~
+@24011=~Pior Pesadelo~
+@24012=~Destruir o Bem~
+@24013=~Golpe Xvimiano~
+@24014=~Animar Ossos Gelados~
+@24015=~Devorador de Almas Caído~
+@24016=~Bola de Fogo Infernal~
+@24018=~Reduzir Resistência à Eletricidade~
+@24019=~Crescimento de Espinhos Escuros~
+@24020=~Olhar Gelado~
+@24032=~Carga~
+@24033=~Golpe Violento~
+@24034=~Crescimento de Planta~
+@24035=~Raio de Fogo~
+@24036=~Raio de Gelo~
+@24037=~Raio Elétrico~
+@24038=~Raio da Petrificação~

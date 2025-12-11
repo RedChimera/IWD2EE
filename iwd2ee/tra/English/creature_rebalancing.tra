@@ -22,13 +22,20 @@
 @21007=~Mass Destruction~
 @21008=~Xvimian Storm~
 @21009=~Mass Energy Drain~
-@21010=~Thought of Death~
+@21010=~Culling Thought~
 @21011=~Living Lightning~
 @21012=~Create Winterwight~
 @21013=~Animus Blizzard~
 @21014=~Many Missiles~
 @21015=~Souleating Weapon~
 @21016=~Improved Haste~
+@21020=~Mummy Dust~
+@21021=~Lightning Convergeance~
+@21022=~True Living Lightning~
+@21023=~Verdigris~
+@21024=~Crown of Vermin~
+@21025=~Rain of Fire~
+@21026=~Dire Winter~
 
 @21152=~Hunter's Mark~
 @21651=~Sseth's Venom~
@@ -43,6 +50,7 @@
 @22751=~Stygian Ice Storm~
 @22754=~Greater Death Armor~
 @22851=~Greater Trollish Fortitude~
+@22868=~Limha's Mink Drain~
 
 @23001=~Shadow of the Void~
 @23002=~Blightfire~
@@ -150,6 +158,8 @@ Weight:  0 lb.~
 @23086=~Scimitar of Ghastly Ichor~
 @23087=~Morningstar of Xvimian Fury~
 @23088=~Retriever Claw~
+@23089=~Paragon Chimera~
+@23090=~Mummy Rot~
 
 
 @24002=~Call Slayer Knights~
@@ -176,3 +186,6 @@ Weight:  0 lb.~
 @24036=~Cold Ray~
 @24037=~Electricity Ray~
 @24038=~Petrification Ray~
+@24039=~Pounce~
+@24040=~20 damage resisted from weapon of less than +6 enchantment~
+@24043=~Cambion Darkness~

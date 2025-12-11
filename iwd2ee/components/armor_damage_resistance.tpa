@@ -22,9 +22,11 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			us_offset += effectsize
 		END
 		PATCH_IF (us_bonus > 0) BEGIN
-			READ_LONG 0x54 us_desc
+			use_nonmagical_desc = 0
+			READ_LONG IDENTIFIED_DESC us_desc
 			PATCH_IF (us_desc <= 0) BEGIN
-				READ_LONG 0x50 us_desc
+				READ_LONG UNIDENTIFIED_DESC us_desc
+				use_nonmagical_desc = 1
 			END
 			SPRINT stringdamageresistance @56031
 			INNER_PATCH_SAVE stringdamageresistance ~%stringdamageresistance%~ BEGIN
@@ -37,8 +39,10 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 %stringdamageresistance%~
 				REPLACE_TEXTUALLY CASE_INSENSITIVE ~ulgiash~ ~%stringgeneric%~
 			END
-			INNER_ACTION BEGIN
-				STRING_SET_EVALUATE us_desc ~%description_new%~
+			PATCH_IF use_nonmagical_desc = 1 BEGIN
+				SAY_EVALUATED UNIDENTIFIED_DESC ~%description_new%~
+			END ELSE BEGIN
+				SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
 			END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
@@ -60,9 +64,11 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			us_offset += effectsize
 		END
 		PATCH_IF (us_bonus > 0) BEGIN
-			READ_LONG 0x54 us_desc
+			use_nonmagical_desc = 0
+			READ_LONG IDENTIFIED_DESC us_desc
 			PATCH_IF (us_desc <= 0) BEGIN
-				READ_LONG 0x50 us_desc
+				READ_LONG UNIDENTIFIED_DESC us_desc
+				use_nonmagical_desc = 1
 			END
 			SPRINT stringdamageresistance @56031
 			INNER_PATCH_SAVE stringdamageresistance ~%stringdamageresistance%~ BEGIN
@@ -70,11 +76,13 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			END
 			GET_STRREF us_desc description_old
 			INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
-				REPLACE_TEXTUALLY CASE_INSENSITIVE ~%stringshield%~ ~%stringshield%
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(%stringshield%.*\)~ ~\1
 %stringdamageresistance%~
 			END
-			INNER_ACTION BEGIN
-				STRING_SET_EVALUATE us_desc ~%description_new%~
+			PATCH_IF use_nonmagical_desc = 1 BEGIN
+				SAY_EVALUATED UNIDENTIFIED_DESC ~%description_new%~
+			END ELSE BEGIN
+				SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
 			END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END

@@ -87,6 +87,5 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 END
 
 COPY_EXISTING_REGEXP ~ushfmd[ab]\.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=33 probability2=0 dicenumber=10 END
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=34 probability2=0 dicenumber=10 END
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=35 probability2=0 dicenumber=10 END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=238 match_parameter1=3 probability2=0 END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=238 match_parameter1=6 probability2=0 END

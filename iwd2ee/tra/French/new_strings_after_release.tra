@@ -486,7 +486,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
+* Vos attaques à mains nues sont remplacées par Attaque de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
@@ -504,7 +504,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus en Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
+* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
@@ -558,7 +558,7 @@ Temps d’incantation : 6
 Zone d’effet : lanceur
 Jet de sauvegarde : Vigueur, 1/2 dégâts
 
-Ce sort confère les pouvoirs du toucher d’une liche. Les mains du lanceur sont imprégnées d’une force glaciale d’énergie négative, permettant au lanceur d’infliger 3d10+5 dégâts de froid (plus les bonus de dégâts de la Force, des dons, des sorts, des objets et d’autres effets) à chaque coup et de paralyser les victimes vivantes pendant 10 rounds en cas d’échec du jet de sauvegarde. L’attaque tient compte du don Maniement des Armes courantes, Petite lame/Mains nues.~
+Ce sort confère les pouvoirs du toucher d’une liche. Les mains du lanceur sont imprégnées d’une force glaciale d’énergie négative, permettant au lanceur d’infliger 1d8+5 dégâts de froid (plus les bonus de dégâts de la Force, des dons, des sorts, des objets et d’autres effets) à chaque coup et de paralyser les victimes vivantes pendant 10 rounds en cas d’échec du jet de sauvegarde. L’attaque tient compte du don Maniement des Armes courantes, Petite lame/Mains nues.~
 @1497 = ~Splendeur de l’aigle~
 @1497	= ~Splendeur de l’aigle
 (Transmutation)
@@ -1228,7 +1228,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
+* Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @390	= ~VOIE DE LA LICHE :
@@ -1245,7 +1245,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
+* Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
 * Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
@@ -2055,3 +2055,1474 @@ Poids : 0 lb.
 Compétence : arme courante, attaque de contact
 Type : à une main~
 @55495=~Emplacements de Sorts Supérieurs : ~
+@56037=~Poids :~
+
+//Strings to translate for v3.4.0
+
+@531    = ~DRUID:
+
+The druid serves the cause of nature and neutrality; the wilderness is his community. He uses his special powers to protect it and to preserve balance in the world.
+
+NOTE: Wisdom is the casting statistic for a druid. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
+* Druids can cast powerful offensive and healing spells.
+* Spontaneous Casting: Druids can convert their spells to Summon Nature's Ally spells of the same level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest Summon Nature's Ally spell of the same level.
+* 2nd level: Woodland Stride. The druid becomes immune to Entangle, Web, and Spike Growth.
+* At 5th level, Druids start gaining Wild Shape abilities, which let them turn themselves into animals, magical beasts, elementals, and other forms. At higher levels, Druids gain additional options for forms and can use Wild Shape additional times per day.
+* 5th level: Wild Shape: Winter Wolf. The druid gains the ability to shapeshift into a winter wolf. While in winter wolf form, the Druid is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.
+* 5th level: The Druid is high enough level to choose two special feats: Wild Shape: Blink Dog, and Wild Shape: Creeping Doom.
+* 7th level: Wild Shape: Polar Bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.
+* 8th level: The Druid is high enough level to choose another special feat: Wild Shape: Rhinoceros Beetle.
+* 9th level: Wild Shape: Giant Viper. While in giant viper form, the Druid's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). Every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +1 AC, and the save DC against its poison increases by 3.
+* 9th level: Immunity to Poison. The druid becomes immune to all forms of poison.
+* 11th level: Elemental Shape: Salamander. While in salamander form, the Druid is immune to fire, weak to cold, and radiates an aura of extreme heat that deals 2d6 fire damage to nearby creatures per round. Every 5 levels thereafter, the damage of the salamander form's fire aura is increased by 1d6.
+* 11th level: Elemental Shape: Frost Salamander. While in frost salamander form, the Druid is immune to cold, weak to fire, and radiates an aura of extreme cold that deals 2d6 cold damage to nearby creatures per round. Every 5 levels thereafter, the damage of the frost salamander form's cold aura is increased by 1d6.
+* 13th level: Wild Shape: Shambling Mound. While in shambling mound form, the Druid is immune to electricity, resistant to bludgeoning damage, and has a 50% chance with each attack to engulf the target (Fortitude DC 17),  immobilizing them, blinding them, and dealing 3d4 extra damage over the next round. Every 3 levels thereafter, the shambler form gains +1 Strength, +2 Constitution, the chance to engulf is increased by 10%, and the save DC against it is increased by 3.
+* 15th level: Elemental Shape: Fire Elemental. While in fire elemental form, the Druid is immune to fire, weak to cold, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the fire elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Earth Elemental. While in earth elemental form, the Druid has 5/- physical damage resistance as well as damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. In addition, whenever the Druid is above a stone floor, they can burrow into the floor to avoid attacks, coming up to attack or cast a spell. Every 5 levels thereafter, the earth elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Water Elemental. While in water elemental form, the Druid is immune to fire and acid, weak to electricity, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the water elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Air Elemental. While in air elemental form, the Druid is resistant to electricity and has damage reduction 5/+1. It deals less damage than the other elemental forms but has high AC and Dexterity. Every 5 levels thereafter, the air elemental form gains +2 Strength, +2 Dexterity, +1 Constitution, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 40th level: Dragon Shape: Black Dragon. The Druid gains the ability to shapeshift into an adult black dragon. While in black dragon form, the Druid is immune to acid and has extremely high AC. The Druid will only attack twice per round but will deal massive damage per hit at long range. 
+
+Disadvantages:
+* Druids do not have access to many powerful defensive spells.
+* Druids are not as powerful as fighters, rangers, paladins, or barbarians in combat.~
+@10713    = ~Dagger of Sneak Attacks +1~
+@10714    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.
+
+STATISTICS:
+
+Damage:  1d4 + 1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Piercing
+Special:
+  Sneak attacks deal an additional 1d6 damage
+Weight: 1 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@10873    = ~Longsword +1, Defender~
+@10874    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting.
+
+STATISTICS:
+
+Damage:  1d8 + 1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Slashing
+Special:
+  Generic Armor Bonus: +2
+Weight: 4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@10756    = ~No one knows where this enchanted parrying dagger first came from, though it gained its fame in the service of the notorious corsair captain "Baron" Sulo of Luskan. When Sulo and crew made to steal the Leberm family jewels from a small transport ship off the coast of Port Llast, they found themselves confronted by a group of experienced adventurers hired on as guards. One in particular fought like a devil, wielding a matched set of finely wrought dueling blades. The unnamed adventurer slew many of Sulo's men and, coming to clash with the corsair captain himself, severed Sulo's left hand. "Baron" Sulo would have died that day were it not for a stray ballista round from the Leberm ship - the enormous spear struck the unlucky swordsman squarely and carried him over the side of Sulo's ship in a flash. All that remained of him was his elaborate parrying blade, left spinning on the deck as if he'd never been there.
+
+Sulo elected to graft the swordsman's parrying blade to the stump of his left wrist in the place of a common hook. When Sulo was killed some nine years later, the blade was interned with him in a concealed tomb along with a substantial quantity of gems and coins. Despite the "secret" nature of Sulo's final resting place, the site was quickly plundered and "Baron" Sulo's Hook passed into hands of other men.
+
+STATISTICS:
+
+Damage:  1d4 + 2
+Attack Bonus: +2
+Enchantment:  +2
+Damage Type:  Piercing
+Special:
+  Shield Bonus: +6
+Weight: 1 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@10956    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms.
+
+STATISTICS:
+
+Damage:  1d6
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Flame: +4d6 fire damage
+  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
+Weight:  4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@11577    = ~Hammer of Resistance +3~
+@11578    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. 
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Resistance: 4/- Slashing Resistance
+  Resistance: 4/- Piercing Resistance
+  Resistance: 4/- Bludgeoning Resistance
+Weight: 7 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@11749    = ~Longbow of Acid and Flame +2~
+@11750    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +3 (missile)
+Attack Bonus: +2
+Special:
+  Any instance of fire or acid damage from the wielder's spells, abilities or ammunition deals an additional 5 points of damage (for sources that deal fire or acid damage multiple times, this damage is added each time).
+  Spellward: Protection from the spells Melf's Acid Arrow and Flame Arrow
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
+@11859    = ~Heavy Crossbow +8~
+@11860    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+
+STATISTICS:
+
+Damage:  +18 (missile)
+Attack Bonus:  +8
+Weight: 9 lb.
+Feat Requirement:  Simple Weapon, Crossbow
+Type:  Two-handed~
+@11901    = ~Sling of Magic Force~
+@11902    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends.
+
+STATISTICS:
+
+Special:
+  Magic Force: Bullets fired from this sling deal +1d4 magic damage
+Weight: 0 lb.
+Feat Requirement:  Simple Weapon, Missile
+Type:  One-handed~
+@11920    = ~This leather sling has dyed patterns on its surface that resemble the feathers of a sparrow. It was owned and used by a priestess of Lathander named Galaida. She wandered the Western Heartlands of Faerun tending to the sick and troubled people that lived in those vast expanses of farmland. Though not a pacifist, Galaida disliked battle and sought to avoid it whenever possible. Her light mace and sling were her only two weapons against the bandits, ogres, and villains that occasionally reared their heads in the small villages she visited. Despite all of her goodwill and peaceful intentions, a band of adventurers eventually set an ambush for her in a barn. She was killed quickly and the adventurers escaped into the wilderness.
+
+STATISTICS:
+
+Damage:  +5 (missile)
+Attack Bonus:  +5
+Special:
+  Gains Wisdom bonus to attack
+  Spell Power: Can cast the spell Greater Restoration 1/Day
+Weight: 0 lb.
+Feat Requirement:  Simple Weapon, Missile
+Type:  One-handed~
+@10382    = ~Kellem Longeyes was a noted ranger in the town of Bremen, trekking far and wide across the Savage North in pursuit of his prey. Kellem hunted wyverns, drakes, and other wyrms of all sorts, especially those that made to attack the Ten-Towns or their outlying settlements. The grizzled ranger took many trophies - in time, little of equipment was not adorned with one kind of wyrm or another.
+
+Kellem's most prized trophy, though, was from Frostmaw, a great white wyrm whose size and ferocity matched that of a true dragon's. While in its death-throes, Frostmaw's jaws and icy breath took Kellem's left eye and ear - for this, the grim ranger swore vengeance on all its cursed ilk. Upon his return to civilization, Kellem had Frostmaw's wide jaws fashioned into an elaborate helm and imbued with the white wyrm's deadly breath. This helm the ranger christened "Great White Wyrm's Maw."
+
+Alas, in time Kellem grew old as all men do, and one day set out on a dangerous hunt in the peaks of the Spine of the World never to return. Until now, none of his equipment has ever been found.
+
+Kellem's helm is made from thick hide, bone, and heavy gray-white scales. It covers the face and head entirely. Aside from cutting a dashing figure, the helm's bearer may bellow out a roaring blast of deadly cold once per day.
+
+STATISTICS:
+
+Generic Armor Bonus:  +4
+Special:
+  Resistance: 15/- Cold Resistance
+  White Wyrm's Breath: breathe a cone of frost for 16d8 points of cold damage (Reflex DC 24 + twice wearer's Charisma bonus for half) 1/day
+  All cone of cold projectiles (including breath attacks) emitted from the wearer have significantly increased area of effect
+Weight: 3 lb.~
+@12520    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Spell Power: Can cast Black Blade of Disaster (lasting 30 rounds) 1/Day. If the character has at least 17 levels of ranger, they instead create a Black Blade of Disaster in each hand.
+Weight: 0 lb.~
+@12931    = ~The Salamander's Tongue +3~
+@12932    = ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner.
+
+The exact origins of the blade are unknown, but it is believed that the first owner of the weapon was a respected and feared gnomish thief and assassin from Westgate named Turlam Shallowhill. Turlam was killed in a fight with a rival, a halfling called Deder Seven Fingers. Deder kept the weapon as a trophy, not knowing its powers until after it was stolen by an underling, a fellow halfling named Kreshinal Blackhound. Kreshinal fled to Selgaunt with the dagger for five years, relying on its powers to hide him from divination. Kreshinal lost the dagger in a botched gambling scam, and was killed by Deder's agents within the month. Deder attempted to reclaim the dagger from the Sembian criminals who had captured it. He succeeded at routing the thieves and reclaiming his dagger, but he focused so much attention on the blade that he didn't notice that the Sembian criminals had employed a priest of Mask to infiltrate and break down his interests in Westgate. The ensuing war between the Westgate and Selgaunt factions ended when the priest of Mask, Pieter the Feeble, made the two sides so paranoid that they ate themselves away from the inside. Pieter grabbed the dagger when he had the opportunity and escaped to Hillsfar, confident that the unorganized demihuman supporters of the late Deder Seven Fingers wouldn't follow him to a place so hostile to their kind.
+
+In yet another scam, Pieter sold the blade to a Mulmaster Hawk while luring other potential buyers to an auction in Hillsfar. Pieter and his associates murdered the buyers at the fake auction and made off with the cash, hiding under the cover of an Amulet of Non-Detection. The Mulmaster Hawk who purchased the blade was supposedly killed by priestesses of Umberlee who were angry at the assassin's refusal to pay tribute to the Bitch Queen. Years of factional fighting between the Umberlants are believed to have transported the blade as much as three thousand miles away from its humble beginnings in Sembia. The whereabouts of Pieter the Feeble and his goons are currently unknown.
+
+STATISTICS:
+
+Damage:  1d4 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type: Piercing
+Weight: 1 lb.
+Special:
+  Sneak attacks with this weapon deal an additional 4d6 fire damage. This replaces the extra 2d6 damage that a dagger would normally deal on a sneak attack.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12933    = ~The Salamander's Tongue +5~
+@12934    = ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner.
+
+The exact origins of the blade are unknown, but it is believed that the first owner of the weapon was a respected and feared gnomish thief and assassin from Westgate named Turlam Shallowhill. Turlam was killed in a fight with a rival, a halfling called Deder Seven Fingers. Deder kept the weapon as a trophy, not knowing its powers until after it was stolen by an underling, a fellow halfling named Kreshinal Blackhound. Kreshinal fled to Selgaunt with the dagger for five years, relying on its powers to hide him from divination. Kreshinal lost the dagger in a botched gambling scam, and was killed by Deder's agents within the month. Deder attempted to reclaim the dagger from the Sembian criminals who had captured it. He succeeded at routing the thieves and reclaiming his dagger, but he focused so much attention on the blade that he didn't notice that the Sembian criminals had employed a priest of Mask to infiltrate and break down his interests in Westgate. The ensuing war between the Westgate and Selgaunt factions ended when the priest of Mask, Pieter the Feeble, made the two sides so paranoid that they ate themselves away from the inside. Pieter grabbed the dagger when he had the opportunity and escaped to Hillsfar, confident that the unorganized demihuman supporters of the late Deder Seven Fingers wouldn't follow him to a place so hostile to their kind.
+
+In yet another scam, Pieter sold the blade to a Mulmaster Hawk while luring other potential buyers to an auction in Hillsfar. Pieter and his associates murdered the buyers at the fake auction and made off with the cash, hiding under the cover of an Amulet of Non-Detection. The Mulmaster Hawk who purchased the blade was supposedly killed by priestesses of Umberlee who were angry at the assassin's refusal to pay tribute to the Bitch Queen. Years of factional fighting between the Umberlants are believed to have transported the blade as much as three thousand miles away from its humble beginnings in Sembia. The whereabouts of Pieter the Feeble and his goons are currently unknown.
+
+STATISTICS:
+
+Damage:  1d4 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type: Piercing
+Weight: 1 lb.
+Special:
+  Sneak attacks with this weapon deal an additional 6d6 fire damage. This replaces the extra 2d6 damage that a dagger would normally deal on a sneak attack.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12935    = ~Black Dragon Scales~
+@12936    = ~These heavy scales glisten under the light and are warm to the touch. There are a significant number of them salvaged from the corpse of the Guardian... perhaps they might be useful in the formation of some kind of armor.~
+@19912    = ~Can you make anything out of these scales we obtained from the Guardian?~
+@19913    = ~The Guardian was a dragon? I remember Iselore talking about the Guardian, but I had no idea what kind of creature he spoke of. Aye, I should be able to make light armor out of these scales. It'll be 5000 gold pieces for the work.~
+@19914    = ~Very well, here are the scales and the gold.~
+@19915    = ~Maybe another time. Farewell.~
+@19916    = ~All done. Here is the armor. Wear it well, friend.~
+@1834    = ~Sunscorch
+(Evocation)
+Level: Drd 1, Rgr 1, Lathander 1, Selune 1
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Reflex half
+
+Upon completion of this spell, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead, fungi, oozes, and drow and gray dwarves take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Reflex save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save). This spell bypasses the spell resistance of creatures such as drow that are vulnerable to the spell.~
+@32204     = ~Charm Person or Animal
+(Enchantment) 
+Level: Drd 2
+Range: Sight of Caster
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: 1 Medium-sized or smaller Humanoid or 1 Animal
+Saving Throw: Will negates
+
+This spell affects any single person or animal it is cast upon.  The term "person" includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others.
+Thus, a 10th-level fighter could be charmed, but an ogre could not. If the save is failed, the victim regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out without question.  Creatures remember everything while charmed and thus will usually be hostile to the caster upon expiration of the spell. The target's Spell Resistance, if any, does not affect this spell.~
+@1043    = ~Rainstorm
+(Evocation)
+Level: Drd 2
+Range: Sight of Caster
+Duration: 2 rounds
+Casting Time: 6
+Area of Effect: 30-foot radius
+Saving Throw: Reflex half
+
+This spell, which may only be cast outdoors, brings forth a magical rain that saturates the area of effect. The rain grants 5/- resistance to fire but a -5 weakness to cold and electricity damage, and deals 8d6 points of cold damage to creatures of Elemental Fire. In addition, all creatures in the area of effect are struck by bolts of lightning that deal 2d6 electricity damage, with a Reflex save for half damage. Flame Blade spells, Shroud of Flame, and salamander auras are also extinguished.~
+@1011    = ~Circle of Bones
+(Necromancy)
+Level: Clr 3
+Range: Caster
+Duration: 3 rounds
+Casting Time: 3
+Area of Effect: 3-foot radius
+Saving Throw: None
+
+This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round, ignoring spell resistance. This spell does not provoke an attack of opportunity. Circle of Bones cannot be active at the same time as Circle of Blades, as the bones and blades get in each other's way.~
+@32405     = ~Mental Domination
+(Enchantment) 
+Level: Clr 4
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 4
+Area of Effect: 1 creature 
+Saving Throw: Will negates
+
+This spell enables the caster to invade the mind of the target creature, allowing the caster to will the creature into whatever actions he so desires.  The target creature will resist the effects if a successful Will save with +2 DC is made.  While a creature is dominated in such a manner, its mind is cloudy and thought is hampered - spellcasting is impossible and attack bonuses are made with a -2 penalty. This spell bypasses spell resistance.~
+@1021    = ~Smashing Wave
+(Evocation)
+Level: Drd 5, Rgr 5
+Range: 40 feet
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: 5-foot wide wave
+Saving Throw: Reflex half
+
+This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be pushed back and knocked down for 1 round. Creatures of Elemental Fire are extremely vulnerable to this spell, taking double damage. This spell bypasses spell resistance.~
+@1023    = ~Circle of Blades
+(Evocation)
+Level: Clr 6, Pal 5, Helm 6, Tempus 6
+Range: Caster
+Duration: 2 rounds
+Casting Time: 9
+Area of Effect: 3-foot radius
+Saving Throw: Reflex half
+
+This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, bypassing spell resistance, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity. Circle of Blades cannot be active at the same time as Circle of Bones, as the bones and blades get in each other's way.~
+@32608    = ~Sol's Searing Orb
+(Evocation)
+Level: Clr 6, Drd 5, Rgr 5
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: Reflex half
+
+Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness with +4 DC. Undead creatures are particularly vulnerable to this spell and take double damage. This spell bypasses the spell resistance of creatures such as drow that are vulnerable to it.~
+@1592    = ~Sunbeam
+(Evocation)
+Level: Drd 8, Lathander 7
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 7
+Area of Effect: 15-foot radius
+Saving Throw: Reflex partial
+
+This spell allows the caster to evoke dazzling beams of intensely hot light. Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of fire damage, or 16d6 damage over 4 rounds. A successful Reflex save negates the blindness and reduces the damage by half. Drow and gray dwarves take 8d6 damage per round and get no save against the blindness. Undead creatures, fungi, and oozes caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round. This spell bypasses the spell resistance of creatures such as drow that are vulnerable to the spell.~
+@34104     = ~Charm Person
+(Enchantment)
+Level: Brd 1, Sor/Wiz 1
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+This spell affects any single person it is cast upon. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. The person receives a Will save to avoid the effect.  If the spell recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out as quickly as possible.
+If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed. The target's Spell Resistance, if any, does not affect this spell.~
+@1681    = ~Color Spray
+(Illusion)
+Level: Brd 1, Sor/Wiz 1
+Range: Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 5' x 20' x 20' wedge 
+Saving Throw: Will negates 
+
+This spell creates a vivid, fan-shaped spray of clashing colors to spring forth from the caster's hand. The spell affects each creature caught in the area of effect according to its hit dice:
+
+Up to 2: Unconscious for 5 rounds
+3 or 4: Blinded for 3 rounds
+5 or more: Stunned for 1 round
+
+A successful Will save will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
+@34316     = ~Dire Charm
+(Enchantment)
+Level: Brd 2, Sor/Wiz 3, Bane 3
+Range: Sight of Caster
+Duration: 8 rounds
+Casting Time: 3 
+Area of Effect: 1 creature
+Saving Throw: Will negates
+
+This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants. This spell bypasses spell resistance.~
+@1091    = ~Lance of Disruption
+(Evocation)
+Level: Sor/Wiz 3
+Range: 60 feet
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell creates a lance of force, extending from the caster to a specified point 60 feet in the distance. Any creatures in the lance's path take 5d4 points of piercing damage, +2 points of damage per level of the caster (maximum of +50). Victims can Reflex save for half damage. This spell bypasses spell resistance.~
+@1679    = ~Otiluke's Resilient Sphere
+(Evocation)
+Level: Sor/Wiz 4
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Reflex negates
+
+When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. A non-allied creature can make a Reflex save with +8 DC to dodge the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world. This spell bypasses spell resistance.~
+@1107    = ~Domination
+(Enchantment)
+Level: Brd 5, Sor/Wiz 6, Bane 5
+Range: Sight of Caster
+Duration: 3 rounds / level
+Casting Time: 5 
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+The domination spell enables the caster to control the actions of any creature while the spell is in effect. This control is maintained through a telepathic link between the caster and the victim. The target gets a Will save with +2 DC in order to avoid the effect. This spell bypasses spell resistance.~
+@1814    = ~Mass Dominate
+(Enchantment) 
+Level: Brd 8, Sor/Wiz 9, Bane 9
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 9
+Area of Effect: 20-foot radius
+Saving Throw: Will negates
+
+This spell forces all creatures not allied with the caster in the area of effect to Will save or be dominated as if affected by the spell Dominate Person. Undead are unaffected by this spell. This spell bypasses spell resistance.~
+@36956     = ~Tornado
+(Evocation)
+Level: Drd 9
+Range: Sight of Caster
+Duration: 3 rounds
+Casting Time: 9
+Area of Effect: 15-foot radius
+Saving Throw: None
+
+A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors and bypasses spell resistance.~
+@38251     = ~Identify Creature
+(Divination)
+Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature. This spell bypasses spell resistance.~
+@38653     = ~Boulder Roll
+(Conjuration)
+Level: Drd 6, Sor/Wiz 6
+Range: Special
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: All creatures in path of boulder
+Saving Throw: Reflex partial
+
+Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder bypasses spell resistance and always travels due south from the caster.~
+@38853     = ~Enslave
+(Enchantment)
+Level: Brd 7, Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: Will negates
+
+This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw with +4 DC. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave bypasses spell resistance and can even affect undead and constructs.~
+@308    = ~IMPROVED SNEAK ATTACK:
+
+Your sneak attacks are especially deadly.
+
+Prerequisite: 3 levels of rogue per rank in the feat (3, 6, 9, 12, 15)
+
+Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be taken up to five times.~
+@730    = ~DODGE:
+
+You are adept at dodging blows.
+
+Prerequisite: Dex 13+. Taking the feat a second time requires 18 levels of rogue, Dex 25+, Improved Evasion, Defensive Roll.
+
+Benefit: You receive a +1 dodge bonus to armor class against attacks from an opponent.
+
+When taken a second time, the feat also allows you to automatically dodge the first attack that would hit you each round.~
+@23089=~Paragon Chimera~
+@24039=~Pounce~
+@24040=~20 damage resisted from weapon of less than +6 enchantment~
+@56035=~SPELLCRAFT (Int; Trained Only):
+
+Use this skill to identify spells as they are cast or spells already in place.~
+@55369=~slashing~
+@55816=~Can not use item. (Requires <EXIUVAL1> Use Magic Device)~
+@55817=~You cannot set traps while enemies are nearby.~
+@55818=~You cannot set any more traps in this area.~
+@55819=~Sneak Attack with Crippling Strike (-<EXCRPEN1> Str)~
+@55820=~Death Attack with Crippling Strike (-<EXCRPEN1> Str)~
+@56057=~The walls of this room are warded against conventional means of teleportation, as well as incorporeal and ethereal travel.~
+@56058=~The walls of the Eight Chambers are warded against conventional means of teleportation, as well as incorporeal and ethereal travel.~
+@10390    = ~This robe has been specially enchanted to meet the eclectic needs of the adventuring wizard. Aside from protecting the wearer from various forms of bludgeoning damage and mind-affecting spells, it also allows the wearer to protect their adventuring party from their own fireballs.
+
+STATISTICS:
+
+Armor Class:  +5 vs. Bludgeoning
+Saving Throw Bonus:  +5 on Will saves
+Safe Spells: When the wearer casts an area of effect spell, allies make saving throws against the spell with -5 DC.
+Weight:  4 lb.~
+@841    = ~USE MAGIC DEVICE (Cha; Trained Only; Bard, Rogue Only):
+
+This skill allows a bard or rogue to use items normally forbidden to them. If the character's skill is greater than or equal to the threshold stated in an item's description, the character can use that item even if they do not meet its class, race, alignment, or ability score requirements. The threshold depends on the base price of the item and other factors.
+
+Wands and scrolls are an exception; if the character cannot use them normally, rather than using the threshold system as above, they must roll a check with this skill. If the character fails to activate the item, that charge is destroyed and the user takes 1-6 points of magical damage per level of the effect they were attempting to invoke.~
+@56036=~Use Magic Device Threshold:~
+@732    = ~Improved Bard Song~
+@733    = ~IMPROVED BARD SONG:
+
+Your bardic music especially resonates with the listeners.
+
+Prerequisite: At least three levels of bard.
+
+Benefit: Any bard song you play that affects allies grants an additional +1 bonus to AC, attack, damage, saving throws, and skill checks. Any bard song you play that affects enemies gains +2 DC.~
+@890    = ~Dodged the attack~
+@55928=~Toggle Buff Recording~
+@55929=~Erase Recording~
+@55930=~Cast Recorded Buffs~
+@21020=~Mummy Dust~
+@23090=~Mummy Rot~
+@21021=~Lightning Convergeance~
+@21022=~True Living Lightning~
+@21023=~Verdigris~
+@21024=~Crown of Vermin~
+@21025=~Rain of Fire~
+@22868=~Limha's Mink Drain~
+@30366=~... Mummy Dust.~
+@30367=~... Lightning Convergeance.~
+@30368=~... True Living Lightning.~
+@30369=~... Verdigris.~
+@30370=~... Clone.~
+@30371=~... Crown of Vermin.~
+@30372=~... Rain of Fire.~
+@32106     = ~Magic Stone
+(Enchantment)
+Level: Clr 1, Drd 1, Rgr 1
+Range: Caster
+Duration: 30 rounds or until used up
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell enhances the caster's sling bullets. Any bullet the caster throws will deal an additional 1d4+1 damage, and nonmagical bullets will be treated as +1 weapons. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).
+
+Although rangers normally cast spells at half their caster level, Magic Stone will be cast at a ranger's full caster level.~
+@32107     = ~Protection from Evil
+(Abjuration) [Good]
+Level: Clr 1, Pal 1, Sor/Wiz 1
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell forms a magic barrier around the target creature, giving evil creatures a -2 penalty to hit them, and reducing the save DC of spells and abilities from evil creatures that would hit them by 2. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
+@32408     = ~Magic Circle Against Evil
+(Abjuration) [Good]
+Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 7
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving evil creatures a -2 penalty to hit them, and reducing the save DC of spells and abilities from evil creatures that would hit them by 2, as well as immunity to charm and domination effects.~
+@36454     = ~Pebbles to Boulders
+(Transmutation)
+Level: Clr 5, Drd 4, Rgr 4
+Range: Caster
+Duration: 5 rounds/level or until used up
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+This spell turns the caster's sling bullets into boulders. While the spell is active, if the caster launches a bullet, it instantly turns into a large boulder that retains the speed of the original bullet. The boulder inflicts an additional 7d4 damage if it hits (on top of the former damage of the bullet). Only a limited number of bullets can be turned into boulders before the spell ends: up to one per 3 levels.
+
+Although rangers normally cast spells at half their caster level, Pebbles to Boulders will be cast at a ranger's full caster level.~
+@1685    = ~Beast Claw
+(Transmutation)
+Level: Drd 2, Rgr 2
+Range: Sight of Caster
+Duration: 3 rounds + 1 round / level
+Casting Time: 5
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+This spell empowers the attacks of any allied animal in the area of effect, granting it +3 to hit and damage until the duration runs out. At level 8, this spell also grants the animals a +1 enhancement bonus, causing their natural attacks to strike as a +1 weapon (1d12 base slashing damage). At levels 12 and 16, this bonus increases to +2 and +3.~
+@10586    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Aasimar's Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections.
+
+Long ago, the Blood War between the Baazetu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. This spell allowed the Aasimars to get in close to the evil creatures without getting attacked. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baazetu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
+
+As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead. So, from time to time, a set of Aasimar's Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +12
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
+Special:
+  Evil creatures have a -2 penalty to hit the wearer, and the save DC of their spells and abilities used against the wearer is reduced by 2 (stacks with Protection from Evil)
+  Spellward: Immunity to Unholy Blight and Blasphemy
+Weight: 50 lb.~
+@10588    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Celestial Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections.
+
+Long ago, the Blood War between the Baatezu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. In addition, the Celestials made the armor immune to fire damage, as well as improving its resistances to paralyze and death magics, and poison. These spells allowed the Aasimar's to get in close to the evil creatures without getting attacked, and provided enough protection to effectively fight the evil hordes. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baatezu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
+
+As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead. So, from time to time, a set of Celestial Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +14
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
+Special:
+  Evil creatures have a -4 penalty to hit the wearer, and the save DC of their spells and abilities used against the wearer is reduced by 4 (stacks with Protection from Evil)
+  Wearer is under the effect of Holy Aura
+  Resistance: 20/- Fire Resistance
+  Saving Throw Bonus: +3 to Fortitude saves
+  Spellward: Immunity to Unholy Blight and Blasphemy
+Weight: 50 lb.~
+@12537    = ~Shield of Speed +5~
+@12538    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +6
+Armor Bonus:  +1 vs. missile weapons
+Special:
+  Speed: 1 additional attack per combat round
+Armor Check Penalty:  -1
+Arcane Spell Failure:  5%
+Weight: 3 lb.~
+@10972    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus: +1
+Enchantment:  +1
+Damage Type:  Slashing
+Special: 
+  Counts as a silver weapon
+  Each hit has a 10% chance to create a Goodberry in one of the wielder's quick item slots, or in a regular inventory slot if there are no empty quick item slots
+Weight:  4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@10974    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus: +3 
+Enchantment:  +3
+Damage Type:  Slashing
+Special: 
+  Counts as a silver weapon
+  Each hit has a 20% chance to create a Goodberry in one of the wielder's quick item slots, or in a regular inventory slot if there are no empty quick item slots
+Weight:  4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@11080    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Delight is so named because of the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+
+STATISTICS:
+
+Damage:  1d8 + 2
+Attack Bonus:  +2 
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Electrical damage dealt by the wearer's spells and abilities is increased by 20%
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@11081    = ~Delnar's Lightning Staff~
+@11082    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Magic Staff is notable for the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Electrical damage dealt by the wearer's spells and abilities is increased by 40%
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@10237    = ~It is said that these magnificent bracers were constructed in the Spine of the World Mountains, and not so long ago. On the coastline of the Sea of Moving Ice, there dwelled Prashnak, an abjurer -- and a stubborn one at that. Apparently Prashnak was having a great deal of difficulty fending off a relentless scourge of trolls, who no doubt were interested in nothing more than his dug out, well stationed bower. Prashnak used storms of acid to keep the trolls at bay. However the young mage was tiring of the constant attacks, and the trolls were becoming bolder.
+
+After several months of studying the various effects of wilting magic, elemental summoning, and magical methods of frosting, Prashnak was finally ready to try his experiment. After summoning a water elemental, Prashnak evaporated choice bodily components and then froze the hapless creature. This lead to the creation of truly horrific sculptures of ice. The trolls, as simple as they are, took extreme offense to these totems and reportedly fled the area. The experiment a gleaming success, the exultant Prashnak continues his woeful studies to this day. What manner of thief took hold of the bracers is unknown, but they have been missing for several years.
+
+STATISTICS:
+
+Armor Class:  +3 (armor)
+Special:
+  Cold and magic damage dealt by the wearer's spells and abilities is increased by 20%
+Weight:  3 lb.~
+@12694    = ~It is said that these magnificent bracers were constructed in the Spine of the World Mountains, and not so long ago. On the coastline of the Sea of Moving Ice, there dwelled Prashnak, an abjurer -- and a stubborn one at that. Apparently Prashnak was having a great deal of difficulty fending off a relentless scourge of trolls, who no doubt were interested in nothing more than his dug out, well stationed bower. Prashnak used storms of acid to keep the trolls at bay. However the young mage was tiring of the constant attacks, and the trolls were becoming bolder.
+
+After several months of studying the various effects of wilting magic, elemental summoning, and magical methods of frosting, Prashnak was finally ready to try his experiment. After summoning a water elemental, Prashnak evaporated choice bodily components and then froze the hapless creature. This lead to the creation of truly horrific sculptures of ice. The trolls, as simple as they are, took extreme offense to these totems and reportedly fled the area. The experiment a gleaming success, the exultant Prashnak continues his woeful studies to this day. What manner of thief took hold of the bracers is unknown, but they have been missing for several years.
+
+STATISTICS:
+
+Armor Class:  +7 (armor)
+Special:
+  Cold and magic damage dealt by the wearer's spells and abilities is increased by 40%
+Weight:  3 lb.~
+@10147    = ~This ring appears to be made from ice and yet it does not melt. A slight inner glow beneath the surface betrays the magical nature of this ring.
+
+STATISTICS:
+
+Resistance:  50/- Cold Resistance
+Cold damage dealt by the wearer's spells and abilities is increased by 20%
+Weight: 0 lb.~
+@10283    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
+
+STATISTICS:
+
+Electrical damage dealt by wearer's spells and abilities is increased by 15%
+Weight: 3 lb.~
+@10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
+
+STATISTICS:
+
+Electrical damage dealt by wearer's spells and abilities is increased by 30%
+Weight: 3 lb.~
+@12524    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+
+STATISTICS:
+
+Fire damage dealt by wearer's spells and abilities is increased by 30%
+Resistance:  25/- Fire Resistance
+Weight:  3 lb.~
+@10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball three times per day at would-be attackers.
+
+STATISTICS:
+
+Generic Armor Bonus: +1
+Special:
+ Fire damage dealt by the wearer's spells and abilities is increased by 15%
+ Spell Power:  Can cast the spell Fireball (at level 10) three times per day
+Weight: 1 lb.~
+@10051    = ~Fire can be the bringer of life, or the harvester of death. With the Sunfire Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Sunfire Talisman gave its wearer added protection against all sorts of melee attacks and had the power to ignite a sunfire fireball three times per day at surrounding would-be attackers. In addition, if the would be attackers tried to turn the tables and attack the sorcerer with their own fire weapons, the Sunfire Talisman would grant its wearer added resistance to fire.
+
+STATISTICS:
+
+Generic Armor Bonus: +3
+Special:
+ Resistance: 30/-  Fire Resistance
+ Fire damage dealt by the wearer's spells and abilities is increased by 30%
+ Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
+Weight: 1 lb.~
+@10384    = ~Wizard Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study.
+
+STATISTICS:
+
+Resistance:  20/- Cold Resistance
+All cold damage dealt by the character's spells and abilities is increased by 20%
+Weight:  3 lb.~
+@10398    = ~Due to the extremely volatile nature of most magics, Wizard Robes of Fire Resistance are not uncommon among young acolytes and their wizardly tutors.
+
+STATISTICS:
+
+Resistance:  20/- Fire Resistance
+All fire damage dealt by the character's spells and abilities is increased by 20%
+Weight:  3 lb.~
+@10400    = ~While seen with less frequency than some other Wizard Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind.
+
+STATISTICS:
+
+Resistance:  20/- Electrical Resistance
+All electrical damage dealt by the character's spells and abilities is increased by 20%
+Weight:  3 lb.~
+@562    = ~PALADIN OF MYSTRA:
+
+Paladins of Mystra insure that the powers of the goddess of magic are not used for evil. They seek out evil spellcasters all over Faerun for the protection of civilization and to protect benign wizards from the repercussions of irresponsible magic use.
+
+Advantages:
+* 2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
+* 6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
+* 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin's spells and abilities is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force.~
+@55815=~Trap Not Disarmed - The character must have at least <EXTDLVL> levels of rogue in order to disarm a trap of this complexity.~
+@36351     = ~Quiver of Plenty
+(Conjuration)
+Level: Rgr 3
+Range: Caster
+Duration: 30 rounds
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This spell temporarily gives the ranger a quiver containing an unlimited supply of magical arrows. The arrows have an additional +1 to attack and damage for every 4 ranger levels. The quiver cannot be dropped or given to another character.
+
+Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
+
+Note: The ranger must have an empty ammunition slot for the quiver to be created. Otherwise, the spell will fail.~
+@1673    = ~Animate Zombie
+(Necromancy) 
+Level: Clr 3, Sor/Wiz 5, Tempus 3
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 9
+Area of Effect: Special 
+Saving Throw: None
+
+This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the zombie summoned by this spell. This spell cannot be cast by good clerics, though sorcerers and wizards may cast it regardless of alignment.
+
+WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras. The effects of their auras may harm your own party members if they fall within the area of effect.~
+@1675    = ~Animate Skeleton
+(Necromancy) 
+Level: Clr 3, Sor/Wiz 5, Tempus 3
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 9
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell brings forth a long-dead skeleton from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the skeleton summoned by this spell. This spell cannot be cast by good clerics, though sorcerers and wizards may cast it regardless of alignment.~
+@1019    = ~Shield of Lathander
+(Conjuration) [Good]
+Level: Clr 4, Pal 4, Lathander 4
+Range: Touch
+Duration: 3 rounds
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell grants the target a 15/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell. This spell cannot be cast by evil characters.~
+@1850    = ~Greater Shield of Lathander
+(Conjuration) [Good]
+Level: Clr 8, Pal 6, Lathander 6
+Range: Touch
+Duration: 3 rounds
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell grants damage reduction of 30/- to all forms of damage and sets Spell Resistance to 40 if lower for the duration of the spell. This spell cannot be cast by evil characters.~
+@1521    = ~Holy Aura
+(Abjuration)
+Level: Clr 8, Ilmater 8
+Range: 20 ft.
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: Allies in a 20' radius
+Saving Throw: None
+
+A brilliant, divine radiance surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding evil creatures when they strike the subjects. This abjuration has four effects:
+First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
+Second, the warded creatures' Spell Resistance is set to 25 if lower.
+Third, the abjuration protects the creatures against charm and domination spells.
+Fourth, any creature of evil alignment who strikes (melee only) those protected by the Holy Aura must make a Fortitude save or be blinded for 3 round.
+Holy Aura cannot be cast by evil characters.~
+@36853     = ~Unholy Aura
+(Abjuration)
+Level: Clr 8
+Range: 20 ft.
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: Allies in a 20' radius
+Saving Throw: None
+
+A malevolent darkness surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding good creatures when they strike the subjects. This abjuration has four effects:
+First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
+Second, the warded creatures' Spell Resistance is set to 25 if lower.
+Third, the abjuration protects the creatures against charm and domination spells.
+Fourth, any creature of good alignment who strikes (melee only) those protected by the Unholy Aura must make a Fortitude save or be blinded for 3 round.
+Unholy Aura can only be cast by evil characters.~
+@1914     = ~Aegis
+(Abjuration)
+Level: Sor/Wiz 9, Helm 9
+Range: Caster
+Duration: 20 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell grants the caster a 5/- bonus to all damage resistances, a +5 generic armor bonus, spell resistance set to 30 if lower, and +5 to all saves.~
+@10157    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Spell Resistance: Set to 22 if lower
+Weight: 0 lb.~
+@10173    = ~Few have heard of the (literally) short-lived underground movement against the Hosttower of the Arcane called the Circle of Ice - nor the rings that came to mark the members of the organization, both in life and in death.
+
+The Circle of Ice was sponsored by a merchant from Waterdeep whose name has been burned from recorded history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
+
+Ironically enough, the merchant never wore one of these rings, which was key in exposing and defeating the movement. As soon as he returned to Luskan, his mind was picked apart by telepaths and his movements scried, and each wizard slayer and accomplice was noted, identified, and ultimately led into deathtraps where their rings proved no match against the summoned monsters and arrows of slaying wielded by the ambush parties. It is rumored that only one wizard slayer, Martek, escaped the Hosttower, and to this day, he has never been found, which has been a constant source of irritation to the mages.
+
+In any event, the Circle of Ice died a quick, silent death in Luskan, but the merchant lived on as a toy of the Hosttower, serving them until death, at which point, his corpse was stored in their laboratories. It is most likely his preserved body will end up as the left arm of a flesh golem named Bok many years from now. 
+
+These small bands of Cold Reflection appear to be made of crystallized ice, very cold to the touch, and they cannot be seen by a wizard unless the wizard knows they are there. 
+
+If your band contains one that fancies him or herself a wizard slayer, perhaps these rings may be used for the purpose they were intended... but without the shortsightedness of foolish merchants handicapping your efforts. 
+ 
+STATISTICS:
+
+Spell Resistance: Set to 26 if lower
+Weight: 0 lb.~
+@10175    = ~During the formation of the Circle of Ice resistance movement against the wizards of the Hosttower of the Arcane, many special rings were forged for the wizard slayers of the organization to help them fend off the magical powers of their opponents.
+
+The organization and the forging of the rings was sponsored by a merchant from Waterdeep whose name has been burned from the annals of history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
+
+There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander.
+
+This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself.
+
+STATISTICS:
+
+Special:
+  Spell Resistance: Set to 36 if lower
+  Spell Power:  Can cast the 6th level Wizard Spell Globe of Invulnerability (at level 30) once per day
+Weight: 0 lb.~
+@10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.
+
+STATISTICS:
+
+Generic Armor Bonus: +5
+Spell Resistance: Set to 25 if lower
+Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
+Weight:  6 lb.~
+@10394    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of neutral alignment.
+
+STATISTICS:
+
+Generic Armor Bonus: +5
+Spell Resistance: Set to 25 if lower
+Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
+Weight:  6 lb.~
+@10396    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of evil alignment.
+
+STATISTICS:
+
+Generic Armor Bonus: +5
+Spell Resistance: Set to 25 if lower
+Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
+Weight:  6 lb.~
+@10454    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe. That kind of leather offers no better protection than common clothing. Magical enchantments enhance the protective abilities of this leather armor.
+
+STATISTICS:
+
+Light Armor
+Armor Bonus: +3
+Max Dex Bonus:  +6
+Armor Check Penalty:  -0
+Arcane Spell Failure:  10%
+Special:
+  Spell Resistance: Set to 14 if lower
+Weight: 10 lb.~
+@10560    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +11
+Max Dex Bonus:  +0
+Armor Check Penalty:  -6
+Arcane Spell Failure:  40%
+Special:
+  Resistance: 5/- Magic Damage Resistance
+  Spell Resistance: Set to 21 if lower
+  Light Weight
+Weight: 20 lb.~
+@10562    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
+
+STATISTICS:
+
+Heavy Armor
+Armor  Bonus: +13
+Max Dex Bonus:  +0
+Armor Check Penalty:  -6
+Arcane Spell Failure:  40%
+Special:
+  Resistance: 10/- Magic Damage Resistance
+  Spell Resistance: Set to 32 if lower
+  Light Weight
+Weight: 20 lb.~
+@10606    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +6
+Special:
+  Spell Resistance: Set to 22 if lower
+  Attack Penalty: -2
+Armor Check Penalty:  -10
+Arcane Spell Failure:  50%
+Weight: 25 lb.~
+@10894    = ~The holy avenger is the paladin's ultimate weapon against the forces of evil. There are few creatures on the Lower Planes that would not hesitate to confront a holy warrior wielding such a weapon... and this one, perhaps more so than others. Once, it was nothing more than a simple iron sword, but through the courage and faith of one man, it became something more.
+
+The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child. 
+
+The times in which Old Duke Ehld lived were ones of great upheaval, and the servitors of Bane were strong, crushing all that stood in their way. Entire kingdoms feared their wrath, and to speak out against them meant death, so many remained silent and turned their eyes from the evils of Bane and his servants. 
+
+During these dark times, the most terrible of Bane's minions were six who called themselves the Lost Followers. Their souls were storms of avarice and hate, and mighty were the powers at their command. They reveled in strife and tyranny... and for all the blood they shed, it was never enough. 
+
+Together, the Lost Followers brought about the downfall of the Silver Court, slaying its king upon his throne and renaming his once-beautiful nation the Barbed Kingdom. After animating his decapitated corpse and having it march through the streets slaying anyone it could find, they brought a rain of fire down upon the city and the lands around, leaving it a barren wasteland. It is said that they dined in the capital's great hall that night as the land burned, and they raised their wine glasses as the screams of the dying reached their peak. 
+
+There was only one survivor. In their last act of malice, the Lost Followers left the king's only daughter, barely five years old, alive to reign as "Queen" over the burned kingdom. They called her the Weeping Queen and cast wards about her so that she might never leave the empty capital, and then left her to starve. Their appetite momentarily slaked, the Lost Followers parted ways and went upon their separate roads of damnation, sowing strife in the Bane's Name.
+
+Old Duke Ehld was the first one to cross the wards of the Barbed Kingdom and seek out the Weeping Queen upon her father's throne. When he found the small girl, he approached, kneeled before her, and told her he had come to pledge his life in her service. In stiff, formal words, he said he had brought food and water and apologized for his lateness, but his bones were old and it had taken him some time to reach this place. The near-starving child stared at him as he pledged his worn blade and his honor to seeing that the ones who had done this terrible crime answered for their actions, if his Queen wished it. After a long, stunned silence, the Weeping Queen found the words to thank him.
+
+From the moment Ehld left the throne room in search of the Lost Followers, the weeping of the queen ended, and she never wept again. 
+
+Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes. Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor. He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
+
+When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet. Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys. He detached the stone, and set into a chain, and he gave it to the Weeping Queen. Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
+
+Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north. In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time. 
+
+But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil... 
+
+And perhaps, if your heart is true, save a land from destruction once again. 
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus: +5
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Spell Resistance: Set to 30 if lower
+  Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
+  Dispelling: Dispel Magic on target with each hit (Will DC 21). Striking an ally dispels magic on them with no save.
+Weight:  5 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+//@10895    = ~Light of Cera Sumat~
+@10896    = ~The holy avenger is the paladin's ultimate weapon against the forces of evil. There are few creatures on the Lower Planes that would not hesitate to confront a holy warrior wielding such a weapon... and this one, perhaps more so than others. Once, it was nothing more than a simple iron sword, but through the courage and faith of one man, it became something more.
+
+The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child. 
+
+The times in which Old Duke Ehld lived were ones of great upheaval, and the servitors of Bane were strong, crushing all that stood in their way. Entire kingdoms feared their wrath, and to speak out against them meant death, so many remained silent and turned their eyes from the evils of Bane and his servants. 
+
+During these dark times, the most terrible of Bane's minions were six who called themselves the Lost Followers. Their souls were storms of avarice and hate, and mighty were the powers at their command. They reveled in strife and tyranny... and for all the blood they shed, it was never enough. 
+
+Together, the Lost Followers brought about the downfall of the Silver Court, slaying its king upon his throne and renaming his once-beautiful nation the Barbed Kingdom. After animating his decapitated corpse and having it march through the streets slaying anyone it could find, they brought a rain of fire down upon the city and the lands around, leaving it a barren wasteland. It is said that they dined in the capital's great hall that night as the land burned, and they raised their wine glasses as the screams of the dying reached their peak.
+
+There was only one survivor. In their last act of malice, the Lost Followers left the king's only daughter, barely five years old, alive to reign as "Queen" over the burned kingdom. They called her the Weeping Queen and cast wards about her so that she might never leave the empty capital, and then left her to starve. Their appetite momentarily slaked, the Lost Followers parted ways and went upon their separate roads of damnation, sowing strife in the Bane's Name.
+
+Old Duke Ehld was the first one to cross the wards of the Barbed Kingdom and seek out the Weeping Queen upon her father's throne. When he found the small girl, he approached, kneeled before her, and told her he had come to pledge his life in her service. In stiff, formal words, he said he had brought food and water and apologized for his lateness, but his bones were old and it had taken him some time to reach this place. The near-starving child stared at him as he pledged his worn blade and his honor to seeing that the ones who had done this terrible crime answered for their actions, if his Queen wished it. After a long, stunned silence, the Weeping Queen found the words to thank him.
+
+From the moment Ehld left the throne room in search of the Lost Followers, the weeping of the queen ended, and she never wept again. 
+
+Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes. Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor. He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
+
+When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet. Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys. He detached the stone, and set into a chain, and he gave it to the Weeping Queen. Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
+
+Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north. In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.
+
+But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil...
+
+And perhaps, if your heart is true, save a land from destruction once again.
+
+STATISTICS:
+
+Damage:  1d8 + 10
+Attack Bonus: +10
+Enchantment:  +10
+Damage Type:  Slashing
+Special:
+  Spell Resistance: Set to 40 if lower
+  Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
+  Dispelling: Dispel Magic on target with each hit (Will DC 32). Striking an ally dispels magic on them with no save.
+Weight:  5 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@11060    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Spell Resistance: Set to 37 if lower
+  Lower Resistance: Each hit lowers the target's Spell Resistance by 5 for 10 rounds (Will DC 37, cumulative)
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12532    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +9
+Special:
+  Spell Resistance: Set to 28 if lower
+  Attack Penalty: -2
+Armor Check Penalty:  -10
+Arcane Spell Failure:  50%
+Weight: 25 lb.~
+@4751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+
+When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 25%.
+
+STATISTICS:
+
+Dispels all dispellable effects on the drinker
+Spell Resistance: Set to 25
+25% Spell Failure
+Weight: 1 lb.~
+@54751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+
+When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 50%.
+
+STATISTICS:
+
+Dispels all dispellable effects on the drinker
+Spell Resistance: Set to 35
+50% Spell Failure
+Weight: 1 lb.~
+@10613    = ~Large Shield of Spell Cover +4~
+@10614    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +6
+Special:
+  The bearer is unaffected by harmful area of effect spells cast by their allies
+Armor Check Penalty:  -2
+Arcane Spell Failure:  15%
+Weight: 6 lb.~
+@12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells. The Spell Resistance granted by the robe works best to bolster a wearer who already has spell resistance, such as a drow.
+
+STATISTICS:
+
+Generic Armor Bonus:  +4
+Spell Resistance: +3
+Immunity to blindness and confusion
+Spell Power: Can cast True Seeing 1/day
+When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog do not harm allies
+Weight:  3 lb.~
+@12852    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells. The Spell Resistance granted by the robe works best to bolster a wearer who already has spell resistance, such as a drow.
+
+STATISTICS:
+
+Generic Armor Bonus:  +6
+Spell Resistance: +5
+Immunity to blindness and confusion
+Spell Power: Can cast True Seeing 1/day
+When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog deal maximum damage and do not harm allies
+Weight:  3 lb.~
+@544    = ~STORMLORD OF TALOS:
+
+Talos the Destroyer is the god of storms and destruction. The bane of many rangers and druids, Talos works his evil through the use of his priests, the Stormlords. Stormlords terrorize farming communities all across Faerun with threats of imminent doom if all do not appease the Destroyer. They are known for their abusive terrorism and their foolhardy nature.
+
+Advantages:
+
+* 5/- Electrical Resistance
+* Talos' Blessing 1/Day (for 1 round per cleric level, all electrical damage dealt by the priest's spells and abilities is increased by 30%)~
+@210    = ~Talos' Blessing
+
+For 1 round per cleric level, all electrical damage dealt by the priest's spells and abilities is increased by 30%.~
+@541    = ~ROGUE:
+
+To accomplish his goals, for good or ill, the rogue is a skilled pilferer. Cunning, nimbleness, and stealth are his hallmarks. Whether he turns his talent against innocent passers-by and wealthy merchants or oppressors and monsters is a choice for the rogue to make.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, bows, and light armor.
+* Rogues receive a larger number of skill points per level than any other character class. They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
+* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted. Shortswords, throwing daggers, darts, shortbows, composite shortbows, light crossbows, slings, clubs and unarmed attacks deal an extra die of sneak attack damage. Melee daggers deal two extra dice of sneak attack damage.
+* 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
+* 6th level: Improved Uncanny Dodge. Rogues can't be Sneak Attacked by another rogue unless the attacker is higher level.
+* 8th level: Disarm Complex Traps. Rogues of this level or higher are the only characters who can disarm traps with a DC of 20 or higher.
+* 10th level: Bonus Feat. The rogue gains a bonus feat, and also gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist. The rogue gains another bonus feat every 3 levels after level 10.
+* Rogues gain +1 to luck every 5 levels.
+
+Disadvantages:
+* Rogues have no spellcasting ability and poor toe-to-toe combat ability.~
+@223    = ~Arterial Strike
+
+While this ability is active, your sneak attacks deal 10 bleeding damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), you deal another 10 damage over the 10 rounds. This ability can be activated or deactivated at will as a free action., but it cannot be active at the same time as Hamstring.~
+@224    = ~Hamstring
+
+While this ability is active, your sneak attacks reduce the target's movement speed by 50% for 10 rounds (no save). Since this is a nonmagical effect, it bypasses Freedom of Movement. This ability can be activated or deactivated at will as a free action, but it cannot be active at the same time as Arterial Strike.~
+@702    = ~ARTERIAL STRIKE:
+
+Your skill with sneak attacks allows you to cause a bleeding wound.
+
+Prerequisite: At least one level of rogue, base attack bonus +4 or higher.
+
+Benefit: Gives the rogue an ability that causes their sneak attacks to inflict a bleeding wound that causes deals an extra 10 damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), the rogue deals another 10 damage over the 10 rounds. This ability cannot be active at the same time as Hamstring.~
+@734    = ~HAMSTRING:
+
+When making a sneak attack, your character can maim their target in such a way that their movement is significantly decreased.
+
+Prerequisite: At least three levels of rogue.
+
+Benefit:  Gives the rogue an ability that causes their sneak attacks to reduce the target's movement speed by 50% for 10 rounds. This is a nonmagical effect that bypasses Freedom of Movement. This ability cannot be active at the same time as Arterial Strike.~
+@735    = ~POWER ATTACK:
+
+You can make exceptionally powerful melee attacks.
+
+Prerequisite: Str 13+
+
+Benefit: On your action, before making attack rolls for a round, you may choose to subtract a number from all melee attack rolls and add the same number to all melee damage rolls, or twice that number if you are wielding a two-handed weapon. This number may not exceed your base attack bonus. The penalty on attacks and bonus on damage apply until your next action.~
+@977    = ~Barbarian Rage
+
+By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds. If the character has at least 5 barbarian levels, the rage also lasts a number of additional rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~
+@525    = ~BARBARIAN:
+
+From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
+
+Hit points per level: 1-12
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness for 3 rounds. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
+* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
+* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
+* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
+* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is higher level than the barbarian. Barbarian rage now lasts a number of additional rounds equal to the barbarian's newly improved Constitution bonus.
+* 11th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the Strength and Constitution bonuses to +6 and the Will save bonus to +3. He or she still receives the -2 AC penalty.
+* 17th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
+* 20th level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves. For every 4 levels after level 20, barbarian rage will grant an additional +2 to Strength and Constitution and +1 to Will saves.
+* 21st level: Limitless Strength. The barbarian can now increase their Strength past 40.
+
+Disadvantages:
+* Barbarians gain feats at a slower rate than fighters.
+* Barbarians do not start with proficiency in heavy armor.~
+@527    = ~BARD:
+
+The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
+* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
+* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
+* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
+* Many rogue like skills are class skills of the Bard.
+* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
+* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at level 5 and every 5 levels thereafter.
+* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, Void Sound, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
+* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, and +2 to skill checks (in addition to the +1 to skill checks granted by the luck). At level 15 and every 10 levels thereafter, this song grants an additional +1 to luck and +2 to skill checks.
+* 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
+* 9th level: The Siren's Yearning. When played, every enemy that hears the song must make a Will save or be enthralled, unable to take action for one round or until they take damage. The Will save DC is equal to 10 + 1/2 bard level + Charisma bonus.
+* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At level 18 and every 10 levels thereafter, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 40th level: The Ballad of Three Heroes. When played, the bard's allies gain 10/- resistance to all forms of magical damage, spell resistance set to 35 if lower, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 50, this song sets spell resistance to 40 if lower and grants another 10/- resistance to magical damage.
+
+A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+
+* 30th level: The bard can now do other actions while singing a bard song.
+
+Disadvantages:
+* Bards are not as effective in hand-to-hand combat as warriors or priests.
+* Bards have slower access to spells than a wizard or priest.~
+@535    = ~MONK:
+
+Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though monks cannot cast spells, they have a unique magic of their own. They channel a subtle energy, called ki, which allows them to perform amazing feats. The monk's best-known feat is their ability to stun an opponent with an unarmed blow.
+
+NOTE: Multiclassed monks ONLY use their monk levels when determining their number of attacks when fighting unarmed.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* The monk attacks at a faster rate than other characters while unarmed:
+
+Level 1-3: 2 attacks per round
+Level 4-6: 3 attacks
+Level 7-9: 4 attacks
+Level 10-12: 5 attacks
+Level 13-15: 6 attacks. For every 3 levels after 13, the monk gains another attack per round.
+
+* Monk Weapons: The monk can wield quarterstaves, daggers, throwing daggers, and darts with very few penalties (one fewer attack per round than with fists, but the monk will still get an extra attack per round every 3 levels).
+
+* As the monk increases in levels, the damage their fists inflicts does as well:
+
+Level 1-2: 1d6
+Level 3-4: 1d8
+Level 5-7: 1d8+1
+Level 8-10: 1d8+2
+Level 11-13: 1d8+3
+Level 14-16: 1d8+4
+Level 17+: 1d8+5
+
+* Ki Strike: At level 5, the monk's unarmed attack is empowered with ki, and gains +1 enchantment with corresponding bonuses to attack and damage. This enchantment bonus increases by +1 every 3 levels after level 5, up to +5 at level 17.
+* A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
+* When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. This bonus may not exceed the character's monk level.
+* Stunning Attacks: When this ability is used, all of the monk's unarmed attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half the monk's level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
+* Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
+* 3rd level: Fast Movement. The monk moves 10 feet faster than a normal character (normal movement speed is 30 feet), but only as long as the monk is not encumbered or wearing armor. The monk gains another 10 feet of movement every 3 levels thereafter.
+* 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.
+* 5th level: Purity of Body. The monk gains control over their body's immune system. They gain immunity to all diseases.
+* 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day per seven levels.
+* 9th level: Improved Evasion. The monk gains the Improved Evasion feat that is normally only available to rogues.
+* 10th level: Abundant Step. The monk may teleport to any location in sight once per day.
+* 11th level: Diamond Body. The monk is in such control of their own metabolism that they gain immunity to poison of all kinds.
+* 13th level: Diamond Soul. The monk gains spell resistance. Their spell resistance equals their level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + Wisdom modifier + half the monk's level). Constructs and undead cannot be affected. The monk gains an additional use of Quivering Palm every six levels thereafter.
+* 19th level: Empty Body. The monk can assume an incorporeal state for 5 rounds a number of times a day equal to their level divided by 2. While incorporeal, the monk can move through walls, and half the attacks that hit the monk deal no physical damage. The monk's unarmed attacks will ignore armor and shield bonuses.
+* 20th level: Perfect Self. The monk has tuned their body with skill and quasi-magical abilities to the point that they become a magical creature. They are forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect them. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
+
+Disadvantages:
+* Loses many bonuses if wearing armor and/or using weapons.~
+@391    = ~Lingering Damage~
+@392    = ~LINGERING DAMAGE:
+
+Your sneak attacks continue to deal damage even after you strike.
+
+Prerequisite: Crippling Strike, 30 levels of rogue
+
+Benefit: If you deal damage with a sneak attack, you deal the same damage to that enemy again one round later.~
+@358    = ~METAMAGIC, QUICKEN SPELL:
+
+You may quickly cast an extra spell each round.
+
+Prerequisites: The ability to cast 5th-level spells.
+
+Benefit: You gain the Quicken Spell ability, usable at will as a free action. Using it allows you to instantly cast a spell, even if you've already cast a spell for the round. The quickened spell takes up a spell slot four levels higher. Only one spell can be quickened per round.~
+@963    = ~Quicken Spell
+
+This metamagic allows you to instantly cast your next spell, even if you've already cast a spell for the round. It will take up a spell slot four levels higher. You may only quicken one spell per round. Metamagic abilities can be used as a free action any number of times per day.~
+@731    = ~IMPROVED CRITICAL:
+
+You are especially adept at causing critical hits.
+
+Prerequisite: Base attack bonus +8 or higher.
+
+Benefit: When determining criticals, the base threat range of the weapon being wielded is doubled. An axe will critically hit on a 19-20, a longsword on a 17-20, and a scimitar on a 15-20.~
+@372    = ~MOBILITY:
+
+You can dodge attacks particularly well while moving.
+
+Prerequisites: Dex 13+, Dodge. Taking the feat a second time requires Dex 21+ and Spring Attack.
+
+Benefit: While moving, you gain a +4 Armor Class bonus. This bonus is doubled against attacks of opportunity due to moving out of an enemy's weapon range.
+
+When taken a second time, the feat prevents you from provoking any attacks of opportunity due to moving out of an enemy's weapon range.~
+@736    = ~SNAKE BLOOD:
+
+The taint of the yuan-ti runs in your veins.  No outward signs give away your heritage, but you are something more - or less - than entirely human.
+
+Prerequisite: Human
+
+Benefit: Your race changes to yuan-ti pureblood. This race has the following traits:
+
+Favored Class: Ranger
+
+Advantages:
+* +2 Dexterity.
+* +2 Intelligence.
+* +2 Charisma.
+* Spell resistance of 6 + character level.
+* +1 dodge bonus against all creatures.
+* +2 bonus on Fortitude saving throws against poison.
+* +1 bonus on all Reflex saving throws.
+* Free Blind-Fight feat after character creation.
+* Entangle 1/Day.
+* Hold Animal 1/Day.
+* Charm Person 1/Day.
+* Spook 1/Day.
+* Darkness 1/Day.
+* At will, can polymorph self into a giant viper. In this form, the character's attacks will poison the target on a failed Fortitude save. This form becomes more powerful as the character levels up. If the character uses a druid wildshape ability to turn into a giant viper, their druid level is doubled for purposes of determining the power of the form.
+* Darkvision.
+
+Disadvantages:
+* -25% Experience Penalty: Yuan-ti purebloods are slightly more powerful and gain 25% less experience than other races.
+
+Special: You may only take this feat as a 1st-level character.~
+@930    = ~Entangle
+
+When an Entangle spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. It causes vines to sprout forth from the ground to wrap, twist, and entwine any creatures in the area of effect, preventing movement. Creatures must make a Reflex save every round in order to move through the entangled area. The DC is 11 + half level + Charisma bonus. Entangled creatures can still perform normal actions but cannot move and suffer a -2 penalty to Armor Class and attack rolls, as well as a 50% chance of spell failure. All creatures within the area of effect who make their Reflex save move at half rate.~
+@931    = ~Charm Person
+
+This spell charms a single humanoid of man-size or smaller for 5 rounds. The person receives a Will save to avoid the effect; the DC is 11 + half level + Charisma bonus. If the spell recipient fails their saving throw, they regards the caster as a trusted friend and ally to be heeded and protected. The caster may give them orders, and the charmed individual will carry them out as quickly as possible.~
+@932    = ~Spook
+
+A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful Will save, it panics for 3 rounds. The base DC is 11 + Charisma bonus, though it also gets +1 for every two experience levels of the caster, to a maximum of +6 at 12th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Spook does not affect undead or constructs.~
+@933    = ~Hold Animal
+
+This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as remorhazes. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. The DC is 12 + half level + Charisma bonus. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@934    = ~Polymorph: Giant Viper~
+@935    = ~Polymorph: Giant Viper
+
+The character shapeshifts into a giant viper. While in giant viper form, the character's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). At level 12 and every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +1 AC, and the save DC against its poison increases by 3.~
+@971    = ~Darkness
+
+This ability creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. The DC is 12 + half level + Charisma bonus. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
+@393    = ~Arcane Archer~
+@394    = ~ARCANE ARCHER:
+
+You are trained as an arcane archer and know how to shoot spells as arrows.
+
+Prerequisite: Elf or half-elf, 1 level of wizard or sorcerer, and proficiency in bows (if drow or half-elf)
+
+Benefit: You gain the Imbue Arrow ability, usable as a free action. If you use it and then attempt to cast an offensive ranged wizard or sorcerer spell of 5th-level or lower that involves a projectile traveling from the caster, instead of being cast, it will be stored in an arrow that is created in an empty ammo slot (consuming a use of the spell). That arrow has an enchantment equal to the level of the spell. When fired, the arrow uses the same projectile and area of effect as the spell, and deals the physical damage of the arrow in addition to the effects of the spell (as if cast at the character's wizard or sorcerer level) to all creatures it hits. This ability can be used once per day, plus once more for every two points of base attack bonus.
+
+However, your spells have -4 DC when cast without imbuing them.
+
+Special: You may only take this feat as a 1st-level character.~
+@55117=~Spirit Shaman~
+@55576=~Item creation failed: There are no empty slots to place the item~
+@55577=~<EXIAVAL1> is not a valid spell for Imbue Arrow~
+@55578=~An arrow has been imbued with the spell <EXIAVAL1>~
+@55579=~Imbue Arrow failed: There are no empty ammo slots~
+@56038=~Magic Missile Arrow~
+@56039=~Chromatic Orb Arrow~
+@56040=~Larloch's Minor Drain Arrow~
+@56041=~Ice Dagger Arrow~
+@56042=~Melf's Acid Arrow Arrow~
+@56043=~Agannazar's Scorcher Arrow~
+@56044=~Snilloc's Snowball Swarm Arrow~
+@56045=~Ray of Enfeeblement~
+@56046=~Flame Arrow Arrow~
+@56047=~Fireball Arrow~
+@56048=~Lightning Bolt Arrow~
+@56049=~Skull Trap Arrow~
+@56050=~Icelance Arrow~
+@56051=~Lance of Disruption Arrow~
+@56052=~Mordenkainen's Force Missiles Arrow~
+@56053=~Shout Arrow~
+@56054=~Vitriolic Sphere Arrow~
+@56055=~Cone of Cold Arrow~
+@56056=~Symbol of Pain Arrow~
+@12902    = ~Cursed by a malefic priestess of Beshaba, goddess of bad luck, these hard black leather gloves affix themselves to whoever tries them on. Despite the extremely nasty nature of the gloves, wealthy adventurers sometimes buy the distinctive gauntlets to place in their treasure hordes, waiting for a greedy thief to try them on.
+
+STATISTICS:
+
+Constant Effect: Wearer is under the effect of Shroud of Flame, except it will not harm blue-circled creatures
+Special: Can only be removed by a Remove Curse spell~
+@10249    = ~In the surviving teachings of the Kamjin-Doh of Kara-Tur, it is written that a true weapon master relies not on leather, chain, or plate, but on honing their skills so that they are never struck at all... and this means a weapon master must know their enemy's movements like the movements of their own hand. But such mastery lies in staying focused upon your enemy even in the heat of battle... and these simple leather armbands are intended to do just that.
+
+Initially used to help in the training of students at the Kamjin-Doh, these Bands of Focus radiate a soft moonlight glow when the light of dusk falls upon them. While worn, they exert a slight calming influence on the mind of the sword saint that wields them, heightening the warrior's perceptions and senses, and allowing them to read the movements of their opponents easier. On the rare occasion when an enemy strikes a sword saint, these bands allow the wielder to shrug off pain (which in the teachings of Kamjin-Doh are called, "distractions") and keep the pain where it belongs - on one's opponent. 
+
+Many of these bands were scattered throughout Faerun in the wake of the destruction of the Kamjin-Doh at the hands of the Master of Razors. It is rumored that the Master of Razors possessed a set of these bands as well, but their location remains a mystery. 
+
+STATISTICS:
+
+Damage reduction 5/+1
+Focus: If the wearer has 15 or more levels of fighter or monk, they deal maximum damage with each hit
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
+@10251    = ~When the last kensei of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh. The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensei.
+
+It was discovered that these once-simple bands of focus that the Master of Razors had worn as a student had become stained with blood and shame, and no longer shone with the same light as it once had. As the Master lost focus, his bands of focus corroded, almost to rot away as they were wrapped upon his bleeding arms. Nonetheless, these tattered bands still hold the power, strength, and viciousness of the Master of Razors... making the one who wields them far more deadly.
+
+If you wear these bands, never forget their purpose, never forget your focus, and never forget the reach of your enemy. Keep these three things in your heart, and they will serve you well in battle.
+
+STATISTICS:
+
+Attack Bonus: +3
+Damage Bonus: +3
+Focus: If the wearer has 20 or more levels of fighter or monk, they deal maximum damage with each hit
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
+@11764    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast. According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course). Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow. As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time. The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
+
+The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
+
+Whatever the tale, the bow has a range unmatched by many other bows in the realms, and the arrows launched from it strike far and true - unlike the story surrounding the bow.
+
+STATISTICS:
+
+Damage:  +3 (missile)
+Attack Bonus:  +2
+Special: 
+  Half again the range of a normal bow
+  Composite: Gains Strength bonus to damage, up to a maximum of +4
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
+@11766    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast. According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course). Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow. As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time. The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
+
+The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
+
+Whatever the tale, the bow has a range unmatched by many other bows in the realms, and the arrows launched from it strike far and true - unlike the story surrounding the bow.
+
+STATISTICS:
+
+Damage:  +6 (missile)
+Attack Bonus:  +5
+Special:
+  Half again the range of a normal bow.
+  Composite: Gains Strength bonus to damage, up to a maximum of +7
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
+@24043=~Cambion Darkness~
+@48   = ~Adjust the HP bonuses of creatures in Heart of Fury Mode~
+@52   = ~Adjust the attack bonuses of creatures in Heart of Fury Mode~
+@53   = ~Adjust the Saving Throw bonuses of creatures in Heart of Fury Mode~
+@54   = ~Low-level enemies have decreased saves, high-level enemies have increased saves (recommended if you plan on starting HoF with a fresh party)~
+@55   = ~High-level enemies have increased saves~
+@60   = ~Low-level enemies have decreased attack, high-level enemies have increased attack (recommended if you plan on starting HoF with a fresh party)~
+@61   = ~High-level enemies have increased attack~
+@76   = ~Low and medium-level enemies have decreased HP, extremely high-level enemies have increased HP (recommended if you plan on starting HoF with a fresh party)~
+@77   = ~Extremely high-level enemies have increased HP~
+@6409=~In the lava chamber, we encountered Lord Pyros, a fire giant, a salamander, a yuan-ti halfbreed man named Venomin, and Izbelah arguing over a "Temporal Stasis" spell that Izbelah designed to prevent a volcanic eruption from destroying Dragon's Eye.  It seems that Lord Pyros and his friends in the lava chamber were afraid that the spell would stop time or cause some other catastrophe, but Izbelah thought it was worth the risk because her home was at stake.  In the end, Izbelah decided Lord Pyros was secretly planning to destroy Dragon's Eye, and even accused him of hiring us as assassins!~
+@6410=~Iselore told us that the Legion of the Chimera forces are using Dragon's Eye as a route to Kuldahar.  He believes that at the base of the Dragon's Eye volcano, we will be able to enter the Fields of Slaughter.  From there, we can access the Severed Hand.  Iselore also has warned us that someone inside Dragon's Eye is using magic to fiddle with time.  Whatever they're up to, I doubt it's good news.~
+@6411=~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
+@6412=~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, instantly disintegrating nearly every living thing inside.  Shortly thereafter the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
+@6413=~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption.  Thorasskus then informed High Sorceress Izbelah who hastily researched a spell to prevent it, but she hasn't been seen since.~

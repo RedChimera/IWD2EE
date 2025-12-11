@@ -1,0 +1,72 @@
+//NOTES
+
+APPEND ~RT_NORM.2da~
+~
+USHFMODP	No_Drop
+~
+UNLESS ~USHFMODP~
+
+APPEND ~RT_FURY.2da~
+~
+USHFMODP	USHFMDP
+~
+UNLESS ~USHFMODP~
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmodp.itm~ BEGIN
+
+	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmodp.itm~
+
+	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+		READ_BYTE 0x303 theattributes
+		PATCH_IF (theattributes BAND 0x00000011) = 0x00000000 BEGIN
+			TEXT_SPRINT hofitem ~USHFMODP~
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x2A) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ END
+								END
+								ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		UNLESS ~USHOFMODP~
+		BUT_ONLY_IF_IT_CHANGES
+
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODP~ END
+		IF_EXISTS
+END
+
+COPY_EXISTING ~ushfmdp.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=54 match_parameter1=6 probability2=0 END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=54 match_parameter1=12 probability2=0 END

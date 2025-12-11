@@ -178,6 +178,7 @@ function IEex_CreateCItem(resref, useCount1, useCount2, useCount3, wear, flags)
 end
 
 function IEex_DemandCItem(CItem)
+	if CItem == 0 then return 0 end
 	local res = IEex_ReadDword(CItem + 0x8)
 	IEex_Call(0x4015B0, {}, res, 0x0) -- CResItem_Demand
 	return IEex_ReadDword(res + 0x58)

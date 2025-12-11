@@ -763,6 +763,19 @@ fj_vertex_2=(1279 + (1789 << 16))
 fj_vertex_3=(1108 + (1725 << 16))
 STR_VAR fj_structure_type=~region~ fj_name=~Sseth's Kiss~ fj_reg_script=~60TRAP04~ END
 
+COPY_EXISTING ~AR6100.are~ ~override~
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR type=0 all_flags=0xA trap_detect=1140 trap_remove=10 trapped=1 STR_VAR region_name=~Post~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap0~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap1~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap2~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap3~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap4~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap5~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap6~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap7~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap8~ region_script=~USWALKWT~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1140 trap_remove=100 STR_VAR region_name=~WalkwayTrap9~ region_script=~USWALKWT~ END
+
 COPY_EXISTING ~AR6103.are~ ~override~
 	LPF fj_are_structure INT_VAR
 fj_type=0

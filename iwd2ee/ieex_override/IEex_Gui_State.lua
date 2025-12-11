@@ -3841,6 +3841,9 @@ IEex_Hotkeys_CustomBinding = {
 	SCROLL_BOTTOM_RIGHT_ALT = 14,
 	SCROLL_TOP_RIGHT        = 15,
 	SCROLL_TOP_RIGHT_ALT    = 16,
+	TOGGLE_BUFF_RECORDING   = 17,
+	ERASE_RECORDING         = 18,
+	CAST_RECORDED_BUFFS     = 19,
 }
 
 IEex_Hotkeys_CustomBindings = {
@@ -3861,10 +3864,16 @@ IEex_Hotkeys_CustomBindings = {
 	[IEex_Hotkeys_CustomBinding.SCROLL_BOTTOM_RIGHT_ALT] = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Bottom Right (Alt)", ["default"] = "Keypad 3" },
 	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT]        = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Right",          ["default"] = nil        },
 	[IEex_Hotkeys_CustomBinding.SCROLL_TOP_RIGHT_ALT]    = { ["iniSection"] = "IEex", ["iniKey"] = "Scroll Top Right (Alt)",    ["default"] = "Keypad 9" },
+	[IEex_Hotkeys_CustomBinding.TOGGLE_BUFF_RECORDING]   = { ["iniSection"] = "IEex", ["iniKey"] = "Toggle Buff Recording",     ["default"] = "["        },
+	[IEex_Hotkeys_CustomBinding.ERASE_RECORDING]         = { ["iniSection"] = "IEex", ["iniKey"] = "Erase Recording",           ["default"] = "]"        },
+	[IEex_Hotkeys_CustomBinding.CAST_RECORDED_BUFFS]     = { ["iniSection"] = "IEex", ["iniKey"] = "Cast Recorded Buffs",       ["default"] = ";"        },
 }
 
 IEex_Hotkeys_CustomBindingsHandlers = {
 	[IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT] = IEex_CScreenWorld_OnQuicklootButtonLClick,
+	[IEex_Hotkeys_CustomBinding.TOGGLE_BUFF_RECORDING] = IEex_ToggleBuffRecording,
+	[IEex_Hotkeys_CustomBinding.ERASE_RECORDING] = IEex_EraseRecording,
+	[IEex_Hotkeys_CustomBinding.CAST_RECORDED_BUFFS] = IEex_CastRecordedBuffs,
 }
 
 IEex_Hotkeys_ValueControlExpansion = 38
@@ -3970,6 +3979,9 @@ IEex_Hotkeys_KeysScreenLayout = {
 	-- Column 2
 	{                                                                          ["strref"] = ex_tra_55926 }, -- "IEex"
 	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.TOGGLE_QUICKLOOT,        ["strref"] = ex_tra_55927 }, -- "Toggle Quickloot"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.TOGGLE_BUFF_RECORDING,   ["strref"] = ex_tra_55928 }, -- "Toggle Buff Recording"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.ERASE_RECORDING,         ["strref"] = ex_tra_55929 }, -- "Erase Recording"
+	{ ["customMapIndex"] = IEex_Hotkeys_CustomBinding.CAST_RECORDED_BUFFS,     ["strref"] = ex_tra_55930 }, -- "Cast Recorded Buffs"
 }
 
 function IEex_Extern_GiveEngineKeysScreenLayout()
@@ -4310,6 +4322,8 @@ function IEex_InitializeWizardLearnList()
 						table.insert(ex_menu_available_wizard_spells[wizardLevel], spellRES)
 					end
 				end
+			else
+				table.insert(ex_menu_available_wizard_spells[wizardLevel], spellRES)
 			end
 			scrollWrapper:free()
 		end
@@ -4387,6 +4401,8 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local levelString = IEex_FetchString(7192)
 	local bonusSpellsString = IEex_FetchString(10344)
 	local damageString = IEex_FetchString(39518)
+	local damageBonusString = IEex_FetchString(39571)
+	local powerAttackString = IEex_FetchString(35794)
 	local damagePotentialString = IEex_FetchString(41120)
 	local castingFailureString = IEex_FetchString(41390)
 	local armoredArcanaString = IEex_FetchString(36352)
@@ -4553,7 +4569,11 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				numWeapons = 1
 			end
 			if numWeapons >= 2 and weaponSlot >= 43 then
-				offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+				if weaponSlot % 2 == 1 then
+					offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+				else
+					offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				end
 				if offhandSlotData > 0 then
 					offhandRES = IEex_ReadLString(offhandSlotData + 0xC, 8)
 					local offhandWrapper = IEex_DemandRes(offhandRES, "ITM")
@@ -4692,30 +4712,55 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 									fixMonkACBonus = false
 								end
 							end
+--[[
 						elseif theopcode == 502 and theresource == "MEPOLYBL" then
 							if thespecial > monkLevel then
 								unfixMonkACBonus = true
 							end
+--]]
 						end
+
 					end)
-					if not monkACBonusDisabled and unfixMonkACBonus then
-						if string.match(line, monkWisdomBonusString .. ":") then
-							line = string.gsub(line, "%d+", 0)
-						elseif string.match(line, genericString .. ":") then
-							local genericAC = string.match(line, "%d+")
-							if string.match(line, "%-") then
-								genericAC = genericAC * -1
+					if not monkACBonusDisabled then
+						if unfixMonkACBonus then
+							if string.match(line, monkWisdomBonusString .. ":") then
+								line = string.gsub(line, "%d+", 0)
+							elseif string.match(line, genericString .. ":") then
+								local genericAC = string.match(line, "%d+")
+								if string.match(line, "%-") then
+									genericAC = genericAC * -1
+								end
+								genericAC = genericAC + wisdomBonus
+								if genericAC > 0 then
+									line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+								elseif genericAC < 0 then
+									line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+								else
+									line = ""
+								end
 							end
-							genericAC = genericAC + wisdomBonus
-							if genericAC > 0 then
-								line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
-							elseif genericAC < 0 then
-								line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
-							else
-								line = ""
+						elseif ex_monk_bonus_ac_cannot_exceed_monk_level and wisdomBonus > monkLevel then
+							if string.match(line, monkWisdomBonusString .. ":") then
+								line = string.gsub(line, "%d+", monkLevel)
+							elseif string.match(line, genericString .. ":") then
+								local genericAC = string.match(line, "%d+")
+								if string.match(line, "%-") then
+									genericAC = genericAC * -1
+								end
+								genericAC = genericAC + wisdomBonus - monkLevel
+								if genericAC > 0 then
+									line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+								elseif genericAC < 0 then
+									line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+								else
+									line = ""
+								end
 							end
 						end
 					elseif monkACBonusDisabled and fixMonkACBonus and not unfixMonkACBonus then
+						if ex_monk_bonus_ac_cannot_exceed_monk_level and wisdomBonus > monkLevel then
+							wisdomBonus = monkLevel
+						end
 						if string.match(line, monkWisdomBonusString .. ":") then
 							line = string.gsub(line, "0", wisdomBonus)
 						elseif string.match(line, genericString .. ":") then
@@ -4992,7 +5037,11 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					numWeapons = 1
 				end
 				if numWeapons >= 2 and weaponSlot >= 43 then
-					offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+					if weaponSlot % 2 == 1 then
+						offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+					else
+						offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+					end
 					if offhandSlotData > 0 then
 						offhandRES = IEex_ReadLString(offhandSlotData + 0xC, 8)
 						local offhandWrapper = IEex_DemandRes(offhandRES, "ITM")
@@ -5184,6 +5233,31 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		elseif descPanelNum == 1 and string.match(line, damageString .. ":") then
 			ex_current_record_on_weapon_statistics = true
 			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
+			local powerAttackCount = IEex_ReadDword(creatureData + 0x4C58)
+			if ex_double_power_attack_damage_for_two_handed_weapons and powerAttackCount > 0 then
+				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+				local weaponRES = ""
+				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				local weaponWrapper = 0
+				if slotData > 0 then
+					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+					weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if weaponWrapper:isValid() then
+						local itemData = weaponWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+						if weaponHeader >= numHeaders then
+							weaponHeader = 0
+						end
+						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						local itemFlags = IEex_ReadDword(itemData + 0x18)
+						if headerType == 1 and bit.band(itemFlags, 0x2) > 0 then
+							damageBonus = damageBonus - powerAttackCount
+						end
+					end
+					weaponWrapper:free()
+				end
+			end
 			if damageBonus > 0 then
 				IEex_SetToken("EXRDVAL1", damageBonus)
 				line = line .. string.gsub(IEex_FetchString(ex_tra_55604), "<EXRDVAL1>", damageBonus)
@@ -5226,6 +5300,60 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					line = line .. string.gsub(IEex_FetchString(ex_tra_55607), "<EXRLVAL1>", maximumRoll)
 				end
 			end
+		elseif descPanelNum == 1 and string.match(line, powerAttackString .. ":") then
+			local powerAttackCount = IEex_ReadDword(creatureData + 0x4C58)
+			if ex_double_power_attack_damage_for_two_handed_weapons and powerAttackCount > 0 then
+				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+				local weaponRES = ""
+				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				local weaponWrapper = 0
+				if slotData > 0 then
+					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+					weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if weaponWrapper:isValid() then
+						local itemData = weaponWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+						if weaponHeader >= numHeaders then
+							weaponHeader = 0
+						end
+						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						local itemFlags = IEex_ReadDword(itemData + 0x18)
+						if headerType == 1 and bit.band(itemFlags, 0x2) > 0 then
+							line = string.gsub(line, "." .. "%d+", "+" .. powerAttackCount * 2)
+						end
+					end
+					weaponWrapper:free()
+				end
+			end
+		elseif descPanelNum == 1 and string.match(line, damageBonusString .. ":") then
+			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
+			local powerAttackCount = IEex_ReadDword(creatureData + 0x4C58)
+			if ex_double_power_attack_damage_for_two_handed_weapons and powerAttackCount > 0 then
+				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+				local weaponRES = ""
+				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				local weaponWrapper = 0
+				if slotData > 0 then
+					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+					weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if weaponWrapper:isValid() then
+						local itemData = weaponWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+						if weaponHeader >= numHeaders then
+							weaponHeader = 0
+						end
+						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						local itemFlags = IEex_ReadDword(itemData + 0x18)
+						if headerType == 1 and bit.band(itemFlags, 0x2) > 0 then
+							damageBonus = damageBonus - powerAttackCount
+						end
+					end
+					weaponWrapper:free()
+				end
+			end
+			line = string.gsub(line, "." .. "%d+", "+" .. damageBonus)
 		elseif descPanelNum == 1 and (string.match(line, strengthString .. ":") or string.match(line, proficiencyString .. ":")) and ex_current_record_on_weapon_statistics then
 			local strengthBonus = math.floor((IEex_GetActorStat(targetID, 36) - 10) / 2)
 			local dexterityBonus = math.floor((IEex_GetActorStat(targetID, 40) - 10) / 2)
@@ -5378,6 +5506,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local headerType = 0
 			local currentHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
 			local criticalMultiplier = 2
+			local applyImprovedCritical = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x40000000) > 0 and ex_3e_improved_critical)
 			local specificCriticalHitBonus = 0
 			if ex_record_attack_stats_hidden_difference[targetID] ~= nil then
 				specificCriticalHitBonus = specificCriticalHitBonus - ex_record_attack_stats_hidden_difference[targetID][2]
@@ -5390,6 +5519,14 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			if weaponWrapper:isValid() then
 				local weaponData = weaponWrapper:getData()
 				itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+				local equippedAppearance = IEex_ReadLString(weaponData + 0x22, 2)
+				if applyImprovedCritical then
+					if itemType == 20 and equippedAppearance == "SC" then
+						specificCriticalHitBonus = specificCriticalHitBonus + 2
+					elseif itemType == 16 or itemType == 19 or itemType == 20 or itemType == 57 or itemType == 69 then
+						specificCriticalHitBonus = specificCriticalHitBonus + 1
+					end
+				end
 				if ex_item_type_critical[itemType] ~= nil then
 					criticalMultiplier = ex_item_type_critical[itemType][2]
 				end

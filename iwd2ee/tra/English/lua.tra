@@ -115,6 +115,7 @@
 @55114=~<EXICNAME> cannot be turned~
 @55115=~Iron skins remaining: ~
 @55116=~Blackguard~
+@55117=~Spirit Shaman~
 @55180=~, 1 image remaining~
 @55181=~, <EXASVAL3> images remaining~
 @55182=~, 1 damage remaining~
@@ -226,6 +227,7 @@
 @55358=~40 damage resisted from weapon of less than +8 enchantment~
 @55359=~45 damage resisted from weapon of less than +9 enchantment~
 @55360=~50 damage resisted from weapon of less than +10 enchantment~
+@55369=~slashing~
 @55370=~sonic~
 @55371=~magic~
 @55372=~positive energy~
@@ -291,6 +293,10 @@
 @55495=~Advanced Slots: ~
 
 @55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
+@55576=~Item creation failed: There are no empty slots to place the item~
+@55577=~<EXIAVAL1> is not a valid spell for Imbue Arrow~
+@55578=~An arrow has been imbued with the spell <EXIAVAL1>~
+@55579=~Imbue Arrow failed: There are no empty ammo slots~
 @55580=~Copy Spell failed: <EXCPNAM1> is not casting a spell~
 @55581=~Copy Spell failed: <EXCPVAL1> is too high level for you to copy~
 @55582=~Copy Spell failed: <EXCPVAL1> cannot be copied~
@@ -385,6 +391,12 @@
 @55812=~This container is too sturdy to force open, but the lock can still be picked.~
 @55813=~This door does not have a conventional lock and is too sturdy to force open, but a Knock spell may still open it.~
 @55814=~This container does not have a conventional lock and is too sturdy to force open, but a Knock spell may still open it.~
+@55815=~Trap Not Disarmed - The character must have at least <EXTDLVL> levels of rogue in order to disarm a trap of this complexity.~
+@55816=~Can not use item. (Requires <EXIUVAL1> Use Magic Device)~
+@55817=~You cannot set traps while enemies are nearby.~
+@55818=~You cannot set any more traps in this area.~
+@55819=~Sneak Attack with Crippling Strike (-<EXCRPEN1> Str)~
+@55820=~Death Attack with Crippling Strike (-<EXCRPEN1> Str)~
 
 @55901=~IEex Options~
 @55902=~Transparent Fog of War~
@@ -414,3 +426,6 @@
 @55925=~Scroll Top Right (Alt)~
 @55926=~IEex~
 @55927=~Toggle Quickloot~
+@55928=~Toggle Buff Recording~
+@55929=~Erase Recording~
+@55930=~Cast Recorded Buffs~

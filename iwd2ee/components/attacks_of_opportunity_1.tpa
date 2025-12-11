@@ -2,7 +2,7 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_base_num_attacks_of_opportunity.*~ ~ex_base_num_attacks_of_opportunity = 0~
 
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@367) descref=RESOLVE_STR_REF(@368) max=2 STR_VAR name=~ME_COMBAT_REFLEXES~ script=~Feats_CombatReflexes~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@375) descref=RESOLVE_STR_REF(@376) max=1 STR_VAR name=~ME_OPPORTUNIST~ script=~Feats_Opportunist~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@375) descref=RESOLVE_STR_REF(@376) max=2 STR_VAR name=~ME_OPPORTUNIST~ script=~Feats_Opportunist~ prerequisite_script=~Prereq_Opportunist~ END
 
 COPY_EXISTING ~feats.2da~ ~override~
   COUNT_2DA_COLS num_cols

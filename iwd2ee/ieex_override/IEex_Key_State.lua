@@ -379,8 +379,101 @@ end
 ex_buff_reactivate_cooldown = 3
 ex_buff_activate_tick = 0
 ex_buff_recorded_list = {{}, {}, {}, {}, {}, {}, }
+
+function IEex_ToggleBuffRecording()
+	if not ex_enable_autobuffing_keys then return end
+	if IEex_GetGlobal("EX_Recording_Buffs") == 0 then
+		IEex_SetGlobal("EX_Recording_Buffs", 1)
+		IEex_DisplayString(IEex_FetchString(ex_tra_55708))
+		local foundRecordedBuff = false
+		for i = 0, 5, 1 do
+			local recordedBuffs = {}
+			local actorID = IEex_GetActorIDPortrait(i)
+			IEex_IterateActorEffects(actorID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+				if theopcode == 0 and theparent_resource == "EXBUFFRC" and IEex_ReadDword(eData + 0x114) ~= 1 then
+					foundRecordedBuff = true
+				end
+			end)
+		end
+		if foundRecordedBuff then
+--[[
+			for k, v in pairs(IEex_KeyIDS) do
+				if k == ex_autobuffing_key_record then
+					IEex_SetToken("EXRCKEYRECORD", k)
+				elseif k == ex_autobuffing_key_delete then
+					IEex_SetToken("EXRCKEYDELETE", k)
+				end
+			end
+--]]
+			IEex_DisplayString(IEex_FetchString(ex_tra_55718))
+		end
+	else
+		IEex_SetGlobal("EX_Recording_Buffs", 0)
+		IEex_DisplayString(IEex_FetchString(ex_tra_55709))
+	end
+end
+
+function IEex_EraseRecording()
+	if not ex_enable_autobuffing_keys then return end
+	IEex_SetGlobal("EX_Recording_Buffs", 0)
+	IEex_DisplayString(IEex_FetchString(ex_tra_55707))
+	for i = 0, 5, 1 do
+		local actorID = IEex_GetActorIDPortrait(i)
+		IEex_IterateActorEffects(actorID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+			if theopcode == 0 and theparent_resource == "EXBUFFRC" then
+				IEex_WriteDword(eData + 0x114, 1)
+			end
+		end)
+	end
+end
+
+function IEex_CastRecordedBuffs()
+	if not ex_enable_autobuffing_keys then return end
+	local tick = IEex_GetGameTick()
+	if IEex_GetGlobal("EX_Recording_Buffs") == 0 and tick > IEex_GetGlobal("EX_Recording_Reactivate_Tick") then
+		IEex_SetGlobal("EX_Recording_Reactivate_Tick", tick + ex_buff_reactivate_cooldown * 15)
+		local foundRecordedBuff = false
+		for i = 0, 5, 1 do
+			local recordedBuffs = {}
+			local actorID = IEex_GetActorIDPortrait(i)
+			IEex_IterateActorEffects(actorID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+				if theopcode == 0 and theparent_resource == "EXBUFFRC" and IEex_ReadDword(eData + 0x114) ~= 1 then
+					if not foundRecordedBuff then
+						foundRecordedBuff = true
+						IEex_DisplayString(IEex_FetchString(ex_tra_55710))
+					end
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					local theparameter3 = IEex_ReadDword(eData + 0x60)
+					local theparameter4 = IEex_ReadDword(eData + 0x64)
+					table.insert(recordedBuffs, {theresource, theparameter3, theparameter4})
+				end
+			end)
+			local sourceX, sourceY = IEex_GetActorLocation(actorID)
+			for k, v in ipairs(recordedBuffs) do
+				local targetID = IEex_GetActorIDCharacter(v[2])
+				if IEex_IsSprite(targetID, false) and IEex_CheckActorLOSObject(actorID, targetID) then
+					if v[3] == 0 then
+						IEex_Eval('SpellRES(\"' .. v[1] .. '\",Player' .. (v[2] + 1) .. ')',i)
+					else
+						IEex_Eval('SpellPointRES(\"' .. v[1] .. '\",[' .. sourceX .. '.' .. sourceY .. '])',i)
+					end
+					IEex_Eval('SmallWait(1)',i)
+				end
+			end
+		end
+		if not foundRecordedBuff then
+			IEex_DisplayString(IEex_FetchString(ex_tra_55714))
+		end
+	end
+end
+
 function IEex_BuffRecordingListener(key)
---	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_ALT) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_ALT) then
 	if ex_enable_autobuffing_keys then
 		if key == ex_autobuffing_key_delete then
 			IEex_SetGlobal("EX_Recording_Buffs", 0)
@@ -560,7 +653,14 @@ function IEex_Chargen_ExtraFeatListener()
 			end
 			ex_randomizer = math.random(6)
 			local panelID = IEex_GetEngineCreateCharPanelID()
-			if panelID == -1 then return end
+			if panelID == -1 then
+				if ex_extra_skill_points_granted then
+					ex_extra_skill_points_granted = false
+					IEex_WriteDword(chargenData + 0x4F2, 0)
+				end
+				ex_ability_scores_initialized = false
+				return 
+			end
 			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 			if panelID == 4 or panelID == 53 then
 				if not ex_ability_scores_initialized then
@@ -1564,6 +1664,13 @@ function IEex_ArcaneSightListener(key)
 	end
 end
 
+ex_current_cutscene_skip_target = ""
+function IEex_CutsceneSkipListener(key)
+	if key ~= ex_skip_cutscene_key or ex_current_cutscene_skip_target == "" or not IEex_InCutsceneMode() then return end
+	IEex_Eval('StartCutScene(\"' .. ex_current_cutscene_skip_target .. '\")')
+	ex_current_cutscene_skip_target = ""
+end
+
 function IEex_AbilityScoreCapListener()
 	if ex_full_ability_score_cap > 40 then
 		for i = 0, 5, 1 do
@@ -1709,9 +1816,10 @@ end
 
 function IEex_Key_RegisterInputListeners()
 	if IEex_Vanilla then return end
-	IEex_AddKeyPressedListener("IEex_BuffRecordingListener")
+--	IEex_AddKeyPressedListener("IEex_BuffRecordingListener")
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
 	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")
+	IEex_AddKeyPressedListener("IEex_CutsceneSkipListener")
 	IEex_AddKeyPressedListener("IEex_FakeInputRoutineStartStopListener")
 --	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
 	IEex_AddInputStateListener("IEex_AddButtonListener")

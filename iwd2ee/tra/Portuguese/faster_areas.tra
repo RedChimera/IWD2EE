@@ -1,0 +1,11 @@
+//TRA num range @4000 to @4500
+
+@4000 = ~Falha da Muralha de Gelo~
+@4001 = ~Senhor da Ruína Argos Val~
+@4002 = ~"Inicie o concurso. Obtenha três quadrados consecutivos para vitória. Obtenha mais quadrados para maiores recompensas. Alcance a vitória em todas as classificações para o domínio da Praça de Batalha."~
+@4003 = ~Embora Targos esteja em um estado vulnerável, você conseguiu matar toda a tribo de goblins que estava atacando a cidade.~
+@4004 = ~As portas principais da fortaleza estão fechadas e trancadas. Seria necessário um aríete ou outra máquina de cerco para tentar abri-las, embora um feitiço de Arrombar também possa derrubá-las.~
+@4005 = ~Esta porta parece muito segura. Provavelmente será necessário uma chave para acessá-la, a menos que haja um ladrão de fechaduras excepcionalmente habilidoso no grupo.~
+@4006 = ~Esta porta estranha não se move. Escritas nela, em caligrafia, estão as palavras, "Somente pela vontade do Alto Sacerdote passarás."~
+@4007 = ~Ao se aproximar do arco, o Olho de Sseth de repente o encara e você começa a sentir uma compulsão avassaladora de se afastar dele. Você pode resistir a essa compulsão com magia que proteja contra feitiços que afetam a mente, embora precise ser um feitiço especialmente poderoso.~
+@4008 = ~Esta rocha alta pode ser derrubada, seja com força bruta ou com um feitiço de Arrombar.~
