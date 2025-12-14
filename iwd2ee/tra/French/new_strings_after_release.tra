@@ -2249,11 +2249,11 @@ Spécial :
 Compétence : arme courante, petite lame/à mains nues
 Type : à une main~
 @12933    = ~La Langue de salamandre +5~
-@12934    = ~Une dague d'apparence maléfique avec une histoire sombre, la Langue de salamandre est prisée à la fois pour son utilisation comme arme et ses pouvoirs magiques cachés. La lame semble être une dague d'apparence exotique avec une lame ondulée de type kris se terminant en deux petites pointes. Une petite portion de la langue visqueuse et rouge vif d'une salamandre vivante est en quelque sorte incrustée au cœur de la lame, près de la poignée. Elle palpite et se tortille aléatoirement sans intervention du propriétaire.
+@12934    = ~La Langue de Salamandre est une dague à l'aspect étrange et à l'histoire obscure, prisée tant pour ses pouvoirs magiques que pour son utilité d'arme. La lame de cette dague exotique est ondulée et se termine par deux petites pointes. Un morceau rouge et visqueux de langue de salamandre est intégré à la lame, près du manche. Il bouge de lui-même, sans intervention de l'utilisateur.
 
-Les origines exactes de la lame sont inconnues, mais on croit que le premier propriétaire de l'arme était un voleur et assassin gnome respecté et craint de Portail-Ouest nommé Turlam Shallowhill. Turlam fut tué dans un combat avec un rival, un halfelin appelé Deder Sept Doigts. Deder garda l'arme comme trophée, ignorant ses pouvoirs jusqu'à ce qu'elle soit volée par un subordonné, un autre halfelin nommé Kreshinal Blackhound. Kreshinal s'enfuit à Selgaunt avec la dague pendant cinq ans, comptant sur ses pouvoirs pour le cacher de la divination. Kreshinal perdit la dague dans une arnaque de jeu ratée, et fut tué par les agents de Deder dans le mois. Deder tenta de récupérer la dague des criminels sembiens qui l'avaient capturée. Il réussit à mettre en déroute les voleurs et à récupérer sa dague, mais il porta tant d'attention à la lame qu'il ne remarqua pas que les criminels sembiens avaient engagé un prêtre de Mask pour infiltrer et détruire ses intérêts à Portail-Ouest. La guerre qui s'ensuivit entre les factions de Portail-Ouest et Selgaunt se termina lorsque le prêtre de Mask, Pieter le Faible, rendit les deux côtés si paranoïaques qu'ils se dévorèrent de l'intérieur. Pieter saisit la dague quand il en eut l'occasion et s'échappa à Hillsfar, confiant que les partisans demi-humains désorganisés du défunt Deder Sept Doigts ne le suivraient pas dans un endroit si hostile à leur espèce.
+Personne ne connaît les origines exactes de cette arme, mais on pense que son premier propriétaire était le gnome Turlam Creusecolline de Port-Ponant. Il s'agissait d'un voleur, doublé d'un assassin qui se faisait respecter par la crainte qu'il inspirait. Il fut tué par un rival halfelin appelé Déder Sept-Doigts. Ce dernier conserva cette arme comme un trophée, sans en connaître ses réels pouvoirs, du moins jusqu'à ce qu'elle soit volée par l'un de ses serviteurs, un halfelin du nom de Kreshinal Noirchien. Kreshinal s'enfuit à Selgonte où il resta caché pendant cinq ans, comptant sur la dague pour échapper aux tentatives de divination. Il perdit toutefois la dague dans un jeu de hasard truqué et fut tué dans le mois par les hommes de Déder. Déder décida alors de récupérer l'arme aux criminels de Sembie qui s'en étaient emparé. Il parvint à mettre les voleurs en déroute et à récupérer sa dague, mais il avait porté tellement d'attention sur cette recherche qu'il ne s'était pas rendu compte que les criminels de Sembie avaient engagé un prêtre de Mask pour infiltrer ses activités à Port-Ponant et le ruiner. La guerre qui se déclencha entre les deux factions prit fin lorsque le prêtre de Mask, Pieter le Frêle, rendit les deux camps si paranoïaques qu'ils commencèrent à tuer leurs propres membres. Il s'empara de la dague à la mort de son propriétaire et s'enfuit à Montéloy, avec la certitude que les semi-humains de Déder Sept-Doigts ne le suivraient pas dans cette région si hostile pour leur peuple.
 
-Dans une autre arnaque, Pieter vendit la lame à un Faucon de Mulmaster tout en attirant d'autres acheteurs potentiels à une vente aux enchères à Hillsfar. Pieter et ses associés assassinèrent les acheteurs à la fausse vente aux enchères et s'enfuirent avec l'argent, se cachant sous la couverture d'un Amulette de non-détection. Le Faucon de Mulmaster qui acheta la lame fut supposément tué par des prêtresses d'Umberlee qui étaient en colère contre le refus de l'assassin de payer tribut à la Reine Garce. Des années de combats factionnels entre les Umberlants sont censées avoir transporté la lame jusqu'à trois mille milles de ses humbles débuts en Sembie. L'endroit où se trouvent Pieter le Faible et ses sbires est actuellement inconnu.
+Dans une nouvelle escroquerie, Pieter vendit la dague à un Faucon Mulmastre, alors qu'il attirait d'autres acheteurs potentiels à une vente aux enchères à Montéloy. Pieter et ses associés éliminèrent tous les acheteurs présents à la fausse vente aux enchères et s'enfuirent avec leur argent, protégés par une amulette d'antidétection. On pense que l'acheteur de l'arme fut tué par les prêtresses d'Umberlie, furieuses car il avait refusé de rendre hommage à Umberlie, la Reine Garce. L'arme aurait ensuite voyagé à plus de quatre mille kilomètres de l'endroit où elle fut créée en Sembie, en raison des années de guerre entre les différentes factions Umberliennes. Personne ne sait à l'heure actuelle où se trouvent Pieter le Frêle et ses acolytes.
 
 PARAMÈTRES :
 
@@ -2272,36 +2272,36 @@ Type : à une main~
 @19913    = ~Le Gardien était un dragon ? Je me souviens qu'Iselore parlait du Gardien, mais je n'avais aucune idée de quel type de créature il parlait. Oui, je devrais pouvoir faire une armure légère avec ces écailles. Cela coûtera 5000 pièces d'or pour le travail.~
 @19914    = ~Très bien, voici les écailles et l'or.~
 @19915    = ~Peut-être une autre fois. Adieu.~
-@19916    = ~Terminé. Voici l'armure. Portez-la bien, ami.~
-@1834    = ~Brûlure solaire
+@19916    = ~Terminé. Voici l'armure. Portez-la bien, <AMI>.~
+@1834    = ~Soleil ardent
 (Évocation)
-Niveau : Drd 1, Rgr 1, Lathander 1, Selune 1
-Portée : Vue du lanceur
+Niveau : Dru 1, Rôd 1, Lathander 1, Séluné 1
+Portée : portée de vue
 Durée : Instantanée
 Temps d'incantation : 4
 Zone d'effet : 1 créature
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-À l'achèvement de ce sort, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les morts-vivants, champignons, vases et les drows et nains gris subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de Réflexes ou être aveuglées pendant 3 rounds. Les drows et nains gris sont aveuglés par le sort pendant 3 rounds (pas de sauvegarde). Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables au sort.~
+À l'achèvement de ce sort, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les morts-vivants, champignons, vases, les drows et nains gris subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de Réflexes ou être aveuglées pendant 3 rounds. Les drows et nains gris sont automatiquement aveuglés par le sort pendant 3 rounds (pas de sauvegarde). Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont naturellement vulnérables à ce type de sorts.~
 @32204     = ~Charme personne ou animal
 (Enchantement) 
-Niveau : Drd 2
-Portée : Vue du lanceur
+Niveau : Dru 2
+Portée : portée de vue
 Durée : 4 rounds + 1 round/niveau
 Temps d'incantation : 5
 Zone d'effet : 1 humanoïde de taille moyenne ou plus petit ou 1 animal
-Jet de sauvegarde : Volonté annule
+Jet de sauvegarde : Volonté, annule
 
-Ce sort affecte toute personne ou animal unique sur lequel il est lancé.  Le terme "personne" inclut tout humain bipède, demi-humain ou humanoïde de taille humaine ou plus petit, tels que les nains, elfes, gnolls, gnomes, gobelins, demi-elfes, halfelins, demi-orcs, hobgobelins, humains, hommes-lézards, orcs, troglodytes et autres.
-Ainsi, un guerrier de niveau 10 pourrait être charmé, mais un ogre ne le pourrait pas. Si le jet de sauvegarde échoue, la victime considère le lanceur comme un ami et allié de confiance à écouter et protéger.  Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera sans question.  Les créatures se souviennent de tout pendant qu'elles sont charmées et seront donc généralement hostiles au lanceur à l'expiration du sort. La Résistance aux sorts de la cible, s'il y en a une, n'affecte pas ce sort.~
+Ce sort affecte tout individu ou animal sur lequel il est jeté.  Le terme “personne” définit tout bipède humain, demi-humain ou humanoïde de taille inférieure ou égale à celle d'un homme (lutin, dryade, nain, elfe, gnoll, gnome, gobelin, demi-elfe, halfelin, demi-orque, hobgobelin, humain, kobold, homme-lézard, nixe, orque, pixie, esprit follet, troglodyte, etc.)
+Ainsi, un guerrier de niveau 10 pourra être charmé, mais pas un ogre. En cas d’échec, la créature considère le magicien comme son ami ; elle lui fait confiance et fait de son mieux pour le protéger.  Le jeteur de sorts peut donner des ordres à l’individu charmé, qui les exécute sans poser de questions.  Une créature charmée s’en souvient et se montrera vraisemblablement hostile au druide quand elle retrouvera son libre arbitre. La Résistance aux sorts de la cible, s'il y en a une, n'affecte pas ce sort.~
 @1043    = ~Tempête de pluie
 (Évocation)
-Niveau : Drd 2
-Portée : Vue du lanceur
+Niveau : Dru 2
+Portée : portée de vue
 Durée : 2 rounds
 Temps d'incantation : 6
 Zone d'effet : Rayon de 9 mètres (30 pieds)
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort, qui ne peut être lancé qu'à l'extérieur, fait apparaître une pluie magique qui sature la zone d'effet. La pluie accorde une résistance 5/- au feu mais une faiblesse -5 aux dégâts de froid et d'électricité, et inflige 8d6 points de dégâts de froid aux créatures d'Élémentaire de feu. De plus, toutes les créatures dans la zone d'effet sont frappées par des éclairs qui infligent 2d6 dégâts d'électricité, avec un jet de Réflexes pour la moitié des dégâts. Les sorts Lame de flamme, Voile de flamme et les auras de salamandre sont également éteints.~
 @1011    = ~Cercle d'os
@@ -2317,21 +2317,21 @@ Ce sort invoque une barrière d'os flottants qui tournent rapidement autour du la
 @32405     = ~Domination mentale
 (Enchantement) 
 Niveau : Clr 4
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 1 round/niveau
 Temps d'incantation : 4
 Zone d'effet : 1 créature 
-Jet de sauvegarde : Volonté annule
+Jet de sauvegarde : Volonté, annule
 
 Ce sort permet au lanceur d'envahir l'esprit de la créature cible, permettant au lanceur de vouloir que la créature accomplisse toutes les actions qu'il désire.  La créature cible résistera aux effets si un jet de Volonté réussi avec +2 DD est effectué.  Pendant qu'une créature est dominée de cette manière, son esprit est brumeux et la pensée est entravée - l'incantation est impossible et les bonus d'attaque sont effectués avec un malus de -2. Ce sort ignore la résistance aux sorts.~
 @1021    = ~Vague fracassante
 (Évocation)
-Niveau : Drd 5, Rgr 5
+Niveau : Dru 5, Rôd 5
 Portée : 12 mètres (40 pieds)
 Durée : Instantanée
 Temps d'incantation : 5
 Zone d'effet : Vague de 1,5 mètre (5 pieds) de large
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort invoque une vague d'eau qui se déplace dans la direction voulue par le lanceur, frappant tous ceux sur son chemin avec une force massive. La vague inflige 1d8 dégâts d'écrasement par niveau du lanceur (maximum 15d8), et chaque créature frappée par la vague doit faire un jet de Réflexes ou être repoussée et renversée pendant 1 round. Les créatures d'Élémentaire de feu sont extrêmement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts.~
 @1023    = ~Cercle de lames
@@ -2341,37 +2341,37 @@ Portée : Lanceur
 Durée : 2 rounds
 Temps d'incantation : 9
 Zone d'effet : Rayon de 1 mètre (3 pieds)
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort invoque un mur de lames tournoyantes et tranchantes comme des rasoirs qui tourbillonnent et étincellent autour du lanceur. Toute créature tentant de passer à travers la barrière de lames subit 10d8 points de dégâts, ignorant la résistance aux sorts, avec un jet de Réflexes réussi pour la moitié des dégâts. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle de lames ne peut pas être actif en même temps que le Cercle d'os, car les os et les lames se gênent mutuellement.~
 @32608    = ~Orbe brûlant de Sol
 (Évocation)
-Niveau : Clr 6, Drd 5, Rgr 5
-Portée : Vue du lanceur
+Niveau : Clr 6, Dru 5, Rôd 5
+Portée : portée de vue
 Durée : Instantanée
 Temps d'incantation : 6
 Zone d'effet : 1 créature
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 À l'achèvement de ce sort, le lanceur lance une sphère brillante et flamboyante sur une créature cible. Quand elle frappe, elle explose dans un éclair de lumière, aveuglant la créature cible et infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris doivent faire leur jet de Réflexes contre l'aveuglement avec +4 DD. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables à ce sort.~
 @1592    = ~Rayon de soleil
 (Évocation)
-Niveau : Drd 8, Lathander 7
-Portée : Vue du lanceur
+Niveau : Dru 8, Lathander 7
+Portée : portée de vue
 Durée : 4 rounds
 Temps d'incantation : 7
 Zone d'effet : Rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : Réflexes partiel
+Jet de sauvegarde : Réflexes, partiel
 
 Ce sort permet au lanceur d'évoquer des rayons aveuglants de lumière intensément chaude. Chaque round, toutes les créatures dans le rayon sont aveuglées pendant 3 rounds et subissent 4d6 points de dégâts de feu, ou 16d6 dégâts sur 4 rounds. Un jet de Réflexes réussi annule l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris subissent 8d6 dégâts par round et n'ont pas de sauvegarde contre l'aveuglement. Les créatures mortes-vivantes, champignons et vases pris dans le rayon subissent 1d6 points de dégâts par niveau du lanceur (maximum 20d6) par round. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables au sort.~
 @34104     = ~Charme personne
 (Enchantement)
 Niveau : Brd 1, Sor/Wiz 1
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 5 rounds
 Temps d'incantation : 1
 Zone d'effet : 1 créature
-Jet de sauvegarde : Volonté annule 
+Jet de sauvegarde : Volonté, annule
 
 Ce sort affecte toute personne unique sur laquelle il est lancé. Le terme personne inclut tout humain bipède, demi-humain ou humanoïde de taille humaine ou plus petit, tels que les brownies, dryades, nains, elfes, gnolls, gnomes, gobelins, demi-elfes, halfelins, demi-orcs, hobgobelins, humains, kobolds, hommes-lézards, nixes, orcs, pixies, esprits follets, troglodytes et autres. Ainsi, un guerrier de niveau 10 pourrait être charmé, mais un ogre ne le pourrait pas. La personne reçoit un jet de Volonté pour éviter l'effet.  Si le destinataire du sort échoue à son jet de sauvegarde, il considère le lanceur comme un ami et allié de confiance à écouter et protéger.  Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera aussi rapidement que possible.
 Si le lanceur nuit, ou tente de nuire, à la personne charmée par une action manifeste, ou si un sort de dissipation de magie est lancé avec succès sur la personne charmée, le sort de charme est rompu.  Si deux effets de charme ou plus affectent simultanément une créature, le charme le plus récent prend le pas.  Notez que le sujet a une mémoire complète des événements qui ont eu lieu pendant qu'il était charmé. Notez également que vous ne pouvez pas faire qu'une créature charmée quitte la zone où elle a été charmée. La Résistance aux sorts de la cible, s'il y en a une, n'affecte pas ce sort.~
@@ -2382,7 +2382,7 @@ Portée : Lanceur
 Durée : Instantanée
 Temps d'incantation : 1
 Zone d'effet : Cône de 5' x 20' x 20' 
-Jet de sauvegarde : Volonté annule 
+Jet de sauvegarde : Volonté, annule
 
 Ce sort crée un jet vif et en éventail de couleurs contrastées qui jaillit de la main du lanceur. Le sort affecte chaque créature prise dans la zone d'effet selon ses dés de vie :
 
@@ -2394,11 +2394,11 @@ Un jet de Volonté réussi annulera l'effet. Les créatures aveugles ne sont pas af
 @34316     = ~Charme terrible
 (Enchantement)
 Niveau : Brd 2, Sor/Wiz 3, Bane 3
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 8 rounds
 Temps d'incantation : 3 
 Zone d'effet : 1 créature
-Jet de sauvegarde : Volonté annule
+Jet de sauvegarde : Volonté, annule
 
 Ce sort est similaire au sort Charme personne. Cependant, la créature affectée entre dans un état de rage, ne voulant que personne ne nuise à son maître (le lanceur de sort). Ainsi, la créature combattra les ennemis du lanceur, même d'anciens alliés. Le Charme terrible peut affecter à la fois les humanoïdes et les géants. Ce sort ignore la résistance aux sorts.~
 @1091    = ~Lance de perturbation
@@ -2408,43 +2408,43 @@ Portée : 18 mètres (60 pieds)
 Durée : Instantanée
 Temps d'incantation : 3
 Zone d'effet : Spéciale
-Jet de sauvegarde : Réflexes moitié
+Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort crée une lance de force, s'étendant du lanceur à un point spécifié à 18 mètres (60 pieds) de distance. Toutes les créatures sur le chemin de la lance subissent 5d4 points de dégâts perforants, +2 points de dégâts par niveau du lanceur (maximum de +50). Les victimes peuvent faire un jet de Réflexes pour la moitié des dégâts. Ce sort ignore la résistance aux sorts.~
 @1679    = ~Sphère résiliente d'Otiluke
 (Évocation)
 Niveau : Sor/Wiz 4
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 4 rounds
 Temps d'incantation : 1
 Zone d'effet : 1 créature
-Jet de sauvegarde : Réflexes annule
+Jet de sauvegarde : Réflexes, annule
 
 Lorsque ce sort est lancé, le résultat est un globe de force scintillante qui enferme la créature sujette. La sphère résiliente contiendra son sujet pour la durée du sort. Une créature non alliée peut faire un jet de Réflexes avec +8 DD pour esquiver le sort. La sphère est complètement immunisée à tous les dégâts ; la seule méthode pour retirer la sphère est l'utilisation d'un sort de Dissipation de magie. Par conséquent, la créature prise dans le globe est complètement à l'abri de toutes les attaques, mais en même temps est complètement incapable d'affecter le monde extérieur. Ce sort ignore la résistance aux sorts.~
 @1107    = ~Domination
 (Enchantement)
 Niveau : Brd 5, Sor/Wiz 6, Bane 5
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 3 rounds / niveau
 Temps d'incantation : 5 
 Zone d'effet : 1 créature
-Jet de sauvegarde : Volonté annule 
+Jet de sauvegarde : Volonté, annule
 
 Le sort de domination permet au lanceur de contrôler les actions de toute créature pendant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. La cible obtient un jet de Volonté avec +2 DD pour éviter l'effet. Ce sort ignore la résistance aux sorts.~
 @1814    = ~Domination de masse
 (Enchantement) 
 Niveau : Brd 8, Sor/Wiz 9, Bane 9
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : 1 round/niveau
 Temps d'incantation : 9
 Zone d'effet : Rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Volonté annule
+Jet de sauvegarde : Volonté, annule
 
 Ce sort force toutes les créatures non alliées au lanceur dans la zone d'effet à faire un jet de Volonté ou être dominées comme si elles étaient affectées par le sort Domination de personne. Les morts-vivants ne sont pas affectés par ce sort. Ce sort ignore la résistance aux sorts.~
 @36956     = ~Tornade
 (Évocation)
-Niveau : Drd 9
-Portée : Vue du lanceur
+Niveau : Dru 9
+Portée : portée de vue
 Durée : 3 rounds
 Temps d'incantation : 9
 Zone d'effet : Rayon de 4,5 mètres (15 pieds)
@@ -2453,8 +2453,8 @@ Jet de sauvegarde : Aucun
 Une version plus puissante du sort Tourbillon, le sort crée une tornade au point cible qui se déplace aléatoirement. Les créatures qui s'approchent à moins de 4,5 mètres (15 pieds) de la tornade sont aspirées dedans, subissant 3d8 dégâts tranchants par seconde qu'elles restent à l'intérieur. Les créatures sont généralement éjectées de la tornade après environ un round. Les créatures énormes telles que les géants des glaces et les dragons ne sont pas aspirées dans la tornade mais subissent quand même des dégâts tant qu'elles sont dans la zone d'effet. Une seule tornade peut être active à la fois. Ce sort ne peut être lancé qu'à l'extérieur et ignore la résistance aux sorts.~
 @38251     = ~Identifier créature
 (Divination)
-Niveau : Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
-Portée : Vue du lanceur
+Niveau : Brd 2, Dru 2, Rôd 2, Sor/Wiz 2
+Portée : portée de vue
 Durée : Instantanée
 Temps d'incantation : 2
 Zone d'effet : 1 créature
@@ -2463,22 +2463,22 @@ Jet de sauvegarde : Aucun
 Identifier créature révèle des informations de combat utiles sur la créature cible. Les informations incluent le niveau de la créature, les points de vie actuels et maximum, le nombre d'attaques par round, les scores de caractéristiques, les résistances, les jets de sauvegarde, et divers autres traits qui dépendent de la créature. Ce sort ignore la résistance aux sorts.~
 @38653     = ~Roulade de rocher
 (Invocation)
-Niveau : Drd 6, Sor/Wiz 6
+Niveau : Dru 6, Sor/Wiz 6
 Portée : Spéciale
 Durée : Instantanée
 Temps d'incantation : 4
 Zone d'effet : Toutes les créatures sur le chemin du rocher
-Jet de sauvegarde : Réflexes partiel
+Jet de sauvegarde : Réflexes, partiel
 
 Roulade de rocher crée un grand rocher, qui roule vers l'avant depuis le lanceur, écrasant les créatures sur son chemin, jusqu'à ce qu'il heurte un mur. Les créatures touchées subissent 12d8 dégâts contondants et sont renversées pendant 2 rounds. Un jet de Réflexes réussi réduit les dégâts de moitié et empêche d'être renversé. Le rocher ignore la résistance aux sorts et voyage toujours vers le sud depuis le lanceur.~
 @38853     = ~Asservir
 (Enchantement)
 Niveau : Brd 7, Sor/Wiz 8
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : Permanent
 Temps d'incantation : 8
 Zone d'effet : 1 créature
-Jet de sauvegarde : Volonté annule
+Jet de sauvegarde : Volonté, annule
 
 Ce sort permet au lanceur d'obtenir un contrôle permanent et complet d'une autre créature. La cible doit faire un jet de sauvegarde de Volonté avec +4 DD. Si elle échoue, elle est dominée par le lanceur jusqu'à ce qu'elle meure ou que l'effet soit dissipé. Asservir ignore la résistance aux sorts et peut même affecter les morts-vivants et les créatures artificielles.~
 @308    = ~ATTAQUE SOURNOISE AMÉLIORÉE :
@@ -2554,7 +2554,7 @@ Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un 
 @30372=~... Pluie de feu.~
 @32106     = ~Pierre magique
 (Enchantement)
-Niveau : Clr 1, Drd 1, Rgr 1
+Niveau : Clr 1, Dru 1, Rôd 1
 Portée : Lanceur
 Durée : 30 rounds ou jusqu'à épuisement
 Temps d'incantation : 1
@@ -2586,7 +2586,7 @@ Jet de sauvegarde : Aucun
 Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le DD de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2, ainsi qu'une immunité aux effets de charme et de domination.~
 @36454     = ~Cailloux en rochers
 (Transmutation)
-Niveau : Clr 5, Drd 4, Rgr 4
+Niveau : Clr 5, Dru 4, Rôd 4
 Portée : Lanceur
 Durée : 5 rounds/niveau ou jusqu'à épuisement
 Temps d'incantation : 4
@@ -2598,8 +2598,8 @@ Ce sort transforme les projectiles de fronde du lanceur en rochers. Pendant que 
 Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Cailloux en rochers sera lancé au niveau de lanceur complet du rôdeur.~
 @1685    = ~Griffe de bête
 (Transmutation)
-Niveau : Drd 2, Rgr 2
-Portée : Vue du lanceur
+Niveau : Dru 2, Rôd 2
+Portée : portée de vue
 Durée : 3 rounds + 1 round / niveau
 Temps d'incantation : 5
 Zone d'effet : Rayon de 6 mètres (20 pieds)
@@ -2807,7 +2807,7 @@ Avantages :
 @55815=~Piège non désamorcé - Le personnage doit avoir au moins <EXTDLVL> niveaux de roublard pour désamorcer un piège de cette complexité.~
 @36351     = ~Carquois d'abondance
 (Invocation)
-Niveau : Rgr 3
+Niveau : Rôd 3
 Portée : Lanceur
 Durée : 30 rounds
 Temps d'incantation : 5
@@ -2822,7 +2822,7 @@ REMARQUE : Le rôdeur doit avoir un emplacement de munitions vide pour que le car
 @1673    = ~Animer zombie
 (Nécromancie) 
 Niveau : Clr 3, Sor/Wiz 5, Tempus 3
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : Instantanée 
 Temps d'incantation : 9
 Zone d'effet : Spéciale 
@@ -2834,7 +2834,7 @@ AVERTISSEMENT : À des niveaux plus élevés, les Seigneurs zombies et les Morts no
 @1675    = ~Animer squelette
 (Nécromancie) 
 Niveau : Clr 3, Sor/Wiz 5, Tempus 3
-Portée : Vue du lanceur
+Portée : portée de vue
 Durée : Instantanée 
 Temps d'incantation : 9
 Zone d'effet : Spéciale 

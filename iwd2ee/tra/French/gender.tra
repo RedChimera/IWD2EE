@@ -4,32 +4,32 @@ toute seule
 <LE_GARDIEN>le gardien
 la gardienne
 
-<TRAITE>traité
-traitée
+<TRAITE>traitï¿½
+traitï¿½e
 
-<HARCELE>harcelé
-harcelée
+<HARCELE>harcelï¿½
+harcelï¿½e
 
-<LE_HEROS>le héros
-l'héroïne
+<LE_HEROS>le hï¿½ros
+l'hï¿½roï¿½ne
 
 <VU>vu
 vue
 
-<REFOULE>refoulé
-refoulée
+<REFOULE>refoulï¿½
+refoulï¿½e
 
-<ATTAQUE>attaqué
-attaquée
+<ATTAQUE>attaquï¿½
+attaquï¿½e
 
 <ACCUEILLI>accueilli
 accueillie
 
-<INVITE>invité
-invitée
+<INVITE>invitï¿½
+invitï¿½e
 
-<ARRIVE>arrivé
-arrivée
+<ARRIVE>arrivï¿½
+arrivï¿½e
 
 <FORT>fort
 forte
@@ -43,8 +43,8 @@ elle
 <UN>un
 une
 
-<NAIF>naïf
-naïve
+<NAIF>naï¿½f
+naï¿½ve
 
 <RECONNAISSANT>reconnaissant
 reconnaissante
@@ -52,17 +52,17 @@ reconnaissante
 <AMI>ami
 amie
 
-<PREOCCUPE>préoccupé
-préoccupée
+<PREOCCUPE>prï¿½occupï¿½
+prï¿½occupï¿½e
 
 <REVENU>revenu
 revenue
 
-<DESOLE>désolé
-désolée
+<DESOLE>dï¿½solï¿½
+dï¿½solï¿½e
 
-<DESOLE_CAP>Désolé
-Désolée
+<DESOLE_CAP>Dï¿½solï¿½
+Dï¿½solï¿½e
 
 <HUMAIN>humain
 humaine
@@ -73,14 +73,17 @@ contente
 <MORTEL>mortel
 mortelle
 
-<UN_ALLIE>Un allié
-Une alliée
+<UN_ALLIE>Un alliï¿½
+Une alliï¿½e
 
 <RECONNAISSANT>reconnaissant
 reconnaissante
 
-<PROTEGE>protégé
-protégée
+<PROTEGE>protï¿½gï¿½
+protï¿½gï¿½e
 
-<LACERE>Lacéré
-Lacérée
+<LACERE>Lacï¿½rï¿½
+Lacï¿½rï¿½e
+
+<AMI>ami
+amie
