@@ -3174,66 +3174,66 @@ Immunité à l'aveuglement et à la confusion
 Sort : Peut lancer Vision véritable 1/jour
 Lorsqu'ils sont lancés par le porteur, les sorts Rage de Malavon et Brouillard corrosif de Malavon infligent des dégâts maximum et ne nuisent pas aux alliés
 Poids : 1,4 kg (3 lb)~
-@544    = ~SEIGNEUR D'ORAGE DE TALOS :
+@544    = ~SEIGNEUR DES TEMPÊTES DE TALOS :
 
-Talos le Destructeur est le dieu des tempêtes et de la destruction. Le fléau de nombreux rôdeurs et druides, Talos œuvre son mal par l'utilisation de ses prêtres, les Seigneurs d'Orage. Les Seigneurs d'Orage terrorisent les communautés agricoles dans tout Féérune avec des menaces de destruction imminente si tous n'apaisent pas le Destructeur. Ils sont connus pour leur terrorisme abusif et leur nature téméraire.
+Talos le Destructeur est le dieu des tempêtes et de la destruction. Ennemi juré des rôdeurs et des druides, Talos se sert de ses émissaires, les seigneurs des tempêtes, pour répandre le Mal. Les seigneurs des tempêtes terrorisent les communautés agricoles de Féérune, menaçant de mort ceux qui refuseraient de se soumettre au Destructeur. Ils sont connus pour la terreur qu’ils inspirent et pour leur nature téméraire.
 
 Avantages :
 
 * Résistance à l'électricité 5/-
-* Bénédiction de Talos 1/Jour (pendant 1 round par niveau de clerc, tous les dégâts d'électricité infligés par les sorts et capacités du prêtre sont augmentés de 30%)~
+* Bénédiction de Talos 1 fois par jour (pendant 1 round par niveau de prêtre, tous les dégâts d'électricité infligés par les sorts et capacités du prêtre sont augmentés de 30%)~
 @210    = ~Bénédiction de Talos
 
-Pendant 1 round par niveau de clerc, tous les dégâts d'électricité infligés par les sorts et capacités du prêtre sont augmentés de 30%.~
+Pendant 1 round par niveau de prêtre, tous les dégâts d'électricité infligés par les sorts et capacités du prêtre sont augmentés de 30%.~
 @541    = ~ROUBLARD :
 
-Pour accomplir ses objectifs, pour le bien ou le mal, le roublard est un voleur habile. La ruse, l'agilité et la furtivité sont ses caractéristiques. Qu'il tourne son talent contre des passants innocents et des marchands riches ou contre des oppresseurs et des monstres est un choix que le roublard doit faire.
+Lorsqu’il s’agit de parvenir à ses fins, pour le meilleur ou pour le pire, le roublard se révèle un chapardeur adroit. Il se distingue par sa ruse, son agilité et sa discrétion. Emploiera-t-il ses talents contre les passants innocents et les riches marchands ou contre les oppresseurs et les monstres ? Tel est le choix auquel il est confronté.
 
 Points de vie par niveau : 1-6
 
 Avantages :
-* Maîtrise de toutes les armes simples, arcs et armures légères.
-* Les roublards reçoivent un plus grand nombre de points de compétence par niveau que toute autre classe de personnage. Ils peuvent utiliser ces points de compétence supplémentaires pour acheter des compétences de classe comme Désamorcer un piège pour retirer les pièges, Se cacher, Vol à la tire, et Utilisation d'objets magiques.
-* Attaque sournoise : Les roublards peuvent attaquer sournoisement les ennemis pour infliger 1d6 dégâts supplémentaires, plus 1d6 tous les 2 niveaux après le niveau 1. Une attaque compte comme une attaque sournoise si elle touche un ennemi dans le dos, si elle se produit dans les 2 secondes après être sorti de furtivité ou d'invisibilité, ou si la cible est paralysée, immobilisée, étourdie, endormie, confuse, abrutie, agrippée, ou feintée. Les épées courtes, dagues de jet, fléchettes, arcs courts, arcs courts composites, arbalètes légères, frondes, massues et attaques à mains nues infligent un dé supplémentaire de dégâts d'attaque sournoise. Les dagues de mêlée infligent deux dés supplémentaires de dégâts d'attaque sournoise.
-* Niveau 2 : Évasion. Quand un roublard atteint le niveau 2, il ou elle gagne la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un roublard fait un jet de réflexe réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
-* Niveau 3 : Esquive instinctive. Les roublards conservent leur bonus de Dextérité à la Classe d'armure s'ils sont attaqués par des ennemis invisibles.
-* Niveau 6 : Esquive instinctive améliorée. Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard sauf si l'attaquant est de niveau supérieur.
+* Compétent avec toutes les armes courantes, les arcs et les armures légères.
+* Les roublards reçoivent un plus grand nombre de points de compétence par niveau que toute autre classe. Ils peuvent utiliser ces points de compétence supplémentaires pour acheter des compétences de classe telles que Désamorçage/Sabotage, Discrétion, Vol à la tire et Utilisation d’objets magiques.
+* Attaque Sournoise : Les roublards peuvent effectuer des attaques sournoises pour infliger 1d6 dégâts supplémentaires, plus 1d6 tous les 2 niveaux après le niveau 1. Une attaque est considérée comme une attaque sournoise si elle touche un ennemi par derrière, si elle se produit dans les 2 secondes après être sorti de la furtivité ou de l’invisibilité, ou si la cible est paralysée, immobilisée, étourdie, endormie, confuse, rendue débile, saisie ou feintée. Les épées courtes, les dagues de lancer, les fléchettes, les arcs courts, les arcs courts composites, les arbalètes légères, les frondes, les bâtons et les attaques à mains nues infligent un dé supplémentaire de dégâts d’attaque sournoise. Les dagues de mêlée infligent deux dés supplémentaires de dégâts d’attaque sournoise.
+* Évasion. Lorsqu’un roublard atteint le 2ème niveau, il ou elle gagne la capacité d’éviter les dégâts des sorts à effet de zone. Chaque fois qu’un roublard réussit un jet de sauvegarde de Réflexes contre un sort à effet de zone qui permet un jet de Réflexes pour réduire les dégâts de moitié, il ou elle ne subit aucun dégât.
+* Niveau 3 : Esquive totale. Les roublards conservent leur bonus de Dextérité à la classe d’armure s’ils sont attaqués par des ennemis invisibles.
+* Niveau 6 : Esquive instinctive améliorée. Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard à moins que l’attaquant soit de niveau supérieur.
 * Niveau 8 : Désamorcer les pièges complexes. Les roublards de ce niveau ou supérieur sont les seuls personnages qui peuvent désamorcer les pièges avec un Degré de Difficulté de 20 ou supérieur.
-* Niveau 10 : Don bonus. Le roublard gagne un don bonus, et gagne également accès à un certain nombre de nouveaux dons disponibles uniquement aux roublards. Ceux-ci incluent Frappe paralysante, Évasion améliorée, Esprit insaisissable, Roulade défensive, et Opportuniste. Le roublard gagne un autre don bonus tous les 3 niveaux après le niveau 10.
+* Niveau 10 : Don Supplémentaire. Le roublard gagne un don bonus, et gagne également accès à un certain nombre de nouveaux dons disponibles uniquement aux roublards. Ceux-ci incluent Attaque handicapante, Esquive surnaturelle, Esprit fuyant, Roulade Défensive et Opportuniste. Le roublard gagne un autre don bonus tous les 3 niveaux après le niveau 10.
 * Les roublards gagnent +1 en chance tous les 5 niveaux.
 
 Désavantages :
-* Les roublards n'ont pas de capacité d'incantation et une faible capacité de combat au corps à corps.~
-@223    = ~Frappe artérielle
+* Les roublards n’ont aucun pouvoir d’incantation et sont médiocres en combat face à face.~
+@223    = ~Blessure profonde
 
-Pendant que cette capacité est active, vos attaques sournoises infligent 10 dégâts de saignement sur 10 rounds. Pour chaque six niveaux de roublard après 1 (c'est-à-dire aux niveaux 7, 13, 19, et 25), vous infligez 10 dégâts supplémentaires sur les 10 rounds. Cette capacité peut être activée ou désactivée à volonté comme action libre, mais elle ne peut pas être active en même temps que Coup au jarret.~
-@224    = ~Coup au jarret
+Pendant que cette capacité est active, vos attaques sournoises infligent 10 dégâts de saignement sur 10 rounds. Tous les six niveaux de roublard après 1 (c'est-à-dire aux niveaux 7, 13, 19, et 25), vous infligez 10 dégâts supplémentaires sur les 10 rounds. Cette capacité peut être activée ou désactivée à volonté comme action libre, mais elle ne peut pas être active en même temps que Coup de Jarnac.~
+@224    = ~Coup de Jarnac
 
-Pendant que cette capacité est active, vos attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds (pas de sauvegarde). Comme c'est un effet non magique, il contourne Liberté de mouvement. Cette capacité peut être activée ou désactivée à volonté comme action libre, mais elle ne peut pas être active en même temps que Frappe artérielle.~
-@702    = ~FRAPPE ARTÉRIELLE :
+Pendant que cette capacité est active, vos attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds (pas de sauvegarde). Comme c'est un effet non magique, il contourne Liberté de mouvement. Cette capacité peut être activée ou désactivée à volonté comme action libre, mais elle ne peut pas être active en même temps que Blessure profonde.~
+@702    = ~BLESSURE PROFONDE :
 
 Votre compétence avec les attaques sournoises vous permet de causer une blessure qui saigne.
 
 Prérequis : Au moins un niveau de roublard, bonus d'attaque de base +4 ou supérieur.
 
-Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises infligent une blessure qui saigne qui inflige 10 dégâts supplémentaires sur 10 rounds. Pour chaque six niveaux de roublard après 1 (c'est-à-dire aux niveaux 7, 13, 19, et 25), le roublard inflige 10 dégâts supplémentaires sur les 10 rounds. Cette capacité ne peut pas être active en même temps que Coup au jarret.~
-@734    = ~COUP AU JARRET :
+Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises infligent une blessure qui saigne qui inflige 10 dégâts supplémentaires sur 10 rounds. Tous les six niveaux de roublard après 1 (c'est-à-dire aux niveaux 7, 13, 19, et 25), le roublard inflige 10 dégâts supplémentaires sur les 10 rounds. Cette capacité ne peut pas être active en même temps que Coup de Jarnac.~
+@734    = ~COUP DE JARNAC :
 
 Lors d'une attaque sournoise, votre personnage peut mutiler sa cible de manière à ce que son mouvement soit considérablement réduit.
 
 Prérequis : Au moins trois niveaux de roublard.
 
-Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds. C'est un effet non magique qui contourne Liberté de mouvement. Cette capacité ne peut pas être active en même temps que Frappe artérielle.~
-@735    = ~ATTAQUE PUISSANTE :
+Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds. C'est un effet non magique qui contourne Liberté de mouvement. Cette capacité ne peut pas être active en même temps que Blessure profonde.~
+@735    = ~ATTAQUE EN PUISSANCE :
 
 Vous pouvez faire des attaques au corps à corps exceptionnellement puissantes.
 
 Prérequis : For 13+
 
-Avantage : Lors de votre action, avant de faire des jets d'attaque pour un round, vous pouvez choisir de soustraire un nombre de tous les jets d'attaque au corps à corps et d'ajouter le même nombre à tous les jets de dégâts au corps à corps, ou deux fois ce nombre si vous maniez une arme à deux mains. Ce nombre ne peut pas dépasser votre bonus d'attaque de base. Le malus sur les attaques et le bonus sur les dégâts s'appliquent jusqu'à votre prochaine action.~
-@977    = ~Rage barbare
+Avantage : Lors de votre action, avant de faire des jets d'attaque pour un round, vous pouvez choisir d’affecter la pénalité de votre choix à vos jets d’attaque afin de bénéficier d’un bonus équivalent sur les jets de dégâts au corps à corps, ou deux fois ce nombre si vous maniez une arme à deux mains. Ce nombre ne peut pas dépasser votre bonus d'attaque de base. Le malus sur les attaques et le bonus sur les dégâts s'appliquent jusqu'à votre prochaine action.~
+@977    = ~Rage de berserker
 
-En entrant dans une rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et Constitution), ainsi qu'un malus de -2 CA, +2 aux sauvegardes de Volonté, et immunité à la peur, étourdissement, sommeil, charme, domination, confusion, inconscience, paralysie, abrutissement, et désespoir. La rage dure 3 rounds. Si le personnage a au moins 5 niveaux de barbare, la rage dure également un nombre de rounds supplémentaires égal au bonus de Constitution du barbare (nouvellement amélioré). Après avoir ragi, le barbare sera fatigué pendant trois rounds, lui donnant un malus de -2 en Force et Dextérité.~
+En entrant dans une rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et Constitution), ainsi qu'un malus de -2 à la classe d'armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, à l’étourdissement, au sommeil, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure 3 rounds. Si le personnage a au moins 5 niveaux de barbare, la rage dure également un nombre de rounds supplémentaires égal au bonus de Constitution du barbare (nouvellement amélioré). Après la rage, le barbare sera fatigué pendant trois rounds, lui donnant un malus de -2 en Force et Dextérité.~
 @525    = ~BARBARE :
 
 Des terres gelées du nord et des jungles infernales du sud viennent des guerriers braves, même téméraires. Bien qu'ils ne soient pas aussi disciplinés ou aussi compétents qu'un guerrier normal, le barbare peut volontairement se jeter dans une rage berserker, devenant un adversaire plus dur et plus fort.
