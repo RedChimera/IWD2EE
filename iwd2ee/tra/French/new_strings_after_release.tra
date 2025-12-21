@@ -4,7 +4,7 @@
 
 Le rôdeur est un guerrier et un forestier. Il est adroit dans le maniement des armes et compétent dans l’observation et la connaissance de la nature. Il lui arrive souvent de protéger et de guider les voyageurs égarés et les honnêtes paysans. Pour vivre longtemps, un rôdeur doit être fort et connaître les voies de la nature.
 
-REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-10
 
@@ -14,7 +14,7 @@ Avantages :
 * Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s’ils possédaient les dons Ambidextrie et Combat à 2 armes.
 * Niveau 2 : Incantation. Les rôdeurs acquièrent la capacité de lancer des sorts.
 * Niveau 6 : Le rôdeur peut obtenir le don Attaque en rotation s’il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
-* Niveau 6 : Collets Naturels. Cette capacité pose un piège qui, lorsqu’il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d’échec au jet de sauvegarde de Réflexes. Le DD du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
+* Niveau 6 : Collets Naturels. Cette capacité pose un piège qui, lorsqu’il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d’échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
 * Niveau 7 : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile d’araignée et Croissance d’épines.
 * Niveau 9 : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu nourri, même s’il ne remplit pas les conditions préalables.
 * Niveau 15 : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu nourri une seconde fois, ce qu’aucune autre classe ne peut faire.
@@ -93,7 +93,7 @@ Enchantement : +5
 Type de dégâts : Contondants
 Spécial :
  Contondant : 66% de chances d’infliger +3d6 points de dégâts contondants à la tête.
- Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de DD 33)
+ Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de Degré de Difficulté 33)
  Impact : Augmente les chances d’infliger un coup critique
 Poids : 1,4 kg (3 lb)
 Compétence : arme courante, masse
@@ -177,7 +177,7 @@ Niveau : Prê 6, Pal 6, Heaum 7, Tempus 6
 Portée : portée de vue
 Durée : instantanée
 Temps d’incantation : 2
-Zone d’effet : Spéciale
+Zone d’effet : spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 À la fin de ce sort, le lanceur de sorts devient un foyer d’énergie spirituelle, qui jaillit ensuite du lanceur dans quatre directions, comme des éclairs. Le lanceur précise la direction de l’un des éclairs et les autres éclairs partent à l’opposé et perpendiculairement à cette direction, complétant ainsi un motif en forme de croix. Toutes les créatures sur le chemin des éclairs subissent 5d20 points de dégâts magiques, avec un jet de Réflexes réduisant les dégâts de moitié. Les créatures du même alignement moral (bon, neutre, mauvais) que le lanceur ne sont pas affectées par le sort. Ce sort ne provoque pas d’attaque d’opportunité.~
@@ -264,7 +264,7 @@ Ce sort fait appel aux liens de Séluné avec la lune et les arcanes pour invoquer
 @31409     	= ~Manteau de terreur~
 @32409     	= ~Manteau de terreur
 (Invocation)
-Niveau : Prê 4, Bane 4
+Niveau : Prê 4, Baine 4
 Portée : lanceur
 Durée : 6 rounds
 Temps d’incantation : 6
@@ -290,7 +290,7 @@ Un feu solaire est une explosion de flammes similaire à une boule de feu, mais c
 
 Le magicien est passé maître dans l’art de manipuler les énergies magiques et de les utiliser sous forme de sortilèges. Il doit pour cela étudier des langues ésotériques et des tomes obscurs, passant le plus clair de son temps à effectuer des recherches. La survie d’un magicien repose sur son intelligence et ses connaissances. Il part rarement à l’aventure sans être encadré par des guerriers ou des hommes d’armes. Il existe plusieurs écoles de magie qui forment donc différents types de magiciens. Toutefois, le généraliste étudie toutes les sortes de magie et a accès à une grande variété de sorts. C’est donc bien souvent un compagnon plein de ressources.
 
-Remarque : pour lancer un sort, le magicien doit avoir un niveau d’intelligence égal ou supérieur à celui du sort. L’intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+Remarque : pour lancer un sort, le magicien doit avoir un niveau d’intelligence égal ou supérieur à celui du sort. L’intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-4
 
@@ -319,7 +319,7 @@ Avantages :
 * Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu’il est joué, tous les alliés du barde gagnent +1 au jet d’attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d’attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
 * Niveau 3 : La Chanson des Kaudies. Lorsqu’elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d’outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
 * Niveau 5 : La Mélodie de Tymora. Lorsqu’elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
-* Niveau 9 : L’Appel de la Sirène. Lorsqu’il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d’être enchantée, incapable d’agir pendant un round ou jusqu’à ce qu’elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d’un barde de niveau 15 a un DD de 15.
+* Niveau 9 : L’Appel de la Sirène. Lorsqu’il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d’être enchantée, incapable d’agir pendant un round ou jusqu’à ce qu’elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d’un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- à la résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, à la résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
 * Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
@@ -334,7 +334,7 @@ Désavantages :
 
 Les ensorceleurs pratiquent la magie et possèdent un don inné pour les sorts. On dit que le sang de puissantes créatures coule dans leurs veines et qu’ils seraient les descendants de dragons ayant pris une forme humanoïde. Quoi qu’il en soit, la magie des ensorceleurs repose davantage sur l’intuition que sur la logique. Leur connaissance des sorts est moins étendue et plus difficile à acquérir que celle des magiciens, mais ils peuvent en lancer plus souvent et n’ont pas besoin de les préparer à l’avance. Les ensorceleurs ne peuvent pas se spécialiser dans un domaine de magie, contrairement aux magiciens. Ce sont là les seules différences qui permettent de distinguer les ensorceleurs des magiciens.
 
-REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le DD de ses jets de sort et le nombre de sorts supplémentaires.
+REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le Degré de Difficulté de ses jets de sort et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-4
 
@@ -383,7 +383,7 @@ En prononçant ce sort, le lanceur augmente le bonus d’attaque et les jets de sau
 @1873     	= ~Malédiction~
 @1874     	= ~Malédiction
 (Enchantement)
-Niveau : Prê 1, Bane 1
+Niveau : Prê 1, Baine 1
 Portée : portée de vue
 Durée : 10 rounds / niveau
 Temps d’incantation : 2
@@ -468,7 +468,7 @@ Vous êtes formé à renverser ou faire trébucher les ennemis en combat rapproché.
 
 Prérequis : Bonus de base à l’attaque de +6 ou plus
 
-Avantage : Vous gagnez une capacité qui vous permet de renverser ou de faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Sinon, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce DD est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu’un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité a pour conséquence une attaque de moins au round suivant.
+Avantage : Vous gagnez une capacité qui vous permet de renverser ou de faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Sinon, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus de base à l’attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce Degré de Difficulté est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu’un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité a pour conséquence une attaque de moins au round suivant.
 
 Ce don peut être pris deux fois. Lorsqu’il est pris une deuxième fois, le don devient Renversement amélioré, ce qui ajoute un bonus de +2 au Degré de Difficulté, et permet de renverser ou faire trébucher des créatures d’une catégorie de taille supérieure (créatures dont le cercle a jusqu’à deux fois le rayon du vôtre).~
 
@@ -487,7 +487,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par Attaque de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
 @390 = ~VOIE DE LA LICHE :
@@ -505,7 +505,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez subir Renvoi des Morts-Vivants mais vous comptez comme 4 niveaux de plus contre ses effets.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
 @704 = ~SAISIE :
@@ -630,7 +630,7 @@ Ce sort fait apparaître une bulle luisante entourant la cible. La sphère l’enfer
 
 Le prêtre a pour devoir de répondre aux soins spirituels d’une communauté. C’est un protecteur et un guérisseur, même s’il n’est pas uniquement défensif.
 
-REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-8
 
@@ -912,7 +912,7 @@ Désavantages :
 PARAMÈTRES :
 
 Bonus à la CA : +5
-Bonus de Dextérité maxi : Aucun
+Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
@@ -928,7 +928,7 @@ Poids : 0~
 PARAMÈTRES :
 
 Bonus à la CA : +9
-Bonus de Dextérité maxi : Aucun
+Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
@@ -945,7 +945,7 @@ Poids : 0~
 PARAMÈTRES :
 
 Bonus à la CA : +18
-Bonus de Dextérité maxi : Aucun
+Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
@@ -962,7 +962,7 @@ Poids : 0~
 PARAMÈTRES :
 
 Bonus à la CA : +24
-Bonus de Dextérité maxi : Aucun
+Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
@@ -1042,9 +1042,9 @@ Jet de sauvegarde : aucun
 Une brume verte baigne la zone d’effet. Elle soigne les maladies, guérit du poison et soigne 80 points de vie à toute créature vivante et non hostile baignant dans la brume. Ce sort ne peut être lancé par des personnages d’alignement mauvais.~
 @1697	= ~Mot de pouvoir : Cécité
 (Divination)
-Niveau : Bar 7, Ens/Mag 8, Tempus 7, Bane 8
+Niveau : Bar 7, Ens/Mag 8, Tempus 7, Baine 8
 Portée : portée de vue
-Durée : Spéciale
+Durée : spéciale
 Temps d’incantation : 0
 Zone d’effet : rayon de 3 mètres (10 pieds)
 Jet de sauvegarde : aucun
@@ -1072,7 +1072,7 @@ Jet de sauvegarde : aucun
 En prononçant ce sort, le lanceur augmente le bonus d’attaque et les jets de sauvegarde des créatures alliées dans la zone d’effet de +1. Bénédiction contre et dissipe Malédiction.~
 @1874	= ~Malédiction
 (Enchantement)
-Niveau : Prê 1, Bane 1
+Niveau : Prê 1, Baine 1
 Portée : portée de vue
 Durée : 10 rounds / niveau
 Temps d’incantation : 2
@@ -1229,7 +1229,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @390	= ~VOIE DE LA LICHE :
 
@@ -1246,7 +1246,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins, mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par un Toucher de la Liche, qui inflige 1d8+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d’échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 
 //Ajouts depuis la 3.3.3
@@ -1364,9 +1364,9 @@ Ce sort transforme une créature vivante en pierre en cas d’échec du jet de Vigue
 (Universel)
 Niveau : Ens/Mag 4
 Portée : portée de vue
-Durée : Spéciale
+Durée : spéciale
 Temps d’incantation : 1
-Zone d’effet : Spéciale
+Zone d’effet : spéciale
 Jet de sauvegarde : Spécial
 
 Ce sort lance un sort de magicien aléatoire sur la créature ciblée, pouvant être un sort de n’importe quel niveau entre 5 et 8. La nature du sort dépend de la cible. Si la cible est un ennemi, elle recevra un sort nuisible, mais si la cible est un allié, elle recevra un sort bénéfique. Les restrictions de ciblage sont respectées (un sort qui n’affecte que le lanceur ne sera pas choisi à moins que la cible ne soit le lanceur).
@@ -1381,7 +1381,7 @@ Portée : toucher
 Durée : 12 rounds
 Temps d'incantation : 9
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort permet au destinataire d'absorber les attaques élémentaires, se soignant au lieu de subir des dégâts. Pendant la durée, si la cible devait subir des dégâts de feu, de froid, d'électricité ou d'acide, elle récupère à la place des points de vie égaux aux dégâts qu'elle aurait subis.~
 @37866     = ~Clone~
@@ -1392,7 +1392,7 @@ Portée : portée de vue
 Durée : permanente jusqu'à utilisation
 Temps d'incantation : 20
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Alternative douteuse à la résurrection, ce sort crée un double inerte d'un membre du groupe. Une fois le sort lancé, le clone nécessite 8 heures pour se développer en un substitut adapté au personnage original. Une fois ce délai écoulé, si le personnage original meurt (ou est déjà mort) alors qu'il se trouve dans la même zone que le clone, son âme sera transférée dans le clone, qui rejoindra le groupe avec exactement les mêmes caractéristiques et capacités que le personnage original. Un membre du groupe ne peut pas avoir plus d’un clone inerte dans la même zone à la fois.  
 
@@ -1487,13 +1487,13 @@ Niveau 29 : +12 en Force et en Constitution et +6 aux jets de sauvegarde de Volo
 Les membres de l’Ordre de la Lune Noire vénèrent Shar la Sombre Dame, déesse de la nuit. Leur formation monastique guide leurs pouvoirs spirituels et personnels.
 
 Avantages :
-* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au DD de tout autre sort ou capacité Ténèbres qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
+* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au Degré de Difficulté de tout autre sort ou capacité Ténèbres qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
 * Niveau 10 : Le moine gagne +1 point de dégâts contre tout ennemi qui est aveuglé ou dont la vision est altérée par l'effet de Ténèbres. Pour chaque tranche de 8 niveaux de moine après le niveau 10, le moine gagne +1 point de dégâts supplémentaire contre les ennemis dans ces situations.~
 @984 = ~Ténèbres
 
 Cette capacité crée une obscurité magique dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur ou être considérées comme aveuglées. Les créatures dotées de la vision dans le noir ne sont pas aveuglées, mais elles ne peuvent voir qu'avec une capacité limitée à travers l'obscurité magique, subissant un malus de -4 aux jets d'attaque en cas d'échec de leur jet de sauvegarde. Les créatures ayant une vision dans le noir supérieure de 36 mètres (comme les drows, les nains gris ou les gnomes des profondeurs) ne subissent qu'un malus de -2 aux jets d'attaque. Les démons et les créatures immunisées à la cécité ne sont pas affectés.
 
-Lorsqu'elle est utilisée par un Moine de la Lune Noire, Ténèbres a un degré de difficulté (DD) de 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Tout autre sort ou capacité Ténèbres utilisé par un Moine de la Lune Noire bénéficie également d'un bonus au DD égal à la moitié du niveau de moine du personnage.~
+Lorsqu'elle est utilisée par un Moine de la Lune Noire, Ténèbres a un degré de difficulté (DD) de 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Tout autre sort ou capacité Ténèbres utilisé par un Moine de la Lune Noire bénéficie également d'un bonus au Degré de Difficulté égal à la moitié du niveau de moine du personnage.~
 @585 = ~
 
 Sorts du domaine :
@@ -1539,7 +1539,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4809 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -1553,7 +1553,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4819 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +2 afin de surmonter la réduction de dégâts.
 
@@ -1567,7 +1567,7 @@ Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4821 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1581,7 +1581,7 @@ Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4833 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
@@ -1595,7 +1595,7 @@ Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde).
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4849 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
@@ -1609,7 +1609,7 @@ Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4850 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +4 afin de surmonter la réduction de dégâts.
 
@@ -1623,7 +1623,7 @@ Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4852 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1637,7 +1637,7 @@ Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +2d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4853 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1651,7 +1651,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +3d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4856 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1665,7 +1665,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +4d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4857 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1679,7 +1679,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +5d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4858 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
@@ -1693,7 +1693,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +6d6 dégâts de froid
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4866 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
@@ -1707,7 +1707,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4867 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
@@ -1721,7 +1721,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4868 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
@@ -1735,7 +1735,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4869 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
@@ -1749,7 +1749,7 @@ Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @12483 = ~Armure de peau de Témérité +3~
 @12484 = ~L’armure de peau se compose de plusieurs couches de cuir. Elle est assez simple à fabriquer et protège bien du froid, même si elle est rigide et entrave un peu les mouvements. Elle est principalement utilisée par les guerriers et les chasseurs des tribus barbares du Nord.
@@ -1848,7 +1848,7 @@ Spécial :
  Mal : +1d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
  Protection magique : Immunité aux sorts Châtiment divin, Ténèbres infernales, Parole divine et Blasphème.
 Poids : 1,8 kg (4 lb)
-Compétence : Arme de guerre, marteau
+Prérequis : Arme de guerre, marteau
 Type d’arme : À une main~
 @12921    = ~Inconséquence +5~
 @12922 = ~Ce marteau fut créé par Phellep, un pseudo-prophète vivant en marge de la société. Pour lui, les actions des hommes en tant qu'individus n'avaient pas d'influence sur le sort de l'humanité. Il rejetait donc tout concept de bien et de mal et préférait ne pas prendre part aux événements politiques et sociaux. Ce marteau, dont il ne se séparait jamais, lui servait à abattre les portes des églises, qu'il appelait les "antres des imbéciles et des idiots".
@@ -1864,7 +1864,7 @@ Spécial :
  Mal : +2d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
  Protection magique : Immunité aux sorts Châtiment divin, Ténèbres infernales, Parole divine et Blasphème.
 Poids : 1,8 kg (4 lb)
-Compétence : Arme de guerre, marteau
+Prérequis : Arme de guerre, marteau
 Type d’arme : À une main~
 @12923 = ~Châtiment des Fous +2~
 @12924 = ~Le Châtiment des Fous possède une énorme tête en pierre en forme de bloc rectangulaire. De légères traces de sang et de chair sont visibles sur toutes les faces de la tête du marteau. Le manche est fait d'un bois épais qui semble trop fragile pour supporter le poids de la tête du marteau. Le Châtiment des Fous possède un enchantement unique : il frappe plus fort contre les ennemis plus stupides que son porteur. Cependant, l'enchantement a un autre revers : si le porteur est plus stupide que sa cible, il subit lui aussi des dégâts.
@@ -1878,7 +1878,7 @@ Type de dégâts : Contondants
 Spécial :
  Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
 Poids : 6,8 kg (15 lb)
-Compétence : Arme de guerre, marteau
+Prérequis : Arme de guerre, marteau
 Type d’arme : À une main~
 @12925    = ~Châtiment des Fous +5~
 @12926    = ~Le Châtiment des Fous possède une énorme tête en pierre en forme de bloc rectangulaire. De légères traces de sang et de chair sont visibles sur toutes les faces de la tête du marteau. Le manche est fait d'un bois épais qui semble trop fragile pour supporter le poids de la tête du marteau. Le Châtiment des Fous possède un enchantement unique : il frappe plus fort contre les ennemis plus stupides que son porteur. Cependant, l'enchantement a un autre revers : si le porteur est plus stupide que sa cible, il subit lui aussi des dégâts.
@@ -1892,7 +1892,7 @@ Type de dégâts : Contondants
 Spécial :
  Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
 Poids : 6,8 kg (15 lb)
-Compétence : Arme de guerre, marteau
+Prérequis : Arme de guerre, marteau
 Type d’arme : À une main~
 @12927 = ~Anneau d'Amplification de la Douleur~
 @12928 = ~Cet anneau maudit se fond avec le doigt auquel il est passé et seul le sort Délivrance des Malédictions peut l'en faire tomber s'il est utilisé sur son porteur, faute de quoi celui-ci subit des dommages supplémentaires à chaque attaque tant que l'anneau est actif. On sait que les Lovitariens créent ces objets et les distribuent dans tous les royaumes pour leur amusement personnel.
@@ -1926,7 +1926,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4839 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +3 afin de surmonter la réduction de dégâts.
 
@@ -1940,7 +1940,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4840 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +4 afin de surmonter la réduction de dégâts.
 
@@ -1954,7 +1954,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4842 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -1968,7 +1968,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 4d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4843 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -1982,7 +1982,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 6d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4846 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -1996,7 +1996,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 8d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4847 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -2010,7 +2010,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 12d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4848 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -2024,7 +2024,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 14d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4849 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
@@ -2038,7 +2038,7 @@ Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @4870 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
@@ -2052,7 +2052,7 @@ Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 10d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
-Compétence : arme courante, attaque de contact
+Prérequis : arme courante, attaque de contact
 Type : à une main~
 @55495=~Emplacements de Sorts Supérieurs : ~
 @56037=~Poids :~
@@ -2073,15 +2073,15 @@ Avantages :
 * Incantation spontanée : Les druides peuvent convertir leurs sorts en sorts de Convocation d’alliés naturels du même niveau lorsqu'un joueur fait un clic majuscule sur un sort au moment de l'incantation. Le sort cliqué est immédiatement retiré de la liste de sorts mémorisés du personnage et lancé comme le sort Convocation d’alliés naturels le plus proche du même niveau.
 * Niveau 2 : Déplacement facilité en forêt. Le druide devient immunisé contre Enchevêtrement, Toile et Croissance d'épines.
 * Au niveau 5, les druides commencent à acquérir les capacités de Forme animale, qui leur permettent de se transformer en animaux, bêtes magiques, élémentaires et autres formes. À des niveaux plus élevés, les druides gagnent des options supplémentaires pour les formes et peuvent utiliser Forme animale plusieurs fois par jour.
-* Niveau 5 : Forme animale : loup arctique. Le druide acquiert la capacité de se métamorphoser en loup arctique. Sous forme de loup arctique, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle de givre du loup arctique, qui inflige 4d4 dégâts de froid (Réflexes DD 10 pour la moitié de dégâts). Tous les 5 niveaux par la suite, les dégâts du souffle augmentent de 2d4 et le DD de sauvegarde augmente de 5.
+* Niveau 5 : Forme animale : loup arctique. Le druide acquiert la capacité de se métamorphoser en loup arctique. Sous forme de loup arctique, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle de givre du loup arctique, qui inflige 4d4 dégâts de froid (Réflexes Degré de Difficulté 10 pour la moitié de dégâts). Tous les 5 niveaux par la suite, les dégâts du souffle augmentent de 2d4 et le Degré de Difficulté de sauvegarde augmente de 5.
 * Niveau 5 : Le druide est suffisamment haut niveau pour choisir deux dons spéciaux : Forme animale : Chien esquiveur et Forme animale : fatalité rampante.
 * Niveau 7 : Forme animale : Ours polaire. Sous forme d'ours polaire, le druide gagne une attaque supplémentaire par round par rapport à sa forme naturelle. Tous les 3 niveaux par la suite, la forme d'ours polaire gagne +1 en Force, Dextérité et Constitution, et ses dégâts d'attaque augmentent.
 * Niveau 8 : Le druide est suffisamment haut niveau pour choisir un autre don spécial : Forme animale : Scarabée rhinocéros.
-* Niveau 9 : Forme animale : Vipère géante. Sous forme de vipère géante, les attaques du druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur DD 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 CA, et le DD de sauvegarde contre son poison augmente de 3.
+* Niveau 9 : Forme animale : Vipère géante. Sous forme de vipère géante, les attaques du druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur Degré de Difficulté 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 CA, et le Degré de Difficulté de sauvegarde contre son poison augmente de 3.
 * Niveau 9 : Immunité au poison. Le druide devient immunisé à toutes les formes de poison.
 * Niveau 11 : Forme élémentaire : Salamandre. Sous forme de salamandre, le druide est immunisé au feu, vulnérable au froid, et émet une aura de chaleur extrême qui inflige 2d6 dégâts de feu aux créatures proches par round. Tous les 5 niveaux par la suite, les dégâts de l'aura de feu de la forme de salamandre augmentent de 1d6.
 * Niveau 11 : Forme élémentaire : Salamandre de givre. Sous forme de salamandre de givre, le druide est immunisé au froid, vulnérable au feu, et émet une aura de froid extrême qui inflige 2d6 dégâts de froid aux créatures proches par round. Tous les 5 niveaux par la suite, les dégâts de l'aura de froid de la forme de salamandre de givre augmentent de 1d6.
-* Niveau 13 : Forme animale : tertre errant. Sous forme de tertre errant, le druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chances avec chaque attaque d'engloutir la cible (Vigueur DD 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires au round suivant. Tous les 3 niveaux par la suite, la forme de mound gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le DD de sauvegarde contre cela augmente de 3.
+* Niveau 13 : Forme animale : tertre errant. Sous forme de tertre errant, le druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chances avec chaque attaque d'engloutir la cible (Vigueur Degré de Difficulté 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires au round suivant. Tous les 3 niveaux par la suite, la forme de mound gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le Degré de Difficulté de sauvegarde contre cela augmente de 3.
 * Niveau 15 : Forme élémentaire : Élémentaire de feu. Sous forme d'élémentaire de feu, le druide est immunisé au feu, vulnérable au froid, et a une réduction des dégâts 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais inflige de gros dégâts par coup. Tous les 5 niveaux par la suite, la forme d'élémentaire de feu gagne +2 en Force, +1 en Dextérité, +2 en Constitution, ses dégâts d'attaque augmentent, et sa réduction des dégâts augmente (à 10/+2, puis 15/+3, puis 20/+4).
 * Niveau 15 : Forme élémentaire : Élémentaire de terre. Sous forme d'élémentaire de terre, le druide a une résistance physique 5/- ainsi qu'une réduction des dégâts 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais inflige de gros dégâts par coup. De plus, chaque fois que le druide est au-dessus d'un sol en pierre, il peut s'enfouir dans le sol pour éviter les attaques, remontant pour attaquer ou lancer un sort. Tous les 5 niveaux par la suite, la forme d'élémentaire de terre gagne +2 en Force, +1 en Dextérité, +2 en Constitution, ses dégâts d'attaque augmentent, et sa réduction des dégâts augmente (à 10/+2, puis 15/+3, puis 20/+4).
 * Niveau 15 : Forme élémentaire : Élémentaire d'eau. Sous forme d'élémentaire d'eau, le druide est immunisé au feu et à l'acide, faible à l'électricité, et a une réduction des dégâts 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais inflige de gros dégâts par coup. Tous les 5 niveaux par la suite, la forme d'élémentaire d'eau gagne +2 en Force, +1 en Dextérité, +2 en Constitution, ses dégâts d'attaque augmentent, et sa réduction des dégâts augmente (à 10/+2, puis 15/+3, puis 20/+4).
@@ -2161,7 +2161,7 @@ Spécial :
   Résistance : 4/- Résistance aux dégâts perforants
   Résistance : 4/- Résistance aux dégâts contondants
 Poids : 3,2 kg (7 lb)
-Compétence :  Arme de guerre, Marteau
+Prérequis :  Arme de guerre, Marteau
 Type : à une main~
 @11749    = ~Arc long d'acide et de flamme +2~
 @11750    = ~L'arc long est similaire à l'arc court, mais sa longueur est à peu près égale à la hauteur de son archer, c'est-à-dire environ 2 m. Il présente deux avantages par rapport à l’arc court : une plus grande portée et donc une plus grande précision. Celui-ci a été enchanté, ce qui lui confère une aura de perfection.
@@ -2174,7 +2174,7 @@ Spécial :
   Toute instance de dégâts de feu ou d'acide provenant des sorts, capacités ou munitions du porteur inflige 5 points de dégâts supplémentaires (pour les sources qui infligent des dégâts de feu ou d'acide plusieurs fois, ces dégâts sont ajoutés à chaque fois).
   Garde-sort : Protection contre les sorts Flèche acide de Melf et Flèches enflammées
 Poids : 1,4 kg (3 lb)
-Compétence :  Arme de guerre, Arc
+Prérequis :  Arme de guerre, Arc
 Type :  Deux mains~
 @11859    = ~Arbalète lourde +8~
 @11860    = ~Une arbalète est un arc monté sur un châssis de bois ou de métal, ce dernier étant appelé un arbrier. L'arc est généralement fait de frêne ou d'if. L'arbalète utilise des carreaux et non des flèches.
@@ -2184,7 +2184,7 @@ PARAMÈTRES :
 Dégâts :  +18 (projectile)
 Bonus d'attaque :  +8
 Poids : 4,1 kg (9 lb)
-Compétence : arme courante, Arbalète
+Prérequis : arme courante, Arbalète
 Type :  Deux mains~
 @11901    = ~Fronde de force magique~
 @11902    = ~Les frondes existent depuis des temps presque immémoriaux. Elles se composent d'une corde de cuir ou de tissu et d'une bourse pour contenir le projectile. Cependant, celle-ci bénéficie d'une charme léger. On tient la fronde par l’extrémité des deux lanières et on la fait tourner au-dessus de sa tête pour donner de la puissance. Il suffit alors de relâcher une des lanières pour projeter la bille.
@@ -2194,7 +2194,7 @@ PARAMÈTRES :
 Spécial :
   Force magique : Les projectiles tirés de cette fronde infligent +1d4 dégâts magiques
 Poids : 0 lb.
-Compétence : arme courante, projectile
+Prérequis : arme courante, projectile
 Type : à une main~
 @11920    = ~Les motifs teints à la surface de cette fronde en cuir ressemblent à un empennage de flèche. Cette arme appartenait à une certaine Galada, prêtresse de Lathandre qui arpentait le Mitan occidental pour aider les malades et les nécessiteux. Bien que n'étant pas particulièrement pacifiste, elle détestait les combats et les évitait autant que possible. Sa masse légère et sa fronde étaient ses deux seules armes contre les ogres, brigands et autres larrons qui s'en prenaient parfois aux petits villages où elle se rendait. Malgré toute sa bonne volonté, un groupe d'aventuriers lui tendit un jour un piège dans lequel elle perdit la vie. Ses meurtriers s'enfuirent et disparurent dans la nature.
 
@@ -2206,7 +2206,7 @@ Spécial :
   Gagne le bonus de Sagesse à l'attaque
   Pouvoir de sort : Peut lancer le sort Restauration supérieure 1/jour
 Poids : 0 lb.
-Compétence : arme courante, projectile
+Prérequis : arme courante, projectile
 Type : à une main~
 @10382    = ~Kellem Longueil était un célèbre rôdeur de la ville de Bremen, qui n'hésitait pas à parcourir le Nord sauvage à la poursuite de ses proies. Il traquait dragons, wivernes et autres grands reptiles volants, notamment ceux qui attaquaient les Dix-Cités. Cela lui permit de ramener un grand nombre de trophées et d'orner la plupart de ses objets d'écailles ou de griffes de dragon.
 
@@ -2221,7 +2221,7 @@ PARAMETRES :
 Bonus d'armure générique :  +4
 Spécial :
   Résistance : 15/- Résistance au froid
-  Souffle de dracosire blanc : cône de givre pour 16d8 points de dégâts de froid (Réflexes DD 24 + deux fois le bonus de Charisme du porteur pour la moitié de dégâts) 1/jour
+  Souffle de dracosire blanc : cône de givre pour 16d8 points de dégâts de froid (Réflexes Degré de Difficulté 24 + deux fois le bonus de Charisme du porteur pour la moitié de dégâts) 1/jour
   Tous les projectiles de cône de froid (y compris les attaques de souffle) émis par le porteur ont une zone d'effet considérablement augmentée
 Poids : 1,4 kg (3 lb)~
 @12520    = ~Une bague est une petite bande de métal précieux utilisée comme bijou. Certaines bagues rares ont reçu des enchantements qui confèrent diverses capacités magiques. Ces bagues sont très recherchées, en particulier par ceux de la profession d'aventurier. Sans raison apparente, cette bague est chaude au toucher.
@@ -2311,7 +2311,7 @@ Portée : lanceur
 Durée : 3 rounds
 Temps d'incantation : 3
 Zone d'effet : Rayon de 1 mètre (3 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort invoque une barrière d'os flottants qui tournent rapidement autour du lanceur. Quiconque entre dans leur trajectoire subit 2d6 dégâts contondants et 2d6 dégâts tranchants par round, ignorant la résistance aux sorts. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle d’ossements ne peut pas être actif en même temps que le Cercle de lames, car les os et les lames se gênent mutuellement.~
 @32405     = ~Domination mentale
@@ -2323,7 +2323,7 @@ Temps d'incantation : 4
 Zone d'effet : 1 créature 
 Jet de sauvegarde : Volonté, annule
 
-Ce sort permet au lanceur d'envahir l'esprit de la créature cible, permettant au lanceur de vouloir que la créature accomplisse toutes les actions qu'il désire. La créature cible résistera aux effets si un jet de Volonté réussi avec +2 DD est effectué. Pendant qu'une créature est dominée de cette manière, son esprit est embrumé et la pensée est entravée, ce qui se traduit par un malus de –2 au jet d’attaque et l’incapacité de se concentrer suffisamment pour lancer le moindre sort. Ce sort ignore la résistance aux sorts.~
+Ce sort permet au lanceur d'envahir l'esprit de la créature cible, permettant au lanceur de vouloir que la créature accomplisse toutes les actions qu'il désire. La créature cible résistera aux effets si un jet de Volonté réussi avec +2 Degré de Difficulté est effectué. Pendant qu'une créature est dominée de cette manière, son esprit est embrumé et la pensée est entravée, ce qui se traduit par un malus de –2 au jet d’attaque et l’incapacité de se concentrer suffisamment pour lancer le moindre sort. Ce sort ignore la résistance aux sorts.~
 @1021    = ~Vague destructrice
 (Évocation)
 Niveau : Dru 5, Rôd 5
@@ -2353,7 +2353,7 @@ Temps d'incantation : 6
 Zone d'effet : 1 créature
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-À l'achèvement de ce sort, le lanceur lance une sphère brillante et flamboyante sur une créature cible. Quand elle frappe, elle explose dans un éclair de lumière, aveuglant la créature cible et infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris doivent faire leur jet de Réflexes contre l'aveuglement avec +4 DD. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables à ce sort.~
+À l'achèvement de ce sort, le lanceur lance une sphère brillante et flamboyante sur une créature cible. Quand elle frappe, elle explose dans un éclair de lumière, aveuglant la créature cible et infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris doivent faire leur jet de Réflexes contre l'aveuglement avec +4 Degré de Difficulté. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables à ce sort.~
 @1592    = ~Rayon de soleil
 (Évocation)
 Niveau : Dru 8, Lathandre 7
@@ -2391,27 +2391,27 @@ Jusqu'à 2 : inconscience pendant 5 rounds
 5 ou plus : étourdissement pendant 1 round
 
 Un jet de Volonté réussi annulera l'effet. Les créatures aveugles ne sont pas affectées par la Vapeur colorée. Ce sort ne provoque pas d'attaque d'opportunité.~
-@34316     = ~Charme terrible
+@34316     = ~Charme funeste 
 (Enchantement)
-Niveau : Bar 2, Ens/Mag 3, Bane 3
+Niveau : Bar 2, Ens/Mag 3, Baine 3
 Portée : portée de vue
 Durée : 8 rounds
 Temps d'incantation : 3 
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Ce sort est similaire au sort Charme personne. Cependant, la créature affectée entre dans un état de rage, ne voulant que personne ne nuise à son maître (le lanceur de sort). Ainsi, la créature combattra les ennemis du lanceur, même d'anciens alliés. Le Charme terrible peut affecter à la fois les humanoïdes et les géants. Ce sort ignore la résistance aux sorts.~
-@1091    = ~Lance de perturbation
+Ce sort est similaire au sort Charme-personnes. Cependant, la créature affectée entre dans un état de rage, ne voulant que personne ne nuise à son maître (le lanceur du sort). Elle affronte donc les ennemis de ce dernier, qu'il s'agisse ou non d'anciens alliés. Le Charme funeste  peut affecter à la fois les humanoïdes et les géants. Ce sort ignore la résistance aux sorts.~
+@1091    = ~Lance de destruction
 (Évocation)
 Niveau : Ens/Mag 3
 Portée : 18 mètres (60 pieds)
 Durée : instantanée
 Temps d'incantation : 3
-Zone d'effet : Spéciale
+Zone d'effet : spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort crée une lance de force, s'étendant du lanceur à un point spécifié à 18 mètres (60 pieds) de distance. Toutes les créatures sur le chemin de la lance subissent 5d4 points de dégâts perforants, +2 points de dégâts par niveau du lanceur (maximum de +50). Les victimes peuvent faire un jet de Réflexes réduisant les dégâts de moitié en cas de succès. Ce sort ignore la résistance aux sorts.~
-@1679    = ~Sphère résiliente d'Otiluke
+@1679    = ~Sphère d’isolement d’Otiluke
 (Évocation)
 Niveau : Ens/Mag 4
 Portée : portée de vue
@@ -2420,27 +2420,27 @@ Temps d'incantation : 1
 Zone d'effet : 1 créature
 Jet de sauvegarde : Réflexes, annule
 
-Lorsque ce sort est lancé, le résultat est un globe de force scintillante qui enferme la créature sujette. La sphère résiliente contiendra son sujet pour la durée du sort. Une créature non alliée peut faire un jet de Réflexes avec +8 DD pour esquiver le sort. La sphère est complètement immunisée à tous les dégâts ; la seule méthode pour retirer la sphère est l'utilisation d'un sort de Dissipation de magie. Par conséquent, la créature prise dans le globe est complètement à l'abri de toutes les attaques, mais en même temps est complètement incapable d'affecter le monde extérieur. Ce sort ignore la résistance aux sorts.~
+Lorsque ce sort est lancé, le résultat est un bulle de force scintillante qui enferme la créature sujette. La sphère d’isolement contiendra son sujet pour la durée du sort. Une créature non alliée peut faire un jet de Réflexes avec +8 Degré de Difficulté pour esquiver le sort. La sphère est complètement immunisée à tous les dégâts ; la seule méthode pour retirer la sphère est l'utilisation d'un sort de Dissipation de la magie. La créature enfermée ne risque donc rien, mais elle ne peut plus avoir le moindre impact sur le monde extérieur. Ce sort ignore la résistance aux sorts.~
 @1107    = ~Domination
 (Enchantement)
-Niveau : Bar 5, Ens/Mag 6, Bane 5
+Niveau : Bar 5, Ens/Mag 6, Baine 5
 Portée : portée de vue
 Durée : 3 rounds / niveau
 Temps d'incantation : 5 
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Le sort de domination permet au lanceur de contrôler les actions de toute créature pendant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. La cible obtient un jet de Volonté avec +2 DD pour éviter l'effet. Ce sort ignore la résistance aux sorts.~
-@1814    = ~Domination de masse
+Le sort de domination permet au lanceur de contrôler les actions de toute créature pendant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. Cette dernière a droit à un jet de Volonté à +2 au Degré de Difficulté pour se prémunir de l’effet de Domination. Ce sort ignore la résistance aux sorts.~
+@1814    = ~Domination de groupe
 (Enchantement) 
-Niveau : Bar 8, Ens/Mag 9, Bane 9
+Niveau : Bar 8, Ens/Mag 9, Baine 9
 Portée : portée de vue
 Durée : 1 round/niveau
 Temps d'incantation : 9
 Zone d'effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Volonté, annule
 
-Ce sort force toutes les créatures non alliées au lanceur dans la zone d'effet à faire un jet de Volonté ou être dominées comme si elles étaient affectées par le sort Domination de personne. Les morts-vivants ne sont pas affectés par ce sort. Ce sort ignore la résistance aux sorts.~
+Ce sort force toutes les créatures non alliées avec le lanceur de sorts dans la zone d’effet à faire un jet de sauvegarde contre la Volonté sous peine d’être dominées comme par le sort Domination. Les morts-vivants ne sont pas affectés par ce sort. Ce sort ignore la résistance aux sorts.~
 @36956     = ~Tornade
 (Évocation)
 Niveau : Dru 9
@@ -2448,30 +2448,30 @@ Portée : portée de vue
 Durée : 3 rounds
 Temps d'incantation : 9
 Zone d'effet : Rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
-Une version plus puissante du sort Tourbillon, le sort crée une tornade au point cible qui se déplace aléatoirement. Les créatures qui s'approchent à moins de 4,5 mètres (15 pieds) de la tornade sont aspirées dedans, subissant 3d8 dégâts tranchants par seconde qu'elles restent à l'intérieur. Les créatures sont généralement éjectées de la tornade après environ un round. Les créatures énormes telles que les géants des glaces et les dragons ne sont pas aspirées dans la tornade mais subissent quand même des dégâts tant qu'elles sont dans la zone d'effet. Une seule tornade peut être active à la fois. Ce sort ne peut être lancé qu'à l'extérieur et ignore la résistance aux sorts.~
-@38251     = ~Identifier créature
+Une version plus puissante du sort Tourbillon, le sort crée une tornade au point ciblé qui se déplace aléatoirement. Les créatures se trouvant à moins de 4,5 mètres (15 pieds) de la tornade sont aspirées et subissent 3d8 dégâts tranchants par seconde tant qu’elles restent à l’intérieur. Les créatures sont généralement éjectées de la tornade après environ un round. Les créatures énormes comme les géants du givre et les dragons ne sont pas aspirées par la tornade mais subissent quand même des dégâts lorsqu’elles se trouvent dans la zone d’effet. Une seule tornade peut être active à la fois. Ce sort ne peut être lancé qu’en extérieur et ignore la résistance aux sorts.~
+@38251     = ~Identification de créature
 (Divination)
 Niveau : Bar 2, Dru 2, Rôd 2, Ens/Mag 2
 Portée : portée de vue
 Durée : instantanée
 Temps d'incantation : 2
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
-Identifier créature révèle des informations de combat utiles sur la créature cible. Les informations incluent le niveau de la créature, les points de vie actuels et maximum, le nombre d'attaques par round, les scores de caractéristiques, les résistances, les jets de sauvegarde, et divers autres traits qui dépendent de la créature. Ce sort ignore la résistance aux sorts.~
+Identification de créature révèle des informations de combat utiles sur la créature ciblée. Les informations incluent le niveau de la créature, ses points de vie actuels et maximaux, le nombre d’attaques par round, ses caractéristiques, ses résistances, ses jets de sauvegarde et divers autres traits propres à la créature. Ce sort ignore la résistance aux sorts.~
 @38653     = ~Roulade de rocher
 (Invocation)
 Niveau : Dru 6, Ens/Mag 6
-Portée : Spéciale
+Portée : spéciale
 Durée : instantanée
 Temps d'incantation : 4
 Zone d'effet : Toutes les créatures sur le chemin du rocher
 Jet de sauvegarde : Réflexes, partiel
 
-Roulade de rocher crée un grand rocher, qui roule vers l'avant depuis le lanceur, écrasant les créatures sur son chemin, jusqu'à ce qu'il heurte un mur. Les créatures touchées subissent 12d8 dégâts contondants et sont renversées pendant 2 rounds. Un jet de Réflexes réussi réduit les dégâts de moitié et empêche d'être renversé. Le rocher ignore la résistance aux sorts et voyage toujours vers le sud depuis le lanceur.~
-@38853     = ~Asservir
+Roulade de rocher crée un grand rocher, qui roule vers l'avant depuis le lanceur, écrasant les créatures sur son chemin, jusqu'à ce qu'il heurte un mur. Les créatures touchées subissent 12d8 de dégâts contondants et sont renversées pendant 2 rounds. Un jet de sauvegarde de Réflexes réussi réduit les dégâts de moitié et empêche d’être renversé. Le rocher ignore la résistance aux sorts et se déplace toujours vers le sud depuis le lanceur.~
+@38853     = ~Esclavage
 (Enchantement)
 Niveau : Bar 7, Ens/Mag 8
 Portée : portée de vue
@@ -2480,19 +2480,19 @@ Temps d'incantation : 8
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Ce sort permet au lanceur d'obtenir un contrôle permanent et complet d'une autre créature. La cible doit faire un jet de sauvegarde de Volonté avec +4 DD. Si elle échoue, elle est dominée par le lanceur jusqu'à ce qu'elle meure ou que l'effet soit dissipé. Asservir ignore la résistance aux sorts et peut même affecter les morts-vivants et les créatures artificielles.~
+Ce sort permet au lanceur de prendre le contrôle complet et permanent d’une autre créature. La cible doit réussir un jet de sauvegarde de Volonté avec +4 au Degré de Difficulté. Si elle échoue, elle est dominée par le lanceur jusqu’à sa mort ou jusqu’à ce que l’effet soit dissipé. Esclavage peut même affecter les morts-vivants et les constructions et ignore la résistance aux sorts.~
 @308    = ~ATTAQUE SOURNOISE AMÉLIORÉE :
 
-Vos attaques sournoises sont particulièrement mortelles.
+Vos attaques sournoises sont particulièrement meurtrières.
 
-Compétence : 3 niveaux de roublard par rang dans le don (3, 6, 9, 12, 15)
+Prérequis : 3 niveaux de roublard par rang dans le don (3, 6, 9, 12, 15)
 
 Avantage : Vos attaques sournoises infligent 1d6 dégâts supplémentaires. Ce don peut être pris jusqu'à cinq fois.~
 @730    = ~ESQUIVE :
 
-Vous êtes habile à esquiver les coups.
+Vous êtes passé maître dans l’art d’éviter les coups.
 
-Compétence : Dex 13+. Prendre le don une deuxième fois nécessite 18 niveaux de roublard, Dex 25+, Esquive améliorée, Roulade défensive.
+Prérequis : Dex 13+. Prendre ce don une deuxième fois nécessite 18 niveaux de roublard, Dex 25+, Esquive surnaturelle et Roulade Défensive.
 
 Avantage : Vous recevez un bonus d'esquive de +1 à la classe d'armure contre les attaques d'un adversaire.
 
@@ -2500,15 +2500,15 @@ Lorsqu'il est pris une deuxième fois, le don vous permet également d'esquiver au
 @23089=~Chimère parangon~
 @24039=~Bond~
 @24040=~20 dégâts résistés d'une arme d'enchantement inférieur à +6~
-@56035=~ARTISANAT DES SORTS (Int ; Nécessite formation) :
+@56035=~ARTISANAT DES SORTS (Int ; Entraînement) :
 
 Utilisez cette compétence pour identifier les sorts lorsqu'ils sont lancés ou les sorts déjà en place.~
 @55369=~tranchant~
 @55816=~Ne peut pas utiliser l'objet. (Nécessite <EXIUVAL1> Utilisation d'objets magiques)~
 @55817=~Vous ne pouvez pas poser de pièges pendant que des ennemis sont à proximité.~
 @55818=~Vous ne pouvez pas poser plus de pièges dans cette zone.~
-@55819=~Attaque sournoise avec Coup paralysant (-<EXCRPEN1> For)~
-@55820=~Attaque mortelle avec Coup paralysant (-<EXCRPEN1> For)~
+@55819=~Attaque sournoise avec Attaque handicapante (-<EXCRPEN1> For)~
+@55820=~Attaque mortelle avec Attaque handicapante (-<EXCRPEN1> For)~
 @56057=~Les murs de cette salle sont protégés contre les moyens conventionnels de téléportation, ainsi que les déplacements incorporels et éthérés.~
 @56058=~Les murs des Huit Chambres sont protégés contre les moyens conventionnels de téléportation, ainsi que les déplacements incorporels et éthérés.~
 @10390    = ~Cette robe a été spécialement enchantée pour répondre aux besoins éclectiques du mage aventurier. Outre la protection du porteur contre diverses formes de dégâts contondants et les sorts affectant l'esprit, elle permet également au porteur de protéger son groupe d'aventuriers de ses propres boules de feu.
@@ -2517,22 +2517,22 @@ PARAMÈTRES :
 
 Classe d'armure :  +5 vs. Contondant
 Bonus de sauvegarde :  +5 aux jets de Volonté
-Sorts sûrs : Lorsque le porteur lance un sort à zone d'effet, les alliés font des jets de sauvegarde contre le sort avec -5 DD.
+Sorts sans danger : Lorsque le porteur lance un sort à zone d'effet, les alliés font des jets de sauvegarde contre le sort avec -5 Degré de Difficulté.
 Poids : 1,8 kg (4 lb)~
-@841    = ~UTILISATION D'OBJETS MAGIQUES (Cha ; Nécessite formation ; Barde, Roublard uniquement) :
+@841    = ~UTILISATION D'OBJETS MAGIQUES (Cha ; Entraînement ; Barde, Roublard uniquement) :
 
 Cette compétence permet à un barde ou un roublard d'utiliser des objets normalement interdits. Si la compétence du personnage est supérieure ou égale au seuil indiqué dans la description d'un objet, le personnage peut utiliser cet objet même s'il ne répond pas à ses exigences de classe, race, alignement ou scores de caractéristiques. Le seuil dépend du prix de base de l'objet et d'autres facteurs.
 
-Les baguettes et parchemins sont une exception ; si le personnage ne peut pas les utiliser normalement, plutôt que d'utiliser le système de seuil ci-dessus, il doit faire un test avec cette compétence. Si le personnage échoue à activer l'objet, cette charge est détruite et l'utilisateur subit 1-6 points de dégâts magiques par niveau de l'effet qu'il tentait d'invoquer.~
+Les baguettes et parchemins sont une exception ; si le personnage ne peut pas les utiliser normalement, plutôt que d'utiliser le système de seuil ci-dessus, il doit faire un test avec cette compétence. Si le personnage échoue à activer l'objet, cette charge est détruite et l’utilisateur malchanceux subit 1-6 points de dégâts magiques par niveau de l'effet qu'il tentait d'invoquer.~
 @56036=~Seuil d'utilisation d'objets magiques :~
-@732    = ~Chant de barde amélioré~
-@733    = ~CHANT DE BARDE AMÉLIORÉ :
+@732    = ~Chant du barde amélioré~
+@733    = ~CHANT DU BARDE AMÉLIORÉ :
 
-Votre musique bardique résonne particulièrement avec les auditeurs.
+Votre musique bardique sonne particulièrement bien aux oreilles de vos auditeurs.
 
-Compétence : Au moins trois niveaux de barde.
+Prérequis : Au moins trois niveaux de barde.
 
-Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un bonus supplémentaire de +1 à la CA, l'attaque, les dégâts, les jets de sauvegarde et les tests de compétence. Tout chant de barde que vous jouez qui affecte les ennemis gagne +2 DD.~
+Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un bonus supplémentaire de +1 à la CA, l'attaque, les dégâts, les jets de sauvegarde et les tests de compétence. Tout chant de barde que vous jouez qui affecte les ennemis gagne +2 au Degré de Difficulté.~
 @890    = ~A esquivé l'attaque~
 @55928=~Activer/Désactiver l'enregistrement de buffs~
 @55929=~Effacer l'enregistrement~
@@ -2559,9 +2559,9 @@ Portée : lanceur
 Durée : 30 rounds ou jusqu'à épuisement
 Temps d'incantation : 1
 Zone d'effet : lanceur
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
-Ce sort améliore les projectiles de fronde du lanceur. Tout projectile que le lanceur lance infligera 1d4+1 dégâts supplémentaires, et les projectiles non magiques seront traités comme des armes +1. Le sort se termine une fois que le lanceur a lancé un certain nombre de projectiles : cinq plus un par niveau du lanceur (maximum de 15 au niveau 10).
+Ce sort améliore les projectiles de fronde du lanceur. Tout projectile que le lanceur lance infligera 1d4+1 dégâts supplémentaires et les projectiles non magiques seront traités comme des armes +1. Le sort se termine une fois que le lanceur a lancé un certain nombre de projectiles : 5 + 1 par niveau du lanceur (maximum de 15 au niveau 10).
 
 Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Pierre magique sera lancé au niveau de lanceur complet du rôdeur.~
 @32107     = ~Protection contre le mal
@@ -2571,9 +2571,9 @@ Portée : Contact
 Durée : 10 rounds / niveau
 Temps d'incantation : 1
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
-Ce sort forme une barrière magique autour de la créature cible, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le DD de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2. De plus, la créature est immunisée aux effets de charme et de domination. Les fiélons invoqués n'attaqueront pas leur invocateur ou les alliés de leur invocateur si leur invocateur a Protection contre le mal.~
+Ce sort forme une barrière magique autour de la créature cible, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2. De plus, la créature est immunisée aux effets de charme et de domination. Les fiélons invoqués n'attaqueront pas leur invocateur ou les alliés de leur invocateur si leur invocateur a Protection contre le mal.~
 @32408     = ~Cercle magique contre le mal
 (Abjuration) [Bon]
 Niveau : Prê 4, Pal 4, Ens/Mag 4, Ilmater 3
@@ -2581,9 +2581,9 @@ Portée : lanceur
 Durée : 10 rounds / niveau
 Temps d'incantation : 7
 Zone d'effet : Rayon de 3 mètres (10 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
-Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le DD de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2, ainsi qu'une immunité aux effets de charme et de domination.~
+Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2, ainsi qu'une immunité aux effets de charme et de domination.~
 @36454     = ~Cailloux en rochers
 (Transmutation)
 Niveau : Prê 5, Dru 4, Rôd 4
@@ -2591,7 +2591,7 @@ Portée : lanceur
 Durée : 5 rounds/niveau ou jusqu'à épuisement
 Temps d'incantation : 4
 Zone d'effet : lanceur
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort transforme les projectiles de fronde du lanceur en rochers. Pendant que le sort est actif, si le lanceur lance un projectile, il se transforme instantanément en un grand rocher qui conserve la vitesse du projectile original. Le rocher inflige 7d4 dégâts supplémentaires s'il touche (en plus des dégâts précédents du projectile). Seul un nombre limité de projectiles peut être transformé en rochers avant que le sort ne se termine : jusqu'à un par 3 niveaux.
 
@@ -2603,7 +2603,7 @@ Portée : portée de vue
 Durée : 3 rounds + 1 round / niveau
 Temps d'incantation : 5
 Zone d'effet : Rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort renforce les attaques de tout animal allié dans la zone d'effet, lui accordant +3 pour toucher et les dégâts jusqu'à ce que la durée se termine. Au niveau 8, ce sort accorde également aux animaux un bonus d'amélioration de +1, faisant que leurs attaques naturelles frappent comme une arme +1 (1d12 dégâts tranchants de base). Aux niveaux 12 et 16, ce bonus augmente à +2 et +3.~
 @10586    = ~Les aasimars sont des descendants directs d'une union entre un mortel et un serviteur céleste. Bien qu'ils portent normalement des pouvoirs innés, il n'est pas inhabituel pour un aasimar de revêtir une armure bénie. Tel est le cas de cette armure unique connue sous le nom d'Aura d'aasimar. L'armure scintille d'une lueur argentée et est ornée de gravures bleues exquises sur la poitrine. Un simple regard sur l'armure et il est facile de voir qu'elle possède des protections puissantes.
@@ -2620,7 +2620,7 @@ Bonus de Dex maximum :  +1
 Malus de compétence d'armure :  -5
 Échec d'incantation arcanique :  35%
 Spécial :
-  Les créatures mauvaises ont un malus de -2 pour toucher le porteur, et le DD de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 2 (se cumule avec Protection contre le mal)
+  Les créatures mauvaises ont un malus de -2 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 2 (se cumule avec Protection contre le mal)
   Garde-sort : Immunité à Fléau impie et Blasphème
 Poids : 22,7 kg (50 lb)~
 @10588    = ~Les aasimars sont des descendants directs d'une union entre un mortel et un serviteur céleste. Bien qu'ils portent normalement des pouvoirs innés, il n'est pas inhabituel pour un aasimar de revêtir une armure bénie. Tel est le cas de cette armure unique connue sous le nom d'Aura céleste. L'armure scintille d'une lueur argentée et est ornée de gravures bleues exquises sur la poitrine. Un simple regard sur l'armure et il est facile de voir qu'elle possède des protections puissantes.
@@ -2637,7 +2637,7 @@ Bonus de Dex maximum :  +1
 Malus de compétence d'armure :  -5
 Échec d'incantation arcanique :  35%
 Spécial :
-  Les créatures mauvaises ont un malus de -4 pour toucher le porteur, et le DD de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 4 (se cumule avec Protection contre le mal)
+  Les créatures mauvaises ont un malus de -4 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 4 (se cumule avec Protection contre le mal)
   Le porteur est sous l'effet d'Aura sacrée
   Résistance : 20/- Résistance au feu
   Bonus de sauvegarde : +3 aux jets de Vigueur
@@ -2694,7 +2694,7 @@ Type de dégâts :  Contondant
 Spécial :
   Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 20%
 Poids : 1,8 kg (4 lb)
-Compétence : arme courante, Bâton de combat
+Prérequis : arme courante, Bâton de combat
 Type :  Deux mains~
 @11081    = ~Bâton d'éclair de Delnar~
 @11082    = ~Delnar était un mage timide qui ne fut jamais un aventurier. Il passa la plupart de sa vie dans l'étude tranquille, vivant avec sa mère, essayant d'apprendre l'art de fabriquer des objets magiques. Malheureusement, sa mère avait l'habitude de l'interrompre à des moments cruciaux pendant le processus d'enchantement, souvent avec des résultats désastreux. Le Bâton magique de Delnar est remarquable pour le manque d'interruptions pendant sa construction (et pourrait bien être le seul objet fabriqué par Delnar qui fonctionne comme prévu).
@@ -2708,7 +2708,7 @@ Type de dégâts :  Contondant
 Spécial :
   Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 40%
 Poids : 1,8 kg (4 lb)
-Compétence : arme courante, Bâton de combat
+Prérequis : arme courante, Bâton de combat
 Type :  Deux mains~
 @10237    = ~On dit que ces magnifiques brassards furent construits dans les montagnes de l'Échine du Monde, et pas si longtemps. Sur la côte de la Mer de Glace Mouvante, vivait Prashnak, un abjurateur -- et un têtu de surcroît. Apparemment, Prashnak avait beaucoup de difficulté à repousser un fléau implacable de trolls, qui sans doute n'étaient intéressés que par son abri creusé et bien positionné. Prashnak utilisait des tempêtes d'acide pour tenir les trolls à distance. Cependant, le jeune mage se lassait des attaques constantes, et les trolls devenaient plus audacieux.
 
@@ -2773,7 +2773,7 @@ Bonus d'armure générique : +3
 Spécial :
  Résistance : 30/-  Résistance au feu
  Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 30%
- Pouvoir de sort :  Peut lancer instantanément le sort Feu solaire (au niveau 15, DD de sauvegarde 40) trois fois par jour
+ Pouvoir de sort :  Peut lancer instantanément le sort Feu solaire (au niveau 15, Degré de Difficulté de sauvegarde 40) trois fois par jour
 Poids : 0,5 kg (1 lb)~
 @10384    = ~Les Robes de sorcier de résistance au froid sont un spectacle commun dans la région de la Côte des Épées, surtout lorsqu'on voyage vers le nord vers Neverwinter et les Dales de Glace. Beaucoup de jeunes mages la reçoivent comme cadeau de leurs instructeurs après avoir réussi à terminer leurs cinq premières années d'étude.
 
@@ -2812,7 +2812,7 @@ Portée : lanceur
 Durée : 30 rounds
 Temps d'incantation : 5
 Zone d'effet : lanceur
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort donne temporairement au rôdeur un carquois contenant un approvisionnement illimité de flèches magiques. Les flèches ont un bonus supplémentaire de +1 à l'attaque et aux dégâts pour chaque 4 niveaux de rôdeur. Le carquois ne peut pas être lâché ou donné à un autre personnage.
 
@@ -2825,8 +2825,8 @@ Niveau : Prê 3, Ens/Mag 5, Tempus 3
 Portée : portée de vue
 Durée : instantanée 
 Temps d'incantation : 9
-Zone d'effet : Spéciale 
-Jet de sauvegarde : Aucun
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun
 
 Ce sort fait surgir un zombie mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le zombie invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.
 
@@ -2837,8 +2837,8 @@ Niveau : Prê 3, Ens/Mag 5, Tempus 3
 Portée : portée de vue
 Durée : instantanée 
 Temps d'incantation : 9
-Zone d'effet : Spéciale 
-Jet de sauvegarde : Aucun 
+Zone d'effet : spéciale 
+Jet de sauvegarde : aucun 
 
 Ce sort fait surgir un squelette mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le squelette invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.~
 @1019    = ~Bouclier de Lathandre
@@ -2848,7 +2848,7 @@ Portée : Contact
 Durée : 3 rounds
 Temps d'incantation : 4
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort accorde à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perforants, feu, froid, acide et électricité pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
 @1850    = ~Grand bouclier de Lathandre
@@ -2858,7 +2858,7 @@ Portée : Contact
 Durée : 3 rounds
 Temps d'incantation : 8
 Zone d'effet : 1 créature
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort accorde une réduction de dégâts de 30/- à toutes les formes de dégâts et fixe la Résistance aux sorts à 40 si elle est inférieure pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
 @1521    = ~Aura sacrée
@@ -2868,7 +2868,7 @@ Portée : 6 mètres (20 pieds)
 Durée : 1 round/niveau
 Temps d'incantation : 6
 Zone d'effet : Alliés dans un rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Une radiance divine brillante entoure les sujets, les protégeant des attaques, leur accordant une résistance aux sorts, et aveuglant les créatures mauvaises lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
 Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la CA et un bonus de +4 à toutes les sauvegardes.
@@ -2883,7 +2883,7 @@ Portée : 6 mètres (20 pieds)
 Durée : 1 round/niveau
 Temps d'incantation : 6
 Zone d'effet : Alliés dans un rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Une obscurité malveillante entoure les sujets, les protégeant des attaques, leur accordant une résistance aux sorts, et aveuglant les créatures bonnes lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
 Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la CA et un bonus de +4 à toutes les sauvegardes.
@@ -2898,7 +2898,7 @@ Portée : lanceur
 Durée : 20 rounds
 Temps d'incantation : 1
 Zone d'effet : lanceur
-Jet de sauvegarde : Aucun
+Jet de sauvegarde : aucun
 
 Ce sort accorde au lanceur un bonus de 5/- à toutes les résistances aux dégâts, un bonus d'armure générique de +5, une résistance aux sorts fixée à 30 si elle est inférieure, et +5 à toutes les sauvegardes.~
 @10157    = ~Une bague est une petite bande de métal précieux utilisée comme bijou. Certaines bagues rares ont reçu des enchantements qui confèrent diverses capacités magiques. Ces bagues sont très recherchées, en particulier par ceux de la profession d'aventurier. Sans raison apparente, cette bague est chaude au toucher.
@@ -3019,9 +3019,9 @@ Poids : 11,3 kg (25 lb)~
 
 La lame de ce vengeur sacré brille d'une douce lumière dorée. Inscrit sur la poignée en lettres dorées fluides est "Cera Sumat," qui se traduit par "Six, maintenant réduits au silence." Cera Sumat gagna son nom grâce aux labeurs du vieux duc Kholsa Ehld, un homme approchant près de quatre-vingts ans, qui jura d'accomplir une tâche que les plus grands guerriers de trois royaumes craignaient de faire... tout à cause des pleurs d'un enfant. 
 
-Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Bane étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Bane et de ses serviteurs. 
+Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Baine étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Baine et de ses serviteurs. 
 
-Pendant ces temps sombres, les plus terribles des serviteurs de Bane étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
+Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
 
 Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée. 
 
@@ -3050,7 +3050,7 @@ Type de dégâts :  Tranchant
 Spécial :
   Résistance aux sorts : Fixée à 30 si inférieure
   Vengeur sacré : +2d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
-  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté DD 21). Frapper un allié dissipe la magie sur eux sans sauvegarde.
+  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 21). Frapper un allié dissipe la magie sur eux sans sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
 Type : à une main~
@@ -3059,9 +3059,9 @@ Type : à une main~
 
 La lame de ce vengeur sacré brille d'une douce lumière dorée. Inscrit sur la poignée en lettres dorées fluides est "Cera Sumat," qui se traduit par "Six, maintenant réduits au silence." Cera Sumat gagna son nom grâce aux labeurs du vieux duc Kholsa Ehld, un homme approchant près de quatre-vingts ans, qui jura d'accomplir une tâche que les plus grands guerriers de trois royaumes craignaient de faire... tout à cause des pleurs d'un enfant. 
 
-Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Bane étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Bane et de ses serviteurs. 
+Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Baine étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Baine et de ses serviteurs. 
 
-Pendant ces temps sombres, les plus terribles des serviteurs de Bane étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
+Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
 
 Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée.
 
@@ -3090,7 +3090,7 @@ Type de dégâts :  Tranchant
 Spécial :
   Résistance aux sorts : Fixée à 40 si inférieure
   Vengeur sacré : +4d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
-  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté DD 32). Frapper un allié dissipe la magie sur eux sans sauvegarde.
+  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 32). Frapper un allié dissipe la magie sur eux sans sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
 Type : à une main~
@@ -3104,9 +3104,9 @@ Enchantement :  +5
 Type de dégâts :  Contondant
 Spécial :
   Résistance aux sorts : Fixée à 37 si inférieure
-  Réduction de résistance : Chaque coup réduit la Résistance aux sorts de la cible de 5 pendant 10 rounds (Volonté DD 37, cumulatif)
+  Réduction de résistance : Chaque coup réduit la Résistance aux sorts de la cible de 5 pendant 10 rounds (Volonté Degré de Difficulté 37, cumulatif)
 Poids : 1,8 kg (4 lb)
-Compétence : arme courante, Bâton de combat
+Prérequis : arme courante, Bâton de combat
 Type :  Deux mains~
 @12532    = ~Ce bouclier massif est presque aussi grand que le porteur. Fondamentalement, c'est un mur portable destiné à fournir un abri. Il peut fournir jusqu'à un abri total, selon la distance à laquelle vous sortez de derrière lui. Un bouclier tour, cependant, ne fournit pas d'abri contre les sorts ciblés ; un lanceur de sorts peut lancer un sort sur vous en ciblant le bouclier que vous tenez. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
 
@@ -3194,7 +3194,7 @@ Avantages :
 * Niveau 2 : Évasion. Quand un roublard atteint le niveau 2, il ou elle gagne la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un roublard fait un jet de réflexe réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
 * Niveau 3 : Esquive instinctive. Les roublards conservent leur bonus de Dextérité à la Classe d'armure s'ils sont attaqués par des ennemis invisibles.
 * Niveau 6 : Esquive instinctive améliorée. Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard sauf si l'attaquant est de niveau supérieur.
-* Niveau 8 : Désamorcer les pièges complexes. Les roublards de ce niveau ou supérieur sont les seuls personnages qui peuvent désamorcer les pièges avec un DD de 20 ou supérieur.
+* Niveau 8 : Désamorcer les pièges complexes. Les roublards de ce niveau ou supérieur sont les seuls personnages qui peuvent désamorcer les pièges avec un Degré de Difficulté de 20 ou supérieur.
 * Niveau 10 : Don bonus. Le roublard gagne un don bonus, et gagne également accès à un certain nombre de nouveaux dons disponibles uniquement aux roublards. Ceux-ci incluent Frappe paralysante, Évasion améliorée, Esprit insaisissable, Roulade défensive, et Opportuniste. Le roublard gagne un autre don bonus tous les 3 niveaux après le niveau 10.
 * Les roublards gagnent +1 en chance tous les 5 niveaux.
 
@@ -3210,21 +3210,21 @@ Pendant que cette capacité est active, vos attaques sournoises réduisent la vite
 
 Votre compétence avec les attaques sournoises vous permet de causer une blessure qui saigne.
 
-Compétence : Au moins un niveau de roublard, bonus d'attaque de base +4 ou supérieur.
+Prérequis : Au moins un niveau de roublard, bonus d'attaque de base +4 ou supérieur.
 
 Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises infligent une blessure qui saigne qui inflige 10 dégâts supplémentaires sur 10 rounds. Pour chaque six niveaux de roublard après 1 (c'est-à-dire aux niveaux 7, 13, 19, et 25), le roublard inflige 10 dégâts supplémentaires sur les 10 rounds. Cette capacité ne peut pas être active en même temps que Coup au jarret.~
 @734    = ~COUP AU JARRET :
 
 Lors d'une attaque sournoise, votre personnage peut mutiler sa cible de manière à ce que son mouvement soit considérablement réduit.
 
-Compétence : Au moins trois niveaux de roublard.
+Prérequis : Au moins trois niveaux de roublard.
 
 Avantage :  Donne au roublard une capacité qui fait que ses attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds. C'est un effet non magique qui contourne Liberté de mouvement. Cette capacité ne peut pas être active en même temps que Frappe artérielle.~
 @735    = ~ATTAQUE PUISSANTE :
 
 Vous pouvez faire des attaques au corps à corps exceptionnellement puissantes.
 
-Compétence : For 13+
+Prérequis : For 13+
 
 Avantage : Lors de votre action, avant de faire des jets d'attaque pour un round, vous pouvez choisir de soustraire un nombre de tous les jets d'attaque au corps à corps et d'ajouter le même nombre à tous les jets de dégâts au corps à corps, ou deux fois ce nombre si vous maniez une arme à deux mains. Ce nombre ne peut pas dépasser votre bonus d'attaque de base. Le malus sur les attaques et le bonus sur les dégâts s'appliquent jusqu'à votre prochaine action.~
 @977    = ~Rage barbare
@@ -3268,7 +3268,7 @@ Avantages :
 * Niveau 3 : Le Chant de Kaudies. Lorsqu'il est joué, les alliés du barde sont immunisés aux sorts et capacités nuisibles basés sur le son, y compris Ordre, Silence, Ordre supérieur, Parole sacrée, Blasphème, Mot de pouvoir : Sommeil, Rafale sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Aveuglement, Grand cri, Gémissement de la banshee, Mot de pouvoir : Mort, Son du vide, gémissements de harpies, et les effets uniquement ennemis de Chant, Prière, et Récitation.
 * Niveau 5 : Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 chance, et +2 aux tests de compétence (en plus du +1 aux tests de compétence accordé par la chance). Au niveau 15 et tous les 10 niveaux par la suite, ce chant accorde un +1 supplémentaire à la chance et +2 aux tests de compétence.
 * Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer que les sorts d'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par ex. seulement un sort de niveau 1 quand le barde atteint le niveau 7), bien qu'il puisse remplacer les sorts de niveau 7 à partir du niveau 25, et les sorts de niveau 8 à partir du niveau 28.
-* Niveau 9 : Le Désir de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté ou être envoûté, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le DD de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
+* Niveau 9 : Le Désir de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté ou être envoûté, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le Degré de Difficulté de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
 * Niveau 13 : Le Chant de guerre de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/-, et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la CA, 3/- résistance aux dégâts physiques, 3 points de vie soignés par round.
 * Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, résistance aux sorts fixée à 35 si inférieure, et les effets du Conte de Curran Cœurfort, de la Mélodie de Tymora, et du Chant de guerre de Sith. Au niveau 50, ce chant fixe la résistance aux sorts à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
 
@@ -3311,7 +3311,7 @@ Niveau 17+ : 1d8+5
 * Frappe de ki : Au niveau 5, l'attaque à mains nues du moine est renforcée avec le ki, et gagne +1 enchantement avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
 * La classe d'armure naturelle d'un moine commence à 10, puis augmente de +1 au niveau 5 et tous les 5 niveaux par la suite.
 * Quand il ne porte pas d'armure (les robes sont acceptables), un moine ajoute son bonus de Sagesse à sa CA de la même manière que son bonus de Dextérité. Ce bonus ne peut pas dépasser le niveau de moine du personnage.
-* Attaques étourdissantes : Quand cette capacité est utilisée, toutes les attaques à mains nues du moine dans le round suivant forcent la victime à faire un jet de Vigueur (DD 10 + modificateur de Sagesse + la moitié du niveau du moine) ou être étourdie pendant 1 round. Un moine peut faire une attaque étourdissante 1/jour/niveau.
+* Attaques étourdissantes : Quand cette capacité est utilisée, toutes les attaques à mains nues du moine dans le round suivant forcent la victime à faire un jet de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine) ou être étourdie pendant 1 round. Un moine peut faire une attaque étourdissante 1/jour/niveau.
 * Évasion : Les moines ont la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un moine fait un jet de Réflexes réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
 * Niveau 2 : Déviation de flèches. Le moine gagne le don Déviation de flèches, donnant un bonus divers de +1 contre les armes de jet. De plus, le moine bloque automatiquement la première instance de dégâts de projectiles qui le toucheraient chaque round. Le moine doit avoir une main libre pour bloquer les projectiles de cette manière.
 * Niveau 3 : Mouvement rapide. Le moine se déplace de 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
@@ -3322,7 +3322,7 @@ Niveau 17+ : 1d8+5
 * Niveau 10 : Pas abondant. Le moine peut se téléporter à n'importe quel endroit en vue une fois par jour.
 * Niveau 11 : Corps de diamant. Le moine a un tel contrôle sur son propre métabolisme qu'il gagne l'immunité à tous les types de poison.
 * Niveau 13 : Âme de diamant. Le moine gagne une résistance aux sorts. Sa résistance aux sorts est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance aux sorts du moine ou plus sur 1d20 + le niveau du lanceur de sorts.
-* Niveau 15 : Paume frémissante. Cette attaque terrifiante permet au moine de créer des vibrations dans le corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt sauf si elle fait un jet de sauvegarde de Vigueur (DD 10 + modificateur de Sagesse + la moitié du niveau du moine). Les créatures artificielles et morts-vivants ne peuvent pas être affectés. Le moine gagne une utilisation supplémentaire de Paume frémissante tous les six niveaux par la suite.
+* Niveau 15 : Paume frémissante. Cette attaque terrifiante permet au moine de créer des vibrations dans le corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt sauf si elle fait un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine). Les créatures artificielles et morts-vivants ne peuvent pas être affectés. Le moine gagne une utilisation supplémentaire de Paume frémissante tous les six niveaux par la suite.
 * Niveau 19 : Corps vide. Le moine peut assumer un état incorporel pendant 5 rounds un nombre de fois par jour égal à son niveau divisé par 2. Pendant qu'il est incorporel, le moine peut traverser les murs, et la moitié des attaques qui touchent le moine n'infligent aucun dégât physique. Les attaques à mains nues du moine ignoreront les bonus d'armure et de bouclier.
 * Niveau 20 : Soi parfait. Le moine a accordé son corps avec compétence et capacités quasi-magiques au point qu'il devient une créature magique. Il est désormais traité comme un extraplanaire (créature extraplanar) plutôt que comme un humanoïde. Par exemple, charme personne ne les affecte pas. De plus, le moine gagne une réduction de dégâts 20/+1. Cela signifie que le moine ignore (régénère instantanément) les 20 premiers points de dégâts de toute attaque sauf si les dégâts sont infligés par une arme avec un bonus d'amélioration de +1 (ou supérieur), par un sort, ou par une forme d'énergie (feu, froid, etc.). En tant qu'extraplanaire, un moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées, comme protection contre la loi.
 
@@ -3333,14 +3333,14 @@ Désavantages :
 
 Vos attaques sournoises continuent d'infliger des dégâts même après avoir frappé.
 
-Compétence : Frappe paralysante, 30 niveaux de roublard
+Prérequis : Frappe paralysante, 30 niveaux de roublard
 
 Avantage : Si vous infligez des dégâts avec une attaque sournoise, vous infligez les mêmes dégâts à cet ennemi une fois de plus un round plus tard.~
 @358    = ~MÉTAMAGIE, SORT ACCÉLÉRÉ :
 
 Vous pouvez lancer rapidement un sort supplémentaire chaque round.
 
-Compétence : La capacité de lancer des sorts de niveau 5.
+Prérequis : La capacité de lancer des sorts de niveau 5.
 
 Avantage : Vous gagnez la capacité Sort accéléré, utilisable à volonté comme action libre. L'utiliser vous permet de lancer instantanément un sort, même si vous avez déjà lancé un sort pour le round. Le sort accéléré occupe un emplacement de sort de quatre niveaux supérieurs. Un seul sort peut être accéléré par round.~
 @963    = ~Sort accéléré
@@ -3350,14 +3350,14 @@ Cette métamagie vous permet de lancer instantanément votre prochain sort, même s
 
 Vous êtes particulièrement habile à causer des coups critiques.
 
-Compétence : Bonus d'attaque de base +8 ou supérieur.
+Prérequis : Bonus d'attaque de base +8 ou supérieur.
 
 Avantage : Lors de la détermination des critiques, la plage de menace de base de l'arme maniée est doublée. Une hache fera un coup critique sur un 19-20, une épée longue sur un 17-20, et un cimeterre sur un 15-20.~
 @372    = ~MOBILITÉ :
 
 Vous pouvez esquiver les attaques particulièrement bien en vous déplaçant.
 
-Compétence : Dex 13+, Esquive. Prendre le don une deuxième fois nécessite Dex 21+ et Attaque bondissante.
+Prérequis : Dex 13+, Esquive. Prendre le don une deuxième fois nécessite Dex 21+ et Attaque bondissante.
 
 Avantage : En vous déplaçant, vous gagnez un bonus de Classe d'armure de +4. Ce bonus est doublé contre les attaques d'opportunité dues au fait de sortir de la portée d'arme d'un ennemi.
 
@@ -3366,7 +3366,7 @@ Lorsqu'il est pris une deuxième fois, le don vous empêche de provoquer des attaq
 
 La souillure des yuan-ti coule dans vos veines. Aucun signe extérieur ne révèle votre héritage, mais vous êtes quelque chose de plus - ou de moins - qu'entièrement humain.
 
-Compétence : Humain
+Prérequis : Humain
 
 Avantage : Votre race change en yuan-ti sang-pur. Cette race a les caractéristiques suivantes :
 
@@ -3395,33 +3395,33 @@ Désavantages :
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
 @930    = ~Enchevêtrement
 
-Quand un sort d'Enchevêtrement est lancé, il doit être lancé à l'extérieur, sinon il ne fonctionnera pas et le sort est gaspillé. Il fait pousser des vignes du sol pour envelopper, tordre et entrelacer toutes les créatures dans la zone d'effet, empêchant le mouvement. Les créatures doivent faire un jet de Réflexes chaque round pour se déplacer à travers la zone enchevêtrée. Le DD est 11 + la moitié du niveau + bonus de Charisme. Les créatures enchevêtrées peuvent encore effectuer des actions normales mais ne peuvent pas se déplacer et subissent un malus de -2 à la Classe d'armure et aux jets d'attaque, ainsi qu'une chance de 50% d'échec de sort. Toutes les créatures dans la zone d'effet qui réussissent leur jet de Réflexes se déplacent à la moitié de la vitesse.~
+Quand un sort d'Enchevêtrement est lancé, il doit être lancé à l'extérieur, sinon il ne fonctionnera pas et le sort est gaspillé. Il fait pousser des vignes du sol pour envelopper, tordre et entrelacer toutes les créatures dans la zone d'effet, empêchant le mouvement. Les créatures doivent faire un jet de Réflexes chaque round pour se déplacer à travers la zone enchevêtrée. Le Degré de Difficulté est 11 + la moitié du niveau + bonus de Charisme. Les créatures enchevêtrées peuvent encore effectuer des actions normales mais ne peuvent pas se déplacer et subissent un malus de -2 à la Classe d'armure et aux jets d'attaque, ainsi qu'une chance de 50% d'échec de sort. Toutes les créatures dans la zone d'effet qui réussissent leur jet de Réflexes se déplacent à la moitié de la vitesse.~
 @931    = ~Charme personne
 
-Ce sort charme un humanoïde unique de taille humaine ou plus petit pendant 5 rounds. La personne reçoit un jet de Volonté pour éviter l'effet ; le DD est 11 + la moitié du niveau + bonus de Charisme. Si le destinataire du sort échoue à son jet de sauvegarde, il considère le lanceur comme un ami et allié de confiance à écouter et protéger. Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera aussi rapidement que possible.~
+Ce sort charme un humanoïde unique de taille humaine ou plus petit pendant 5 rounds. La personne reçoit un jet de Volonté pour éviter l'effet ; le Degré de Difficulté est 11 + la moitié du niveau + bonus de Charisme. Si le destinataire du sort échoue à son jet de sauvegarde, il considère le lanceur comme un ami et allié de confiance à écouter et protéger. Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera aussi rapidement que possible.~
 @932    = ~Épouvante
 
-Un sort d'Épouvante permet au sorcier de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sort comme quelqu'un ou quelque chose d'inimical qui semble alors s'avancer vers elle de manière menaçante. Si la créature ne fait pas un jet de Volonté réussi, elle panique pendant 3 rounds. Le DD de base est 11 + bonus de Charisme, bien qu'il obtienne également +1 pour chaque deux niveaux d'expérience du lanceur, jusqu'à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantasme de son propre esprit le fait. Épouvante n'affecte pas les morts-vivants ou les créatures artificielles.~
+Un sort d'Épouvante permet au sorcier de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sort comme quelqu'un ou quelque chose d'inimical qui semble alors s'avancer vers elle de manière menaçante. Si la créature ne fait pas un jet de Volonté réussi, elle panique pendant 3 rounds. Le Degré de Difficulté de base est 11 + bonus de Charisme, bien qu'il obtienne également +1 pour chaque deux niveaux d'expérience du lanceur, jusqu'à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantasme de son propre esprit le fait. Épouvante n'affecte pas les morts-vivants ou les créatures artificielles.~
 @933    = ~Immobilisation d'animal
 
-Ce sort maintient les animaux rigides et immobiles. Les animaux avec des pouvoirs magiques tels que les loups hivernaux comptent comme des animaux, tout comme certains monstres plus animaliers tels que les remorhazes. L'effet est centré sur un point sélectionné par le lanceur, et 1-4 animaux dans un rayon de 6 mètres (20 pieds) du point cible sont affectés. Ceux qui réussissent leur jet de Volonté ne sont pas affectés par le sort. Le DD est 12 + la moitié du niveau + bonus de Charisme. Être immobilisé n'empêche pas la détérioration de l'état du sujet due aux blessures, maladies ou poison.~
+Ce sort maintient les animaux rigides et immobiles. Les animaux avec des pouvoirs magiques tels que les loups hivernaux comptent comme des animaux, tout comme certains monstres plus animaliers tels que les remorhazes. L'effet est centré sur un point sélectionné par le lanceur, et 1-4 animaux dans un rayon de 6 mètres (20 pieds) du point cible sont affectés. Ceux qui réussissent leur jet de Volonté ne sont pas affectés par le sort. Le Degré de Difficulté est 12 + la moitié du niveau + bonus de Charisme. Être immobilisé n'empêche pas la détérioration de l'état du sujet due aux blessures, maladies ou poison.~
 @934    = ~Polymorphie : Vipère géante~
 @935    = ~Polymorphie : Vipère géante
 
-Le personnage se métamorphose en vipère géante. Sous forme de vipère géante, les attaques du personnage empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur DD 15). Au niveau 12 et tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 CA, et le DD de sauvegarde contre son poison augmente de 3.~
+Le personnage se métamorphose en vipère géante. Sous forme de vipère géante, les attaques du personnage empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur Degré de Difficulté 15). Au niveau 12 et tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 CA, et le Degré de Difficulté de sauvegarde contre son poison augmente de 3.~
 @971    = ~Ténèbres
 
-Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent faire un jet de sauvegarde de Vigueur ou être effectivement aveuglées. Le DD est 12 + la moitié du niveau + bonus de Charisme. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles n'ont qu'une capacité limitée à voir à travers les ténèbres magiques, obtenant un malus d'attaque de -4 sur un échec de sauvegarde. Les créatures avec une vision dans le noir supérieure de 120 pieds (par ex. drows, nains gris ou gnomes des profondeurs) n'obtiennent qu'un malus d'attaque de -2. Les diables et créatures immunisées à l'aveuglement ne sont pas affectés.~
+Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent faire un jet de sauvegarde de Vigueur ou être effectivement aveuglées. Le Degré de Difficulté est 12 + la moitié du niveau + bonus de Charisme. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles n'ont qu'une capacité limitée à voir à travers les ténèbres magiques, obtenant un malus d'attaque de -4 sur un échec de sauvegarde. Les créatures avec une vision dans le noir supérieure de 120 pieds (par ex. drows, nains gris ou gnomes des profondeurs) n'obtiennent qu'un malus d'attaque de -2. Les diables et créatures immunisées à l'aveuglement ne sont pas affectés.~
 @393    = ~Archer arcanique~
 @394    = ~ARCHER ARCANIQUE :
 
 Vous êtes formé comme archer arcanique et savez comment tirer des sorts comme des flèches.
 
-Compétence : Elfe ou demi-elfe, 1 niveau de sorcier ou ensorceleur, et maîtrise des arcs (si drow ou demi-elfe)
+Prérequis : Elfe ou demi-elfe, 1 niveau de sorcier ou ensorceleur, et maîtrise des arcs (si drow ou demi-elfe)
 
 Avantage : Vous gagnez la capacité Imprégner flèche, utilisable comme action libre. Si vous l'utilisez puis tentez de lancer un sort offensif à distance de sorcier ou ensorceleur de niveau 5 ou inférieur qui implique un projectile voyageant depuis le lanceur, au lieu d'être lancé, il sera stocké dans une flèche qui est créée dans un emplacement de munitions vide (consommant une utilisation du sort). Cette flèche a un enchantement égal au niveau du sort. Lorsqu'elle est tirée, la flèche utilise le même projectile et zone d'effet que le sort, et inflige les dégâts physiques de la flèche en plus des effets du sort (comme s'il était lancé au niveau de sorcier ou ensorceleur du personnage) à toutes les créatures qu'elle touche. Cette capacité peut être utilisée une fois par jour, plus une fois de plus pour chaque deux points de bonus d'attaque de base.
 
-Cependant, vos sorts ont -4 DD lorsqu'ils sont lancés sans les imprégner.
+Cependant, vos sorts ont -4 Degré de Difficulté lorsqu'ils sont lancés sans les imprégner.
 
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
 @55117=~Chaman des esprits~
@@ -3493,7 +3493,7 @@ Spécial :
   Une fois et demie la portée d'un arc normal
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +4
 Poids : 1,4 kg (3 lb)
-Compétence :  Arme de guerre, Arc
+Prérequis :  Arme de guerre, Arc
 Type :  Deux mains~
 @11766    = ~Cet arc long est le sujet d'une légende parmi les citadelles querelleuses de la Côte des Épées, une légende âprement débattue dans les salles de beuverie et tavernes dans et le long de la côte battue par les tempêtes. Selon le récit, l'arc tire son nom de son rôle central dans l'évasion d'une jeune femme nommée Sophia, une jeune fille typique qui était promise en mariage au fils du duc Hugh Gladegrin (le fils est décrit comme horriblement laid et de tempérament fétide, bien sûr). Sophia, cependant, croyait qu'elle était destinée à épouser l'un des archers du duc, un jeune homme élégant aux cheveux dorés qui parcourait les terres environnantes abattant des bêtes immondes d'un seul son de son puissant arc. Selon le récit, l'un des sorciers de la cour (un transmutateur) prit pitié du sort de la jeune femme et lança un sort qui la transforma en flèche pendant une heure. Le transmutateur arrangea que Sophia soit tirée depuis le mur du château vers un navire attendant au large, où elle pourrait naviguer vers la liberté.
 
@@ -3509,7 +3509,7 @@ Spécial :
   Une fois et demie la portée d'un arc normal.
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +7
 Poids : 1,4 kg (3 lb)
-Compétence :  Arme de guerre, Arc
+Prérequis :  Arme de guerre, Arc
 Type :  Deux mains~
 @24043=~Ténèbres de cambion~
 @48   = ~Ajuster les bonus de PV des créatures en mode Cœur de fureur~
