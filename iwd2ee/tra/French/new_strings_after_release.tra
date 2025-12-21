@@ -27,7 +27,7 @@ Désavantages :
 
 PARAMÈTRES :
 
-Résistance :  20/- de résistance au froid
+Résistance : 20/- de résistance au froid
 Augmente de 20% tous les dégâts de froid infligés par le personnage
 Poids : 1,4 kg (3 lb)~
 
@@ -39,7 +39,7 @@ PARAMÈTRES :
 Dégâts : 1d4 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : Perforants
+Type de dégâts : perforants
 Spécial :
  Flammes jumelles : +1d6 de dégâts du feu. Si le personnage combat à deux armes, son autre arme bénéficie également de +1d6 de dégâts du feu.
 Poids : 0,5 kg (1 lb)
@@ -56,7 +56,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 3
 Bonus d’attaque : +3
 Enchantement : +3
-Type de dégâts : Perforants
+Type de dégâts : perforants
 Spécial :
  Déplacement silencieux : +6
  Discrétion : +6
@@ -74,7 +74,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : Perforants
+Type de dégâts : perforants
 Spécial :
  Déplacement Silencieux : +12
  Discrétion : +12
@@ -90,7 +90,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Contondant : 66% de chances d’infliger +3d6 points de dégâts contondants à la tête.
  Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de Degré de Difficulté 33)
@@ -722,7 +722,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +2
 Bonus d’attaque : +2
 Enchantement : +2
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Sonique : +1d6 de dégâts soniques
  Dissipation de la magie : 15% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 15 contre la Volonté + bonus de Force du porteur)
@@ -741,7 +741,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +4
 Bonus d’attaque : +4
 Enchantement : +4
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Sonique : +2d6 de dégâts soniques
  Dissipation de la magie : 30% de chances de lancer Dissipation de la magie sur la cible (Degré de Difficulté de 25 contre la Volonté + bonus de Force du porteur)
@@ -761,7 +761,7 @@ PARAMÈTRES :
 Dégâts : 1d8
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Sonique : +1d6 de dégâts soniques
  Lorsqu’il frappe une créature, le carillon réveille tous les membres du groupe (s’ils dorment) et leur confère un bonus d’attaque de +1 pendant 1 round (non cumulable).
@@ -781,7 +781,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +3
 Bonus d’attaque : +3
 Enchantement : +3
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Sonique : +1d6 de dégâts soniques
  Lorsqu’il frappe une créature, le carillon réveille tous les membres du groupe (s’ils dorment) et leur confère un bonus d’attaque de +3 pendant 1 round (non cumulable).
@@ -1293,7 +1293,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : Contondant
+Type de dégâts : contondants
 Spécial :
   Inflige l'un des types de dégâts supplémentaires suivants. Vous pouvez changer le type de dégâts qu'il inflige en appuyant sur le bouton Capacités après avoir fait un clic droit sur cette arme dans l'écran Inventaire.
 Option 1 :
@@ -1325,7 +1325,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Contondant
+Type de dégâts : contondants
 Spécial :
   Impact : Augmente les chances de réussir un coup critique
   Inflige l'un des types de dégâts supplémentaires suivants. Vous pouvez changer le type de dégâts qu'il inflige en appuyant sur le bouton Capacités après avoir fait un clic droit sur cette arme dans l'écran Inventaire.
@@ -1534,13 +1534,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4809 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1548,13 +1548,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4819 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +2 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1562,13 +1562,13 @@ PARAMÈTRES:
 Dégâts: 1d6 +2
 Bonus d’attaque: +2
 Enchantement: +2
-Type de dégâts: Tranchants
+Type de dégâts: tranchantss
 Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4821 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1576,13 +1576,13 @@ PARAMÈTRES:
 Dégâts: 1d6 +5
 Bonus d’attaque: +5
 Enchantement: +5
-Type de dégâts: Tranchants
+Type de dégâts: tranchantss
 Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4833 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
@@ -1590,13 +1590,13 @@ PARAMÈTRES:
 Dégâts : 5d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde).
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4849 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1604,13 +1604,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4850 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +4 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1618,13 +1618,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 4
 Bonus d'attaque : +4
 Enchantement : +4
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +1d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4852 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1632,13 +1632,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre : +2d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4853 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1646,13 +1646,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +3d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4856 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1660,13 +1660,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +4d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4857 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1674,13 +1674,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +5d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4858 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu'être extraplanaire, les griffes de Xhaan frappent comme une arme +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -1688,13 +1688,13 @@ PARAMÈTRES:
 Dégâts : 1d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Givre : +6d6 dégâts de froid
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4866 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
@@ -1702,13 +1702,13 @@ PARAMÈTRES:
 Dégâts : 3d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4867 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
@@ -1716,13 +1716,13 @@ PARAMÈTRES:
 Dégâts : 4d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 2 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4868 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
@@ -1730,13 +1730,13 @@ PARAMÈTRES:
 Dégâts : 6d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4869 = ~Xhaan préfère se battre avec ses griffes, car il n'a eu besoin d'aucune arme au cours des innombrables vies qu'il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. Maintenant que Xhaan a été promu au rang de cornugon, ses attaques de griffes sont plus puissantes.
 
 PARAMÈTRES:
@@ -1744,13 +1744,13 @@ PARAMÈTRES:
 Dégâts : 7d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Compte comme étant d'alignement mauvais et loyal afin de surmonter la réduction de dégâts
  Blessure Infernale : Inflige 4 points de dégâts supplémentaires par round pendant 10 rounds (sans jet de sauvegarde)
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @12483 = ~Armure de peau de Témérité +3~
 @12484 = ~L’armure de peau se compose de plusieurs couches de cuir. Elle est assez simple à fabriquer et protège bien du froid, même si elle est rigide et entrave un peu les mouvements. Elle est principalement utilisée par les guerriers et les chasseurs des tribus barbares du Nord.
 
@@ -1842,7 +1842,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Bien : +1d6 dégâts contre les créatures mauvaises. Compte comme une arme d'alignement bon.
  Mal : +1d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
@@ -1858,7 +1858,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Bien : +2d6 dégâts contre les créatures mauvaises. Compte comme une arme d'alignement bon.
  Mal : +2d6 dégâts contre les créatures bonnes. Compte comme une arme d'alignement mauvais.
@@ -1874,7 +1874,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 2
 Bonus d'attaque : +2
 Enchantement : +2
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
 Poids : 6,8 kg (15 lb)
@@ -1888,7 +1888,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Contondants
+Type de dégâts : contondantss
 Spécial :
  Châtiment des Fous : Si le porteur a un bonus d'Intelligence supérieur à celui de la cible, le marteau inflige des dégâts supplémentaires à la cible égaux à la différence de bonus d'Intelligence entre le porteur et la cible. Si le porteur a un bonus d'Intelligence inférieur à celui de la cible, il subit les dégâts à la place.
 Poids : 6,8 kg (15 lb)
@@ -1921,13 +1921,13 @@ PARAMÈTRES :
 Dégâts : 1d6 + 2
 Bonus d'attaque : +2
 Enchantement : +2
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4839 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +3 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -1935,13 +1935,13 @@ PARAMÈTRES :
 Dégâts : 1d6 + 3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4840 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +4 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -1949,13 +1949,13 @@ PARAMÈTRES :
 Dégâts : 1d6 + 4
 Bonus d'attaque : +4
 Enchantement : +4
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 2d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4842 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -1963,13 +1963,13 @@ PARAMÈTRES :
 Dégâts : 2d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 4d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4843 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -1977,13 +1977,13 @@ PARAMÈTRES :
 Dégâts : 3d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 6d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4846 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -1991,13 +1991,13 @@ PARAMÈTRES :
 Dégâts : 4d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 8d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4847 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -2005,13 +2005,13 @@ PARAMÈTRES :
 Dégâts : 6d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 12d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4848 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -2019,13 +2019,13 @@ PARAMÈTRES :
 Dégâts : 7d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 14d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4849 = ~Xhaan préfère se battre avec ses griffes, car il n’a pas eu besoin d’armes dans les innombrables vies qu’il a vécues dans les Neuf Enfers. Il peut toujours utiliser un bouclier ou une arme dans sa main non dominante, mais il utilise ses griffes comme attaque principale. En tant qu’être extraplanaire, les griffes de Xhaan frappent comme une arme +3 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES:
@@ -2033,13 +2033,13 @@ PARAMÈTRES:
 Dégâts: 1d6 +3
 Bonus d’attaque: +3
 Enchantement: +3
-Type de dégâts: Tranchants
+Type de dégâts: tranchantss
 Spécial:
  Compte comme aligné sur le mal et aligné sur la loi afin de surmonter la réduction de dégâts
  Givre: +1d6 dégâts de froid
 Poids: 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @4870 = ~Vrek préfère utiliser ses griffes dentelées au combat, trouvant les armes conventionnelles conçues pour les mains humanoïdes trop inconfortables à manier. Les griffes de Vrek frappent comme des armes +5 afin de surmonter la réduction de dégâts.
 
 PARAMÈTRES :
@@ -2047,13 +2047,13 @@ PARAMÈTRES :
 Dégâts : 5d6 + 5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : Tranchants
+Type de dégâts : tranchantss
 Spécial :
  Vrek est traité comme possédant les dons Ambidextrie et Combat à deux armes lorsqu'il manie ses griffes.
  Lacération : Si Vrek touche un ennemi avec ses deux griffes au cours d'un même round, il lacère cet ennemi, infligeant 10d6 + 1,5 fois le bonus de Force de dégâts supplémentaires.
 Poids : 0 lb.
 Prérequis : arme courante, attaque de contact
-Type : à une main~
+Type d'arme : à une main~
 @55495=~Emplacements de Sorts Supérieurs : ~
 @56037=~Poids :~
 
@@ -2096,96 +2096,96 @@ Désavantages :
 
 PARAMÈTRES :
 
-Dégâts :  1d4 + 1
-Bonus d'attaque :  +1
-Enchantement :  +1
-Type de dégâts :  Perforant
+Dégâts : 1d4 + 1
+Bonus d'attaque : +1
+Enchantement : +1
+Type de dégâts : Perforant
 Spécial :
   Les attaques sournoises infligent 1d6 dégâts supplémentaires
 Poids : 0,5 kg (1 lb)
 Compétence : arme courante, petite lame/à mains nues
-Type : à une main~
+Type d'arme : à une main~
 @10873    = ~Épée longue +1, Défenseur~
 @10874    = ~Ces épées sont généralement appelées épées à double tranchant, épées de guerre ou épées militaires. Dans de nombreux cas, l'épée longue a une lame à simple tranchant. Il n'existe pas de version unique de l'épée longue ; la conception et la longueur varient d'une culture à l'autre, et peuvent varier au sein d'une même culture selon l'époque. Parmi les caractéristiques les plus communes de toutes les épées longues figure leur longueur, qui varie de 35 à 47 pouces. Dans ce dernier cas, la lame occupe 40 pouces de la longueur totale. La plupart des épées longues ont une lame à double tranchant et une pointe acérée à l'extrémité. Malgré la pointe, l'épée longue est conçue pour trancher, pas pour percer.
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 1
-Bonus d'attaque :  +1
-Enchantement :  +1
-Type de dégâts :  Tranchant
+Dégâts : 1d8 + 1
+Bonus d'attaque : +1
+Enchantement : +1
+Type de dégâts : tranchants
 Spécial :
   Bonus d'armure générique : +2
 Poids : 1,8 kg (4 lb)
 Compétence : arme de guerre, grande épée
-Type : à une main~
+Type d'arme : à une main~
 @10756    = ~Personne ne sait d'où vient cette dague de parade enchantée, bien qu'elle ait gagné sa renommée au service du notoire capitaine corsaire "Baron" Sulo de Luskan. Lorsque Sulo et son équipage tentèrent de voler les bijoux de la famille Leberm depuis un petit navire de transport au large de Port Llast, ils se retrouvèrent confrontés à un groupe d'aventuriers expérimentés engagés comme gardes. L'un d'eux en particulier combattit comme un diable, maniant une paire assortie de lames de duel finement ouvragées. L'aventurier sans nom tua nombre des hommes de Sulo et, en venant affronter le capitaine corsaire lui-même, trancha la main gauche de Sulo. Le "Baron" Sulo serait mort ce jour-là sans un tir de baliste égaré du navire Leberm - l'énorme lance frappa le malheureux épéiste de plein fouet et l'emporta par-dessus bord du navire de Sulo en un éclair. Tout ce qui resta de lui fut sa lame de parade élaborée, laissée tournoyant sur le pont comme s'il n'avait jamais été là.
 
 Sulo choisit de greffer la lame de parade de l'épéiste sur le moignon de son poignet gauche à la place d'un crochet commun. Lorsque Sulo fut tué quelque neuf ans plus tard, la lame fut enterrée avec lui dans une tombe cachée avec une quantité substantielle de gemmes et de pièces. Malgré la nature "secrète" du dernier lieu de repos de Sulo, le site fut rapidement pillé et le "Crochet du Baron Sulo" passa entre les mains d'autres hommes.
 
 PARAMÈTRES :
 
-Dégâts :  1d4 + 2
+Dégâts : 1d4 + 2
 Bonus d'attaque : +2
-Enchantement :  +2
-Type de dégâts :  Perforant
+Enchantement : +2
+Type de dégâts : Perforant
 Spécial :
   Bonus de bouclier : +6
 Poids : 0,5 kg (1 lb)
 Compétence : arme courante, petite lame/à mains nues
-Type : à une main~
+Type d'arme : à une main~
 @10956    = ~Le cimeterre est étroitement lié au sabre, une épée courbe à simple tranchant avec une garde protectrice. La lame a une courbe plus prononcée et se termine en une pointe allongée et acérée. Les origines du cimeterre sont largement inconnues, cependant ils ont été très populaires dans la région méridionale des Royaumes oubliés.
 
 PARAMÈTRES :
 
-Dégâts :  1d6
-Enchantement :  +5
-Type de dégâts :  Tranchant
+Dégâts : 1d6
+Enchantement : +5
+Type de dégâts : tranchants
 Spécial :
   Flamme : +4d6 dégâts de feu
   Frappe sûre : L'arme est traitée comme ayant un enchantement +5 pour toucher les créatures qui nécessitent des armes magiques pour être touchées
 Poids : 1,8 kg (4 lb)
 Compétence : arme de guerre, grande épée
-Type :  à une main~
+Type d'arme : à une main~
 @11577    = ~Marteau de résistance +3~
 @11578    = ~Comme d'autres de son type, ce marteau de guerre est entièrement fait d'acier, avec un marteau broyeur d'os monté sur un manche de 18 pouces. Il a également été doté d'un petit nombre de propriétés magiques, cependant, le rendant ainsi plus efficace au combat. 
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 3
-Bonus d'attaque :  +3 
-Enchantement :  +3
-Type de dégâts :  Contondant
+Dégâts : 1d8 + 3
+Bonus d'attaque : +3 
+Enchantement : +3
+Type de dégâts : contondants
 Spécial :
   Résistance : 4/- Résistance aux dégâts tranchants
   Résistance : 4/- Résistance aux dégâts perforants
   Résistance : 4/- Résistance aux dégâts contondants
 Poids : 3,2 kg (7 lb)
-Prérequis :  Arme de guerre, Marteau
+Prérequis : Arme de guerre, Marteau
 Type : à une main~
 @11749    = ~Arc long d'acide et de flamme +2~
 @11750    = ~L'arc long est similaire à l'arc court, mais sa longueur est à peu près égale à la hauteur de son archer, c'est-à-dire environ 2 m. Il présente deux avantages par rapport à l’arc court : une plus grande portée et donc une plus grande précision. Celui-ci a été enchanté, ce qui lui confère une aura de perfection.
 
 PARAMÈTRES :
 
-Dégâts :  +3 (projectile)
+Dégâts : +3 (projectile)
 Bonus d'attaque : +2
 Spécial :
   Toute instance de dégâts de feu ou d'acide provenant des sorts, capacités ou munitions du porteur inflige 5 points de dégâts supplémentaires (pour les sources qui infligent des dégâts de feu ou d'acide plusieurs fois, ces dégâts sont ajoutés à chaque fois).
   Garde-sort : Protection contre les sorts Flèche acide de Melf et Flèches enflammées
 Poids : 1,4 kg (3 lb)
-Prérequis :  Arme de guerre, Arc
-Type :  Deux mains~
+Prérequis : Arme de guerre, Arc
+Type d'arme : à deux mains~
 @11859    = ~Arbalète lourde +8~
 @11860    = ~Une arbalète est un arc monté sur un châssis de bois ou de métal, ce dernier étant appelé un arbrier. L'arc est généralement fait de frêne ou d'if. L'arbalète utilise des carreaux et non des flèches.
 
 PARAMÈTRES :
 
-Dégâts :  +18 (projectile)
-Bonus d'attaque :  +8
+Dégâts : +18 (projectile)
+Bonus d'attaque : +8
 Poids : 4,1 kg (9 lb)
 Prérequis : arme courante, Arbalète
-Type :  Deux mains~
+Type : à deux mains~
 @11901    = ~Fronde de force magique~
 @11902    = ~Les frondes existent depuis des temps presque immémoriaux. Elles se composent d'une corde de cuir ou de tissu et d'une bourse pour contenir le projectile. Cependant, celle-ci bénéficie d'une charme léger. On tient la fronde par l’extrémité des deux lanières et on la fait tourner au-dessus de sa tête pour donner de la puissance. Il suffit alors de relâcher une des lanières pour projeter la bille.
 
@@ -2200,8 +2200,8 @@ Type : à une main~
 
 PARAMÈTRES :
 
-Dégâts :  +5 (projectile)
-Bonus d'attaque :  +5
+Dégâts : +5 (projectile)
+Bonus d'attaque : +5
 Spécial :
   Gagne le bonus de Sagesse à l'attaque
   Pouvoir de sort : Peut lancer le sort Restauration supérieure 1/jour
@@ -2218,7 +2218,7 @@ Le casque de Kellem, qui est en fait un heaume, est constitué d'os, d'une peau é
 
 PARAMETRES :
 
-Bonus d'armure générique :  +4
+Bonus d'armure générique : +4
 Spécial :
   Résistance : 15/- Résistance au froid
   Souffle de dracosire blanc : cône de givre pour 16d8 points de dégâts de froid (Réflexes Degré de Difficulté 24 + deux fois le bonus de Charisme du porteur pour la moitié de dégâts) 1/jour
@@ -2239,9 +2239,9 @@ Dans une nouvelle escroquerie, Pieter vendit la dague à un Faucon Mulmastre, alo
 
 PARAMÈTRES :
 
-Dégâts :  1d4 + 3
-Bonus d'attaque :  +3 
-Enchantement :  +3
+Dégâts : 1d4 + 3
+Bonus d'attaque : +3 
+Enchantement : +3
 Type de dégâts : Perforant
 Poids : 0,5 kg (1 lb)
 Spécial :
@@ -2257,9 +2257,9 @@ Dans une nouvelle escroquerie, Pieter vendit la dague à un Faucon Mulmastre, alo
 
 PARAMÈTRES :
 
-Dégâts :  1d4 + 5
-Bonus d'attaque :  +5
-Enchantement :  +5
+Dégâts : 1d4 + 5
+Bonus d'attaque : +5
+Enchantement : +5
 Type de dégâts : Perforant
 Poids : 0,5 kg (1 lb)
 Spécial :
@@ -2515,8 +2515,8 @@ Utilisez cette compétence pour identifier les sorts lorsqu'ils sont lancés ou le
 
 PARAMÈTRES :
 
-Classe d'armure :  +5 vs. Contondant
-Bonus de sauvegarde :  +5 aux jets de Volonté
+Bonus à la CA : +5 vs. Contondant
+Bonus de sauvegarde : +5 aux jets de Volonté
 Sorts sans danger : Lorsque le porteur lance un sort à zone d'effet, les alliés font des jets de sauvegarde contre le sort avec -5 Degré de Difficulté.
 Poids : 1,8 kg (4 lb)~
 @841    = ~UTILISATION D'OBJETS MAGIQUES (Cha ; Entraînement ; Barde, Roublard uniquement) :
@@ -2616,9 +2616,9 @@ PARAMÈTRES :
 
 Armure lourde
 Bonus d'armure : +12
-Bonus de Dex maximum :  +1
-Malus de jet d'armure :  -5
-Echec des sorts profanes :  35%
+Bonus de Dex maximum : +1
+Malus de jet d'armure : -5
+Echec des sorts profanes : 35%
 Spécial :
   Les créatures mauvaises ont un malus de -2 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 2 (se cumule avec Protection contre le mal)
   Garde-sort : Immunité à Ténèbres infernales et Blasphème
@@ -2633,9 +2633,9 @@ PARAMÈTRES :
 
 Armure lourde
 Bonus d'armure : +14
-Bonus de Dex maximum :  +1
-Malus de jet d'armure :  -5
-Echec des sorts profanes :  35%
+Bonus de Dex maximum : +1
+Malus de jet d'armure : -5
+Echec des sorts profanes : 35%
 Spécial :
   Les créatures mauvaises ont un malus de -4 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 4 (se cumule avec Protection contre le mal)
   Le porteur est sous l'effet d'Aura divine
@@ -2649,74 +2649,78 @@ Poids : 22,7 kg (50 lb)~
 PARAMÈTRES :
 
 Bonus de bouclier : +6
-Bonus d'armure :  +1 vs. armes de jet
+Bonus d'armure : +1 vs. armes de jet
 Spécial :
   Vitesse : 1 attaque supplémentaire par round de combat
-Malus de jet d'armure :  -1
-Echec des sorts profanes :  5%
+Malus de jet d'armure : -1
+Echec des sorts profanes : 5%
 Poids : 1,4 kg (3 lb)~
-@10972    = ~L'archidruide Caernach était connu pour porter de nombreux objets enchantés, dont la plupart furent fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, "Souffle-de-vie," qui laissaient des fleurs et de minuscules pousses germer de la terre où Caernach marchait. Pourtant, les "possessions mineures" de l'archidruide n'étaient rien à dédaigner - prenez, par exemple, sa faucille d'argent, façonnée pour récolter le gui sacré et les têtes d'ennemis. Cette arme inhabituelle est en fait un croisement entre une faucille et une épée proprement dite, ressemblant plus à un cimeterre qu'à autre chose. Le manche de chêne et la lame d'argent sont tous deux gravés de volutes et motifs décoratifs.
+@10972    = ~L'archidruide Caernach ne se déplaçait jamais sans ses nombreux objets magiques, qu'il avait pour la plupart fabriqués de ses propres mains. Ses bottes, qui faisaient pousser fleurs et arbustes sur son passage, restent sans aucun doute ses plus impressionnants objets, mais d'autres étaient également très puissants, comme sa serpe en argent, qui lui servait tout autant à cueillir du gui qu'à trancher la tête de ses ennemis. En fait, cette arme inhabituelle est à mi-chemin entre une serpe classique et une épée, sa longue lame courbe faisant davantage penser à celle d'un cimeterre. Son manche en chêne et sa lame en argent s'ornent de motifs naturels. Une fois par jour, la serpe permet de tracer un petit cercle dans le sol, et il suffit ensuite de gratter la terre à l'endroit désigné pour voir apparaître une poignée de baies aux vertus curatives.
 
 PARAMÈTRES :
 
-Dégâts :  1d6 + 1
+Dégâts : 1d6 + 1
 Bonus d'attaque : +1
-Enchantement :  +1
-Type de dégâts :  Tranchant
+Enchantement : +1
+Type de dégâts : tranchants
 Spécial : 
   Compte comme une arme d'argent
-  Chaque coup a 10% de chances de créer une Baie miraculeuse dans l'un des emplacements d'objets rapides du porteur, ou dans un emplacement d'inventaire régulier s'il n'y a pas d'emplacements d'objets rapides vides
+  Chaque coup a 10% de chances de créer une Baie magique dans l'un des emplacements d'objets rapides du porteur, ou dans un emplacement d'inventaire régulier s'il n'y a pas d'emplacements d'objets rapides vides
 Poids : 1,8 kg (4 lb)
 Compétence : arme de guerre, grande épée
 Type : à une main~
-@10974    = ~L'archidruide Caernach était connu pour porter de nombreux objets enchantés, dont la plupart furent fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, "Souffle-de-vie," qui laissaient des fleurs et de minuscules pousses germer de la terre où Caernach marchait. Pourtant, les "possessions mineures" de l'archidruide n'étaient rien à dédaigner - prenez, par exemple, sa faucille d'argent, façonnée pour récolter le gui sacré et les têtes d'ennemis. Cette arme inhabituelle est en fait un croisement entre une faucille et une épée proprement dite, ressemblant plus à un cimeterre qu'à autre chose. Le manche de chêne et la lame d'argent sont tous deux gravés de volutes et motifs décoratifs.
+@10974    = ~L'archidruide Caernach ne se déplaçait jamais sans ses nombreux objets magiques, qu'il avait pour la plupart fabriqués de ses propres mains. Ses bottes, qui faisaient pousser fleurs et arbustes sur son passage, restent sans aucun doute ses plus impressionnants objets, mais d'autres étaient également très puissants, comme sa serpe en argent, qui lui servait tout autant à cueillir du gui qu'à trancher la tête de ses ennemis. En fait, cette arme inhabituelle est à mi-chemin entre une serpe classique et une épée, sa longue lame courbe faisant davantage penser à celle d'un cimeterre. Son manche en chêne et sa lame en argent s'ornent de motifs naturels. Une fois par jour, la serpe permet de tracer un petit cercle dans le sol, et il suffit ensuite de gratter la terre à l'endroit désigné pour voir apparaître une poignée de baies aux vertus curatives.
 
 PARAMÈTRES :
 
-Dégâts :  1d6 + 3
+Dégâts : 1d6 + 3
 Bonus d'attaque : +3 
-Enchantement :  +3
-Type de dégâts :  Tranchant
+Enchantement : +3
+Type de dégâts : tranchants
 Spécial : 
   Compte comme une arme d'argent
-  Chaque coup a 20% de chances de créer une Baie miraculeuse dans l'un des emplacements d'objets rapides du porteur, ou dans un emplacement d'inventaire régulier s'il n'y a pas d'emplacements d'objets rapides vides
+  Chaque coup a 20% de chances de créer une Baie magique dans l'un des emplacements d'objets rapides du porteur, ou dans un emplacement d'inventaire régulier s'il n'y a pas d'emplacements d'objets rapides vides
 Poids : 1,8 kg (4 lb)
 Compétence : arme de guerre, grande épée
-Type : à une main~
+Type d'arme : à une main~
 @11080    = ~Delnar était un mage timide qui ne fut jamais un aventurier. Il passa la plupart de sa vie dans l'étude tranquille, vivant avec sa mère, essayant d'apprendre l'art de fabriquer des objets magiques. Malheureusement, sa mère avait l'habitude de l'interrompre à des moments cruciaux pendant le processus d'enchantement, souvent avec des résultats désastreux. La Joie de Delnar est ainsi nommée à cause du manque d'interruptions pendant sa construction (et pourrait bien être le seul objet fabriqué par Delnar qui fonctionne comme prévu).
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 2
-Bonus d'attaque :  +2 
-Enchantement :  +2
-Type de dégâts :  Contondant
+Dégâts : 1d8 + 2
+Bonus d'attaque : +2 
+Enchantement : +2
+Type de dégâts : contondants
 Spécial :
   Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 20%
 Poids : 1,8 kg (4 lb)
-Prérequis : arme courante, Bâton de combat
-Type :  Deux mains~
+Prérequis : arme courante, bâton
+Type d'arme : à deux mains~
 @11081    = ~Bâton d'éclair de Delnar~
-@11082    = ~Delnar était un mage timide qui ne fut jamais un aventurier. Il passa la plupart de sa vie dans l'étude tranquille, vivant avec sa mère, essayant d'apprendre l'art de fabriquer des objets magiques. Malheureusement, sa mère avait l'habitude de l'interrompre à des moments cruciaux pendant le processus d'enchantement, souvent avec des résultats désastreux. Le Bâton magique de Delnar est remarquable pour le manque d'interruptions pendant sa construction (et pourrait bien être le seul objet fabriqué par Delnar qui fonctionne comme prévu).
+@11082    = ~Mage timide, Delnar n'était pas du genre à rechercher l'aventure. Il passa la majeure partie de son existence au côté de sa mère, à essayer d'apprendre comment fabriquer des objets magiques. Malheureusement, sa mère avait tendance à l'interrompre au plus mauvais moment, et ses tentatives d'enchantement s'achevaient fréquemment de manière désastreuse. La Lame de Soins de Delnar est l'un de ses nombreux objets magiques ratés.
+
+Cette arme constitue véritablement une énigme. Quand on l'utilise au combat, non seulement elle n'inflige aucun dégât à la cible, mais elle lui rend des points de vie ! Son nom provient du fait qu'il est impossible de s'en servir pour tuer qui que ce soit.
+
+Nul ne sait quel est l'usage que Delnar souhaitait faire de cette arme. D'aucuns affirment qu'elle fonctionne exactement comme son créateur le souhaitait, mais cela fait bien rire leurs détracteurs.
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 5
-Bonus d'attaque :  +5
-Enchantement :  +5
-Type de dégâts :  Contondant
+Dégâts : 1d8 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : contondants
 Spécial :
   Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 40%
 Poids : 1,8 kg (4 lb)
-Prérequis : arme courante, Bâton de combat
-Type :  Deux mains~
-@10237    = ~On dit que ces magnifiques brassards furent construits dans les montagnes de l'Échine du Monde, et pas si longtemps. Sur la côte de la Mer de Glace Mouvante, vivait Prashnak, un abjurateur -- et un têtu de surcroît. Apparemment, Prashnak avait beaucoup de difficulté à repousser un fléau implacable de trolls, qui sans doute n'étaient intéressés que par son abri creusé et bien positionné. Prashnak utilisait des tempêtes d'acide pour tenir les trolls à distance. Cependant, le jeune mage se lassait des attaques constantes, et les trolls devenaient plus audacieux.
+Compétence : arme courante, bâton
+Type d'arme : à deux mains~
+@10237    = ~Ces magnifiques bracelets auraient été forgés il y a peu dans l'Epine Dorsale du Monde. Sur les rives de la Mer des Glaces Mouvantes vivait Prashnak, un abjurateur des plus têtus. Prashnak rencontrait de sérieuses difficultés de voisinage avec une bande de trolls qui avait des vues sur sa demeure ; Prashnak fit déferler de véritables ouragans d'acide pour décourager les envahisseurs, avec un succès très relatif. Les trolls devenaient toujours plus audacieux et le jeune magicien toujours plus découragé.
 
-Après plusieurs mois d'étude des divers effets de la magie de flétrissure, de l'invocation élémentaire, et des méthodes magiques de gel, Prashnak fut enfin prêt à essayer son expérience. Après avoir invoqué un élémentaire d'eau, Prashnak évapora des composants corporels choisis puis gela la créature malheureuse. Cela mena à la création de véritables sculptures de glace horrifiantes. Les trolls, aussi simples soient-ils, prirent une offense extrême à ces totems et s'enfuirent apparemment de la zone. L'expérience fut un succès éclatant, l'exultant Prashnak continue ses études lamentables à ce jour. Quel genre de voleur s'empara des brassards est inconnu, mais ils ont été manquants pendant plusieurs années.
+Prashnak passa donc plusieurs mois à étudier la magie d'affaiblissement, l'invocation d'élémentaires et les différentes méthodes magiques de refroidissement avant de passer à la pratique. Il invoqua donc un élémentaire de l'Eau, en fit évaporer différents composants corporels puis gela la créature inerte sur place ; il sculpta ainsi de nombreuses et terrifiante statues de glace. Les trolls, très impressionnés par ces créations qu'ils prirent pour des totems, ne demandèrent pas leur reste et s'enfuirent aussi loin qu'ils le purent. Fort de ce succès, Prashnak pousuivit ses études afin de devenir un maître en la matière. Personne ne sait véritablement qui parvint à lui dérober ces bracelets il y a quelques années de cela.
 
 PARAMÈTRES :
 
-Classe d'armure :  +3 (armure)
+Bonus à la CA : +3
 Spécial :
   Les dégâts de froid et magiques infligés par les sorts et capacités du porteur sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
@@ -2726,7 +2730,7 @@ Après plusieurs mois d'étude des divers effets de la magie de flétrissure, de l'
 
 PARAMÈTRES :
 
-Classe d'armure :  +7 (armure)
+Bonus à la CA : +7
 Spécial :
   Les dégâts de froid et magiques infligés par les sorts et capacités du porteur sont augmentés de 40%
 Poids : 1,4 kg (3 lb)~
@@ -2734,16 +2738,16 @@ Poids : 1,4 kg (3 lb)~
 
 PARAMÈTRES :
 
-Résistance :  50/- Résistance au froid
+Résistance : 50/- Résistance au froid
 Les dégâts de froid infligés par les sorts et capacités du porteur sont augmentés de 20%
 Poids : 0 lb.~
-@10283    = ~Disredain était un sorcier excentrique qui devint fasciné par la manipulation de l'électricité. En plus des baguettes qu'il créa, Disredain fabriqua un certain nombre d'objets magiques expérimentaux pendant une période de quinze ans de recherche frénétique. Cette ceinture était l'un des objets dont il ne pensait pas grand bien. Composée de grandes tranches en forme de croissant de cuivre tacheté placées dos à dos, la ceinture est assez épaisse et unique en apparence. Un clerc de Talos nommé Ylkath porta les Arcs pendant trois décennies avant de mourir de vieillesse. Sa compagne, la prêtresse Umberlante Ashalla de la Marée de Jade, garda la ceinture à peine trois ans avant d'être abattue par des pirates qui survécurent à l'une de ses attaques nautiques. Les pirates vendirent la ceinture à un receleur. Son histoire après ce point est inconnue.
+@10283    = ~Disredain était un magicien excentrique fasciné par la manipulation de l'électricité. En plus des nombreuses baguettes qu'on lui doit, il fabriqua de nombreux objets magiques expérimentaux au cours de ses quinze ans de carrière. Cette ceinture est l'un des objets dont il était le moins fier. Elle est constituée de larges croissants de cuivre disposés face à face puis dos à dos, ce qui lui donne un aspect très particulier. Un prêtre de Talos nommé Ylkath porta les Arceaux de Disredain pendant plus de trente ans, avant de mourir de vieillesse. Sa compagne, Ashalla de la Marée de Jade, prêtresse d'Umberlie, ne la conserva quant à elle que trois ans avant d'être tuée par des pirates ayant survécu à l'un de ses assauts. Les pirates vendirent la ceinture à un receleur, après quoi elle disparut de la circulation.
 
 PARAMÈTRES :
 
 Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 15%
 Poids : 1,4 kg (3 lb)~
-@10285    = ~Disredain était un sorcier excentrique qui devint fasciné par la manipulation de l'électricité. En plus des baguettes qu'il créa, Disredain fabriqua un certain nombre d'objets magiques expérimentaux pendant une période de quinze ans de recherche frénétique. Cette ceinture était l'un des objets dont il ne pensait pas grand bien. Composée de grandes tranches en forme de croissant de cuivre tacheté placées dos à dos, la ceinture est assez épaisse et unique en apparence. Un clerc de Talos nommé Ylkath porta les Arcs pendant trois décennies avant de mourir de vieillesse. Sa compagne, la prêtresse Umberlante Ashalla de la Marée de Jade, garda la ceinture à peine trois ans avant d'être abattue par des pirates qui survécurent à l'une de ses attaques nautiques. Les pirates vendirent la ceinture à un receleur. Son histoire après ce point est inconnue.
+@10285    = ~Disredain était un magicien excentrique fasciné par la manipulation de l'électricité. En plus des nombreuses baguettes qu'on lui doit, il fabriqua de nombreux objets magiques expérimentaux au cours de ses quinze ans de carrière. Cette ceinture est l'un des objets dont il était le moins fier. Elle est constituée de larges croissants de cuivre disposés face à face puis dos à dos, ce qui lui donne un aspect très particulier. Un prêtre de Talos nommé Ylkath porta les Arceaux de Disredain pendant plus de trente ans, avant de mourir de vieillesse. Sa compagne, Ashalla de la Marée de Jade, prêtresse d'Umberlie, ne la conserva quant à elle que trois ans avant d'être tuée par des pirates ayant survécu à l'un de ses assauts. Les pirates vendirent la ceinture à un receleur, après quoi elle disparut de la circulation.
 
 PARAMÈTRES :
 
@@ -2754,7 +2758,7 @@ Poids : 1,4 kg (3 lb)~
 PARAMÈTRES :
 
 Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 30%
-Résistance :  25/- Résistance au feu
+Résistance : 25/- Résistance au feu
 Poids : 1,4 kg (3 lb)~
 @10049    = ~Le feu peut être le porteur de vie, ou le moissonneur de mort. Avec le Talisman de danse de flamme, les deux scénarios sont vrais. Fabriqué par un sorcier inconnu mais habile, le Talisman de danse de flamme donnait à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir de lancer une boule de feu trois fois par jour aux attaquants potentiels.
 
@@ -2763,7 +2767,7 @@ PARAMÈTRES :
 Bonus d'armure générique : +1
 Spécial :
  Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 15%
- Pouvoir de sort :  Peut lancer le sort Boule de feu (au niveau 10) trois fois par jour
+ Pouvoir de sort : Peut lancer le sort Boule de feu (au niveau 10) trois fois par jour
 Poids : 0,5 kg (1 lb)~
 @10051    = ~Le feu peut être le porteur de vie, ou le moissonneur de mort. Avec le Talisman de feu solaire, les deux scénarios sont vrais. Fabriqué par un sorcier inconnu mais habile, le Talisman de feu solaire donnait à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir d'enflammer une boule de feu solaire trois fois par jour aux attaquants potentiels environnants. De plus, si les attaquants potentiels tentaient de renverser la situation et d'attaquer le sorcier avec leurs propres armes de feu, le Talisman de feu solaire accorderait à son porteur une résistance supplémentaire au feu.
 
@@ -2773,27 +2777,27 @@ Bonus d'armure générique : +3
 Spécial :
  Résistance : 30/-  Résistance au feu
  Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 30%
- Pouvoir de sort :  Peut lancer instantanément le sort Feu solaire (au niveau 15, Degré de Difficulté de sauvegarde 40) trois fois par jour
+ Pouvoir de sort : Peut lancer instantanément le sort Feu solaire (au niveau 15, Degré de Difficulté de sauvegarde 40) trois fois par jour
 Poids : 0,5 kg (1 lb)~
 @10384    = ~Les Robes de sorcier de résistance au froid sont un spectacle commun dans la région de la Côte des Épées, surtout lorsqu'on voyage vers le nord vers Neverwinter et les Dales de Glace. Beaucoup de jeunes mages la reçoivent comme cadeau de leurs instructeurs après avoir réussi à terminer leurs cinq premières années d'étude.
 
 PARAMÈTRES :
 
-Résistance :  20/- Résistance au froid
+Résistance : 20/- Résistance au froid
 Tous les dégâts de froid infligés par les sorts et capacités du personnage sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
 @10398    = ~En raison de la nature extrêmement volatile de la plupart des magies, les Robes de sorcier de résistance au feu ne sont pas rares parmi les jeunes acolytes et leurs tuteurs sorciers.
 
 PARAMÈTRES :
 
-Résistance :  20/- Résistance au feu
+Résistance : 20/- Résistance au feu
 Tous les dégâts de feu infligés par les sorts et capacités du personnage sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
 @10400    = ~Bien qu'elles soient vues avec moins de fréquence que certaines autres Robes de sorcier, celles de résistance à l'électricité ne peuvent guère être considérées comme une rareté. Certaines sont portées par des paranoïaques cherchant une protection contre une tempête de montagne déchirée mais beaucoup plus sont portées par des mages cherchant à se protéger des intrigues d'autres de leur espèce.
 
 PARAMÈTRES :
 
-Résistance :  20/- Résistance à l'électricité
+Résistance : 20/- Résistance à l'électricité
 Tous les dégâts d'électricité infligés par les sorts et capacités du personnage sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
 @562    = ~PALADIN DE MYSTRA :
@@ -2935,7 +2939,7 @@ PARAMÈTRES :
 
 Spécial :
   Résistance aux sorts : Fixée à 36 si inférieure
-  Pouvoir de sort :  Peut lancer le sort de sorcier de niveau 6 Globe d'invulnérabilité (au niveau 30) une fois par jour
+  Pouvoir de sort : Peut lancer le sort de sorcier de niveau 6 Globe d'invulnérabilité (au niveau 30) une fois par jour
 Poids : 0 lb.~
 @10392    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement bon.
 
@@ -2943,7 +2947,7 @@ PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
-Sauvegarde :  +3 bonus
+Sauvegarde : +3 bonus
 Les sorts du porteur gagnent +3 DD
 Poids : 2,7 kg (6 lb)~
 @10394    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement neutre.
@@ -2952,7 +2956,7 @@ PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
-Sauvegarde :  +3 bonus
+Sauvegarde : +3 bonus
 Les sorts du porteur gagnent +3 DD
 Poids : 2,7 kg (6 lb)~
 @10396    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement mauvais.
@@ -2961,7 +2965,7 @@ PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
-Sauvegarde :  +3 bonus
+Sauvegarde : +3 bonus
 Les sorts du porteur gagnent +3 DD
 Poids : 2,7 kg (6 lb)~
 @10454    = ~L'armure de cuir, malgré l'idée fausse populaire, n'est pas douce et souple comme le cuir utilisé pour faire les bottes d'un rôdeur ou la robe d'un druide. Ce genre de cuir n'offre pas une meilleure protection que les vêtements communs. Les enchantements magiques améliorent les capacités protectrices de cette armure de cuir.
@@ -2970,9 +2974,9 @@ PARAMÈTRES :
 
 Armure légère
 Bonus d'armure : +3
-Bonus de Dex maximum :  +6
-Malus de jet d'armure :  -0
-Echec des sorts profanes :  10%
+Bonus de Dex maximum : +6
+Malus de jet d'armure : -0
+Echec des sorts profanes : 10%
 Spécial :
   Résistance aux sorts : Fixée à 14 si inférieure
 Poids : 4,5 kg (10 lb)~
@@ -2982,9 +2986,9 @@ PARAMÈTRES :
 
 Armure lourde
 Bonus d'armure : +11
-Bonus de Dex maximum :  +0
-Malus de jet d'armure :  -6
-Echec des sorts profanes :  40%
+Bonus de Dex maximum : +0
+Malus de jet d'armure : -6
+Echec des sorts profanes : 40%
 Spécial :
   Résistance : 5/- Résistance aux dégâts magiques
   Résistance aux sorts : Fixée à 21 si inférieure
@@ -2995,10 +2999,10 @@ Poids : 9,1 kg (20 lb)~
 PARAMÈTRES :
 
 Armure lourde
-Bonus d'armure :  +13
-Bonus de Dex maximum :  +0
-Malus de jet d'armure :  -6
-Echec des sorts profanes :  40%
+Bonus d'armure : +13
+Bonus de Dex maximum : +0
+Malus de jet d'armure : -6
+Echec des sorts profanes : 40%
 Spécial :
   Résistance : 10/- Résistance aux dégâts magiques
   Résistance aux sorts : Fixée à 32 si inférieure
@@ -3012,8 +3016,8 @@ Bonus de bouclier : +6
 Spécial :
   Résistance aux sorts : Fixée à 22 si inférieure
   Malus d'attaque : -2
-Malus de jet d'armure :  -10
-Echec des sorts profanes :  50%
+Malus de jet d'armure : -10
+Echec des sorts profanes : 50%
 Poids : 11,3 kg (25 lb)~
 @10894    = ~Le vengeur sacré est l'arme ultime du paladin contre les forces du mal. Il y a peu de créatures sur les Plans inférieurs qui n'hésiteraient pas à affronter un guerrier sacré maniant une telle arme... et celui-ci, peut-être plus que d'autres. Autrefois, ce n'était rien de plus qu'une simple épée de fer, mais grâce au courage et à la foi d'un homme, elle devint quelque chose de plus.
 
@@ -3025,7 +3029,7 @@ Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient si
 
 Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée. 
 
-Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Bane.
+Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Baine.
 
 Le Vieux Duc Ehld fut le premier à traverser les protections du Royaume Barbelé et à chercher la Reine en Pleurs sur le trône de son père. Quand il trouva la petite fille, il s'approcha, s'agenouilla devant elle, et lui dit qu'il était venu pour engager sa vie à son service. En mots raides et formels, il dit qu'il avait apporté de la nourriture et de l'eau et s'excusa pour son retard, mais ses os étaient vieux et il lui avait fallu du temps pour atteindre cet endroit. L'enfant presque affamée le regarda alors qu'il engageait sa lame usée et son honneur à voir que ceux qui avaient commis ce terrible crime répondent de leurs actions, si sa Reine le souhaitait. Après un long silence stupéfait, la Reine en Pleurs trouva les mots pour le remercier.
 
@@ -3043,17 +3047,17 @@ Et peut-être, si votre cœur est vrai, sauver une terre de la destruction une foi
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 5
+Dégâts : 1d8 + 5
 Bonus d'attaque : +5
-Enchantement :  +5
-Type de dégâts :  Tranchant
+Enchantement : +5
+Type de dégâts : tranchants
 Spécial :
   Résistance aux sorts : Fixée à 30 si inférieure
   Vengeur sacré : +2d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
   Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 21). Frapper un allié dissipe la magie sur eux sans sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
-Type : à une main~
+Type d'arme : à une main~
 //@10895    = ~Lumière de Cera Sumat~
 @10896    = ~Le vengeur sacré est l'arme ultime du paladin contre les forces du mal. Il y a peu de créatures sur les Plans inférieurs qui n'hésiteraient pas à affronter un guerrier sacré maniant une telle arme... et celui-ci, peut-être plus que d'autres. Autrefois, ce n'était rien de plus qu'une simple épée de fer, mais grâce au courage et à la foi d'un homme, elle devint quelque chose de plus.
 
@@ -3065,7 +3069,7 @@ Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient si
 
 Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée.
 
-Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Bane.
+Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Baine.
 
 Le Vieux Duc Ehld fut le premier à traverser les protections du Royaume Barbelé et à chercher la Reine en Pleurs sur le trône de son père. Quand il trouva la petite fille, il s'approcha, s'agenouilla devant elle, et lui dit qu'il était venu pour engager sa vie à son service. En mots raides et formels, il dit qu'il avait apporté de la nourriture et de l'eau et s'excusa pour son retard, mais ses os étaient vieux et il lui avait fallu du temps pour atteindre cet endroit. L'enfant presque affamée le regarda alors qu'il engageait sa lame usée et son honneur à voir que ceux qui avaient commis ce terrible crime répondent de leurs actions, si sa Reine le souhaitait. Après un long silence stupéfait, la Reine en Pleurs trouva les mots pour le remercier.
 
@@ -3083,31 +3087,31 @@ Et peut-être, si votre cœur est vrai, sauver une terre de la destruction une foi
 
 PARAMÈTRES :
 
-Dégâts :  1d8 + 10
+Dégâts : 1d8 + 10
 Bonus d'attaque : +10
-Enchantement :  +10
-Type de dégâts :  Tranchant
+Enchantement : +10
+Type de dégâts : tranchants
 Spécial :
   Résistance aux sorts : Fixée à 40 si inférieure
   Vengeur sacré : +4d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
   Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 32). Frapper un allié dissipe la magie sur eux sans sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
-Type : à une main~
+Type d'arme : à une main~
 @11060    = ~La plus simple et humble des armes de bâton, le bâton de combat est une longueur de bois allant de six à neuf pieds de longueur. Les bâtons de combat de maître sont faits de chêne robuste et sont ferrés de métal aux deux extrémités. Celui-ci est particulièrement spécial car il a été imprégné de propriétés magiques.
 
 PARAMÈTRES :
 
-Dégâts :  1d6 + 5
-Bonus d'attaque :  +5 
-Enchantement :  +5
-Type de dégâts :  Contondant
+Dégâts : 1d6 + 5
+Bonus d'attaque : +5 
+Enchantement : +5
+Type de dégâts : contondants
 Spécial :
   Résistance aux sorts : Fixée à 37 si inférieure
   Réduction de résistance : Chaque coup réduit la Résistance aux sorts de la cible de 5 pendant 10 rounds (Volonté Degré de Difficulté 37, cumulatif)
 Poids : 1,8 kg (4 lb)
-Prérequis : arme courante, Bâton de combat
-Type :  Deux mains~
+Prérequis : arme courante, bâton
+Type d'arme : à deux mains~
 @12532    = ~Ce bouclier massif est presque aussi grand que le porteur. Fondamentalement, c'est un mur portable destiné à fournir un abri. Il peut fournir jusqu'à un abri total, selon la distance à laquelle vous sortez de derrière lui. Un bouclier tour, cependant, ne fournit pas d'abri contre les sorts ciblés ; un lanceur de sorts peut lancer un sort sur vous en ciblant le bouclier que vous tenez. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
 
 PARAMÈTRES :
@@ -3116,8 +3120,8 @@ Bonus de bouclier : +9
 Spécial :
   Résistance aux sorts : Fixée à 28 si inférieure
   Malus d'attaque : -2
-Malus de jet d'armure :  -10
-Echec des sorts profanes :  50%
+Malus de jet d'armure : -10
+Echec des sorts profanes : 50%
 Poids : 11,3 kg (25 lb)~
 @4751     = ~Ce sirop rougeâtre épais, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle avec une énergie anti-magie. En versant le sirop sur un objet magique puis en le détruisant, un alchimiste peut imprégner le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques selon leur puissance.
 
@@ -3147,14 +3151,14 @@ PARAMÈTRES :
 Bonus de bouclier : +6
 Spécial :
   Le porteur n'est pas affecté par les sorts à zone d'effet nuisibles lancés par ses alliés
-Malus de jet d'armure :  -2
-Echec des sorts profanes :  15%
+Malus de jet d'armure : -2
+Echec des sorts profanes : 15%
 Poids : 2,7 kg (6 lb)~
 @12850    = ~Fabriquée pour un sorcier elfe noir de Rilauven, la Robe du Veilleur est reconnue parmi les drows comme un signe de grand pouvoir. Elle est traditionnellement portée par le praticien le plus talentueux de la magie de divination dans l'académie de sorcellerie de Rilauven. Malavon reçut la robe quand il était encore en bonne grâce avec sa cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance aux sorts, comme un drow.
 
 PARAMÈTRES :
 
-Bonus d'armure générique :  +4
+Bonus d'armure générique : +4
 Résistance aux sorts : +3
 Immunité à l'aveuglement et à la confusion
 Pouvoir de sort : Peut lancer Vision vraie 1/jour
@@ -3164,7 +3168,7 @@ Poids : 1,4 kg (3 lb)~
 
 PARAMÈTRES :
 
-Bonus d'armure générique :  +6
+Bonus d'armure générique : +6
 Résistance aux sorts : +5
 Immunité à l'aveuglement et à la confusion
 Pouvoir de sort : Peut lancer Vision vraie 1/jour
@@ -3219,7 +3223,7 @@ Lors d'une attaque sournoise, votre personnage peut mutiler sa cible de manière 
 
 Prérequis : Au moins trois niveaux de roublard.
 
-Avantage :  Donne au roublard une capacité qui fait que ses attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds. C'est un effet non magique qui contourne Liberté de mouvement. Cette capacité ne peut pas être active en même temps que Frappe artérielle.~
+Avantage : Donne au roublard une capacité qui fait que ses attaques sournoises réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds. C'est un effet non magique qui contourne Liberté de mouvement. Cette capacité ne peut pas être active en même temps que Frappe artérielle.~
 @735    = ~ATTAQUE PUISSANTE :
 
 Vous pouvez faire des attaques au corps à corps exceptionnellement puissantes.
@@ -3487,14 +3491,14 @@ Quelle que soit l'histoire, l'arc a une portée sans égale parmi de nombreux autr
 
 PARAMÈTRES :
 
-Dégâts :  +3 (projectile)
-Bonus d'attaque :  +2
+Dégâts : +3 (projectile)
+Bonus d'attaque : +2
 Spécial : 
   Une fois et demie la portée d'un arc normal
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +4
 Poids : 1,4 kg (3 lb)
-Prérequis :  Arme de guerre, Arc
-Type :  Deux mains~
+Prérequis : Arme de guerre, Arc
+Type d'arme : à deux mains~
 @11766    = ~Cet arc long est le sujet d'une légende parmi les citadelles querelleuses de la Côte des Épées, une légende âprement débattue dans les salles de beuverie et tavernes dans et le long de la côte battue par les tempêtes. Selon le récit, l'arc tire son nom de son rôle central dans l'évasion d'une jeune femme nommée Sophia, une jeune fille typique qui était promise en mariage au fils du duc Hugh Gladegrin (le fils est décrit comme horriblement laid et de tempérament fétide, bien sûr). Sophia, cependant, croyait qu'elle était destinée à épouser l'un des archers du duc, un jeune homme élégant aux cheveux dorés qui parcourait les terres environnantes abattant des bêtes immondes d'un seul son de son puissant arc. Selon le récit, l'un des sorciers de la cour (un transmutateur) prit pitié du sort de la jeune femme et lança un sort qui la transforma en flèche pendant une heure. Le transmutateur arrangea que Sophia soit tirée depuis le mur du château vers un navire attendant au large, où elle pourrait naviguer vers la liberté.
 
 Le récit se décompose ensuite, car de nombreux récits prétendent que Sophia ne s'enfuit pas sainement de la côte, et qu'elle se transforma en son corps normal alors qu'elle était à mi-chemin de l'eau, plongeant dans l'océan glacé. Une autre école prétend que, sous forme de flèche, Sophia perça le côté du navire, puis s'étouffa à mort lorsqu'elle reprit sa forme normale avec son cou encastré dans la coque du navire. D'autres encore prétendent qu'elle ne fut jamais même lancée depuis l'arc, et qu'elle reprit sa forme normale alors qu'elle était à l'intérieur du carquois de l'archer, et elle se réveilla, nue, portant seulement la petite bande de cuir autour de son corps. Lorsque ce dernier argument est fait, la discussion se dégrade généralement en un flot constant d'allusions sexuelles et la soirée dégénère officiellement.
@@ -3503,14 +3507,14 @@ Quelle que soit l'histoire, l'arc a une portée sans égale parmi de nombreux autr
 
 PARAMÈTRES :
 
-Dégâts :  +6 (projectile)
-Bonus d'attaque :  +5
+Dégâts : +6 (projectile)
+Bonus d'attaque : +5
 Spécial :
   Une fois et demie la portée d'un arc normal.
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +7
 Poids : 1,4 kg (3 lb)
-Prérequis :  Arme de guerre, Arc
-Type :  Deux mains~
+Prérequis : Arme de guerre, Arc
+Type d'arme : à deux mains~
 @24043=~Ténèbres de cambion~
 @48   = ~Ajuster les bonus de PV des créatures en mode Cœur de fureur~
 @52   = ~Ajuster les bonus d'attaque des créatures en mode Cœur de fureur~
