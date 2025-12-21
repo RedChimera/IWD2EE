@@ -2092,7 +2092,7 @@ Désavantages :
 * Les druides n'ont pas accès à de nombreux sorts défensifs puissants.
 * Les druides ne sont pas aussi puissants que les guerriers, rôdeurs, paladins ou barbares au combat.~
 @10713    = ~Dague d'attaques sournoises +1~
-@10714    = ~La dague typique a une lame pointue, généralement à double tranchant, contrairement au couteau, qui a un seul tranchant et est un peu plus court que la dague.
+@10714    = ~La dague diffère du couteau par sa lame, qui est à la fois pointue et à double tranchant.
 
 PARAMÈTRES :
 
@@ -2164,7 +2164,7 @@ Poids : 3,2 kg (7 lb)
 Compétence :  Arme de guerre, Marteau
 Type : à une main~
 @11749    = ~Arc long d'acide et de flamme +2~
-@11750    = ~L'arc long est similaire à l'arc court, sauf que la hampe fait environ la taille de l'archer, généralement 2 mètres (6 à 6,5 pieds). Il a deux avantages sur l'arc court : une meilleure portée et donc, il est beaucoup plus précis. Celui-ci a été amélioré avec des propriétés magiques, lui donnant un air de perfection.
+@11750    = ~L'arc long est similaire à l'arc court, mais sa longueur est à peu près égale à la hauteur de son archer, c'est-à-dire environ 2 m. Il présente deux avantages par rapport à l’arc court : une plus grande portée et donc une plus grande précision. Celui-ci a été enchanté, ce qui lui confère une aura de perfection.
 
 PARAMÈTRES :
 
@@ -2177,7 +2177,7 @@ Poids : 1,4 kg (3 lb)
 Compétence :  Arme de guerre, Arc
 Type :  Deux mains~
 @11859    = ~Arbalète lourde +8~
-@11860    = ~Une arbalète est un arc monté en travers sur une hampe en bois ou en métal, cette dernière appelée fût. L'arc est généralement fait de frêne ou d'if. L'arbalète tire un carreau (aussi appelé flèche). 
+@11860    = ~Une arbalète est un arc monté sur un châssis de bois ou de métal, ce dernier étant appelé un arbrier. L'arc est généralement fait de frêne ou d'if. L'arbalète utilise des carreaux et non des flèches.
 
 PARAMÈTRES :
 
@@ -2187,7 +2187,7 @@ Poids : 4,1 kg (9 lb)
 Compétence : arme courante, Arbalète
 Type :  Deux mains~
 @11901    = ~Fronde de force magique~
-@11902    = ~Les frondes existent depuis le début de l'histoire enregistrée. La fronde de base consiste en une lanière de cuir ou de tissu avec une poche pour tenir le projectile, cependant celle-ci a été imprégnée d'un petit enchantement magique. L'arme est tenue par les deux extrémités de la lanière et tournoyée autour de la tête du porteur. Lorsque la vitesse maximale est atteinte, le projectile est lancé en relâchant l'une des extrémités de la lanière.
+@11902    = ~Les frondes existent depuis des temps presque immémoriaux. Elles se composent d'une corde de cuir ou de tissu et d'une bourse pour contenir le projectile. Cependant, celle-ci bénéficie d'une charme léger. On tient la fronde par l’extrémité des deux lanières et on la fait tourner au-dessus de sa tête pour donner de la puissance. Il suffit alors de relâcher une des lanières pour projeter la bille.
 
 PARAMÈTRES :
 
@@ -2196,7 +2196,7 @@ Spécial :
 Poids : 0 lb.
 Compétence : arme courante, projectile
 Type : à une main~
-@11920    = ~Cette fronde en cuir a des motifs teints sur sa surface qui ressemblent aux plumes d'un moineau. Elle était possédée et utilisée par une prêtresse de Lathander nommée Galaida. Elle errait dans les Terres centrales occidentales de Féérune, soignant les malades et les personnes en détresse qui vivaient dans ces vastes étendues de terres agricoles. Bien qu'elle ne fût pas pacifiste, Galaida n'aimait pas le combat et cherchait à l'éviter autant que possible. Sa masse légère et sa fronde étaient ses deux seules armes contre les bandits, ogres et scélérats qui levaient occasionnellement la tête dans les petits villages qu'elle visitait. Malgré toute sa bonne volonté et ses intentions pacifiques, un groupe d'aventuriers finit par lui tendre une embuscade dans une grange. Elle fut tuée rapidement et les aventuriers s'échappèrent dans la nature sauvage.
+@11920    = ~Les motifs teints à la surface de cette fronde en cuir ressemblent à un empennage de flèche. Cette arme appartenait à une certaine Galada, prêtresse de Lathandre qui arpentait le Mitan occidental pour aider les malades et les nécessiteux. Bien que n'étant pas particulièrement pacifiste, elle détestait les combats et les évitait autant que possible. Sa masse légère et sa fronde étaient ses deux seules armes contre les ogres, brigands et autres larrons qui s'en prenaient parfois aux petits villages où elle se rendait. Malgré toute sa bonne volonté, un groupe d'aventuriers lui tendit un jour un piège dans lequel elle perdit la vie. Ses meurtriers s'enfuirent et disparurent dans la nature.
 
 PARAMÈTRES :
 
@@ -2294,7 +2294,7 @@ Jet de sauvegarde : Volonté, annule
 
 Ce sort affecte tout individu ou animal sur lequel il est jeté.  Le terme “personne” définit tout bipède humain, demi-humain ou humanoïde de taille inférieure ou égale à celle d'un homme (lutin, dryade, nain, elfe, gnoll, gnome, gobelin, demi-elfe, halfelin, demi-orque, hobgobelin, humain, kobold, homme-lézard, nixe, orque, pixie, esprit follet, troglodyte, etc.)
 Ainsi, un guerrier de niveau 10 pourra être charmé, mais pas un ogre. En cas d’échec, la créature considère le magicien comme son ami ; elle lui fait confiance et fait de son mieux pour le protéger.  Le jeteur de sorts peut donner des ordres à l’individu charmé, qui les exécute sans poser de questions.  Une créature charmée s’en souvient et se montrera vraisemblablement hostile au druide quand elle retrouvera son libre arbitre. La Résistance aux sorts de la cible, s'il y en a une, n'affecte pas ce sort.~
-@1043    = ~Tempête de pluie
+@1043    = ~Déluge
 (Évocation)
 Niveau : Dru 2
 Portée : portée de vue
@@ -2303,10 +2303,10 @@ Temps d'incantation : 6
 Zone d'effet : Rayon de 9 mètres (30 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort, qui ne peut être lancé qu'à l'extérieur, fait apparaître une pluie magique qui sature la zone d'effet. La pluie accorde une résistance 5/- au feu mais une faiblesse -5 aux dégâts de froid et d'électricité, et inflige 8d6 points de dégâts de froid aux créatures d'Élémentaire de feu. De plus, toutes les créatures dans la zone d'effet sont frappées par des éclairs qui infligent 2d6 dégâts d'électricité, avec un jet de Réflexes pour la moitié des dégâts. Les sorts Lame de flamme, Voile de flamme et les auras de salamandre sont également éteints.~
-@1011    = ~Cercle d'os
+Ce sort, qui ne peut être lancé qu'à l'extérieur, fait apparaître une pluie magique qui sature la zone d'effet. La pluie accorde une résistance 5/- au feu mais une faiblesse -5 aux dégâts de froid et d'électricité, et inflige 8d6 points de dégâts de froid aux créatures d'Élémentaire de feu. De plus, toutes les créatures dans la zone d'effet sont frappées par des éclairs qui infligent 2d6 dégâts d'électricité. Ces dégâts sont réduits de moitié en cas de jet de Réflexes réussi. Ce sort annule également les effets des sorts Lame de feu et Linceul de Flammes et éteint les auras des salamandres.~
+@1011    = ~Cercle d’ossements
 (Nécromancie)
-Niveau : Clr 3
+Niveau : Prê 3
 Portée : Lanceur
 Durée : 3 rounds
 Temps d'incantation : 3
@@ -2316,7 +2316,7 @@ Jet de sauvegarde : Aucun
 Ce sort invoque une barrière d'os flottants qui tournent rapidement autour du lanceur. Quiconque entre dans leur trajectoire subit 2d6 dégâts contondants et 2d6 dégâts tranchants par round, ignorant la résistance aux sorts. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle d'os ne peut pas être actif en même temps que le Cercle de lames, car les os et les lames se gênent mutuellement.~
 @32405     = ~Domination mentale
 (Enchantement) 
-Niveau : Clr 4
+Niveau : Prê 4
 Portée : portée de vue
 Durée : 1 round/niveau
 Temps d'incantation : 4
@@ -2336,7 +2336,7 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 Ce sort invoque une vague d'eau qui se déplace dans la direction voulue par le lanceur, frappant tous ceux sur son chemin avec une force massive. La vague inflige 1d8 dégâts d'écrasement par niveau du lanceur (maximum 15d8), et chaque créature frappée par la vague doit faire un jet de Réflexes ou être repoussée et renversée pendant 1 round. Les créatures d'Élémentaire de feu sont extrêmement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts.~
 @1023    = ~Cercle de lames
 (Évocation)
-Niveau : Clr 6, Pal 5, Helm 6, Tempus 6
+Niveau : Prê 6, Pal 5, Helm 6, Tempus 6
 Portée : Lanceur
 Durée : 2 rounds
 Temps d'incantation : 9
@@ -2346,7 +2346,7 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 Ce sort invoque un mur de lames tournoyantes et tranchantes comme des rasoirs qui tourbillonnent et étincellent autour du lanceur. Toute créature tentant de passer à travers la barrière de lames subit 10d8 points de dégâts, ignorant la résistance aux sorts, avec un jet de Réflexes réussi pour la moitié des dégâts. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle de lames ne peut pas être actif en même temps que le Cercle d'os, car les os et les lames se gênent mutuellement.~
 @32608    = ~Orbe brûlant de Sol
 (Évocation)
-Niveau : Clr 6, Dru 5, Rôd 5
+Niveau : Prê 6, Dru 5, Rôd 5
 Portée : portée de vue
 Durée : Instantanée
 Temps d'incantation : 6
@@ -2554,7 +2554,7 @@ Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un 
 @30372=~... Pluie de feu.~
 @32106     = ~Pierre magique
 (Enchantement)
-Niveau : Clr 1, Dru 1, Rôd 1
+Niveau : Prê 1, Dru 1, Rôd 1
 Portée : Lanceur
 Durée : 30 rounds ou jusqu'à épuisement
 Temps d'incantation : 1
@@ -2566,7 +2566,7 @@ Ce sort améliore les projectiles de fronde du lanceur. Tout projectile que le la
 Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Pierre magique sera lancé au niveau de lanceur complet du rôdeur.~
 @32107     = ~Protection contre le mal
 (Abjuration) [Bon]
-Niveau : Clr 1, Pal 1, Sor/Wiz 1
+Niveau : Prê 1, Pal 1, Sor/Wiz 1
 Portée : Contact
 Durée : 10 rounds / niveau
 Temps d'incantation : 1
@@ -2576,7 +2576,7 @@ Jet de sauvegarde : Aucun
 Ce sort forme une barrière magique autour de la créature cible, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le DD de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2. De plus, la créature est immunisée aux effets de charme et de domination. Les fiélons invoqués n'attaqueront pas leur invocateur ou les alliés de leur invocateur si leur invocateur a Protection contre le mal.~
 @32408     = ~Cercle magique contre le mal
 (Abjuration) [Bon]
-Niveau : Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
+Niveau : Prê 4, Pal 4, Sor/Wiz 4, Ilmater 3
 Portée : Lanceur
 Durée : 10 rounds / niveau
 Temps d'incantation : 7
@@ -2586,7 +2586,7 @@ Jet de sauvegarde : Aucun
 Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le DD de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2, ainsi qu'une immunité aux effets de charme et de domination.~
 @36454     = ~Cailloux en rochers
 (Transmutation)
-Niveau : Clr 5, Dru 4, Rôd 4
+Niveau : Prê 5, Dru 4, Rôd 4
 Portée : Lanceur
 Durée : 5 rounds/niveau ou jusqu'à épuisement
 Temps d'incantation : 4
@@ -2821,7 +2821,7 @@ Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de
 REMARQUE : Le rôdeur doit avoir un emplacement de munitions vide pour que le carquois soit créé. Sinon, le sort échouera.~
 @1673    = ~Animer zombie
 (Nécromancie) 
-Niveau : Clr 3, Sor/Wiz 5, Tempus 3
+Niveau : Prê 3, Sor/Wiz 5, Tempus 3
 Portée : portée de vue
 Durée : Instantanée 
 Temps d'incantation : 9
@@ -2833,7 +2833,7 @@ Ce sort fait surgir un zombie mort depuis longtemps des profondeurs de la terre 
 AVERTISSEMENT : À des niveaux plus élevés, les Seigneurs zombies et les Morts noyés putréfiés invoqués par ce sort ont des auras surnaturelles puissantes. Les effets de leurs auras peuvent nuire à vos propres membres du groupe s'ils tombent dans la zone d'effet.~
 @1675    = ~Animer squelette
 (Nécromancie) 
-Niveau : Clr 3, Sor/Wiz 5, Tempus 3
+Niveau : Prê 3, Sor/Wiz 5, Tempus 3
 Portée : portée de vue
 Durée : Instantanée 
 Temps d'incantation : 9
@@ -2843,7 +2843,7 @@ Jet de sauvegarde : Aucun
 Ce sort fait surgir un squelette mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le squelette invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.~
 @1019    = ~Bouclier de Lathander
 (Invocation) [Bon]
-Niveau : Clr 4, Pal 4, Lathander 4
+Niveau : Prê 4, Pal 4, Lathander 4
 Portée : Contact
 Durée : 3 rounds
 Temps d'incantation : 4
@@ -2853,7 +2853,7 @@ Jet de sauvegarde : Aucun
 Ce sort accorde à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perforants, feu, froid, acide et électricité pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
 @1850    = ~Grand bouclier de Lathander
 (Invocation) [Bon]
-Niveau : Clr 8, Pal 6, Lathander 6
+Niveau : Prê 8, Pal 6, Lathander 6
 Portée : Contact
 Durée : 3 rounds
 Temps d'incantation : 8
@@ -2863,7 +2863,7 @@ Jet de sauvegarde : Aucun
 Ce sort accorde une réduction de dégâts de 30/- à toutes les formes de dégâts et fixe la Résistance aux sorts à 40 si elle est inférieure pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
 @1521    = ~Aura sacrée
 (Abjuration)
-Niveau : Clr 8, Ilmater 8
+Niveau : Prê 8, Ilmater 8
 Portée : 6 mètres (20 pieds)
 Durée : 1 round/niveau
 Temps d'incantation : 6
@@ -2878,7 +2878,7 @@ Quatrièmement, toute créature d'alignement mauvais qui frappe (mêlée uniquement)
 L'Aura sacrée ne peut pas être lancée par les personnages mauvais.~
 @36853     = ~Aura impie
 (Abjuration)
-Niveau : Clr 8
+Niveau : Prê 8
 Portée : 6 mètres (20 pieds)
 Durée : 1 round/niveau
 Temps d'incantation : 6
