@@ -321,7 +321,7 @@ Avantages :
 * Niveau 5 : La Mélodie de Tymora. Lorsqu’elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
 * Niveau 9 : L’Appel de la Sirène. Lorsqu’il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d’être enchantée, incapable d’agir pendant un round ou jusqu’à ce qu’elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d’un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- à la résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, à la résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
-* Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+* Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance à la magie de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance à la magie de +5 et une résistance de 5/- aux dégâts magiques.
 
 Un barde ne peut pas faire bénéficier le groupe de plus d’une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
 
@@ -885,9 +885,9 @@ Niveau 17+ : 1d8+5
 * Niveau 9 : Esquive surnaturelle. Le moine acquiert le don d’Esquive surnaturelle, habituellement réservé aux roublards.
 * Niveau 10 : Pas chassé. Le moine peut se téléporter vers n’importe quel endroit en vue une fois par jour.
 * Niveau 11 : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d’être immunisé contre tous les poisons.
-* Niveau 13 : Ame de diamant. Le moine acquiert de la résistance aux sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
+* Niveau 13 : Ame de diamant. Le moine acquiert de la résistance à la magie. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
 * Niveau 15 : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d’une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + moitié du niveau du moine). Les constructions, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
-* Niveau 19 : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus à la CA et de bouclier.
+* Niveau 19 : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus à la classe d’armure et de bouclier.
 * Niveau 20 : Perfection de l’être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l’affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu’il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d’un bonus d’altération de +1 (ou plus), par un sort ou par une forme d’énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
 Désavantages :
@@ -911,13 +911,13 @@ Désavantages :
 
 PARAMÈTRES :
 
-Bonus à la CA : +5
+Bonus à la classe d’armure : +5
 Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
  Résistance : 50/- de résistance au froid
- Résistance : 18/- de résistance aux sorts
+ Résistance : 18/- de résistance à la magie
  Réduction des dégâts : 5/bon, chaotique ou argent
  Régénération : Régénère 1 point de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
@@ -927,13 +927,13 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus à la CA : +9
+Bonus à la classe d’armure : +9
 Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
  Résistance : 50/- de résistance au froid
- Résistance : 26/- de résistance aux sorts
+ Résistance : 26/- de résistance à la magie
  Réduction des dégâts : 10/bon, chaotique ou argent
  Régénération : Régénère 2 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
@@ -944,13 +944,13 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus à la CA : +18
+Bonus à la classe d’armure : +18
 Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
  Résistance : 10/- de résistance au froid
- Résistance : 24/- de résistance aux sorts
+ Résistance : 24/- de résistance à la magie
  Réduction des dégâts : 10/bon, chaotique ou argent
  Régénération : Régénère 5 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
@@ -961,13 +961,13 @@ Poids : 0~
 
 PARAMÈTRES :
 
-Bonus à la CA : +24
+Bonus à la classe d’armure : +24
 Bonus de Dextérité maxi : aucun
 Spécial :
  Résistance : 10/- de résistance à l’acide
  Résistance : 100/- de résistance au feu
  Résistance : 10/- de résistance au froid
- Résistance : 36/- de résistance aux sorts
+ Résistance : 36/- de résistance à la magie
  Réduction des dégâts : 15/bon, chaotique ou argent
  Régénération : Régénère 10 points de vie par round
  Immunité aux maladies, au poison, au charme et à la peur
@@ -1238,7 +1238,7 @@ Après des recherches obscures sans fin, vous avez enfin atteint l’immortalité… t
 Prérequis : Pour commencer à prendre des rangs dans ce don, vous avez besoin de deux rangs en École de prédilection : Nécromancie, de 12 niveaux de magicien ou d’ensorceleur ou de 10 niveaux de nécromancien, et d’un alignement mauvais. Pour prendre le dernier rang, vous avez besoin de 20 niveaux de magicien ou d’ensorceleur ou de 18 niveaux de nécromancien.
 
 Avantage : Même après avoir rempli les conditions initiales, vous devez prendre ce don cinq fois pour en bénéficier (cela représente les longues heures de recherches nécromanciennes nécessaires pour devenir une liche). Une fois fait, vous devenez effectivement une liche et obtenez ces effets :
-* Bonus à la CA de +5.
+* Bonus à la classe d’armure de +5.
 * +2 en Intelligence, Sagesse et Charisme.
 * Immunité au froid, à l’électricité, au poison, aux maladies, aux saignements, à la fatigue, au sommeil, à la peur, au désespoir, au charme, à la confusion, à la débilité, à la paralysie, à l’étourdissement, à l’absorption d’énergie, à la mort instantanée, à la pétrification et aux effets de métamorphose nuisibles (Transformation fonctionne toujours).
 * Résistance de 5/- aux dégâts tranchants et perforants, réduction des dégâts de 5/+1.
@@ -1416,7 +1416,7 @@ Avantages :
 * Niveau 5 : La Mélodie de Tymora. Lorsqu’elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise. Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
 * Niveau 9 : L’Appel de la Sirène. Lorsqu’il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d’être enchantée, incapable d’agir pendant un round ou jusqu’à ce qu’elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d’un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à l’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armur, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
-* Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+* Niveau 20 : La Ballade des Trois Héros. Lorsqu’elle est jouée, les alliés du barde gagnent une résistance à la magie de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance à la magie de +5 et une résistance de 5/- aux dégâts magiques.
 
 Un barde ne peut pas faire bénéficier le groupe de plus d’une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
 
@@ -1757,7 +1757,7 @@ Type d'arme : à une main~
 PARAMÈTRES :
 
 Armure moyenne
-Bonus à la CA : +7
+Bonus à la classe d’armure : +7
 Bonus max de Dextérité : +4
 Malus de jet d’armure : -3
 Echec des sorts profanes : 20%
@@ -1820,9 +1820,9 @@ Poids : 0 lb.~
 @56031=~Resistance: <EXARDAMR>/- Physical Damage Resistance~
 @56031=~Résistance : <EXARDAMR>/- Résistance aux Dégâts Physiques~
 //The two strings below must be translated to be indentical to the line in the description of an armor or shield that states its armor or shield bonus, minus the number. The mod runs code that checks the description of armor and shields for a line that includes one of these strings (but doesn't include the "Generic Armor Bonus:" line) and puts the above string right below them.
-@56032=~Bonus à la CA :~
+@56032=~Bonus à la classe d’armure :~
 @56033=~Bonus de bouclier :~
-@56034=~Bonus à la CA générique :~
+@56034=~Bonus à la classe d’armure générique :~
 
 //Strings to translate for v3.3.4:
 
@@ -2204,7 +2204,7 @@ Dégâts : +5 (projectile)
 Bonus d'attaque : +5
 Spécial :
   Gagne le bonus de Sagesse à l'attaque
-  Pouvoir de sort : Peut lancer le sort Restauration supérieure 1/jour
+  Sort : Peut lancer le sort Restauration supérieure 1/jour
 Poids : 0 lb.
 Prérequis : arme courante, projectile
 Type : à une main~
@@ -2228,7 +2228,7 @@ Poids : 1,4 kg (3 lb)~
 
 PARAMÈTRES :
 
-Pouvoir de sort : Peut lancer la Lame noire de désastre (durant 30 rounds) 1/jour. Si le personnage a au moins 17 niveaux de rôdeur, il crée plutôt une Lame noire de désastre dans chaque main.
+Sort : Peut lancer la Lame noire de désastre (durant 30 rounds) 1/jour. Si le personnage a au moins 17 niveaux de rôdeur, il crée plutôt une Lame noire de désastre dans chaque main.
 Poids : 0 lb.~
 @12931    = ~La Langue de salamandre +3~
 @12932    = ~La Langue de Salamandre est une dague à l'aspect étrange et à l'histoire obscure, prisée tant pour ses pouvoirs magiques que pour son utilité d'arme. La lame de cette dague exotique est ondulée et se termine par deux petites pointes. Un morceau rouge et visqueux de langue de salamandre est intégré à la lame, près du manche. Il bouge de lui-même, sans intervention de l'utilisateur.
@@ -2282,7 +2282,7 @@ Temps d'incantation : 4
 Zone d'effet : 1 créature
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-À l'achèvement de ce sort, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les morts-vivants, champignons, vases, les drows et nains gris subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de Réflexes ou être aveuglées pendant 3 rounds. Les drows et nains gris sont automatiquement aveuglés par le sort pendant 3 rounds (pas de sauvegarde). Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont naturellement vulnérables à ce type de sorts.~
+À l'achèvement de ce sort, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les morts-vivants, champignons, vases, les drows et nains gris subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de Réflexes ou être aveuglées pendant 3 rounds. Les drows et nains gris sont automatiquement aveuglés par le sort pendant 3 rounds (pas de sauvegarde). Ce sort ignore la résistance à la magie des créatures telles que les drows qui sont naturellement vulnérables à ce type de sorts.~
 @32204     = ~Charme personne ou animal
 (Enchantement) 
 Niveau : Dru 2
@@ -2313,7 +2313,7 @@ Temps d'incantation : 3
 Zone d'effet : Rayon de 1 mètre (3 pieds)
 Jet de sauvegarde : aucun
 
-Ce sort invoque une barrière d'os flottants qui tournent rapidement autour du lanceur. Quiconque entre dans leur trajectoire subit 2d6 dégâts contondants et 2d6 dégâts tranchants par round, ignorant la résistance aux sorts. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle d’ossements ne peut pas être actif en même temps que le Cercle de lames, car les os et les lames se gênent mutuellement.~
+Ce sort invoque une barrière d'os flottants qui tournent rapidement autour du lanceur. Quiconque entre dans leur trajectoire subit 2d6 dégâts contondants et 2d6 dégâts tranchants par round, ignorant la résistance à la magie. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle d’ossements ne peut pas être actif en même temps que le Cercle de lames, car les os et les lames se gênent mutuellement.~
 @32405     = ~Domination mentale
 (Enchantement) 
 Niveau : Prê 4
@@ -2323,7 +2323,7 @@ Temps d'incantation : 4
 Zone d'effet : 1 créature 
 Jet de sauvegarde : Volonté, annule
 
-Ce sort permet au lanceur d'envahir l'esprit de la créature cible, permettant au lanceur de vouloir que la créature accomplisse toutes les actions qu'il désire. La créature cible résistera aux effets si un jet de Volonté réussi avec +2 Degré de Difficulté est effectué. Pendant qu'une créature est dominée de cette manière, son esprit est embrumé et la pensée est entravée, ce qui se traduit par un malus de –2 au jet d’attaque et l’incapacité de se concentrer suffisamment pour lancer le moindre sort. Ce sort ignore la résistance aux sorts.~
+Ce sort permet au lanceur d'envahir l'esprit de la créature cible, permettant au lanceur de vouloir que la créature accomplisse toutes les actions qu'il désire. La créature cible résistera aux effets si un jet de Volonté réussi avec +2 Degré de Difficulté est effectué. Pendant qu'une créature est dominée de cette manière, son esprit est embrumé et la pensée est entravée, ce qui se traduit par un malus de –2 au jet d’attaque et l’incapacité de se concentrer suffisamment pour lancer le moindre sort. Ce sort ignore la résistance à la magie.~
 @1021    = ~Vague destructrice
 (Évocation)
 Niveau : Dru 5, Rôd 5
@@ -2333,7 +2333,7 @@ Temps d'incantation : 5
 Zone d'effet : Vague de 1,5 mètre (5 pieds) de large
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Le sort appelle une vague d’eau qui se dirige dans la direction déterminée par le personnage, occasionnant de terribles ravages sur son passage. Toute créature touchée subit 1d8 points de dégâts contondants par niveau du lanceur de sorts (jusqu’à un maximum de 15d8) et chaque créature frappée par la vague doit faire un jet de Réflexes sous peine d'être repoussée et renversée pendant 1 round. Les créatures liées au feu sont extrêmement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts.~
+Le sort appelle une vague d’eau qui se dirige dans la direction déterminée par le personnage, occasionnant de terribles ravages sur son passage. Toute créature touchée subit 1d8 points de dégâts contondants par niveau du lanceur de sorts (jusqu’à un maximum de 15d8) et chaque créature frappée par la vague doit faire un jet de Réflexes sous peine d'être repoussée et renversée pendant 1 round. Les créatures liées au feu sont extrêmement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance à la magie.~
 @1023    = ~Cercle de lames
 (Évocation)
 Niveau : Prê 6, Pal 5, Heaum 6, Tempus 6
@@ -2343,7 +2343,7 @@ Temps d'incantation : 9
 Zone d'effet : Rayon de 1 mètre (3 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort invoque un mur de lames tournoyantes et tranchantes comme des rasoirs qui tourbillonnent et étincellent autour du lanceur. Toute créature tentant de passer à travers la barrière de lames subit 10d8 points de dégâts, ignorant la résistance aux sorts, avec un jet de Réflexes réussi réduisant les dégâts de moitié. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle de lames ne peut pas être actif en même temps que le Cercle d'os, car les os et les lames se gênent mutuellement.~
+Ce sort invoque un mur de lames tournoyantes et tranchantes comme des rasoirs qui tourbillonnent et étincellent autour du lanceur. Toute créature tentant de passer à travers la barrière de lames subit 10d8 points de dégâts, ignorant la résistance à la magie, avec un jet de Réflexes réussi réduisant les dégâts de moitié. Ce sort ne provoque pas d'attaque d'opportunité. Le Cercle de lames ne peut pas être actif en même temps que le Cercle d'os, car les os et les lames se gênent mutuellement.~
 @32608    = ~Orbe desséchant de Sol
 (Évocation)
 Niveau : Prê 6, Dru 5, Rôd 5
@@ -2353,7 +2353,7 @@ Temps d'incantation : 6
 Zone d'effet : 1 créature
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-À l'achèvement de ce sort, le lanceur lance une sphère brillante et flamboyante sur une créature cible. Quand elle frappe, elle explose dans un éclair de lumière, aveuglant la créature cible et infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris doivent faire leur jet de Réflexes contre l'aveuglement avec +4 Degré de Difficulté. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables à ce sort.~
+À l'achèvement de ce sort, le lanceur lance une sphère brillante et flamboyante sur une créature cible. Quand elle frappe, elle explose dans un éclair de lumière, aveuglant la créature cible et infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris doivent faire leur jet de Réflexes contre l'aveuglement avec +4 Degré de Difficulté. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort et subissent le double des dégâts. Ce sort ignore la résistance à la magie des créatures telles que les drows qui sont vulnérables à ce sort.~
 @1592    = ~Rayon de soleil
 (Évocation)
 Niveau : Dru 8, Lathandre 7
@@ -2363,7 +2363,7 @@ Temps d'incantation : 7
 Zone d'effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Réflexes, partiel
 
-Ce sort permet au lanceur d'évoquer des rayons aveuglants de lumière intensément chaude. Chaque round, toutes les créatures dans le rayon sont aveuglées pendant 3 rounds et subissent 4d6 points de dégâts de feu, ou 16d6 dégâts sur 4 rounds. Un jet de Réflexes réussi annule l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris subissent 8d6 dégâts par round et n'ont pas de sauvegarde contre l'aveuglement. Les créatures mortes-vivantes, champignons et vases pris dans le rayon subissent 1d6 points de dégâts par niveau du lanceur (maximum 20d6) par round. Ce sort ignore la résistance aux sorts des créatures telles que les drows qui sont vulnérables au sort.~
+Ce sort permet au lanceur d'évoquer des rayons aveuglants de lumière intensément chaude. Chaque round, toutes les créatures dans le rayon sont aveuglées pendant 3 rounds et subissent 4d6 points de dégâts de feu, ou 16d6 dégâts sur 4 rounds. Un jet de Réflexes réussi annule l'aveuglement et réduit les dégâts de moitié. Les drows et nains gris subissent 8d6 dégâts par round et n'ont pas de sauvegarde contre l'aveuglement. Les créatures mortes-vivantes, champignons et vases pris dans le rayon subissent 1d6 points de dégâts par niveau du lanceur (maximum 20d6) par round. Ce sort ignore la résistance à la magie des créatures telles que les drows qui sont vulnérables au sort.~
 @34104     = ~Charme-personne
 (Enchantement)
 Niveau : Bar 1, Ens/Mag 1
@@ -2400,7 +2400,7 @@ Temps d'incantation : 3
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Ce sort est similaire au sort Charme-personnes. Cependant, la créature affectée entre dans un état de rage, ne voulant que personne ne nuise à son maître (le lanceur du sort). Elle affronte donc les ennemis de ce dernier, qu'il s'agisse ou non d'anciens alliés. Le Charme funeste  peut affecter à la fois les humanoïdes et les géants. Ce sort ignore la résistance aux sorts.~
+Ce sort est similaire au sort Charme-personnes. Cependant, la créature affectée entre dans un état de rage, ne voulant que personne ne nuise à son maître (le lanceur du sort). Elle affronte donc les ennemis de ce dernier, qu'il s'agisse ou non d'anciens alliés. Le Charme funeste  peut affecter à la fois les humanoïdes et les géants. Ce sort ignore la résistance à la magie.~
 @1091    = ~Lance de destruction
 (Évocation)
 Niveau : Ens/Mag 3
@@ -2410,7 +2410,7 @@ Temps d'incantation : 3
 Zone d'effet : spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort crée une lance de force, s'étendant du lanceur à un point spécifié à 18 mètres (60 pieds) de distance. Toutes les créatures sur le chemin de la lance subissent 5d4 points de dégâts perforants, +2 points de dégâts par niveau du lanceur (maximum de +50). Les victimes peuvent faire un jet de Réflexes réduisant les dégâts de moitié en cas de succès. Ce sort ignore la résistance aux sorts.~
+Ce sort crée une lance de force, s'étendant du lanceur à un point spécifié à 18 mètres (60 pieds) de distance. Toutes les créatures sur le chemin de la lance subissent 5d4 points de dégâts perforants, +2 points de dégâts par niveau du lanceur (maximum de +50). Les victimes peuvent faire un jet de Réflexes réduisant les dégâts de moitié en cas de succès. Ce sort ignore la résistance à la magie.~
 @1679    = ~Sphère d’isolement d’Otiluke
 (Évocation)
 Niveau : Ens/Mag 4
@@ -2420,7 +2420,7 @@ Temps d'incantation : 1
 Zone d'effet : 1 créature
 Jet de sauvegarde : Réflexes, annule
 
-Lorsque ce sort est lancé, le résultat est un bulle de force scintillante qui enferme la créature sujette. La sphère d’isolement contiendra son sujet pour la durée du sort. Une créature non alliée peut faire un jet de Réflexes avec +8 Degré de Difficulté pour esquiver le sort. La sphère est complètement immunisée à tous les dégâts ; la seule méthode pour retirer la sphère est l'utilisation d'un sort de Dissipation de la magie. La créature enfermée ne risque donc rien, mais elle ne peut plus avoir le moindre impact sur le monde extérieur. Ce sort ignore la résistance aux sorts.~
+Lorsque ce sort est lancé, le résultat est un bulle de force scintillante qui enferme la créature sujette. La sphère d’isolement contiendra son sujet pour la durée du sort. Une créature non alliée peut faire un jet de Réflexes avec +8 Degré de Difficulté pour esquiver le sort. La sphère est complètement immunisée à tous les dégâts ; la seule méthode pour retirer la sphère est l'utilisation d'un sort de Dissipation de la magie. La créature enfermée ne risque donc rien, mais elle ne peut plus avoir le moindre impact sur le monde extérieur. Ce sort ignore la résistance à la magie.~
 @1107    = ~Domination
 (Enchantement)
 Niveau : Bar 5, Ens/Mag 6, Baine 5
@@ -2430,7 +2430,7 @@ Temps d'incantation : 5
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Le sort de domination permet au lanceur de contrôler les actions de toute créature pendant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. Cette dernière a droit à un jet de Volonté à +2 au Degré de Difficulté pour se prémunir de l’effet de Domination. Ce sort ignore la résistance aux sorts.~
+Le sort de domination permet au lanceur de contrôler les actions de toute créature pendant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. Cette dernière a droit à un jet de Volonté à +2 au Degré de Difficulté pour se prémunir de l’effet de Domination. Ce sort ignore la résistance à la magie.~
 @1814    = ~Domination de groupe
 (Enchantement) 
 Niveau : Bar 8, Ens/Mag 9, Baine 9
@@ -2440,7 +2440,7 @@ Temps d'incantation : 9
 Zone d'effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Volonté, annule
 
-Ce sort force toutes les créatures non alliées avec le lanceur de sorts dans la zone d’effet à faire un jet de sauvegarde contre la Volonté sous peine d’être dominées comme par le sort Domination. Les morts-vivants ne sont pas affectés par ce sort. Ce sort ignore la résistance aux sorts.~
+Ce sort force toutes les créatures non alliées avec le lanceur de sorts dans la zone d’effet à faire un jet de sauvegarde contre la Volonté sous peine d’être dominées comme par le sort Domination. Les morts-vivants ne sont pas affectés par ce sort. Ce sort ignore la résistance à la magie.~
 @36956     = ~Tornade
 (Évocation)
 Niveau : Dru 9
@@ -2450,7 +2450,7 @@ Temps d'incantation : 9
 Zone d'effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : aucun
 
-Une version plus puissante du sort Tourbillon, le sort crée une tornade au point ciblé qui se déplace aléatoirement. Les créatures se trouvant à moins de 4,5 mètres (15 pieds) de la tornade sont aspirées et subissent 3d8 dégâts tranchants par seconde tant qu’elles restent à l’intérieur. Les créatures sont généralement éjectées de la tornade après environ un round. Les créatures énormes comme les géants du givre et les dragons ne sont pas aspirées par la tornade mais subissent quand même des dégâts lorsqu’elles se trouvent dans la zone d’effet. Une seule tornade peut être active à la fois. Ce sort ne peut être lancé qu’en extérieur et ignore la résistance aux sorts.~
+Une version plus puissante du sort Tourbillon, le sort crée une tornade au point ciblé qui se déplace aléatoirement. Les créatures se trouvant à moins de 4,5 mètres (15 pieds) de la tornade sont aspirées et subissent 3d8 dégâts tranchants par seconde tant qu’elles restent à l’intérieur. Les créatures sont généralement éjectées de la tornade après environ un round. Les créatures énormes comme les géants du givre et les dragons ne sont pas aspirées par la tornade mais subissent quand même des dégâts lorsqu’elles se trouvent dans la zone d’effet. Une seule tornade peut être active à la fois. Ce sort ne peut être lancé qu’en extérieur et ignore la résistance à la magie.~
 @38251     = ~Identification de créature
 (Divination)
 Niveau : Bar 2, Dru 2, Rôd 2, Ens/Mag 2
@@ -2460,7 +2460,7 @@ Temps d'incantation : 2
 Zone d'effet : 1 créature
 Jet de sauvegarde : aucun
 
-Identification de créature révèle des informations de combat utiles sur la créature ciblée. Les informations incluent le niveau de la créature, ses points de vie actuels et maximaux, le nombre d’attaques par round, ses caractéristiques, ses résistances, ses jets de sauvegarde et divers autres traits propres à la créature. Ce sort ignore la résistance aux sorts.~
+Identification de créature révèle des informations de combat utiles sur la créature ciblée. Les informations incluent le niveau de la créature, ses points de vie actuels et maximaux, le nombre d’attaques par round, ses caractéristiques, ses résistances, ses jets de sauvegarde et divers autres traits propres à la créature. Ce sort ignore la résistance à la magie.~
 @38653     = ~Roulade de rocher
 (Invocation)
 Niveau : Dru 6, Ens/Mag 6
@@ -2470,7 +2470,7 @@ Temps d'incantation : 4
 Zone d'effet : Toutes les créatures sur le chemin du rocher
 Jet de sauvegarde : Réflexes, partiel
 
-Roulade de rocher crée un grand rocher, qui roule vers l'avant depuis le lanceur, écrasant les créatures sur son chemin, jusqu'à ce qu'il heurte un mur. Les créatures touchées subissent 12d8 de dégâts contondants et sont renversées pendant 2 rounds. Un jet de sauvegarde de Réflexes réussi réduit les dégâts de moitié et empêche d’être renversé. Le rocher ignore la résistance aux sorts et se déplace toujours vers le sud depuis le lanceur.~
+Roulade de rocher crée un grand rocher, qui roule vers l'avant depuis le lanceur, écrasant les créatures sur son chemin, jusqu'à ce qu'il heurte un mur. Les créatures touchées subissent 12d8 de dégâts contondants et sont renversées pendant 2 rounds. Un jet de sauvegarde de Réflexes réussi réduit les dégâts de moitié et empêche d’être renversé. Le rocher ignore la résistance à la magie et se déplace toujours vers le sud depuis le lanceur.~
 @38853     = ~Esclavage
 (Enchantement)
 Niveau : Bar 7, Ens/Mag 8
@@ -2480,7 +2480,7 @@ Temps d'incantation : 8
 Zone d'effet : 1 créature
 Jet de sauvegarde : Volonté, annule
 
-Ce sort permet au lanceur de prendre le contrôle complet et permanent d’une autre créature. La cible doit réussir un jet de sauvegarde de Volonté avec +4 au Degré de Difficulté. Si elle échoue, elle est dominée par le lanceur jusqu’à sa mort ou jusqu’à ce que l’effet soit dissipé. Esclavage peut même affecter les morts-vivants et les constructions et ignore la résistance aux sorts.~
+Ce sort permet au lanceur de prendre le contrôle complet et permanent d’une autre créature. La cible doit réussir un jet de sauvegarde de Volonté avec +4 au Degré de Difficulté. Si elle échoue, elle est dominée par le lanceur jusqu’à sa mort ou jusqu’à ce que l’effet soit dissipé. Esclavage peut même affecter les morts-vivants et les constructions et ignore la résistance à la magie.~
 @308    = ~ATTAQUE SOURNOISE AMÉLIORÉE :
 
 Vos attaques sournoises sont particulièrement meurtrières.
@@ -2515,7 +2515,7 @@ Utilisez cette compétence pour identifier les sorts lorsqu'ils sont lancés ou le
 
 PARAMÈTRES :
 
-Bonus à la CA : +5 vs. Contondant
+Bonus à la classe d’armure : +5 vs. Contondant
 Bonus de sauvegarde : +5 aux jets de Volonté
 Sorts sans danger : Lorsque le porteur lance un sort à zone d'effet, les alliés font des jets de sauvegarde contre le sort avec -5 Degré de Difficulté.
 Poids : 1,8 kg (4 lb)~
@@ -2532,7 +2532,7 @@ Votre musique bardique sonne particulièrement bien aux oreilles de vos auditeurs
 
 Prérequis : Au moins trois niveaux de barde.
 
-Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un bonus supplémentaire de +1 à la CA, l'attaque, les dégâts, les jets de sauvegarde et les tests de compétence. Tout chant de barde que vous jouez qui affecte les ennemis gagne +2 au Degré de Difficulté.~
+Avantage : Tout chant de barde que vous jouez qui affecte les alliés accorde un bonus supplémentaire de +1 à la classe d’armure, l'attaque, les dégâts, les jets de sauvegarde et les tests de compétence. Tout chant de barde que vous jouez qui affecte les ennemis gagne +2 au Degré de Difficulté.~
 @890    = ~A esquivé l'attaque~
 @55928=~Activer/Désactiver l'enregistrement de buffs~
 @55929=~Effacer l'enregistrement~
@@ -2720,7 +2720,7 @@ Prashnak passa donc plusieurs mois à étudier la magie d'affaiblissement, l'invoc
 
 PARAMÈTRES :
 
-Bonus à la CA : +3
+Bonus à la classe d’armure : +3
 Spécial :
   Les dégâts de froid et magiques infligés par les sorts et capacités du porteur sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
@@ -2730,7 +2730,7 @@ Après plusieurs mois d'étude des divers effets de la magie de flétrissure, de l'
 
 PARAMÈTRES :
 
-Bonus à la CA : +7
+Bonus à la classe d’armure : +7
 Spécial :
   Les dégâts de froid et magiques infligés par les sorts et capacités du porteur sont augmentés de 40%
 Poids : 1,4 kg (3 lb)~
@@ -2753,23 +2753,23 @@ PARAMÈTRES :
 
 Les dégâts d'électricité infligés par les sorts et capacités du porteur sont augmentés de 30%
 Poids : 1,4 kg (3 lb)~
-@12524    = ~Depuis l'ère de Netheril, les sorciers ont appris à conférer une grande variété de propriétés magiques aux objets quotidiens qui les entourent. Un objet favori de tel enchantement est la robe commune. Elle est légère, abordable, et maintient bien son enchantement, ce qui en fait un équipement idéal pour un sorcier.
+@12524    = ~Depuis l'époque du Netheril, les magiciens de tout bord ont appris à accorder de nombreuses propriétés magiques aux objets qui les entourent ; la robe est d'ailleurs l'un des sujets préférés de leurs enchantements. Légère, bon marché et particulièrement bien réceptive à la magie, ce vêtement est depuis lors devenu le compagnon idéal de tout magicien qui se respecte.
 
 PARAMÈTRES :
 
 Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 30%
 Résistance : 25/- Résistance au feu
 Poids : 1,4 kg (3 lb)~
-@10049    = ~Le feu peut être le porteur de vie, ou le moissonneur de mort. Avec le Talisman de danse de flamme, les deux scénarios sont vrais. Fabriqué par un sorcier inconnu mais habile, le Talisman de danse de flamme donnait à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir de lancer une boule de feu trois fois par jour aux attaquants potentiels.
+@10049    = ~Le feu peut être à l'origine de la vie ou apporter la mort : le Talisman de Danse du Feu accrédite ces deux thèses. Forgé par un magicien inconnu mais très doué, il confère à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir de lancer une boule de feu trois fois par jour aux attaquants potentiels.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +1
 Spécial :
  Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 15%
- Pouvoir de sort : Peut lancer le sort Boule de feu (au niveau 10) trois fois par jour
+ Sort : Peut lancer le sort Boule de feu (au niveau 10) trois fois par jour
 Poids : 0,5 kg (1 lb)~
-@10051    = ~Le feu peut être le porteur de vie, ou le moissonneur de mort. Avec le Talisman de feu solaire, les deux scénarios sont vrais. Fabriqué par un sorcier inconnu mais habile, le Talisman de feu solaire donnait à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir d'enflammer une boule de feu solaire trois fois par jour aux attaquants potentiels environnants. De plus, si les attaquants potentiels tentaient de renverser la situation et d'attaquer le sorcier avec leurs propres armes de feu, le Talisman de feu solaire accorderait à son porteur une résistance supplémentaire au feu.
+@10051    = ~Le feu peut être à l'origine de la vie ou apporter la mort : le Talisman de Feu solaire accrédite ces deux thèses. Forgé par un magicien inconnu mais très doué, il confère à son porteur une protection supplémentaire contre toutes sortes d'attaques au corps à corps et avait le pouvoir d'enflammer une boule de feu solaire trois fois par jour aux attaquants potentiels environnants. De plus, si les attaquants potentiels tentaient de renverser la situation et d'attaquer le sorcier avec leurs propres armes de feu, le Talisman accorderait à son porteur une résistance supplémentaire au feu.
 
 PARAMÈTRES :
 
@@ -2777,23 +2777,23 @@ Bonus d'armure générique : +3
 Spécial :
  Résistance : 30/-  Résistance au feu
  Les dégâts de feu infligés par les sorts et capacités du porteur sont augmentés de 30%
- Pouvoir de sort : Peut lancer instantanément le sort Feu solaire (au niveau 15, Degré de Difficulté de sauvegarde 40) trois fois par jour
+ Sort : Peut lancer instantanément le sort Feu solaire (au niveau 15, Degré de Difficulté de sauvegarde 40) trois fois par jour
 Poids : 0,5 kg (1 lb)~
-@10384    = ~Les Robes de sorcier de résistance au froid sont un spectacle commun dans la région de la Côte des Épées, surtout lorsqu'on voyage vers le nord vers Neverwinter et les Dales de Glace. Beaucoup de jeunes mages la reçoivent comme cadeau de leurs instructeurs après avoir réussi à terminer leurs cinq premières années d'étude.
+@10384    = ~La Robe de résistance au froid est assez commune dans la région de la Côte des Épées, tout particulièrement parmi ceux qui désirent voyager vers les contrées de Padhiver et du Val de Bise. Elle sert souvent de récompense à l’issue des cinq premières années d’études magiques.
 
 PARAMÈTRES :
 
 Résistance : 20/- Résistance au froid
 Tous les dégâts de froid infligés par les sorts et capacités du personnage sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
-@10398    = ~En raison de la nature extrêmement volatile de la plupart des magies, les Robes de sorcier de résistance au feu ne sont pas rares parmi les jeunes acolytes et leurs tuteurs sorciers.
+@10398    = ~La robe de résistance au feu est assez courante chez les apprentis magiciens tout autant que chez leurs enseignants, la magie du feu étant l'une des plus difficiles à maîtriser.
 
 PARAMÈTRES :
 
 Résistance : 20/- Résistance au feu
 Tous les dégâts de feu infligés par les sorts et capacités du personnage sont augmentés de 20%
 Poids : 1,4 kg (3 lb)~
-@10400    = ~Bien qu'elles soient vues avec moins de fréquence que certaines autres Robes de sorcier, celles de résistance à l'électricité ne peuvent guère être considérées comme une rareté. Certaines sont portées par des paranoïaques cherchant une protection contre une tempête de montagne déchirée mais beaucoup plus sont portées par des mages cherchant à se protéger des intrigues d'autres de leur espèce.
+@10400    = ~Plus rare que ses consoeurs, la robe de résistance électrique est toutefois un objet relativement courant. Certains possesseurs s'en servent de protection contre la foudre, d'autres des intrigues de leurs collègues...
 
 PARAMÈTRES :
 
@@ -2802,12 +2802,12 @@ Tous les dégâts d'électricité infligés par les sorts et capacités du personnage 
 Poids : 1,4 kg (3 lb)~
 @562    = ~PALADIN DE MYSTRA :
 
-Les paladins de Mystra s'assurent que les pouvoirs de la déesse de la magie ne sont pas utilisés pour le mal. Ils traquent les lanceurs de sorts mauvais dans tout Féérune pour la protection de la civilisation et pour protéger les sorciers bénins des répercussions de l'utilisation irresponsable de la magie.
+Les paladins de Mystra s'assurent que les pouvoirs de la Déesse des Mystères ne sont pas utilisés à des fins maléfiques. Ils traquent les lanceurs de sorts malveillants dans tout Féerûne. Leur but est de protéger la civilisation et les mages inoffensifs des conséquences d'une mauvaise utilisation de la magie.
 
 Avantages :
-* Niveau 2 : Le paladin gagne un rang en Arcane blindé, réduisant son échec des sorts profanes de 35%.
-* Niveau 6 : Le paladin gagne deux rangs supplémentaires en Arcane blindé, réduisant son échec des sorts profanes d'un total de 105% (leur permettant de lancer des sorts arcaniques sans chance d'échec tout en portant l'armure et les boucliers les plus lourds).
-* Niveau 11 : Tous les dégâts de feu, froid, électricité, acide et magiques infligés par les sorts et capacités du paladin sont augmentés de 20%. Cela se cumule avec des dons comme Esprit de flamme et Maître de force magique.~
+* Niveau 2 : Le paladin gagne un rang en Secrets des arcanes, réduisant ses probabilités d'échec avec les sorts profanes de 35%.
+* Niveau 6 : Le paladin gagne deux rangs supplémentaires en Secrets des arcanes, réduisant ses probabilités d'échec avec les sorts profanes d'un total de 105% (leur permettant de lancer des sorts profanes sans chance d'échec tout en portant l'armure et les boucliers les plus lourds).
+* Niveau 11 : Tous les dégâts de feu, froid, électricité, acide et magiques infligés par les sorts et capacités du paladin sont augmentés de 20%. Cela se cumule avec des dons comme Esprit du feu et Maître de la magie de force.~
 @55815=~Piège non désamorcé - Le personnage doit avoir au moins <EXTDLVL> niveaux de roublard pour désamorcer un piège de cette complexité.~
 @36351     = ~Carquois d'abondance
 (Invocation)
@@ -2818,12 +2818,12 @@ Temps d'incantation : 5
 Zone d'effet : lanceur
 Jet de sauvegarde : aucun
 
-Ce sort donne temporairement au rôdeur un carquois contenant un approvisionnement illimité de flèches magiques. Les flèches ont un bonus supplémentaire de +1 à l'attaque et aux dégâts pour chaque 4 niveaux de rôdeur. Le carquois ne peut pas être lâché ou donné à un autre personnage.
+Ce sort donne temporairement au rôdeur un carquois contenant un approvisionnement illimité de flèches magiques. Les flèches ont un bonus supplémentaire de +1 à l’attaque et aux dégâts tous les 4 niveaux de rôdeur. Le carquois ne peut pas être lâché ou donné à un autre personnage.
 
-Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Carquois d'abondance sera lancé au niveau de lanceur complet du rôdeur.
+Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Carquois d’abondance sera lancé au niveau de lanceur complet du rôdeur.
 
-REMARQUE : Le rôdeur doit avoir un emplacement de munitions vide pour que le carquois soit créé. Sinon, le sort échouera.~
-@1673    = ~Animer zombie
+Remarque : Le rôdeur doit avoir un emplacement de munitions vide pour que le carquois soit créé. Sinon, le sort échouera.~
+@1673    = ~Animation de zombi
 (Nécromancie) 
 Niveau : Prê 3, Ens/Mag 5, Tempus 3
 Portée : portée de vue
@@ -2832,10 +2832,10 @@ Temps d'incantation : 9
 Zone d'effet : spéciale 
 Jet de sauvegarde : aucun
 
-Ce sort fait surgir un zombie mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le zombie invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.
+Ce sort fait surgir un zombie mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le zombie invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les prêtres bons, bien que les mages et ensorceleurs puissent le lancer indépendamment de leur alignement.
 
-AVERTISSEMENT : À des niveaux plus élevés, les Seigneurs zombies et les Morts noyés putréfiés invoqués par ce sort ont des auras surnaturelles puissantes. Les effets de leurs auras peuvent nuire à vos propres membres du groupe s'ils tombent dans la zone d'effet.~
-@1675    = ~Animer squelette
+AVERTISSEMENT : À des niveaux plus élevés, les seigneurs zombies et les noyés putrescents invoqués par ce sort ont des auras surnaturelles puissantes. Les effets de leurs auras peuvent nuire aux membres de votre propre groupe s’ils se trouvent dans la zone d’effet.~
+@1675    = ~Animation de squelette
 (Nécromancie) 
 Niveau : Prê 3, Ens/Mag 5, Tempus 3
 Portée : portée de vue
@@ -2844,7 +2844,7 @@ Temps d'incantation : 9
 Zone d'effet : spéciale 
 Jet de sauvegarde : aucun 
 
-Ce sort fait surgir un squelette mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le squelette invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.~
+Ce sort fait surgir un squelette mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le squelette invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les prêtres bons, bien que les ensorceleurs et les mages puissent le lancer indépendamment de leur alignement.~
 @1019    = ~Bouclier de Lathandre
 (Invocation) [Bien]
 Niveau : Prê 4, Pal 4, Lathandre 4
@@ -2854,7 +2854,7 @@ Temps d'incantation : 4
 Zone d'effet : 1 créature
 Jet de sauvegarde : aucun
 
-Ce sort accorde à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perforants, feu, froid, acide et électricité pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
+Ce sort accorde à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perforants, feu, froid, acide et électricité pour la durée du sort. Ce sort ne peut pas être lancé par les personnages maléfiques.~
 @1850    = ~Grand bouclier de Lathandre
 (Invocation) [Bien]
 Niveau : Prê 8, Pal 6, Lathandre 6
@@ -2864,8 +2864,8 @@ Temps d'incantation : 8
 Zone d'effet : 1 créature
 Jet de sauvegarde : aucun
 
-Ce sort accorde une réduction de dégâts de 30/- à toutes les formes de dégâts et fixe la Résistance aux sorts à 40 si elle est inférieure pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
-@1521    = ~Aura sacrée
+Ce sort accorde une réduction de dégâts de 30/- à toutes les formes de dégâts et fixe la Résistance aux sorts à 40 si elle est inférieure pour la durée du sort. Ce sort ne peut pas être lancé par les personnages maléfiques.~
+@1521    = ~Aura divine
 (Abjuration)
 Niveau : Prê 8, Ilmater 8
 Portée : 6 mètres (20 pieds)
@@ -2874,12 +2874,12 @@ Temps d'incantation : 6
 Zone d'effet : Alliés dans un rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : aucun
 
-Une radiance divine brillante entoure les sujets, les protégeant des attaques, leur accordant une résistance aux sorts, et aveuglant les créatures mauvaises lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
-Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la CA et un bonus de +4 à toutes les sauvegardes.
+Une radiance divine brillante entoure les sujets, les protégeant des attaques, leur accordant une résistance à la magie, et aveuglant les créatures mauvaises lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
+Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la classe d’armure et un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, la Résistance aux sorts des créatures protégées est fixée à 25 si elle est inférieure.
 Troisièmement, l'abjuration protège les créatures contre les sorts de charme et de domination.
-Quatrièmement, toute créature d'alignement mauvais qui frappe (mêlée uniquement) ceux protégés par l'Aura sacrée doit faire un jet de Vigueur ou être aveuglée pendant 3 rounds.
-L'Aura sacrée ne peut pas être lancée par les personnages mauvais.~
+Quatrièmement, toute créature d'alignement mauvais qui frappe (mêlée uniquement) ceux protégés par l'Aura divine doit faire un jet de Vigueur sous peine d'être aveuglée pendant 3 rounds.
+L'Aura sacrée ne peut pas être lancée par les personnages maléfiques.~
 @36853     = ~Aura impie
 (Abjuration)
 Niveau : Prê 8
@@ -2889,12 +2889,12 @@ Temps d'incantation : 6
 Zone d'effet : Alliés dans un rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : aucun
 
-Une obscurité malveillante entoure les sujets, les protégeant des attaques, leur accordant une résistance aux sorts, et aveuglant les créatures bonnes lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
-Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la CA et un bonus de +4 à toutes les sauvegardes.
+Une obscurité malveillante entoure les sujets, les protégeant des attaques, leur accordant une résistance à la magie, et aveuglant les créatures bonnes lorsqu'elles frappent les sujets. Cette abjuration a quatre effets :
+Premièrement, les créatures protégées gagnent un bonus de déviation de +4 à la classe d’armure et un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, la Résistance aux sorts des créatures protégées est fixée à 25 si elle est inférieure.
 Troisièmement, l'abjuration protège les créatures contre les sorts de charme et de domination.
 Quatrièmement, toute créature d'alignement bon qui frappe (mêlée uniquement) ceux protégés par l'Aura impie doit faire un jet de Vigueur ou être aveuglée pendant 3 rounds.
-L'Aura impie ne peut être lancée que par les personnages mauvais.~
+L'Aura impie ne peut être lancée que par des personnages d’alignement mauvais.~
 @1914     = ~Égide
 (Abjuration)
 Niveau : Ens/Mag 9, Heaum 9
@@ -2904,69 +2904,69 @@ Temps d'incantation : 1
 Zone d'effet : lanceur
 Jet de sauvegarde : aucun
 
-Ce sort accorde au lanceur un bonus de 5/- à toutes les résistances aux dégâts, un bonus d'armure générique de +5, une résistance aux sorts fixée à 30 si elle est inférieure, et +5 à toutes les sauvegardes.~
-@10157    = ~Une bague est une petite bande de métal précieux utilisée comme bijou. Certaines bagues rares ont reçu des enchantements qui confèrent diverses capacités magiques. Ces bagues sont très recherchées, en particulier par ceux de la profession d'aventurier. Sans raison apparente, cette bague est chaude au toucher.
+Ce sort accorde au lanceur un bonus de 5/- à toutes les résistances aux dégâts, un bonus d'armure générique de +5, une résistance à la magie fixée à 30 si elle est inférieure, et +5 à tous les jets de sauvegarde.~
+@10157    = ~Un anneau est une simple bande de métal précieux utilisé en joaillerie. Certains d’entre eux se voient devenir les réceptacles de puissants sortilèges. Ils sont alors très recherchés, tout spécialement par les aventuriers. Pour une raison inconnue, cet anneau irradie une faible chaleur.
 
 PARAMÈTRES :
 
 Résistance aux sorts : Fixée à 22 si inférieure
 Poids : 0 lb.~
-@10173    = ~Peu ont entendu parler du mouvement souterrain (littéralement) de courte durée contre la Tour de l'Arcane appelé le Cercle de Glace - ni des bagues qui vinrent marquer les membres de l'organisation, à la fois dans la vie et dans la mort.
+@10173    = ~Rares sont ceux qui ont entendu un jour parler du Cercle de Glace, un mouvement clandestin s'opposant à la Tour de l'Arcane... pas plus que des anneaux que portaient les membres de cette même organisation.
 
-Le Cercle de Glace fut parrainé par un marchand de Portail-Ouest dont le nom a été brûlé de l'histoire enregistrée par la Tour. Apparemment, après avoir été forcé de s'abaisser devant la Tour pendant un accord commercial à Luskan (et avoir été forcé de céder une grande partie de sa cargaison), le marchand devint obsédé par l'effacement de la Tour de la surface de Féérune. Commandant des sorciers à Portail-Ouest pour façonner une vingtaine de bagues pour lui, il se mit à utiliser le dernier de sa richesse restante pour engager une bande de tueurs de sorciers pour provoquer la chute de la Tour. Ces vingt tueurs de sorciers firent des arrangements pour voyager vers le nord par leurs propres moyens et se retrouver avec le marchand à Luskan. 
+Le Cercle de Glace était financé par un marchand d'Eauprofonde dont le nom a été effacé des livres d'histoire par la Tour de l'Arcane. Il semblerait que ce marchand gardait rancune contre la Tour de l'Arcane suite à un différend au cours duquel il dut abandonner ses biens à Luskan, ainsi qu'une bonne partie de ses marchandises. Il dépêcha alors une poignée de sorciers d'Eauprofonde pour lui procurer des anneaux magiques et recruter un groupe de tueurs de mages, dont la mission consistait à anéantir la Tour de l'Arcane. Les vingt tueurs et le marchand devaient ensuite se retrouver à Luskan.
 
-Ironiquement, le marchand ne porta jamais l'une de ces bagues, ce qui fut la clé pour exposer et vaincre le mouvement. Dès qu'il retourna à Luskan, son esprit fut déchiqueté par des télépathes et ses mouvements scrutés, et chaque tueur de sorcier et complice fut noté, identifié, et finalement mené dans des pièges mortels où leurs bagues se révélèrent sans match contre les monstres invoqués et les flèches de mise à mort maniées par les partis d'embuscade. Il est dit qu'un seul tueur de sorcier, Martek, échappa à la Tour, et à ce jour, il n'a jamais été retrouvé, ce qui a été une source constante d'irritation pour les mages.
+Ironie du sort, c'est le marchand lui-même qui provoqua la chute de son "mouvement" en ne portant pas l'anneau magique qu'il avait fait forger pour chaque membre de son groupe. Il était en effet à peine arrivé à Luskan que des télépathes purent lire dans ses pensées ; tous les membres de son organisation secrète furent ainsi identifiés et bien sûr soigneusement éliminés... Leurs anneaux ne les protégèrent pas longtemps contre les hordes de monstres des magiciens et la pluie de flèches mortelles. Il semblerait qu'un seul de ces tueurs de mages, Martek, soit parvenu à leur échapper... et qu'il reste aujourd'hui encore totalement introuvable...
 
-Dans tous les cas, le Cercle de Glace mourut une mort rapide et silencieuse à Luskan, mais le marchand vécut comme un jouet de la Tour, les servant jusqu'à la mort, moment où son cadavre fut stocké dans leurs laboratoires. Il est très probable que son corps préservé finira comme le bras gauche d'un golem de chair nommé Bok de nombreuses années plus tard. 
+Quoi qu'il en soit, le Cercle de Glace disparut aussi vite qu'il était né et le pauvre marchand vécut un enfer auprès de la Tour de l'Arcane jusqu'à son dernier souffle... Il semblerait que ses restes aient d'ailleurs participé à la conception du bras gauche d'un golem de chair du nom de Bok.
 
-Ces petites bandes de Réflexion de froid semblent être faites de glace cristallisée, très froides au toucher, et elles ne peuvent pas être vues par un sorcier à moins que le sorcier ne sache qu'elles sont là. 
+Ces bandeaux de Froidarmure sont manifestement faits de cristal de glace très froid au toucher et ne peuvent être portés par un magicien qui en ignore la fonction première.
 
-Si votre groupe contient quelqu'un qui se voit comme un tueur de sorcier, peut-être que ces bagues peuvent être utilisées aux fins pour lesquelles elles étaient destinées... mais sans la myopie de marchands stupides handicapant vos efforts. 
+Si vous comptez dans vos rangs un tueur ou une tueuse de mages, ces anneaux pourront peut-être enfin remplir l'usage auquel ils étaient destinés... sans que de stupides marchands ne viennent gâcher vos efforts.
  
 PARAMÈTRES :
 
 Résistance aux sorts : Fixée à 26 si inférieure
 Poids : 0 lb.~
-@10175    = ~Pendant la formation du mouvement de résistance du Cercle de Glace contre les sorciers de la Tour de l'Arcane, de nombreuses bagues spéciales furent forgées pour les tueurs de sorciers de l'organisation pour les aider à repousser les pouvoirs magiques de leurs adversaires.
+@10175    = ~De nombreux anneaux furent forgés pour aider les tueurs de mages du Cercle de Glace à combattre les membres de la Tour de l'Arcane.
 
-L'organisation et la forge des bagues furent parrainées par un marchand de Portail-Ouest dont le nom a été brûlé des annales de l'histoire par la Tour. Apparemment, après avoir été forcé de s'abaisser devant la Tour pendant un accord commercial à Luskan (et avoir été forcé de céder une grande partie de sa cargaison), le marchand devint obsédé par l'effacement de la Tour de la surface de Féérune. Commandant des sorciers à Portail-Ouest pour façonner une vingtaine de bagues pour lui, il se mit à utiliser le dernier de sa richesse restante pour engager une bande de tueurs de sorciers pour provoquer la chute de la Tour. Ces vingt tueurs de sorciers firent des arrangements pour voyager vers le nord par leurs propres moyens et se retrouver avec le marchand à Luskan. 
+L'organisation et la fabrication des anneaux étaient financées par un marchand d'Eauprofonde dont le nom a été effacé des livres d'histoire par la Tour de l'Arcane. Il semblerait que ce marchand gardait rancune contre la Tour de l'Arcane suite à un différend au cours duquel il dut abandonner ses biens à Luskan, ainsi qu'une bonne partie de ses marchandises. Il dépêcha alors une poignée de sorciers d'Eauprofonde pour lui procurer des anneaux magiques et recruter un groupe de tueurs de mages, dont la mission consistait à anéantir la Tour de l'Arcane. Les vingt tueurs et le marchand devaient ensuite se retrouver à Luskan.
 
-Il y avait cependant un tueur de sorcier nommé Martek, qui ignora les bagues offertes par le marchand, et connaissant le danger et la ruse de la Tour, commanda plutôt une bague spéciale à un allié nain qui lui fournirait des protections supplémentaires contre les sorts et les charmes. Une fois que les autres membres du Cercle de Glace commencèrent à être assassinés à Luskan après que la Tour apprit leurs identités, Martek utilisa le pouvoir de sa bague améliorée pour se protéger de la scrutation des sorciers de la Tour et s'échapper vers le sud. Il retourna finalement la bague à son allié nain, qui la vendit à un marchand se rendant à Bryn Shander.
+L'un des tueurs de mages, un dénommé Martek, craignait à juste titre la puissance de la Tour de l'Arcane et préféra donc faire forger un anneau bien plus puissant par un de ses amis Nains. Les premiers membres du Cercle de Glace tombèrent rapidement sous les coups de la Tour de l'Arcane, qui avait depuis longtemps découvert le fin mot de l'histoire... Seul Martek parvint à leur échapper en fuyant vers le sud, protégé par son anneau spécial. Il retourna auprès de son ami Nain et lui rendit son anneau, que celui-ci vendit à un marchand en route pour Bryn Shander.
 
-Cette bague de Réflexion d'acier froid diffère des autres bagues du Cercle de Glace en ce qu'elle semble avoir une bague d'acier sous l'extérieur glacé de la bague - un peu comme Martek lui-même.
+Cet anneau de Froidarmure d'acier diffère des autres anneaux du Cercle de Glace par sa fine tige d'acier déroulée sous la couche de glace... un peu comme Martek, en quelque sorte.
 
 PARAMÈTRES :
 
 Spécial :
   Résistance aux sorts : Fixée à 36 si inférieure
-  Pouvoir de sort : Peut lancer le sort de sorcier de niveau 6 Globe d'invulnérabilité (au niveau 30) une fois par jour
+  Sort : Peut lancer le sort de magicien de niveau 6 Globe d’invulnérabilité (au niveau 30) une fois par jour
 Poids : 0 lb.~
-@10392    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement bon.
+@10392    = ~Cette puissante robe de magicien offre une protection certaine contre tous les types d'attaques physiques tout en augmentant la résistance magique de son porteur et en lui accordant des bonus aux jets de sauvegarde. Elle ne peut toutefois être portée que par des magiciens d'alignement bon.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
 Sauvegarde : +3 bonus
-Les sorts du porteur gagnent +3 DD
+Les sorts du porteur gagnent +3 au Degré de Difficulté
 Poids : 2,7 kg (6 lb)~
-@10394    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement neutre.
+@10394    = ~Cette puissante robe de magicien offre une protection certaine contre tous les types d'attaques physiques tout en augmentant la résistance magique de son porteur et en lui accordant des bonus aux jets de sauvegarde. Elle ne peut être portée que par un magicien d'alignement neutre.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
 Sauvegarde : +3 bonus
-Les sorts du porteur gagnent +3 DD
+Les sorts du porteur gagnent +3 au Degré de Difficulté
 Poids : 2,7 kg (6 lb)~
-@10396    = ~Cette puissante Robe de sorcier offre une protection contre toutes les formes d'attaque physique tout en augmentant la résistance magique et les jets de sauvegarde. En raison de la nature de son enchantement, elle ne peut être portée que par ceux d'alignement mauvais.
+@10396    = ~Cette puissante robe de magicien offre une protection certaine contre tous les types d'attaques physiques tout en augmentant la résistance magique de son porteur et en lui accordant des bonus aux jets de sauvegarde. Elle ne peut être portée que par un magicien d'alignement mauvais.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +5
 Résistance aux sorts : Fixée à 25 si inférieure
 Sauvegarde : +3 bonus
-Les sorts du porteur gagnent +3 DD
+Les sorts du porteur gagnent +3 au Degré de Difficulté
 Poids : 2,7 kg (6 lb)~
 @10454    = ~L'armure de cuir, malgré l'idée fausse populaire, n'est pas douce et souple comme le cuir utilisé pour faire les bottes d'un rôdeur ou la robe d'un druide. Ce genre de cuir n'offre pas une meilleure protection que les vêtements communs. Les enchantements magiques améliorent les capacités protectrices de cette armure de cuir.
 
@@ -2980,7 +2980,7 @@ Echec des sorts profanes : 10%
 Spécial :
   Résistance aux sorts : Fixée à 14 si inférieure
 Poids : 4,5 kg (10 lb)~
-@10560    = ~Des artisans maîtres duergars forgèrent cette armure d'acier gris terne. Des runes habilement travaillées dans sa surface reflètent les sorts ainsi que les coups, et l'armure pèse seulement la moitié d'une armure de plates typique.
+@10560    = ~Des artisans maîtres duergars forgèrent cette armure d'acier gris terne. Des runes habilement travaillées dans sa surface reflètent les sorts ainsi que les coups et l'armure pèse seulement la moitié d'une armure de plates typique.
 
 PARAMÈTRES :
 
@@ -3008,7 +3008,7 @@ Spécial :
   Résistance aux sorts : Fixée à 32 si inférieure
   Poids léger
 Poids : 9,1 kg (20 lb)~
-@10606    = ~Ce bouclier massif est presque aussi grand que le porteur. Fondamentalement, c'est un mur portable destiné à fournir un abri. Il peut fournir jusqu'à un abri total, selon la distance à laquelle vous sortez de derrière lui. Un bouclier tour, cependant, ne fournit pas d'abri contre les sorts ciblés ; un lanceur de sorts peut lancer un sort sur vous en ciblant le bouclier que vous tenez. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
+@10606    = ~Cet énorme bouclier en bois ou en métal est presque aussi grand que son utilisateur. Fondamentalement, c'est un mur portable destiné à fournir un abri. Il peut fournir jusqu'à un abri total, selon la distance à laquelle vous sortez de derrière lui. Un bouclier tour, cependant, ne fournit pas d'abri contre les sorts ciblés ; un lanceur de sorts peut lancer un sort sur vous en ciblant le bouclier que vous tenez. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
 
 PARAMÈTRES :
 
@@ -3019,31 +3019,31 @@ Spécial :
 Malus de jet d'armure : -10
 Echec des sorts profanes : 50%
 Poids : 11,3 kg (25 lb)~
-@10894    = ~Le vengeur sacré est l'arme ultime du paladin contre les forces du mal. Il y a peu de créatures sur les Plans inférieurs qui n'hésiteraient pas à affronter un guerrier sacré maniant une telle arme... et celui-ci, peut-être plus que d'autres. Autrefois, ce n'était rien de plus qu'une simple épée de fer, mais grâce au courage et à la foi d'un homme, elle devint quelque chose de plus.
+@10894    = ~L’épée de justice est l’arme ultime du paladin contre les forces du Mal. Même les créatures des plans inférieurs hésitent à se mesurer à un paladin équipé d’une telle arme, plus encore de cette épée bien précise. Autrefois, elle n’avait rien de particulier, jusqu’à ce qu’elle soit transformée par le courage et la foi de son possesseur.
 
-La lame de ce vengeur sacré brille d'une douce lumière dorée. Inscrit sur la poignée en lettres dorées fluides est "Cera Sumat," qui se traduit par "Six, maintenant réduits au silence." Cera Sumat gagna son nom grâce aux labeurs du vieux duc Kholsa Ehld, un homme approchant près de quatre-vingts ans, qui jura d'accomplir une tâche que les plus grands guerriers de trois royaumes craignaient de faire... tout à cause des pleurs d'un enfant. 
+La lame de cette épée de justice dégage une lueur dorée. Les mots "Cera Sumat" sont inscrits en lettres d’or sur son manche, ce qui signifie "Les six ont été réduits au silence." Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’un enfant.
 
-Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Baine étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Baine et de ses serviteurs. 
+Le duc Ehld vivait en des temps troublés où les serviteurs de Baine, particulièrement puissants, écrasaient quiconque se dressait en travers de leur chemin. Des royaumes entiers craignaient leur colère et tous ou presque préféraient fermer les yeux devant leurs exactions, car ceux qui osaient protester étaient immédiatement condamnés à mort.
 
-Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
+En ce temps, les plus terribles serviteurs de Baine étaient au nombre de six et se donnaient le nom de Disciples Perdus. Leurs pouvoirs étaient terrifiants, et seules la haine et la cupidité semblaient motiver leurs actes. Ils n’aimaient rien tant que perpétrer massacre sur massacre, et jamais ils ne faisaient couler assez de sang à leur goût.
 
-Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée. 
+Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le "Royaume des Larmes". Après avoir animé le corps décapité du monarque pour lui faire tuer tous les gens qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
 
-Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Baine.
+Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent "Reine" de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
 
-Le Vieux Duc Ehld fut le premier à traverser les protections du Royaume Barbelé et à chercher la Reine en Pleurs sur le trône de son père. Quand il trouva la petite fille, il s'approcha, s'agenouilla devant elle, et lui dit qu'il était venu pour engager sa vie à son service. En mots raides et formels, il dit qu'il avait apporté de la nourriture et de l'eau et s'excusa pour son retard, mais ses os étaient vieux et il lui avait fallu du temps pour atteindre cet endroit. L'enfant presque affamée le regarda alors qu'il engageait sa lame usée et son honneur à voir que ceux qui avaient commis ce terrible crime répondent de leurs actions, si sa Reine le souhaitait. Après un long silence stupéfait, la Reine en Pleurs trouva les mots pour le remercier.
+Le vieux duc Ehld fut le premier à franchir les protections magiques du Royaume des Larmes pour trouver la fillette assise sur le trône de son père. Il s’agenouilla devant elle et prêta serment, jurant de toujours la servir. Il lui expliqua qu’il lui avait apporté à boire et à manger, puis s’excusa d’être arrivé aussi tard, mais il ne se déplaçait plus aussi vite que dans son jeune âge. Elle le regarda sans comprendre alors qu’il lui jurait qu’il traquerait les responsables et ferait en sorte qu’ils payent pour leurs crimes si elle le souhaitait. Après de longues minutes de silence, elle parvint enfin à le remercier.
 
-Dès le moment où Ehld quitta la salle du trône à la recherche des Disciples Perdus, les pleurs de la reine cessèrent, et elle ne pleura plus jamais. 
+Dès qu’Ehld quitta la salle du trône pour se lancer à la poursuite des Disciples Perdus, la reine cessa de pleurer, et ne versa plus une larme de toute sa vie.
 
-Pendant six ans, Ehld voyagea à travers les terres de Féérune et à travers les plans eux-mêmes, cherchant les Six, et leur demandant de répondre de leurs crimes. Chacun se moqua du vieil homme et de sa lame d'apparence usée, pour le trouver un adversaire dangereux... et à la fin, le vainqueur. Il enregistra les événements de leur mort sur une pierre fixée dans le pommeau de sa lame, et il y avait même du regret dans ses écrits qu'il n'ait pas pu éclairer les Disciples Perdus pour qu'ils se détournent de leur chemin avant qu'il n'arrive à sa fin.
+Il fallut six ans à Ehld pour parcourir le monde et les plans et retrouver les malfaisants pour les obliger à répondre de leurs crimes. Tous se moquèrent de lui, pour s’apercevoir trop tard qu’il était bien plus dangereux qu’il n’en avait l’air… Il inscrivit le récit de la mort de chaque Disciple Perdu sur la gemme ornant le pommeau de son épée, exprimant maintes fois son regret de n’avoir pu obtenir leur rédemption.
 
-Quand le dernier des Six eut répondu de ses crimes sur le tranchant de la lame Cera Sumat, Ehld retourna à la Reine en Pleurs et déposa la lame à ses pieds. Là où autrefois c'était une lame ternie, elle brillait aussi brillamment que le soleil, et la pierre dans le pommeau était couverte de l'écriture de ses voyages. Il détacha la pierre, la fixa dans une chaîne, et la donna à la Reine en Pleurs. Ehld lui dit de garder la chaîne à porter comme rappel des nombreux maux du monde et qu'ils ne sont jamais loin du cœur de quelqu'un... mais si le cœur de quelqu'un est vrai et son chemin est juste, on peut triompher contre n'importe quel nombre de maux.
+Quand le dernier des six eut enfin répondu de ses crimes devant sa sainte lame, Ehld revint auprès de sa reine et déposa Cera Sumat à ses pieds. La lame autrefois ternie brillait désormais de mille feux, le récit des voyages du duc s’inscrivant en lettres d’or sur la pierre précieuse du pommeau. Ehld ôta la pierre, la sertit à un collier et l’offrit à la reine. Il l’enjoignit de toujours la garder sur elle, afin de ne jamais oublier que le Mal est toujours présent de par le monde, mais que l’on peut en triompher pour peu que l’on serve la justice et que l’on reste fidèle à ses principes.
 
-Le duc Ehld survécut à sa reine, vivant jusqu'à l'âge de 107 ans, moment où Ehld prit sa Cera Sumat et quitta le Royaume Barbelé... et on dit qu'il voyagea vers le nord. Avec le temps, le Royaume Barbelé s'éleva à son ancienne gloire et son nom fut changé, et avec lui, le sort de Cera Sumat et du Médaillon des Disciples Perdus fut oublié... jusqu'à votre arrivée à Kuldahar et le médaillon et le Vengeur sacré furent unis une fois de plus pour rencontrer les Disciples Perdus au combat une dernière fois. 
+Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli… et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
 
-Mais l'histoire d'Ehld et Cera Sumat était une histoire d'un autre temps, et des aventures d'un autre héros. C'est maintenant votre temps, et votre épopée. Si votre groupe compte un paladin parmi ses rangs, alors cette lame ancienne est la vôtre pour manier contre les forces du mal... 
+Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal…
 
-Et peut-être, si votre cœur est vrai, sauver une terre de la destruction une fois de plus. 
+Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction…
 
 PARAMÈTRES :
 
@@ -3053,37 +3053,37 @@ Enchantement : +5
 Type de dégâts : tranchants
 Spécial :
   Résistance aux sorts : Fixée à 30 si inférieure
-  Vengeur sacré : +2d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
-  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 21). Frapper un allié dissipe la magie sur eux sans sauvegarde.
+  Vengeur sacré : +2d6 dégâts magiques contre les créatures maléfiques. Ces dégâts bonus sont doublés contre les démons et les morts-vivants. Compte comme une arme d'alignement bon.
+  Dissipation : lance Dissipation de la magie sur la cible à chaque coup au but (Degré de Difficulté de Volonté de 21). Lancer ce sort sur un allié dissipe la magie sans jet de sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
 Type d'arme : à une main~
 //@10895    = ~Lumière de Cera Sumat~
-@10896    = ~Le vengeur sacré est l'arme ultime du paladin contre les forces du mal. Il y a peu de créatures sur les Plans inférieurs qui n'hésiteraient pas à affronter un guerrier sacré maniant une telle arme... et celui-ci, peut-être plus que d'autres. Autrefois, ce n'était rien de plus qu'une simple épée de fer, mais grâce au courage et à la foi d'un homme, elle devint quelque chose de plus.
+@10896    = ~L’épée de justice est l’arme ultime du paladin contre les forces du mal. Même les créatures des plans inférieurs hésitent à se mesurer à un paladin équipé d’une telle arme, plus encore de cette épée bien précise. Autrefois, elle n’avait rien de particulier, jusqu’à ce qu’elle soit transformée par le courage et la foi de son possesseur.
 
-La lame de ce vengeur sacré brille d'une douce lumière dorée. Inscrit sur la poignée en lettres dorées fluides est "Cera Sumat," qui se traduit par "Six, maintenant réduits au silence." Cera Sumat gagna son nom grâce aux labeurs du vieux duc Kholsa Ehld, un homme approchant près de quatre-vingts ans, qui jura d'accomplir une tâche que les plus grands guerriers de trois royaumes craignaient de faire... tout à cause des pleurs d'un enfant. 
+La lame de cette sainte épée brille d’une douce lumière dorée. Sur la garde est inscrit en lettres d’or fluides "Cera Sumat", ce qui signifie "Les six ont été réduits au silence." Cera Sumat a gagné son nom grâce aux exploits du vieux duc Kholsa Ehld, un homme approchant les quatre-vingts printemps, qui avait juré d’accomplir une tâche que les plus grands guerriers de trois royaumes n’avaient pas réussie à mener à bien, tout cela, à cause des larmes d’une enfant.
 
-Les temps dans lesquels le Vieux Duc Ehld vécut étaient des temps de grands bouleversements, et les serviteurs de Baine étaient forts, écrasant tout ce qui se dressait sur leur chemin. Des royaumes entiers craignaient leur colère, et parler contre eux signifiait la mort, alors beaucoup restèrent silencieux et détournèrent leurs yeux des maux de Baine et de ses serviteurs. 
+Le duc Ehld vivait en des temps troublés où les serviteurs de Baine, particulièrement puissants, écrasaient quiconque se dressait en travers de leur chemin. Des royaumes entiers craignaient leur colère et tous ou presque préféraient fermer les yeux devant leurs exactions, car ceux qui osaient protester étaient immédiatement condamnés à mort.
 
-Pendant ces temps sombres, les plus terribles des serviteurs de Baine étaient six qui s'appelaient les Disciples Perdus. Leurs âmes étaient des tempêtes d'avarice et de haine, et puissants étaient les pouvoirs à leur commandement. Ils se délectaient de conflits et de tyrannie... et pour tout le sang qu'ils versèrent, ce ne fut jamais assez. 
+En ce temps, les plus terribles serviteurs de Baine étaient au nombre de six et se donnaient le nom de Disciples Perdus. Leurs pouvoirs étaient terrifiants, et seules la haine et la cupidité semblaient motiver leurs actes. Ils n’aimaient rien tant que perpétrer massacre sur massacre, et jamais ils ne faisaient couler assez de sang à leur goût.
 
-Ensemble, les Disciples Perdus provoquèrent la chute de la Cour d'Argent, tuant son roi sur son trône et renommant sa nation autrefois belle le Royaume Barbelé. Après avoir animé son cadavre décapité et l'avoir fait marcher dans les rues tuant quiconque il pouvait trouver, ils firent tomber une pluie de feu sur la ville et les terres autour, la laissant un désert stérile. On dit qu'ils dînèrent dans la grande salle de la capitale cette nuit-là alors que la terre brûlait, et ils levèrent leurs verres de vin alors que les cris des mourants atteignaient leur apogée.
+Ensemble, ils causèrent la chute de la Cour d’Argent, tuant son roi et renommant cette nation jadis splendide le "Royaume des Larmes". Après avoir animé son cadavre décapité et l’avoir fait marcher dans les rues, tuant tous ceux qu’il croisait sur son chemin, ils invoquèrent une pluie de feu qui ravagea totalement la région. On dit qu’ils firent bombance dans le palais de la capitale tandis que le pays brûlait tout autour d’eux, levant leur verre à la santé de leur dieu alors que les cris des mourants atteignaient leur paroxysme.
 
-Il n'y eut qu'un seul survivant. Dans leur dernier acte de malice, les Disciples Perdus laissèrent la seule fille du roi, à peine âgée de cinq ans, vivante pour régner en tant que "Reine" sur le royaume brûlé. Ils l'appelèrent la Reine en Pleurs et jetèrent des protections autour d'elle pour qu'elle ne puisse jamais quitter la capitale vide, puis la laissèrent mourir de faim. Leur appétit momentanément assouvi, les Disciples Perdus se séparèrent et allèrent sur leurs routes séparées de damnation, semant le conflit au Nom de Baine.
+Il n’y eut qu’une seule survivante. Dans un ultime acte de sadisme, les malfaisants laissèrent la vie sauve à la fille unique du roi, à peine âgée de cinq ans, qu’ils nommèrent "Reine" de ce royaume ravagé. L’affublant du surnom de Reine des Sanglots, ils l’ensorcelèrent afin qu’elle ne puisse jamais quitter la capitale. Puis, leur soif de destruction momentanément apaisée, ils se séparèrent afin d’aller semer le chaos un peu partout au nom de Baine, laissant la malheureuse mourir de faim.
 
-Le Vieux Duc Ehld fut le premier à traverser les protections du Royaume Barbelé et à chercher la Reine en Pleurs sur le trône de son père. Quand il trouva la petite fille, il s'approcha, s'agenouilla devant elle, et lui dit qu'il était venu pour engager sa vie à son service. En mots raides et formels, il dit qu'il avait apporté de la nourriture et de l'eau et s'excusa pour son retard, mais ses os étaient vieux et il lui avait fallu du temps pour atteindre cet endroit. L'enfant presque affamée le regarda alors qu'il engageait sa lame usée et son honneur à voir que ceux qui avaient commis ce terrible crime répondent de leurs actions, si sa Reine le souhaitait. Après un long silence stupéfait, la Reine en Pleurs trouva les mots pour le remercier.
+Le vieux duc Ehld fut le premier à franchir les protections magiques du Royaume des Larmes pour trouver la fillette assise sur le trône de son père. Il s’agenouilla devant elle et prêta serment, jurant de toujours la servir. Il lui expliqua qu’il lui avait apporté à boire et à manger, puis s’excusa d’être arrivé aussi tard, mais il ne se déplaçait plus aussi vite que dans son jeune âge. Elle le regarda sans comprendre alors qu’il lui jurait qu’il traquerait les responsables et ferait en sorte qu’ils payent pour leurs crimes si elle le souhaitait. Après de longues minutes de silence, elle parvint enfin à le remercier.
 
-Dès le moment où Ehld quitta la salle du trône à la recherche des Disciples Perdus, les pleurs de la reine cessèrent, et elle ne pleura plus jamais. 
+Dès qu’Ehld quitta la salle du trône pour se lancer à la poursuite des Disciples Perdus, la reine cessa de pleurer, et ne versa plus une larme de toute sa vie.
 
-Pendant six ans, Ehld voyagea à travers les terres de Féérune et à travers les plans eux-mêmes, cherchant les Six, et leur demandant de répondre de leurs crimes. Chacun se moqua du vieil homme et de sa lame d'apparence usée, pour le trouver un adversaire dangereux... et à la fin, le vainqueur. Il enregistra les événements de leur mort sur une pierre fixée dans le pommeau de sa lame, et il y avait même du regret dans ses écrits qu'il n'ait pas pu éclairer les Disciples Perdus pour qu'ils se détournent de leur chemin avant qu'il n'arrive à sa fin.
+Il fallut six ans à Ehld pour parcourir le monde et les plans et retrouver les malfaisants pour les obliger à répondre de leurs crimes. Tous se moquèrent de lui, pour s’apercevoir trop tard qu’il était bien plus dangereux qu’il n’en avait l’air… Il inscrivit le récit de la mort de chaque Disciple Perdu sur la gemme ornant le pommeau de son épée, exprimant maintes fois son regret de n’avoir pu obtenir leur rédemption.
 
-Quand le dernier des Six eut répondu de ses crimes sur le tranchant de la lame Cera Sumat, Ehld retourna à la Reine en Pleurs et déposa la lame à ses pieds. Là où autrefois c'était une lame ternie, elle brillait aussi brillamment que le soleil, et la pierre dans le pommeau était couverte de l'écriture de ses voyages. Il détacha la pierre, la fixa dans une chaîne, et la donna à la Reine en Pleurs. Ehld lui dit de garder la chaîne à porter comme rappel des nombreux maux du monde et qu'ils ne sont jamais loin du cœur de quelqu'un... mais si le cœur de quelqu'un est vrai et son chemin est juste, on peut triompher contre n'importe quel nombre de maux.
+Quand le dernier des six eut enfin répondu de ses crimes devant sa sainte lame, Ehld revint auprès de sa reine et déposa Cera Sumat à ses pieds. La lame autrefois ternie brillait désormais de mille feux, le récit des voyages du duc s’inscrivant en lettres d’or sur la pierre précieuse du pommeau. Ehld ôta la pierre, la sertit à un collier et l’offrit à la reine. Il l’enjoignit de toujours la garder sur elle, afin de ne jamais oublier que le Mal est toujours présent de par le monde, mais que l’on peut en triompher pour peu que l’on serve la justice et que l’on reste fidèle à ses principes.
 
-Le duc Ehld survécut à sa reine, vivant jusqu'à l'âge de 107 ans, moment où Ehld prit sa Cera Sumat et quitta le Royaume Barbelé... et on dit qu'il voyagea vers le nord. Avec le temps, le Royaume Barbelé s'éleva à son ancienne gloire et son nom fut changé, et avec lui, le sort de Cera Sumat et du Médaillon des Disciples Perdus fut oublié... jusqu'à votre arrivée à Kuldahar et le médaillon et le Vengeur sacré furent unis une fois de plus pour rencontrer les Disciples Perdus au combat une dernière fois.
+Le duc Ehld survécut à sa reine. A l’âge de 107 ans, il reprit une ultime fois Cera Sumat et quitta le Royaume des Larmes. On dit qu’il partit en direction du nord, sans que personne en ait la certitude. Au fil des ans, le Royaume des Larmes retrouva sa splendeur d’antan. Son nom fut de nouveau changé et sa triste histoire sombra dans l’oubli… et avec elle, l’existence de Cera Sumat et du médaillon des Disciples Perdus. Du moins, jusqu’à votre arrivée à Kuldahar, où le médaillon et l’épée de justice ont de nouveau été réunis pour une ultime bataille contre les six malfaisants.
 
-Mais l'histoire d'Ehld et Cera Sumat était une histoire d'un autre temps, et des aventures d'un autre héros. C'est maintenant votre temps, et votre épopée. Si votre groupe compte un paladin parmi ses rangs, alors cette lame ancienne est la vôtre pour manier contre les forces du mal...
+Mais l’histoire d’Ehld et de Cera Sumat est celle d’un autre temps. Cette époque est la vôtre, et c’est à vous d’y briller. Si votre groupe compte un paladin en son sein, cette arme pourra de nouveau reprendre son combat contre les forces du Mal…
 
-Et peut-être, si votre cœur est vrai, sauver une terre de la destruction une fois de plus.
+Et peut-être, si le cœur de son porteur est pur, saura-t-elle encore sauver un royaume de la destruction…
 
 PARAMÈTRES :
 
@@ -3093,12 +3093,12 @@ Enchantement : +10
 Type de dégâts : tranchants
 Spécial :
   Résistance aux sorts : Fixée à 40 si inférieure
-  Vengeur sacré : +4d6 dégâts magiques contre les créatures mauvaises. Ces dégâts bonus sont doublés contre les fiélons et morts-vivants. Compte comme une arme d'alignement bon.
-  Dissipation : Dissipation de magie sur la cible avec chaque coup (Volonté Degré de Difficulté 32). Frapper un allié dissipe la magie sur eux sans sauvegarde.
+  Vengeur sacré : +4d6 dégâts magiques contre les créatures maléfiques. Ces dégâts supplémentaires sont doublés contre les démons et les morts-vivants. Considérée comme une arme d’alignement bon.
+  Dissipation : lance Dissipation de la magie sur la cible à chaque coup au but (Degré de Difficulté de Volonté de 32). Lancer ce sort sur un allié dissipe la magie sans jet de sauvegarde.
 Poids : 2,3 kg (5 lb)
 Compétence : arme de guerre, grande épée
 Type d'arme : à une main~
-@11060    = ~La plus simple et humble des armes de bâton, le bâton de combat est une longueur de bois allant de six à neuf pieds de longueur. Les bâtons de combat de maître sont faits de chêne robuste et sont ferrés de métal aux deux extrémités. Celui-ci est particulièrement spécial car il a été imprégné de propriétés magiques.
+@11060    = ~Arme des plus simples, le bâton n’est autre qu’un bout de bois d’une longueur variant entre 2 et 3 m. Les meilleurs bâtons sont faits en chêne et voient leurs extrémités renforcées par des pièces de métal. Celui-ci est particulier car il bénéficie de multiples sortilèges.
 
 PARAMÈTRES :
 
@@ -3108,11 +3108,11 @@ Enchantement : +5
 Type de dégâts : contondants
 Spécial :
   Résistance aux sorts : Fixée à 37 si inférieure
-  Réduction de résistance : Chaque coup réduit la Résistance aux sorts de la cible de 5 pendant 10 rounds (Volonté Degré de Difficulté 37, cumulatif)
+  Réduction de résistance : chaque coup au but réduit la résistance aux sorts de la cible de 5 pendant 10 rounds (Degré de Difficulté de Volonté de 37, cumulatif)
 Poids : 1,8 kg (4 lb)
 Prérequis : arme courante, bâton
 Type d'arme : à deux mains~
-@12532    = ~Ce bouclier massif est presque aussi grand que le porteur. Fondamentalement, c'est un mur portable destiné à fournir un abri. Il peut fournir jusqu'à un abri total, selon la distance à laquelle vous sortez de derrière lui. Un bouclier tour, cependant, ne fournit pas d'abri contre les sorts ciblés ; un lanceur de sorts peut lancer un sort sur vous en ciblant le bouclier que vous tenez. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
+@12532    = ~Cet énorme bouclier est presque aussi grand que son porteur. Il s’agit plus ou moins d’un mur portatif servant à se protéger. Suivant la distance à laquelle vous vous en tenez, il peut vous protéger de toutes les attaques. Le pavois ne protège toutefois pas des sorts. Un lanceur de sorts peut vous en lancer un en visant le bouclier que vous tenez. Ce bouclier porte des runes qui luisent faiblement dans l’obscurité.
 
 PARAMÈTRES :
 
@@ -3125,7 +3125,7 @@ Echec des sorts profanes : 50%
 Poids : 11,3 kg (25 lb)~
 @4751     = ~Ce sirop rougeâtre épais, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle avec une énergie anti-magie. En versant le sirop sur un objet magique puis en le détruisant, un alchimiste peut imprégner le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques selon leur puissance.
 
-Lorsqu'il est bu, le sirop crée un champ anti-magie autour du corps de l'utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) ainsi qu'accordant une résistance aux sorts pendant 10 rounds. Le champ interfère également avec les propres sorts de l'utilisateur, s'il y en a, augmentant l'échec de sort de 25%.
+Lorsqu'il est bu, le sirop crée un champ anti-magie autour du corps de l'utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) ainsi qu'accordant une résistance à la magie pendant 10 rounds. Le champ interfère également avec les propres sorts de l'utilisateur, s'il y en a, augmentant l'échec de sort de 25%.
 
 PARAMÈTRES :
 
@@ -3135,7 +3135,7 @@ Résistance aux sorts : Fixée à 25
 Poids : 0,5 kg (1 lb)~
 @54751     = ~Ce sirop rougeâtre épais, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle avec une énergie anti-magie. En versant le sirop sur un objet magique puis en le détruisant, un alchimiste peut imprégner le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques selon leur puissance.
 
-Lorsqu'il est bu, le sirop crée un champ anti-magie autour du corps de l'utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) ainsi qu'accordant une résistance aux sorts pendant 10 rounds. Le champ interfère également avec les propres sorts de l'utilisateur, s'il y en a, augmentant l'échec de sort de 50%.
+Lorsqu'il est bu, le sirop crée un champ anti-magie autour du corps de l'utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) ainsi qu'accordant une résistance à la magie pendant 10 rounds. Le champ interfère également avec les propres sorts de l'utilisateur, s'il y en a, augmentant l'échec de sort de 50%.
 
 PARAMÈTRES :
 
@@ -3143,8 +3143,8 @@ Dissipe tous les effets dissipables sur le buveur
 Résistance aux sorts : Fixée à 35
 50% d'échec de sort
 Poids : 0,5 kg (1 lb)~
-@10613    = ~Grand bouclier de protection contre les sorts +4~
-@10614    = ~Un grand bouclier est porté de la même manière qu'un petit bouclier. Son poids empêche le personnage d'utiliser sa main de bouclier pour autre chose que porter le grand bouclier. Les grands boucliers sont généralement faits de métal, mesurent de 1 mètre (3 pieds) à 1 mètre (4 pieds) de diamètre, et peuvent être de n'importe quelle forme, de rond à carré en passant par des ailes de dragon déployées. Un bouclier médiéval typique ressemble à un triangle avec un point orienté vers le bas. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
+@10613    = ~Ecu de protection contre les sorts +4~
+@10614    = ~L'écu se porte comme la rondache. En raison de son poids, la main qui le porte ne peut être employée à autre chose. Généralement fait d'acier et d'un diamètre de 80 à 110 cm, il peut adopter toutes formes : rond, carré ou encore en ailes de dragon. L'écu médiéval typique est un triangle dont un des sommets est dirigé vers le bas. Ce bouclier porte des runes qui luisent faiblement dans l'obscurité.
 
 PARAMÈTRES :
 
@@ -3154,24 +3154,24 @@ Spécial :
 Malus de jet d'armure : -2
 Echec des sorts profanes : 15%
 Poids : 2,7 kg (6 lb)~
-@12850    = ~Fabriquée pour un sorcier elfe noir de Rilauven, la Robe du Veilleur est reconnue parmi les drows comme un signe de grand pouvoir. Elle est traditionnellement portée par le praticien le plus talentueux de la magie de divination dans l'académie de sorcellerie de Rilauven. Malavon reçut la robe quand il était encore en bonne grâce avec sa cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance aux sorts, comme un drow.
+@12850    = ~La Robe du Guetteur, conçue à l'origine pour un puissant magicien de Rilauven, est un symbole de pouvoir pour la communauté drow. Elle est généralement portée par le meilleur élève de l'école de divination de Rilauven. Malavon eut le privilège de porter cette robe à l'époque où il était encore un personnage en vue de la cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance à la magie, comme un drow.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +4
 Résistance aux sorts : +3
 Immunité à l'aveuglement et à la confusion
-Pouvoir de sort : Peut lancer Vision vraie 1/jour
+Sort : Peut lancer Vision véritable 1/jour
 Lorsqu'ils sont lancés par le porteur, les sorts Rage de Malavon et Brouillard corrosif de Malavon ne nuisent pas aux alliés
 Poids : 1,4 kg (3 lb)~
-@12852    = ~Fabriquée pour un sorcier elfe noir de Rilauven, la Robe du Veilleur est reconnue parmi les drows comme un signe de grand pouvoir. Elle est traditionnellement portée par le praticien le plus talentueux de la magie de divination dans l'académie de sorcellerie de Rilauven. Malavon reçut la robe quand il était encore en bonne grâce avec sa cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance aux sorts, comme un drow.
+@12852    = ~La Robe du Guetteur, conçue à l'origine pour un puissant magicien de Rilauven, est un symbole de pouvoir pour la communauté drow. Elle est généralement portée par le meilleur élève de l'école de divination de Rilauven. Malavon eut le privilège de porter cette robe à l'époque où il était encore un personnage en vue de la cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance à la magie, comme un drow.
 
 PARAMÈTRES :
 
 Bonus d'armure générique : +6
 Résistance aux sorts : +5
 Immunité à l'aveuglement et à la confusion
-Pouvoir de sort : Peut lancer Vision vraie 1/jour
+Sort : Peut lancer Vision véritable 1/jour
 Lorsqu'ils sont lancés par le porteur, les sorts Rage de Malavon et Brouillard corrosif de Malavon infligent des dégâts maximum et ne nuisent pas aux alliés
 Poids : 1,4 kg (3 lb)~
 @544    = ~SEIGNEUR D'ORAGE DE TALOS :
@@ -3263,7 +3263,7 @@ Points de vie par niveau : 1-6
 
 Avantages :
 * Maîtrise de toutes les armes simples, armures légères, armures intermédiaires, et boucliers. Le barde maîtrise également les grandes épées.
-* Gagne un point en Arcane blindé, réduisant l'échec des sorts profanes de 35%.
+* Gagne un point en Secrets des arcanes, réduisant l'échec des sorts profanes de 35%.
 * +1 à Alchimie, Connaissances (Arcane) et Art de la magie.
 * Niveau 2 : Incantation. Les bardes gagnent la capacité de lancer des sorts arcaniques.
 * De nombreuses compétences de type roublard sont des compétences de classe du Barde.
@@ -3273,8 +3273,8 @@ Avantages :
 * Niveau 5 : Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 chance, et +2 aux tests de compétence (en plus du +1 aux tests de compétence accordé par la chance). Au niveau 15 et tous les 10 niveaux par la suite, ce chant accorde un +1 supplémentaire à la chance et +2 aux tests de compétence.
 * Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer que les sorts d'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par ex. seulement un sort de niveau 1 quand le barde atteint le niveau 7), bien qu'il puisse remplacer les sorts de niveau 7 à partir du niveau 25, et les sorts de niveau 8 à partir du niveau 28.
 * Niveau 9 : Le Désir de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté ou être envoûté, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le Degré de Difficulté de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
-* Niveau 13 : Le Chant de guerre de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/-, et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la CA, 3/- résistance aux dégâts physiques, 3 points de vie soignés par round.
-* Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, résistance aux sorts fixée à 35 si inférieure, et les effets du Conte de Curran Cœurfort, de la Mélodie de Tymora, et du Chant de guerre de Sith. Au niveau 50, ce chant fixe la résistance aux sorts à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
+* Niveau 13 : Le Chant de guerre de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/-, et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la classe d’armure, 3/- résistance aux dégâts physiques, 3 points de vie soignés par round.
+* Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, résistance à la magie fixée à 35 si inférieure, et les effets du Conte de Curran Cœurfort, de la Mélodie de Tymora, et du Chant de guerre de Sith. Au niveau 50, ce chant fixe la résistance à la magie à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
 
 Un barde ne peut pas bénéficier au groupe avec plus d'un chant à la fois. Mais si le groupe a plusieurs bardes, les effets du chant de chaque barde se cumuleront. Les créatures invoquées ne bénéficient pas des chants de barde.
 
@@ -3325,7 +3325,7 @@ Niveau 17+ : 1d8+5
 * Niveau 9 : Évasion améliorée. Le moine gagne le don Évasion améliorée qui n'est normalement disponible qu'aux roublards.
 * Niveau 10 : Pas abondant. Le moine peut se téléporter à n'importe quel endroit en vue une fois par jour.
 * Niveau 11 : Corps de diamant. Le moine a un tel contrôle sur son propre métabolisme qu'il gagne l'immunité à tous les types de poison.
-* Niveau 13 : Âme de diamant. Le moine gagne une résistance aux sorts. Sa résistance aux sorts est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance aux sorts du moine ou plus sur 1d20 + le niveau du lanceur de sorts.
+* Niveau 13 : Âme de diamant. Le moine gagne une résistance à la magie. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + le niveau du lanceur de sorts.
 * Niveau 15 : Paume frémissante. Cette attaque terrifiante permet au moine de créer des vibrations dans le corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt sauf si elle fait un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine). Les créatures artificielles et morts-vivants ne peuvent pas être affectés. Le moine gagne une utilisation supplémentaire de Paume frémissante tous les six niveaux par la suite.
 * Niveau 19 : Corps vide. Le moine peut assumer un état incorporel pendant 5 rounds un nombre de fois par jour égal à son niveau divisé par 2. Pendant qu'il est incorporel, le moine peut traverser les murs, et la moitié des attaques qui touchent le moine n'infligent aucun dégât physique. Les attaques à mains nues du moine ignoreront les bonus d'armure et de bouclier.
 * Niveau 20 : Soi parfait. Le moine a accordé son corps avec compétence et capacités quasi-magiques au point qu'il devient une créature magique. Il est désormais traité comme un extraplanaire (créature extraplanar) plutôt que comme un humanoïde. Par exemple, charme personne ne les affecte pas. De plus, le moine gagne une réduction de dégâts 20/+1. Cela signifie que le moine ignore (régénère instantanément) les 20 premiers points de dégâts de toute attaque sauf si les dégâts sont infligés par une arme avec un bonus d'amélioration de +1 (ou supérieur), par un sort, ou par une forme d'énergie (feu, froid, etc.). En tant qu'extraplanaire, un moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées, comme protection contre la loi.
