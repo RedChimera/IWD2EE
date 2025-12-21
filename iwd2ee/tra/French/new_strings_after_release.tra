@@ -2174,7 +2174,7 @@ Spécial :
   Toute instance de dégâts de feu ou d'acide provenant des sorts, capacités ou munitions du porteur inflige 5 points de dégâts supplémentaires (pour les sources qui infligent des dégâts de feu ou d'acide plusieurs fois, ces dégâts sont ajoutés à chaque fois).
   Garde-sort : Protection contre les sorts Flèche acide de Melf et Flèches enflammées
 Poids : 1,4 kg (3 lb)
-Prérequis : Arme de guerre, Arc
+Compétence : arme de guerre, arc
 Type d'arme : à deux mains~
 @11859    = ~Arbalète lourde +8~
 @11860    = ~Une arbalète est un arc monté sur un châssis de bois ou de métal, ce dernier étant appelé un arbrier. L'arc est généralement fait de frêne ou d'if. L'arbalète utilise des carreaux et non des flèches.
@@ -3452,17 +3452,17 @@ Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
 @56054=~Flèche de Sphère acide~
 @56055=~Flèche de Cône de froid~
 @56056=~Flèche de Symbole de douleur~
-@12902    = ~Maudits par une prêtresse maléfique de Beshaba, déesse de la malchance, ces gants de cuir noir dur s'attachent à quiconque les essaie. Malgré la nature extrêmement désagréable des gants, les aventuriers riches achètent parfois les gantelets distinctifs pour les placer dans leurs trésors, attendant qu'un voleur avide les essaie.
+@12902    = ~Maudits par une prêtresse maléfique de Beshaba, la déesse de la malchance, ces gants de cuir noir se collent à la peau de quiconque les essaie. Les aventuriers très riches achètent parfois ces gants tout en connaissant leur véritable nature et les placent dans leur trésor afin de piéger les éventuels voleurs.
 
 PARAMÈTRES :
 
-Effet constant : Le porteur est sous l'effet de Voile de flamme, sauf qu'il ne nuira pas aux créatures à cercle bleu
-Spécial : Ne peut être retiré que par un sort de Dissipation de malédiction~
-@10249    = ~Dans les enseignements survivants du Kamjin-Doh de Kara-Tur, il est écrit qu'un vrai maître d'armes ne compte pas sur le cuir, la maille ou la plaque, mais sur l'affûtage de ses compétences pour ne jamais être touché du tout... et cela signifie qu'un maître d'armes doit connaître les mouvements de son ennemi comme les mouvements de sa propre main. Mais une telle maîtrise réside dans le fait de rester concentré sur votre ennemi même dans la chaleur de la bataille... et ces simples brassards de cuir sont destinés à faire exactement cela.
+Effet constant : Le porteur est sous l'effet de Linceul de flammes, sauf qu'il ne nuira pas aux créatures protégées par un Bouclier de feu (bleu)
+Spécial : Ne peut être retiré que par un sort de Délivrance des malédictions~
+@10249    = ~Les enseignements de Kamjin-Doh de Kara-Tur stipulent qu'un véritable maître d'armes ne compte pas sur le cuir, la maille ou les plaques d'une armure pour survivre, mais uniquement sur sa propre capacité à ne jamais être touché... ce qui implique qu'il doit maîtriser les mouvements de son adversaire comme les siens. Seule une concentration extrême permet d'appliquer un tel principe au beau milieu d'un combat, et tel est exactement la fonction de ces brassards.
 
-Initialement utilisés pour aider à la formation des étudiants au Kamjin-Doh, ces Bandes de concentration rayonnent d'une douce lueur de clair de lune lorsque la lumière du crépuscule tombe sur elles. Lorsqu'elles sont portées, elles exercent une légère influence apaisante sur l'esprit du saint de l'épée qui les manie, augmentant les perceptions et les sens du guerrier, et leur permettant de lire plus facilement les mouvements de leurs adversaires. Dans la rare occasion où un ennemi frappe un saint de l'épée, ces bandes permettent au porteur de hausser les épaules face à la douleur (qui dans les enseignements du Kamjin-Doh sont appelées, "distractions") et de garder la douleur où elle doit être - sur son adversaire. 
+Ces Bandeaux de Concentration étaient à l'origine utilisés pour l'entraînement des recrues de Kamjin-Doh et ils irradient une faible lueur lorsqu'ils sont effleurés par la lumière du crépuscule. Celui qui les porte ressent un grand calme intérieur et voit ses sens exacerbés au point qu'il est capable de "lire" les mouvements de son adversaire. Et si jamais le porteur de ces brassards venait à être touché, ils atténuent la douleur (appelée aussi "distraction" par les maîtres du Kamjin-Doh) au point de la rendre quasiment inexistante.
 
-Beaucoup de ces bandes furent dispersées à travers Féérune à la suite de la destruction du Kamjin-Doh par les mains du Maître des lames. Il est dit que le Maître des lames possédait également un ensemble de ces bandes, mais leur emplacement reste un mystère. 
+De nombreux exemplaires de cet objet furent disséminés dans Féerûne à la chute de Kamjin-Doh, alors dirigé par le Maître des Lames. Ce même Maître en aurait lui-même possédé un, bien qu'on ait fort peu d'informations à ce sujet.
 
 PARAMÈTRES :
 
@@ -3483,11 +3483,11 @@ Bonus de dégâts : +3
 Concentration : Si le porteur a 20 niveaux ou plus de guerrier ou moine, il inflige des dégâts maximum avec chaque coup
 Poids : 0,5 kg (1 lb)
 Sagesse minimum de 13 requise~
-@11764    = ~Cet arc long est le sujet d'une légende parmi les citadelles querelleuses de la Côte des Épées, une légende âprement débattue dans les salles de beuverie et tavernes dans et le long de la côte battue par les tempêtes. Selon le récit, l'arc tire son nom de son rôle central dans l'évasion d'une jeune femme nommée Sophia, une jeune fille typique qui était promise en mariage au fils du duc Hugh Gladegrin (le fils est décrit comme horriblement laid et de tempérament fétide, bien sûr). Sophia, cependant, croyait qu'elle était destinée à épouser l'un des archers du duc, un jeune homme élégant aux cheveux dorés qui parcourait les terres environnantes abattant des bêtes immondes d'un seul son de son puissant arc. Selon le récit, l'un des sorciers de la cour (un transmutateur) prit pitié du sort de la jeune femme et lança un sort qui la transforma en flèche pendant une heure. Le transmutateur arrangea que Sophia soit tirée depuis le mur du château vers un navire attendant au large, où elle pourrait naviguer vers la liberté.
+@11764    = ~Cet arc est devenu légendaire dans les citadelles agitées de la Côte des Epées, et les mythes qui l'entourent sont le sujet de maintes conversations dans les tavernes de la côte balayée par les vents. S'il faut en croire l'histoire qui revient le plus souvent, l'arc tire son nom du rôle crucial qu'il a joué dans l'évasion d'une jeune femme prénommée Sophia, qui devait épouser le fils du duc Hugh Gladegrin (fils que l'on dit très laid et auquel on attribue un insupportable caractère, comme de bien entendu). De son côté, Sophia était persuadée qu'elle était destinée à se marier à l'un des archers du duc, un jeune homme blond et séduisant qui parcourait les environs pour occire d'une seule flèche les monstres qui faisaient régner la terreur. Selon la légende, un des mages transmutateurs de la cour aurait eu pitié de la jeune femme et lancé un sort transformant Sophia en flèche pour une heure. Cela fait, le mage s'arrangea pour que la jeune femme soit tirée depuis les remparts du château jusqu'à un navire attendant au large de la côte, qui pourrait l'emmener vers la liberté.
 
-Le récit se décompose ensuite, car de nombreux récits prétendent que Sophia ne s'enfuit pas sainement de la côte, et qu'elle se transforma en son corps normal alors qu'elle était à mi-chemin de l'eau, plongeant dans l'océan glacé. Une autre école prétend que, sous forme de flèche, Sophia perça le côté du navire, puis s'étouffa à mort lorsqu'elle reprit sa forme normale avec son cou encastré dans la coque du navire. D'autres encore prétendent qu'elle ne fut jamais même lancée depuis l'arc, et qu'elle reprit sa forme normale alors qu'elle était à l'intérieur du carquois de l'archer, et elle se réveilla, nue, portant seulement la petite bande de cuir autour de son corps. Lorsque ce dernier argument est fait, la discussion se dégrade généralement en un flot constant d'allusions sexuelles et la soirée dégénère officiellement.
+L'histoire devient plus difficile à reconstituer à partir de ce point, de nombreuses versions disant que Sophia n'aurait jamais réussi à rejoindre le bateau et qu'elle aurait péri noyée après être redevenue humaine à quelques encablures de ce dernier. D'autres racontent que la flèche se serait plantée dans la coque du navire et que Sophia aurait péri étouffée en retrouvant forme humaine. Enfin, certains affirment qu'elles n'auraient jamais été tirée en direction du bateau et qu'elle aurait repris sa forme naturelle, nue, dans le carquois de l'archer. A ce point, cette version dégénère souvent en raison des allusions salaces qui ne manquent jamais de fuser de toutes parts.
 
-Quelle que soit l'histoire, l'arc a une portée sans égale parmi de nombreux autres arcs dans les royaumes, et les flèches lancées depuis celui-ci frappent loin et juste - contrairement à l'histoire entourant l'arc.
+Quoi qu'il en soit, cet arc bénéficie d'une portée à nulle autre pareille, et les flèches qu'il tire sont d'une grande précision, contrairement à ce que l'on peut raconter à son sujet.
 
 PARAMÈTRES :
 
@@ -3497,13 +3497,13 @@ Spécial :
   Une fois et demie la portée d'un arc normal
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +4
 Poids : 1,4 kg (3 lb)
-Prérequis : Arme de guerre, Arc
+Compétence : arme de guerre, arc
 Type d'arme : à deux mains~
-@11766    = ~Cet arc long est le sujet d'une légende parmi les citadelles querelleuses de la Côte des Épées, une légende âprement débattue dans les salles de beuverie et tavernes dans et le long de la côte battue par les tempêtes. Selon le récit, l'arc tire son nom de son rôle central dans l'évasion d'une jeune femme nommée Sophia, une jeune fille typique qui était promise en mariage au fils du duc Hugh Gladegrin (le fils est décrit comme horriblement laid et de tempérament fétide, bien sûr). Sophia, cependant, croyait qu'elle était destinée à épouser l'un des archers du duc, un jeune homme élégant aux cheveux dorés qui parcourait les terres environnantes abattant des bêtes immondes d'un seul son de son puissant arc. Selon le récit, l'un des sorciers de la cour (un transmutateur) prit pitié du sort de la jeune femme et lança un sort qui la transforma en flèche pendant une heure. Le transmutateur arrangea que Sophia soit tirée depuis le mur du château vers un navire attendant au large, où elle pourrait naviguer vers la liberté.
+@11766    = ~Cet arc est devenu légendaire dans les citadelles agitées de la Côte des Epées, et les mythes qui l'entourent sont le sujet de maintes conversations dans les tavernes de la côte balayée par les vents. S'il faut en croire l'histoire qui revient le plus souvent, l'arc tire son nom du rôle crucial qu'il a joué dans l'évasion d'une jeune femme prénommée Sophia, qui devait épouser le fils du duc Hugh Gladegrin (fils que l'on dit très laid et auquel on attribue un insupportable caractère, comme de bien entendu). De son côté, Sophia était persuadée qu'elle était destinée à se marier à l'un des archers du duc, un jeune homme blond et séduisant qui parcourait les environs pour occire d'une seule flèche les monstres qui faisaient régner la terreur. Selon la légende, un des mages transmutateurs de la cour aurait eu pitié de la jeune femme et lancé un sort transformant Sophia en flèche pour une heure. Cela fait, le mage s'arrangea pour que la jeune femme soit tirée depuis les remparts du château jusqu'à un navire attendant au large de la côte, qui pourrait l'emmener vers la liberté.
 
-Le récit se décompose ensuite, car de nombreux récits prétendent que Sophia ne s'enfuit pas sainement de la côte, et qu'elle se transforma en son corps normal alors qu'elle était à mi-chemin de l'eau, plongeant dans l'océan glacé. Une autre école prétend que, sous forme de flèche, Sophia perça le côté du navire, puis s'étouffa à mort lorsqu'elle reprit sa forme normale avec son cou encastré dans la coque du navire. D'autres encore prétendent qu'elle ne fut jamais même lancée depuis l'arc, et qu'elle reprit sa forme normale alors qu'elle était à l'intérieur du carquois de l'archer, et elle se réveilla, nue, portant seulement la petite bande de cuir autour de son corps. Lorsque ce dernier argument est fait, la discussion se dégrade généralement en un flot constant d'allusions sexuelles et la soirée dégénère officiellement.
+L'histoire devient plus difficile à reconstituer à partir de ce point, de nombreuses versions disant que Sophia n'aurait jamais réussi à rejoindre le bateau et qu'elle aurait péri noyée après être redevenue humaine à quelques encablures de ce dernier. D'autres racontent que la flèche se serait plantée dans la coque du navire et que Sophia aurait péri étouffée en retrouvant forme humaine. Enfin, certains affirment qu'elles n'auraient jamais été tirée en direction du bateau et qu'elle aurait repris sa forme naturelle, nue, dans le carquois de l'archer. A ce point, cette version dégénère souvent en raison des allusions salaces qui ne manquent jamais de fuser de toutes parts.
 
-Quelle que soit l'histoire, l'arc a une portée sans égale parmi de nombreux autres arcs dans les royaumes, et les flèches lancées depuis celui-ci frappent loin et juste - contrairement à l'histoire entourant l'arc.
+Quoi qu'il en soit, cet arc bénéficie d'une portée à nulle autre pareille, et les flèches qu'il tire sont d'une grande précision, contrairement à ce que l'on peut raconter à son sujet.
 
 PARAMÈTRES :
 
@@ -3513,17 +3513,17 @@ Spécial :
   Une fois et demie la portée d'un arc normal.
   Composite : Gagne le bonus de Force aux dégâts, jusqu'à un maximum de +7
 Poids : 1,4 kg (3 lb)
-Prérequis : Arme de guerre, Arc
+Compétence : arme de guerre, arc
 Type d'arme : à deux mains~
 @24043=~Ténèbres de cambion~
-@48   = ~Ajuster les bonus de PV des créatures en mode Cœur de fureur~
-@52   = ~Ajuster les bonus d'attaque des créatures en mode Cœur de fureur~
-@53   = ~Ajuster les bonus de sauvegarde des créatures en mode Cœur de fureur~
-@54   = ~Les ennemis de bas niveau ont des sauvegardes réduites, les ennemis de haut niveau ont des sauvegardes augmentées (recommandé si vous prévoyez de commencer CoF avec un groupe frais)~
-@55   = ~Les ennemis de haut niveau ont des sauvegardes augmentées~
-@60   = ~Les ennemis de bas niveau ont une attaque réduite, les ennemis de haut niveau ont une attaque augmentée (recommandé si vous prévoyez de commencer CoF avec un groupe frais)~
+@48   = ~Ajuster les bonus de PV des créatures en mode Cœur de furie~
+@52   = ~Ajuster les bonus d'attaque des créatures en mode Cœur de furie~
+@53   = ~Ajuster les bonus aux jets de sauvegarde des créatures en mode Cœur de furie~
+@54   = ~Les ennemis de bas niveau ont des jets de sauvegarde réduits, les ennemis de haut niveau ont des jets de sauvegarde augmentés (recommandé si vous prévoyez de commencer CdF avec un groupe frais)~
+@55   = ~Les ennemis de haut niveau ont des jets de sauvegarde augmentés~
+@60   = ~Les ennemis de bas niveau ont une attaque réduite, les ennemis de haut niveau ont une attaque augmentée (recommandé si vous prévoyez de commencer CdF avec un groupe frais)~
 @61   = ~Les ennemis de haut niveau ont une attaque augmentée~
-@76   = ~Les ennemis de bas et moyen niveau ont des PV réduits, les ennemis de niveau extrêmement élevé ont des PV augmentés (recommandé si vous prévoyez de commencer CoF avec un groupe frais)~
+@76   = ~Les ennemis de bas et moyen niveau ont des PV réduits, les ennemis de niveau extrêmement élevé ont des PV augmentés (recommandé si vous prévoyez de commencer CdF avec un groupe frais)~
 @77   = ~Les ennemis de niveau extrêmement élevé ont des PV augmentés~
 @6409=~Dans la chambre de lave, nous avons rencontré le seigneur Pyros, un géant de feu, une salamandre, un homme demi-sang yuan-ti nommé Venomin, et Izbelah se disputant au sujet d'un sort de "Stase temporelle" qu'Izbelah a conçu pour empêcher une éruption volcanique de détruire l'Œil du Dragon.  Il semble que le seigneur Pyros et ses amis dans la chambre de lave craignaient que le sort arrête le temps ou cause une autre catastrophe, mais Izbelah pensait que cela valait le risque car sa maison était en jeu.  À la fin, Izbelah décida que le seigneur Pyros planifiait secrètement de détruire l'Œil du Dragon, et l'accusa même de nous avoir engagés comme assassins !~
 @6410=~Iselore nous a dit que les forces de la Légion de la Chimère utilisent l'Œil du Dragon comme route vers Kuldahar.  Il croit qu'à la base du volcan de l'Œil du Dragon, nous pourrons entrer dans les Champs de Carnage.  De là, nous pouvons accéder à la Main Coupée.  Iselore nous a également averti que quelqu'un à l'intérieur de l'Œil du Dragon utilise la magie pour manipuler le temps.  Quoi qu'ils fassent, je doute que ce soit une bonne nouvelle.~
