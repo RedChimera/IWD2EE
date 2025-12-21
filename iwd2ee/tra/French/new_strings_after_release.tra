@@ -1031,7 +1031,7 @@ Ce sort provoque un sentiment de malheur qui submerge la cible. Pendant toute la
 @30070	= ~10 points de dégâts résistés des armes ni maléfiques et ni chaotiques~
 @30071	= ~15 points de dégâts résistés des armes ni maléfiques et ni chaotiques~
 @1031	= ~Brume d’Eldath
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Dru 7, Ilmater 8
 Portée : portée de vue
 Durée : 1 tour
@@ -1091,7 +1091,7 @@ Jet de sauvegarde : aucun
 
 Ce sort crée une massue magique qui a un bonus d’attaque de +1 et inflige 1d10+1 points de dégâts contondants par coup. L’enchantement, les bonus d’attaque et de dégâts de la Massue de chêne augmentent à +2 au niveau 6, +3 au niveau 9, +4 au niveau 12 et +5 au niveau 15. La Massue de chêne bénéficie également du bonus de Sagesse du personnage pour l’attaque et les dégâts au lieu de la Force si sa Sagesse est supérieure. La Massue de chêne profite du don Maniement des Armes courantes, Masse.~
 @32107	= ~Protection contre le mal
-(Abjuration) [Bon]
+(Abjuration) [Bien]
 Niveau : Prê 1, Pal 1, Ens/Mag 1
 Portée : toucher
 Durée : 10 rounds/niveau
@@ -2565,17 +2565,17 @@ Ce sort améliore les projectiles de fronde du lanceur. Tout projectile que le la
 
 Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Pierre magique sera lancé au niveau de lanceur complet du rôdeur.~
 @32107     = ~Protection contre le mal
-(Abjuration) [Bon]
+(Abjuration) [Bien]
 Niveau : Prê 1, Pal 1, Ens/Mag 1
-Portée : Contact
+Portée : toucher
 Durée : 10 rounds / niveau
 Temps d'incantation : 1
 Zone d'effet : 1 créature
 Jet de sauvegarde : aucun
 
-Ce sort forme une barrière magique autour de la créature cible, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2. De plus, la créature est immunisée aux effets de charme et de domination. Les fiélons invoqués n'attaqueront pas leur invocateur ou les alliés de leur invocateur si leur invocateur a Protection contre le mal.~
+Ce sort forme une barrière magique autour de la créature cible, donnant aux créatures mauvaises un malus de -2 pour les toucher et réduisant de 2 le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient. De plus, la créature est immunisée aux effets de charme et de domination. Les créatures malfaisantes invoquées n'attaqueront pas leur invocateur ou les alliés de leur invocateur si leur invocateur a Protection contre le mal.~
 @32408     = ~Cercle magique contre le mal
-(Abjuration) [Bon]
+(Abjuration) [Bien]
 Niveau : Prê 4, Pal 4, Ens/Mag 4, Ilmater 3
 Portée : lanceur
 Durée : 10 rounds / niveau
@@ -2583,8 +2583,8 @@ Temps d'incantation : 7
 Zone d'effet : Rayon de 3 mètres (10 pieds)
 Jet de sauvegarde : aucun
 
-Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures mauvaises un malus de -2 pour les toucher, et réduisant le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient de 2, ainsi qu'une immunité aux effets de charme et de domination.~
-@36454     = ~Cailloux en rochers
+Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pieds) sont affectées individuellement par Protection contre le mal, donnant aux créatures maléfiques un malus de -2 pour les toucher, et réduisant de 2 le Degré de Difficulté de sauvegarde des sorts et capacités des créatures mauvaises qui les toucheraient, ainsi qu'une immunité aux effets de charme et de domination.~
+@36454     = ~De cailloux à rochers
 (Transmutation)
 Niveau : Prê 5, Dru 4, Rôd 4
 Portée : lanceur
@@ -2593,10 +2593,10 @@ Temps d'incantation : 4
 Zone d'effet : lanceur
 Jet de sauvegarde : aucun
 
-Ce sort transforme les projectiles de fronde du lanceur en rochers. Pendant que le sort est actif, si le lanceur lance un projectile, il se transforme instantanément en un grand rocher qui conserve la vitesse du projectile original. Le rocher inflige 7d4 dégâts supplémentaires s'il touche (en plus des dégâts précédents du projectile). Seul un nombre limité de projectiles peut être transformé en rochers avant que le sort ne se termine : jusqu'à un par 3 niveaux.
+Ce sort transforme les billes de fronde du lanceur en rochers. Tant que le sort est actif, si le lanceur tire une bille, elle se transforme instantanément en un gros rocher qui conserve la vitesse de la bille originale. Le rocher inflige 7d4 dégâts supplémentaires s’il touche (en plus des anciens dégâts de la bille). Seul un nombre limité de billes peut être transformé en rochers avant que le sort ne se termine : jusqu'à une tous les 3 niveaux.
 
 Bien que les rôdeurs lancent normalement des sorts à la moitié de leur niveau de lanceur, Cailloux en rochers sera lancé au niveau de lanceur complet du rôdeur.~
-@1685    = ~Griffe de bête
+@1685    = ~Griffes
 (Transmutation)
 Niveau : Dru 2, Rôd 2
 Portée : portée de vue
@@ -2606,45 +2606,45 @@ Zone d'effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : aucun
 
 Ce sort renforce les attaques de tout animal allié dans la zone d'effet, lui accordant +3 pour toucher et les dégâts jusqu'à ce que la durée se termine. Au niveau 8, ce sort accorde également aux animaux un bonus d'amélioration de +1, faisant que leurs attaques naturelles frappent comme une arme +1 (1d12 dégâts tranchants de base). Aux niveaux 12 et 16, ce bonus augmente à +2 et +3.~
-@10586    = ~Les aasimars sont des descendants directs d'une union entre un mortel et un serviteur céleste. Bien qu'ils portent normalement des pouvoirs innés, il n'est pas inhabituel pour un aasimar de revêtir une armure bénie. Tel est le cas de cette armure unique connue sous le nom d'Aura d'aasimar. L'armure scintille d'une lueur argentée et est ornée de gravures bleues exquises sur la poitrine. Un simple regard sur l'armure et il est facile de voir qu'elle possède des protections puissantes.
+@10586    = ~Les aasimars naissent des unions entre mortels et célestes. La plupart d'entre eux disposent d'importants pouvoirs innés, mais il n'est pas rare qu'ils revêtent une armure bénie. C'est ce qui explique l'existence de l'Aura d'Aasimar, qui dégage une lueur argentée et dont la cuirasse s'orne de splendides filigranes bleus. Il suffit de la voir pour comprendre qu'elle confère une importante protection à son porteur.
 
-Il y a longtemps, la Guerre du sang entre les Baazetu et les Tanar'ri débordera sur le plan matériel. Heureusement pour la plupart du monde, la bataille était loin de toute ville ou cité majeure. Cependant, cela n'était toujours pas un réconfort pour les êtres célestes qui veillaient sur le plan matériel. Il fut donc rapidement décidé de rassembler autant d'êtres célestes et d'aasimars que possible et de repousser la Guerre du sang dans ses propres plans abyssaux. Cependant, à cause du grand nombre de Tanar'ri et Baatezu, les êtres célestes bénirent définitivement toutes les armures des aasimars avec Protection contre le mal. Ce sort permit aux aasimars de s'approcher des créatures mauvaises sans être attaqués. Une fois tous les aasimars en position, les Célestes donnèrent l'ordre d'attaquer, ce qui surprit complètement les hordes de Baazetu et Tanar'ri. La bataille qui s'ensuivit fit rage pendant des jours, avec de lourdes pertes des deux côtés, mais finalement les hordes mauvaises furent repoussées dans leurs plans abyssaux.
+Il y a bien longtemps, la Guerre sanglante opposant baatezus et tanar'ri toucha également le Plan matériel. Heureusement pour les mortels, les combats se déroulèrent loin des grands centres d'habitation, mais cela ne suffit pas à rassurer les célestes qui suivaient la progression du conflit depuis leur plan. Ceux-ci décidèrent donc de constituer une armée afin de repousser tanar'ris et baatezus dans les plans inférieurs. En raison du nombre d'ennemis à combattre, les célestes protégèrent leurs alliés aasimars en bénissant l'armure de ces derniers et en la dotant du pouvoir permanent de Protection contre le Mal, sort qui permettrait aux aasimars de se rapprocher de leurs adversaires sans risquer de se faire attaquer à distance. Une fois les aasimars en place, les célestes donnèrent l'ordre d'attaquer, prenant les hordes de baatezus et tanar'ri par surprise. La bataille qui s'ensuivit fit rage de nombreux jours durant et l'on enregistra des pertes effroyables dans les deux camps, mais les hordes malfaisantes furent finalement renvoyées dans leurs plans abyssaux.
 
-À la suite des lourdes pertes d'aasimars, il n'était pas rare que les pillards prennent l'armure des morts. Ainsi, de temps en temps, un ensemble d'Aura d'aasimar apparaîtra dans une boutique, ou sur un aventurier qui pouvait se permettre le prix d'achat élevé.
+Nombre d'aasimars périrent ce jour-là, et certains furent dépouillés de leur armure par les pillards qui rôdaient non loin. C'est ce qui explique que l'on retrouve parfois une Aura d'Aasimar dans une échoppe ou sur le dos d'un aventurier assez fortuné pour l'acheter.
 
 PARAMÈTRES :
 
 Armure lourde
 Bonus d'armure : +12
 Bonus de Dex maximum :  +1
-Malus de compétence d'armure :  -5
-Échec d'incantation arcanique :  35%
+Malus de jet d'armure :  -5
+Echec des sorts profanes :  35%
 Spécial :
   Les créatures mauvaises ont un malus de -2 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 2 (se cumule avec Protection contre le mal)
-  Garde-sort : Immunité à Fléau impie et Blasphème
+  Garde-sort : Immunité à Ténèbres infernales et Blasphème
 Poids : 22,7 kg (50 lb)~
-@10588    = ~Les aasimars sont des descendants directs d'une union entre un mortel et un serviteur céleste. Bien qu'ils portent normalement des pouvoirs innés, il n'est pas inhabituel pour un aasimar de revêtir une armure bénie. Tel est le cas de cette armure unique connue sous le nom d'Aura céleste. L'armure scintille d'une lueur argentée et est ornée de gravures bleues exquises sur la poitrine. Un simple regard sur l'armure et il est facile de voir qu'elle possède des protections puissantes.
+@10588    = ~Les aasimars naissent des unions entre mortels et célestes. La plupart d'entre eux disposent d'importants pouvoirs innés, mais il n'est pas rare qu'ils revêtent une armure bénie. C'est ce qui explique l'existence de l'Aura d'Aasimar, qui dégage une lueur argentée et dont la cuirasse s'orne de splendides filigranes bleus. Il suffit de la voir pour comprendre qu'elle confère une importante protection à son porteur.
 
-Il y a longtemps, la Guerre du sang entre les Baatezu et les Tanar'ri débordera sur le plan matériel. Heureusement pour la plupart du monde, la bataille était loin de toute ville ou cité majeure. Cependant, cela n'était toujours pas un réconfort pour les êtres célestes qui veillaient sur le plan matériel. Il fut donc rapidement décidé de rassembler autant d'êtres célestes et d'aasimars que possible et de repousser la Guerre du sang dans ses propres plans abyssaux. Cependant, à cause du grand nombre de Tanar'ri et Baatezu, les êtres célestes bénirent définitivement toutes les armures des aasimars avec Protection contre le mal. De plus, les Célestes rendirent l'armure immunisée aux dégâts de feu, ainsi qu'améliorèrent ses résistances aux magies de paralysie et de mort, et au poison. Ces sorts permirent aux aasimars de s'approcher des créatures mauvaises sans être attaqués, et fournirent assez de protection pour combattre efficacement les hordes mauvaises. Une fois tous les aasimars en position, les Célestes donnèrent l'ordre d'attaquer, ce qui surprit complètement les hordes de Baatezu et Tanar'ri. La bataille qui s'ensuivit fit rage pendant des jours, avec de lourdes pertes des deux côtés, mais finalement les hordes mauvaises furent repoussées dans leurs plans abyssaux.
+Il y a bien longtemps, la Guerre sanglante opposant baatezus et tanar'ri toucha également le Plan matériel. Heureusement pour les mortels, les combats se déroulèrent loin des grands centres d'habitation, mais cela ne suffit pas à rassurer les célestes qui suivaient la progression du conflit depuis leur plan. Ceux-ci décidèrent donc de constituer une armée afin de repousser tanar'ris et baatezus dans les plans inférieurs. En raison du nombre d'ennemis à combattre, les célestes protégèrent leurs alliés aasimars en bénissant l'armure de ces derniers et en la dotant du pouvoir permanent de Protection contre le Mal, sort qui permettrait aux aasimars de se rapprocher de leurs adversaires sans risquer de se faire attaquer à distance. Une fois les aasimars en place, les célestes donnèrent l'ordre d'attaquer, prenant les hordes de baatezus et tanar'ri par surprise. La bataille qui s'ensuivit fit rage de nombreux jours durant et l'on enregistra des pertes effroyables dans les deux camps, mais les hordes malfaisantes furent finalement renvoyées dans leurs plans abyssaux.
 
-À la suite des lourdes pertes d'aasimars, il n'était pas rare que les pillards prennent l'armure des morts. Ainsi, de temps en temps, un ensemble d'Aura céleste apparaîtra dans une boutique, ou sur un aventurier qui pouvait se permettre le prix d'achat élevé.
+Nombre d'aasimars périrent ce jour-là, et certains furent dépouillés de leur armure par les pillards qui rôdaient non loin. C'est ce qui explique que l'on retrouve parfois une Aura d'Aasimar dans une échoppe ou sur le dos d'un aventurier assez fortuné pour l'acheter.
 
 PARAMÈTRES :
 
 Armure lourde
 Bonus d'armure : +14
 Bonus de Dex maximum :  +1
-Malus de compétence d'armure :  -5
-Échec d'incantation arcanique :  35%
+Malus de jet d'armure :  -5
+Echec des sorts profanes :  35%
 Spécial :
   Les créatures mauvaises ont un malus de -4 pour toucher le porteur, et le Degré de Difficulté de sauvegarde de leurs sorts et capacités utilisés contre le porteur est réduit de 4 (se cumule avec Protection contre le mal)
-  Le porteur est sous l'effet d'Aura sacrée
+  Le porteur est sous l'effet d'Aura divine
   Résistance : 20/- Résistance au feu
   Bonus de sauvegarde : +3 aux jets de Vigueur
-  Garde-sort : Immunité à Fléau impie et Blasphème
+  Garde-sort : Immunité à Ténèbres infernales et Blasphème
 Poids : 22,7 kg (50 lb)~
-@12537    = ~Bouclier de vitesse +5~
-@12538    = ~Un petit bouclier est généralement rond et est porté sur l'avant-bras, saisi avec la main du bouclier. Son poids léger par rapport à un grand bouclier permet une plus grande maniabilité sans sacrifier trop en termes de protection. Ce bouclier a des runes gravées dessus qui brillent étrangement dans la pénombre.
+@12537    = ~Rondache de vitesse +5~
+@12538    = ~La rondache est généralement circulaire et se place sur l’avant-bras pour être tenu par la main libre du combattant. Elle est bien plus légère que l’écu et permet au porteur de tenir un autre objet dans la main bien que cela ne puisse être une arme. Cette rondache a des runes gravées dessus qui brillent étrangement dans la pénombre.
 
 PARAMÈTRES :
 
@@ -2652,8 +2652,8 @@ Bonus de bouclier : +6
 Bonus d'armure :  +1 vs. armes de jet
 Spécial :
   Vitesse : 1 attaque supplémentaire par round de combat
-Malus de compétence d'armure :  -1
-Échec d'incantation arcanique :  5%
+Malus de jet d'armure :  -1
+Echec des sorts profanes :  5%
 Poids : 1,4 kg (3 lb)~
 @10972    = ~L'archidruide Caernach était connu pour porter de nombreux objets enchantés, dont la plupart furent fabriqués de ses propres mains. Les plus célèbres étaient ses bottes, "Souffle-de-vie," qui laissaient des fleurs et de minuscules pousses germer de la terre où Caernach marchait. Pourtant, les "possessions mineures" de l'archidruide n'étaient rien à dédaigner - prenez, par exemple, sa faucille d'argent, façonnée pour récolter le gui sacré et les têtes d'ennemis. Cette arme inhabituelle est en fait un croisement entre une faucille et une épée proprement dite, ressemblant plus à un cimeterre qu'à autre chose. Le manche de chêne et la lame d'argent sont tous deux gravés de volutes et motifs décoratifs.
 
@@ -2801,8 +2801,8 @@ Poids : 1,4 kg (3 lb)~
 Les paladins de Mystra s'assurent que les pouvoirs de la déesse de la magie ne sont pas utilisés pour le mal. Ils traquent les lanceurs de sorts mauvais dans tout Féérune pour la protection de la civilisation et pour protéger les sorciers bénins des répercussions de l'utilisation irresponsable de la magie.
 
 Avantages :
-* Niveau 2 : Le paladin gagne un rang en Arcane blindé, réduisant son échec d'incantation arcanique de 35%.
-* Niveau 6 : Le paladin gagne deux rangs supplémentaires en Arcane blindé, réduisant son échec d'incantation arcanique d'un total de 105% (leur permettant de lancer des sorts arcaniques sans chance d'échec tout en portant l'armure et les boucliers les plus lourds).
+* Niveau 2 : Le paladin gagne un rang en Arcane blindé, réduisant son échec des sorts profanes de 35%.
+* Niveau 6 : Le paladin gagne deux rangs supplémentaires en Arcane blindé, réduisant son échec des sorts profanes d'un total de 105% (leur permettant de lancer des sorts arcaniques sans chance d'échec tout en portant l'armure et les boucliers les plus lourds).
 * Niveau 11 : Tous les dégâts de feu, froid, électricité, acide et magiques infligés par les sorts et capacités du paladin sont augmentés de 20%. Cela se cumule avec des dons comme Esprit de flamme et Maître de force magique.~
 @55815=~Piège non désamorcé - Le personnage doit avoir au moins <EXTDLVL> niveaux de roublard pour désamorcer un piège de cette complexité.~
 @36351     = ~Carquois d'abondance
@@ -2842,9 +2842,9 @@ Jet de sauvegarde : aucun
 
 Ce sort fait surgir un squelette mort depuis longtemps des profondeurs de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le squelette invoqué par ce sort est puissant. Ce sort ne peut pas être lancé par les clercs bons, bien que les ensorceleurs et sorciers puissent le lancer indépendamment de l'alignement.~
 @1019    = ~Bouclier de Lathandre
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Prê 4, Pal 4, Lathandre 4
-Portée : Contact
+Portée : toucher
 Durée : 3 rounds
 Temps d'incantation : 4
 Zone d'effet : 1 créature
@@ -2852,9 +2852,9 @@ Jet de sauvegarde : aucun
 
 Ce sort accorde à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perforants, feu, froid, acide et électricité pour la durée du sort. Ce sort ne peut pas être lancé par les personnages mauvais.~
 @1850    = ~Grand bouclier de Lathandre
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Prê 8, Pal 6, Lathandre 6
-Portée : Contact
+Portée : toucher
 Durée : 3 rounds
 Temps d'incantation : 8
 Zone d'effet : 1 créature
@@ -2971,8 +2971,8 @@ PARAMÈTRES :
 Armure légère
 Bonus d'armure : +3
 Bonus de Dex maximum :  +6
-Malus de compétence d'armure :  -0
-Échec d'incantation arcanique :  10%
+Malus de jet d'armure :  -0
+Echec des sorts profanes :  10%
 Spécial :
   Résistance aux sorts : Fixée à 14 si inférieure
 Poids : 4,5 kg (10 lb)~
@@ -2983,8 +2983,8 @@ PARAMÈTRES :
 Armure lourde
 Bonus d'armure : +11
 Bonus de Dex maximum :  +0
-Malus de compétence d'armure :  -6
-Échec d'incantation arcanique :  40%
+Malus de jet d'armure :  -6
+Echec des sorts profanes :  40%
 Spécial :
   Résistance : 5/- Résistance aux dégâts magiques
   Résistance aux sorts : Fixée à 21 si inférieure
@@ -2997,8 +2997,8 @@ PARAMÈTRES :
 Armure lourde
 Bonus d'armure :  +13
 Bonus de Dex maximum :  +0
-Malus de compétence d'armure :  -6
-Échec d'incantation arcanique :  40%
+Malus de jet d'armure :  -6
+Echec des sorts profanes :  40%
 Spécial :
   Résistance : 10/- Résistance aux dégâts magiques
   Résistance aux sorts : Fixée à 32 si inférieure
@@ -3012,8 +3012,8 @@ Bonus de bouclier : +6
 Spécial :
   Résistance aux sorts : Fixée à 22 si inférieure
   Malus d'attaque : -2
-Malus de compétence d'armure :  -10
-Échec d'incantation arcanique :  50%
+Malus de jet d'armure :  -10
+Echec des sorts profanes :  50%
 Poids : 11,3 kg (25 lb)~
 @10894    = ~Le vengeur sacré est l'arme ultime du paladin contre les forces du mal. Il y a peu de créatures sur les Plans inférieurs qui n'hésiteraient pas à affronter un guerrier sacré maniant une telle arme... et celui-ci, peut-être plus que d'autres. Autrefois, ce n'était rien de plus qu'une simple épée de fer, mais grâce au courage et à la foi d'un homme, elle devint quelque chose de plus.
 
@@ -3116,8 +3116,8 @@ Bonus de bouclier : +9
 Spécial :
   Résistance aux sorts : Fixée à 28 si inférieure
   Malus d'attaque : -2
-Malus de compétence d'armure :  -10
-Échec d'incantation arcanique :  50%
+Malus de jet d'armure :  -10
+Echec des sorts profanes :  50%
 Poids : 11,3 kg (25 lb)~
 @4751     = ~Ce sirop rougeâtre épais, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle avec une énergie anti-magie. En versant le sirop sur un objet magique puis en le détruisant, un alchimiste peut imprégner le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques selon leur puissance.
 
@@ -3147,8 +3147,8 @@ PARAMÈTRES :
 Bonus de bouclier : +6
 Spécial :
   Le porteur n'est pas affecté par les sorts à zone d'effet nuisibles lancés par ses alliés
-Malus de compétence d'armure :  -2
-Échec d'incantation arcanique :  15%
+Malus de jet d'armure :  -2
+Echec des sorts profanes :  15%
 Poids : 2,7 kg (6 lb)~
 @12850    = ~Fabriquée pour un sorcier elfe noir de Rilauven, la Robe du Veilleur est reconnue parmi les drows comme un signe de grand pouvoir. Elle est traditionnellement portée par le praticien le plus talentueux de la magie de divination dans l'académie de sorcellerie de Rilauven. Malavon reçut la robe quand il était encore en bonne grâce avec sa cité. Il l'imprégna d'enchantements supplémentaires pour synergiser avec ses sorts personnels. La Résistance aux sorts accordée par la robe fonctionne mieux pour renforcer un porteur qui a déjà une résistance aux sorts, comme un drow.
 
@@ -3190,7 +3190,7 @@ Points de vie par niveau : 1-6
 Avantages :
 * Maîtrise de toutes les armes simples, arcs et armures légères.
 * Les roublards reçoivent un plus grand nombre de points de compétence par niveau que toute autre classe de personnage. Ils peuvent utiliser ces points de compétence supplémentaires pour acheter des compétences de classe comme Désamorcer un piège pour retirer les pièges, Se cacher, Vol à la tire, et Utilisation d'objets magiques.
-* Attaque sournoise : Les roublards peuvent attaquer sournoisement les ennemis pour infliger 1d6 dégâts supplémentaires, plus 1d6 par 2 niveaux après le niveau 1. Une attaque compte comme une attaque sournoise si elle touche un ennemi dans le dos, si elle se produit dans les 2 secondes après être sorti de furtivité ou d'invisibilité, ou si la cible est paralysée, immobilisée, étourdie, endormie, confuse, abrutie, agrippée, ou feintée. Les épées courtes, dagues de jet, fléchettes, arcs courts, arcs courts composites, arbalètes légères, frondes, massues et attaques à mains nues infligent un dé supplémentaire de dégâts d'attaque sournoise. Les dagues de mêlée infligent deux dés supplémentaires de dégâts d'attaque sournoise.
+* Attaque sournoise : Les roublards peuvent attaquer sournoisement les ennemis pour infliger 1d6 dégâts supplémentaires, plus 1d6 tous les 2 niveaux après le niveau 1. Une attaque compte comme une attaque sournoise si elle touche un ennemi dans le dos, si elle se produit dans les 2 secondes après être sorti de furtivité ou d'invisibilité, ou si la cible est paralysée, immobilisée, étourdie, endormie, confuse, abrutie, agrippée, ou feintée. Les épées courtes, dagues de jet, fléchettes, arcs courts, arcs courts composites, arbalètes légères, frondes, massues et attaques à mains nues infligent un dé supplémentaire de dégâts d'attaque sournoise. Les dagues de mêlée infligent deux dés supplémentaires de dégâts d'attaque sournoise.
 * Niveau 2 : Évasion. Quand un roublard atteint le niveau 2, il ou elle gagne la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un roublard fait un jet de réflexe réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
 * Niveau 3 : Esquive instinctive. Les roublards conservent leur bonus de Dextérité à la Classe d'armure s'ils sont attaqués par des ennemis invisibles.
 * Niveau 6 : Esquive instinctive améliorée. Les roublards ne peuvent pas être attaqués sournoisement par un autre roublard sauf si l'attaquant est de niveau supérieur.
@@ -3259,7 +3259,7 @@ Points de vie par niveau : 1-6
 
 Avantages :
 * Maîtrise de toutes les armes simples, armures légères, armures intermédiaires, et boucliers. Le barde maîtrise également les grandes épées.
-* Gagne un point en Arcane blindé, réduisant l'échec d'incantation arcanique de 35%.
+* Gagne un point en Arcane blindé, réduisant l'échec des sorts profanes de 35%.
 * +1 à Alchimie, Connaissances (Arcane) et Art de la magie.
 * Niveau 2 : Incantation. Les bardes gagnent la capacité de lancer des sorts arcaniques.
 * De nombreuses compétences de type roublard sont des compétences de classe du Barde.
