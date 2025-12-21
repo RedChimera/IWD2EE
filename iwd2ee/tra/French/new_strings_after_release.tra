@@ -3236,58 +3236,58 @@ Avantage : Lors de votre action, avant de faire des jets d'attaque pour un round
 En entrant dans une rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et Constitution), ainsi qu'un malus de -2 à la classe d'armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, à l’étourdissement, au sommeil, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure 3 rounds. Si le personnage a au moins 5 niveaux de barbare, la rage dure également un nombre de rounds supplémentaires égal au bonus de Constitution du barbare (nouvellement amélioré). Après la rage, le barbare sera fatigué pendant trois rounds, lui donnant un malus de -2 en Force et Dextérité.~
 @525    = ~BARBARE :
 
-Des terres gelées du nord et des jungles infernales du sud viennent des guerriers braves, même téméraires. Bien qu'ils ne soient pas aussi disciplinés ou aussi compétents qu'un guerrier normal, le barbare peut volontairement se jeter dans une rage berserker, devenant un adversaire plus dur et plus fort.
+Des terres gelées du Nord et des jungles infernales du Sud viennent des guerriers dont la bravoure n’a d’égale que l’implacabilité. Ces barbares, bien que manquant de discipline, voire de compétences, peuvent devenir des adversaires particulièrement coriaces s’ils entrent dans une rage de berserker.
 
 Points de vie par niveau : 1-12
 
 Avantages :
-* Maîtrise de toutes les armes simples et de guerre, armures légères, armures intermédiaires, et boucliers.
-* Rage barbare : Peut rager une fois par jour pour chaque 4 niveaux (commence au niveau 1 avec une utilisation). La rage leur donne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et Constitution), ainsi qu'un malus de -2 CA, +2 aux sauvegardes de Volonté, et immunité à la peur, étourdissement, sommeil, charme, domination, confusion, inconscience, paralysie, abrutissement, et désespoir pendant 3 rounds. Après avoir ragi, le barbare sera fatigué pendant trois rounds, lui donnant un malus de -2 en Force et Dextérité.
-* Mouvement rapide : Les barbares peuvent se déplacer de 3 mètres (10 pieds) plus vite qu'un personnage standard, à condition qu'ils ne soient pas encombrés ou portent une armure lourde.
+* Compétent avec toute arme courante et martiale, ainsi qu’avec les armures légères ou moyennes et les boucliers.
+* Rage de berserker : peut entrer dans cet état une fois par jour tous les 4 niveaux (commence au niveau 1 avec une utilisation). La rage leur donne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et Constitution), ainsi qu'un malus de -2 à la classe d'armre, +2 aux jet de sauvegarde de Volonté et immunité à la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir pendant 3 rounds. Après la rage, le barbare sera fatigué pendant 3 rounds, subissant une pénalité de -2 en Force et Dextérité.
+* Déplacement accéléré : Les barbares peuvent se déplacer de 3 mètres (10 pieds) plus vite qu'un personnage standard, à condition qu'ils ne soient pas encombrés ou portent une armure lourde.
 * Niveau 2 : Réduction de dégâts. Le barbare gagne 1/- point de résistance aux dégâts tranchants, perforants, et contondants. Il ou elle gagne 1/- point de résistance supplémentaire aux niveaux 5, 8, 11, et tous les 3 niveaux par la suite. Si le barbare porte une armure intermédiaire, la réduction de dégâts accordée par cette caractéristique est doublée.
 * Niveau 2 : Esquive instinctive. Les barbares conservent leur bonus de Dextérité à la Classe d'armure s'ils sont attaqués par des ennemis invisibles.
 * Niveau 5 : Esquive instinctive améliorée. Les barbares ne peuvent pas être attaqués sournoisement par les roublards sauf si l'attaquant est de niveau supérieur au barbare. La rage barbare dure maintenant un nombre de rounds supplémentaires égal au bonus de Constitution nouvellement amélioré du barbare.
-* Niveau 11 : Rage supérieure. Toutes les rages du barbare deviennent des rages supérieures, qui augmentent les bonus de Force et Constitution à +6 et le bonus de sauvegarde de Volonté à +3. Il ou elle reçoit toujours le malus de -2 CA.
-* Niveau 17 : Rage infatigable. Le barbare n'est plus fatigué après une rage.
-* Niveau 20 : Rage puissante. La capacité de rage du barbare accorde maintenant +8 en Force et Constitution et +4 aux sauvegardes de Volonté. Pour chaque 4 niveaux après le niveau 20, la rage barbare accordera un +2 supplémentaire en Force et Constitution et +1 aux sauvegardes de Volonté.
+* Niveau 11 : Rage de grand berserker. Toutes les rages du barbare deviennent des rages supérieures, qui augmentent les bonus de Force et Constitution à +6 et le bonus aux jet de sauvegarde de Volonté à +3. Il ou elle reçoit toujours le malus de -2 à la classe d'armure.
+* Niveau 17 : Rage sans fatigue. Le barbare n'est plus fatigué après une rage.
+* Niveau 20 : Rage puissante. La capacité de rage du barbare accorde maintenant +8 en Force et Constitution et +4 aux jet de sauvegarde de Volonté. Tous les 4 niveaux après le niveau 20, la rage de berserker accordera un +2 supplémentaire en Force et Constitution et +1 aux jet de sauvegarde de Volonté.
 * Niveau 21 : Force illimitée. Le barbare peut maintenant augmenter sa Force au-delà de 40.
 
 Désavantages :
-* Les barbares gagnent des dons à un taux plus lent que les guerriers.
-* Les barbares ne commencent pas avec la maîtrise de l'armure lourde.~
+* Le barbare acquiert des dons à une cadence plus lente que le guerrier.
+* Le barbare débute sans aucune compétence en armures lourdes.~
 @527    = ~BARDE :
 
-La force du barde est sa personnalité agréable et charmante. Avec elle et son esprit, il fait son chemin dans le monde. Un barde est un musicien talentueux et un entrepôt ambulant de ragots, de contes et de savoir. Il apprend un peu de tout ce qui croise son chemin ; il est un touche-à-tout mais maître de rien. Bien que de nombreux bardes soient des vauriens, leurs histoires et leurs chansons sont les bienvenues presque partout.
+Le barde tire sa force de sa personnalité agréable et charmante. Grâce à elle et à son intelligence, il fait son chemin dans le monde. Le barde est un musicien talentueux et un conteur itinérant qui connaît nombre de légendes et autres histoires. Toutes les rencontres qu’il fait sont autant de sources de connaissance et d’inspiration ; il sait tout faire, mais n’est maître en rien. Les bardes sont souvent des voleurs, mais leurs chants et leurs contes leur ouvrent les portes les plus hermétiquement closes.
 
 Points de vie par niveau : 1-6
 
 Avantages :
-* Maîtrise de toutes les armes simples, armures légères, armures intermédiaires, et boucliers. Le barde maîtrise également les grandes épées.
+* Compétent avec toutes les armes courantes, les armures légères et moyennes et les boucliers. Le barde peut aussi manier les grandes épées.
 * Gagne un point en Secrets des arcanes, réduisant l'échec des sorts profanes de 35%.
-* +1 à Alchimie, Connaissances (Arcane) et Art de la magie.
-* Niveau 2 : Incantation. Les bardes gagnent la capacité de lancer des sorts arcaniques.
-* De nombreuses compétences de type roublard sont des compétences de classe du Barde.
-* Chants de barde. Les bardes ont la capacité de chanter des mélodies qui ont des effets magiques sur les créatures dans un rayon de trente pieds. À mesure qu'ils progressent en niveau, ils gagnent des chants supplémentaires. Les chants sont décrits en détail ci-dessous.
-* Niveau 1 : Le Conte de Curran Cœurfort. Lorsqu'il est joué, tous les alliés du barde gagnent +1 bonus d'attaque, +1 dégâts, et immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 au niveau 5 et tous les 5 niveaux par la suite.
-* Niveau 3 : Le Chant de Kaudies. Lorsqu'il est joué, les alliés du barde sont immunisés aux sorts et capacités nuisibles basés sur le son, y compris Ordre, Silence, Ordre supérieur, Parole sacrée, Blasphème, Mot de pouvoir : Sommeil, Rafale sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Aveuglement, Grand cri, Gémissement de la banshee, Mot de pouvoir : Mort, Son du vide, gémissements de harpies, et les effets uniquement ennemis de Chant, Prière, et Récitation.
-* Niveau 5 : Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 chance, et +2 aux tests de compétence (en plus du +1 aux tests de compétence accordé par la chance). Au niveau 15 et tous les 10 niveaux par la suite, ce chant accorde un +1 supplémentaire à la chance et +2 aux tests de compétence.
+* +1 en Alchimie, en Connaissances (Mystères) et en Connaissance des sorts.
+* Niveau 2 : Incantation. Les bardes peuvent lancer des sorts mineurs de magicien.
+* De nombreuses compétences de roublard sont également des compétences de barde.
+* Chants du barde. Les bardes peuvent interpréter des mélodies qui produisent des effets magiques sur les créatures dans un rayon de 9 mètres (30 pieds). Plus ils gagnent de niveaux, plus leur répertoire musical est étendu. Voici un descriptif de ces chants.
+* Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 aux jets d'attaque, +1 dégâts et immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 au niveau 5 et tous les 5 niveaux par la suite.
+* Niveau 3 : La Chanson des Kaudies. Lorsqu'il est joué, les alliés du barde sont immunisés aux sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d’outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
+* Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 chance, et +2 aux tests de compétence (en plus du +1 aux tests de compétence accordé par la chance). Au niveau 15 et tous les 10 niveaux par la suite, ce chant accorde un +1 supplémentaire à la chance et +2 aux tests de compétence.
 * Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer que les sorts d'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par ex. seulement un sort de niveau 1 quand le barde atteint le niveau 7), bien qu'il puisse remplacer les sorts de niveau 7 à partir du niveau 25, et les sorts de niveau 8 à partir du niveau 28.
-* Niveau 9 : Le Désir de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté ou être envoûté, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le Degré de Difficulté de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
-* Niveau 13 : Le Chant de guerre de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/-, et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la classe d’armure, 3/- résistance aux dégâts physiques, 3 points de vie soignés par round.
-* Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, résistance à la magie fixée à 35 si inférieure, et les effets du Conte de Curran Cœurfort, de la Mélodie de Tymora, et du Chant de guerre de Sith. Au niveau 50, ce chant fixe la résistance à la magie à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
+* Niveau 9 : L’Appel de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
+* Niveau 13 : Hymne guerrier de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/- et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la classe d’armure, 3/- résistance aux dégâts physiques et 3 points de vie soignés par round.
+* Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, une résistance à la magie fixée à 35 si inférieure et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora, et de l'Hymne guerrier de Sith. Au niveau 50, ce chant fixe la résistance à la magie à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
 
-Un barde ne peut pas bénéficier au groupe avec plus d'un chant à la fois. Mais si le groupe a plusieurs bardes, les effets du chant de chaque barde se cumuleront. Les créatures invoquées ne bénéficient pas des chants de barde.
+Un barde ne peut pas faire bénéficier le groupe de plus d’une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets du chant de chaque barde se cumuleront. Les créatures invoquées ne bénéficient pas des chants de barde.
 
 * Niveau 30 : Le barde peut maintenant faire d'autres actions tout en chantant un chant de barde.
 
 Désavantages :
-* Les bardes ne sont pas aussi efficaces au combat au corps à corps que les guerriers ou les prêtres.
-* Les bardes ont un accès plus lent aux sorts qu'un sorcier ou un prêtre.~
+* En combat rapproché, les bardes ne sont pas aussi efficaces que les guerriers ou les prêtres.
+* Les bardes peuvent lancer moins de sorts que les mages ou les prêtres.~
 @535    = ~MOINE :
 
-Les moines sont des guerriers qui poursuivent la perfection à travers la contemplation ainsi que l'action. Ce sont des combattants polyvalents, particulièrement compétents au combat sans armes ni armures. Bien que les moines ne puissent pas lancer de sorts, ils ont une magie unique à eux. Ils canalisent une énergie subtile, appelée ki, qui leur permet d'accomplir des exploits étonnants. L'exploit le plus connu du moine est sa capacité à étourdir un adversaire avec un coup à mains nues.
+Les moines sont des guerriers en quête de perfection, tant spirituelle que corporelle. Particulièrement polyvalents, ils excellent notamment dans le combat à mains nues. Ils ne peuvent pas lancer de sorts, mais sont dotés de pouvoirs magiques qui leurs sont propres. Ces pouvoirs leur viennent du ki, cette énergie subtile qu’ils canalisent intérieurement et qui leur permet de réaliser des actes prodigieux. Ainsi, un moine peut assommer un adversaire de ses seules mains.
 
-REMARQUE : Les moines multiclassés utilisent UNIQUEMENT leurs niveaux de moine pour déterminer leur nombre d'attaques lorsqu'ils combattent à mains nues.
+REMARQUE : Les moines multiclassés n’utilisent que leurs niveaux de moine pour déterminer leur nombre d’attaques lorsqu’ils combattent à mains nues.
 
 Points de vie par niveau : 1-8
 
@@ -3312,23 +3312,23 @@ Niveau 11-13 : 1d8+3
 Niveau 14-16 : 1d8+4
 Niveau 17+ : 1d8+5
 
-* Frappe de ki : Au niveau 5, l'attaque à mains nues du moine est renforcée avec le ki, et gagne +1 enchantement avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
+* Ki : Au niveau 5, l'attaque à mains nues du moine est renforcée avec le ki, et gagne +1 enchantement avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
 * La classe d'armure naturelle d'un moine commence à 10, puis augmente de +1 au niveau 5 et tous les 5 niveaux par la suite.
-* Quand il ne porte pas d'armure (les robes sont acceptables), un moine ajoute son bonus de Sagesse à sa CA de la même manière que son bonus de Dextérité. Ce bonus ne peut pas dépasser le niveau de moine du personnage.
+* Quand il ne porte pas d'armure (les robes sont acceptées), un moine ajoute son bonus de Sagesse à sa classe d'armure de la même manière que son bonus de Dextérité. Ce bonus ne peut pas dépasser le niveau de moine du personnage.
 * Attaques étourdissantes : Quand cette capacité est utilisée, toutes les attaques à mains nues du moine dans le round suivant forcent la victime à faire un jet de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine) ou être étourdie pendant 1 round. Un moine peut faire une attaque étourdissante 1/jour/niveau.
-* Évasion : Les moines ont la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un moine fait un jet de Réflexes réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
-* Niveau 2 : Déviation de flèches. Le moine gagne le don Déviation de flèches, donnant un bonus divers de +1 contre les armes de jet. De plus, le moine bloque automatiquement la première instance de dégâts de projectiles qui le toucheraient chaque round. Le moine doit avoir une main libre pour bloquer les projectiles de cette manière.
-* Niveau 3 : Mouvement rapide. Le moine se déplace de 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
-* Niveau 3 : Esprit calme. Le moine gagne un bonus de +2 aux jets de sauvegarde contre les sorts et effets de l'école d'Enchantement.
-* Niveau 5 : Pureté du corps. Le moine gagne le contrôle sur le système immunitaire de son corps. Il gagne l'immunité à toutes les maladies.
+* Esquive totale : Les moines ont la capacité d'éviter les dégâts des sorts à zone d'effet. Chaque fois qu'un moine fait un jet de Réflexes réussi contre un sort à zone d'effet qui permet un jet de réflexe pour moitié des dégâts, il ou elle ne subit aucun dégât.
+* Niveau 2 : Parade de projectiles. Le moine gagne le don Parade de projectiles, donnant un bonus divers de +1 contre les armes de jet. De plus, le moine bloque automatiquement la première instance de dégâts de projectiles qui le toucheraient chaque round. Le moine doit avoir une main libre pour bloquer les projectiles de cette manière.
+* Niveau 3 : Déplacement accéléré. Le moine se déplace de 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
+* Niveau 3 : Sérénité. Le moine gagne un bonus de +2 aux jets de sauvegarde contre les sorts et effets de l'école d'Enchantement.
+* Niveau 5 : Pureté physique. Le moine gagne le contrôle sur le système immunitaire de son corps. Il gagne l'immunité à toutes les maladies.
 * Niveau 7 : Intégrité du corps. Le moine peut regagner des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour par sept niveaux.
-* Niveau 9 : Évasion améliorée. Le moine gagne le don Évasion améliorée qui n'est normalement disponible qu'aux roublards.
-* Niveau 10 : Pas abondant. Le moine peut se téléporter à n'importe quel endroit en vue une fois par jour.
+* Niveau 9 : Esquive surnaturelle. Le moine gagne le don Esquive surnaturelle qui n'est normalement disponible qu'aux roublards.
+* Niveau 10 : Pas chassé. Le moine peut se téléporter à n'importe quel endroit en vue une fois par jour.
 * Niveau 11 : Corps de diamant. Le moine a un tel contrôle sur son propre métabolisme qu'il gagne l'immunité à tous les types de poison.
-* Niveau 13 : Âme de diamant. Le moine gagne une résistance à la magie. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + le niveau du lanceur de sorts.
-* Niveau 15 : Paume frémissante. Cette attaque terrifiante permet au moine de créer des vibrations dans le corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt sauf si elle fait un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine). Les créatures artificielles et morts-vivants ne peuvent pas être affectés. Le moine gagne une utilisation supplémentaire de Paume frémissante tous les six niveaux par la suite.
-* Niveau 19 : Corps vide. Le moine peut assumer un état incorporel pendant 5 rounds un nombre de fois par jour égal à son niveau divisé par 2. Pendant qu'il est incorporel, le moine peut traverser les murs, et la moitié des attaques qui touchent le moine n'infligent aucun dégât physique. Les attaques à mains nues du moine ignoreront les bonus d'armure et de bouclier.
-* Niveau 20 : Soi parfait. Le moine a accordé son corps avec compétence et capacités quasi-magiques au point qu'il devient une créature magique. Il est désormais traité comme un extraplanaire (créature extraplanar) plutôt que comme un humanoïde. Par exemple, charme personne ne les affecte pas. De plus, le moine gagne une réduction de dégâts 20/+1. Cela signifie que le moine ignore (régénère instantanément) les 20 premiers points de dégâts de toute attaque sauf si les dégâts sont infligés par une arme avec un bonus d'amélioration de +1 (ou supérieur), par un sort, ou par une forme d'énergie (feu, froid, etc.). En tant qu'extraplanaire, un moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées, comme protection contre la loi.
+* Niveau 13 : Ame de diamant. Le moine gagne une résistance à la magie. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + le niveau du lanceur de sorts.
+* Niveau 15 : Paume vibratoire. Cette attaque terrifiante permet au moine de créer des vibrations dans le corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt sauf si elle fait un jet de sauvegarde de Vigueur (Degré de Difficulté 10 + modificateur de Sagesse + la moitié du niveau du moine). Les constructions et morts-vivants ne peuvent pas être affectés. Le moine gagne une utilisation supplémentaire de Paume vibratoire tous les six niveaux par la suite.
+* Niveau 19 : Désertion de l’âme. Le moine peut assumer un état éthéré pendant 5 rounds un nombre de fois par jour égal à son niveau divisé par 2. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui touchent le moine n'infligent aucun dégât physique. Les attaques à mains nues du moine ignoreront les bonus d'armure et de bouclier.
+* Niveau 20 : Perfection de l’être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l’affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu’il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d’un bonus d’altération de +1 (ou plus), par un sort ou par une forme d’énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
 Désavantages :
 * Perd de nombreux bonus s'il porte une armure et/ou utilise des armes.~
@@ -3337,40 +3337,40 @@ Désavantages :
 
 Vos attaques sournoises continuent d'infliger des dégâts même après avoir frappé.
 
-Prérequis : Frappe paralysante, 30 niveaux de roublard
+Conditions : Attaque handicapante, 30 niveaux de roublard
 
-Avantage : Si vous infligez des dégâts avec une attaque sournoise, vous infligez les mêmes dégâts à cet ennemi une fois de plus un round plus tard.~
-@358    = ~MÉTAMAGIE, SORT ACCÉLÉRÉ :
+Avantage : Si vous infligez des dégâts avec une attaque sournoise, vous infligez les mêmes dégâts à cet ennemi une fois de plus, un round plus tard.~
+@358    = ~MÉTAMAGIE, INCANTATION RAPIDE :
 
-Vous pouvez lancer rapidement un sort supplémentaire chaque round.
+Vous pouvez rapidement lancer un sort supplémentaire chaque round.
 
-Prérequis : La capacité de lancer des sorts de niveau 5.
+Conditions : La capacité de lancer des sorts de niveau 5.
 
-Avantage : Vous gagnez la capacité Sort accéléré, utilisable à volonté comme action libre. L'utiliser vous permet de lancer instantanément un sort, même si vous avez déjà lancé un sort pour le round. Le sort accéléré occupe un emplacement de sort de quatre niveaux supérieurs. Un seul sort peut être accéléré par round.~
-@963    = ~Sort accéléré
+Avantage : Vous gagnez la capacité Incantation rapide, utilisable à volonté comme action libre. L'utiliser vous permet de lancer instantanément un sort, même si vous avez déjà lancé un sort durant ce round. L'Incantation rapide occupe un emplacement de sort de quatre niveaux supérieurs. Un seul sort peut être accéléré par round.~
+@963    = ~Incantation rapide
 
-Cette métamagie vous permet de lancer instantanément votre prochain sort, même si vous avez déjà lancé un sort pour le round. Il occupera un emplacement de sort de quatre niveaux supérieurs. Vous ne pouvez accélérer qu'un seul sort par round. Les capacités de métamagie peuvent être utilisées comme action libre un nombre illimité de fois par jour.~
-@731    = ~CRITIQUE AMÉLIORÉ :
+Cette métamagie vous permet de lancer instantanément votre prochain sort, même si vous avez déjà lancé un sort ce round. Il occupera un emplacement de sort de quatre niveaux supérieurs. Vous ne pouvez bénéficier que d’une incantation rapide par round. Les capacités de métamagie peuvent être utilisées comme une action libre un nombre illimité de fois par jour.~
+@731    = ~SCIENCE DU CRITIQUE :
 
-Vous êtes particulièrement habile à causer des coups critiques.
+Le personnage est un spécialiste des coups critiques.
 
-Prérequis : Bonus d'attaque de base +8 ou supérieur.
+Conditions : Bonus d'attaque de base +8 ou supérieur.
 
-Avantage : Lors de la détermination des critiques, la plage de menace de base de l'arme maniée est doublée. Une hache fera un coup critique sur un 19-20, une épée longue sur un 17-20, et un cimeterre sur un 15-20.~
+Avantage : Lors de la détermination des coups critiques, la plage de critique de base de l'arme maniée est doublée. Une hache fera un coup critique sur un 19-20, une épée longue sur un 17-20 et un cimeterre sur un 15-20.~
 @372    = ~MOBILITÉ :
 
-Vous pouvez esquiver les attaques particulièrement bien en vous déplaçant.
+En vous déplaçant, vous être plus efficace pour esquiver les attaques.
 
-Prérequis : Dex 13+, Esquive. Prendre le don une deuxième fois nécessite Dex 21+ et Attaque bondissante.
+Condition : Dex 13+, Esquive. Prendre le don une deuxième fois nécessite Dex 21+ et Élan offensif.
 
-Avantage : En vous déplaçant, vous gagnez un bonus de Classe d'armure de +4. Ce bonus est doublé contre les attaques d'opportunité dues au fait de sortir de la portée d'arme d'un ennemi.
+Avantage : En vous déplaçant, vous gagnez un bonus de Classe d'armure de +4. Ce bonus est doublé contre les attaques d’opportunité dues à un déplacement hors de la portée de l’arme d’un ennemi.
 
-Lorsqu'il est pris une deuxième fois, le don vous empêche de provoquer des attaques d'opportunité dues au fait de sortir de la portée d'arme d'un ennemi.~
+Lorsqu'il est pris une deuxième fois, le don vous empêche de provoquer des attaques d'opportunité dues à un déplacement hors de la portée de l’arme d’un ennemi.~
 @736    = ~SANG DE SERPENT :
 
-La souillure des yuan-ti coule dans vos veines. Aucun signe extérieur ne révèle votre héritage, mais vous êtes quelque chose de plus - ou de moins - qu'entièrement humain.
+Le sang du peuple yuan-ti coule dans les veines du personnage. Aucun signe extérieur ne peut trahir ce secret, mais le personnage n'est pas entièrement humain.
 
-Prérequis : Humain
+Conditions : Humain
 
 Avantage : Votre race change en yuan-ti sang-pur. Cette race a les caractéristiques suivantes :
 
@@ -3384,10 +3384,10 @@ Avantages :
 * +1 bonus d'esquive contre toutes les créatures.
 * +2 bonus aux jets de sauvegarde de Vigueur contre le poison.
 * +1 bonus à tous les jets de sauvegarde de Réflexes.
-* Don Combat à l'aveugle gratuit après la création du personnage.
+* Don Combat en aveugle gratuit après la création du personnage.
 * Enchevêtrement 1/Jour.
-* Immobilisation d'animal 1/Jour.
-* Charme personne 1/Jour.
+* Immobilisation d’animal 1/Jour.
+* Charme-personne 1/Jour.
 * Épouvante 1/Jour.
 * Ténèbres 1/Jour.
 * À volonté, peut se polymorphier en vipère géante. Sous cette forme, les attaques du personnage empoisonneront la cible sur un échec de sauvegarde de Vigueur. Cette forme devient plus puissante à mesure que le personnage monte en niveau. Si le personnage utilise une capacité de forme animale de druide pour se transformer en vipère géante, son niveau de druide est doublé aux fins de déterminer la puissance de la forme.
@@ -3399,59 +3399,59 @@ Désavantages :
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
 @930    = ~Enchevêtrement
 
-Quand un sort d'Enchevêtrement est lancé, il doit être lancé à l'extérieur, sinon il ne fonctionnera pas et le sort est gaspillé. Il fait pousser des vignes du sol pour envelopper, tordre et entrelacer toutes les créatures dans la zone d'effet, empêchant le mouvement. Les créatures doivent faire un jet de Réflexes chaque round pour se déplacer à travers la zone enchevêtrée. Le Degré de Difficulté est 11 + la moitié du niveau + bonus de Charisme. Les créatures enchevêtrées peuvent encore effectuer des actions normales mais ne peuvent pas se déplacer et subissent un malus de -2 à la Classe d'armure et aux jets d'attaque, ainsi qu'une chance de 50% d'échec de sort. Toutes les créatures dans la zone d'effet qui réussissent leur jet de Réflexes se déplacent à la moitié de la vitesse.~
-@931    = ~Charme personne
+Quand un sort d'Enchevêtrement est lancé, il doit être lancé à l'extérieur, sinon il ne fonctionnera pas et le sort est gaspillé. Il fait pousser des vignes du sol pour envelopper, tordre et entrelacer toutes les créatures dans la zone d'effet, empêchant le mouvement. Les créatures doivent faire un jet de Réflexes chaque round pour se déplacer à travers la zone enchevêtrée. Le Degré de Difficulté est de 11 + la moitié du niveau + bonus de Charisme. Les créatures enchevêtrées peuvent encore effectuer des actions normales mais ne peuvent pas se déplacer et subissent un malus de -2 à la Classe d'armure et aux jets d'attaque, ainsi qu'un risque de 50% d'échec au lancer de sort. Toutes les créatures dans la zone d'effet qui réussissent leur jet de Réflexes se déplacent à la moitié de la vitesse.~
+@931    = ~Charme-personne
 
-Ce sort charme un humanoïde unique de taille humaine ou plus petit pendant 5 rounds. La personne reçoit un jet de Volonté pour éviter l'effet ; le Degré de Difficulté est 11 + la moitié du niveau + bonus de Charisme. Si le destinataire du sort échoue à son jet de sauvegarde, il considère le lanceur comme un ami et allié de confiance à écouter et protéger. Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera aussi rapidement que possible.~
+Ce sort charme un humanoïde unique de taille humaine ou plus petit pendant 5 rounds. La personne reçoit un jet de Volonté pour éviter l'effet ; le Degré de Difficulté est de 11 + la moitié du niveau + bonus de Charisme. Si le destinataire du sort échoue à son jet de sauvegarde, il considère le lanceur comme un ami et allié de confiance à écouter et protéger. Le lanceur peut lui donner des ordres, et l'individu charmé les exécutera aussi rapidement que possible.~
 @932    = ~Épouvante
 
-Un sort d'Épouvante permet au sorcier de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sort comme quelqu'un ou quelque chose d'inimical qui semble alors s'avancer vers elle de manière menaçante. Si la créature ne fait pas un jet de Volonté réussi, elle panique pendant 3 rounds. Le Degré de Difficulté de base est 11 + bonus de Charisme, bien qu'il obtienne également +1 pour chaque deux niveaux d'expérience du lanceur, jusqu'à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantasme de son propre esprit le fait. Épouvante n'affecte pas les morts-vivants ou les créatures artificielles.~
+Un sort d'Épouvante permet au magicien de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sort comme quelqu'un ou quelque chose d'inimical qui semble alors s'avancer vers elle de manière menaçante. Si la créature ne fait pas un jet de Volonté réussi, elle panique pendant 3 rounds. Le Degré de Difficulté de base est de 11 + bonus de Charisme, bien qu'il obtienne également +1 tous les deux niveaux du lanceur, jusqu'à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantasme de son propre esprit le fait. Épouvante n'affecte pas les morts-vivants ou les créatures artificielles.~
 @933    = ~Immobilisation d'animal
 
-Ce sort maintient les animaux rigides et immobiles. Les animaux avec des pouvoirs magiques tels que les loups hivernaux comptent comme des animaux, tout comme certains monstres plus animaliers tels que les remorhazes. L'effet est centré sur un point sélectionné par le lanceur, et 1-4 animaux dans un rayon de 6 mètres (20 pieds) du point cible sont affectés. Ceux qui réussissent leur jet de Volonté ne sont pas affectés par le sort. Le Degré de Difficulté est 12 + la moitié du niveau + bonus de Charisme. Être immobilisé n'empêche pas la détérioration de l'état du sujet due aux blessures, maladies ou poison.~
+Ce sort maintient les animaux immobiles. Les animaux avec des pouvoirs magiques tels que les loups arctiques comptent comme des animaux, tout comme certains monstres plus animaliers tels que les remorhazes. L'effet est centré sur un point sélectionné par le lanceur et 1-4 animaux dans un rayon de 6 mètres (20 pieds) du point cible sont affectés. Ceux qui réussissent leur jet de Volonté ne sont pas affectés par le sort. Le Degré de Difficulté est de 12 + la moitié du niveau + bonus de Charisme. Être immobilisé n'empêche pas la détérioration de l'état du sujet due aux blessures, maladies ou poison.~
 @934    = ~Polymorphie : Vipère géante~
 @935    = ~Polymorphie : Vipère géante
 
-Le personnage se métamorphose en vipère géante. Sous forme de vipère géante, les attaques du personnage empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur Degré de Difficulté 15). Au niveau 12 et tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 CA, et le Degré de Difficulté de sauvegarde contre son poison augmente de 3.~
+Le personnage se métamorphose en vipère géante. Sous forme de vipère géante, les attaques du personnage empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (Vigueur Degré de Difficulté 15). Au niveau 12 et tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 à la classe d'armure et le Degré de Difficulté de sauvegarde contre son poison augmente de 3.~
 @971    = ~Ténèbres
 
-Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent faire un jet de sauvegarde de Vigueur ou être effectivement aveuglées. Le Degré de Difficulté est 12 + la moitié du niveau + bonus de Charisme. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles n'ont qu'une capacité limitée à voir à travers les ténèbres magiques, obtenant un malus d'attaque de -4 sur un échec de sauvegarde. Les créatures avec une vision dans le noir supérieure de 120 pieds (par ex. drows, nains gris ou gnomes des profondeurs) n'obtiennent qu'un malus d'attaque de -2. Les diables et créatures immunisées à l'aveuglement ne sont pas affectés.~
-@393    = ~Archer arcanique~
-@394    = ~ARCHER ARCANIQUE :
+Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent faire un jet de sauvegarde de Vigueur ou être effectivement aveuglées. Le Degré de Difficulté est de 12 + la moitié du niveau + bonus de Charisme. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles n'ont qu'une capacité limitée à voir à travers les ténèbres magiques, obtenant un malus d'attaque de -4 en cas d'échec du jet de sauvegarde. Les créatures avec une vision dans le noir supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) n'obtiennent qu'un malus d'attaque de -2. Les diables et créatures immunisées à l'aveuglement ne sont pas affectés.~
+@393    = ~Archer-mage~
+@394    = ~ARCHER-MAGE :
 
-Vous êtes formé comme archer arcanique et savez comment tirer des sorts comme des flèches.
+Vous êtes formé en tant qu'archer-mage et savez comment tirer des sorts comme des flèches.
 
-Prérequis : Elfe ou demi-elfe, 1 niveau de sorcier ou ensorceleur, et maîtrise des arcs (si drow ou demi-elfe)
+Prérequis : Elfe ou demi-elfe, 1 niveau de magicien ou d'ensorceleur et compétent avec les arcs (si drow ou demi-elfe)
 
-Avantage : Vous gagnez la capacité Imprégner flèche, utilisable comme action libre. Si vous l'utilisez puis tentez de lancer un sort offensif à distance de sorcier ou ensorceleur de niveau 5 ou inférieur qui implique un projectile voyageant depuis le lanceur, au lieu d'être lancé, il sera stocké dans une flèche qui est créée dans un emplacement de munitions vide (consommant une utilisation du sort). Cette flèche a un enchantement égal au niveau du sort. Lorsqu'elle est tirée, la flèche utilise le même projectile et zone d'effet que le sort, et inflige les dégâts physiques de la flèche en plus des effets du sort (comme s'il était lancé au niveau de sorcier ou ensorceleur du personnage) à toutes les créatures qu'elle touche. Cette capacité peut être utilisée une fois par jour, plus une fois de plus pour chaque deux points de bonus d'attaque de base.
+Avantage : Vous gagnez la capacité Flèche enchantée, utilisable comme action libre. Si vous l'utilisez puis tentez de lancer un sort offensif à distance de magicien ou ensorceleur de niveau 5 ou inférieur qui implique un projectile voyageant depuis le lanceur, au lieu d'être lancé, il sera stocké dans une flèche qui est créée dans un emplacement de munitions vide (consommant une utilisation du sort). Cette flèche a un enchantement égal au niveau du sort. Lorsqu'elle est tirée, la flèche utilise le même projectile et zone d'effet que le sort et inflige les dégâts physiques de la flèche en plus des effets du sort (comme s'il était lancé au niveau de magicien ou ensorceleur du personnage) à toutes les créatures qu'elle touche. Cette capacité peut être utilisée une fois par jour, plus une fois de plus tous les deux points de bonus d'attaque de base.
 
-Cependant, vos sorts ont -4 Degré de Difficulté lorsqu'ils sont lancés sans les imprégner.
+Cependant, vos sorts subissent -4 au Degré de Difficulté lorsqu'ils sont lancés sans les enchanter au moyen de flèches.
 
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
 @55117=~Chaman des esprits~
 @55576=~Création d'objet échouée : Il n'y a pas d'emplacements vides pour placer l'objet~
-@55577=~<EXIAVAL1> n'est pas un sort valide pour Imprégner flèche~
-@55578=~Une flèche a été imprégnée du sort <EXIAVAL1>~
-@55579=~Imprégner flèche échoué : Il n'y a pas d'emplacements de munitions vides~
-@56038=~Flèche de projectile magique~
-@56039=~Flèche d'orbe chromatique~
-@56040=~Flèche de drain mineur de Larloch~
-@56041=~Flèche de dague de glace~
-@56042=~Flèche de flèche acide de Melf~
-@56043=~Flèche de brûlure d'Agannazar~
-@56044=~Flèche de nuée de boules de neige de Snilloc~
-@56045=~Rayon d'affaiblissement~
-@56046=~Flèche de flèches enflammées~
-@56047=~Flèche de boule de feu~
-@56048=~Flèche d'éclair~
-@56049=~Flèche de piège de crâne~
-@56050=~Flèche de lance de glace~
-@56051=~Flèche de lance de perturbation~
-@56052=~Flèche de projectiles de force de Mordenkainen~
-@56053=~Flèche de cri~
-@56054=~Flèche de sphère vitriolique~
-@56055=~Flèche de cône de froid~
-@56056=~Flèche de symbole de douleur~
+@55577=~<EXIAVAL1> n'est pas un sort valide pour Flèche enchantée~
+@55578=~Une flèche a été enchanté avec le sort <EXIAVAL1>~
+@55579=~Flèche enchantée échoué : Il n'y a pas d'emplacements de munitions vides~
+@56038=~Flèche de Projectile magique~
+@56039=~Flèche d'Orbe chromatique~
+@56040=~Flèche d'Absorption mineure de Larloch~
+@56041=~Flèche de Couteau de glace~
+@56042=~Flèche de Flèche acide de Melf~
+@56043=~Flèche d'Incinérateur d’Agannazar~
+@56044=~Flèche de Déluge de boules de neige de Snilloc~
+@56045=~Rayon affaiblissant~
+@56046=~Flèche de Flèche enflammée~
+@56047=~Flèche de Boule de feu~
+@56048=~Flèche d'Éclair~
+@56049=~Flèche de Crâne piégé~
+@56050=~Flèche de Lance de glace~
+@56051=~Flèche de Lance de destruction~
+@56052=~Flèche de Projectiles de force de Mordenkainen~
+@56053=~Flèche de Cri~
+@56054=~Flèche de Sphère acide~
+@56055=~Flèche de Cône de froid~
+@56056=~Flèche de Symbole de douleur~
 @12902    = ~Maudits par une prêtresse maléfique de Beshaba, déesse de la malchance, ces gants de cuir noir dur s'attachent à quiconque les essaie. Malgré la nature extrêmement désagréable des gants, les aventuriers riches achètent parfois les gantelets distinctifs pour les placer dans leurs trésors, attendant qu'un voleur avide les essaie.
 
 PARAMÈTRES :
