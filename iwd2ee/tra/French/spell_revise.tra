@@ -114,7 +114,7 @@ Jet de sauvegarde : la Vigueur annule
 Ce sort donne au lanceur la possibilité de toucher une créature et de l’empoisonner instantanément. Le poison inflige 2 dégâts par seconde pendant 30 secondes, puis se dissipe du corps de la cible. Tous les 6 niveaux de lanceur de sorts, le poison inflige un point de dégâts supplémentaire par seconde, jusqu’à un maximum de 7 dégâts par seconde au niveau 30. Un jet de sauvegarde de Vigueur réussie annule tout effet. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1018 = ~Bouclier de Lathandre~
 @1019 = ~Bouclier de Lathandre
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Prê 4, Pal 4, Lathandre 4
 Portée : toucher
 Durée : 3 rounds
@@ -180,7 +180,7 @@ Jet de sauvegarde : Vigueur, partiel
 Ce sort déclenche un séisme qui fissure le sol. Chaque créature en vue du lanceur subit 10d6 points de dégâts contondants et doit effectuer un jet de Vigueur sous peine de perdre connaissance pendant 5 rounds. Les créatures inconscientes peuvent subir des attaques sans pouvoir s’en défendre et ne se réveilleront pas lorsqu’elles seront attaquées. Ce sort contourne la résistance à la magie.~
 @1030 = ~Brume d’Eldath~
 @1031 = ~Brume d’Eldath
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Dru 7, Ilmater 8
 Portée : portée de vue
 Durée : 1 round
@@ -203,7 +203,7 @@ Grâce à ce sort, le lanceur absorbe la force vitale de sa cible et l’ajoute à la
 @1034 = ~Horreur~
 @1035 = ~Horreur
 (Nécromancie)
-Niveau : Bar 2, Ens/Mag 2, Bane 2
+Niveau : Bar 2, Ens/Mag 2, Baine 2
 Portée : portée de vue
 Durée : 4 rounds
 Temps d’incantation : 2
@@ -631,7 +631,7 @@ Le lanceur émet un cri perçant qui assourdit et endommage les créatures sur son 
 @1106	= ~Domination~
 @1107	= ~Domination
 (Enchantement)
-Niveau : Bar 5, Ens/Mag 6, Bane 5
+Niveau : Bar 5, Ens/Mag 6, Baine 5
 Portée : portée de vue
 Durée : 3 rounds/niveau
 Temps d’incantation : 5
@@ -721,7 +721,7 @@ Ce sort transforme une créature vivante en pierre en cas d’échec du jet de Vigue
 @1122	= ~Mot de pouvoir : Silence~
 @1123	= ~Mot de pouvoir : Silence
 (Divination)
-Niveau : Bar 5, Ens/Mag 6, Oghma 5, Bane 6
+Niveau : Bar 5, Ens/Mag 6, Oghma 5, Baine 6
 Portée : portée de vue
 Durée : 4 rounds
 Temps d’incantation : 0
@@ -1415,7 +1415,7 @@ La Téléportation locale de Lutzaen permet au lanceur de téléporter son groupe à 
 @1670	= ~Émotion : Désespoir~
 @1671	= ~Émotion : Désespoir
 (Enchantement)
-Niveau : Bar 3, Ens/Mag 4, Bane 4, Mask 4
+Niveau : Bar 3, Ens/Mag 4, Baine 4, Mask 4
 Portée : portée de vue
 Durée : 10 rounds
 Temps d’incantation : 4
@@ -1570,7 +1570,7 @@ Le sort transforme une créature en poussière. Lorsqu’il est lancé, une boule d’é
 @1696	= ~Mot de pouvoir : Cécité~
 @1697	= ~Mot de pouvoir : Cécité
 (Divination)
-Niveau : Bar 7, Ens/Mag 8, Tempus 7, Bane 8
+Niveau : Bar 7, Ens/Mag 8, Tempus 7, Baine 8
 Portée : portée de vue
 Durée : Spéciale
 Temps d’incantation : 0
@@ -1932,7 +1932,7 @@ Ce sort imprègne les mains du lanceur avec une énergie négative destructrice qui
 @1811	= ~Mot de pouvoir : Silence~
 @1812	= ~Mot de pouvoir : Silence
 (Divination)
-Niveau : Bar 5, Ens/Mag 6, Oghma 5, Bane 6
+Niveau : Bar 5, Ens/Mag 6, Oghma 5, Baine 6
 Portée : portée de vue
 Durée : 4 rounds
 Temps d’incantation : 0
@@ -1943,7 +1943,7 @@ Ce sort permet au lanceur de prononcer un des mots de pouvoir. Lorsqu’il est pro
 @1813	= ~Domination de groupe~
 @1814	= ~Domination de groupe
 (Enchantement)
-Niveau : Bar 8, Ens/Mag 9, Bane 9
+Niveau : Bar 8, Ens/Mag 9, Baine 9
 Portée : portée de vue
 Durée : 1 round/niveau
 Temps d’incantation : 9
@@ -1975,7 +1975,7 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 À l’achèvement de ce sort, un rayon brillant de chaleur ardente tombe du ciel et brûle la créature cible infligeant 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu’à un maximum de 1d6 + 15). Les créatures mortes-vivantes et les monstres vulnérables à la lumière vive subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu’à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de sauvegarde contre les Réflexes sous peine d’être aveuglées pendant 3 rounds. Les drows et les duergars sont aveuglés par le sort pendant 3 rounds (sans jet de sauvegarde).~
 @1837	= ~Sainte parole~
 @1838	= ~Sainte parole
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Prê 7, Ilmater 7
 Portée : lanceur
 Durée : Spéciale
@@ -2012,7 +2012,7 @@ Lorsqu’il est prononcé, ce sort transforme le prêtre en un pont entre son dieu e
 Aucun jet de sauvegarde n’est permis. Ce sort ne peut être lancé que par des personnages maléfiques. Les créatures sourdes sont immunisées contre ce sort. Blasphème ne peut affecter la même créature plus d’une fois toutes les cinq rounds.~
 @1849	= ~Bouclier suprême de Lathandre~
 @1850	= ~Bouclier suprême de Lathandre
-(Invocation) [Bon]
+(Invocation) [Bien]
 Niveau : Prê 7, Pal 6, Lathandre 6
 Portée : toucher
 Durée : 3 rounds
@@ -2162,7 +2162,7 @@ En prononçant ce sort, le lanceur augmente le bonus d’attaque et les jets de sau
 @1873 	= ~Malédiction~
 @1874 	= ~Malédiction
 (Enchantement)
-Niveau : Prê 1, Bane 1
+Niveau : Prê 1, Baine 1
 Portée : portée de vue
 Durée : 10 rounds / niveau
 Temps d’incantation : 2
@@ -2430,7 +2430,7 @@ Ce sort confère au lanceur un bonus de 5/- à toutes les résistances aux dégâts, 
 @1991 	= ~Heaum~
 @1992 	= ~Oghma~
 @1993 	= ~Tempus~
-@1994 	= ~Bane~
+@1994 	= ~Baine~
 @1995 	= ~Mask~
 @1996 	= ~Talos~
 
@@ -3010,7 +3010,7 @@ Ce sort améliore les projectiles de fronde du lanceur. Tout projectile que le la
 
 @31107 	= ~Protection contre le mal~
 @32107 	= ~Protection contre le mal
-(Abjuration) [Bon]
+(Abjuration) [Bien]
 Niveau : Prê 1, Pal 1, Ens/Mag 1
 Portée : toucher
 Durée : 10 rounds/niveau
@@ -3142,7 +3142,7 @@ Temps d’incantation : 6
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Volonté annule
 
-Ce sort permet de figer les animaux sur place. Les animaux avec des pouvoirs magiques comme les loups des glaces comptent comme des animaux, tout comme certains monstres animaux comme les remorhazes. L’effet est centré sur un point choisi par le lanceur, et 1 à 4 animaux dans un rayon de 6 mètres (20 pieds) autour du point ciblé sont affectés. Ceux qui réussissent leur jet de sauvegarde de Volonté ne sont pas affectés par le sort. Être immobilisé n’empêche pas leur condition de se détériorer (blessures, maladie, poison).~
+Ce sort permet de figer les animaux sur place. Les animaux avec des pouvoirs magiques comme les loups arctiques comptent comme des animaux, tout comme certains monstres animaux comme les remorhazes. L’effet est centré sur un point choisi par le lanceur, et 1 à 4 animaux dans un rayon de 6 mètres (20 pieds) autour du point ciblé sont affectés. Ceux qui réussissent leur jet de sauvegarde de Volonté ne sont pas affectés par le sort. Être immobilisé n’empêche pas leur condition de se détériorer (blessures, maladie, poison).~
 
 @31308 	= ~Délivrance de la paralysie~
 @32308 	= ~Délivrance de la paralysie
@@ -3218,7 +3218,7 @@ Ce sort permet au lanceur d’envahir l’esprit de la créature ciblée, permettant a
 
 @31408 	= ~Cercle magique contre le mal~
 @32408 	= ~Cercle magique contre le mal
-(Abjuration) [Bon]
+(Abjuration) [Bien]
 Niveau : Prê 4, Pal 4, Ens/Mag 4, Ilmater 3
 Portée : lanceur
 Durée : 10 rounds / niveau
@@ -3231,7 +3231,7 @@ Lorsque ce sort est lancé, toutes les créatures dans un rayon de 3 mètres (10 pi
 @31409 	= ~Manteau de terreur~
 @32409 	= ~Manteau de terreur
 (Invocation)
-Niveau : Prê 4, Bane 4
+Niveau : Prê 4, Baine 4
 Portée : lanceur
 Durée : 6 rounds
 Temps d’incantation : 6
@@ -3549,7 +3549,7 @@ Une créature affectée par Lenteur perd une attaque par round (mais ne peut tombe
 @33316 	= ~Charme funeste~
 @34316 	= ~Charme funeste
 (Enchantement)
-Niveau : Bar 2, Ens/Mag 3, Bane 3
+Niveau : Bar 2, Ens/Mag 3, Baine 3
 Portée : portée de vue
 Durée : 8 rounds
 Temps d’incantation : 3
@@ -3658,7 +3658,7 @@ Ce sort libère un cône de froid glacial prenant naissance au bout de la main du 
 @33510 	= ~Débilité~
 @34510 	= ~Débilité
 (Enchantement)
-Niveau : Ens/Mag 5, Ilmater 5, Bane 6
+Niveau : Ens/Mag 5, Ilmater 5, Baine 6
 Portée : portée de vue
 Durée : 20 rounds
 Temps d’incantation : 5
@@ -3850,7 +3850,7 @@ Plus puissant que la variante de 7ème niveau, ce sort invoque un démon fou de ra
 @33905 	= ~Portail~
 @34905 	= ~Portail
 (Invocation)
-Niveau : Prê 9, Ens/Mag 9, Bane 7
+Niveau : Prê 9, Ens/Mag 9, Baine 7
 Portée : portée de vue
 Durée : 33 rounds
 Temps d’incantation : 9
