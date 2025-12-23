@@ -1,739 +1,739 @@
-@4700 = ~Cerveja de Ãgua da Chuva~
-@4701 = ~Barata, eficiente e rudimentar, esta poÃ§Ã£o Ã© uma mistura de Ã¡gua da chuva, argila, cinzas e raÃ­zes de diversas plantas. Esta poÃ§Ã£o modesta restaurarÃ¡ 2d6 pontos de vida a quem a beber.
+@4700 = ~Cerveja de Água da Chuva~
+@4701 = ~Barata, eficiente e rudimentar, esta poção é uma mistura de água da chuva, argila, cinzas e raízes de diversas plantas. Esta poção modesta restaurará 2d6 pontos de vida a quem a beber.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Cura 2d6 pontos de vida
 Peso: 0,5 kg (1 lb).~
-@54700 = ~Cerveja de Ãgua da Chuva~
-@54701 = ~Barata, eficiente e rudimentar, esta poÃ§Ã£o Ã© uma mistura de Ã¡gua da chuva, argila, cinzas e raÃ­zes de diversas plantas. Esta poÃ§Ã£o modesta restaurarÃ¡ 5d6 pontos de vida a quem a beber.
+@54700 = ~Cerveja de Água da Chuva~
+@54701 = ~Barata, eficiente e rudimentar, esta poção é uma mistura de água da chuva, argila, cinzas e raízes de diversas plantas. Esta poção modesta restaurará 5d6 pontos de vida a quem a beber.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Cura 5d6 pontos de vida
 Peso: 0,5 kg (1 lb).~
-@4702 = ~PoÃ§Ã£o Azeda~
-@4703 = ~PoÃ§Ãµes potentes requerem ingredientes menos comuns, e esta poÃ§Ã£o nÃ£o Ã© exceÃ§Ã£o. Gordura animal, bile, folhas secas e carne fermentada compÃµem esta mistura fÃ©tida, mas um amigo moribundo nÃ£o reclamarÃ¡. Esta poÃ§Ã£o restaurarÃ¡ 4d8 pontos de vida de quem estiver desesperado o suficiente para bebÃª-la.
+@4702 = ~Poção Azeda~
+@4703 = ~Poções potentes requerem ingredientes menos comuns, e esta poção não é exceção. Gordura animal, bile, folhas secas e carne fermentada compõem esta mistura fétida, mas um amigo moribundo não reclamará. Esta poção restaurará 4d8 pontos de vida de quem estiver desesperado o suficiente para bebê-la.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Restaura 4d8 pontos de vida
 Peso: 0,5 kg (1 lb).~
-@54702 = ~TÃ´nico Azedo~
-@54703 = ~PoÃ§Ãµes potentes requerem ingredientes menos comuns, e esta poÃ§Ã£o nÃ£o Ã© exceÃ§Ã£o. Gordura animal, bile, folhas secas e carne fermentada compÃµem esta mistura fÃ©tida, mas um amigo moribundo nÃ£o reclamarÃ¡. Esta poÃ§Ã£o restaurarÃ¡ 10d8 pontos de vida de quem estiver desesperado o suficiente para bebÃª-la.
+@54702 = ~Tônico Azedo~
+@54703 = ~Poções potentes requerem ingredientes menos comuns, e esta poção não é exceção. Gordura animal, bile, folhas secas e carne fermentada compõem esta mistura fétida, mas um amigo moribundo não reclamará. Esta poção restaurará 10d8 pontos de vida de quem estiver desesperado o suficiente para bebê-la.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Restaura 10d8 pontos de vida
 Peso: 0,5 kg (1 lb).~
 @54704 = ~Elixir Doce~
-@4705 = ~Pode-se confundir esta bebida doce com vinho branco, mas o sabor suave nÃ£o vem do Ã¡lcool, mas sim do quartzo transmutado. Beber esta poÃ§Ã£o pode aliviar quase qualquer enfermidade, desde uma infecÃ§Ã£o comum atÃ© um veneno letal e uma ressaca horrÃ­vel. O quartzo se liga a substÃ¢ncias tÃ³xicas e as transforma em sal inofensivo, curando venenos, doenÃ§as e intoxicaÃ§Ãµes. Caso isso nÃ£o seja suficiente para curar o aventureiro doente, as lÃ¡grimas de cavalo no xarope tambÃ©m restaurarÃ£o 1d4 pontos de vida ao usuÃ¡rio.
+@4705 = ~Pode-se confundir esta bebida doce com vinho branco, mas o sabor suave não vem do álcool, mas sim do quartzo transmutado. Beber esta poção pode aliviar quase qualquer enfermidade, desde uma infecção comum até um veneno letal e uma ressaca horrível. O quartzo se liga a substâncias tóxicas e as transforma em sal inofensivo, curando venenos, doenças e intoxicações. Caso isso não seja suficiente para curar o aventureiro doente, as lágrimas de cavalo no xarope também restaurarão 1d4 pontos de vida ao usuário.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Cura venenos e doenÃ§as
+Cura venenos e doenças
 Cura 1d4 pontos de vida
 Peso: 0,5 kg (1 lb).~
 @54704 = ~Elixir Doce~
-@54705 = ~Pode-se confundir esta bebida doce com vinho branco, mas o sabor suave nÃ£o vem do Ã¡lcool, mas sim do quartzo transmutado. Beber esta poÃ§Ã£o pode aliviar quase qualquer enfermidade, desde uma infecÃ§Ã£o comum atÃ© um veneno letal e uma ressaca horrÃ­vel. O quartzo se liga a substÃ¢ncias tÃ³xicas e as transforma em sal inofensivo, curando venenos, doenÃ§as e intoxicaÃ§Ãµes. Caso isso nÃ£o seja suficiente para curar o aventureiro doente, as lÃ¡grimas de cavalo no xarope tambÃ©m restaurarÃ£o 4d4 pontos de vida ao usuÃ¡rio.
+@54705 = ~Pode-se confundir esta bebida doce com vinho branco, mas o sabor suave não vem do álcool, mas sim do quartzo transmutado. Beber esta poção pode aliviar quase qualquer enfermidade, desde uma infecção comum até um veneno letal e uma ressaca horrível. O quartzo se liga a substâncias tóxicas e as transforma em sal inofensivo, curando venenos, doenças e intoxicações. Caso isso não seja suficiente para curar o aventureiro doente, as lágrimas de cavalo no xarope também restaurarão 4d4 pontos de vida ao usuário.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Cura venenos e doenÃ§as
+Cura venenos e doenças
 Cura 4d4 pontos de vida
 Peso: 0,5 kg (1 lb).~
-@4706 = ~Gel ElÃ©trico~
-@4707 = ~Este gel azul-claro emite um zumbido estranho em seu recipiente de latÃ£o hermeticamente fechado. Ao ser absorvido, o gel absorve dano elÃ©trico, concedendo ao usuÃ¡rio uma resistÃªncia de 20/- a todas as formas de eletricidade. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+@4706 = ~Gel Elétrico~
+@4707 = ~Este gel azul-claro emite um zumbido estranho em seu recipiente de latão hermeticamente fechado. Ao ser absorvido, o gel absorve dano elétrico, concedendo ao usuário uma resistência de 20/- a todas as formas de eletricidade. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 20/- ResistÃªncia ElÃ©trica~
-@54706 = ~Gel ElÃ©trico~
-@54707 = ~Este gel azul-claro emite um zumbido estranho em seu recipiente de latÃ£o hermeticamente fechado. Ao ser absorvido, o gel absorve dano elÃ©trico, concedendo ao usuÃ¡rio uma resistÃªncia de 50/- a todas as formas de eletricidade. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+Resistência: 20/- Resistência Elétrica~
+@54706 = ~Gel Elétrico~
+@54707 = ~Este gel azul-claro emite um zumbido estranho em seu recipiente de latão hermeticamente fechado. Ao ser absorvido, o gel absorve dano elétrico, concedendo ao usuário uma resistência de 50/- a todas as formas de eletricidade. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 50/- ResistÃªncia ElÃ©trica~
+Resistência: 50/- Resistência Elétrica~
 @4708 = ~Filtro Radiante~
-@4709 = ~Um lÃ­quido viscoso brilha dentro deste pequeno frasco. Preparado em um jarro de cera e filtrado atravÃ©s de tiras de pergaminho mÃ¡gico, esta mistura de salitre, azeite, lagartos picados, soda cÃ¡ustica, folhas de hortelÃ£ e canela pode proteger a pele do usuÃ¡rio do calor extremo.
+@4709 = ~Um líquido viscoso brilha dentro deste pequeno frasco. Preparado em um jarro de cera e filtrado através de tiras de pergaminho mágico, esta mistura de salitre, azeite, lagartos picados, soda cáustica, folhas de hortelã e canela pode proteger a pele do usuário do calor extremo.
 
-Ao despejar o frasco no braÃ§o e pronunciar a palavra de comando, o usuÃ¡rio espalha um lÃ­quido prismÃ¡tico radiante por todo o corpo, concedendo 20/- de resistÃªncia a todas as formas de dano de fogo. O lÃ­quido Ã© encantado para aderir Ã  pele do usuÃ¡rio, mas o efeito desaparece apÃ³s 10 rodadas.
+Ao despejar o frasco no braço e pronunciar a palavra de comando, o usuário espalha um líquido prismático radiante por todo o corpo, concedendo 20/- de resistência a todas as formas de dano de fogo. O líquido é encantado para aderir à pele do usuário, mas o efeito desaparece após 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 20/- ResistÃªncia ao Fogo
+Resistência: 20/- Resistência ao Fogo
 Peso: 0,5 kg (1 lb).~
 @54708 = ~Filtro Radiante~
-@54709 = ~Um lÃ­quido viscoso brilha dentro deste pequeno frasco. Preparada em um jarro de cera e filtrada atravÃ©s de tiras de pergaminho mÃ¡gico, esta mistura de salitre, azeite, lagartos picados, soda cÃ¡ustica, folhas de hortelÃ£ e canela pode proteger a pele do usuÃ¡rio do calor extremo.
+@54709 = ~Um líquido viscoso brilha dentro deste pequeno frasco. Preparada em um jarro de cera e filtrada através de tiras de pergaminho mágico, esta mistura de salitre, azeite, lagartos picados, soda cáustica, folhas de hortelã e canela pode proteger a pele do usuário do calor extremo.
 
-Ao despejar o frasco no braÃ§o e pronunciar a palavra de comando, o usuÃ¡rio espalha um lÃ­quido prismÃ¡tico radiante por todo o corpo, concedendo 50/- de resistÃªncia a todas as formas de dano de fogo. O lÃ­quido Ã© encantado para aderir Ã  pele do usuÃ¡rio, mas o efeito desaparece apÃ³s 10 rodadas.
+Ao despejar o frasco no braço e pronunciar a palavra de comando, o usuário espalha um líquido prismático radiante por todo o corpo, concedendo 50/- de resistência a todas as formas de dano de fogo. O líquido é encantado para aderir à pele do usuário, mas o efeito desaparece após 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 50/- ResistÃªncia ao Fogo
+Resistência: 50/- Resistência ao Fogo
 Peso: 0,5 kg (1 lb).~
 @4710 = ~Mania Negra~
-@4711 = ~Nem todas as poÃ§Ãµes sÃ£o exatamente medicinais. Alguns alquimistas dedicam seus talentos Ã  produÃ§Ã£o de narcÃ³ticos e ganham a vida vendendo venenos viciantes para os preguiÃ§osos e inquietos. Este Ã³leo negro Ã© uma versÃ£o modificada de um desses narcÃ³ticos. Quando ingerido, Black Mania induz um violento estado de confusÃ£o, concedendo ao usuÃ¡rio um bÃ´nus de +5 em testes de dano e +3 em testes de ataque corpo a corpo, ao custo de uma penalidade de -3 na CA e em ataques de projÃ©teis. AlÃ©m disso, o usuÃ¡rio fica em frenesi por 10 rodadas e seus pontos de vida ficam ocultos enquanto durar o efeito.
+@4711 = ~Nem todas as poções são exatamente medicinais. Alguns alquimistas dedicam seus talentos à produção de narcóticos e ganham a vida vendendo venenos viciantes para os preguiçosos e inquietos. Este óleo negro é uma versão modificada de um desses narcóticos. Quando ingerido, Black Mania induz um violento estado de confusão, concedendo ao usuário um bônus de +5 em testes de dano e +3 em testes de ataque corpo a corpo, ao custo de uma penalidade de -3 na CA e em ataques de projéteis. Além disso, o usuário fica em frenesi por 10 rodadas e seus pontos de vida ficam ocultos enquanto durar o efeito.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +3 em ataques corpo a corpo
 +5 em dano
 -3 em CA
--3 em ataques de projÃ©teis
-O usuÃ¡rio fica furioso durante o combate
+-3 em ataques de projéteis
+O usuário fica furioso durante o combate
 Pontos de vida ocultos
 Peso: 0,5 kg (1 lb).~
 @54710 = ~Mania Negra~
-@54711 = ~Nem todas as poÃ§Ãµes sÃ£o exatamente medicinais. Alguns alquimistas dedicam seus talentos Ã  produÃ§Ã£o de narcÃ³ticos e ganham a vida vendendo venenos viciantes para os preguiÃ§osos e inquietos. Este Ã³leo negro Ã© uma versÃ£o modificada de um desses narcÃ³ticos. Quando ingerido, Black Mania induz um violento estado de confusÃ£o, concedendo ao usuÃ¡rio um bÃ´nus de +10 em jogadas de dano e +5 em jogadas de ataque corpo a corpo, ao custo de uma penalidade de -10 na CA e -5 em ataques de projÃ©teis. AlÃ©m disso, o usuÃ¡rio fica em frenesi por 10 rodadas e seus pontos de vida ficam ocultos enquanto durar o efeito.
+@54711 = ~Nem todas as poções são exatamente medicinais. Alguns alquimistas dedicam seus talentos à produção de narcóticos e ganham a vida vendendo venenos viciantes para os preguiçosos e inquietos. Este óleo negro é uma versão modificada de um desses narcóticos. Quando ingerido, Black Mania induz um violento estado de confusão, concedendo ao usuário um bônus de +10 em jogadas de dano e +5 em jogadas de ataque corpo a corpo, ao custo de uma penalidade de -10 na CA e -5 em ataques de projéteis. Além disso, o usuário fica em frenesi por 10 rodadas e seus pontos de vida ficam ocultos enquanto durar o efeito.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +5 em ataques corpo a corpo
 +10 em dano
 -10 em CA
--5 em ataques de projÃ©teis
-O usuÃ¡rio fica furioso durante o combate
+-5 em ataques de projéteis
+O usuário fica furioso durante o combate
 Pontos de vida ocultos
 Peso: 0,5 kg (1 lb).~
-@4712 = ~ColÃ­rio de Farinha de Osso~
-@4713 = ~Feita com uma pitada de farinha de osso, suco de tomate ou cenoura, Ã¡gua destilada, algumas gotas do prÃ³prio sangue do usuÃ¡rio e um globo ocular de ave de rapina, esta soluÃ§Ã£o avermelhada pode melhorar a visÃ£o do usuÃ¡rio. AlÃ©m de uma leve sensaÃ§Ã£o de queimaÃ§Ã£o, o usuÃ¡rio repentinamente sentirÃ¡ o mundo muito mais detalhado, concedendo um bÃ´nus de +3 em todos os ataques Ã  distÃ¢ncia. As gotas para os olhos queimam levemente, e o usuÃ¡rio gradualmente chorarÃ¡ e eliminarÃ¡ o fluido, perdendo seus benefÃ­cios apÃ³s 1 hora.
+@4712 = ~Colírio de Farinha de Osso~
+@4713 = ~Feita com uma pitada de farinha de osso, suco de tomate ou cenoura, água destilada, algumas gotas do próprio sangue do usuário e um globo ocular de ave de rapina, esta solução avermelhada pode melhorar a visão do usuário. Além de uma leve sensação de queimação, o usuário repentinamente sentirá o mundo muito mais detalhado, concedendo um bônus de +3 em todos os ataques à distância. As gotas para os olhos queimam levemente, e o usuário gradualmente chorará e eliminará o fluido, perdendo seus benefícios após 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+3 de BÃ´nus de Ataque (apenas armas de longo alcance)
++3 de Bônus de Ataque (apenas armas de longo alcance)
 Peso: 0,5 kg (1 lb).~
-@54712 = ~ColÃ­rio de Farinha de Osso~
-@54713 = ~Feita com uma pitada de farinha de osso, suco de tomate ou cenoura, Ã¡gua destilada, algumas gotas do prÃ³prio sangue do usuÃ¡rio e um globo ocular de ave de rapina, esta soluÃ§Ã£o avermelhada pode melhorar a visÃ£o do usuÃ¡rio. AlÃ©m de uma leve sensaÃ§Ã£o de queimaÃ§Ã£o, o usuÃ¡rio ganharÃ¡ repentinamente uma percepÃ§Ã£o mÃ¡gica das fraquezas de outras criaturas. As gotas para os olhos queimam levemente, e assim o usuÃ¡rio gradualmente chorarÃ¡ e eliminarÃ¡ o fluido, perdendo seus benefÃ­cios apÃ³s 10 rodadas.
+@54712 = ~Colírio de Farinha de Osso~
+@54713 = ~Feita com uma pitada de farinha de osso, suco de tomate ou cenoura, água destilada, algumas gotas do próprio sangue do usuário e um globo ocular de ave de rapina, esta solução avermelhada pode melhorar a visão do usuário. Além de uma leve sensação de queimação, o usuário ganhará repentinamente uma percepção mágica das fraquezas de outras criaturas. As gotas para os olhos queimam levemente, e assim o usuário gradualmente chorará e eliminará o fluido, perdendo seus benefícios após 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Olhos do Carrasco por 10 rodadas (+4 de bÃ´nus de ataque, +4 de alcance de ameaÃ§a crÃ­tica)
+Olhos do Carrasco por 10 rodadas (+4 de bônus de ataque, +4 de alcance de ameaça crítica)
 Peso: 0,5 kg (1 lb).~
-@4714 = ~Bomba de FumaÃ§a~
-@4715 = ~Qualquer um pode acender uma fogueira e produzir uma pequena nuvem de fumaÃ§a, mas criar uma rajada de fumaÃ§a em um movimento rÃ¡pido exige arte. Este pequeno recipiente de fumaÃ§a concentrada criarÃ¡ rapidamente uma nuvem obscura quando quebrado, ocultando o usuÃ¡rio por 1d3+3 segundos, dependendo das correntes de ar e outros fatores.
+@4714 = ~Bomba de Fumaça~
+@4715 = ~Qualquer um pode acender uma fogueira e produzir uma pequena nuvem de fumaça, mas criar uma rajada de fumaça em um movimento rápido exige arte. Este pequeno recipiente de fumaça concentrada criará rapidamente uma nuvem obscura quando quebrado, ocultando o usuário por 1d3+3 segundos, dependendo das correntes de ar e outros fatores.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Invisibilidade por 1d3+3 segundos
 Peso: 0,5 kg (1 lb).~
-@54714 = ~Bomba de FumaÃ§a~
-@54715 = ~Qualquer um pode acender uma fogueira e produzir uma pequena nuvem de fumaÃ§a, mas criar uma rajada de fumaÃ§a em um movimento rÃ¡pido exige arte. Este pequeno recipiente de fumaÃ§a concentrada criarÃ¡ rapidamente uma nuvem obscura quando quebrado, ocultando o usuÃ¡rio por 1d3+3 segundos, dependendo das correntes de ar e outros fatores.
+@54714 = ~Bomba de Fumaça~
+@54715 = ~Qualquer um pode acender uma fogueira e produzir uma pequena nuvem de fumaça, mas criar uma rajada de fumaça em um movimento rápido exige arte. Este pequeno recipiente de fumaça concentrada criará rapidamente uma nuvem obscura quando quebrado, ocultando o usuário por 1d3+3 segundos, dependendo das correntes de ar e outros fatores.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Invisibilidade por 1d3+3 segundos
 Peso: 0,5 kg (1 lb).~
-@4716 = ~TÃ´nico Amargo~
-@4717 = ~Esta poÃ§Ã£o Ã© uma mistura avermelhada altamente concentrada feita de raÃ­zes, argila, pÃ©rolas e conchas de ostra trituradas, sangue e Ã¡lcool. A soluÃ§Ã£o fortalece a constituiÃ§Ã£o e a resiliÃªncia de quem a bebe, concedendo um bÃ´nus de +4 em todos os testes de Fortitude por 1 hora.
+@4716 = ~Tônico Amargo~
+@4717 = ~Esta poção é uma mistura avermelhada altamente concentrada feita de raízes, argila, pérolas e conchas de ostra trituradas, sangue e álcool. A solução fortalece a constituição e a resiliência de quem a bebe, concedendo um bônus de +4 em todos os testes de Fortitude por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 em testes de Fortitude
 Peso: 0,5 kg (1 lb).~
-@54716 = ~TÃ´nico Amargo~
-@54717 = ~Esta poÃ§Ã£o Ã© uma mistura avermelhada altamente concentrada feita de raÃ­zes, argila, pÃ©rolas e conchas de ostra trituradas, sangue e Ã¡lcool. A soluÃ§Ã£o fortalece a constituiÃ§Ã£o e a resiliÃªncia de quem a bebe, concedendo um bÃ´nus de +8 em todos os testes de Fortitude por 1 hora.
+@54716 = ~Tônico Amargo~
+@54717 = ~Esta poção é uma mistura avermelhada altamente concentrada feita de raízes, argila, pérolas e conchas de ostra trituradas, sangue e álcool. A solução fortalece a constituição e a resiliência de quem a bebe, concedendo um bônus de +8 em todos os testes de Fortitude por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +8 em testes de Fortitude
 Peso: 0,5 kg (1 lb).~
-@4718 = ~SoluÃ§Ã£o de Salmoura~
-@4719 = ~Esta poÃ§Ã£o, um pequeno pedaÃ§o do cÃ©rebro de um golfinho suspenso em Ã³leo de baleia e salmoura, com mercÃºrio e pedra-verde como catalisadores, Ã© capaz de aprimorar as habilidades mentais do usuÃ¡rio. A maior parte do poder latente do cÃ©rebro do golfinho Ã© desperdiÃ§ada, visto que o funcionamento da mente ainda Ã© pouco compreendido e o mÃ©todo por trÃ¡s desta mistura Ã© bastante rudimentar, mas a salmoura banirÃ¡ todas as distraÃ§Ãµes da mente do usuÃ¡rio, concedendo um bÃ´nus de +4 em todos os testes de Vontade por 1 hora.
+@4718 = ~Solução de Salmoura~
+@4719 = ~Esta poção, um pequeno pedaço do cérebro de um golfinho suspenso em óleo de baleia e salmoura, com mercúrio e pedra-verde como catalisadores, é capaz de aprimorar as habilidades mentais do usuário. A maior parte do poder latente do cérebro do golfinho é desperdiçada, visto que o funcionamento da mente ainda é pouco compreendido e o método por trás desta mistura é bastante rudimentar, mas a salmoura banirá todas as distrações da mente do usuário, concedendo um bônus de +4 em todos os testes de Vontade por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 em testes de Vontade
 Peso: 0,5 kg (1 lb).~
-@54718 = ~SoluÃ§Ã£o de Salmoura~
-@54719 = ~Esta poÃ§Ã£o, um pequeno pedaÃ§o do cÃ©rebro de um golfinho suspenso em Ã³leo de baleia e salmoura, com mercÃºrio e pedra-verde como catalisadores, Ã© capaz de aprimorar as habilidades mentais do usuÃ¡rio. A maior parte do poder latente do cÃ©rebro do golfinho Ã© desperdiÃ§ada, jÃ¡ que o funcionamento da mente ainda Ã© pouco compreendido e o mÃ©todo por trÃ¡s desta mistura Ã© bastante rudimentar, mas a salmoura banirÃ¡ todas as distraÃ§Ãµes da mente do usuÃ¡rio, concedendo um bÃ´nus de +8 em todos os testes de Vontade por 1 hora.
+@54718 = ~Solução de Salmoura~
+@54719 = ~Esta poção, um pequeno pedaço do cérebro de um golfinho suspenso em óleo de baleia e salmoura, com mercúrio e pedra-verde como catalisadores, é capaz de aprimorar as habilidades mentais do usuário. A maior parte do poder latente do cérebro do golfinho é desperdiçada, já que o funcionamento da mente ainda é pouco compreendido e o método por trás desta mistura é bastante rudimentar, mas a salmoura banirá todas as distrações da mente do usuário, concedendo um bônus de +8 em todos os testes de Vontade por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +8 em testes de Vontade
 Peso: 0,5 kg (1 lb).~
-@4720 = ~GÃ¡s Pressurizado~
-@4721 = ~Esta garrafa de toxinas altamente pressurizadas explodirÃ¡ ao ser estilhaÃ§ada, inundando a Ã¡rea com uma nuvem de gÃ¡s nocivo. Qualquer criatura que respire e for capturada pela nuvem serÃ¡ confrontada com um odor nauseante que penetra profundamente em suas narinas e gruda na garganta, sofrendo 5 de dano de veneno por rodada durante 5 rodadas. A cada rodada em que a vÃ­tima permanecer na nuvem, ela deverÃ¡ fazer um teste de Fortitude para evitar ser envenenada.
+@4720 = ~Gás Pressurizado~
+@4721 = ~Esta garrafa de toxinas altamente pressurizadas explodirá ao ser estilhaçada, inundando a área com uma nuvem de gás nocivo. Qualquer criatura que respire e for capturada pela nuvem será confrontada com um odor nauseante que penetra profundamente em suas narinas e gruda na garganta, sofrendo 5 de dano de veneno por rodada durante 5 rodadas. A cada rodada em que a vítima permanecer na nuvem, ela deverá fazer um teste de Fortitude para evitar ser envenenada.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 5 de dano de veneno por rodada durante 5 rodadas (Fortitude CD 15 anula)
-Dissipa apÃ³s 10 rodadas
+Dissipa após 10 rodadas
 Peso: 0,5 kg (1 lb).~
-@54720 = ~GÃ¡s Pressurizado~
-@54721 = ~Esta garrafa de toxinas altamente pressurizadas explodirÃ¡ ao ser estilhaÃ§ada, inundando a Ã¡rea com uma nuvem de gÃ¡s nocivo. Qualquer criatura que respire e for capturada pela nuvem serÃ¡ confrontada com um odor nauseante que penetra profundamente em suas narinas e gruda na garganta, sofrendo 10 de dano de veneno por rodada durante 5 rodadas. A cada rodada que a vÃ­tima permanecer na nuvem, ela deverÃ¡ fazer um teste de Fortitude para evitar ser envenenada.
+@54720 = ~Gás Pressurizado~
+@54721 = ~Esta garrafa de toxinas altamente pressurizadas explodirá ao ser estilhaçada, inundando a área com uma nuvem de gás nocivo. Qualquer criatura que respire e for capturada pela nuvem será confrontada com um odor nauseante que penetra profundamente em suas narinas e gruda na garganta, sofrendo 10 de dano de veneno por rodada durante 5 rodadas. A cada rodada que a vítima permanecer na nuvem, ela deverá fazer um teste de Fortitude para evitar ser envenenada.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 10 de dano de veneno por rodada durante 5 rodadas (Fortitude CD 25 nega)
-Dissipa apÃ³s 10 rodadas
+Dissipa após 10 rodadas
 Peso: 0,5 kg (1 lb).~
-@4722 = ~Ã“leo em Chamas~
-@4723 = ~Simples de fazer, mas cara de produzir, essa mistura de pÃ³lvora negra com Ã³leo e gÃ¡s altamente refinados se incendeia ao atingir um alvo. Assim que a garrafa atinge o solo, uma pequena cÃ¡psula de sÃ³dio puro e outra de Ã¡gua se abrem. O sÃ³dio pega fogo ao entrar em contato com a Ã¡gua, incendiando o restante da mistura.
+@4722 = ~Óleo em Chamas~
+@4723 = ~Simples de fazer, mas cara de produzir, essa mistura de pólvora negra com óleo e gás altamente refinados se incendeia ao atingir um alvo. Assim que a garrafa atinge o solo, uma pequena cápsula de sódio puro e outra de água se abrem. O sódio pega fogo ao entrar em contato com a água, incendiando o restante da mistura.
 
-Uma granada fraca dentro da garrafa faz com que o Ã³leo em chamas se expanda rapidamente, espalhando as chamas por todas as criaturas em um raio de 9 metros. Qualquer um atingido pela explosÃ£o sofrerÃ¡ 6d6 pontos de dano com um teste de Reflexos (CD 15) pela metade.
+Uma granada fraca dentro da garrafa faz com que o óleo em chamas se expanda rapidamente, espalhando as chamas por todas as criaturas em um raio de 9 metros. Qualquer um atingido pela explosão sofrerá 6d6 pontos de dano com um teste de Reflexos (CD 15) pela metade.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 6d6 de dano de fogo (CD 15 de Reflexos para metade do dano)
-Ãrea de Efeito: Raio de 10 metros (30 pÃ©s)
-Alcance: 12 metros (40 pÃ©s)
+Área de Efeito: Raio de 10 metros (30 pés)
+Alcance: 12 metros (40 pés)
 Peso: 0,5 kg (1 lb).~
-@54722 = ~Ã“leo em Chamas~
-@54723 = ~Simples de fazer, mas cara de produzir, essa mistura de pÃ³lvora negra com Ã³leo e gÃ¡s altamente refinados se incendeia ao atingir um alvo. Assim que a garrafa atinge o solo, uma pequena cÃ¡psula de sÃ³dio puro e outra de Ã¡gua se abrem. O sÃ³dio pega fogo ao entrar em contato com a Ã¡gua, incendiando o restante da mistura.
+@54722 = ~Óleo em Chamas~
+@54723 = ~Simples de fazer, mas cara de produzir, essa mistura de pólvora negra com óleo e gás altamente refinados se incendeia ao atingir um alvo. Assim que a garrafa atinge o solo, uma pequena cápsula de sódio puro e outra de água se abrem. O sódio pega fogo ao entrar em contato com a água, incendiando o restante da mistura.
 
-Uma granada fraca dentro da garrafa faz com que o Ã³leo em chamas se expanda rapidamente, espalhando as chamas por todas as criaturas em um raio de 9 metros. Qualquer um pego dentro da explosÃ£o sofrerÃ¡ 12d6 pontos de dano com um teste de Reflexos (CD 25) pela metade.
+Uma granada fraca dentro da garrafa faz com que o óleo em chamas se expanda rapidamente, espalhando as chamas por todas as criaturas em um raio de 9 metros. Qualquer um pego dentro da explosão sofrerá 12d6 pontos de dano com um teste de Reflexos (CD 25) pela metade.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 12d6 de dano de fogo (Reflexos CD 25 para 1/2 do dano)
-Ãrea de Efeito: Raio de 10 metros (30 pÃ©s)
-Alcance: 12 metros (40 pÃ©s)
+Área de Efeito: Raio de 10 metros (30 pés)
+Alcance: 12 metros (40 pés)
 Peso: 0,5 kg (1 lb).~
-@4724 = ~Vinho de AlmÃ­scar~
-@4725 = ~Feito com ameixas fermentadas e o almÃ­scar de vÃ¡rios animais (geralmente gado, bois, cavalos, burros e bÃºfalos), este vinho forte tem um aroma peculiar e nocivo, apesar do sabor doce. Ingerido com um pouco de Ã¡cido Ankheg e um pouco de lima (a base, nÃ£o a fruta) para neutralizar a acidez, esta poÃ§Ã£o concede ao bebedor +6 de ForÃ§a por 10 rodadas.
+@4724 = ~Vinho de Almíscar~
+@4725 = ~Feito com ameixas fermentadas e o almíscar de vários animais (geralmente gado, bois, cavalos, burros e búfalos), este vinho forte tem um aroma peculiar e nocivo, apesar do sabor doce. Ingerido com um pouco de ácido Ankheg e um pouco de lima (a base, não a fruta) para neutralizar a acidez, esta poção concede ao bebedor +6 de Força por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+6 de ForÃ§a
++6 de Força
 Peso: 0,5 kg (1 lb).~
-@54724 = ~Vinho de AlmÃ­scar~
-@54725 = ~Feito com ameixas fermentadas e o almÃ­scar de vÃ¡rios animais (geralmente gado, bois, cavalos, burros e bÃºfalos), este vinho forte tem um aroma peculiar e nocivo, apesar do sabor doce. Tomado com um pouco de Ã¡cido Ankheg e um pouco de lima (a base, nÃ£o a fruta) para neutralizar a acidez, esta poÃ§Ã£o concede ao bebedor +12 de ForÃ§a por 10 rodadas.
+@54724 = ~Vinho de Almíscar~
+@54725 = ~Feito com ameixas fermentadas e o almíscar de vários animais (geralmente gado, bois, cavalos, burros e búfalos), este vinho forte tem um aroma peculiar e nocivo, apesar do sabor doce. Tomado com um pouco de ácido Ankheg e um pouco de lima (a base, não a fruta) para neutralizar a acidez, esta poção concede ao bebedor +12 de Força por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+12 ForÃ§a
++12 Força
 Peso: 0,5 kg (1 lb).~
-@4726 = ~Suco de LimÃ£o~
-@4727 = ~Esta poÃ§Ã£o, uma mistura Ã¡cida de suco de limÃ£o, veneno de escorpiÃ£o, pimentas e algumas gotas de sangue de anÃ£o ou gnomo, concederÃ¡ ao bebedor 20/- de resistÃªncia a dano mÃ¡gico por 10 rodadas, aumentando as chances contra inimigos conjuradores.
+@4726 = ~Suco de Limão~
+@4727 = ~Esta poção, uma mistura ácida de suco de limão, veneno de escorpião, pimentas e algumas gotas de sangue de anão ou gnomo, concederá ao bebedor 20/- de resistência a dano mágico por 10 rodadas, aumentando as chances contra inimigos conjuradores.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 20/- de ResistÃªncia a Dano MÃ¡gico
+Resistência: 20/- de Resistência a Dano Mágico
 Peso: 0,5 kg (1 lb).~
-@54726 = ~Suco de LimÃ£o~
-@54727 = ~Esta poÃ§Ã£o, uma mistura Ã¡cida de suco de limÃ£o, veneno de escorpiÃ£o, pimentas e algumas gotas de sangue de anÃ£o ou gnomo, concederÃ¡ ao bebedor 50/- de resistÃªncia a dano mÃ¡gico por 10 rodadas, aumentando as chances contra inimigos conjuradores I
+@54726 = ~Suco de Limão~
+@54727 = ~Esta poção, uma mistura ácida de suco de limão, veneno de escorpião, pimentas e algumas gotas de sangue de anão ou gnomo, concederá ao bebedor 50/- de resistência a dano mágico por 10 rodadas, aumentando as chances contra inimigos conjuradores I
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 50/- ResistÃªncia a Dano MÃ¡gico
+Resistência: 50/- Resistência a Dano Mágico
 Peso: 0,5 kg (1 lb).~
 @4728 = ~Frasco de Escamas~
-@4729 = ~Composta de ferrugem em pÃ³, cascas de besouro, farinha de osso e casca de carvalho, esta mistura Ã  base de Ã¡lcool cria uma barreira de escamas metÃ¡licas irregulares sobre a pele do usuÃ¡rio. Essas peles de ferro absorverÃ£o os prÃ³ximos 1 a 6 golpes que atingirÃ£o o usuÃ¡rio nas prÃ³ximas 10 rodadas.
+@4729 = ~Composta de ferrugem em pó, cascas de besouro, farinha de osso e casca de carvalho, esta mistura à base de álcool cria uma barreira de escamas metálicas irregulares sobre a pele do usuário. Essas peles de ferro absorverão os próximos 1 a 6 golpes que atingirão o usuário nas próximas 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 O bebedor ganha 1d6 peles de ferro, conforme a magia Peles de Ferro.
 Peso: 0,5 kg (1 lb).~
 @54728 = ~Frasco de Escamas~
-@54729 = ~Composta de ferrugem em pÃ³, cascas de besouro, farinha de osso e casca de carvalho, esta mistura Ã  base de Ã¡lcool cria uma barreira de escamas metÃ¡licas irregulares sobre a pele do usuÃ¡rio. Essas peles de ferro absorverÃ£o os prÃ³ximos 3 a 18 golpes que atingirÃ£o o usuÃ¡rio nas prÃ³ximas 10 rodadas.
+@54729 = ~Composta de ferrugem em pó, cascas de besouro, farinha de osso e casca de carvalho, esta mistura à base de álcool cria uma barreira de escamas metálicas irregulares sobre a pele do usuário. Essas peles de ferro absorverão os próximos 3 a 18 golpes que atingirão o usuário nas próximas 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 O bebedor ganha 3d6 peles de ferro, conforme a magia Peles de Ferro.
 Peso: 0,5 kg (1 lb).~
 @4730 = ~Ectoplasma Refinado~
-@4731 = ~Poeira de cemitÃ©rio, Ã¡gua da chuva, melros ou minhocas amassados e o sangue seco de uma crianÃ§a pequena sÃ£o apenas os primeiros ingredientes necessÃ¡rios para preparar esta poÃ§Ã£o amarga e terrosa. Para completar a poÃ§Ã£o, um alquimista deve extrair o ectoplasma de um fantasma ou espectro, seja matando um espÃ­rito errante ou raspando o material da garganta de um mÃ©dium, necromante ou adivinho que contate os mortos. Deixada Ã  noite por 1 a 7 dias (dependendo da luz da lua disponÃ­vel), esta poÃ§Ã£o colocarÃ¡ o usuÃ¡rio em um estado parcialmente espectral, concedendo-lhe quase imunidade a armas mundanas. Por 10 rodadas apÃ³s ingerir esta poÃ§Ã£o amarga, o usuÃ¡rio ignora os primeiros 10 pontos de dano de qualquer arma com um encantamento abaixo de +2.
+@4731 = ~Poeira de cemitério, água da chuva, melros ou minhocas amassados e o sangue seco de uma criança pequena são apenas os primeiros ingredientes necessários para preparar esta poção amarga e terrosa. Para completar a poção, um alquimista deve extrair o ectoplasma de um fantasma ou espectro, seja matando um espírito errante ou raspando o material da garganta de um médium, necromante ou adivinho que contate os mortos. Deixada à noite por 1 a 7 dias (dependendo da luz da lua disponível), esta poção colocará o usuário em um estado parcialmente espectral, concedendo-lhe quase imunidade a armas mundanas. Por 10 rodadas após ingerir esta poção amarga, o usuário ignora os primeiros 10 pontos de dano de qualquer arma com um encantamento abaixo de +2.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-10/+2 ReduÃ§Ã£o de Danos
+10/+2 Redução de Danos
 Peso: 0,5 kg (1 lb).~
 @54730 = ~Ectoplasma Refinado~
-@54731 = ~Poeira de cemitÃ©rio, Ã¡gua da chuva, melros ou minhocas amassados e o sangue seco de uma crianÃ§a pequena sÃ£o apenas os primeiros ingredientes necessÃ¡rios para preparar esta poÃ§Ã£o amarga e terrosa. Para completar a poÃ§Ã£o, um alquimista deve extrair o ectoplasma de um fantasma ou espectro, seja matando um espÃ­rito errante ou raspando o material da garganta de um mÃ©dium, necromante ou adivinho que contate os mortos. Deixada Ã  noite por 1 a 7 dias (dependendo da luz da lua disponÃ­vel), esta poÃ§Ã£o colocarÃ¡ o usuÃ¡rio em um estado parcialmente espectral, concedendo-lhe quase imunidade a armas mundanas. Por 10 rodadas apÃ³s ingerir esta poÃ§Ã£o amarga, o usuÃ¡rio ignora os primeiros 15 pontos de dano de qualquer arma com um encantamento abaixo de +3.
+@54731 = ~Poeira de cemitério, água da chuva, melros ou minhocas amassados e o sangue seco de uma criança pequena são apenas os primeiros ingredientes necessários para preparar esta poção amarga e terrosa. Para completar a poção, um alquimista deve extrair o ectoplasma de um fantasma ou espectro, seja matando um espírito errante ou raspando o material da garganta de um médium, necromante ou adivinho que contate os mortos. Deixada à noite por 1 a 7 dias (dependendo da luz da lua disponível), esta poção colocará o usuário em um estado parcialmente espectral, concedendo-lhe quase imunidade a armas mundanas. Por 10 rodadas após ingerir esta poção amarga, o usuário ignora os primeiros 15 pontos de dano de qualquer arma com um encantamento abaixo de +3.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-15/+3 ReduÃ§Ã£o de Danos
+15/+3 Redução de Danos
 Peso: 0,5 kg (1 lb).~
-@4732 = ~Ã‰ter Assombrado~
-@4733 = ~Engenharia complexa e estudo mÃ­stico sÃ£o necessÃ¡rios para criar esta garrafa de gÃ¡s encantado. O alquimista deve primeiro investir em uma coluna de destilaÃ§Ã£o fracionada para coletar o gÃ¡s necessÃ¡rio da atmosfera. Uma vez coletado, o gÃ¡s deve ser infundido com um ou mais espÃ­ritos hostis. Recitar blasfÃªmias em um cemitÃ©rio Ã© suficiente se o alquimista for bem versado em Abissal ou estiver familiarizado com os ensinamentos da divindade mais popular entre os mortos; caso contrÃ¡rio, o alquimista deve recorrer a roubos de tÃºmulos e conduzir vÃ¡rios rituais ilegais e desagradÃ¡veis com cadÃ¡veres exumados.
+@4732 = ~Éter Assombrado~
+@4733 = ~Engenharia complexa e estudo místico são necessários para criar esta garrafa de gás encantado. O alquimista deve primeiro investir em uma coluna de destilação fracionada para coletar o gás necessário da atmosfera. Uma vez coletado, o gás deve ser infundido com um ou mais espíritos hostis. Recitar blasfêmias em um cemitério é suficiente se o alquimista for bem versado em Abissal ou estiver familiarizado com os ensinamentos da divindade mais popular entre os mortos; caso contrário, o alquimista deve recorrer a roubos de túmulos e conduzir vários rituais ilegais e desagradáveis com cadáveres exumados.
 
-Se o alquimista conseguir enfurecer os espÃ­ritos locais, ele poderÃ¡ vinculÃ¡-los ao gÃ¡s coletado. Aplicar descargas elÃ©tricas repetidas nos espÃ­ritos aprisionados os desorientarÃ¡ gradualmente, permitindo que a garrafa seja arremessada como uma granada. Quando a garrafa se estilhaÃ§ar, os espÃ­ritos atacarÃ£o as criaturas vivas mais prÃ³ximas que encontrarem, causando 4d12 de dano mÃ¡gico com um teste de Fortitude pela metade e infligindo medo a qualquer vÃ­tima que falhe em um teste de Vontade.
+Se o alquimista conseguir enfurecer os espíritos locais, ele poderá vinculá-los ao gás coletado. Aplicar descargas elétricas repetidas nos espíritos aprisionados os desorientará gradualmente, permitindo que a garrafa seja arremessada como uma granada. Quando a garrafa se estilhaçar, os espíritos atacarão as criaturas vivas mais próximas que encontrarem, causando 4d12 de dano mágico com um teste de Fortitude pela metade e infligindo medo a qualquer vítima que falhe em um teste de Vontade.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-4d12 de dano mÃ¡gico
-Medo por 5 rodadas, Vontade nega o teste de resistÃªncia
+4d12 de dano mágico
+Medo por 5 rodadas, Vontade nega o teste de resistência
 Peso: 0,5 kg (1 lb).
 ~
-@4734 = ~Varinha de TendÃ£o Ã‰lfico~
-@4735 = ~Esta varinha gordurosa, mole e ocasionalmente espasmÃ³dica, composta principalmente de tendÃµes de pernas de elfos e meio-elfos, pode lanÃ§ar um raio de energia necromÃ¢ntica em qualquer alvo vivo. A vÃ­tima sofre 12d4 de dano de veneno, mas pode tentar um teste de Fortitude para reduzir metade do dano.
+@4734 = ~Varinha de Tendão Élfico~
+@4735 = ~Esta varinha gordurosa, mole e ocasionalmente espasmódica, composta principalmente de tendões de pernas de elfos e meio-elfos, pode lançar um raio de energia necromântica em qualquer alvo vivo. A vítima sofre 12d4 de dano de veneno, mas pode tentar um teste de Fortitude para reduzir metade do dano.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 12d4 de dano de veneno, teste de Fortitude pela metade
 Peso: 0,5 kg (1 lb).
 ~
 @4736 = ~Bebida Turva~
-@4737 = ~Com os ingredientes certos, um alquimista habilidoso pode alterar a prÃ³pria natureza de um ser vivo. Dissolvendo sal grosso e suco de sapo em uma soluÃ§Ã£o Ã  base de Ã¡lcool e adicionando os restos de um veado ou antÃ­lope digeridos no estÃ´mago de um crocodilo, um alquimista pode preparar uma poÃ§Ã£o fumegante que transmuta o corpo de quem a bebe para um estado semilÃ­quido.
+@4737 = ~Com os ingredientes certos, um alquimista habilidoso pode alterar a própria natureza de um ser vivo. Dissolvendo sal grosso e suco de sapo em uma solução à base de álcool e adicionando os restos de um veado ou antílope digeridos no estômago de um crocodilo, um alquimista pode preparar uma poção fumegante que transmuta o corpo de quem a bebe para um estado semilíquido.
 
-O bebedor mantÃ©m todas as suas funÃ§Ãµes normais, mas o estado lÃ­quido amortece o impacto dos ataques inimigos, concedendo 3/- de resistÃªncia a todas as formas de dano fÃ­sico por 10 rodadas.
+O bebedor mantém todas as suas funções normais, mas o estado líquido amortece o impacto dos ataques inimigos, concedendo 3/- de resistência a todas as formas de dano físico por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-3/- ResistÃªncia a Corte
-3/- ResistÃªncia a Esmagamento
-3/- ResistÃªncia a PerfuraÃ§Ã£o
-3/- ResistÃªncia a ProjÃ©teis
+3/- Resistência a Corte
+3/- Resistência a Esmagamento
+3/- Resistência a Perfuração
+3/- Resistência a Projéteis
 Peso: 0,5 kg (1 lb).~
 @54736 = ~Bebida Turva~
-@54737 = ~Com os ingredientes certos, um alquimista habilidoso pode alterar a prÃ³pria natureza de um ser vivo. Dissolvendo sal grosso e suco de sapo em uma soluÃ§Ã£o Ã  base de Ã¡lcool e adicionando os restos de um veado ou antÃ­lope digeridos no estÃ´mago de um crocodilo, um alquimista pode preparar uma poÃ§Ã£o fumegante que transmuta o corpo de quem a bebe para um estado semilÃ­quido.
+@54737 = ~Com os ingredientes certos, um alquimista habilidoso pode alterar a própria natureza de um ser vivo. Dissolvendo sal grosso e suco de sapo em uma solução à base de álcool e adicionando os restos de um veado ou antílope digeridos no estômago de um crocodilo, um alquimista pode preparar uma poção fumegante que transmuta o corpo de quem a bebe para um estado semilíquido.
 
-O bebedor mantÃ©m todas as suas funÃ§Ãµes normais, mas o estado lÃ­quido amortece o impacto dos ataques inimigos, concedendo uma resistÃªncia de 10/- a todas as formas de dano fÃ­sico por 10 rodadas.
+O bebedor mantém todas as suas funções normais, mas o estado líquido amortece o impacto dos ataques inimigos, concedendo uma resistência de 10/- a todas as formas de dano físico por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-10/- ResistÃªncia a Corte
-10/- ResistÃªncia a Esmagamento
-10/- ResistÃªncia a PerfuraÃ§Ã£o
-10/- ResistÃªncia a ProjÃ©teis
+10/- Resistência a Corte
+10/- Resistência a Esmagamento
+10/- Resistência a Perfuração
+10/- Resistência a Projéteis
 Peso: 0,5 kg (1 lb).~
-@4738 = ~NÃ©ctar de Sangue~
-@4739 = ~Ao contrÃ¡rio do que se poderia esperar de uma poÃ§Ã£o chamada "NÃ©ctar de Sangue", esta mistura vermelha escura com sabor de sangue nÃ£o contÃ©m, na verdade, nÃ©ctar. Ã‰ basicamente sangue.
+@4738 = ~Néctar de Sangue~
+@4739 = ~Ao contrário do que se poderia esperar de uma poção chamada "Néctar de Sangue", esta mistura vermelha escura com sabor de sangue não contém, na verdade, néctar. É basicamente sangue.
 
-AdoÃ§ada com mel e suco de maÃ§Ã£ e preparada com ginseng e penas de beija-flor, esta poÃ§Ã£o concede ao bebedor +2 em todos os valores de habilidade por 1 hora.
+Adoçada com mel e suco de maçã e preparada com ginseng e penas de beija-flor, esta poção concede ao bebedor +2 em todos os valores de habilidade por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+2 ForÃ§a
++2 Força
 +2 Destreza
-+2 ConstituiÃ§Ã£o
-+2 InteligÃªncia
++2 Constituição
++2 Inteligência
 +2 Sabedoria
 +2 Carisma
 Peso: 0,5 kg (1 lb).~
-@54738 = ~NÃ©ctar de Sangue~
-@54739 = ~Ao contrÃ¡rio do que se poderia esperar de uma poÃ§Ã£o chamada "NÃ©ctar de Sangue", esta mistura vermelha escura com sabor de sangue nÃ£o contÃ©m, na verdade, nÃ©ctar. Ã‰ basicamente sangue.
+@54738 = ~Néctar de Sangue~
+@54739 = ~Ao contrário do que se poderia esperar de uma poção chamada "Néctar de Sangue", esta mistura vermelha escura com sabor de sangue não contém, na verdade, néctar. É basicamente sangue.
 
-AdoÃ§ada com mel e suco de maÃ§Ã£ e preparada com ginseng e penas de beija-flor, esta poÃ§Ã£o concede a quem a bebe +6 em todos os valores de habilidade por 1 hora.
+Adoçada com mel e suco de maçã e preparada com ginseng e penas de beija-flor, esta poção concede a quem a bebe +6 em todos os valores de habilidade por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+6 ForÃ§a
++6 Força
 +6 Destreza
-+6 ConstituiÃ§Ã£o
-+6 InteligÃªncia
++6 Constituição
++6 Inteligência
 +6 Sabedoria
 +6 Carisma
 Peso: 0,5 kg (1 lb).~
 @4740 = ~Ichor Purificado~
-@4741 = ~Ichor pode vir de muitas fontes, mas a mais conveniente Ã© a corrente sanguÃ­nea de um Bhaalspawn. Em seu estado inalterado, o sangue Ã© pouco diferente de qualquer outro â€” extrair seu verdadeiro poder Ã© um processo complexo.
+@4741 = ~Ichor pode vir de muitas fontes, mas a mais conveniente é a corrente sanguínea de um Bhaalspawn. Em seu estado inalterado, o sangue é pouco diferente de qualquer outro â€” extrair seu verdadeiro poder é um processo complexo.
 
-Primeiro, o Alquimista deve realizar uma pesquisa sobre a divindade original e elaborar um ritual para ativar o potencial oculto do ichor. A partir daÃ­, a essÃªncia deve ser filtrada por lixiviaÃ§Ã£o do sangue com bandagens de mÃºmia, destilaÃ§Ã£o e precipitaÃ§Ã£o em uma centrÃ­fuga, produzindo um lÃ­quido dourado de odor adocicado... ou, no caso do ichor de divindades malignas, uma mistura fÃ©tida de gordura e poeira grossa.
+Primeiro, o Alquimista deve realizar uma pesquisa sobre a divindade original e elaborar um ritual para ativar o potencial oculto do ichor. A partir daí, a essência deve ser filtrada por lixiviação do sangue com bandagens de múmia, destilação e precipitação em uma centrífuga, produzindo um líquido dourado de odor adocicado... ou, no caso do ichor de divindades malignas, uma mistura fétida de gordura e poeira grossa.
 
-Consumir a substÃ¢ncia resultante geralmente Ã© fatal; o ichor purificado deve ser diluÃ­do e adaptado ao organismo do usuÃ¡rio para ter algum efeito positivo. O mÃ©todo exato depende do usuÃ¡rio e requer pesquisa e testes intensivos para ser descoberto. Se o usuÃ¡rio tiver sorte, o mÃ©todo pode ser tÃ£o inofensivo quanto triturar algumas pÃ©rolas e misturar o ichor com suco de abÃ³bora e manteiga para produzir uma poÃ§Ã£o de sabor estranho, mas perfeitamente potÃ¡vel.
+Consumir a substância resultante geralmente é fatal; o ichor purificado deve ser diluído e adaptado ao organismo do usuário para ter algum efeito positivo. O método exato depende do usuário e requer pesquisa e testes intensivos para ser descoberto. Se o usuário tiver sorte, o método pode ser tão inofensivo quanto triturar algumas pérolas e misturar o ichor com suco de abóbora e manteiga para produzir uma poção de sabor estranho, mas perfeitamente potável.
 
-Se o usuÃ¡rio nÃ£o tiver sorte, a administraÃ§Ã£o da dose pode exigir vivisecÃ§Ã£o.
+Se o usuário não tiver sorte, a administração da dose pode exigir vivisecção.
 
-Independentemente do mÃ©todo, o resultado final Ã© uma torÃ§Ã£o violenta do trato digestivo e a disseminaÃ§Ã£o do ichor pelo corpo do usuÃ¡rio. O processo Ã© extremamente doloroso e exaustivo, reduzindo permanentemente a ConstituiÃ§Ã£o do usuÃ¡rio em 1 e causando 10d10 de dano de veneno com uma resistÃªncia contra a morte de -4 para metade do dano. Se o usuÃ¡rio sobreviver ao processo, ele ou ela ganha +1 em ForÃ§a, Destreza, InteligÃªncia, Sabedoria e Carisma enquanto o ichor divino permeia seu sistema.
+Independentemente do método, o resultado final é uma torção violenta do trato digestivo e a disseminação do ichor pelo corpo do usuário. O processo é extremamente doloroso e exaustivo, reduzindo permanentemente a Constituição do usuário em 1 e causando 10d10 de dano de veneno com uma resistência contra a morte de -4 para metade do dano. Se o usuário sobreviver ao processo, ele ou ela ganha +1 em Força, Destreza, Inteligência, Sabedoria e Carisma enquanto o ichor divino permeia seu sistema.
 
-Se o usuÃ¡rio morrer no processo, ele ou ela pode tentar novamente apÃ³s ser ressuscitado, mas uma vez que a tentativa seja bem-sucedida, doses adicionais nÃ£o afetarÃ£o o personagem imbuÃ­do.
+Se o usuário morrer no processo, ele ou ela pode tentar novamente após ser ressuscitado, mas uma vez que a tentativa seja bem-sucedida, doses adicionais não afetarão o personagem imbuído.
 
-GÃªnio AlquÃ­mico: Um Alquimista pode ajustar a receita para aliviar a carga em seu sistema, anulando a penalidade de ConstituiÃ§Ã£o e resistindo ao dano completamente.
+Gênio Alquímico: Um Alquimista pode ajustar a receita para aliviar a carga em seu sistema, anulando a penalidade de Constituição e resistindo ao dano completamente.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+1 ForÃ§a, Destreza, InteligÃªncia, Sabedoria e Carisma
--1 ConstituiÃ§Ã£o
-DuraÃ§Ã£o: Permanente
++1 Força, Destreza, Inteligência, Sabedoria e Carisma
+-1 Constituição
+Duração: Permanente
 Peso: 0,5 kg (1 lb).
 ~
 @4742 = ~Plasma~
-@4743 = ~Um gÃ¡s azul crepitante zumbe dentro deste pequeno recipiente de vidro. Ao coletar energia de vÃ¡rias fontes e transferir o poder latente para um gÃ¡s inerte, um alquimista pode criar uma forma segura e Ãºtil de plasma.
+@4743 = ~Um gás azul crepitante zumbe dentro deste pequeno recipiente de vidro. Ao coletar energia de várias fontes e transferir o poder latente para um gás inerte, um alquimista pode criar uma forma segura e útil de plasma.
 
-O usuÃ¡rio deve abrir o frasco e inalar profundamente, mantendo o gÃ¡s nos pulmÃµes atÃ© que o plasma seja absorvido pela corrente sanguÃ­nea. O plasma adiciona um impulso especial a cada golpe do usuÃ¡rio em combate, aumentando todo o dano de ataque em 4 pontos. No entanto, o plasma se dissipa rapidamente e os efeitos desaparecem em 10 rodadas.
+O usuário deve abrir o frasco e inalar profundamente, mantendo o gás nos pulmões até que o plasma seja absorvido pela corrente sanguínea. O plasma adiciona um impulso especial a cada golpe do usuário em combate, aumentando todo o dano de ataque em 4 pontos. No entanto, o plasma se dissipa rapidamente e os efeitos desaparecem em 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 de Dano de Ataque
 Peso: 0,5 kg (1 lb).~
 @54742 = ~Plasma~
-@54743 = ~Um gÃ¡s azul crepitante zumbe dentro deste pequeno recipiente de vidro. Ao coletar energia de vÃ¡rias fontes e transferir o poder latente para um gÃ¡s inerte, um alquimista pode criar uma forma segura e Ãºtil de plasma.
+@54743 = ~Um gás azul crepitante zumbe dentro deste pequeno recipiente de vidro. Ao coletar energia de várias fontes e transferir o poder latente para um gás inerte, um alquimista pode criar uma forma segura e útil de plasma.
 
-O usuÃ¡rio deve abrir a garrafa e inalar profundamente, mantendo o gÃ¡s nos pulmÃµes atÃ© que o plasma seja absorvido pela corrente sanguÃ­nea. O plasma adiciona um impulso especial a cada golpe do usuÃ¡rio em combate, aumentando todo o dano de ataque em 6 pontos. O plasma se dissipa rapidamente, no entanto, e os efeitos desaparecem em 10 rodadas.
+O usuário deve abrir a garrafa e inalar profundamente, mantendo o gás nos pulmões até que o plasma seja absorvido pela corrente sanguínea. O plasma adiciona um impulso especial a cada golpe do usuário em combate, aumentando todo o dano de ataque em 6 pontos. O plasma se dissipa rapidamente, no entanto, e os efeitos desaparecem em 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +6 de Dano de Ataque
 Peso: 0,5 kg (1 lb).~
-@4744 = ~Vapor do PÃ¢ntano~
-@4745 = ~Uma mistura de magia sobrenatural e gases nocivos, esta garrafa de vapor esverdeado e esfumaÃ§ado Ã© densa em encantamentos. O gÃ¡s em si nada mais Ã© do que ar e Ã¡gua extraÃ­dos de um pÃ¢ntano, mas os encantamentos sÃ£o mais complexos. A garrafa estÃ¡ repleta de resÃ­duos de Fogos-fÃ¡tuos e cogumelos tÃ³xicos mortos, e o gÃ¡s estÃ¡ imbuÃ­do das almas de entes caÃ­dos.
+@4744 = ~Vapor do Pântano~
+@4745 = ~Uma mistura de magia sobrenatural e gases nocivos, esta garrafa de vapor esverdeado e esfumaçado é densa em encantamentos. O gás em si nada mais é do que ar e água extraídos de um pântano, mas os encantamentos são mais complexos. A garrafa está repleta de resíduos de Fogos-fátuos e cogumelos tóxicos mortos, e o gás está imbuído das almas de entes caídos.
 
-O portador pode arremessar a garrafa como uma granada, ignorando quaisquer bÃ´nus de armadura ou escudo que o alvo possa possuir. Qualquer criatura que tenha o azar de tocar nos vapores sofrerÃ¡ uma penalidade cumulativa de -3 nas resistÃªncias Ã  magia e Ã  energia conforme o encantamento penetra em seu organismo, tornando-a vulnerÃ¡vel a magias hostis. O efeito, no entanto, Ã© de curta duraÃ§Ã£o e desaparece apÃ³s cinco rodadas.
+O portador pode arremessar a garrafa como uma granada, ignorando quaisquer bônus de armadura ou escudo que o alvo possa possuir. Qualquer criatura que tenha o azar de tocar nos vapores sofrerá uma penalidade cumulativa de -3 nas resistências à magia e à energia conforme o encantamento penetra em seu organismo, tornando-a vulnerável a magias hostis. O efeito, no entanto, é de curta duração e desaparece após cinco rodadas.
 
-ESTATÃSTICAS:
-
-Dano: 1d3
-Tipo de Dano: ProjÃ©til (ContusÃ£o)
-Especial: -3 de ResistÃªncia Ã  Magia e -3 de resistÃªncia a dano de fogo, frio, eletricidade e Ã¡cido (cumulativo) por 5 rodadas
-Peso: 0 kg.
-Talento Requerido: Armas Simples, MÃ­ssil
-Tipo: Uma MÃ£o~
-@54744 = ~Vapor do PÃ¢ntano~
-@54745 = ~Uma mistura de magia sobrenatural e gases nocivos, esta garrafa de vapor esverdeado e esfumaÃ§ado Ã© densa em encantamentos. O gÃ¡s em si nada mais Ã© do que ar e Ã¡gua extraÃ­dos de um pÃ¢ntano, mas os encantamentos sÃ£o mais complexos. A garrafa estÃ¡ repleta de resÃ­duos de Fogos-fÃ¡tuos e cogumelos tÃ³xicos mortos, e o gÃ¡s estÃ¡ imbuÃ­do das almas de entes caÃ­dos.
-
-O portador pode arremessar a garrafa como se fosse uma granada, ignorando quaisquer bÃ´nus de armadura ou escudo que o alvo possa possuir. Qualquer criatura que tenha o azar de tocar nos vapores sofrerÃ¡ uma penalidade cumulativa de -5 nas resistÃªncias Ã  magia e Ã  energia conforme o encantamento penetra em seu sistema, tornando-a vulnerÃ¡vel a magias hostis. O efeito, no entanto, dura pouco e desaparece apÃ³s cinco rodadas.
-
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Dano: 1d3
-Tipo de Dano: ProjÃ©til (ContusÃ£o)
-Especial: -5 de ResistÃªncia Ã  Magia e -5 de ResistÃªncia a Fogo, Frio, Eletricidade e Dano Ãcido (cumulativo) por 5 rodadas
+Tipo de Dano: Projétil (Contusão)
+Especial: -3 de Resistência à Magia e -3 de resistência a dano de fogo, frio, eletricidade e ácido (cumulativo) por 5 rodadas
 Peso: 0 kg.
-Talento NecessÃ¡rio: Armas Simples, MÃ­ssil
-Tipo: Uma MÃ£o~
-@4746 = ~Ã“leo de Fada~
-@4747 = ~Criaturas feÃ©ricas sÃ£o difÃ­ceis de encontrar e ainda mais difÃ­ceis de capturar, mas um alquimista que consiga capturar um nÃºmero suficiente delas pode roubar esses poderes, mesmo que por pouco tempo. O lÃ­quido em si nada mais Ã© do que turfa e botÃµes-de-ouro triturados misturados com azeite de oliva, mas se o alquimista conseguir convencer um grupo de fadas a dotar o Ã³leo com sua magia â€” ou se o alquimista misturar o Ã³leo com o sangue e os ossos em pÃ³ das fadas â€” esta poÃ§Ã£o envolverÃ¡ quem a beber com uma pequena nuvem de magia ilusÃ³ria semelhante Ã  magia da Reflexos.
+Talento Requerido: Armas Simples, Míssil
+Tipo: Uma Mão~
+@54744 = ~Vapor do Pântano~
+@54745 = ~Uma mistura de magia sobrenatural e gases nocivos, esta garrafa de vapor esverdeado e esfumaçado é densa em encantamentos. O gás em si nada mais é do que ar e água extraídos de um pântano, mas os encantamentos são mais complexos. A garrafa está repleta de resíduos de Fogos-fátuos e cogumelos tóxicos mortos, e o gás está imbuído das almas de entes caídos.
 
-ESTATÃSTICAS:
+O portador pode arremessar a garrafa como se fosse uma granada, ignorando quaisquer bônus de armadura ou escudo que o alvo possa possuir. Qualquer criatura que tenha o azar de tocar nos vapores sofrerá uma penalidade cumulativa de -5 nas resistências à magia e à energia conforme o encantamento penetra em seu sistema, tornando-a vulnerável a magias hostis. O efeito, no entanto, dura pouco e desaparece após cinco rodadas.
+
+ESTATÍSTICAS:
+
+Dano: 1d3
+Tipo de Dano: Projétil (Contusão)
+Especial: -5 de Resistência à Magia e -5 de Resistência a Fogo, Frio, Eletricidade e Dano Ácido (cumulativo) por 5 rodadas
+Peso: 0 kg.
+Talento Necessário: Armas Simples, Míssil
+Tipo: Uma Mão~
+@4746 = ~Óleo de Fada~
+@4747 = ~Criaturas feéricas são difíceis de encontrar e ainda mais difíceis de capturar, mas um alquimista que consiga capturar um número suficiente delas pode roubar esses poderes, mesmo que por pouco tempo. O líquido em si nada mais é do que turfa e botões-de-ouro triturados misturados com azeite de oliva, mas se o alquimista conseguir convencer um grupo de fadas a dotar o óleo com sua magia â€” ou se o alquimista misturar o óleo com o sangue e os ossos em pó das fadas â€” esta poção envolverá quem a beber com uma pequena nuvem de magia ilusória semelhante à magia da Reflexos.
+
+ESTATÍSTICAS:
 
 Reflexos (4 imagens)
 Peso: 0,5 kg (1 lb).~
-@54746 = ~Ã“leo de Fada~
-@54747 = ~Criaturas feÃ©ricas sÃ£o difÃ­ceis de encontrar e ainda mais difÃ­ceis de capturar, mas um alquimista que consiga capturar um nÃºmero suficiente delas pode roubar esses poderes, mesmo que por pouco tempo. O lÃ­quido em si nada mais Ã© do que turfa e botÃµes-de-ouro triturados misturados com azeite de oliva, mas se o alquimista conseguir convencer um grupo de fadas a dotar o Ã³leo com sua magia â€” ou se o alquimista misturar o Ã³leo com o sangue e os ossos em pÃ³ das fadas â€” esta poÃ§Ã£o envolverÃ¡ quem a beber com uma pequena nuvem de magia ilusÃ³ria semelhante ao feitiÃ§o Reflexos.
+@54746 = ~Óleo de Fada~
+@54747 = ~Criaturas feéricas são difíceis de encontrar e ainda mais difíceis de capturar, mas um alquimista que consiga capturar um número suficiente delas pode roubar esses poderes, mesmo que por pouco tempo. O líquido em si nada mais é do que turfa e botões-de-ouro triturados misturados com azeite de oliva, mas se o alquimista conseguir convencer um grupo de fadas a dotar o óleo com sua magia â€” ou se o alquimista misturar o óleo com o sangue e os ossos em pó das fadas â€” esta poção envolverá quem a beber com uma pequena nuvem de magia ilusória semelhante ao feitiço Reflexos.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Reflexos (8 imagens)
 Peso: 0,5 kg (1 lb).~
-@4748 = ~Fluido MagnÃ©tico~
-@4749 = ~Apesar de sua natureza viscosa, este fluido Ã©, na verdade, uma liga de cromo e ferro, mantida em sua forma lÃ­quida por poderosas transmutaÃ§Ãµes. Aquecendo e resfriando a liga na presenÃ§a de Ã­mÃ£s e usando um fogo mÃ¡gico para queimar outros metais raros em sua presenÃ§a, um alquimista pode adicionar um poderoso campo magnÃ©tico Ã  liga lÃ­quida, que sÃ³ se ativa quando o fluido Ã© ingerido. O campo magnÃ©tico Ã© incrivelmente perigoso para quem o bebe, pois atrai armas diretamente para o corpo do bebedor, impondo uma -5 de penalidade em acerto, dano e CA, bem como uma penalidade de -10 em todas as formas de dano fÃ­sico.
+@4748 = ~Fluido Magnético~
+@4749 = ~Apesar de sua natureza viscosa, este fluido é, na verdade, uma liga de cromo e ferro, mantida em sua forma líquida por poderosas transmutações. Aquecendo e resfriando a liga na presença de ímãs e usando um fogo mágico para queimar outros metais raros em sua presença, um alquimista pode adicionar um poderoso campo magnético à liga líquida, que só se ativa quando o fluido é ingerido. O campo magnético é incrivelmente perigoso para quem o bebe, pois atrai armas diretamente para o corpo do bebedor, impondo uma -5 de penalidade em acerto, dano e CA, bem como uma penalidade de -10 em todas as formas de dano físico.
 
-No entanto, o bebedor pode usar este campo magnÃ©tico para produzir uma reaÃ§Ã£o violenta contra seus atacantes, causando 10d4 de dano esmagador a cada golpe. O campo se dissiparÃ¡ apÃ³s 10 rodadas.
+No entanto, o bebedor pode usar este campo magnético para produzir uma reação violenta contra seus atacantes, causando 10d4 de dano esmagador a cada golpe. O campo se dissipará após 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ReaÃ§Ã£o MagnÃ©tica: Atacantes sofrem 10d4 de dano esmagador por acerto
--5 de BÃ´nus de Ataque
+Reação Magnética: Atacantes sofrem 10d4 de dano esmagador por acerto
+-5 de Bônus de Ataque
 -5 de Dano de Ataque
 -5 de CA
--10 de ResistÃªncia a Cortantes, Esmagadores, Perfurantes e ProjÃ©teis
+-10 de Resistência a Cortantes, Esmagadores, Perfurantes e Projéteis
 Peso: 0,5 kg (1 lb).~
-@54748 = ~Fluido MagnÃ©tico~
-@54749 = ~Apesar de sua natureza viscosa, este fluido Ã©, na verdade, uma liga de cromo e ferro, mantida em sua forma lÃ­quida por poderosas transmutaÃ§Ãµes. Aquecendo e resfriando a liga na presenÃ§a de Ã­mÃ£s e usando um fogo mÃ¡gico para queimar outros metais raros em sua presenÃ§a, um alquimista pode adicionar um poderoso campo magnÃ©tico Ã  liga lÃ­quida, que sÃ³ se ativa quando o fluido Ã© ingerido. O campo magnÃ©tico Ã© incrivelmente perigoso para quem o bebe, pois atrai armas diretamente para o corpo do bebedor, impondo uma -5 de penalidade em acerto, dano e CA, alÃ©m de uma penalidade de -15 em todas as formas de dano fÃ­sico.
+@54748 = ~Fluido Magnético~
+@54749 = ~Apesar de sua natureza viscosa, este fluido é, na verdade, uma liga de cromo e ferro, mantida em sua forma líquida por poderosas transmutações. Aquecendo e resfriando a liga na presença de ímãs e usando um fogo mágico para queimar outros metais raros em sua presença, um alquimista pode adicionar um poderoso campo magnético à liga líquida, que só se ativa quando o fluido é ingerido. O campo magnético é incrivelmente perigoso para quem o bebe, pois atrai armas diretamente para o corpo do bebedor, impondo uma -5 de penalidade em acerto, dano e CA, além de uma penalidade de -15 em todas as formas de dano físico.
 
-No entanto, o bebedor pode fazer com que este campo magnÃ©tico produza uma reaÃ§Ã£o violenta contra seus atacantes, causando 15d4 de dano esmagador a cada golpe. O campo se dissiparÃ¡ apÃ³s 10 rodadas.
+No entanto, o bebedor pode fazer com que este campo magnético produza uma reação violenta contra seus atacantes, causando 15d4 de dano esmagador a cada golpe. O campo se dissipará após 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ReaÃ§Ã£o MagnÃ©tica: Atacantes sofrem 15d4 de dano esmagador por acerto
--5 de BÃ´nus de Ataque
+Reação Magnética: Atacantes sofrem 15d4 de dano esmagador por acerto
+-5 de Bônus de Ataque
 -5 de Dano de Ataque
 -5 de CA
--15 de ResistÃªncia a Cortantes, Esmagadores, Perfurantes e ProjÃ©teis
+-15 de Resistência a Cortantes, Esmagadores, Perfurantes e Projéteis
 Peso: 0,5 kg (1 lb).~
 @4750 = ~Xarope Ardente~
-@4751 = ~Este xarope espesso e avermelhado, composto do nÃ©ctar e da seiva de diversas flores e Ã¡rvores, queima com energia antimÃ¡gica. Ao derramar o xarope sobre um item mÃ¡gico e destruÃ­-lo, um alquimista pode infundir forÃ§as disruptivas no xarope. Isso pode exigir a destruiÃ§Ã£o de vÃ¡rios itens mÃ¡gicos, dependendo de seu poder.
+@4751 = ~Este xarope espesso e avermelhado, composto do néctar e da seiva de diversas flores e árvores, queima com energia antimágica. Ao derramar o xarope sobre um item mágico e destruí-lo, um alquimista pode infundir forças disruptivas no xarope. Isso pode exigir a destruição de vários itens mágicos, dependendo de seu poder.
 
-Ao ser bebido, o xarope cria um campo antimÃ¡gico ao redor do corpo do usuÃ¡rio, dissipando automaticamente todos os efeitos dissipÃ¡veis (positivos e negativos), alÃ©m de conceder 15/- de resistÃªncia Ã  magia por 10 rodadas. O campo tambÃ©m interfere nas magias do prÃ³prio usuÃ¡rio, se houver, aumentando a falha de magia em 25%.
+Ao ser bebido, o xarope cria um campo antimágico ao redor do corpo do usuário, dissipando automaticamente todos os efeitos dissipáveis (positivos e negativos), além de conceder 15/- de resistência à magia por 10 rodadas. O campo também interfere nas magias do próprio usuário, se houver, aumentando a falha de magia em 25%.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Dissipa todos os efeitos dissipÃ¡veis de quem o bebe
-ResistÃªncia: 15/- ResistÃªncia Ã  Magia
-25% Falha Ã  Magia
+Dissipa todos os efeitos dissipáveis de quem o bebe
+Resistência: 15/- Resistência à Magia
+25% Falha à Magia
 Peso: 0,5 kg (1 lb).~
 @54750 = ~Xarope Ardente~
-@54751 = ~Este xarope espesso e avermelhado, composto do nÃ©ctar e da seiva de diversas flores e Ã¡rvores, queima com energia antimÃ¡gica. Ao derramar o xarope sobre um item mÃ¡gico e destruÃ­-lo, um alquimista pode infundir forÃ§as disruptivas no xarope. Isso pode exigir a destruiÃ§Ã£o de vÃ¡rios itens mÃ¡gicos, dependendo de seu poder.
+@54751 = ~Este xarope espesso e avermelhado, composto do néctar e da seiva de diversas flores e árvores, queima com energia antimágica. Ao derramar o xarope sobre um item mágico e destruí-lo, um alquimista pode infundir forças disruptivas no xarope. Isso pode exigir a destruição de vários itens mágicos, dependendo de seu poder.
 
-Quando bebido, o xarope cria um campo antimÃ¡gico ao redor do corpo do usuÃ¡rio, dissipando automaticamente todos os efeitos dissipÃ¡veis (positivos e negativos), alÃ©m de conceder 30/- de resistÃªncia Ã  magia por 10 rodadas. O campo tambÃ©m interfere nas magias do prÃ³prio usuÃ¡rio, se houver, aumentando a falha Ã  magia em 50%.
+Quando bebido, o xarope cria um campo antimágico ao redor do corpo do usuário, dissipando automaticamente todos os efeitos dissipáveis (positivos e negativos), além de conceder 30/- de resistência à magia por 10 rodadas. O campo também interfere nas magias do próprio usuário, se houver, aumentando a falha à magia em 50%.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Dissipa todos os efeitos dissipÃ¡veis no bebedor
-ResistÃªncia: 30/- ResistÃªncia Ã  Magia
+Dissipa todos os efeitos dissipáveis no bebedor
+Resistência: 30/- Resistência à Magia
 50% Falha na Magia
 Peso: 0,5 kg (1 lb).~
 @4752 = ~Linfa de Cobra~
-@4753 = ~Alquimistas Yuan-ti usam uma mistura especial de veneno e ervas variadas para transformar humanoides cativos em escravos histachii. O processo Ã© irreversÃ­vel e destrÃ³i a mente da vÃ­tima, mas concede poderes incomuns que os tornam servos Ãºteis para seus mestres Yuan-ti.
+@4753 = ~Alquimistas Yuan-ti usam uma mistura especial de veneno e ervas variadas para transformar humanoides cativos em escravos histachii. O processo é irreversível e destrói a mente da vítima, mas concede poderes incomuns que os tornam servos úteis para seus mestres Yuan-ti.
 
-Grande parte da ciÃªncia Ã© desconhecida para humanoides, mas um Alquimista pode preparar uma versÃ£o especial da poÃ§Ã£o histachii a partir da linfa Yuan-ti e da raiz de mandrÃ¡gora, que concederÃ¡ ao bebedor uma resistÃªncia limitada ao veneno. Por 1 hora apÃ³s a ingestÃ£o da linfa, o usuÃ¡rio desfrutarÃ¡ de 6/- de resistÃªncia a veneno.
+Grande parte da ciência é desconhecida para humanoides, mas um Alquimista pode preparar uma versão especial da poção histachii a partir da linfa Yuan-ti e da raiz de mandrágora, que concederá ao bebedor uma resistência limitada ao veneno. Por 1 hora após a ingestão da linfa, o usuário desfrutará de 6/- de resistência a veneno.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 6/- ResistÃªncia a Veneno
+Resistência: 6/- Resistência a Veneno
 Peso: 0,5 kg (1 lb).~
 @54752 = ~Linfa de Cobra~
-@54753 = ~Alquimistas Yuan-ti usam uma mistura especial de veneno e ervas variadas para transformar humanoides cativos em escravos histachii. O processo Ã© irreversÃ­vel e destrÃ³i a mente da vÃ­tima, mas concede poderes incomuns que os tornam servos Ãºteis para seus mestres Yuan-ti.
+@54753 = ~Alquimistas Yuan-ti usam uma mistura especial de veneno e ervas variadas para transformar humanoides cativos em escravos histachii. O processo é irreversível e destrói a mente da vítima, mas concede poderes incomuns que os tornam servos úteis para seus mestres Yuan-ti.
 
-Grande parte da ciÃªncia Ã© desconhecida para humanoides, mas um Alquimista pode preparar uma versÃ£o especial da bebida histachii a partir de linfa Yuan-ti e raiz de mandrÃ¡gora, que concederÃ¡ ao usuÃ¡rio alguma resistÃªncia limitada ao veneno. Por 1 hora apÃ³s a linfa ser ingerida, o usuÃ¡rio desfrutarÃ¡ de 30/- de resistÃªncia a veneno.
+Grande parte da ciência é desconhecida para humanoides, mas um Alquimista pode preparar uma versão especial da bebida histachii a partir de linfa Yuan-ti e raiz de mandrágora, que concederá ao usuário alguma resistência limitada ao veneno. Por 1 hora após a linfa ser ingerida, o usuário desfrutará de 30/- de resistência a veneno.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 30/- ResistÃªncia a Veneno
+Resistência: 30/- Resistência a Veneno
 Peso: 0,5 kg (1 lb).~
 @4754 = ~Leite de Vampiro~
-@4755 = ~Esta garrafa congelante de lÃ­quido azulado Ã© uma mistura de farinha, mirtilos, queijos finos e leite materno de um vampiro, criatura ou bodak morto. Parcialmente fermentada e tratada com cal e sal, esta poÃ§Ã£o se transforma em um fluido amargo indistinguÃ­vel de tinta. A mistura carrega consigo uma grande quantidade de energia negativa e seria fatal para a maioria das criaturas vivas. Mortos-vivos, no entanto, poderiam bebÃª-la para restaurar a saÃºde. Essa cura Ã© semelhante Ã  regeneraÃ§Ã£o de um vampiro: ela fecharÃ¡ feridas mortais e regenerarÃ¡ partes perdidas do corpo, mas nÃ£o restaurarÃ¡ o sangue perdido.
+@4755 = ~Esta garrafa congelante de líquido azulado é uma mistura de farinha, mirtilos, queijos finos e leite materno de um vampiro, criatura ou bodak morto. Parcialmente fermentada e tratada com cal e sal, esta poção se transforma em um fluido amargo indistinguível de tinta. A mistura carrega consigo uma grande quantidade de energia negativa e seria fatal para a maioria das criaturas vivas. Mortos-vivos, no entanto, poderiam bebê-la para restaurar a saúde. Essa cura é semelhante à regeneração de um vampiro: ela fechará feridas mortais e regenerará partes perdidas do corpo, mas não restaurará o sangue perdido.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Cura 60 pontos de vida em mortos-vivos, causa 60 de dano a qualquer pessoa.
 Peso: 0,5 kg (1 lb).~
 @54754 = ~Leite de Vampiro~
-@54755 = ~Esta garrafa congelante de lÃ­quido azulado Ã© uma mistura de farinha, mirtilos, queijos finos e leite materno de um vampiro, criatura ou bodak morto. Parcialmente fermentada e tratada com cal e sal, esta poÃ§Ã£o se transforma em um fluido amargo indistinguÃ­vel de tinta. A mistura carrega consigo uma grande quantidade de energia negativa e seria fatal para a maioria das criaturas vivas. Mortos-vivos, no entanto, poderiam bebÃª-la para restaurar a saÃºde. Essa cura Ã© semelhante Ã  regeneraÃ§Ã£o de um vampiro: ela fecharÃ¡ feridas mortais e regenerarÃ¡ partes perdidas do corpo, mas nÃ£o restaurarÃ¡ o sangue perdido.
+@54755 = ~Esta garrafa congelante de líquido azulado é uma mistura de farinha, mirtilos, queijos finos e leite materno de um vampiro, criatura ou bodak morto. Parcialmente fermentada e tratada com cal e sal, esta poção se transforma em um fluido amargo indistinguível de tinta. A mistura carrega consigo uma grande quantidade de energia negativa e seria fatal para a maioria das criaturas vivas. Mortos-vivos, no entanto, poderiam bebê-la para restaurar a saúde. Essa cura é semelhante à regeneração de um vampiro: ela fechará feridas mortais e regenerará partes perdidas do corpo, mas não restaurará o sangue perdido.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Cura 150 pontos de vida em mortos-vivos, causa 150 de dano a qualquer pessoa.
 Peso: 0,5 kg (1 lb).~
 @4756 = ~Cataplasma Mofado~
-@4757 = ~Este cataplasma Ã© um pequeno pote de solo muito fÃ©rtil coberto com um musgo verdejante. Um alquimista deve ter cuidado especial ao cultivar este musgo, certificando-se constantemente de que ele tenha a quantidade certa de Ã¡gua e nutrientes para prosperar. Cantar canÃ§Ãµes de ninar, queimar incenso e fazer elogios ao musgo sÃ£o partes cruciais do processo.
+@4757 = ~Este cataplasma é um pequeno pote de solo muito fértil coberto com um musgo verdejante. Um alquimista deve ter cuidado especial ao cultivar este musgo, certificando-se constantemente de que ele tenha a quantidade certa de água e nutrientes para prosperar. Cantar canções de ninar, queimar incenso e fazer elogios ao musgo são partes cruciais do processo.
 
-Cultivado com amor e abenÃ§oado com bastante exposiÃ§Ã£o ao luar, este musgo desenvolverÃ¡ um brilho tÃªnue. Se o alquimista o tiver tratado bem, o musgo gastarÃ¡ alegremente sua preciosa energia para trazer uma criatura morta de volta Ã  vida.
+Cultivado com amor e abençoado com bastante exposição ao luar, este musgo desenvolverá um brilho tênue. Se o alquimista o tiver tratado bem, o musgo gastará alegremente sua preciosa energia para trazer uma criatura morta de volta à vida.
 
-Com seu poder esgotado e sua personalidade sacrificada em prol do companheiro caÃ­do do alquimista, o musgo perderÃ¡ seu brilho. Ã‰ aconselhÃ¡vel que o usuÃ¡rio jogue o musgo fora â€” mantÃª-lo por perto tende a deixÃ¡-lo sombrio, e o musgo nÃ£o gostaria que seu melhor amigo ficasse triste.
+Com seu poder esgotado e sua personalidade sacrificada em prol do companheiro caído do alquimista, o musgo perderá seu brilho. É aconselhável que o usuário jogue o musgo fora â€” mantê-lo por perto tende a deixá-lo sombrio, e o musgo não gostaria que seu melhor amigo ficasse triste.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Ressuscita uma criatura
-Faz o usuÃ¡rio suspirar e olhar melancolicamente para o longe de vez em quando
+Faz o usuário suspirar e olhar melancolicamente para o longe de vez em quando
 Peso: 0,5 kg (1 lb).
 ~
 @4758 = ~(suspira e olha melancolicamente para o longe)~
 @4759 = ~Gordura de Besouro~
-@4760 = ~A maioria das pessoas se oporia a untar o corpo com gordura feita de besouros esmagados. Aventureiros sem tais objeÃ§Ãµes ganharÃ£o um bÃ´nus de +4 em seus testes de Reflexos por 1 hora ao aplicar essa gordura na pele.
+@4760 = ~A maioria das pessoas se oporia a untar o corpo com gordura feita de besouros esmagados. Aventureiros sem tais objeções ganharão um bônus de +4 em seus testes de Reflexos por 1 hora ao aplicar essa gordura na pele.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 em testes de Reflexos
 Peso: 0,5 kg (1 lb).~
 @54759 = ~Gordura de Besouro~
-@54760 = ~A maioria das pessoas se oporia a untar o corpo com gordura feita de besouros esmagados. Aventureiros sem tais objeÃ§Ãµes ganharÃ£o um bÃ´nus de +8 em seus testes de Reflexos por 1 hora ao aplicar essa gordura na pele.
+@54760 = ~A maioria das pessoas se oporia a untar o corpo com gordura feita de besouros esmagados. Aventureiros sem tais objeções ganharão um bônus de +8 em seus testes de Reflexos por 1 hora ao aplicar essa gordura na pele.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +8 em testes de Reflexos
 Peso: 0,5 kg (1 lb).~
 @4761 = ~Molho Beholder~
-@4762 = ~Composto de sangue, linfa, lÃ¡grimas e suco do globo ocular de um observador (de preferÃªncia) morto, este molho picante anestesiarÃ¡ temporariamente os olhos do usuÃ¡rio, permitindo que se transmutem em vÃ¡rios talos inchados. AlÃ©m da visÃ£o turva e do desconforto considerÃ¡vel, esta poÃ§Ã£o permite que qualquer conjurador comece a conjurar uma nova magia assim que terminar de conjurar a anterior, eliminando o atraso normal entre conjuraÃ§Ãµes. Isso permite que o usuÃ¡rio conjure mais de uma magia em uma Ãºnica rodada, embora o personagem nÃ£o possa se beneficiar da reduÃ§Ã£o no tempo de conjuraÃ§Ã£o. ApÃ³s 2 rodadas, os olhos do usuÃ¡rio retornarÃ£o Ã  forma normal e o efeito da poÃ§Ã£o desaparecerÃ¡.
+@4762 = ~Composto de sangue, linfa, lágrimas e suco do globo ocular de um observador (de preferência) morto, este molho picante anestesiará temporariamente os olhos do usuário, permitindo que se transmutem em vários talos inchados. Além da visão turva e do desconforto considerável, esta poção permite que qualquer conjurador comece a conjurar uma nova magia assim que terminar de conjurar a anterior, eliminando o atraso normal entre conjurações. Isso permite que o usuário conjure mais de uma magia em uma única rodada, embora o personagem não possa se beneficiar da redução no tempo de conjuração. Após 2 rodadas, os olhos do usuário retornarão à forma normal e o efeito da poção desaparecerá.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Alacridade Aprimorada
 Peso: 0,5 kg (1 lb).~
 @54761 = ~Molho Beholder~
-@54762 = ~Composto de sangue, linfa, lÃ¡grimas e suco do globo ocular de um observador (de preferÃªncia) morto, este molho picante anestesiarÃ¡ temporariamente os olhos do usuÃ¡rio, permitindo que se transmutem em vÃ¡rios talos inchados. AlÃ©m da visÃ£o turva e do desconforto considerÃ¡vel, esta poÃ§Ã£o permite que qualquer conjurador comece a conjurar uma nova magia assim que terminar de conjurar a anterior, eliminando o atraso normal entre conjuraÃ§Ãµes. Isso permite que o usuÃ¡rio conjure mais de uma magia em uma Ãºnica rodada, embora o personagem nÃ£o possa se beneficiar da reduÃ§Ã£o no tempo de conjuraÃ§Ã£o. ApÃ³s 3 rodadas, os olhos do usuÃ¡rio retornarÃ£o Ã  forma normal e o efeito da poÃ§Ã£o desaparecerÃ¡.
+@54762 = ~Composto de sangue, linfa, lágrimas e suco do globo ocular de um observador (de preferência) morto, este molho picante anestesiará temporariamente os olhos do usuário, permitindo que se transmutem em vários talos inchados. Além da visão turva e do desconforto considerável, esta poção permite que qualquer conjurador comece a conjurar uma nova magia assim que terminar de conjurar a anterior, eliminando o atraso normal entre conjurações. Isso permite que o usuário conjure mais de uma magia em uma única rodada, embora o personagem não possa se beneficiar da redução no tempo de conjuração. Após 3 rodadas, os olhos do usuário retornarão à forma normal e o efeito da poção desaparecerá.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-AceleraÃ§Ã£o Aprimorada
+Aceleração Aprimorada
 Peso: 0,5 kg (1 lb).~
-@4763 = ~BÃ¡lsamo de Coral~
-@4764 = ~Ao arrancar pedaÃ§os de um recife de coral, triturar o coral atÃ© virar pÃ³ e misturÃ¡-lo com pasta de pepino-do-mar, um alquimista pode criar um bÃ¡lsamo azulado. Ao ser espalhado sobre o corpo do usuÃ¡rio, o bÃ¡lsamo se expandirÃ¡ e se transformarÃ¡ em um poderoso escudo, prendendo o usuÃ¡rio, mas protegendo-o de todas as formas de ataque. O escudo absorverÃ¡ 100 pontos de vida antes de se estilhaÃ§ar.
+@4763 = ~Bálsamo de Coral~
+@4764 = ~Ao arrancar pedaços de um recife de coral, triturar o coral até virar pó e misturá-lo com pasta de pepino-do-mar, um alquimista pode criar um bálsamo azulado. Ao ser espalhado sobre o corpo do usuário, o bálsamo se expandirá e se transformará em um poderoso escudo, prendendo o usuário, mas protegendo-o de todas as formas de ataque. O escudo absorverá 100 pontos de vida antes de se estilhaçar.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-CarapaÃ§a de Tartaruga (100 pontos de vida)
+Carapaça de Tartaruga (100 pontos de vida)
 Peso: 0,5 kg (1 lb).~
-@54763 = ~BÃ¡lsamo de Coral~
-@54764 = ~Ao arrancar pedaÃ§os de um recife de coral, triturar o coral atÃ© virar pÃ³ e misturÃ¡-lo com pasta de pepino-do-mar, um alquimista pode criar um bÃ¡lsamo azulado. Ao ser espalhado sobre o corpo do usuÃ¡rio, o bÃ¡lsamo se expandirÃ¡ e se transformarÃ¡ em um poderoso escudo, prendendo o usuÃ¡rio, mas protegendo-o de todas as formas de ataque. O escudo absorverÃ¡ 400 pontos de vida antes de se estilhaÃ§ar.
+@54763 = ~Bálsamo de Coral~
+@54764 = ~Ao arrancar pedaços de um recife de coral, triturar o coral até virar pó e misturá-lo com pasta de pepino-do-mar, um alquimista pode criar um bálsamo azulado. Ao ser espalhado sobre o corpo do usuário, o bálsamo se expandirá e se transformará em um poderoso escudo, prendendo o usuário, mas protegendo-o de todas as formas de ataque. O escudo absorverá 400 pontos de vida antes de se estilhaçar.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-CarapaÃ§a de Tartaruga (400 pontos de vida)
+Carapaça de Tartaruga (400 pontos de vida)
 Peso: 0,5 kg (1 lb).~
-@4765 = ~SecreÃ§Ã£o FeÃ©rica~
-@4766 = ~Esta garrafa contÃ©m uma gosma arroxeada secretada pela pele de uma fada. Uma sÃ©rie de encantamentos mÃ¡gicos transforma a gosma em uma poÃ§Ã£o poderosa capaz de conceder um estado etÃ©reo a quem a bebe. Todos os ataques inimigos tÃªm 50% de chance de falhar completamente, de acordo com o feitiÃ§o Teleporte. Os ataques e feitiÃ§os do usuÃ¡rio, no entanto, tambÃ©m tÃªm 20% de chance de falhar. Os efeitos duram 10 rodadas.
+@4765 = ~Secreção Feérica~
+@4766 = ~Esta garrafa contém uma gosma arroxeada secretada pela pele de uma fada. Uma série de encantamentos mágicos transforma a gosma em uma poção poderosa capaz de conceder um estado etéreo a quem a bebe. Todos os ataques inimigos têm 50% de chance de falhar completamente, de acordo com o feitiço Teleporte. Os ataques e feitiços do usuário, no entanto, também têm 20% de chance de falhar. Os efeitos duram 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Piscar por 10 rodadas
 Peso: 0,5 kg (1 lb).~
-@54765 = ~SecreÃ§Ã£o FeÃ©rica~
-@54766 = ~Esta garrafa contÃ©m uma gosma arroxeada secretada pela pele de uma fada. Uma sÃ©rie de encantamentos mÃ¡gicos transforma a gosma em uma poÃ§Ã£o poderosa capaz de conceder um estado etÃ©reo a quem a bebe. Todos os ataques inimigos tÃªm 50% de chance de falhar completamente, de acordo com o feitiÃ§o Teleporte. Os ataques e feitiÃ§os do usuÃ¡rio, no entanto, tambÃ©m tÃªm 20% de chance de falhar. Os efeitos duram 20 rodadas.
+@54765 = ~Secreção Feérica~
+@54766 = ~Esta garrafa contém uma gosma arroxeada secretada pela pele de uma fada. Uma série de encantamentos mágicos transforma a gosma em uma poção poderosa capaz de conceder um estado etéreo a quem a bebe. Todos os ataques inimigos têm 50% de chance de falhar completamente, de acordo com o feitiço Teleporte. Os ataques e feitiços do usuário, no entanto, também têm 20% de chance de falhar. Os efeitos duram 20 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Piscar por 20 rodadas.
 Peso: 0,5 kg (1 lb).~
 @4767 = ~Geleia de Salamandra de Fogo~
-@4768 = ~Uma mistura picante de goma arÃ¡bica e sangue de salamandra-de-fogo, este composto gelatinoso erguerÃ¡ uma parede de chamas ao redor de quem o beber, reduzindo todo o dano de frio pela metade e causando 1d6+10 de dano de fogo a todos os atacantes. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+@4768 = ~Uma mistura picante de goma arábica e sangue de salamandra-de-fogo, este composto gelatinoso erguerá uma parede de chamas ao redor de quem o beber, reduzindo todo o dano de frio pela metade e causando 1d6+10 de dano de fogo a todos os atacantes. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Escudo de Fogo, Vermelho
 Peso: 0,5 kg (1 lb).~
 @54767 = ~Geleia de Salamandra de Fogo~
-@54768 = ~Uma mistura picante de goma arÃ¡bica e sangue de salamandra-de-fogo, este composto gelatinoso erguerÃ¡ uma parede de chamas ao redor de quem o beber, reduzindo todo o dano de frio pela metade e causando 1d6+20 de dano de fogo a todos os atacantes. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+@54768 = ~Uma mistura picante de goma arábica e sangue de salamandra-de-fogo, este composto gelatinoso erguerá uma parede de chamas ao redor de quem o beber, reduzindo todo o dano de frio pela metade e causando 1d6+20 de dano de fogo a todos os atacantes. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Escudo de Fogo, Vermelho
 Peso: 0,5 kg (1 lb).~
 @4769 = ~Geleia de Salamandra de Gelo~
-@4770 = ~Uma gelatina mentolada composta de goma arÃ¡bica e sangue de salamandra do gelo. Este composto gelatinoso erguerÃ¡ uma parede de gelo ao redor de quem a beber, reduzindo todo o dano de fogo pela metade e causando 1d6+10 de dano de frio a todos os atacantes. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+@4770 = ~Uma gelatina mentolada composta de goma arábica e sangue de salamandra do gelo. Este composto gelatinoso erguerá uma parede de gelo ao redor de quem a beber, reduzindo todo o dano de fogo pela metade e causando 1d6+10 de dano de frio a todos os atacantes. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Escudo de Fogo, Azul
 Peso: 0,5 kg (1 lb).~
 @54769 = ~Geleia de Salamandra de Gelo~
-@54770 = ~Uma gelatina mentolada composta de goma arÃ¡bica e sangue de salamandra do gelo. Este composto gelatinoso erguerÃ¡ uma parede de gelo ao redor de quem a beber, reduzindo todo o dano de fogo pela metade e causando 1d6+20 de dano de frio a todos os atacantes. O efeito dura 10 rodadas ou atÃ© ser dissipado.
+@54770 = ~Uma gelatina mentolada composta de goma arábica e sangue de salamandra do gelo. Este composto gelatinoso erguerá uma parede de gelo ao redor de quem a beber, reduzindo todo o dano de fogo pela metade e causando 1d6+20 de dano de frio a todos os atacantes. O efeito dura 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Escudo de Fogo, Azul
 Peso: 0,5 kg (1 lb).~
 @4771 = ~Lubrificante de Peixe~
-@4772 = ~Ã“leo de peixe, Ã³leo de gergelim, um conjunto Ãºnico de encantamentos e cinzas finÃ­ssimas compÃµem este lubrificante oleoso. Quando o usuÃ¡rio aplica este Ã³leo na pele e ativa a palavra de comando, o lubrificante comeÃ§a a vibrar levemente. Qualquer tentativa de impedir os movimentos do usuÃ¡rio falharÃ¡ enquanto o lubrificante estiver ativo, que durarÃ¡ 10 rodadas ou atÃ© ser dissipado.
+@4772 = ~Óleo de peixe, óleo de gergelim, um conjunto único de encantamentos e cinzas finíssimas compõem este lubrificante oleoso. Quando o usuário aplica este óleo na pele e ativa a palavra de comando, o lubrificante começa a vibrar levemente. Qualquer tentativa de impedir os movimentos do usuário falhará enquanto o lubrificante estiver ativo, que durará 10 rodadas ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-MovimentaÃ§Ã£o Livre
+Movimentação Livre
 Peso: 0,5 kg (1 lb).~
 @54771 = ~Lubrificante de Peixe~
-@54772 = ~Ã“leo de peixe, Ã³leo de gergelim, um conjunto Ãºnico de encantamentos e cinzas finÃ­ssimas compÃµem este lubrificante oleoso. Quando o usuÃ¡rio aplica este Ã³leo na pele e ativa a palavra de comando, o lubrificante comeÃ§a a vibrar levemente. Qualquer tentativa de impedir os movimentos do usuÃ¡rio falharÃ¡ enquanto o lubrificante estiver ativo, que durarÃ¡ 1 hora ou atÃ© ser dissipado.
+@54772 = ~Óleo de peixe, óleo de gergelim, um conjunto único de encantamentos e cinzas finíssimas compõem este lubrificante oleoso. Quando o usuário aplica este óleo na pele e ativa a palavra de comando, o lubrificante começa a vibrar levemente. Qualquer tentativa de impedir os movimentos do usuário falhará enquanto o lubrificante estiver ativo, que durará 1 hora ou até ser dissipado.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-MovimentaÃ§Ã£o Livre
+Movimentação Livre
 Peso: 0,5 kg (1 lb).~
 @4773 = ~Bebida Gasosa~
-@4774 = ~Esta mistura borbulhante de suco de fruta e cÃ©rebro de avestruz darÃ¡ uma descarga de energia a quem a beber. Por dez rodadas apÃ³s ingerir esta bebida aÃ§ucarada, o usuÃ¡rio se moverÃ¡ e atacarÃ¡ em ritmo acelerado, ganhando +4 de bÃ´nus na taxa de movimento e no fator de velocidade, alÃ©m de +1 de velocidade de conjuraÃ§Ã£o.
+@4774 = ~Esta mistura borbulhante de suco de fruta e cérebro de avestruz dará uma descarga de energia a quem a beber. Por dez rodadas após ingerir esta bebida açucarada, o usuário se moverá e atacará em ritmo acelerado, ganhando +4 de bônus na taxa de movimento e no fator de velocidade, além de +1 de velocidade de conjuração.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 Taxa de Movimento
 +4 Fator de Velocidade
-+1 Velocidade de ConjuraÃ§Ã£o
++1 Velocidade de Conjuração
 Peso: 0,5 kg (1 lb).~
 @54773 = ~Bebida Gasosa~
-@54774 = ~Esta mistura borbulhante de suco de fruta e cÃ©rebro de avestruz darÃ¡ uma descarga de energia a quem a beber. Por dez rodadas apÃ³s ingerir esta bebida aÃ§ucarada, o usuÃ¡rio se moverÃ¡ e atacarÃ¡ em ritmo acelerado, ganhando +4 de bÃ´nus na taxa de movimento e no fator de velocidade, alÃ©m de +2 de velocidade de conjuraÃ§Ã£o.
+@54774 = ~Esta mistura borbulhante de suco de fruta e cérebro de avestruz dará uma descarga de energia a quem a beber. Por dez rodadas após ingerir esta bebida açucarada, o usuário se moverá e atacará em ritmo acelerado, ganhando +4 de bônus na taxa de movimento e no fator de velocidade, além de +2 de velocidade de conjuração.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +10 Taxa de Movimento
 +10 Fator de Velocidade
-+2 Velocidade de ConjuraÃ§Ã£o
++2 Velocidade de Conjuração
 Peso: 0,5 kg (1 lb).~
-@4775 = ~PÃ³ de CarniÃ§al~
-@4776 = ~Este pÃ³ fino cinza-azulado, feito da pele e carne em pÃ³ de um carniÃ§al ou criatura, emite um brilho muito fraco. Inalar o pÃ³ causarÃ¡ uma dor de cabeÃ§a dolorosa, alÃ©m de um poderoso encantamento pelo corpo do usuÃ¡rio. Por 10 rodadas apÃ³s inalar este pÃ³ mÃ¡gico, o usuÃ¡rio ganharÃ¡ 20/- de resistÃªncia a todas as formas de dano por frio.
+@4775 = ~Pó de Carniçal~
+@4776 = ~Este pó fino cinza-azulado, feito da pele e carne em pó de um carniçal ou criatura, emite um brilho muito fraco. Inalar o pó causará uma dor de cabeça dolorosa, além de um poderoso encantamento pelo corpo do usuário. Por 10 rodadas após inalar este pó mágico, o usuário ganhará 20/- de resistência a todas as formas de dano por frio.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 20/- ResistÃªncia ao Frio
+Resistência: 20/- Resistência ao Frio
 Peso: 0,5 kg (1 lb).~
-@54775 = ~PÃ³ de CarniÃ§al~
-@54776 = ~Este pÃ³ fino cinza-azulado, feito da pele e carne em pÃ³ de um carniÃ§al ou criatura, emite um brilho muito fraco. Inalar o pÃ³ causarÃ¡ uma dor de cabeÃ§a dolorosa, alÃ©m de um poderoso encantamento pelo corpo do usuÃ¡rio. Por 10 rodadas apÃ³s inalar este pÃ³ mÃ¡gico, o usuÃ¡rio ganharÃ¡ 50/- de resistÃªncia a todas as formas de dano por frio.
+@54775 = ~Pó de Carniçal~
+@54776 = ~Este pó fino cinza-azulado, feito da pele e carne em pó de um carniçal ou criatura, emite um brilho muito fraco. Inalar o pó causará uma dor de cabeça dolorosa, além de um poderoso encantamento pelo corpo do usuário. Por 10 rodadas após inalar este pó mágico, o usuário ganhará 50/- de resistência a todas as formas de dano por frio.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 50/- ResistÃªncia ao Frio
+Resistência: 50/- Resistência ao Frio
 Peso: 0,5 kg (1 lb).~
 @4777 = ~Bolhas Douradas~
-@4778 = ~Boa sorte Ã© difÃ­cil de encontrar, mas para quem sabe como gerÃ¡-la, a fortuna pode vir de quase qualquer lugar. Esta soluÃ§Ã£o borbulhante Ã© uma mistura de flocos de ouro, suco de limÃ£o, pÃ©rolas moÃ­das e cascos de cabra em pÃ³. Qualquer um que beber esta poÃ§Ã£o experimentarÃ¡ uma onda de euforia e suprema confianÃ§a em tudo, alÃ©m de um bÃ´nus de sorte de +2 por 10 rodadas.
+@4778 = ~Boa sorte é difícil de encontrar, mas para quem sabe como gerá-la, a fortuna pode vir de quase qualquer lugar. Esta solução borbulhante é uma mistura de flocos de ouro, suco de limão, pérolas moídas e cascos de cabra em pó. Qualquer um que beber esta poção experimentará uma onda de euforia e suprema confiança em tudo, além de um bônus de sorte de +2 por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +2 Sorte
 Peso: 0,5 kg (1 lb).~
 @54777 = ~Bolhas Douradas~
-@54778 = ~Boa sorte Ã© difÃ­cil de encontrar, mas para quem sabe como gerÃ¡-la, a fortuna pode vir de quase qualquer lugar. Esta soluÃ§Ã£o borbulhante Ã© uma mistura de flocos de ouro, suco de limÃ£o, pÃ©rolas moÃ­das e cascos de cabra em pÃ³. Qualquer um que beber esta poÃ§Ã£o experimentarÃ¡ uma onda de euforia e suprema confianÃ§a em tudo, alÃ©m de um bÃ´nus de sorte de +4 por 10 rodadas.
+@54778 = ~Boa sorte é difícil de encontrar, mas para quem sabe como gerá-la, a fortuna pode vir de quase qualquer lugar. Esta solução borbulhante é uma mistura de flocos de ouro, suco de limão, pérolas moídas e cascos de cabra em pó. Qualquer um que beber esta poção experimentará uma onda de euforia e suprema confiança em tudo, além de um bônus de sorte de +4 por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 +4 Sorte
 Peso: 0,5 kg (1 lb).~
 @4779 = ~Bile de Ogro~
-@4780 = ~Este lÃ­quido translÃºcido e enjoativo Ã© uma mistura de limo verde, sal comum e bile das entranhas de um ogro. Qualquer um que se forÃ§ar a beber esta poÃ§Ã£o imunda ganharÃ¡ 25 pontos de vida temporÃ¡rios por 8 horas. Qualquer dano sofrido pelo usuÃ¡rio virÃ¡ primeiro dos pontos de vida temporÃ¡rios.
+@4780 = ~Este líquido translúcido e enjoativo é uma mistura de limo verde, sal comum e bile das entranhas de um ogro. Qualquer um que se forçar a beber esta poção imunda ganhará 25 pontos de vida temporários por 8 horas. Qualquer dano sofrido pelo usuário virá primeiro dos pontos de vida temporários.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+25 Pontos de Vida MÃ¡ximos
++25 Pontos de Vida Máximos
 Peso: 0,5 kg (1 lb).~
 @54779 = ~Bile de Ogro~
-@54780 = ~Este lÃ­quido translÃºcido e enjoativo Ã© uma mistura de limo verde, sal comum e bile das entranhas de um ogro. Qualquer um que se forÃ§ar a beber esta poÃ§Ã£o imunda ganharÃ¡ 100 pontos de vida temporÃ¡rios por 8 horas. Qualquer dano sofrido pelo usuÃ¡rio virÃ¡ primeiro dos pontos de vida temporÃ¡rios.
+@54780 = ~Este líquido translúcido e enjoativo é uma mistura de limo verde, sal comum e bile das entranhas de um ogro. Qualquer um que se forçar a beber esta poção imunda ganhará 100 pontos de vida temporários por 8 horas. Qualquer dano sofrido pelo usuário virá primeiro dos pontos de vida temporários.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-+100 Pontos de Vida MÃ¡ximos
++100 Pontos de Vida Máximos
 Peso: 0,5 kg (1 lb).~
-@4781 = ~Ã“leo da Velocidade~
-@4782 = ~Um Ã³leo claro feito de pÃ©rolas trituradas, dentes de tubarÃ£o e sangue de coelho, esta poÃ§Ã£o se espalharÃ¡ rapidamente pelo corpo do usuÃ¡rio. O Ã³leo aumentarÃ¡ drasticamente a velocidade de movimento e ataque do usuÃ¡rio, concedendo Velocidade conforme o feitiÃ§o do mago por 10 rodadas.
+@4781 = ~Óleo da Velocidade~
+@4782 = ~Um óleo claro feito de pérolas trituradas, dentes de tubarão e sangue de coelho, esta poção se espalhará rapidamente pelo corpo do usuário. O óleo aumentará drasticamente a velocidade de movimento e ataque do usuário, concedendo Velocidade conforme o feitiço do mago por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Velocidade
 Peso: 0,5 kg (1 lb).~
-@54781 = ~Ã“leo da Velocidade~
-@54782 = ~Um Ã³leo claro feito de pÃ©rolas trituradas, dentes de tubarÃ£o e sangue de coelho, esta poÃ§Ã£o se espalharÃ¡ rapidamente pelo corpo do usuÃ¡rio. O Ã³leo aumentarÃ¡ drasticamente a velocidade de movimento e ataque do usuÃ¡rio, concedendo Velocidade Aprimorada por 5 rodadas.
+@54781 = ~Óleo da Velocidade~
+@54782 = ~Um óleo claro feito de pérolas trituradas, dentes de tubarão e sangue de coelho, esta poção se espalhará rapidamente pelo corpo do usuário. O óleo aumentará drasticamente a velocidade de movimento e ataque do usuário, concedendo Velocidade Aprimorada por 5 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Velocidade Aprimorada
 Peso: 0,5 kg (1 lb).~
-@4783 = ~PoÃ§Ã£o da Clareza~
-@4784 = ~Esta poÃ§Ã£o Ã© uma mistura de aroma agradÃ¡vel de azeite de oliva, temperado com pÃ³ de nariz de nereida e lÃ¡pis-lazÃºli triturado. Beber esta poÃ§Ã£o de sabor estranho concederÃ¡ temporariamente ao usuÃ¡rio imunidade Ã  maioria dos feitiÃ§os de efeito mental, incluindo efeitos de encantamento, dominaÃ§Ã£o, imbecilidade, medo e confusÃ£o por 10 rodadas.
+@4783 = ~Poção da Clareza~
+@4784 = ~Esta poção é uma mistura de aroma agradável de azeite de oliva, temperado com pó de nariz de nereida e lápis-lazúli triturado. Beber esta poção de sabor estranho concederá temporariamente ao usuário imunidade à maioria dos feitiços de efeito mental, incluindo efeitos de encantamento, dominação, imbecilidade, medo e confusão por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Imunidade a encantamento, dominaÃ§Ã£o, imbecilidade, medo e confusÃ£o.
+Imunidade a encantamento, dominação, imbecilidade, medo e confusão.
 Peso: 0,5 kg (1 lb).~
-@54783 = ~PoÃ§Ã£o da Clareza~
-@54784 = ~Esta poÃ§Ã£o Ã© uma mistura de aroma agradÃ¡vel de azeite de oliva, temperado com pÃ³ de nariz de nereida e lÃ¡pis-lazÃºli triturado. Beber esta poÃ§Ã£o de sabor estranho concederÃ¡ temporariamente ao usuÃ¡rio imunidade Ã  maioria dos feitiÃ§os de efeito mental, incluindo encantamento, dominaÃ§Ã£o, imbecilidade, medo, confusÃ£o, desesperanÃ§a e efeitos de atordoamento por 15 rodadas.
+@54783 = ~Poção da Clareza~
+@54784 = ~Esta poção é uma mistura de aroma agradável de azeite de oliva, temperado com pó de nariz de nereida e lápis-lazúli triturado. Beber esta poção de sabor estranho concederá temporariamente ao usuário imunidade à maioria dos feitiços de efeito mental, incluindo encantamento, dominação, imbecilidade, medo, confusão, desesperança e efeitos de atordoamento por 15 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Imunidade a encantamento, dominaÃ§Ã£o, imbecilidade, medo, confusÃ£o, desesperanÃ§a e atordoamento.
+Imunidade a encantamento, dominação, imbecilidade, medo, confusão, desesperança e atordoamento.
 Peso: 0,5 kg (1 lb).~
 @4785 = ~Seiva de Ente ~
-@4786 = ~Seiva de Ã¡rvore endurecida misturada com Ã¡gua benta e ervilhas amassadas repousa dentro deste recipiente de madeira firme. A seiva dura deve ser mastigada completamente, a menos que seja aquecida antes do consumo. A seiva transforma a pele do usuÃ¡rio em uma substÃ¢ncia rÃ­gida e lenhosa, concedendo um bÃ´nus natural de +4 na CA por 1 hora.
+@4786 = ~Seiva de árvore endurecida misturada com água benta e ervilhas amassadas repousa dentro deste recipiente de madeira firme. A seiva dura deve ser mastigada completamente, a menos que seja aquecida antes do consumo. A seiva transforma a pele do usuário em uma substância rígida e lenhosa, concedendo um bônus natural de +4 na CA por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Pele de Casca de Ãrvore (+4 CA)
+Pele de Casca de Árvore (+4 CA)
 Peso: 0,5 kg (1 lb).~
 @54785 = ~Seiva de Ente~
-@54786 = ~Seiva de ente endurecida misturada com Ã¡gua benta e ervilhas amassadas repousa dentro deste recipiente de madeira firme. A seiva dura deve ser mastigada completamente, a menos que seja aquecida antes do consumo. A seiva transforma a pele do usuÃ¡rio em uma substÃ¢ncia rÃ­gida e lenhosa, concedendo um bÃ´nus natural de +7 na CA por 1 hora.
+@54786 = ~Seiva de ente endurecida misturada com água benta e ervilhas amassadas repousa dentro deste recipiente de madeira firme. A seiva dura deve ser mastigada completamente, a menos que seja aquecida antes do consumo. A seiva transforma a pele do usuário em uma substância rígida e lenhosa, concedendo um bônus natural de +7 na CA por 1 hora.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Pele de Casca de Ãrvore (+7 CA)
+Pele de Casca de Árvore (+7 CA)
 Peso: 0,5 kg (1 lb).~
 @4787 = ~Soro de Troll~
-@4788 = ~Feita de sangue concentrado de troll, extraÃ­do da pele perfurada de otyugh, esta mistura Ã¡cida concederÃ¡ temporariamente ao bebedor as habilidades regenerativas de um troll. Por 10 rodadas apÃ³s ingerir esta poÃ§Ã£o, o bebedor se recuperarÃ¡ em 5 pontos de vida a cada rodada.
+@4788 = ~Feita de sangue concentrado de troll, extraído da pele perfurada de otyugh, esta mistura ácida concederá temporariamente ao bebedor as habilidades regenerativas de um troll. Por 10 rodadas após ingerir esta poção, o bebedor se recuperará em 5 pontos de vida a cada rodada.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Regenera 5 pontos de vida por rodada
 Peso: 0,5 kg (1 lb).~
 @54787 = ~Soro de Troll~
-@54788 = ~Feita de sangue concentrado de troll, extraÃ­do da pele perfurada de otyugh, esta mistura Ã¡cida concederÃ¡ temporariamente ao bebedor as habilidades regenerativas de um troll. Por 10 rodadas apÃ³s ingerir esta poÃ§Ã£o, o bebedor recuperarÃ¡ 10 pontos de vida a cada rodada.
+@54788 = ~Feita de sangue concentrado de troll, extraído da pele perfurada de otyugh, esta mistura ácida concederá temporariamente ao bebedor as habilidades regenerativas de um troll. Por 10 rodadas após ingerir esta poção, o bebedor recuperará 10 pontos de vida a cada rodada.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
 Regenera 10 pontos de vida por rodada
 Peso: 0,5 kg (1 lb).~
 @4789 = ~Gosma de Zumbi~
-@4790 = ~Esta sopa grossa Ã© uma mistura de pelos de elfo picados e gosma imunda drenada do cadÃ¡ver de um zumbi gosma. Beber esta mistura doentia concederÃ¡ ao usuÃ¡rio 20/- de resistÃªncia a Ã¡cidos por 10 rodadas.
+@4790 = ~Esta sopa grossa é uma mistura de pelos de elfo picados e gosma imunda drenada do cadáver de um zumbi gosma. Beber esta mistura doentia concederá ao usuário 20/- de resistência a ácidos por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 20/- ResistÃªncia a Ãcidos
+Resistência: 20/- Resistência a Ácidos
 Peso: 0,5 kg (1 lb).~
 @54789 = ~Gosma Zumbi~
-@54790 = ~Esta sopa grossa Ã© uma mistura de pelos de elfo picados e gosma imunda drenada do cadÃ¡ver de um zumbi gosmento. Beber esta mistura enjoativa concederÃ¡ ao usuÃ¡rio 50/- de resistÃªncia a Ã¡cidos por 10 rodadas.
+@54790 = ~Esta sopa grossa é uma mistura de pelos de elfo picados e gosma imunda drenada do cadáver de um zumbi gosmento. Beber esta mistura enjoativa concederá ao usuário 50/- de resistência a ácidos por 10 rodadas.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-ResistÃªncia: 50/- ResistÃªncia a Ãcidos
+Resistência: 50/- Resistência a Ácidos
 Peso: 0,5 kg (1 lb).~
-@4791 = ~Frasco de VÃ­boras~
-@4792 = ~Uma mistura experimental curiosa, este frasco de lodo verde retorcerÃ¡ as entranhas de quem o beber e usarÃ¡ seus prÃ³prios intestinos para incubar um covil de vÃ­boras geradas magicamente. A cada seis rodadas, o bebedor vomitarÃ¡ uma vÃ­bora adulta que poderÃ¡ controlar telepaticamente.
+@4791 = ~Frasco de Víboras~
+@4792 = ~Uma mistura experimental curiosa, este frasco de lodo verde retorcerá as entranhas de quem o beber e usará seus próprios intestinos para incubar um covil de víboras geradas magicamente. A cada seis rodadas, o bebedor vomitará uma víbora adulta que poderá controlar telepaticamente.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Cospe VÃ­bora por 6 rodadas
+Cospe Víbora por 6 rodadas
 Peso: 0,5 kg (1 lb).~
-@54791 = ~Frasco de VÃ­boras~
-@54792 = ~Uma mistura experimental curiosa, este frasco de lodo verde retorcerÃ¡ as entranhas de quem o beber e usarÃ¡ seus prÃ³prios intestinos para incubar um covil de vÃ­boras geradas magicamente. A cada doze rodadas, o bebedor vomitarÃ¡ uma vÃ­bora adulta que poderÃ¡ controlar telepaticamente.
+@54791 = ~Frasco de Víboras~
+@54792 = ~Uma mistura experimental curiosa, este frasco de lodo verde retorcerá as entranhas de quem o beber e usará seus próprios intestinos para incubar um covil de víboras geradas magicamente. A cada doze rodadas, o bebedor vomitará uma víbora adulta que poderá controlar telepaticamente.
 
-ESTATÃSTICAS:
+ESTATÍSTICAS:
 
-Cospe VÃ­bora por 12 rodadas
+Cospe Víbora por 12 rodadas
 Peso: 0,5 kg (1 lb).~
-@4793 = ~Preparar PoÃ§Ãµes~
-@4794 = ~InÃ­cio~
+@4793 = ~Preparar Poções~
+@4794 = ~Início~
 @4795 = ~Sair~
-@4796 = ~VocÃª nÃ£o pode preparar poÃ§Ãµes quando houver inimigos por perto.~
+@4796 = ~Você não pode preparar poções quando houver inimigos por perto.~

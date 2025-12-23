@@ -111,6 +111,10 @@ ACTION_IF (is_french) BEGIN
 	STRING_SET 24641 @57032
 END
 
+ACTION_IF ~%LANGUAGE%~ STRING_EQUAL_CASE ~Portuguese~ BEGIN
+	INCLUDE ~%mod_folder%/tra/Portuguese/revised_vanilla_strings.tph~
+END
+
 ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
 	COPY ~%mod_folder%/patches/%file%.IDS~ ~%mod_folder%/patches~
 		COUNT_2DA_ROWS 2 rows

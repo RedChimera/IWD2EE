@@ -1,65 +1,65 @@
-@56000=~Entramos por meios mÃ¡gicos.~
-@56001=~VocÃª precisa dos meus serviÃ§os novamente?~
+@56000=~Entramos por meios mágicos.~
+@56001=~Você precisa dos meus serviços novamente?~
 @56002=~Sim, por favor, volte ao grupo.~
-@56003=~NÃ£o neste momento.~
-@56004=~Este controle deslizante ajusta o nÃ­vel de dificuldade a ser usado no combate. Da esquerda para a direita, as configuraÃ§Ãµes sÃ£o as seguintes:
+@56003=~Não neste momento.~
+@56004=~Este controle deslizante ajusta o nível de dificuldade a ser usado no combate. Da esquerda para a direita, as configurações são as seguintes:
 
-* Muito FÃ¡cil: Inimigos tÃªm -4 de penalidade em ataque e testes de resistÃªncia, e o grupo recebe metade do dano.
+* Muito Fácil: Inimigos têm -4 de penalidade em ataque e testes de resistência, e o grupo recebe metade do dano.
 
-* FÃ¡cil: Inimigos tÃªm -2 de penalidade em ataque e testes de resistÃªncia, e o grupo recebe trÃªs quartos do dano.
+* Fácil: Inimigos têm -2 de penalidade em ataque e testes de resistência, e o grupo recebe três quartos do dano.
 
-* Normal: Esta configuraÃ§Ã£o nÃ£o tem alteraÃ§Ãµes; Icewind Dale 2: Enhanced Edition foi balanceado para essa dificuldade.
+* Normal: Esta configuração não tem alterações; Icewind Dale 2: Enhanced Edition foi balanceado para essa dificuldade.
 
-* DifÃ­cil: Inimigos tÃªm +3 de bÃ´nus de ataque e causam 50% mais dano ao grupo.
+* Difícil: Inimigos têm +3 de bônus de ataque e causam 50% mais dano ao grupo.
 
-* Insano: Inimigos tÃªm +9 de bÃ´nus de ataque e causam dano em dobro ao grupo.
+* Insano: Inimigos têm +9 de bônus de ataque e causam dano em dobro ao grupo.
 
-AlÃ©m disso, existe uma dificuldade ainda maior, CoraÃ§Ã£o da FÃºria. Esta configuraÃ§Ã£o pode ser acessada abrindo o Config.exe, selecionando a opÃ§Ã£o "Modo CoraÃ§Ã£o da FÃºria" e iniciando um novo jogo.
+Além disso, existe uma dificuldade ainda maior, Coração da Fúria. Esta configuração pode ser acessada abrindo o Config.exe, selecionando a opção "Modo Coração da Fúria" e iniciando um novo jogo.
 
-* CoraÃ§Ã£o da FÃºria: Inimigos tÃªm triplo de seus PV base mais mais 80 PV, +10 em todas as caracterÃ­sticas, +12 nÃ­veis em cada uma de suas classes, +9 em ataque, +5 em testes de resistÃªncia, causam dano em dobro ao grupo, e tÃªm +10 de nÃ­vel de desafio. Muitos itens mÃ¡gicos ao longo do jogo sÃ£o substituÃ­dos por versÃµes mais poderosas.
+* Coração da Fúria: Inimigos têm triplo de seus PV base mais mais 80 PV, +10 em todas as características, +12 níveis em cada uma de suas classes, +9 em ataque, +5 em testes de resistência, causam dano em dobro ao grupo, e têm +10 de nível de desafio. Muitos itens mágicos ao longo do jogo são substituídos por versões mais poderosas.
 
-Icewind Dale 2: Enhanced Edition possui certos componentes opcionais que reduzem os bÃ´nus concedidos aos inimigos no modo CoraÃ§Ã£o da FÃºria. Os bÃ´nus acima assumem que nenhum desses componentes estÃ¡ instalado.~
+Icewind Dale 2: Enhanced Edition possui certos componentes opcionais que reduzem os bônus concedidos aos inimigos no modo Coração da Fúria. Os bônus acima assumem que nenhum desses componentes está instalado.~
 @56005=~Drenagem de Atributos~
-@56006=~BÃ´nus raciais extras para humanos vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador humano logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56007=~BÃ´nus raciais extras para aasimar vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador aasimar logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56008=~BÃ´nus raciais extras para tieflings vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador tiefling logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56009=~BÃ´nus raciais extras para elfos da lua vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador elfo da lua logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56010=~BÃ´nus raciais extras para drow vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador drow logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56011=~BÃ´nus raciais extras para elfos selvagens vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador elfo selvagem logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56012=~BÃ´nus raciais extras para meio-elfos vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador meio-elfo logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56013=~BÃ´nus raciais extras para anÃµes escudo vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador anÃ£o escudo logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56014=~BÃ´nus raciais extras para anÃµes dourados vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador anÃ£o dourado logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56015=~BÃ´nus raciais extras para anÃµes cinzentos vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador anÃ£o cinzento logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56016=~BÃ´nus raciais extras para halflings pÃ©s-leves vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador halfling pÃ©-leve logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56017=~BÃ´nus raciais extras para halflings coraÃ§Ã£o-forte vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador halfling coraÃ§Ã£o-forte logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56018=~BÃ´nus raciais extras para halflings ghostwise vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador halfling ghostwise logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56019=~BÃ´nus raciais extras para gnomos da rocha vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador gnomo da rocha logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56020=~BÃ´nus raciais extras para gnomos das profundezas vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador gnomo das profundezas logo apÃ³s a criaÃ§Ã£o do personagem.~
-@56021=~BÃ´nus raciais extras para meio-orcs vÃ£o aqui. Cada efeito deste feitiÃ§o serÃ¡ aplicado a qualquer personagem jogador meio-orc logo apÃ³s a criaÃ§Ã£o do personagem.~
+@56006=~Bônus raciais extras para humanos vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador humano logo após a criação do personagem.~
+@56007=~Bônus raciais extras para aasimar vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador aasimar logo após a criação do personagem.~
+@56008=~Bônus raciais extras para tieflings vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador tiefling logo após a criação do personagem.~
+@56009=~Bônus raciais extras para elfos da lua vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador elfo da lua logo após a criação do personagem.~
+@56010=~Bônus raciais extras para drow vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador drow logo após a criação do personagem.~
+@56011=~Bônus raciais extras para elfos selvagens vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador elfo selvagem logo após a criação do personagem.~
+@56012=~Bônus raciais extras para meio-elfos vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador meio-elfo logo após a criação do personagem.~
+@56013=~Bônus raciais extras para anões escudo vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador anão escudo logo após a criação do personagem.~
+@56014=~Bônus raciais extras para anões dourados vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador anão dourado logo após a criação do personagem.~
+@56015=~Bônus raciais extras para anões cinzentos vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador anão cinzento logo após a criação do personagem.~
+@56016=~Bônus raciais extras para halflings pés-leves vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador halfling pé-leve logo após a criação do personagem.~
+@56017=~Bônus raciais extras para halflings coração-forte vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador halfling coração-forte logo após a criação do personagem.~
+@56018=~Bônus raciais extras para halflings ghostwise vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador halfling ghostwise logo após a criação do personagem.~
+@56019=~Bônus raciais extras para gnomos da rocha vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador gnomo da rocha logo após a criação do personagem.~
+@56020=~Bônus raciais extras para gnomos das profundezas vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador gnomo das profundezas logo após a criação do personagem.~
+@56021=~Bônus raciais extras para meio-orcs vão aqui. Cada efeito deste feitiço será aplicado a qualquer personagem jogador meio-orc logo após a criação do personagem.~
 @56022=~PASSADO MERCANTIL:
 
-Poderosas guildas comerciais e artesÃ£os controlam a riqueza e o comÃ©rcio nas terras de FaerÃ»n. VocÃª vem de uma famÃ­lia que se destaca em um comÃ©rcio especÃ­fico e conhece bem o valor de qualquer tipo de mercadoria ou produto.
+Poderosas guildas comerciais e artesãos controlam a riqueza e o comércio nas terras de Faerûn. Você vem de uma família que se destaca em um comércio específico e conhece bem o valor de qualquer tipo de mercadoria ou produto.
 
-PrÃ©-requisito: Humano, gnomo das profundezas ou anÃ£o cinzento
+Pré-requisito: Humano, gnomo das profundezas ou anão cinzento
 
-BenefÃ­cio: VocÃª recebe 5% de desconto na compra de itens e 10% de acrÃ©scimo na venda de itens em lojas.~
-@56023=~Esta carta estÃ¡ escrita em pergaminho envelhecido e selada com cera. O exterior contÃ©m o seguinte texto, escrito com uma caligrafia trÃªmula: "De Garradun Tanner, para minha amada Raina, aos cuidados do CapitÃ£o Mariner, Neverwinter"
+Benefício: Você recebe 5% de desconto na compra de itens e 10% de acréscimo na venda de itens em lojas.~
+@56023=~Esta carta está escrita em pergaminho envelhecido e selada com cera. O exterior contém o seguinte texto, escrito com uma caligrafia trêmula: "De Garradun Tanner, para minha amada Raina, aos cuidados do Capitão Mariner, Neverwinter"
 
-VocÃª pode abrir a carta e ver seu conteÃºdo, embora ler a carta de amor de outra pessoa seja muito rude.
+Você pode abrir a carta e ver seu conteúdo, embora ler a carta de amor de outra pessoa seja muito rude.
 
 Peso: 0 kg.~
-@56024=~VocÃª pode querer dar uma olhada nesta carta que obtive de Garradun Tanner.~
-@56025=~VocÃª pode querer dar uma olhada nesta carta que obtive daquele metamorfoseador.~
-@56026=~Ã‰ melhor mostrar isso para Denham â€“ cheira a traiÃ§Ã£o, mesmo. Denham! Olhe isso.~
-@56027=~Eu consegui essa carta de Garradun Tanner. Ã‰ muito suspeita.~
-@56028=~...aqui estÃ¡. Isso deve funcionar. Obrigado por trazer isso Ã  nossa atenÃ§Ã£o. VocÃª provavelmente salvou muitas vidas. Enviei a Ulbrec a carta original, mas escrevi uma cÃ³pia do texto original para sua referÃªncia. Precisa de mais alguma coisa?~
-@56029=~Carta de Garradun (CÃ³pia)~
-@56030=~Este pergaminho contÃ©m uma cÃ³pia do texto da carta do espiÃ£o Garradun. O texto Ã© breve e direto, conforme segue:
+@56024=~Você pode querer dar uma olhada nesta carta que obtive de Garradun Tanner.~
+@56025=~Você pode querer dar uma olhada nesta carta que obtive daquele metamorfoseador.~
+@56026=~É melhor mostrar isso para Denham â€“ cheira a traição, mesmo. Denham! Olhe isso.~
+@56027=~Eu consegui essa carta de Garradun Tanner. É muito suspeita.~
+@56028=~...aqui está. Isso deve funcionar. Obrigado por trazer isso à nossa atenção. Você provavelmente salvou muitas vidas. Enviei a Ulbrec a carta original, mas escrevi uma cópia do texto original para sua referência. Precisa de mais alguma coisa?~
+@56029=~Carta de Garradun (Cópia)~
+@56030=~Este pergaminho contém uma cópia do texto da carta do espião Garradun. O texto é breve e direto, conforme segue:
 
-Targos: TrÃªs ou menos navios, talvez algumas dezenas de infantaria e arqueiros. Dois sacerdotes no pavilhÃ£o do templo, com recrutas vindos de Luskan. A tomada das vias fluviais pelos goblins parece ter fechado a passagem de mais reforÃ§os. NÃ£o ouvi falar de reforÃ§os planejados vindo de outras partes para a cidade. O adivinho em Targos deve ser eliminado pelos nossos amigos de Luskan.
+Targos: Três ou menos navios, talvez algumas dezenas de infantaria e arqueiros. Dois sacerdotes no pavilhão do templo, com recrutas vindos de Luskan. A tomada das vias fluviais pelos goblins parece ter fechado a passagem de mais reforços. Não ouvi falar de reforços planejados vindo de outras partes para a cidade. O adivinho em Targos deve ser eliminado pelos nossos amigos de Luskan.
 
-Bremen: A cidade deve cair em breve. Targos estÃ¡ impedida de mover navios pela baÃ­a graÃ§as aos nossos aliados scrags. Segundo soldados feridos de Bremen, eles nÃ£o conseguirÃ£o resistir. VocÃª poderÃ¡ trazer tropas do norte sem se preocupar com ataques vindos de Bremen.
+Bremen: A cidade deve cair em breve. Targos está impedida de mover navios pela baía graças aos nossos aliados scrags. Segundo soldados feridos de Bremen, eles não conseguirão resistir. Você poderá trazer tropas do norte sem se preocupar com ataques vindos de Bremen.
 
-Bryn Shander: Com nossas forÃ§as no campo e a travessia Shaengarne Ford mantida, a capital nÃ£o consegue mais fornecer suprimentos eficazmente para as cidades perifÃ©ricas. O uso de tÃ¡ticas de ataque e fuga pelos bugbears contra caravanas entre as Dez Cidades tornou quase impossÃ­vel que se reforcem mutuamente. Lonelywood enviou quase todos os seus homens aptos para o sul, para Bryn Shander, ao invÃ©s de enviÃ¡-los para Targos. O mesmo ocorreu em Easthaven. Ambas as cidades estarÃ£o vulnerÃ¡veis para serem tomadas caso decidamos ampliar nosso domÃ­nio na regiÃ£o. Talvez trezentos a quatrocentos homens estejam em Bryn Shander, junto com alguns voluntÃ¡rios do ClÃ£ Battlehammer. A maioria Ã© milÃ­cia, com alguns mercenÃ¡rios experientes entre eles. NÃ£o precisamos nos preocupar com Silverymoon e as outras comunidades a leste. Apenas dois voluntÃ¡rios chegaram, e jÃ¡ estÃ£o fora de combate.
+Bryn Shander: Com nossas forças no campo e a travessia Shaengarne Ford mantida, a capital não consegue mais fornecer suprimentos eficazmente para as cidades periféricas. O uso de táticas de ataque e fuga pelos bugbears contra caravanas entre as Dez Cidades tornou quase impossível que se reforcem mutuamente. Lonelywood enviou quase todos os seus homens aptos para o sul, para Bryn Shander, ao invés de enviá-los para Targos. O mesmo ocorreu em Easthaven. Ambas as cidades estarão vulneráveis para serem tomadas caso decidamos ampliar nosso domínio na região. Talvez trezentos a quatrocentos homens estejam em Bryn Shander, junto com alguns voluntários do Clã Battlehammer. A maioria é milícia, com alguns mercenários experientes entre eles. Não precisamos nos preocupar com Silverymoon e as outras comunidades a leste. Apenas dois voluntários chegaram, e já estão fora de combate.
 
 Peso: 0 kg.~
