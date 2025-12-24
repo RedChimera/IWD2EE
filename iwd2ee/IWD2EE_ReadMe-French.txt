@@ -51,9 +51,9 @@ Composants:
 29. Revoir les différences de gain d'XP des races
 30. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
 31. Ajuster le niveau des rencontres
-32. En mode Cœur de Furie, réduire les bonus aux PV des créatures
-33. En mode Cœur de Furie, réduire les bonus à l’attaque des créatures
-34. En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures
+32. En mode Cœur de Furie, ajuster les bonus aux PV des créatures
+33. En mode Cœur de Furie, ajuster les bonus à l’attaque des créatures
+34. En mode Cœur de Furie, ajuster les bonus aux jets de sauvegarde des créatures
 35. En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées
 36. En mode Cœur de Furie, faire en sorte que le groupe commence le jeu avec plus d’expérience
 37. Réduire le délai entre chaque attaque sournoise
@@ -76,6 +76,7 @@ Ce composant doit être installé pour que tout autre composant puisse l'être. 
 * Il existe désormais un bouton de ramassage rapide (le plus en bas à droite).
 * Un clic droit sur un sort ou une capacité innée dans la barre d'action affiche sa description (bien que la plupart des capacités innées n'aient pas de description à moins que le Remaniement des classes n'ait été installé).
 * Vous pouvez désormais parcourir les dialogues aussi vite que vous le souhaitez ; il n’y a plus le bref délai à chaque fois que vous choisissez une option de dialogue.
+* De nombreuses cinématiques peuvent être ignorées en appuyant sur ÉCHAP.
 * Le temps qu’il faut pour détecter les pièges est réduit.
 * L’écran de la fiche de personnage possède maintenant un bouton Reformer le groupe.
 * L’écran des options possède maintenant un bouton pour accéder au nouveau menu Options IEex (actuellement, il inclut une option pour modifier le brouillard de guerre afin qu’il ne scintille pas).
@@ -93,17 +94,17 @@ Barbares : la rage barbare immunise désormais contre la peur, le désespoir, l'
 
 Bardes : les chants de barde devraient être plus utiles maintenant. De plus, ils sont répartis sur plus de niveaux et évoluent au fil des niveaux afin que les bardes n’atteignent plus leur apogée au niveau 11. Les chansons peuvent se cumuler, mais uniquement si plusieurs bardes chantent en même temps.
 
-Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
+Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 aux jets d'attaque, +1 dégâts et immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 au niveau 5 et tous les 5 niveaux par la suite.
 
 Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
 
-Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
+Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 chance, et +2 aux tests de compétence (en plus du +1 aux tests de compétence accordé par la chance). Au niveau 15 et tous les 10 niveaux par la suite, ce chant accorde un +1 supplémentaire à la chance et +2 aux tests de compétence.
 
-Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un DD de 15.
+Niveau 9 : L’Appel de la Sirène. Lorsqu'il est joué, chaque ennemi qui entend le chant doit faire un jet de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'il subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal à 10 + 1/2 niveau de barde + bonus de Charisme.
 
-Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
+Niveau 13 : Hymne guerrier de Sith. Lorsqu'il est joué, les alliés du barde gagnent un bonus d'armure générique de +2, une résistance aux dégâts physiques de 3/- et ils régénèrent 3 points de dégâts par round au combat. Au niveau 18 et tous les 10 niveaux par la suite, ce chant accorde un +2 supplémentaire à la classe d’armure, 3/- résistance aux dégâts physiques et 3 points de vie soignés par round.
 
-Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+Niveau 40 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent 10/- résistance à toutes les formes de dégâts magiques, une résistance à la magie fixée à 35 si inférieure et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora, et de l'Hymne guerrier de Sith. Au niveau 50, ce chant fixe la résistance à la magie à 40 si inférieure et accorde une autre 10/- résistance aux dégâts magiques.
 
 Révisions des créatures fait également en sorte que les ennemis utilisent davantage de sorts et de capacités basés sur le son au début du jeu (comme le cri des harpies dans le Chapitre 1), ce qui rend la Chanson des Kaudies plus utile.
 
@@ -120,6 +121,8 @@ Niveau 15 : Élémentaire de Feu, d’Eau, de Terre ou d’Air
 Niveau 40 : Dragon noir (Forme de dragon)
 
 Les dons de métamorphose des druides sont également modifiés. Ils permettent désormais aux druides de se transformer en chiens esquiveurs, en scarabées rhinocéros et en une nuée d’insectes semblable à celle du sort Fatalité rampante.
+
+Désormais, les druides peuvent également lancer spontanément des sorts de Convocation d’alliés naturels.
 
 Roublards : les roublards gagnent +1 à la chance tous les 5 niveaux. Ils n’apporteront pas les gros dégâts en continu d’un guerrier, mais ils pourront régulièrement effectuer des attaques sournoises très efficaces (la chance dans IWD2 augmente les chances d’effectuer un coup critique).
 
@@ -144,7 +147,8 @@ Moine de l’Ordre des Estropiés :
 6ème niveau : Le moine gagne une résistance de 2/- à tous les dégâts physiques. Une résistance supplémentaire de 1/- est gagnée tous les 4 niveaux suivants.
 
 Moine de la Lune Noire :
-2ème niveau : Le moine gagne un bonus d'attaque sournoise de 1d6. Tous les 4 niveaux de moine après le niveau 2, le moine gagne 1d6 dégâts supplémentaires d'attaque sournoise.
+2ème niveau : Le moine gagne une utilisation par jour de Ténèbres. Chaque niveau qui accorderait normalement une utilisation de Plénitude physique au moine lui donne à la place une utilisation supplémentaire de Ténèbres. Le DD est égal à 15 + modificateur de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au DD de n'importe quel autre sort ou capacité de Ténèbres qu'il lance. Le moine peut voir parfaitement, même dans les ténèbres magiques.
+10ème niveau : Le moine gagne un bonus de +1 aux dégâts contre tout ennemi aveuglé ou dont la vision est altérée par un effet de Ténèbres. Tous les 8 niveaux de moine après le niveau 10, le moine gagne un bonus supplémentaire de +1 aux dégâts contre les ennemis se trouvant dans ces situations.
 
 Guerriers : les guerriers obtiennent +1 aux dégâts tous les 5 niveaux et +5% de chances de coup critique tous les 10 niveaux, et peuvent obtenir Arme de prédilection supérieure dans une arme au niveau 8 et Spécialisation martiale supérieure au niveau 12. Tous les guerriers obtiennent de meilleurs jets de sauvegarde et des attaques plus puissantes.
 
@@ -169,7 +173,7 @@ Paladin de Mystra :
 
 Rôdeurs : les rôdeurs obtiennent plus d’emplacements de sorts, et ils les obtiennent à des niveaux inférieurs. Ils peuvent obtenir les dons Combat à deux armes amélioré et Feu nourri à des niveaux inférieurs à ceux des autres classes, et ils peuvent obtenir un deuxième rang dans ces dons pour une autre attaque par round. Ils peuvent également utiliser Collets naturels tous les 6 niveaux, ce qui piège les ennemis pendant 5 rounds en cas d'échec à un jet de sauvegarde de Réflexes. Collets naturels est beaucoup plus efficace que dans le jeu d'origine ; le DD du jet de sauvegarde évolue désormais avec la compétence Sens de la nature du rôdeur.
 
-Ensorceleurs : les ensorceleurs n'atteindront plus leur apogée au niveau 20 et ne connaîtront plus ensuite une croissance quasi nulle.
+Ensorceleurs : Au niveau 16, les ensorceleurs améliorent leur maîtrise des dons de métamagie ajoutés par ce composant, acquérant la capacité d'utiliser la métamagie sans augmenter le niveau du sort de manière aussi importante qu'auparavant. Désormais, les ensorceleurs n'atteindront plus leur apogée au niveau 20 pour subir ensuite une progression quasi nulle.
 
 Magiciens : les magiciens généralistes gagnent désormais +1 au DD de tous les sorts de magicien qu'ils lancent (les magiciens spécialistes gagnent +2 au DD des sorts de magicien qu'ils lancent de leur école, mais il s'agissait d'un avantage dans le jeu vanilla qui n'avait pas été documentée dans IWD2 jusqu'à présent).
 
@@ -421,17 +425,35 @@ Les rencontres d'Icewind Dale 2 ont souvent des ennemis supplémentaires pour un
 
 Notez que ce composant ne fait presque rien dans une partie Cœur de Furie ou une partie en solo, car dans ces modes, vos personnages sont généralement d'un niveau suffisamment élevé pour déclencher de toute façon les rencontres de haut niveau.
 
---En mode Cœur de Furie, réduire les bonus aux PV des créatures--
+--En mode Cœur de Furie, ajuster les bonus aux PV des créatures--
 
-Les ennemis en mode Cœur de Furie ont normalement des PV absolument ridicules : les gobelins du prologue ont 157 PV, et les araignées de givre du Chapitre 2 ont 452 PV ! Ce composant réduit les PV des créatures en mode Cœur de Furie. Ce composant est conçu pour un groupe commençant le mode Cœur de Furie à un niveau bas. Il est équilibré de manière à ce que les ennemis en début de partie aient beaucoup moins de PV que dans le mode Cœur de Furie d'origine, mais les ennemis plus tard dans le jeu n’auront pas beaucoup moins de PV. Cela rendra le mode Cœur de Furie plus facile, mais aussi beaucoup moins fastidieux (et Remaniement des créatures rend le mode Cœur de Furie plus difficile pour compenser).
+Les ennemis en mode Cœur de Furie ont normalement des PV absolument ridicules : les gobelins du prologue ont 157 PV, et les araignées de givre du Chapitre 2 en ont 452 ! Le premier sous-composant réduit les PV de la plupart des ennemis en mode Cœur de Furie, bien qu'il augmente ceux d'un petit nombre d'ennemis de très haut niveau. Ce sous-composant est conçu pour un groupe commençant le mode Cœur de Furie à bas niveau. Voici les seuils, basés sur le niveau d'origine de la créature avant de recevoir les bonus du mode Cœur de Furie :
 
---En mode Cœur de Furie, réduire les bonus à l’attaque des créatures--
+1-19 : Diminution des PV. Les ennemis de très bas niveau comme les gobelins auront des PV considérablement réduits.
+25+ : Augmentation des PV.
 
-Les ennemis en mode Cœur de Furie ont des bonus d'attaque si élevés qu'il leur est presque impossible de rater sauf sur un 1. Ce composant donne aux créatures en dehors du groupe un malus d'attaque de -9 en mode Cœur de Furie. Ils auront toujours des bonus d'attaque plus élevés que dans le mode de difficulté suivant, mais ce ne sera pas aussi extrême.
+Le second sous-composant se limite à appliquer l'augmentation des PV aux seuls ennemis de niveau extrêmement élevé.
 
---En mode Cœur de Furie, réduire les bonus aux jets de sauvegarde des créatures--
+--En mode Cœur de Furie, ajuster les bonus à l’attaque des créatures--
 
-Au début du mode Cœur de Furie, il peut être très difficile de surpasser les jets de sauvegarde des ennemis si vous commencez avec un groupe de bas niveau. Ce composant donne un petit malus de jets de sauvegarde aux créatures en dehors du groupe en mode Cœur de Furie.
+Le premier sous-composant vise à permettre aux groupes commençant le mode Cœur de Furie à bas niveau d'avoir une chance d'obtenir une CA (Classe d'Armure) suffisante pour qu'un personnage puisse esquiver les attaques ennemies, au moins de temps en temps. Il diminue les bonus à l'attaque des ennemis de bas niveau en mode Cœur de Furie, mais commence à augmenter l'attaque des ennemis de haut niveau au-delà du mode Cœur de Furie d'origine ; à ce stade, le groupe est en effet de très haut niveau et dispose de nombreux outils pour augmenter sa CA. Voici les seuils, basés sur le niveau d'origine de la créature avant de recevoir les bonus du mode Cœur de Furie :
+
+1-4 : -12 à l'attaque.
+5-9 : -6 à l'attaque.
+15-19 : +6 à l'attaque.
+20+ : +12 à l'attaque.
+
+Le second sous-composant se limite à appliquer les augmentations de l'attaque aux ennemis de niveau 15 ou plus (sans modifier les ennemis de niveau inférieur).
+
+--En mode Cœur de Furie, ajuster les bonus aux jets de sauvegarde des créatures--
+
+Au début du mode Cœur de Furie, il peut être très difficile de faire échouer des jets de sauvegarde aux ennemis si vous commencez avec un groupe de bas niveau. Le premier sous-composant inflige une légère pénalité aux jets de sauvegarde des ennemis de bas niveau en mode Cœur de Furie, mais il commence à augmenter les jets de sauvegarde des ennemis de plus haut niveau au-delà du mode Cœur de Furie d'origine. À haut niveau, les ennemis ont donc une meilleure défense contre des sorts tels que Plainte d'outre-tombe ou Domination de groupe, qui permettent de remporter instantanément un combat si tout le monde échoue à son jet de sauvegarde. Voici les seuils, basés sur le niveau d'origine de la créature avant de recevoir les bonus du mode Cœur de Furie :
+
+1-9 : -3 à tous les jets de sauvegarde.
+15-19 : +3 à tous les jets de sauvegarde.
+20+ : +6 à tous les jets de sauvegarde.
+
+Le second sous-composant se limite à appliquer les augmentations de jets de sauvegarde aux ennemis de niveau 15 ou plus.
 
 --En mode Cœur de Furie, supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées--
 
@@ -608,6 +630,8 @@ Chris Dix (Elle/Elle) - alias @semiticgoddess - est à l’origine du projet IWD
 @paladin, klichko86 et rytomen ont traduit IWD2EE en russe.
 
 @WillScarlettOhara a traduit IWD2EE en français et a apporté quelques correctifs à la VF du jeu.
+
+@DanielCarvalho translated IWD2EE into Portuguese.
 
 Andrii Shafetov - alias @ashafetov - a créé le nouvel écran de menu principal d’IWD2EE et les écrans de démarrage du prologue et des deux premiers chapitres.
 
