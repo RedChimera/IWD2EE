@@ -1487,8 +1487,8 @@ Niveau 29 : +12 en Force et en Constitution et +6 aux jets de sauvegarde de Volo
 Les membres de l’Ordre de la Lune Noire vénèrent Shar la Sombre Dame, déesse de la nuit. Leur formation monastique guide leurs pouvoirs spirituels et personnels.
 
 Avantages :
-* Niveau 2 : Le moine gagne une utilisation de Ténèbres par jour. Tout niveau qui donnerait au moine une utilisation de Plénitude physique lui donne à la place une autre utilisation de Ténèbres. Le degré de difficulté (DD) est égal à 15 + bonus de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au Degré de Difficulté de tout autre sort ou capacité Ténèbres qu'il lance. Le moine peut voir parfaitement même dans l'obscurité magique.
-* Niveau 10 : Le moine gagne +1 point de dégâts contre tout ennemi qui est aveuglé ou dont la vision est altérée par l'effet de Ténèbres. Pour chaque tranche de 8 niveaux de moine après le niveau 10, le moine gagne +1 point de dégâts supplémentaire contre les ennemis dans ces situations.~
+* Niveau 2 : Le moine gagne une utilisation par jour de Ténèbres. Chaque niveau qui accorderait normalement une utilisation de Plénitude physique au moine lui donne à la place une utilisation supplémentaire de Ténèbres. Le DD est égal à 15 + modificateur de Sagesse + la moitié du niveau de moine du personnage. Le moine ajoute également la moitié de son niveau de moine au Degré de Difficulté de n'importe quel autre sort ou capacité de Ténèbres qu'il lance. Le moine peut voir parfaitement, même dans les ténèbres magiques.
+* Niveau 10 : Le moine gagne un bonus de +1 aux dégâts contre tout ennemi aveuglé ou dont la vision est altérée par un effet de Ténèbres. Tous les 8 niveaux de moine après le niveau 10, le moine gagne un bonus supplémentaire de +1 aux dégâts contre les ennemis se trouvant dans ces situations.~
 @984 = ~Ténèbres
 
 Cette capacité crée une obscurité magique dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur ou être considérées comme aveuglées. Les créatures dotées de la vision dans le noir ne sont pas aveuglées, mais elles ne peuvent voir qu'avec une capacité limitée à travers l'obscurité magique, subissant un malus de -4 aux jets d'attaque en cas d'échec de leur jet de sauvegarde. Les créatures ayant une vision dans le noir supérieure de 36 mètres (comme les drows, les nains gris ou les gnomes des profondeurs) ne subissent qu'un malus de -2 aux jets d'attaque. Les démons et les créatures immunisées à la cécité ne sont pas affectés.
@@ -3516,9 +3516,9 @@ Poids : 1,4 kg (3 lb)
 Compétence : arme de guerre, arc
 Type d'arme : à deux mains~
 @24043=~Ténèbres de cambion~
-@48   = ~Ajuster les bonus de PV des créatures en mode Cœur de furie~
-@52   = ~Ajuster les bonus d'attaque des créatures en mode Cœur de furie~
-@53   = ~Ajuster les bonus aux jets de sauvegarde des créatures en mode Cœur de furie~
+@48   = ~En mode Cœur de Furie, ajuster les bonus aux PV des créatures~
+@52   = ~En mode Cœur de Furie, ajuster les bonus à l’attaque des créatures~
+@53   = ~En mode Cœur de Furie, ajuster les bonus aux jets de sauvegarde des créatures~
 @54   = ~Les ennemis de bas niveau ont des jets de sauvegarde réduits, les ennemis de haut niveau ont des jets de sauvegarde augmentés (recommandé si vous prévoyez de commencer CdF avec un groupe frais)~
 @55   = ~Les ennemis de haut niveau ont des jets de sauvegarde augmentés~
 @60   = ~Les ennemis de bas niveau ont une attaque réduite, les ennemis de haut niveau ont une attaque augmentée (recommandé si vous prévoyez de commencer CdF avec un groupe frais)~
