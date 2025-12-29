@@ -632,7 +632,7 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 
 @WillScarlettOhara translated IWD2EE into French.
 
-@DanielCarvalho translated IWD2EE into Portuguese.
+@DanielCarvalho is currently translating IWD2EE into Portuguese.
 
 Andrii Shafetov - aka @ashafetov - created IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.
 

@@ -2730,39 +2730,37 @@ END
 
 OUTER_SPRINT stringumdthreshold @56036
 OUTER_SPRINT stringweight @56037
-ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~) BEGIN
-	COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
-		READ_LONG 0x18 theitemflags
-		READ_SHORT 0x1c theitemcategory
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_LONG 0x18 theitemflags
+	READ_SHORT 0x1c theitemcategory
 
-		PATCH_IF (theitemflags BAND 0x04000044) == 0x00000044 AND theitemcategory != 11 AND theitemcategory != 35 AND () BEGIN
-			READ_LONG 0x34 theprice
-			READ_BYTE 0x72 theumddc
-			theumddc += (((price / 1000) ** (1 2)) + 5) * 3 / 2
-			PATCH_IF theumddc > 255 BEGIN
-				theumddc = 255
-			END
-			WRITE_BYTE 0x72 theumddc
-			theitemflags |= 0x4000000
-			WRITE_LONG 0x18 theitemflags
-			READ_LONG 0x1e theitemunusability
+	PATCH_IF (theitemflags BAND 0x04000044) == 0x00000044 AND theitemcategory != 11 AND theitemcategory != 35 BEGIN
+		READ_LONG 0x34 theprice
+		READ_BYTE 0x72 theumddc
+		theumddc += (((theprice / 1000) ** (1 2)) + 5) * 3 / 2
+		PATCH_IF theumddc > 255 BEGIN
+			theumddc = 255
+		END
+		WRITE_BYTE 0x72 theumddc
+		theitemflags |= 0x4000000
+		WRITE_LONG 0x18 theitemflags
+		READ_LONG 0x1e theitemunusability
 //			READ_BYTE 0x2b theitemunusability2
 //			READ_BYTE 0x2d theitemunusability3
 //			READ_BYTE 0x2f theitemunusability4
-			READ_BYTE 0x2a theminintelligence
-			READ_BYTE 0x2c themindexterity
-			READ_BYTE 0x2e theminwisdom
-			READ_BYTE 0x30 theminconstitution
-			READ_BYTE 0x32 themincharisma
-			READ_LONG IDENTIFIED_DESC us_desc
-			PATCH_IF ((theitemunusability BAND 0x3F83F102) > 0 OR theminintelligence > 0 OR themindexterity > 0 OR theminwisdom > 0 OR theminconstitution > 0 OR themincharisma > 0) AND us_desc > 0 BEGIN
+		READ_BYTE 0x2a theminintelligence
+		READ_BYTE 0x2c themindexterity
+		READ_BYTE 0x2e theminwisdom
+		READ_BYTE 0x30 theminconstitution
+		READ_BYTE 0x32 themincharisma
+		READ_LONG IDENTIFIED_DESC us_desc
+		PATCH_IF ((theitemunusability BAND 0x3F83F102) > 0 OR theminintelligence > 0 OR themindexterity > 0 OR theminwisdom > 0 OR theminconstitution > 0 OR themincharisma > 0) AND us_desc > 0 BEGIN
 
-				GET_STRREF us_desc description_old
-				INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
-					REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([%WNL%%MNL%%LNL%]%stringweight%.*\)~ ~%stringumdthreshold% %theumddc%\1~
-				END
-					SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
+			GET_STRREF us_desc description_old
+			INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+				REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([%WNL%%MNL%%LNL%]\)+\(%stringweight%.*\)~ ~\1%stringumdthreshold% %theumddc%\1\2~
 			END
+				SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
 		END
-		BUT_ONLY_IF_IT_CHANGES
-END
+	END
+	BUT_ONLY_IF_IT_CHANGES

@@ -104,7 +104,7 @@ LANGUAGE   ~French~
            ~iwd2ee/tra/French/more_persuasion_options.tra~
            ~iwd2ee/tra/French/new_strings_after_release.tra~
            ~iwd2ee/tra/French/typo.tra~
-
+/*
 LANGUAGE   ~Portuguese~
            ~Portuguese~
            ~iwd2ee/tra/Portuguese/setup.tra~
@@ -125,7 +125,7 @@ LANGUAGE   ~Portuguese~
            ~iwd2ee/tra/Portuguese/more_persuasion_options.tra~
            ~iwd2ee/tra/Portuguese/new_strings_after_release.tra~
            ~iwd2ee/tra/Portuguese/typo.tra~
-
+*/
 //IWD2EE Core
 BEGIN @0 DESIGNATED 1000
       INCLUDE ~%mod_folder%/components/initial_modifications.tpa~      //IWD2EE Core
