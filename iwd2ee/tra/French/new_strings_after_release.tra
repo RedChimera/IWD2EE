@@ -3578,102 +3578,102 @@ Désavantages :
 //Strings to translate for v3.4.2
 
 //The description of the next 2 items is a copy of vanilla IWD2 strref 11847
-@12937    = ~Misery's Herald +4~
-@12938    = ~This flail was consecrated by priests of the great orc god Gruumsh for use against the various elven and dwarven foes that his armies fought against.  It was held by the high priest of the Bone Legion until he fell while leading his people against the elven forces at the Hand of the Seldarine.  The flail is simple in design.  The shaft is crafted to resemble an elven femur, wrapped in tanned elf skin.  A stout chain connects the shaft to a spiked ball.  The entire creation is forged out of meteoric iron.  It is a testament to the potential of orcish craftsmanship.
+@12937	= ~Héraut de la Misère +4~
+@12938	= ~Ce fléau fut consacré par les prêtres du Grand dieu orque Gruumsh afin d'être utilisé contre les elfes et nains que ses armées combattaient alors. Le grand prêtre de la légion des Ossements la brandit jusqu'au jour où il succomba face aux elfes à la Main de la Seldarine, alors qu'il menait son peuple à la bataille. Le fléau est très simple. Le manche est sculpté comme un fémur d'elfe et il est recouvert de peau d'elfe tannée. Une grosse chaîne relie le manche à une boule hérissée de pointes. Cet objet a été entièrement conçu en métal météorique. Il témoigne de l'habileté des artisans orques.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  1d8  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Panic: 20% change target will panic for 4 rounds (Will DC 22)
-  Bane: +3d6 damage vs. elves and half-elves
-  Counts as a cold iron weapon
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@12939    = ~Misery's Herald +6~
-@12940    = ~This flail was consecrated by priests of the great orc god Gruumsh for use against the various elven and dwarven foes that his armies fought against.  It was held by the high priest of the Bone Legion until he fell while leading his people against the elven forces at the Hand of the Seldarine.  The flail is simple in design.  The shaft is crafted to resemble an elven femur, wrapped in tanned elf skin.  A stout chain connects the shaft to a spiked ball.  The entire creation is forged out of meteoric iron.  It is a testament to the potential of orcish craftsmanship.
+Dégâts : 1d8 +4
+Bonus d'attaque : +4
+Enchantement : +4
+Type de dégâts : contondants
+Spécial :
+ Terreur : 20% de chances que la cible soit terrifiée pendant 4 rounds (Volonté DD 22)
+ Fléau : +3d6 de dégâts contre les elfes et demi-elfes
+ Compte comme une arme en fer froid
+Poids : 2,5 kg (5 lb)
+Compétence : arme de guerre, fléau
+Type d'arme : à une main~
+@12939	= ~Héraut de la Misère +6~
+@12940	= ~Ce fléau fut consacré par les prêtres du Grand dieu orque Gruumsh afin d'être utilisé contre les elfes et nains que ses armées combattaient alors. Le grand prêtre de la légion des Ossements la brandit jusqu'au jour où il succomba face aux elfes à la Main de la Seldarine, alors qu'il menait son peuple à la bataille. Le fléau est très simple. Le manche est sculpté comme un fémur d'elfe et il est recouvert de peau d'elfe tannée. Une grosse chaîne relie le manche à une boule hérissée de pointes. Cet objet a été entièrement conçu en métal météorique. Il témoigne de l'habileté des artisans orques.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  1d8  +6
-Attack Bonus:  +6
-Enchantment:  +6
-Damage Type:  Bludgeoning
-Special:
-  Panic: 30% change target will panic for 4 rounds (Will DC 28)
-  Bane: +4d6 damage vs. elves and half-elves
-  Counts as a cold iron weapon
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Dégâts : 1d8 +6
+Bonus d'attaque : +6
+Enchantement : +6
+Type de dégâts : contondants
+Spécial :
+ Terreur : 30% de chances que la cible soit terrifiée pendant 4 rounds (Volonté DD 28)
+ Fléau : +4d6 de dégâts contre les elfes et demi-elfes
+ Compte comme une arme en fer froid
+Poids : 2,5 kg (5 lb)
+Compétence : arme de guerre, fléau
+Type d'arme : à une main~
 
 //For the next 3 items, only the damage, attack bonus, and enchantment were changed
 
-@11331    = ~Big Death +3~
-@11332    = ~The gargantuan throwing axe known as Big Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+@11331	= ~Grande Mort +3~
+@11332	= ~La colossale hache de lancer connue sous le nom de Grande Mort est clairement une arme orque. Utilisée lors de la bataille de la Main de la Seldarine par l'impressionnant Grubrun Croc-Jaune, elle appartenait à l'origine à un mercenaire ogre. Après un assaut particulièrement meurtrier contre une communauté minière de Nains, Grubrun découvrit l'arme plantée dans le crâne d'un garde. Apparemment, l'ogre avait été assez stupide pour venir s'empaler sur la lance de son adversaire, mais il avait tout de même réussi à fendre le crâne de ce dernier avant de rendre l'âme. Essayant de libérer l'arme, il en avait manifestement brisé le manche dans son dernier souffle.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+Retirant la lame en fer noir du crâne du Nain, Grubrun rentra dans sa forteresse de Nab-Nurog et ordonna à son chaman d'enchanter la lame. Refusant de doter l'arme du même manche qu'auparavant de peur qu'elle soit trop lourde à manier pour lui, le chef orque décida d'en faire une arme de jet, exigeant qu'elle soit enchantée de sorte à revenir dans sa main chaque fois qu'il la lancerait. Par la suite, il prit grand plaisir à s'en servir, appréciant tout particulièrement le fait de la voir revenir vers lui, poisseuse de sang, après avoir tranché un ennemi en deux.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Grubrun périt lors de l'ultime bataille de la Main de la Seldarine, au cours de laquelle il lança Grande Mort sur Kaylessa, maîtresse d'armes des Elfes. Esquivant le projectile, cette dernière transperça l'abdomen de l'orque. On dit que, sans se départir de son calme, Kaylessa se serait ensuite baissée alors que la hache revenait et que l'arme aurait tranché la tête de son possesseur.
 
-Big Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+Grande Mort est une hache d'une telle taille qu'elle en devient presque inutilisable. Seuls son équilibre particulier et la faible longueur de son manche permettent de l'identifier comme une arme de jet. Mais elle est si massive qu'il est impossible de la lancer d'une main ; en fait, il est nécessaire de la jeter de côté, en faisant pivoter tout le haut du corps.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  2d8 + 3
-Attack Bonus:  -5
-Enchantment:  +3
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11333    = ~Big Black Flying-Death +5~
-@11334    = ~The gargantuan throwing axe known as Big Black Flying-Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Black Flying-Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+Dégâts : 2d8 +3
+Bonus d'attaque : -5
+Enchantement : +3
+Type de dégâts : tranchants
+Spécial :
+ Boomerang : revient vers l'envoyeur après avoir été lancée
+ Compte comme une arme en fer froid
+Poids : 5 kg (10 lb)
+Compétence : arme de guerre, hache
+Type d'arme : à deux mains
+Force minimale requise : 18~
+@11333	= ~Grande Mortnoire Volante +5~
+@11334	= ~La colossale hache de lancer connue sous le nom de Grande Mortnoire Volante est clairement une arme orque. Utilisée lors de la bataille de la Main de la Seldarine par l'impressionnant Grubrun Croc-Jaune, elle appartenait à l'origine à un mercenaire ogre. Après un assaut particulièrement meurtrier contre une communauté minière de Nains, Grubrun découvrit l'arme plantée dans le crâne d'un garde. Apparemment, l'ogre avait été assez stupide pour venir s'empaler sur la lance de son adversaire, mais il avait tout de même réussi à fendre le crâne de ce dernier avant de rendre l'âme. Essayant de libérer l'arme, il en avait manifestement brisé le manche dans son dernier souffle.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Black Flying-Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+Retirant la lame en fer noir du crâne du Nain, Grubrun rentra dans sa forteresse de Nab-Nurog et ordonna à son chaman d'enchanter la lame. Refusant de doter l'arme du même manche qu'auparavant de peur qu'elle soit trop lourde à manier pour lui, le chef orque décida d'en faire une arme de jet, exigeant qu'elle soit enchantée de sorte à revenir dans sa main chaque fois qu'il la lancerait. Par la suite, il prit grand plaisir à s'en servir, appréciant tout particulièrement le fait de la voir revenir vers lui, poisseuse de sang, après avoir tranché un ennemi en deux.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Black Flying-Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Grubrun périt lors de l'ultime bataille de la Main de la Seldarine, au cours de laquelle il lança Grande Mortnoire Volante sur Kaylessa, maîtresse d'armes des Elfes. Esquivant le projectile, cette dernière transperça l'abdomen de l'orque. On dit que, sans se départir de son calme, Kaylessa se serait ensuite baissée alors que la hache revenait et que l'arme aurait tranché la tête de son possesseur.
 
-Big Black Flying-Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+Grande Mortnoire Volante est une hache d'une telle taille qu'elle en devient presque inutilisable. Seuls son équilibre particulier et la faible longueur de son manche permettent de l'identifier comme une arme de jet. Mais elle est si massive qu'il est impossible de la lancer d'une main ; en fait, il est nécessaire de la jeter de côté, en faisant pivoter tout le haut du corps.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  2d10 + 5
-Attack Bonus : -5
-Enchantment:  +5
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11924    = ~To the northeast of the great tree-town of Kuldahar lies the Vale of Shadows, a valley of crypts and tombs where Kresselack the Black Wolf is said to be buried. Almost thirty years past, a band of adventurers entered the Vale of Shadows and returned with many relics and treasures taken from the tombs there. Rol-Sayid's Left Hand of Darkness is one such item, though its true purpose was not realized when it was discovered. Considered nothing more than the cast-off bandage of a mummy, it had been used to wrap a gold necklace lying in one of the sarcophagi in the tombs.
+Dégâts : 2d10 +5
+Bonus d'attaque : -5
+Enchantement : +5
+Type de dégâts : tranchants
+Spécial :
+ Boomerang : revient vers l'envoyeur après avoir été lancée
+ Compte comme une arme en fer froid
+Poids : 5 kg (10 lb)
+Compétence : arme de guerre, hache
+Type d'arme : à deux mains
+Force minimale requise : 18~
+@11924	= ~Au nord-est de Kuldahar, la ville du grand arbre, se trouve la Vallée des Ombres, célèbre pour ses cryptes et ses tombeaux et où Kresselack le Loup Noir aurait été enterré. Il y a de cela environ trente ans, un groupe d'aventuriers pénétra dans la Vallée et en revint avec de nombreuses reliques et autres trésors pris dans les tombeaux. La Main Gauche des Ténèbres de Rol-Sayid est l'un de ces objets, dont la fonction n'était pas encore clairement établie lorsqu'elle fut découverte. Considérée comme un morceau de bandage de momie, elle a été utilisée pour envelopper un collier en or qui se trouvait dans un des sarcophages pillés.
 
-The necklace's wrapping was discarded as soon as the band of adventurers returned to Kuldahar, and as they cast it away, the adventurers joked that it could serve some little boy as a sling if need be. One of the children of Kuldahar was quick to pick up on this comment, and he kept the sling both for hunting and as a good luck charm for several years. It is not known if he knew if the wrapping was magical or not, and he attributed the accuracy of the stones cast from it as his own natural ability rather than that of the sling.
+Le collier fut déballé dès que les aventuriers revinrent à Kuldahar ; quant à la bandelette, ils estimèrent qu'elle pourrait faire une très belle fronde si un des enfants présents le souhaitait. Il ne fallut pas le répéter pour trouver preneur et un jeune garçon repartit donc avec la fronde, qu'il conserva pendant plusieurs années. On ignore s'il s'était rendu compte des propriétés magiques de son arme ; toujours est-il qu'il préféra toujours vanter sa dextérité naturelle pour expliquer la précision avec laquelle il pouvait lancer ses billes.
 
-In truth, Rol-Sayid's Left Hand of Darkness is one of the wrappings from the left hand of one of Kresselack's lieutenants, who had been resurrected as a mummy within the tomb of his lord and served as a guardian against trespassers. When a stone is placed within the wrapping and spun with great force, the stone will fly straight and true at an enemy. Furthermore, as long as the wrapping is held in the hand, the wielder is immune to diseases, both magical and mundane.
+En vérité, la Main Gauche des Ténèbres de Rol-Sayid entourait le bras gauche d'un des lieutenants de Kresselack, qui était revenu à la vie sous la forme d'une momie pour servir de gardien dans le tombeau de son ancien maître. Qu'une pierre ou une bille soit placée dans cette bandelette et elle partira avec une précision diabolique directement vers l'ennemi visé. Le propriétaire de cet objet est également immunisé à toute forme de maladie, magique ou naturelle, tant qu'il le porte dans sa main.
 
-STATISTICS:
+PARAMÈTRES :
 
-Damage:  +3 (missile)
-Attack Bonus:  +3
-Special:
-  Wielder is immune to Disease when equipped
-  Spell Power: Can cast the spell Remove Disease 6/day
-  Spell Power: Can cast the spell Symbol of Hopelessness (at level 15) 1/day
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@55821=~You cannot change armor during combat.~
-@55931=~Prevent Equipping Armor During Combat~
-@55932=~Prevents party members from putting on armor during combat.~
+Dégâts : +3 (projectile)
+Bonus d'attaque : +3
+Spécial :
+ Le porteur est immunisé à la Maladie tant qu'il la tient en main
+ Puissance des sorts : lance le sort Guérison des maladies 6/jour
+ Puissance des sorts : lance le sort Symbole du désespoir (au niveau 15) 1/jour
+Poids : 0
+Compétence : arme courante, projectile
+Type d'arme : à une main~
+@55821=~Vous ne pouvez pas changer d'armure pendant le combat.~
+@55931=~Empêcher l'équipement d'armure pendant le combat~
+@55932=~Empêche les membres du groupe de mettre une armure pendant le combat.~
