@@ -3520,102 +3520,104 @@
 //Strings to translate for v3.4.2
 
 //The description of the next 2 items is a copy of vanilla IWD2 strref 11847
-@12937    = ~Misery's Herald +4~
-@12938    = ~This flail was consecrated by priests of the great orc god Gruumsh for use against the various elven and dwarven foes that his armies fought against.  It was held by the high priest of the Bone Legion until he fell while leading his people against the elven forces at the Hand of the Seldarine.  The flail is simple in design.  The shaft is crafted to resemble an elven femur, wrapped in tanned elf skin.  A stout chain connects the shaft to a spiked ball.  The entire creation is forged out of meteoric iron.  It is a testament to the potential of orcish craftsmanship.
+@12937    = ~Вестник беды +4~
+@12938    = ~Жрецы великого орочьего бога Груумша освятили этот цеп, чтобы крушить эльфов и дварфов, с которыми сражались орки. Верховный жрец Костяного легиона владел им, пока не был сражён в битве против эльфов Руки Селдарин. Цеп прост по конструкции. Рукоять сделана в форме берцовой кости эльфа и обтянута выдубленной эльфийской кожей. Крепкая цепь соединяет ручку с шипастым шаром. Всё изготовлено из метеоритного железа. Мастерство создателей этого оружия доказывает, что орочьи кузнецы отнюдь не безнадёжны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Panic: 20% change target will panic for 4 rounds (Will DC 22)
-  Bane: +3d6 damage vs. elves and half-elves
-  Counts as a cold iron weapon
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@12939    = ~Misery's Herald +6~
-@12940    = ~This flail was consecrated by priests of the great orc god Gruumsh for use against the various elven and dwarven foes that his armies fought against.  It was held by the high priest of the Bone Legion until he fell while leading his people against the elven forces at the Hand of the Seldarine.  The flail is simple in design.  The shaft is crafted to resemble an elven femur, wrapped in tanned elf skin.  A stout chain connects the shaft to a spiked ball.  The entire creation is forged out of meteoric iron.  It is a testament to the potential of orcish craftsmanship.
+Урон: 1d8 +4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Паника: при попадании с шансом в 20% цель впадёт в панику на 4 раунда (Спасбросок воли с УС 22 отменяет эффект)
+ Губитель: +3d6 урона против эльфов и полуэльфов
+ Считается оружием из холодного железа
+Вес: 5 фунтов
+Фактор скорости: 5
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@12939    = ~Вестник беды +6~
+@12940    = ~Жрецы великого орочьего бога Груумша освятили этот цеп, чтобы крушить эльфов и дварфов, с которыми сражались орки. Верховный жрец Костяного легиона владел им, пока не был сражён в битве против эльфов Руки Селдарин. Цеп прост по конструкции. Рукоять сделана в форме берцовой кости эльфа и обтянута выдубленной эльфийской кожей. Крепкая цепь соединяет ручку с шипастым шаром. Всё изготовлено из метеоритного железа. Мастерство создателей этого оружия доказывает, что орочьи кузнецы отнюдь не безнадёжны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +6
-Attack Bonus:  +6
-Enchantment:  +6
-Damage Type:  Bludgeoning
-Special:
-  Panic: 30% change target will panic for 4 rounds (Will DC 28)
-  Bane: +4d6 damage vs. elves and half-elves
-  Counts as a cold iron weapon
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8 +6
+Атака: +6
+Зачарование: +6
+Тип урона: дробящий
+Особенности:
+ Паника: при попадании с шансом в 30% цель впадёт в панику на 4 раунда (Спасбросок воли с УС 28 отменяет эффект)
+ Губитель: +4d6 урона против эльфов и полуэльфов
+ Считается оружием из холодного железа
+Вес: 5 фунтов
+Фактор скорости: 5
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 
 //For the next 3 items, only the damage, attack bonus, and enchantment were changed
 
-@11331    = ~Big Death +3~
-@11332    = ~The gargantuan throwing axe known as Big Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+@11331    = ~Большая смерть +3~
+@11332    = ~Огромный метательный топор, известный как "Большая смерть" - оружие орков в полном смысле этого слова. Этот топор, которым в битве за Руку Селдарин орудовал неуклюжий орочий военачальник Желтозубый Грубрун Гнилой Клык, переделан из двуручного боевого топора одного огра-наёмника. После одного жестокого набега на поселение дварфов-рудокопов Грубрун увидел этот топор в черепе мёртвого маршала дварфов. Судя по всему, огр-наёмник в отчаянной атаке наткнулся на копьё маршала, но прежде чем умереть, успел всадить топор маршалу в голову, да ещё и сломать топорище в попытке выдернуть топор для второго удара.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+С трудом выдернув огромный топор, сделанный из чёрного железа, из черепа дварфа, Грубрун вернулся в свою крепость на Наб-Нуроге и велел шаману племени зачаровать его. Не подумав, починить топорище, и сочтя топор слишком тяжёлым и неудобным для ближнего боя, Грубрун решил пользоваться топором как метательным оружием и потребовал, чтобы он возвращался обратно в руку после броска. Военачальнику доставляло большое удовольствие швыряться таким громадным топором, с ликованием наблюдая, как "Большая смерть" возвращается к нему, сверкая и брызгая кровью, после перерубания врага пополам.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Грубрун Гнилой Клык встретил смерть в решающей битве за Руку, когда бросил "Большую смерть" в эльфийку Кайлессу, оружейного мастера Руки Селдарин. Она изящно уклонилась от летящего оружия, молниеносно бросилась вперёд и всадила клинок в живот безоружного орка. Затем, как говорят, она припала к земле - и в это самое время топор Грубруна вернулся к нему, начисто снеся его голову вместе с жёлтыми клыками и всем прочим.
 
-Big Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+"Большая смерть" - это очень большой метательный топор, почти что до абсурда, и его метательную сущность выдаёт лишь короткая рукоять и балансировка. На деле же топор настолько тяжёл, что его невозможно метнуть одной рукой, а нужно брать обеими и раскручивать всем телом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d8 + 3
-Attack Bonus:  -5
-Enchantment:  +3
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11333    = ~Big Black Flying-Death +5~
-@11334    = ~The gargantuan throwing axe known as Big Black Flying-Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Black Flying-Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+Урон: 2d8+3
+Атака: -5
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Возвращение: после броска возвращается к владельцу
+ Считается оружием из холодного железа
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
+@11333    = ~Большая чёрная летучая смерть +5~
+@11334    = ~Огромный метательный топор, известный как "Большая чёрная летучая смерть" - оружие орков в полном смысле этого слова. Этот топор, которым в битве за Руку Селдарин орудовал неуклюжий орочий военачальник Желтозубый Грубрун Гнилой Клык, переделан из двуручного боевого топора одного огра-наёмника. После одного жестокого набега на поселение дварфов-рудокопов Грубрун увидел этот топор в черепе мёртвого маршала дварфов. Судя по всему, огр-наёмник в отчаянной атаке наткнулся на копьё маршала, но прежде чем умереть, успел всадить топор маршалу в голову, да ещё и сломать топорище в попытке выдернуть топор для второго удара.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Black Flying-Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+С трудом выдернув огромный топор, сделанный из чёрного железа, из черепа дварфа, Грубрун вернулся в свою крепость на Наб-Нуроге и велел шаману племени зачаровать его. Не подумав, починить топорище, и сочтя топор слишком тяжёлым и неудобным для ближнего боя, Грубрун решил пользоваться топором как метательным оружием и потребовал, чтобы он возвращался обратно в руку после броска. Военачальнику доставляло большое удовольствие швыряться таким громадным топором, с ликованием наблюдая, как "Большая чёрная летучая смерть" возвращается к нему, сверкая и брызгая кровью, после перерубания врага пополам.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Black Flying-Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Грубрун Гнилой Клык встретил смерть в решающей битве за Руку, когда бросил "Большую чёрную летучую смерть" в эльфийку Кайлессу, оружейного мастера Руки Селдарин. Она изящно уклонилась от летящего оружия, молниеносно бросилась вперёд и всадила клинок в живот безоружного орка. Затем, как говорят, она припала к земле - и в это самое время топор Грубруна вернулся к нему, начисто снеся его голову вместе с жёлтыми клыками и всем прочим.
 
-Big Black Flying-Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+"Большая чёрная летучая смерть" - это очень большой метательный топор, почти что до абсурда, и его метательную сущность выдаёт лишь короткая рукоять и балансировка. На деле же топор настолько тяжёл, что его невозможно метнуть одной рукой, а нужно брать обеими и раскручивать всем телом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d10 + 5
-Attack Bonus : -5
-Enchantment:  +5
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11924    = ~To the northeast of the great tree-town of Kuldahar lies the Vale of Shadows, a valley of crypts and tombs where Kresselack the Black Wolf is said to be buried. Almost thirty years past, a band of adventurers entered the Vale of Shadows and returned with many relics and treasures taken from the tombs there. Rol-Sayid's Left Hand of Darkness is one such item, though its true purpose was not realized when it was discovered. Considered nothing more than the cast-off bandage of a mummy, it had been used to wrap a gold necklace lying in one of the sarcophagi in the tombs.
+Урон: 2d10+5
+Атака: -5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Возвращение: после броска возвращается к владельцу
+ Считается оружием из холодного железа
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
+@11924    = ~К северу-востоку от великого города-дерева Кулдахара находится ущелье Теней, полное склепов и гробниц, где, по преданию, похоронен Кресселак, Чёрный Волк. Почти тридцать лет назад отряд искателей приключений отправился в это ущелье и вернулся с множеством реликвий и сокровищ, извлечённых из гробниц. Одним из этих сокровищ является "Левая рука тьмы Рол-Сайида" - хотя истинная ценность предмета не была изначально обнаружена. Считавшаяся не более чем старой обмоткой мумии, её использовали, чтобы завернуть в неё золотое ожерелье, найденное в одном из саркофагов. 
 
-The necklace's wrapping was discarded as soon as the band of adventurers returned to Kuldahar, and as they cast it away, the adventurers joked that it could serve some little boy as a sling if need be. One of the children of Kuldahar was quick to pick up on this comment, and he kept the sling both for hunting and as a good luck charm for several years. It is not known if he knew if the wrapping was magical or not, and he attributed the accuracy of the stones cast from it as his own natural ability rather than that of the sling.
+Вернувшись в Кулдахар, искатели приключений выбросили эту тряпку; при этом один из них пошутил, что в случае необходимости, какой-нибудь мальчишка сможет сделать из неё пращу. Так и вышло: после того, как один из детей Кулдахара услышал это замечание, он в течении нескольких лет использовал "Левую руку тьмы Рол-Сайида" как в качестве пращи для охоты, так и качестве талисмана, приносящего удачу. Неизвестно, знал ли мальчик о волшебных свойствах этой пращи или же он считал, что камни летят так точно исключительно благодаря его способностям.
 
-In truth, Rol-Sayid's Left Hand of Darkness is one of the wrappings from the left hand of one of Kresselack's lieutenants, who had been resurrected as a mummy within the tomb of his lord and served as a guardian against trespassers. When a stone is placed within the wrapping and spun with great force, the stone will fly straight and true at an enemy. Furthermore, as long as the wrapping is held in the hand, the wielder is immune to diseases, both magical and mundane.
+На самом деле, "Левая рука тьмы Рол-Сайида" - это одна из обёрток с левой руки одного из лейтенантов Кресселака, которого воскресили после смерти в виде мумии и поставили охранять гробницу своего повелителя. Если использовать обёртку в качестве пращи, то снаряды будут лететь точно в цель. Более того, пока владелец держит обмотку в руке, он неуязвим для болезней, как обычных, так и волшебных.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +3
-Special:
-  Wielder is immune to Disease when equipped
-  Spell Power: Can cast the spell Remove Disease 6/day
-  Spell Power: Can cast the spell Symbol of Hopelessness (at level 15) 1/day
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@55821=~You cannot change armor during combat.~
-@55931=~Prevent Equipping Armor During Combat~
-@55932=~Prevents party members from putting on armor during combat.~
+Урон: +3 (метательный)
+Атака: +3
+Особенности:
+ Оберёг: При использовании даёт иммунитет к болезням
+ Заклинание: владелец может творить заклинание "Излечение болезни" 6 раз в день
+ Заклинание: владелец может творить заклинание "Символ безнадёжности" раз в день (как заклинатель 15-ого уровня)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@55821=~Нельзя поменять доспех во время боя.~
+@55931=~Запрет на смену доспехов во время боя~
+@55932=~Не позволяет участникам отряда менять доспехи во время боя.~
