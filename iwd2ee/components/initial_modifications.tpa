@@ -1590,6 +1590,12 @@ IEex_Lua("ex_current_cutscene_skip_target = 'USSKP02'")~
 COPY_EXISTING ~21CORCCM.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(CutSceneId(\"Cutscene_Orc_Warrior\")\)~ ~\1
+ActionOverride(Player1,SetSavedLocation())
+ActionOverride(Player2,SetSavedLocation())
+ActionOverride(Player3,SetSavedLocation())
+ActionOverride(Player4,SetSavedLocation())
+ActionOverride(Player5,SetSavedLocation())
+ActionOverride(Player6,SetSavedLocation())
 IEex_Lua("ex_current_cutscene_skip_target = 'USSKP03'")~
 	END
 
