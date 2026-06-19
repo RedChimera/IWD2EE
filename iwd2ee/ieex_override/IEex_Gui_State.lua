@@ -1521,6 +1521,18 @@ function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
 
 	local resW, resH = IEex_GetResolution()
 
+	-- === IWD2EE hi-res readable UI (P1: enable engine-native 2x) ===
+	-- Oracle (recovered IWD2.exe src): CBaldurChitin.m_bUseNewGui @+0x4A28 (BOOLEAN),
+	--   field_4A2C @+0x4A2C (int = GetDoubleSize()). Both gate CUIManager::fInit(...,
+	--   bDoubleSize) -> CUIControl*/CVidCell/CVidFont render UI art + geometry x2.
+	-- The engine sets these only at width 1600/2048; IEex's resolution path bypasses
+	-- that, leaving the UI at 1x. Use pBaldurChitin (valid ctor `this` via esi) --
+	-- NOT [0x8CF6DC], which isn't assigned yet at this ctor stage (-> 0xC0000005).
+	if resW >= 1024 and resH >= 768 then
+		IEex_WriteByte(pBaldurChitin + 0x4A28, 1)   -- m_bUseNewGui -> fInit bDoubleSize
+		IEex_WriteDword(pBaldurChitin + 0x4A2C, 1)  -- field_4A2C   -> GetDoubleSize()
+	end
+
 	-- If the selected resolution can't display the
 	-- high-resolution padding panels, remove them.
 	if resW < 1024 or resH < 768 then
