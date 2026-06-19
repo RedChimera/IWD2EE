@@ -1528,7 +1528,11 @@ function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
 	-- The engine sets these only at width 1600/2048; IEex's resolution path bypasses
 	-- that, leaving the UI at 1x. Use pBaldurChitin (valid ctor `this` via esi) --
 	-- NOT [0x8CF6DC], which isn't assigned yet at this ctor stage (-> 0xC0000005).
-	if resW >= 1024 and resH >= 768 then
+	-- Only enable 2x when the screen can actually contain the 2x UI: the world HUD is
+	-- 2048 wide and the centred character/record screen is 1200 tall. Below that (e.g.
+	-- 1920x1080, where the record screen's top gets clipped) fall back to the engine's
+	-- 1x UI so nothing overflows. The engine only does 1x or 2x, no in-between.
+	if resW >= 2048 and resH >= 1200 then
 		IEex_WriteByte(pBaldurChitin + 0x4A28, 1)   -- m_bUseNewGui -> fInit bDoubleSize
 		IEex_WriteDword(pBaldurChitin + 0x4A2C, 1)  -- field_4A2C   -> GetDoubleSize()
 	end
@@ -2965,7 +2969,7 @@ function IEex_InstallQuickloot()
 	local qlHiRes = false
 	do
 		local resW, resH = IEex_GetResolution()
-		qlHiRes = resW >= 1024 and resH >= 768
+		qlHiRes = resW >= 2048 and resH >= 1200
 	end
 	local function qlPos(v)
 		if qlHiRes then return math.floor(v / 2) end
