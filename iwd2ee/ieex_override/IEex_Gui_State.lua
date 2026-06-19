@@ -2999,12 +2999,18 @@ function IEex_InstallQuickloot()
 		local _, _, copyControlW, copyControlH = IEex_GetControlArea(copyControl)
 		local slotID = IEex_GetControlID(copyControl)
 
+		-- IWD2EE hi-res UI: like the panel size and control positions, the engine
+		-- re-doubles the slot's m_size on this panel. The modder passed the already-2x
+		-- Container slot size (72), so the slot ended up 4x (144), and the engine
+		-- centres the 1x item icon in that oversized rect -- pushing it to the bottom of
+		-- the bar instead of into the recess. Pre-halve the size too (qlPos) so the slot
+		-- lands at a clean 2x (72) and the icon centres in the slot recess.
 		IEex_AddControlToPanel(quicklootPanel, {
 			["id"]     = slotID,
 			["x"]      = qlPos(referenceControlX) + 1,
 			["y"]      = qlPos(referenceControlY) + 1,
-			["width"]  = copyControlW,
-			["height"] = copyControlH,
+			["width"]  = qlPos(copyControlW),
+			["height"] = qlPos(copyControlH),
 			["type"]   = IEex_ControlStructType.BUTTON,
 			["bam"]    = IEex_GetControlButtonBAM(copyControl),
 		})
