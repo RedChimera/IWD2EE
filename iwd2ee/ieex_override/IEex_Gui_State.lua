@@ -2973,7 +2973,7 @@ function IEex_InstallQuickloot()
 	end
 	local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
 		["id"]              = 23,
-		["x"]               = x1,
+		["x"]               = qlPos(x1),
 		["y"]               = y1 - h1,
 		["width"]           = qlPos(w1),
 		["height"]          = qlPos(h1),
