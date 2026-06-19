@@ -2950,16 +2950,41 @@ function IEex_InstallQuickloot()
 	local panel1Memory = IEex_GetPanelFromEngine(worldScreen, 1)
 	local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
 
+	-- IWD2EE hi-res UI: under forced engine double-size (m_bUseNewGui) the engine
+	-- re-doubles this IEex panel's m_size and its child control POSITIONS after
+	-- creation. The modder cloned panel1/panel8 from their already-doubled readings,
+	-- so without compensation the panel lands at 4x (4096x240 vs the 2048x120 HUD)
+	-- with 4x slot positions but only 2x slot sizes (sizes come from the BAM and are
+	-- not re-doubled). Pre-halve the panel size and every control position so the
+	-- engine's doubling brings them to a consistent 2x; leave control sizes as-is.
 	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
+	local qlHiRes = false
+	do
+		local resW, resH = IEex_GetResolution()
+		qlHiRes = resW >= 1024 and resH >= 768
+	end
+	local function qlPos(v)
+		if qlHiRes then return math.floor(v / 2) end
+		return v
+	end
 	local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
 		["id"]              = 23,
 		["x"]               = x1,
 		["y"]               = y1 - h1,
-		["width"]           = w1,
-		["height"]          = h1,
+		["width"]           = qlPos(w1),
+		["height"]          = qlPos(h1),
 		["hasBackground"]   = 1,
 		["backgroundImage"] = "B3QKLOOT"
 	})
+	-- The engine doubles CHU panel backgrounds when m_bUseNewGui is set (see
+	-- CCacheStatus: m_mosX.m_bDoubleSize = m_bUseNewGui), but this IEex-created panel
+	-- writes its resref directly and never gets bDoubleSize, so B3QKLOOT would render
+	-- 1x and cover only the top-left of the (now correctly 2x) panel. Mirror the
+	-- engine: double the background mosaic. CUIPanel.m_mosBackground @ +0x3E,
+	-- CVidMosaic.m_bDoubleSize @ +0xB0 -> +0xEE.
+	if qlHiRes then
+		IEex_WriteDword(quicklootPanel + 0xEE, 1)
+	end
 
 	for i = 7, 16 do
 
@@ -2968,11 +2993,12 @@ function IEex_InstallQuickloot()
 
 		local referenceControlX, referenceControlY = IEex_GetControlArea(referenceControl)
 		local _, _, copyControlW, copyControlH = IEex_GetControlArea(copyControl)
+		local slotID = IEex_GetControlID(copyControl)
 
 		IEex_AddControlToPanel(quicklootPanel, {
-			["id"]     = IEex_GetControlID(copyControl),
-			["x"]      = referenceControlX + 1,
-			["y"]      = referenceControlY + 1,
+			["id"]     = slotID,
+			["x"]      = qlPos(referenceControlX) + 1,
+			["y"]      = qlPos(referenceControlY) + 1,
 			["width"]  = copyControlW,
 			["height"] = copyControlH,
 			["type"]   = IEex_ControlStructType.BUTTON,
@@ -2984,8 +3010,8 @@ function IEex_InstallQuickloot()
 	local leftArrowX, leftArrowY, leftArrowW, leftArrowH = IEex_GetControlArea(leftArrow)
 	IEex_AddControlToPanel(quicklootPanel, {
 		["id"]             = 10,
-		["x"]              = leftArrowX,
-		["y"]              = leftArrowY,
+		["x"]              = qlPos(leftArrowX),
+		["y"]              = qlPos(leftArrowY),
 		["width"]          = leftArrowW,
 		["height"]         = leftArrowH,
 		["type"]           = IEex_ControlStructType.BUTTON,
@@ -2998,8 +3024,8 @@ function IEex_InstallQuickloot()
 	local rightArrowX, rightArrowY, rightArrowW, rightArrowH = IEex_GetControlArea(rightArrow)
 	IEex_AddControlToPanel(quicklootPanel, {
 		["id"]             = 11,
-		["x"]              = rightArrowX,
-		["y"]              = rightArrowY,
+		["x"]              = qlPos(rightArrowX),
+		["y"]              = qlPos(rightArrowY),
 		["width"]          = rightArrowW,
 		["height"]         = rightArrowH,
 		["type"]           = IEex_ControlStructType.BUTTON,
