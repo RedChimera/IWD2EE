@@ -1533,9 +1533,13 @@ function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
 		IEex_WriteDword(pBaldurChitin + 0x4A2C, 1)  -- field_4A2C   -> GetDoubleSize()
 	end
 
-	-- If the selected resolution can't display the
-	-- high-resolution padding panels, remove them.
-	if resW < 1024 or resH < 768 then
+	-- If the selected resolution can't display the high-resolution padding panels,
+	-- remove them. Also remove them under engine double-size (m_bUseNewGui @ +0x4A28):
+	-- the STON border mosaics are authored for the 1x padding and cannot fill the 2x
+	-- margin, so the doubled UI is given clean black margins instead. The wipe skips
+	-- the per-screen enable code, so the panels are never enabled/rendered (a partially
+	-- positioned or zero-size enabled padding panel crashes the engine).
+	if resW < 1024 or resH < 768 or IEex_ReadByte(pBaldurChitin + 0x4A28) == 1 then
 
 		IEex_DisableCodeProtection()
 
