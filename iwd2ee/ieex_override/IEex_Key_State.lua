@@ -1727,8 +1727,19 @@ function IEex_AddButtonListener()
 		local screenCharacter = IEex_GetEngineCharacter()
 		local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
 		if characterRecordPanel > 0 then
-			-- Move the normal "Level Up" button over to make room
-			IEex_SetControlXY(IEex_GetControlFromPanel(characterRecordPanel, 37), 655, 361)
+			-- Move the normal "Level Up" button over to make room, just above the
+			-- Reform Party button added below. Reform Party is added with
+			-- IEex_AddControlToPanel, whose position the engine scales by the panel's
+			-- double-size; IEex_SetControlXY writes the raw m_ptOrigin and is NOT
+			-- scaled, so the two desync at hi-res (Level Up ends up mid-panel). Scale
+			-- the Level Up coords by the same factor (CUIManager m_bDoubleSize @ +0xAA,
+			-- panel.m_pManager @ +0x0) so they stay stacked at both 1x and 2x.
+			local levelUpScale = 1
+			local recordManager = IEex_ReadDword(characterRecordPanel + 0x0)
+			if recordManager ~= 0 and IEex_ReadDword(recordManager + 0xAA) == 1 then
+				levelUpScale = 2
+			end
+			IEex_SetControlXY(IEex_GetControlFromPanel(characterRecordPanel, 37), 655 * levelUpScale, 361 * levelUpScale)
 		
 			IEex_AddControlOverride("GUIREC", 2, 38, "IEex_UI_Button")
 			IEex_AddControlToPanel(characterRecordPanel, {
