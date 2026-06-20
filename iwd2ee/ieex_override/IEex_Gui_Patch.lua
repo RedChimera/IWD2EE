@@ -1398,11 +1398,86 @@
 	-- upscaled) MOS and force bDoubleSize=0 for its resref in all FOUR fns -> renders native =
 	-- crisp 2x. Resref via m_pDimmKeyTableEntry @[this+0x10] (same as the font de-double).
 	-- bDoubleSize: @[esp+4] in the 3 size fns (->+8 after push eax), @[esp+8] in GetTileData
-	-- (->+0xC). Add a MOS here as its HD .MOS ships. PILOT: GUIINV08 (inventory) "GUII"/"NV08".
-	local mos_match =
-		"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
-		.. "!mov(eax,[eax]) !cmp_eax_dword #49495547 !jne_dword >skip "
-		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #3830564E !jne_dword >skip "
+	-- (->+0xC). Every UI panel MOS (height>=90, width>=250) is AI-upscaled (Remacri) to 2x and
+	-- shipped; each entry below is its resref's two LE dwords (chars 0-3, 4-7). Match ANY -> force
+	-- bDoubleSize=0 (renders native = crisp 2x). The thin fill/bar strips (<90px tall) stay
+	-- NN-doubled (imperceptible, no detail to recover). Add a MOS here as its HD .MOS ships.
+	local mos_list = {
+		{0x41495547, 0x00004242}, -- GUIABB
+		{0x41495547, 0x00004250}, -- GUIAPB
+		{0x41495547, 0x00324250}, -- GUIAPB2
+		{0x42495547, 0x0048414C}, -- GUIBLAH
+		{0x43495547, 0x42425241}, -- GUICARBB
+		{0x43495547, 0x00505845}, -- GUICEXP
+		{0x43495547, 0x00004247}, -- GUICGB
+		{0x43495547, 0x42534948}, -- GUICHISB
+		{0x43495547, 0x42305048}, -- GUICHP0B
+		{0x43495547, 0x42315048}, -- GUICHP1B
+		{0x43495547, 0x42325048}, -- GUICHP2B
+		{0x43495547, 0x42335048}, -- GUICHP3B
+		{0x43495547, 0x42345048}, -- GUICHP4B
+		{0x43495547, 0x42355048}, -- GUICHP5B
+		{0x43495547, 0x42365048}, -- GUICHP6B
+		{0x43495547, 0x0054534C}, -- GUICLST
+		{0x43495547, 0x454D414E}, -- GUICNAME
+		{0x43495547, 0x42524F50}, -- GUICPORB
+		{0x43495547, 0x45434152}, -- GUICRACE
+		{0x43495547, 0x42545355}, -- GUICUSTB
+		{0x44495547, 0x424C4343}, -- GUIDCCLB
+		{0x45495547, 0x42305252}, -- GUIERR0B
+		{0x45495547, 0x42315252}, -- GUIERR1B
+		{0x45495547, 0x42325252}, -- GUIERR2B
+		{0x45495547, 0x42335252}, -- GUIERR3B
+		{0x45495547, 0x42345252}, -- GUIERR4B
+		{0x46495547, 0x00544145}, -- GUIFEAT
+		{0x46495547, 0x32544145}, -- GUIFEAT2
+		{0x47495547, 0x50595441}, -- GUIGATYP
+		{0x47495547, 0x00004244}, -- GUIGDB
+		{0x48495547, 0x00504C45}, -- GUIHELP
+		{0x48495547, 0x00004253}, -- GUIHSB
+		{0x49495547, 0x3830564E}, -- GUIINV08
+		{0x49495547, 0x4241564E}, -- GUIINVAB
+		{0x49495547, 0x4252564E}, -- GUIINVRB
+		{0x4A495547, 0x004C4E52}, -- GUIJRNL
+		{0x4C495547, 0x00425055}, -- GUILUPB
+		{0x4D495547, 0x42415041}, -- GUIMAPAB
+		{0x4D495547, 0x4D475041}, -- GUIMAPGM
+		{0x4D495547, 0x42575041}, -- GUIMAPWB
+		{0x4D495547, 0x43575041}, -- GUIMAPWC
+		{0x4D495547, 0x0042564F}, -- GUIMOVB
+		{0x52495547, 0x38304345}, -- GUIREC08
+		{0x52495547, 0x004E4547}, -- GUIRGEN
+		{0x52495547, 0x314C564C}, -- GUIRLVL1
+		{0x52495547, 0x324C564C}, -- GUIRLVL2
+		{0x52495547, 0x334C564C}, -- GUIRLVL3
+		{0x52495547, 0x344C564C}, -- GUIRLVL4
+		{0x52495547, 0x354C564C}, -- GUIRLVL5
+		{0x52495547, 0x364C564C}, -- GUIRLVL6
+		{0x52495547, 0x374C564C}, -- GUIRLVL7
+		{0x53495547, 0x00005845}, -- GUISEX
+		{0x53495547, 0x38304C50}, -- GUISPL08
+		{0x53495547, 0x00324C50}, -- GUISPL2
+		{0x53495547, 0x42484C50}, -- GUISPLHB
+		{0x53495547, 0x42515252}, -- GUISRRQB
+		{0x53495547, 0x42565352}, -- GUISRSVB
+		{0x53495547, 0x53544154}, -- GUISTATS
+		{0x53495547, 0x42424254}, -- GUISTBBB
+		{0x53495547, 0x42534254}, -- GUISTBSB
+		{0x53495547, 0x42524454}, -- GUISTDRB
+		{0x53495547, 0x42444954}, -- GUISTIDB
+		{0x53495547, 0x42504D54}, -- GUISTMPB
+		{0x53495547, 0x424F5254}, -- GUISTROB
+		{0x56495547, 0x00425245}, -- GUIVERB
+	}
+	local mos_match = "!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
+	for k, p in ipairs(mos_list) do
+		mos_match = mos_match
+			.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #" .. string.format("%08X", p[1])
+			.. " !jne_dword >m" .. k
+			.. " !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #" .. string.format("%08X", p[2])
+			.. " !jz_dword >hit @m" .. k .. " "
+	end
+	mos_match = mos_match .. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x780310,  -- CResMosaic::GetMosaicWidth
 		{mos_match .. "!mov([esp+8],0) @skip !pop(eax)"},
 		{"8B 44 24 04 85 C0 !jmp_dword :780316"}, {0x8B, 0x44, 0x24, 0x04, 0x85, 0xC0})
