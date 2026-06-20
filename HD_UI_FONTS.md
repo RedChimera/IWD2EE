@@ -350,3 +350,16 @@ de-double branch c6 `REAL`/`MS\0\0`.
   DARK end of the ramp (correct for remapped fonts where high idx = foreground); for REALMS that came out
   **inverted** (black glyphs). `--invert` maps full ink → the LIGHT end (idx1) so the stroke renders white,
   matching the stock. (So: NUMFONT wants ink at idx255; REALMS wants ink at idx1.)
+
+### 8g. INITIALS — full-colour drop-caps, upscaled (NOT traced)
+INITIALS = the ornate **illuminated drop-caps** (loaded by `CCacheStatus`, the area-loading screen — but
+**never actually drawn**: only `SetResRef`/`RegisterFont`/`Demand`, no `BKTextOut`, so it's a cut vestige,
+invisible in normal play). Unlike every other UI font it is **full-colour illustrations**, not a monochrome
+glyph ramp: 30 frames, content at **frames 1–26 = A–Z** (a non-cp1252 layout — content at frame 1, not
+0x20), each a 40×38 teal letter on a navy ground with green foliate ornament (~120 distinct palette colours;
+idx0 = green key). So the trace/FontForge pipeline is structurally inapplicable (it silhouettes everything to
+one 1-bit ramp, and its cp1252 frame loop finds 0 glyphs here). The HD BAM is instead a **2× Lanczos upscale
+of the stock colour frames, repacked verbatim in the original palette** (`scripts/initials_upscale.py`:
+indices→RGBA→Lanczos 2×→nearest-palette index; idx0 transparency kept; cx/cy/w/h ×2; palette/cycles/lookup
+copied). No `--invert` (exact indices preserved → polarity correct by construction). De-double branch c7
+`INIT`/`IALS`. Since it's never rendered, the only check is the specimen `hd_fonts_wip/SHEET_INITIALS_hd.png`.

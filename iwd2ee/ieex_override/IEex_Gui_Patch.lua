@@ -1348,6 +1348,8 @@
 	-- silly_pixel BAM authored at final px, so it must de-double too, else the 1px outline renders 2px).
 	-- · REALMS "REAL"/"MS\0\0" (uncial display/title face; HD BAM repacked from an auto-traced TTF of the
 	-- stock REALMS glyphs -- potrace+FontForge, scripts/realms_trace.py + realms_build.py).
+	-- · INITIALS "INIT"/"IALS" (ornate illuminated drop-caps; full-colour, so the HD BAM is a 2x Lanczos
+	-- upscale of the stock colour frames repacked verbatim in the original palette, scripts/initials_upscale.py).
 	-- See HD_UI_FONTS.md §1a/§7/§8.
 	local hd_match =
 		"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
@@ -1357,6 +1359,7 @@
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4F464E49 !jne_dword >c4 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #544E4F46 !jz_dword >hit @c4 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #464D554E !jne_dword >c5 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00544E4F !jz_dword >hit @c5 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4C414552 !jne_dword >c6 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #0000534D !jz_dword >hit @c6 "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #54494E49 !jne_dword >c7 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #534C4149 !jz_dword >hit @c7 "
 		.. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
