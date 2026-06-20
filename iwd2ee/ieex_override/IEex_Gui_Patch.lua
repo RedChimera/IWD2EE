@@ -1332,6 +1332,25 @@
 		}))
 	end
 
+	-- [HD UI fonts] crisp 2x NORMAL. At 2x UI the engine doubles 1x font BAMs via CVidCell::m_bDoubleSize,
+	-- passed as the bDoubleSize ARG to CResCell::GetFrame (dims x2) and CResCell::GetFrameData (NN pixel x2).
+	-- We ship a 2x-authored NORMAL.BAM, so any doubling makes it 4x. The flag is read on MANY paths -- render,
+	-- and every metric query (advance/line-height/center/word-wrap), several with GetResFrame INLINED (e.g.
+	-- CUtil::SplitString) -- so hooking the CVidCell-level readers missed the inlined ones (journal/combat-log/
+	-- dialogue collapsed). These two CResCell resource fns are the single convergence point ALL of them call.
+	-- Hook each: this=ecx=CResCell*; m_pDimmKeyTableEntry @+0x10, its resRef first dword @+0. If that == "NORM"
+	-- (0x4D524F4E) force the bDoubleSize stack ARG to 0 -> native (sharp 2x) frame+pixels. NULL-guarded;
+	-- resref-scoped so sprites/items/other fonts keep doubling. Timing-independent (acts at the read, not the
+	-- member), so no jitter/collapse regardless of when the cell's member is (re)set. See HD_UI_FONTS.md §1a/§7.
+	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
+		{"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip !mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >skip !mov([esp+10],0) @skip !pop(eax)"},
+		{"8B 51 64 56 85 D2 !jmp_dword :77F526"},
+		{0x8B, 0x51, 0x64, 0x56, 0x85, 0xD2})
+	IEex_AttemptHook(0x77F5F0,  -- CResCell::GetFrameData (pixels); bDoubleSize arg @[esp+0x08] (->+0x0C after push)
+		{"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip !mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >skip !mov([esp+0C],0) @skip !pop(eax)"},
+		{"83 EC 10 53 8B D9 !jmp_dword :77F5F6"},
+		{0x83, 0xEC, 0x10, 0x53, 0x8B, 0xD9})
+
 	IEex_EnableCodeProtection()
 
 end)()
