@@ -1491,6 +1491,31 @@
 		{mos_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
 		{"83 EC 08 33 D2 53 !jmp_dword :7803A6"}, {0x83, 0xEC, 0x08, 0x33, 0xD2, 0x53})
 
+	-- === HD UI portraits (BMP) de-double -- crisp upscaled character art instead of NN-doubled ===
+	-- Portrait controls blit via CVidBitmap with m_bDoubleSize = manager->m_bDoubleSize
+	-- (CUIControlFactory), so under the 2x UI the stock 210x330 _L / 42x42 _S portrait BMP get
+	-- NN-doubled (blocky). Ship an AI-upscaled (RealESRGAN x4) 420x660 _L + 84x84 _S (face crop)
+	-- and force bDoubleSize=0 in CResBitmap::GetImageData (0x77ECF0) + GetImageDimensions
+	-- (0x77EF70) when the native dims are our HD sizes -> renders native = crisp 2x. BOTH fns
+	-- must agree (the control sizes the blit rect from GetImageDimensions, reads pixels from
+	-- GetImageData). Gate on DIMS not resref: no stock BMP is 420x660 or 84x84 (verified scan),
+	-- so this also covers custom party portraits authored at HD. CResBitmap layout:
+	-- bParsed @[this+0x58]; pBitmapInfoHeader @[this+0x64]; biWidth @[+4]; biHeight @[+8].
+	local bmp_match =
+		"!push(eax) !mov(eax,[ecx+0x58]) !test_eax_eax !jz_dword >skip "          -- not parsed -> leave
+		.. "!mov(eax,[ecx+0x64]) !test_eax_eax !jz_dword >skip "                  -- null BITMAPINFOHEADER guard
+		.. "!mov(eax,[eax+0x4]) !cmp_eax_dword #000001A4 !jne_dword >c84 "        -- biWidth==420?
+		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #00000294 !jz_dword >hit " -- biHeight==660 -> HD _L
+		.. "@c84 !mov(eax,[ecx+0x64]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00000054 !jne_dword >skip " -- biWidth==84?
+		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #00000054 !jne_dword >skip "       -- biHeight==84 -> HD _S
+		.. "@hit "
+	IEex_AttemptHook(0x77ECF0,  -- CResBitmap::GetImageData; bDoubleSize @[esp+4] (->+8 after push eax)
+		{bmp_match .. "!mov([esp+8],0) @skip !pop(eax)"},
+		{"83 EC 14 53 56 !jmp_dword :77ECF5"}, {0x83, 0xEC, 0x14, 0x53, 0x56})
+	IEex_AttemptHook(0x77EF70,  -- CResBitmap::GetImageDimensions; bDoubleSize @[esp+8] (->+0xC after push eax)
+		{bmp_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
+		{"8B 41 58 85 C0 !jmp_dword :77EF75"}, {0x8B, 0x41, 0x58, 0x85, 0xC0})
+
 	IEex_EnableCodeProtection()
 
 end)()
