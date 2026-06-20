@@ -1415,6 +1415,7 @@
 		{0x4E4F5453, 0x544F4C53}, -- STONSLOT
 		{0x524F5453, 0x52435345}, -- STORESCR
 		{0x47474F54, 0x0000454C}, -- TOGGLE
+		{0x424D554E, 0x00005245}, -- NUMBER (action-bar/item count digits; CIcon::RenderIcon, HD LycheeSoda)
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
