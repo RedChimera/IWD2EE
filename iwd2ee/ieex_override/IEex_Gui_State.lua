@@ -3054,8 +3054,16 @@ function IEex_InstallIEexOptions()
 	local screenOptions = IEex_GetEngineOptions()
 	local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
 
-	-- Move the normal "Return" button over to make room
-	IEex_SetControlXY(IEex_GetControlFromPanel(worldOptionsPanel, 11), 612, 338)
+	-- Move the normal "Return" button over to make room for the IEex Options button.
+	-- SetControlXY writes the control's CURRENT (post-scale) position (+0xE/+0x12), which
+	-- the 2x UI does NOT double -- unlike AddControlToPanel below, which writes the base
+	-- (+0x4/+0x6) the engine doubles under m_bUseNewGui. So at 2x the raw 612,338 stranded
+	-- Return in the middle of the preview; double it by hand to keep it beside IEex Options.
+	local returnX, returnY = 612, 338
+	if IEex_ReadByte(IEex_ReadDword(0x8CF6DC) + 0x4A28) == 1 then  -- m_bUseNewGui (2x UI)
+		returnX, returnY = returnX * 2, returnY * 2
+	end
+	IEex_SetControlXY(IEex_GetControlFromPanel(worldOptionsPanel, 11), returnX, returnY)
 
 	IEex_AddControlOverride("GUIOPT", 2, 15, "IEex_UI_Button")
 	IEex_AddControlToPanel(worldOptionsPanel, {

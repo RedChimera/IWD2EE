@@ -331,3 +331,22 @@ doubling would render it 2px). 10px+outline ≈ 12px ≈ the stock footprint.
   baseline cy≈11, +5 → 16 to match the stock digits' float). Reusing the stock per-glyph cy broke `/`
   (its stock cy ≠ the digits' and silly's `/` has a taller extent) — it floated above the numbers.
 - Bigger is available (`--size 24` → 15px digit) if 10px ever reads too small.
+
+### 8f. REALMS — recreated from the bitmap (no source TTF), + the literal-palette gotcha
+REALMS = the uncial **display/title** face (record-screen HP numbers, journal/options/worldmap/chapter/
+movies preload fonts). No clean source TTF existed, so it was **recreated** by auto-tracing the stock
+bitmap glyphs: `scripts/realms_trace.py` (PIL renders each glyph → upscale → potrace → SVG) +
+`scripts/realms_build.py` (`fontforge -script` assembles the TTF; em 1000, FontForge fits SVG height →
+em so baseline lands at y=0, advance = w·40). Knobs are exposed — `--upscale --blur --threshold
+--alphamax --opttolerance` (trace) + `simplify` (build) — and the **`--masks`** hand-fix (`<char>:x0,y0,
+x1,y1` zeros source pixels; the uncial `n` had a 1px bottom bridge joining its legs → `n:4,13,8,15`).
+Auto-trace from a ~13px source has a **wobble ceiling** (~`U32 blur6 alphamax1.334 opttol1.5` + `simplify
+10`); pushing past it (high opttol/simplify) breaks outlines (stray segments). For smoother, hand-refine
+the Béziers in FontForge — the auto TTF is the starting point.
+HD BAM = `bam_font_pack.py REALMS_orig_raw.BAM REALMS.BAM --font REALMS_recreated.ttf --scale 2 --invert`,
+de-double branch c6 `REAL`/`MS\0\0`.
+- **Literal-palette gotcha (opposite of NUMFONT §8e).** REALMS is rendered with its **literal** palette —
+  stroke = idx1 = white — NOT SetColor-remapped. The packer's default coverage LUT puts full ink at the
+  DARK end of the ramp (correct for remapped fonts where high idx = foreground); for REALMS that came out
+  **inverted** (black glyphs). `--invert` maps full ink → the LIGHT end (idx1) so the stroke renders white,
+  matching the stock. (So: NUMFONT wants ink at idx255; REALMS wants ink at idx1.)
