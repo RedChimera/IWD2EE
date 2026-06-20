@@ -271,15 +271,26 @@ itself = branch files `IEex_Gui_State.lua` + `IEex_Key_State.lua`, gate `resW≥
    original's control-frame `h/cy` ×2 (orig 11/13 → 22/26).
 2. **Size = original line box ×2** (not cap-height). `measure_cap_height` clips the probe glyph and
    under-reports, so the cap-based sizer overshot (~cap 25 = "too big"). `pick_font_size_by_lineheight`
-   sizes Pagella so ascent+descent = `orig_line(13)×2 = 26` → cap lands ~18 = orig×2 = original
+   sizes the face so ascent+descent = `orig_line(13)×2 = 26` → cap lands ~18 = orig×2 = original
    font:UI ratio. `--size-scale` fine-tunes.
-   ```
-   .venv-reagent/bin/python scripts/bam_font_pack.py NORMAL_orig_raw.BAM NORMAL.BAM --scale 2
-   ```
-   (Input = the stock `NORMAL.BAM` extracted from `Data/GUIfont.bif`, decompressed BAMC→BAM.)
+3. **Sub-pixel weight** (`--weight`). Pagella Regular reads lighter than the original (whose 9px
+   strokes can't go below 1px). `--weight 0.25` adds a faux-bold via a supersampled stroke
+   (render at ×4, stroke `round(weight×4)`, **BOX**-downsample — Lanczos rings and inflates each
+   glyph's bbox). Picked by A/B ladder vs the original (`hd_fonts_wip/COMPARE_WEIGHT.png`).
 
-### 8c. Remaining
-Only **NORMAL** is repacked. Other fonts (`TOOLFONT`/`INFOFONT`/`STONESML`/`REALMS`/`NUMFONT`/
-`INITIALS`) still engine-doubled (blocky-2×); repack each + the `"NORM"` filter already de-doubles any
-font whose resref starts `NORM` — extend the filter (or drop it once all are repacked). Not in the
-`.tp2` yet → a WeiDU reinstall regenerates `Override/` and wipes the runtime copy (git source persists).
+**Shipped NORMAL recipe** (face = TeX Gyre **Pagella**, user pick over the closer-but-rejected Times clones):
+```
+.venv-reagent/bin/python scripts/bam_font_pack.py NORMAL_orig_raw.BAM NORMAL.BAM --scale 2 --weight 0.25
+```
+(Input = the stock `NORMAL.BAM` extracted from `Data/GUIfont.bif`, decompressed BAMC→BAM via the
+KEY/BIFF reader; locator bif idx 3 file idx 2.)
+
+### 8c. Remaining fonts (each needs its OWN face)
+Only **NORMAL** is repacked. The others (`STONESML`=carved caps · `REALMS`=display/title · `INITIALS`
+=drop-caps · `TOOLFONT` · `INFOFONT` · `NUMFONT`) are **different typefaces** from NORMAL — the
+decorative ones especially (REALMS/INITIALS). So **don't blanket-Pagella**: for each, extract the stock
+BAM (KEY/BIFF), render its glyph sheet, and run a candidate comparison (`COMPARE.png` workflow) +
+weight ladder to pick the closest face, like NORMAL. Then repack (`--scale 2 --weight N --font …`).
+Engine side: the `0x77F520`/`0x77F5F0` hooks already de-double any resref == `"NORM"`; widen the
+filter per font (or drop it once all are repacked). Not in the `.tp2` yet → a WeiDU reinstall
+regenerates `Override/` and wipes the runtime copy (git source persists).
