@@ -1360,7 +1360,71 @@
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #464D554E !jne_dword >c5 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00544E4F !jz_dword >hit @c5 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4C414552 !jne_dword >c6 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #0000534D !jz_dword >hit @c6 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #54494E49 !jne_dword >c7 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #534C4149 !jz_dword >hit @c7 "
-		.. "!jmp_dword >skip @hit "
+	-- [HD UI buttons] the SAME CResCell de-double, extended to the 49 UI button/graphic BAMs
+	-- (action bar GUIBTACT, the GBTN* family, inventory/spell/store/options buttons, inn-room
+	-- images) that draw via CUIControlButton -> CVidCell with m_bDoubleSize = manager->m_bDoubleSize.
+	-- Each is AI-upscaled (Remacri) to 2x and de-doubled here by FULL 8-char resref (branches c8+).
+	-- The 255-frame stone fonts (STONEBIG/STONESM3) + STATES2 status icons stay 1x. See §11.
+	local btn_list = {
+		{0x54554243, 0x00000000}, -- CBUT
+		{0x41454743, 0x00000052}, -- CGEAR
+		{0x4B494C43, 0x4E4F4332}, -- CLIK2CON
+		{0x544E4F43, 0x4B434142}, -- CONTBACK
+		{0x47414C46, 0x00000031}, -- FLAG1
+		{0x4E544247, 0x4D524642}, -- GBTNBFRM
+		{0x4E544247, 0x4B4E4C42}, -- GBTNBLNK
+		{0x4E544247, 0x00004143}, -- GBTNCA
+		{0x4E544247, 0x4E54424A}, -- GBTNJBTN
+		{0x4E544247, 0x4B43494B}, -- GBTNKICK
+		{0x4E544247, 0x0047524C}, -- GBTNLRG
+		{0x4E544247, 0x3247524C}, -- GBTNLRG2
+		{0x4E544247, 0x3347524C}, -- GBTNLRG3
+		{0x4E544247, 0x0044454D}, -- GBTNMED
+		{0x4E544247, 0x3244454D}, -- GBTNMED2
+		{0x4E544247, 0x534E494D}, -- GBTNMINS
+		{0x4E544247, 0x3154504F}, -- GBTNOPT1
+		{0x4E544247, 0x3354504F}, -- GBTNOPT3
+		{0x4E544247, 0x4D524550}, -- GBTNPERM
+		{0x4E544247, 0x53554C50}, -- GBTNPLUS
+		{0x4E544247, 0x00524F50}, -- GBTNPOR
+		{0x4E544247, 0x42434552}, -- GBTNRECB
+		{0x4E544247, 0x4C524353}, -- GBTNSCRL
+		{0x4E544247, 0x31425053}, -- GBTNSPB1
+		{0x4E544247, 0x32425053}, -- GBTNSPB2
+		{0x4E544247, 0x33425053}, -- GBTNSPB3
+		{0x4E544247, 0x00445453}, -- GBTNSTD
+		{0x4E544247, 0x4E445055}, -- GBTNUPDN
+		{0x4D4F4347, 0x4E54424D}, -- GCOMMBTN
+		{0x4D4F4347, 0x0042534D}, -- GCOMMSB
+		{0x42495547, 0x54434154}, -- GUIBTACT
+		{0x42495547, 0x54554254}, -- GUIBTBUT
+		{0x43495547, 0x004C5254}, -- GUICTRL
+		{0x4D495547, 0x43575041}, -- GUIMAPWC
+		{0x52495547, 0x524F5053}, -- GUIRSPOR
+		{0x52495547, 0x524F505A}, -- GUIRZPOR
+		{0x53495547, 0x0052444C}, -- GUISLDR
+		{0x53495547, 0x43424254}, -- GUISTBBC
+		{0x53495547, 0x43534D54}, -- GUISTMSC
+		{0x42564E49, 0x00325455}, -- INVBUT2
+		{0x42564E49, 0x00335455}, -- INVBUT3
+		{0x4D4F4F52, 0x554C4544}, -- ROOMDELU
+		{0x4D4F4F52, 0x4352454D}, -- ROOMMERC
+		{0x4D4F4F52, 0x45424F4E}, -- ROOMNOBE
+		{0x4D4F4F52, 0x53414550}, -- ROOMPEAS
+		{0x424C5053, 0x00005455}, -- SPLBUT
+		{0x4E4F5453, 0x544F4C53}, -- STONSLOT
+		{0x524F5453, 0x52435345}, -- STORESCR
+		{0x47474F54, 0x0000454C}, -- TOGGLE
+	}
+	for k, p in ipairs(btn_list) do
+		local lbl = "c" .. (7 + k)
+		hd_match = hd_match
+			.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #" .. string.format("%08X", p[1])
+			.. " !jne_dword >" .. lbl
+			.. " !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #" .. string.format("%08X", p[2])
+			.. " !jz_dword >hit @" .. lbl .. " "
+	end
+	hd_match = hd_match .. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
 		{"8B 51 64 56 85 D2 !jmp_dword :77F526"}, {0x8B, 0x51, 0x64, 0x56, 0x85, 0xD2})
