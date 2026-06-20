@@ -1332,24 +1332,56 @@
 		}))
 	end
 
-	-- [HD UI fonts] crisp 2x NORMAL. At 2x UI the engine doubles 1x font BAMs via CVidCell::m_bDoubleSize,
-	-- passed as the bDoubleSize ARG to CResCell::GetFrame (dims x2) and CResCell::GetFrameData (NN pixel x2).
-	-- We ship a 2x-authored NORMAL.BAM, so any doubling makes it 4x. The flag is read on MANY paths -- render,
-	-- and every metric query (advance/line-height/center/word-wrap), several with GetResFrame INLINED (e.g.
-	-- CUtil::SplitString) -- so hooking the CVidCell-level readers missed the inlined ones (journal/combat-log/
-	-- dialogue collapsed). These two CResCell resource fns are the single convergence point ALL of them call.
-	-- Hook each: this=ecx=CResCell*; m_pDimmKeyTableEntry @+0x10, its resRef first dword @+0. If that == "NORM"
-	-- (0x4D524F4E) force the bDoubleSize stack ARG to 0 -> native (sharp 2x) frame+pixels. NULL-guarded;
-	-- resref-scoped so sprites/items/other fonts keep doubling. Timing-independent (acts at the read, not the
-	-- member), so no jitter/collapse regardless of when the cell's member is (re)set. See HD_UI_FONTS.md §1a/§7.
+	-- [HD UI fonts] crisp 2x for the HD-repacked fonts. At 2x UI the engine doubles 1x font BAMs via
+	-- CVidCell::m_bDoubleSize, passed as the bDoubleSize ARG to CResCell::GetFrame (dims x2) and
+	-- CResCell::GetFrameData (NN pixel x2). We ship 2x-authored BAMs, so any doubling makes them 4x. The flag
+	-- is read on MANY paths incl. GetResFrame INLINED (CUtil::SplitString) -> these two CResCell resource fns
+	-- are the single convergence point all of them hit. Each: this=ecx=CResCell*; m_pDimmKeyTableEntry @+0x10,
+	-- its resRef first dword @+0. If the resref matches an HD-repacked font, force the bDoubleSize stack ARG
+	-- to 0 -> native (sharp 2x). NULL-guarded; resref-scoped so sprites/items/NON-repacked fonts keep doubling
+	-- -- crucially incl. 1-bit NUMFONT (NUMF), which must stay engine-doubled = already pixel-perfect at 2x.
+	-- Match the FULL 8-char resref (both dwords), NOT just the 4-char prefix: "STON" collides with 20+
+	-- inventory stone graphics (STONARM/STONSLOT/STONWEAP/STONQUIV/...) and "TOOL" with TOOLTIP -- a prefix
+	-- filter de-doubled those too and broke the inventory. Each font: if resref[0:4]==dword1 AND
+	-- resref[4:8]==dword2 -> hit. dword2 = chars 5-8 LE (null-padded). Add a font here when its HD BAM ships.
+	-- NORMAL "NORM"/"AL\0\0" · TOOLFONT "TOOL"/"FONT" · STONESML "STON"/"ESML" · INFOFONT "INFO"/"FONT".
+	-- (NUMFONT excluded -- 1-bit, stays engine-doubled = pixel-perfect.)  See HD_UI_FONTS.md §1a/§7/§8.
+	local hd_match =
+		"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
+		.. "!mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >c1 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00004C41 !jz_dword >hit @c1 "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4C4F4F54 !jne_dword >c2 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #544E4F46 !jz_dword >hit @c2 "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4E4F5453 !jne_dword >c3 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #4C4D5345 !jz_dword >hit @c3 "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4F464E49 !jne_dword >c4 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #544E4F46 !jz_dword >hit @c4 "
+		.. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
-		{"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip !mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >skip !mov([esp+10],0) @skip !pop(eax)"},
-		{"8B 51 64 56 85 D2 !jmp_dword :77F526"},
-		{0x8B, 0x51, 0x64, 0x56, 0x85, 0xD2})
+		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
+		{"8B 51 64 56 85 D2 !jmp_dword :77F526"}, {0x8B, 0x51, 0x64, 0x56, 0x85, 0xD2})
 	IEex_AttemptHook(0x77F5F0,  -- CResCell::GetFrameData (pixels); bDoubleSize arg @[esp+0x08] (->+0x0C after push)
-		{"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip !mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >skip !mov([esp+0C],0) @skip !pop(eax)"},
-		{"83 EC 10 53 8B D9 !jmp_dword :77F5F6"},
-		{0x83, 0xEC, 0x10, 0x53, 0x8B, 0xD9})
+		{hd_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
+		{"83 EC 10 53 8B D9 !jmp_dword :77F5F6"}, {0x83, 0xEC, 0x10, 0x53, 0x8B, 0xD9})
+
+	-- === Tooltip box 2x (so the HD TOOLFONT actually fits) ===
+	-- The cursor/tooltip layer (CInfCursor/CInfToolTip) is SEPARATE from CUIManager's
+	-- m_bUseNewGui 2x path: CInfCursor::Initialize sets the TOOLTIP box AND TOOLFONT with
+	-- bDoubleSize=FALSE, and CInfToolTip::Initialize @0x597F39 hardcodes field_5E4=256 (the
+	-- 1x text-wrap budget). So tooltips always rendered 1x -- fine until the HD TOOLFONT BAM
+	-- made the glyphs 2x: the still-1x box (too short) + 256 budget (too narrow) then
+	-- clipped/truncated the text. Fix: at that same store, when m_bUseNewGui is set, force
+	-- the box CVidCell m_bDoubleSize=TRUE (this+0xD6, BOOL -> engine doubles the TOOLTIP
+	-- panel to 2x) and write field_5E4=512 (2x budget); otherwise keep vanilla 256/undoubled.
+	-- Gated on m_bUseNewGui (g_pBaldurChitin+0x4A28) so the 1x UI is untouched. TOOLTIP is
+	-- NOT de-doubled by the hook above ("TOOL"+"TIP\0" != "TOOL"+"FONT"), so it doubles here.
+	-- esi=this at 0x597F39; eax saved/restored; we own the field_5E4 write (orig not re-run).
+	-- See HD_UI_FONTS.md §8.
+	IEex_AttemptHook(0x597F39,
+		{"!push(eax) !mov_eax_[dword] #8CF6DC !test_eax_eax !jz_dword >van "
+		.. "0F B6 80 28 4A 00 00 !test_eax_eax !jz_dword >van "
+		.. "C7 86 D6 00 00 00 01 00 00 00 "
+		.. "66 C7 86 E4 05 00 00 00 02 !jmp_dword >done "
+		.. "@van 66 C7 86 E4 05 00 00 00 01 "
+		.. "@done !pop(eax)"},
+		{"!jmp_dword :597F42"},
+		{0x66, 0xC7, 0x86, 0xE4, 0x05, 0x00, 0x00, 0x00, 0x01})
 
 	IEex_EnableCodeProtection()
 

@@ -294,3 +294,20 @@ weight ladder to pick the closest face, like NORMAL. Then repack (`--scale 2 --w
 Engine side: the `0x77F520`/`0x77F5F0` hooks already de-double any resref == `"NORM"`; widen the
 filter per font (or drop it once all are repacked). Not in the `.tp2` yet → a WeiDU reinstall
 regenerates `Override/` and wipes the runtime copy (git source persists).
+
+### 8d. Tooltip box must scale with the HD `TOOLFONT` (separate subsystem)
+The cursor/tooltip layer is **not** part of CUIManager's `m_bUseNewGui` 2× path. `CInfCursor::Initialize`
+(`0x597020`) sets the `TOOLTIP` box **and** `TOOLFONT` with `bDoubleSize=FALSE`, and `CInfToolTip::Initialize`
+(`0x597EE0`) hardcodes `field_5E4 = 256` (the 1× text-wrap budget) — so tooltips always rendered **1×**.
+Fine until the HD `TOOLFONT` BAM made the glyphs 2×: the still-1× box (too short) + 256 budget (too
+narrow) **clipped/truncated** the text. Fix = one hook at the `field_5E4` store `0x597F39`
+(`mov word[esi+0x5E4],0x100`, 9 bytes `66 C7 86 E4 05 00 00 00 01`): when `m_bUseNewGui`
+(`[g_pBaldurChitin+0x4A28]`, `g_pBaldurChitin=[0x8CF6DC]`) is set, force the box `CVidCell`
+`m_bDoubleSize=TRUE` (`this+0xD6`, `BOOL`; `m_font` is at `+0xDA` so a dword write is safe) **and** write
+`field_5E4 = 512`; else keep vanilla `256`/undoubled. `esi=this` at the site, `eax` saved/restored, the
+original store is **not** re-run (we own the write → `restorePart = jmp :597F42`). The later cap measures
+(`GetFrameSize 1/2` @`0x597F54`) then run with `m_bDoubleSize=TRUE`, so `field_5DE` caps scale too. The
+box doubles via the engine's NN path (it's a flat dark panel → acceptable); author an HD `TOOLTIP.BAM`
+later if the 2px border looks chunky. **Note** the 8-char resref filter is what lets this work: `TOOLTIP`
+= `"TOOL"+"TIP\0"` ≠ `TOOLFONT` `"TOOL"+"FONT"`, so the de-double hook skips the box (it doubles) while
+catching the font (it stays sharp-2×). A 4-char `"TOOL"` prefix would have de-doubled the box too.
