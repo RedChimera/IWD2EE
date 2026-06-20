@@ -1338,20 +1338,22 @@
 	-- is read on MANY paths incl. GetResFrame INLINED (CUtil::SplitString) -> these two CResCell resource fns
 	-- are the single convergence point all of them hit. Each: this=ecx=CResCell*; m_pDimmKeyTableEntry @+0x10,
 	-- its resRef first dword @+0. If the resref matches an HD-repacked font, force the bDoubleSize stack ARG
-	-- to 0 -> native (sharp 2x). NULL-guarded; resref-scoped so sprites/items/NON-repacked fonts keep doubling
-	-- -- crucially incl. 1-bit NUMFONT (NUMF), which must stay engine-doubled = already pixel-perfect at 2x.
+	-- to 0 -> native (sharp 2x). NULL-guarded; resref-scoped so sprites/items/NON-repacked fonts keep doubling.
 	-- Match the FULL 8-char resref (both dwords), NOT just the 4-char prefix: "STON" collides with 20+
 	-- inventory stone graphics (STONARM/STONSLOT/STONWEAP/STONQUIV/...) and "TOOL" with TOOLTIP -- a prefix
 	-- filter de-doubled those too and broke the inventory. Each font: if resref[0:4]==dword1 AND
 	-- resref[4:8]==dword2 -> hit. dword2 = chars 5-8 LE (null-padded). Add a font here when its HD BAM ships.
-	-- NORMAL "NORM"/"AL\0\0" · TOOLFONT "TOOL"/"FONT" · STONESML "STON"/"ESML" · INFOFONT "INFO"/"FONT".
-	-- (NUMFONT excluded -- 1-bit, stays engine-doubled = pixel-perfect.)  See HD_UI_FONTS.md §1a/§7/§8.
+	-- NORMAL "NORM"/"AL\0\0" · TOOLFONT "TOOL"/"FONT" · STONESML "STON"/"ESML" · INFOFONT "INFO"/"FONT"
+	-- · NUMFONT "NUMF"/"ONT\0" (portrait HP numbers -- replaced the stock 1-bit bevel digits with a crisp
+	-- silly_pixel BAM authored at final px, so it must de-double too, else the 1px outline renders 2px).
+	-- See HD_UI_FONTS.md §1a/§7/§8.
 	local hd_match =
 		"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
 		.. "!mov(eax,[eax]) !cmp_eax_dword #4D524F4E !jne_dword >c1 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00004C41 !jz_dword >hit @c1 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4C4F4F54 !jne_dword >c2 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #544E4F46 !jz_dword >hit @c2 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4E4F5453 !jne_dword >c3 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #4C4D5345 !jz_dword >hit @c3 "
 		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #4F464E49 !jne_dword >c4 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #544E4F46 !jz_dword >hit @c4 "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) !cmp_eax_dword #464D554E !jne_dword >c5 !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00544E4F !jz_dword >hit @c5 "
 		.. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},

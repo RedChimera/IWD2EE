@@ -311,3 +311,23 @@ box doubles via the engine's NN path (it's a flat dark panel → acceptable); au
 later if the 2px border looks chunky. **Note** the 8-char resref filter is what lets this work: `TOOLTIP`
 = `"TOOL"+"TIP\0"` ≠ `TOOLFONT` `"TOOL"+"FONT"`, so the de-double hook skips the box (it doubles) while
 catching the font (it stays sharp-2×). A 4-char `"TOOL"` prefix would have de-doubled the box too.
+
+### 8e. NUMFONT — a 1-bit PIXEL font (not Pagella), + the palette-remap gotcha
+NUMFONT = the portrait HP numbers (`CGameSprite::RenderPortrait`, `SetResRef("NUMFONT", bDoubleSize)`).
+The stock glyphs are tiny hand-pixeled bevel digits (≈6px, doubled to 12px) — mushy and hard to read. They
+are NOT a Pagella-family face, so they get a free **pixel** font instead: **silly_pixel** (DesignMoth /
+Daniel Johnston, "free for commercial use" on dafont — we ship only the rasterised BAM + credit the author,
+never the .ttf). Built by `scripts/numfont_silly.py` (RE repo) at silly size 16 = **10px digit + a 1px
+black outline** (uniform 8-neighbour dilation), and NUMFONT is added to the de-double set (hook branch c5,
+`"NUMF"/"ONT\0"`) so it renders at authored px — a de-double keeps the outline a crisp **1px** (engine-
+doubling would render it 2px). 10px+outline ≈ 12px ≈ the stock footprint.
+- **Palette is remapped, NOT literal.** NUMFONT's stored palette is idx1=white / idx255=black RGB, but the
+  engine rebuilds it from `SetColor` at render: **LOW index → dark background, HIGH index → light
+  foreground**. HP foreground is white, so **idx255 renders WHITE (use for fill), idx1 renders BLACK (use
+  for outline)** — the reverse of the raw RGB. A preview that colours by the raw palette looks inverted vs
+  the game; colour the preview idx255→white / idx1→black to match. (This burned a round-trip: the fill on
+  idx1 showed up black in-game.)
+- **Position:** anchor every glyph to the *font's own* baseline + one global `--cy-shift` (digit true
+  baseline cy≈11, +5 → 16 to match the stock digits' float). Reusing the stock per-glyph cy broke `/`
+  (its stock cy ≠ the digits' and silly's `/` has a taller extent) — it floated above the numbers.
+- Bigger is available (`--size 24` → 15px digit) if 10px ever reads too small.
