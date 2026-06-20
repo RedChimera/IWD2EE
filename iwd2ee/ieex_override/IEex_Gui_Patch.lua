@@ -1391,6 +1391,31 @@
 		{"!jmp_dword :597F42"},
 		{0x66, 0xC7, 0x86, 0xE4, 0x05, 0x00, 0x00, 0x00, 0x01})
 
+	-- === HD UI mosaics (MOS) de-double -- crisp upscaled panels instead of NN-doubled ===
+	-- CResMosaic is the MOS twin of CResCell: GetMosaicWidth/Height/TileSize(bDoubleSize)
+	-- return 2x the header dim, GetTileData(nTile,bDoubleSize) NN-expands each pixel to a 2x2
+	-- block. Under m_bUseNewGui the panel MOS double -> blocky. Ship a 2x-authored (Lanczos/AI
+	-- upscaled) MOS and force bDoubleSize=0 for its resref in all FOUR fns -> renders native =
+	-- crisp 2x. Resref via m_pDimmKeyTableEntry @[this+0x10] (same as the font de-double).
+	-- bDoubleSize: @[esp+4] in the 3 size fns (->+8 after push eax), @[esp+8] in GetTileData
+	-- (->+0xC). Add a MOS here as its HD .MOS ships. PILOT: GUIINV08 (inventory) "GUII"/"NV08".
+	local mos_match =
+		"!push(eax) !mov(eax,[ecx+0x10]) !test_eax_eax !jz_dword >skip "
+		.. "!mov(eax,[eax]) !cmp_eax_dword #49495547 !jne_dword >skip "
+		.. "!mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #3830564E !jne_dword >skip "
+	IEex_AttemptHook(0x780310,  -- CResMosaic::GetMosaicWidth
+		{mos_match .. "!mov([esp+8],0) @skip !pop(eax)"},
+		{"8B 44 24 04 85 C0 !jmp_dword :780316"}, {0x8B, 0x44, 0x24, 0x04, 0x85, 0xC0})
+	IEex_AttemptHook(0x780340,  -- CResMosaic::GetMosaicHeight
+		{mos_match .. "!mov([esp+8],0) @skip !pop(eax)"},
+		{"8B 44 24 04 85 C0 !jmp_dword :780346"}, {0x8B, 0x44, 0x24, 0x04, 0x85, 0xC0})
+	IEex_AttemptHook(0x780370,  -- CResMosaic::GetTileSize
+		{mos_match .. "!mov([esp+8],0) @skip !pop(eax)"},
+		{"8B 44 24 04 85 C0 !jmp_dword :780376"}, {0x8B, 0x44, 0x24, 0x04, 0x85, 0xC0})
+	IEex_AttemptHook(0x7803A0,  -- CResMosaic::GetTileData
+		{mos_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
+		{"83 EC 08 33 D2 53 !jmp_dword :7803A6"}, {0x83, 0xEC, 0x08, 0x33, 0xD2, 0x53})
+
 	IEex_EnableCodeProtection()
 
 end)()

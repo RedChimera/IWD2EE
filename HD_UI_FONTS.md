@@ -363,3 +363,23 @@ of the stock colour frames, repacked verbatim in the original palette** (`script
 indices→RGBA→Lanczos 2×→nearest-palette index; idx0 transparency kept; cx/cy/w/h ×2; palette/cycles/lookup
 copied). No `--invert` (exact indices preserved → polarity correct by construction). De-double branch c7
 `INIT`/`IALS`. Since it's never rendered, the only check is the specimen `hd_fonts_wip/SHEET_INITIALS_hd.png`.
+
+## 9. HD UI mosaics (MOS) — crisp upscaled panels (same de-double trick)
+The 2× UI NN-doubles the panel-background **MOS** (blocky), exactly like fonts. `CResMosaic` is the MOS twin
+of `CResCell`: `GetMosaicWidth/Height/TileSize(bDoubleSize)` return 2× the header dim, `GetTileData(nTile,
+bDoubleSize)` NN-expands each pixel to a 2×2 block; resref via `m_pDimmKeyTableEntry @[this+0x10]` (same as
+fonts). **De-double = force `bDoubleSize=0` for the HD MOS resref in all FOUR fns** (`0x780310` GetMosaicWidth,
+`0x780340` GetMosaicHeight, `0x780370` GetTileSize, `0x7803A0` GetTileData — size fns take `bDoubleSize`
+@[esp+4], GetTileData @[esp+8]); ship a 2×-authored (AI-upscaled) MOS → renders native = crisp 2×.
+**Pipeline (RE repo `scripts/`):**
+- `mos_codec.py` — MOSV1/MOSC ↔ image. Transparency is a `(0,255,0)` colour key the stock files put at
+  **index 0**; the packer reproduces that (transparent → idx0). Uses ONE **global** 255-colour palette across
+  all tiles (a per-tile median-cut leaves visible **seams** at tile boundaries on smooth gradients).
+- `upscale_ai.py` — spandrel loads any ESRGAN/DAT/SwinIR `.pth` and runs it on CUDA (the universal loader
+  chaiNNer uses). Models in `/home/wills/iwd2-re/models/`. Venv `.venv-upscale` (uv py3.13 + torch cu13x).
+- `mos_hd_ai.py` — unpack → **bleed** art into the transparent region (so the model never sees green) →
+  AI 4× → downscale to 2× of the original → re-apply the green key (nearest mask) → pack.
+- **Model choice (stone UI):** `4x_foolhardy_Remacri` — sharp, faithful. `4x-UltraSharp` **invents** detail
+  (fabricated lines/texture) — rejected. `RealESRGAN_x4plus` is the most faithful (used for portraits).
+De-double hook lives at the end of `IEex_Gui_Patch.lua` (`mos_match` + the 4 AttemptHooks). Add each HD MOS
+resref to `mos_match`. Pilot: **GUIINV08** (inventory panel) `GUII`/`NV08`.
