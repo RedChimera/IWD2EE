@@ -1441,6 +1441,13 @@
 		{0x4D554849, 0x00000000}, -- IHUM    (item icon reused as a spell icon; outside SP* gate)
 		{0x53494D49, 0x00343843}, -- IMISC84 (item icon reused as a spell icon)
 		{0x4F4F4D49, 0x0000004E}, -- IMOON   (item icon reused as a spell icon)
+		{0x54534946, 0x00000000}, -- FIST    (item icon, outside I* gate)
+		{0x504D4554, 0x00000000}, -- TEMP    (item icon, outside I* gate)
+		{0x4C505355, 0x35315441}, -- USPLAT15 (item icon, outside I* gate)
+		{0x434E4950, 0x00535245}, -- PINCERS (action-bar quickSlotIcon, outside I*/SP*)
+		{0x57415057, 0x00000000}, -- WPAW
+		{0x57415050, 0x00000000}, -- PPAW
+		{0x57415044, 0x00000000}, -- DPAW
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
@@ -1454,6 +1461,10 @@
 	-- and eax,0x0000FFFF (chars 0-1) ; cmp "SP" (0x5053) ; hit. SP* via CResCell = spell icons +
 	-- SPLBUT (both HD); spell-effect/projectile SP* BAMs are NOT cell-drawn so never reach here.
 	hd_match = hd_match .. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) 25 FF FF 00 00 !cmp_eax_dword #00005053 !jz_dword >hit "
+	-- HD item icons: PREFIX gate -- one branch covers all I* item icons (and eax,0xFF (char0); cmp 'I').
+	-- I* via CResCell = item icons + INITIALS/INVBUT/INFOFONT (all already HD/de-doubled). SP* scroll
+	-- item icons are caught by the SP* branch above; FIST/TEMP/USPLAT15 by resref.
+	hd_match = hd_match .. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) 25 FF 00 00 00 !cmp_eax_dword #00000049 !jz_dword >hit "
 	hd_match = hd_match .. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
