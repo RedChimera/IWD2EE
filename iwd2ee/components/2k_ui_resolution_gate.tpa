@@ -5,7 +5,7 @@
 //
 // Installs ALL the 2x-authored HD UI art (item + spell/ability icons, buttons + action bar,
 // inventory chrome, fonts, stone panels/MOS, portraits, mouse cursors -- ~2360 files in
-// 2k_ui_assets/) AND enables the matching de-double hooks (flips IEEX_HD_UI in the deployed
+// bam/bam_2k_ui + mos/mos_2k_ui) AND enables the matching de-double hooks (flips IEEX_HD_UI in the deployed
 // IEex_Gui_Patch.lua, which the core ships OFF). The de-double makes the 2x art render native =
 // crisp instead of NN-doubled to 4x. The HD assets + de-double are COUPLED: the core mod no
 // longer ships either by default, so a player WITHOUT this component gets the stock 1x UI
@@ -34,8 +34,10 @@ PRINT ~[2K UI] Installing the 2x high-resolution UI (the player chooses resoluti
 PRINT ~[2K UI] This looks correct at 2048x1200 and above; at lower resolutions the UI is oversized.~
 
 // --- install ALL the 2x-authored HD UI assets (item + spell icons, buttons/action bar, fonts,
-//     stone panels, portraits, cursors -- ~2360 files) ---
-COPY ~%mod_folder%/2k_ui_assets~ ~override~
+//     stone panels, portraits, cursors). Kept in the mod's per-component asset dirs, like the
+//     other components: bam/bam_2k_ui = BAMs + portrait BMPs (~2200), mos/mos_2k_ui = MOS (171). ---
+COPY ~%mod_folder%/bam/bam_2k_ui~ ~override~
+COPY ~%mod_folder%/mos/mos_2k_ui~ ~override~
 
 // --- turn the 2K UI on: flip IEEX_HD_UI = true in the two deployed IEex lua files. The core ships
 //     both OFF, so a player WITHOUT this component gets the stock 1x UI (no doubling) at any res.
