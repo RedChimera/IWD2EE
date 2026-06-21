@@ -1418,6 +1418,29 @@
 		{0x424D554E, 0x00005245}, -- NUMBER (action-bar/item count digits; CIcon::RenderIcon, HD LycheeSoda)
 		{0x4E4F5453, 0x47494245}, -- STONEBIG (inventory/record names + titles; HD Amood IV serif)
 		{0x4E4F5453, 0x334D5345}, -- STONESM3 (stone small-caps; HD Amood IV caps)
+		-- inventory chrome (HD Remacri): selection frame + usability tints + empty equip-slot stones
+		{0x48474948, 0x5448474C}, -- HIGHLGHT (green/red select frame)
+		{0x524F5453, 0x544E4954}, -- STORTINT (red can't-use tint)
+		{0x524F5453, 0x344E4954}, -- STORTIN4 (gold UMD tint)
+		{0x4E4F5453, 0x004D5241}, -- STONARM
+		{0x4E4F5453, 0x4D4C4548}, -- STONHELM
+		{0x4E4F5453, 0x54454C47}, -- STONGLET
+		{0x4E4F5453, 0x4C554D41}, -- STONAMUL
+		{0x4E4F5453, 0x56495551}, -- STONQUIV
+		{0x4E4F5453, 0x544C4542}, -- STONBELT
+		{0x4E4F5453, 0x544F4F42}, -- STONBOOT
+		{0x4E4F5453, 0x4B4F4C43}, -- STONCLOK
+		{0x4E4F5453, 0x474E4952}, -- STONRING
+		{0x4E4F5453, 0x4C494853}, -- STONSHIL
+		{0x4E4F5453, 0x50414557}, -- STONWEAP
+		{0x4E4F5453, 0x4D455449}, -- STONITEM
+		{0x4E4F5453, 0x4D524F46}, -- STONFORM
+		{0x4E4F5453, 0x474E4F53}, -- STONSONG
+		{0x4E4F5453, 0x43455053}, -- STONSPEC
+		{0x4E4F5453, 0x4C455053}, -- STONSPEL
+		{0x4D554849, 0x00000000}, -- IHUM    (item icon reused as a spell icon; outside SP* gate)
+		{0x53494D49, 0x00343843}, -- IMISC84 (item icon reused as a spell icon)
+		{0x4F4F4D49, 0x0000004E}, -- IMOON   (item icon reused as a spell icon)
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
@@ -1427,6 +1450,10 @@
 			.. " !mov(eax,[ecx+0x10]) !mov(eax,[eax+0x4]) !cmp_eax_dword #" .. string.format("%08X", p[2])
 			.. " !jz_dword >hit @" .. lbl .. " "
 	end
+	-- HD spell icons: PREFIX gate -- one branch covers all ~390 SP* spell/ability icons.
+	-- and eax,0x0000FFFF (chars 0-1) ; cmp "SP" (0x5053) ; hit. SP* via CResCell = spell icons +
+	-- SPLBUT (both HD); spell-effect/projectile SP* BAMs are NOT cell-drawn so never reach here.
+	hd_match = hd_match .. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) 25 FF FF 00 00 !cmp_eax_dword #00005053 !jz_dword >hit "
 	hd_match = hd_match .. "!jmp_dword >skip @hit "
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
