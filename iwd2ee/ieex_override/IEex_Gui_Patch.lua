@@ -1466,6 +1466,24 @@
 	-- item icons are caught by the SP* branch above; FIST/TEMP/USPLAT15 by resref.
 	hd_match = hd_match .. "!mov(eax,[ecx+0x10]) !mov(eax,[eax]) 25 FF 00 00 00 !cmp_eax_dword #00000049 !jz_dword >hit "
 	hd_match = hd_match .. "!jmp_dword >skip @hit "
+	-- === HD cursor save-under: enlarge the pointer backup surfaces (height 64 -> 256) ===
+	-- The dragged-item cursor draws the de-doubled item icon (~128px tall) + its stack number.
+	-- The cursor save-under backup (CVidInf SURFACE_4/5) is hardcoded 256x64 in THREE spots --
+	-- a 2x item overflows the 64px height -> StoreBackground/RestoreBackground (and the
+	-- SURFACE_4->5 double-buffer sync) can't save/restore the bottom -> trailing smear. Patch
+	-- all three heights to 256 (width stays 256 -> uniform, no desync). 256x256 covers a 2x
+	-- item + number (and a future 2x cursor).
+	IEex_WriteDword(0x79B7C6, 0x100)  -- CreateSurfaces: SURFACE_4/5 dwHeight  64 -> 256
+	IEex_WriteDword(0x79C282, 0x100)  -- Flip3d sync-blit src rect bottom      64 -> 256
+	IEex_WriteDword(0x79C59A, 0x100)  -- cursor-surface dims getter height     64 -> 256
+	-- Cursor stack-number trail: on the dragged cursor the number is positioned from the ITEM's
+	-- frameSize (CVidInf::RenderPointerImage), drawn at the item's lower-right corner = at/just
+	-- past the save-under rect, regardless of NUMBER.BAM's own cx/cy. Extend rStorage right+bottom
+	-- BEFORE the rClip clamp so the number region is saved/restored each frame.
+	-- At 0x7AE46E the rect is in regs: eax=left esi=top edx=right ecx=bottom (pre-clamp).
+	IEex_AttemptHook(0x7AE46E,  -- CVidCell::StoreBackground: grow save-under to cover the cursor stack number
+		{"83 C2 30 83 C1 60"},  -- right += 0x30, bottom += 0x60 (clamped to screen by the following code)
+		{"8B 5C 24 34 8B E8 !jmp_dword :7AE474"}, {0x8B, 0x5C, 0x24, 0x34, 0x8B, 0xE8})
 	IEex_AttemptHook(0x77F520,  -- CResCell::GetFrame (metrics); bDoubleSize arg @[esp+0x0C] (->+0x10 after push)
 		{hd_match .. "!mov([esp+10],0) @skip !pop(eax)"},
 		{"8B 51 64 56 85 D2 !jmp_dword :77F526"}, {0x8B, 0x51, 0x64, 0x56, 0x85, 0xD2})
