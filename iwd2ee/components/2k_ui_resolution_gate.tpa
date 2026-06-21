@@ -1,0 +1,85 @@
+// =====================================================================================
+// 2K UI  -  the whole high-resolution interface (2x-authored, gated by resolution)
+// =====================================================================================
+// Opt-in component, SEPARATE from the GUI-cosmetics component (DESIGNATED 37, gui.tpa).
+//
+// Installs ALL the 2x-authored HD UI art (item + spell/ability icons, buttons + action bar,
+// inventory chrome, fonts, stone panels/MOS, portraits, mouse cursors -- ~2360 files in
+// 2k_ui_assets/) AND enables the matching de-double hooks (flips IEEX_HD_UI in the deployed
+// IEex_Gui_Patch.lua, which the core ships OFF). The de-double makes the 2x art render native =
+// crisp instead of NN-doubled to 4x. The HD assets + de-double are COUPLED: the core mod no
+// longer ships either by default, so a player WITHOUT this component gets the stock 1x UI
+// (correct at any resolution), and a player WITH it gets the crisp 2x UI.
+//
+// This is meant for the engine's 2x UI mode (the m_bUseNewGui doubling), which IEex enables only
+// at  resW >= 2048 AND resH >= 1200  (IEex_Gui_State.lua, IEex_Extern_InitHighResolutionPaddingPanels).
+// Below that the UI is 1x and 2x art renders at double size (too big). The player is WARNED of
+// this (component name + the check below); the component still installs (opt-in -- the player may
+// set a higher resolution later).
+//
+// Interaction with DESIGNATED 37 (gui.tpa): that component ships custom 1x GUI panel MOS
+// (mos/mos_new_gui = START, STARTN, GUICHP0B-6B). Under 2x those double = blocky, so if BOTH
+// components are installed we additionally drop in 2x-authored versions (mos/mos_2k_newgui) so
+// they stay crisp. (Its BAMs MMTRCHA/B are 1x1 placeholders -- nothing to upscale.)
+//
+// Resolution is read from icewind2.ini [Program Options] ("Last Resolution=WxH", fallback "Resolution=W").
+// =====================================================================================
+
+OUTER_SET width  = 0
+OUTER_SET height = 0
+
+ACTION_IF FILE_EXISTS ~icewind2.ini~ BEGIN
+  COPY_EXISTING ~icewind2.ini~ ~icewind2.ini~                 // primary: "Last Resolution=2560x1440"
+    REPLACE_EVALUATE ~Last Resolution=\([0-9]+\)x\([0-9]+\)~ BEGIN
+      SET width  = "%MATCH1%"
+      SET height = "%MATCH2%"
+    END ~Last Resolution=%MATCH1%x%MATCH2%~
+  BUT_ONLY_IF_IT_CHANGES                                       // identical -> not rewritten (read-only)
+  ACTION_IF (width = 0) BEGIN                                  // fallback: width-only "Resolution=2560"
+    COPY_EXISTING ~icewind2.ini~ ~icewind2.ini~
+      REPLACE_EVALUATE ~[%WNL%%LNL%%MNL%]Resolution=\([0-9]+\)~ BEGIN
+        SET width = "%MATCH1%"
+      END ~%MATCH0%~
+    BUT_ONLY_IF_IT_CHANGES
+  END
+END
+
+// 2K (engine 2x mode, m_bUseNewGui) condition: width >= 2048 AND height >= 1200.
+OUTER_SET is_2k = 0
+ACTION_IF (width >= 2048) AND ((height >= 1200) OR (height = 0)) BEGIN OUTER_SET is_2k = 1 END
+
+ACTION_IF (is_2k = 1) BEGIN
+  PRINT ~[2K UI] detected resolution %width%x%height% (>= 2048x1200) -- 2K assets will display correctly.~
+END ELSE BEGIN
+  WARN ~[2K UI] WARNING: detected resolution %width%x%height% is BELOW 2048x1200. The 2K UI assets
+        render OVERSIZED at this resolution. Keep this component ONLY if you will play at >= 2048x1200
+        (e.g. 2560x1440); otherwise uninstall it. Set your resolution before installing -- it is read
+        from icewind2.ini at install time.~
+END
+
+// --- install ALL the 2x-authored HD UI assets (item + spell icons, buttons/action bar, fonts,
+//     stone panels, portraits, cursors -- ~2360 files) ---
+COPY ~%mod_folder%/2k_ui_assets~ ~override~
+
+// --- enable the de-double hooks: the core ships IEex_Gui_Patch.lua with IEEX_HD_UI = false (hooks
+//     OFF so stock 1x art is untouched); flip it true now that the 2x assets are installed. ---
+ACTION_IF FILE_EXISTS ~override/IEex_Gui_Patch.lua~ BEGIN
+  COPY_EXISTING ~override/IEex_Gui_Patch.lua~ ~override~
+    REPLACE_TEXTUALLY ~local IEEX_HD_UI = false~ ~local IEEX_HD_UI = true~
+  BUT_ONLY_IF_IT_CHANGES
+END ELSE BEGIN
+  WARN ~[2K UI] override/IEex_Gui_Patch.lua not found (install the IWD2EE core first) -- de-double NOT enabled.~
+END
+
+// --- if the GUI-cosmetics component (DESIGNATED 37) is also installed, 2x its custom MOS too
+//     (overwrites the HD-stock GUICHP*/START with the HD versions of 37's custom art) ---
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~37~ BEGIN
+  ACTION_IF FILE_EXISTS ~%mod_folder%/mos/mos_2k_newgui/START.MOS~ BEGIN
+    PRINT ~[2K UI] DESIGNATED 37 detected -- installing 2K versions of its GUI panel MOS.~
+    COPY ~%mod_folder%/mos/mos_2k_newgui~ ~override~
+    // (DESIGNATED 37's BAMs MMTRCHA/B are 1x1 placeholders -- nothing to upscale)
+  END ELSE BEGIN
+    WARN ~[2K UI] DESIGNATED 37 is installed but the 2K MOS set (mos/mos_2k_newgui) has not been
+          generated yet -- its panels (START/GUICHP*/MMTRCH*) will stay 1x. (asset-gen pending)~
+  END
+END

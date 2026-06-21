@@ -376,6 +376,10 @@ The first option is recommended if you aren't planning on doing any XP exploits 
 
 This component currently adds a new main menu screen and new chapter screens. There are no new buttons, but the GUI should look better.
 
+--2K UI (crisp interface at high resolution)--
+
+Optional, separate component. Replaces the engine's blocky 2x-doubled interface with crisp, 2x-authored art for high-resolution play -- the buttons and action bar, item and spell/ability icons, inventory chrome, fonts, stone panels, portraits, mouse cursors, and more. The engine only renders the UI at 2x when the resolution is at least 2048x1200, so below that this art would render oversized -- install this only if you play at 2048x1200 or higher (e.g. 1440p, 4K). The resolution is detected from icewind2.ini at install time. If "Cosmetic improvements to the GUI" is also installed, its menu and chapter panels are upscaled to match.
+
 --Looping Main Theme--
 
 Normally IWD2's main theme does not loop. After 1 minute, it ends and you spend the rest of character creation with no music playing. This component edits the main theme to loop.

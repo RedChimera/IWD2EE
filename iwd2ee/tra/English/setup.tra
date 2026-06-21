@@ -102,3 +102,4 @@ To install IWD2EE, do these steps in this order:
 1. Uninstall all your other mods (if any).
 2. After you do that, look in the folder called "override" and delete everything from that folder.
 3. Install your mods again, including IWD2EE.~
+@200 = ~2K UI: crisp high-resolution interface art (install ONLY at 2048x1200 or higher, e.g. 1440p+)~

@@ -1,0 +1,21 @@
+// Standalone prototype wrapper for the 2K UI component.
+// Run from the game root:  weidu iwd2ee/2k_ui_gate.tp2   (or via a Setup-2k_ui_gate.exe symlink)
+//
+// This stays a SEPARATE, opt-in component (NOT folded into the GUI-cosmetics component,
+// DESIGNATED 37). When both are installed, the gate .tpa additionally 2x's component 37's MOS.
+// For real integration, add an equivalent BEGIN to iwd2ee.tp2 using @-strings in tra/<lang>/setup.tra
+// (see the EN/FR strings proposed alongside this prototype).
+
+BACKUP   ~iwd2ee/2k_ui_gate_backup~
+AUTHOR   ~IWD2EE 2K UI~
+VERSION  ~proto~
+
+ALWAYS
+  OUTER_SPRINT mod_folder ~iwd2ee~
+END
+
+// The name itself warns: only install at >= 2048x1200. The component also prints a resolution
+// check at install (warns + still installs, since the player may raise resolution later).
+BEGIN ~2K UI: crisp high-resolution interface -- install ONLY if you play at 2048x1200 or higher (e.g. 1440p+)~
+DESIGNATED 900
+  INCLUDE ~iwd2ee/components/2k_ui_resolution_gate.tpa~

@@ -1332,6 +1332,15 @@
 		}))
 	end
 
+	-- === 2K UI de-double -- gated by the "2K UI" WeiDU component (DESIGNATED 99) ===
+	-- These hooks force bDoubleSize=0 for the HD-authored resrefs so the 2x assets render native
+	-- (crisp) instead of being NN-doubled to 4x. They are ONLY correct when the 2x assets are
+	-- actually installed: on stock 1x art they would force native size = too small at 2x. So the
+	-- core mod ships them OFF; the 2K UI component (which ships the 2x assets) flips this flag to
+	-- true at install (REPLACE_TEXTUALLY on the deployed override copy). Default OFF = vanilla
+	-- engine doubling (correct size) when the 2K UI component is not installed.
+	local IEEX_HD_UI = false
+	if IEEX_HD_UI then
 	-- [HD UI fonts] crisp 2x for the HD-repacked fonts. At 2x UI the engine doubles 1x font BAMs via
 	-- CVidCell::m_bDoubleSize, passed as the bDoubleSize ARG to CResCell::GetFrame (dims x2) and
 	-- CResCell::GetFrameData (NN pixel x2). We ship 2x-authored BAMs, so any doubling makes them 4x. The flag
@@ -1742,6 +1751,7 @@
 	IEex_AttemptHook(0x77EF70,  -- CResBitmap::GetImageDimensions; bDoubleSize @[esp+8] (->+0xC after push eax)
 		{bmp_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
 		{"8B 41 58 85 C0 !jmp_dword :77EF75"}, {0x8B, 0x41, 0x58, 0x85, 0xC0})
+	end  -- IEEX_HD_UI (the whole 2K UI de-double block: fonts, buttons, cursor, MOS, portraits)
 
 	IEex_EnableCodeProtection()
 

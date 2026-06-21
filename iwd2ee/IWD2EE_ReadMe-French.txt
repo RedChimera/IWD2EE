@@ -377,6 +377,10 @@ La première option est recommandée si vous ne prévoyez pas d'abuser du jeu av
 
 Ce composant ajoute actuellement un nouvel écran de menu principal et de nouveaux écrans de chapitre. Il n’y a pas de nouveaux boutons, mais l’interface graphique devrait être plus belle.
 
+--Interface 2K (interface nette en haute résolution)--
+
+Composant optionnel et distinct. Remplace l’interface doublée en 2x (donc crénelée) par des éléments nets, conçus en 2x, pour le jeu en haute résolution — les boutons et la barre d’action, les icônes d’objets et de sorts, les éléments d’inventaire, les polices, les panneaux de pierre, les portraits, les curseurs souris, et plus encore. Le moteur n’affiche l’interface en 2x que si la résolution atteint au moins 2048x1200 ; en dessous, ces éléments s’afficheraient trop grands — n’installez ceci que si vous jouez en 2048x1200 ou plus (par ex. 1440p, 4K). La résolution est détectée depuis icewind2.ini lors de l’installation. Si « Améliorations cosmétiques de l’interface graphique » est aussi installé, ses panneaux de menu et de chapitre sont mis à l’échelle pour correspondre.
+
 --Thème principal en boucle--
 
 Normalement, le thème principal d’IWD2 ne se répète pas. Après 1 minute, il se termine et vous passez le reste de la création de personnage sans musique. Ce composant modifie le thème principal pour qu’il se répète.

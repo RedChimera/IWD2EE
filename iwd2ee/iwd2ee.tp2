@@ -388,6 +388,12 @@ BEGIN @39 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 37
 
       INCLUDE ~%mod_folder%/components/gui.tpa~      //~New GUI~
 
+//2K UI: high-res mouse cursors -- SEPARATE from New GUI; resolution-gated (>=2048x1200); also 2x's New GUI's MOS if both are installed
+
+BEGIN @200 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 99
+
+      INCLUDE ~%mod_folder%/components/2k_ui_resolution_gate.tpa~      //~2K UI~
+
 //Looping Main Theme
 
 BEGIN @67 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~1000~ @98 DESIGNATED 80
