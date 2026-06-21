@@ -2972,10 +2972,13 @@ function IEex_InstallQuickloot()
 	-- not re-doubled). Pre-halve the panel size and every control position so the
 	-- engine's doubling brings them to a consistent 2x; leave control sizes as-is.
 	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
+	-- Key on the ACTUAL engine double-size (m_bUseNewGui @ g_pBaldurChitin+0x4A28), NOT raw
+	-- resolution: the 2K UI component (which enables the doubling) may be SKIPPED at a >=2048x1200
+	-- resolution, in which case the engine does NOT double this panel and it must NOT be pre-halved.
 	local qlHiRes = false
 	do
-		local resW, resH = IEex_GetResolution()
-		qlHiRes = resW >= 2048 and resH >= 1200
+		local pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+		qlHiRes = pBaldurChitin ~= 0 and IEex_ReadByte(pBaldurChitin + 0x4A28) == 1
 	end
 	local function qlPos(v)
 		if qlHiRes then return math.floor(v / 2) end
