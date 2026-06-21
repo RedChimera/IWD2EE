@@ -2120,15 +2120,21 @@ function IEex_Extern_UI_ButtonRender(CUIControlButton, bForceRender)
 			local iconsDataBridge = IEex_Helper_GetBridge("IEex_ActionIndicators", portraitI, indicatorI)
 			if iconsDataBridge == nil then return end
 			local iconsData = IEex_Helper_ReadDataFromBridge(iconsDataBridge)
+			-- IWD2EE hi-res UI: under m_bUseNewGui the slot button is rendered at 2x, but the icon
+			-- dimensions/offsets in the icon tables are 1x design constants (PrimarySlotDimension etc.),
+			-- so the icon fills only the top-left quarter of the slot. Scale the EXPLICIT dims/offsets
+			-- x2 so the icon fills the 2x slot; leave the controlW/H fallback (already 2x) alone.
+			local pbc = IEex_ReadDword(0x8CF6DC)
+			local hiScale = (pbc ~= 0 and IEex_ReadByte(pbc + 0x4A28) == 1) and 2 or 1
 			for _, iconData in ipairs(iconsData) do
 				local _, _, controlW, controlH = IEex_GetControlArea(CUIControlButton)
 				local resref = iconData[1]
 				local sequence = iconData[2]
 				local frame = iconData[3]
-				local width = iconData[4] or controlW
-				local height = iconData[5] or controlH
-				local offsetX = iconData[6] or 0
-				local offsetY = iconData[7] or 0
+				local width = iconData[4] and iconData[4] * hiScale or controlW
+				local height = iconData[5] and iconData[5] * hiScale or controlH
+				local offsetX = (iconData[6] or 0) * hiScale
+				local offsetY = (iconData[7] or 0) * hiScale
 				IEex_Helper_RenderButtonIcon(CUIControlButton, resref, sequence, frame, width, height, offsetX, offsetY)
 			end
 		end
@@ -2905,11 +2911,29 @@ function IEex_InstallActionIndicators()
 	local panel1 = IEex_GetPanelFromEngine(worldScreen, 1)
 	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1)
 
+	-- IWD2EE hi-res UI: under forced engine double-size (m_bUseNewGui) the engine re-doubles
+	-- this IEex panel's size and its child control POSITIONS after creation (exactly like the
+	-- Quickloot panel below). panel1 and its controls are read already-2x, so without
+	-- compensation the indicator slots land at 4x -- off-screen -- and the feature vanishes.
+	-- Pre-halve every 2x-derived input (panel x/width, slot X); the 1x design constants
+	-- (PanelHeight, slot offsets/sizes) double naturally. Key on the ACTUAL m_bUseNewGui, NOT
+	-- raw resolution: the 2K UI component (which enables the doubling) may be SKIPPED at a
+	-- >=2048x1200 resolution, in which case nothing is doubled and we must NOT pre-halve.
+	local aiHiRes = false
+	do
+		local pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+		aiHiRes = pBaldurChitin ~= 0 and IEex_ReadByte(pBaldurChitin + 0x4A28) == 1
+	end
+	local function aiPos(v)
+		if aiHiRes then return math.floor(v / 2) end
+		return v
+	end
+
 	local actionIndicatorsPanel = IEex_AddPanelToEngine(worldScreen, {
 		["id"]     = IEex_ActionIndicatorsPanelID,
-		["x"]      = x1,
-		["y"]      = y1 - IEex_ActionIndicators_PanelHeight,
-		["width"]  = w1,
+		["x"]      = aiPos(x1),
+		["y"]      = y1 - (aiHiRes and 2 or 1) * IEex_ActionIndicators_PanelHeight,
+		["width"]  = aiPos(w1),
 		["height"] = IEex_ActionIndicators_PanelHeight,
 	})
 
@@ -2918,11 +2942,12 @@ function IEex_InstallActionIndicators()
 		local i = refI * 3
 		local referenceControl = IEex_GetControlFromPanel(panel1, refI)
 		local referenceControlX, _, referenceControlW = IEex_GetControlArea(referenceControl)
+		local slotX = aiPos(referenceControlX)   -- pre-halved: engine doubling lands the slot at 2x above its portrait
 
 		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i, "IEex_UI_Button")
 		IEex_AddControlToPanel(actionIndicatorsPanel, {
 			["id"]     = i,
-			["x"]      = referenceControlX + IEex_ActionIndicators_PrimarySlotOffsetX,
+			["x"]      = slotX + IEex_ActionIndicators_PrimarySlotOffsetX,
 			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_PrimarySlotOffsetY,
 			["width"]  = IEex_ActionIndicators_PrimarySlotSize,
 			["height"] = IEex_ActionIndicators_PrimarySlotSize,
@@ -2934,7 +2959,7 @@ function IEex_InstallActionIndicators()
 		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 1, "IEex_UI_Button")
 		IEex_AddControlToPanel(actionIndicatorsPanel, {
 			["id"]     = i + 1,
-			["x"]      = referenceControlX + IEex_ActionIndicators_SecondarySlotOffsetX,
+			["x"]      = slotX + IEex_ActionIndicators_SecondarySlotOffsetX,
 			["y"]      = IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_SecondarySlotOffsetY,
 			["width"]  = IEex_ActionIndicators_SecondarySlotSize,
 			["height"] = IEex_ActionIndicators_SecondarySlotSize,
@@ -2946,7 +2971,7 @@ function IEex_InstallActionIndicators()
 		IEex_AddControlOverride(chuResref, IEex_ActionIndicatorsPanelID, i + 2, "IEex_UI_Button")
 		IEex_AddControlToPanel(actionIndicatorsPanel, {
 			["id"]     = i + 2,
-			["x"]      = referenceControlX + IEex_ActionIndicators_TertiarySlotOffsetX,
+			["x"]      = slotX + IEex_ActionIndicators_TertiarySlotOffsetX,
 			["y"]      = math.max(0, IEex_ActionIndicators_PanelHeight + IEex_ActionIndicators_TertiarySlotOffsetY),
 			["width"]  = IEex_ActionIndicators_TertiarySlotSize,
 			["height"] = IEex_ActionIndicators_TertiarySlotSize,
