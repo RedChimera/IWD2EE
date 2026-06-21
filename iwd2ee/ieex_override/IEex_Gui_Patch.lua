@@ -1416,6 +1416,8 @@
 		{0x524F5453, 0x52435345}, -- STORESCR
 		{0x47474F54, 0x0000454C}, -- TOGGLE
 		{0x424D554E, 0x00005245}, -- NUMBER (action-bar/item count digits; CIcon::RenderIcon, HD LycheeSoda)
+		{0x4E4F5453, 0x47494245}, -- STONEBIG (inventory/record names + titles; HD Amood IV serif)
+		{0x4E4F5453, 0x334D5345}, -- STONESM3 (stone small-caps; HD Amood IV caps)
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
