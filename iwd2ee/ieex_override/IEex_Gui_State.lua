@@ -1532,7 +1532,13 @@ function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
 	-- 2048 wide and the centred character/record screen is 1200 tall. Below that (e.g.
 	-- 1920x1080, where the record screen's top gets clipped) fall back to the engine's
 	-- 1x UI so nothing overflows. The engine only does 1x or 2x, no in-between.
-	if resW >= 2048 and resH >= 1200 then
+	-- Gated by the "2K UI" WeiDU component (DESIGNATED 99): it flips IEEX_HD_UI to true at install,
+	-- since it ships the 2x-authored assets that the doubling needs to look crisp. WITHOUT that
+	-- component IEEX_HD_UI stays false, so m_bUseNewGui is never set and the engine does NOT double
+	-- the UI -- the stock 1x art renders sharp at native size (no blocky doubling) at any resolution,
+	-- exactly like vanilla. The resolution is the one the player picks at launch (IEex_GetResolution).
+	local IEEX_HD_UI = false
+	if IEEX_HD_UI and resW >= 2048 and resH >= 1200 then
 		IEex_WriteByte(pBaldurChitin + 0x4A28, 1)   -- m_bUseNewGui -> fInit bDoubleSize
 		IEex_WriteDword(pBaldurChitin + 0x4A2C, 1)  -- field_4A2C   -> GetDoubleSize()
 	end

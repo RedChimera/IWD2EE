@@ -25,50 +25,30 @@
 // Resolution is read from icewind2.ini [Program Options] ("Last Resolution=WxH", fallback "Resolution=W").
 // =====================================================================================
 
-OUTER_SET width  = 0
-OUTER_SET height = 0
-
-ACTION_IF FILE_EXISTS ~icewind2.ini~ BEGIN
-  COPY_EXISTING ~icewind2.ini~ ~icewind2.ini~                 // primary: "Last Resolution=2560x1440"
-    REPLACE_EVALUATE ~Last Resolution=\([0-9]+\)x\([0-9]+\)~ BEGIN
-      SET width  = "%MATCH1%"
-      SET height = "%MATCH2%"
-    END ~Last Resolution=%MATCH1%x%MATCH2%~
-  BUT_ONLY_IF_IT_CHANGES                                       // identical -> not rewritten (read-only)
-  ACTION_IF (width = 0) BEGIN                                  // fallback: width-only "Resolution=2560"
-    COPY_EXISTING ~icewind2.ini~ ~icewind2.ini~
-      REPLACE_EVALUATE ~[%WNL%%LNL%%MNL%]Resolution=\([0-9]+\)~ BEGIN
-        SET width = "%MATCH1%"
-      END ~%MATCH0%~
-    BUT_ONLY_IF_IT_CHANGES
-  END
-END
-
-// 2K (engine 2x mode, m_bUseNewGui) condition: width >= 2048 AND height >= 1200.
-OUTER_SET is_2k = 0
-ACTION_IF (width >= 2048) AND ((height >= 1200) OR (height = 0)) BEGIN OUTER_SET is_2k = 1 END
-
-ACTION_IF (is_2k = 1) BEGIN
-  PRINT ~[2K UI] detected resolution %width%x%height% (>= 2048x1200) -- 2K assets will display correctly.~
-END ELSE BEGIN
-  WARN ~[2K UI] WARNING: detected resolution %width%x%height% is BELOW 2048x1200. The 2K UI assets
-        render OVERSIZED at this resolution. Keep this component ONLY if you will play at >= 2048x1200
-        (e.g. 2560x1440); otherwise uninstall it. Set your resolution before installing -- it is read
-        from icewind2.ini at install time.~
-END
+// NOTE: the resolution is chosen by the player AT LAUNCH (IEex asks it each run), so there is
+// nothing reliable to gate on at install time -- this component is purely OPT-IN. The doubling it
+// turns on (m_bUseNewGui in IEex_Gui_State.lua) is itself runtime-gated to >= 2048x1200, so the
+// 2x UI only engages at high resolution; at lower launch resolutions the 2x art is oversized.
+// Install only if you play at 2048x1200 or higher (the component name warns of this).
+PRINT ~[2K UI] Installing the 2x high-resolution UI (the player chooses resolution at launch).~
+PRINT ~[2K UI] This looks correct at 2048x1200 and above; at lower resolutions the UI is oversized.~
 
 // --- install ALL the 2x-authored HD UI assets (item + spell icons, buttons/action bar, fonts,
 //     stone panels, portraits, cursors -- ~2360 files) ---
 COPY ~%mod_folder%/2k_ui_assets~ ~override~
 
-// --- enable the de-double hooks: the core ships IEex_Gui_Patch.lua with IEEX_HD_UI = false (hooks
-//     OFF so stock 1x art is untouched); flip it true now that the 2x assets are installed. ---
-ACTION_IF FILE_EXISTS ~override/IEex_Gui_Patch.lua~ BEGIN
-  COPY_EXISTING ~override/IEex_Gui_Patch.lua~ ~override~
-    REPLACE_TEXTUALLY ~local IEEX_HD_UI = false~ ~local IEEX_HD_UI = true~
-  BUT_ONLY_IF_IT_CHANGES
-END ELSE BEGIN
-  WARN ~[2K UI] override/IEex_Gui_Patch.lua not found (install the IWD2EE core first) -- de-double NOT enabled.~
+// --- turn the 2K UI on: flip IEEX_HD_UI = true in the two deployed IEex lua files. The core ships
+//     both OFF, so a player WITHOUT this component gets the stock 1x UI (no doubling) at any res.
+//       IEex_Gui_State.lua : enables the engine's 2x doubling (m_bUseNewGui), runtime-gated >=2048x1200
+//       IEex_Gui_Patch.lua : enables the matching de-double hooks (so the 2x assets render native) ---
+ACTION_FOR_EACH luafile IN ~IEex_Gui_State.lua~ ~IEex_Gui_Patch.lua~ BEGIN
+  ACTION_IF FILE_EXISTS ~override/%luafile%~ BEGIN
+    COPY_EXISTING ~override/%luafile%~ ~override~
+      REPLACE_TEXTUALLY ~local IEEX_HD_UI = false~ ~local IEEX_HD_UI = true~
+    BUT_ONLY_IF_IT_CHANGES
+  END ELSE BEGIN
+    WARN ~[2K UI] override/%luafile% not found (install the IWD2EE core first) -- 2K UI NOT fully enabled.~
+  END
 END
 
 // --- if the GUI-cosmetics component (DESIGNATED 37) is also installed, 2x its custom MOS too
