@@ -623,6 +623,22 @@
 		!call :4D4540 ; CUIManager_Render ;
 	]]})
 
+	------------------------------------------------------------------
+	-- Centre the save-game thumbnail on the party (CORE, all res)  --
+	------------------------------------------------------------------
+	-- CScreenWorld::SaveScreen (0x690640) renders the area at the live camera into the stru_8E79A8
+	-- capture window, so the ICEWIND2.BMP thumbnail frames wherever the player last scrolled -- often
+	-- off-party. Hook the CGameArea::Render call inside SaveScreen (0x6906C3), AFTER its
+	-- SetViewPort(stru_8E79A8) and BEFORE the render, and re-aim the view at the party centroid.
+	-- SaveScreen restores the real camera afterwards, so only the captured frame moves. NOT gated by
+	-- the 2K UI component: every high-resolution player hits this, not just 2K UI users.
+	IEex_HookBeforeCall(0x6906C3, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_CenterSaveThumbnailOnParty"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
 	---------------------------------------
 	-- IEex_Extern_MouseInAreaViewport() --
 	---------------------------------------

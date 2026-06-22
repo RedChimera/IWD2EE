@@ -1552,6 +1552,57 @@ function IEex_Extern_InitGUIConstants()
 	IEex_WriteDword(0x8E79D4, resH)           -- WorldScreenConsoleBottom
 	IEex_WriteDword(0x8E79EC, resH)           -- WorldScreenToolbarBottom
 	IEex_SetCRect(0x8E79F8, 0, 0, resW, resH) -- WorldScreenContainerViewPortRect
+
+	-- Save-thumbnail capture window (CInfinity::stru_8E79A8): a fixed 512x384 region of the back
+	-- surface that CScreenWorld::SaveScreen renders the area into, which PrintSurfaceToBmp then
+	-- downsamples 5x -> the 102x76 ICEWIND2.BMP save thumbnail. The stock engine centres this per
+	-- resolution tier, but the 2048-width tier was left at the 1024 value (256,150)-(768,534)
+	-- (CBaldurChitin: identical at the 2048 and 1024 cases) -- left-of-centre on a >=2048-wide
+	-- screen, so the thumbnail captures off-party/unexplored area. Recompute it centred for the
+	-- actual resolution. This reproduces the stock 1024 (256,150,768,534) and 1600 (544,366,
+	-- 1056,750) tiers EXACTLY and fixes 2048+. Centre x; centre y biased up 42px (234 = 192+42)
+	-- to clear the bottom UI bar, matching where the camera frames the party in the viewport.
+	local cx, cy = math.floor(resW / 2), math.floor(resH / 2)
+	IEex_SetCRect(0x8E79A8, cx - 256, cy - 234, cx + 256, cy + 150) -- WorldScreenSaveThumbnailRect (512x384, centred)
+end
+
+function IEex_Extern_CenterSaveThumbnailOnParty()
+
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	-- Centre the save-game thumbnail on the party. CScreenWorld::SaveScreen renders the area at the
+	-- LIVE camera position into the stru_8E79A8 capture window (then downsamples it to ICEWIND2.BMP),
+	-- so the thumbnail shows wherever the player last scrolled the view -- frequently off-party. This
+	-- runs from a hook placed AFTER SaveScreen's SetViewPort(stru_8E79A8) and BEFORE its
+	-- CGameArea::Render: it moves the view so the party centroid sits at the centre of the capture
+	-- window. SaveScreen saved the real view position at entry (GetViewPosition) and restores it after
+	-- the render, so the live camera is left exactly where it was -- only the captured frame changes.
+	-- CORE fix (not 2K-UI-gated): any player who raises the resolution gets an off-party thumbnail,
+	-- not only those running the 2K UI component. Pairs with the stru_8E79A8 centring in
+	-- IEex_Extern_InitGUIConstants (which centres the capture window itself on >=2048-wide screens).
+	local infinity = IEex_GetCInfinity()
+	if (infinity or 0) == 0 then return end
+
+	-- Party centroid in world coordinates over the present (incl. dead) player characters.
+	local sumX, sumY, count = 0, 0, 0
+	for i = 0, 5 do
+		local id = IEex_GetActorIDCharacter(i)
+		if id ~= 0 and IEex_IsSprite(id, true) then
+			local x, y = IEex_GetActorLocation(id)
+			sumX, sumY, count = sumX + x, sumY + y, count + 1
+		end
+	end
+	if count == 0 then return end
+	local centreX, centreY = math.floor(sumX / count), math.floor(sumY / count)
+
+	-- Put the centroid at the centre of the capture window: view top-left = centroid - half the
+	-- window. Read stru_8E79A8 at runtime so this tracks the resolution-correct window. SetViewPosition
+	-- (0x5D11F0, this=CInfinity) clamps to the area bounds for a party near the map edge and marks the
+	-- position exact; SaveScreen's preceding SetViewPort already set m_bResizedViewPort = TRUE, so
+	-- CInfinity::Render re-syncs nCurrentX/nCurrentTileX/nOffsetX from the new position before drawing.
+	local halfW = math.floor((IEex_ReadDword(0x8E79A8 + 0x8) - IEex_ReadDword(0x8E79A8 + 0x0)) / 2)
+	local halfH = math.floor((IEex_ReadDword(0x8E79A8 + 0xC) - IEex_ReadDword(0x8E79A8 + 0x4)) / 2)
+	IEex_Call(0x5D11F0, {1, centreY - halfH, centreX - halfW}, infinity, 0x0) -- CInfinity::SetViewPosition(x, y, bSetExactScale=TRUE)
 end
 
 function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
