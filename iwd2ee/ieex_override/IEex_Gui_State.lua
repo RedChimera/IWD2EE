@@ -1042,11 +1042,50 @@ end
 function IEex_Quickloot_Show()
 	local panel = IEex_Quickloot_GetPanel()
 	IEex_SetPanelActive(panel, true)
+	IEex_Quickloot_FixHiResArrowHitbox(panel)
 end
 
 function IEex_Quickloot_Hide()
 	local panel = IEex_Quickloot_GetPanel()
 	IEex_SetPanelActive(panel, false)
+end
+
+function IEex_Quickloot_FixHiResArrowHitbox(panel)
+	-- IWD2EE hi-res UI: under m_bUseNewGui (engine double-size) the quickloot left
+	-- scroll arrow (control 10) gets a hit rect that overlaps the leftmost loot slot.
+	-- The panel hit-test (CUIPanel::OnLButtonDown) is rect-only -- CUIControlBase::
+	-- IsOverPixel is a no-op TRUE -- its edge test is inclusive (pt.x <= origin.x +
+	-- size.cx), and controls are walked tail->head, so the arrow (added after the
+	-- slots) wins the overlap: clicking the first loot item (e.g. a gold pile) fires
+	-- the scroll-left arrow instead. Clamp the arrow's right edge to one pixel left of
+	-- the leftmost slot so it can no longer swallow that slot's clicks. Double-size
+	-- only; at 1x the engine layout has no overlap.
+	local pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	if pBaldurChitin == 0 or IEex_ReadByte(pBaldurChitin + 0x4A28) ~= 1 then return end
+
+	if (panel or 0) == 0 then return end
+	local leftArrow = IEex_GetControlFromPanel(panel, 10)
+	if (leftArrow or 0) == 0 then return end
+
+	-- Leftmost slot; do not assume control 0 is geometrically leftmost.
+	local slotLeft = nil
+	for i = 0, 9 do
+		local slot = IEex_GetControlFromPanel(panel, i)
+		if (slot or 0) ~= 0 then
+			local sx = IEex_GetControlArea(slot)
+			if slotLeft == nil or sx < slotLeft then slotLeft = sx end
+		end
+	end
+	if slotLeft == nil then return end
+
+	local ax, _, aw, _ = IEex_GetControlArea(leftArrow)
+	if slotLeft > ax and ax + aw >= slotLeft then
+		local newW = math.max(1, slotLeft - 1 - ax)
+		IEex_FunctionLog(string.format(
+			"Quickloot hi-res: clamped left-arrow hitbox arrow[x=%d w=%d right=%d] vs slotLeft=%d -> w %d->%d",
+			ax, aw, ax + aw, slotLeft, aw, newW))
+		IEex_SetControlArea(leftArrow, nil, nil, newW, nil)
+	end
 end
 
 function IEex_Quickloot_UpdateItems(alreadyLocked)
