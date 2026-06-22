@@ -1742,8 +1742,11 @@
 		.. "!mov(eax,[ecx+0x64]) !test_eax_eax !jz_dword >skip "                  -- null BITMAPINFOHEADER guard
 		.. "!mov(eax,[eax+0x4]) !cmp_eax_dword #000001A4 !jne_dword >c84 "        -- biWidth==420?
 		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #00000294 !jz_dword >hit " -- biHeight==660 -> HD _L
-		.. "@c84 !mov(eax,[ecx+0x64]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00000054 !jne_dword >skip " -- biWidth==84?
-		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #00000054 !jne_dword >skip "       -- biHeight==84 -> HD _S
+		.. "@c84 !mov(eax,[ecx+0x64]) !mov(eax,[eax+0x4]) !cmp_eax_dword #00000054 !jne_dword >c42 " -- biWidth==84?
+		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #00000054 !jz_dword >hit "        -- biHeight==84 -> HD _S
+		.. "@c42 !mov(eax,[ecx+0x10]) !test_eax_eax !jne_dword >skip "                          -- m_pDimmKeyTableEntry != NULL: a NAMED 42x42 resource = an in-game/custom _S portrait (stock small portraits are 42x42 too). Leave it doubled. ONLY the save-screen copy de-doubles -- it is loaded by CDimm::ServiceFromFile (CResRef(""), no key-table entry -> +0x10 == NULL), so this guard separates it from real portraits sharing the size.
+		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x4]) !cmp_eax_dword #0000002A !jne_dword >skip " -- biWidth==42?
+		.. "!mov(eax,[ecx+0x64]) !mov(eax,[eax+0x8]) !cmp_eax_dword #0000002A !jne_dword >skip "       -- biHeight==42 -> the 2x portrait copy a 2K-UI save writes into MPSave/<slot>/PORTRTn.BMP. De-double so the Load/Save list shows it native (not 4x/garbled). Display-only: the saved BMP is untouched, so the save stays vanilla-compatible. Old 1x (21x21) saves don't match here -> still doubled -> still correct.
 		.. "@hit "
 	IEex_AttemptHook(0x77ECF0,  -- CResBitmap::GetImageData; bDoubleSize @[esp+4] (->+8 after push eax)
 		{bmp_match .. "!mov([esp+8],0) @skip !pop(eax)"},
