@@ -1389,7 +1389,7 @@
 	-- (action bar GUIBTACT, the GBTN* family, inventory/spell/store/options buttons, inn-room
 	-- images) that draw via CUIControlButton -> CVidCell with m_bDoubleSize = manager->m_bDoubleSize.
 	-- Each is AI-upscaled (Remacri) to 2x and de-doubled here by FULL 8-char resref (branches c8+).
-	-- STATES (portrait status icons, end of list) is HD/de-doubled here; only STATES2 (12x13 font) stays 1x. See §11.
+	-- The 255-frame stone fonts (STONEBIG/STONESM3) + STATES2 status icons stay 1x. See §11.
 	local btn_list = {
 		{0x54554243, 0x00000000}, -- CBUT
 		{0x41454743, 0x00000052}, -- CGEAR
@@ -1473,8 +1473,6 @@
 		{0x57415057, 0x00000000}, -- WPAW
 		{0x57415050, 0x00000000}, -- PPAW
 		{0x57415044, 0x00000000}, -- DPAW
-		-- portrait status/buff icons (CGameSprite "STATES" m_portraitIconVidCell, 10x10 NN-doubled); HD UltraSharp
-		{0x54415453, 0x00005345}, -- STATES
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
@@ -1517,6 +1515,22 @@
 	IEex_AttemptHook(0x77F5F0,  -- CResCell::GetFrameData (pixels); bDoubleSize arg @[esp+0x08] (->+0x0C after push)
 		{hd_match .. "!mov([esp+0C],0) @skip !pop(eax)"},
 		{"83 EC 10 53 8B D9 !jmp_dword :77F5F6"}, {0x83, 0xEC, 0x10, 0x53, 0x8B, 0xD9})
+
+	-- === HD portrait status icons (STATES): force the portrait cell to NOT engine-double ===
+	-- The buff/status icons on portraits are CGameSprite.m_portraitIconVidCell (resref "STATES"), AI-upscaled
+	-- to 2x (Nomos8kDAT). The cell is built with bDoubleSize = m_bUseNewGui, so at 2K UI it doubled our 2x BAM
+	-- -> 4x (icons 2x too big). De-doubling via the CResCell/CResCellHeader GetFrame hooks is unsafe here:
+	-- CGameSprite INLINES the cell ctor (SetResRef 0x58FC70 is never called) and draws via an inlined
+	-- GetResFrame -> the header doubler 0x77FDA0; hooking 0x77FDA0 corrupted other header-cached UI. Instead
+	-- patch the ONE source: in CGameSprite::CGameSprite the portrait cell's bDoubleSize comes from a single
+	-- read of m_bUseNewGui at 0x6EFFCB (mov eax,[ecx+0x4A28]) that is immediately push'd as the ctor arg.
+	-- Replace it with xor eax,eax (+nops) so the cell is built bDoubleSize=FALSE -> never doubles on ANY path
+	-- (metrics+pixels, header or not). Scoped to ONLY this cell: it is the sole 0x4A28 read in the ctor, ecx
+	-- is reassigned right after, eax is pushed immediately. Layout unchanged -- RenderPortrait positions icons
+	-- by its OWN bDoubleSize param (m_bUseNewGui), not the cell flag. We ship the 2x STATES BAM so it renders
+	-- native-crisp at the correct size. bytes @0x6EFFCB: 8B 81 28 4A 00 00 -> 31 C0 90 90 90 90. See §13.
+	IEex_WriteDword(0x6EFFCB, 0x9090C031)  -- xor eax,eax ; nop ; nop  (0x6EFFCB..CE)
+	IEex_WriteWord(0x6EFFCF, 0x9090)       -- nop ; nop                (0x6EFFCF..D0)
 
 	-- === Tooltip box 2x (so the HD TOOLFONT actually fits) ===
 	-- The cursor/tooltip layer (CInfCursor/CInfToolTip) is SEPARATE from CUIManager's
