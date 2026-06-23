@@ -1389,7 +1389,7 @@
 	-- (action bar GUIBTACT, the GBTN* family, inventory/spell/store/options buttons, inn-room
 	-- images) that draw via CUIControlButton -> CVidCell with m_bDoubleSize = manager->m_bDoubleSize.
 	-- Each is AI-upscaled (Remacri) to 2x and de-doubled here by FULL 8-char resref (branches c8+).
-	-- The 255-frame stone fonts (STONEBIG/STONESM3) + STATES2 status icons stay 1x. See §11.
+	-- STATES (portrait status icons, end of list) is HD/de-doubled here; only STATES2 (12x13 font) stays 1x. See §11.
 	local btn_list = {
 		{0x54554243, 0x00000000}, -- CBUT
 		{0x41454743, 0x00000052}, -- CGEAR
@@ -1473,6 +1473,8 @@
 		{0x57415057, 0x00000000}, -- WPAW
 		{0x57415050, 0x00000000}, -- PPAW
 		{0x57415044, 0x00000000}, -- DPAW
+		-- portrait status/buff icons (CGameSprite "STATES" m_portraitIconVidCell, 10x10 NN-doubled); HD UltraSharp
+		{0x54415453, 0x00005345}, -- STATES
 	}
 	for k, p in ipairs(btn_list) do
 		local lbl = "c" .. (7 + k)
