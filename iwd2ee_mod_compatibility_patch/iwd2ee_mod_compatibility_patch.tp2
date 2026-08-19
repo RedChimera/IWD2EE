@@ -84,6 +84,23 @@ LANGUAGE   ~French~
            ~iwd2ee/tra/French/more_persuasion_options.tra~
            ~iwd2ee/tra/French/new_strings_after_release.tra~
 
+LANGUAGE   ~Simplified Chinese~
+           ~SChinese~
+           ~iwd2ee_mod_compatibility_patch/tra/SChinese/setup.tra~
+           ~iwd2ee/tra/SChinese/class_revisions.tra~
+           ~iwd2ee/tra/SChinese/loose_alignment.tra~
+           ~iwd2ee/tra/SChinese/spell_revise.tra~
+           ~iwd2ee/tra/SChinese/spell_focus.tra~
+           ~iwd2ee/tra/SChinese/item_revisions.tra~
+           ~iwd2ee/tra/SChinese/creature_rebalancing.tra~
+           ~iwd2ee/tra/SChinese/faster_areas.tra~
+           ~iwd2ee/tra/SChinese/z_concoct_potions.tra~
+		   ~iwd2ee/tra/SChinese/npc_core.tra~
+           ~iwd2ee/tra/SChinese/revised_battle_square.tra~
+           ~iwd2ee/tra/SChinese/lua.tra~
+           ~iwd2ee/tra/SChinese/racial_enemies.tra~
+           ~iwd2ee/tra/SChinese/misc.tra~
+           ~iwd2ee/tra/SChinese/more_persuasion_options.tra~
 
 BEGIN @1 REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ @98 FORBID_COMPONENT ~widescreen.tp2~ ~0~ @99 DESIGNATED 0
 
