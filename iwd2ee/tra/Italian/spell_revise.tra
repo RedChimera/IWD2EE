@@ -2779,7 +2779,7 @@ Questa capacita' puo' essere utilizzata come azione gratuita.~
 @30297=~... Evoca Ombra.~
 @30298=~... Simbolo di Dolore.~
 @30299=~... Campo Anti-magia.~
-@30300=~... Valanga.~
+@30300=~... Masso Rotolante.~
 @30301=~... Caos.~
 @30302=~... Cerchio di Morte.~
 @30303=~... Dardi d'Osso.~
@@ -4539,7 +4539,7 @@ Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
 
 Questo incantesimo crea un gran numero di dardi simili a quelli creati dall'incantesimo Dardo Incantato che colpiscono un singolo bersaglio. Ogni dardo infligge 1d4+1 danni magici senza tiro salvezza. L'incantesimo lancia un dardo per livello del mago.~
-@37653=~Valanga~
+@37653=~Masso Rotolante~
 @38653=~Valanga
 (Evocazione)
 Livello: Drd 16 Str/Mag 6
