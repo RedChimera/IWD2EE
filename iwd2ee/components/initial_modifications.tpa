@@ -9,9 +9,13 @@ ACTION_IF NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
 		ACTION_READLN ~input~
 	END
 */
+	// Uninstalling ddrawfix.tp2 (which has no LANGUAGE) makes WeiDU set %LANGUAGE% to an empty string.
+	// Save it and restore it, or gender.tra and the Portuguese vanilla strings below are skipped.
+	OUTER_TEXT_SPRINT iwd2ee_language ~%LANGUAGE%~
 	UNINSTALL ~ddrawfix.tp2~ ~0~
 	UNINSTALL ~ddrawfix.tp2~ ~1~
 	UNINSTALL ~ddrawfix.tp2~ ~2~
+	OUTER_TEXT_SPRINT ~LANGUAGE~ ~%iwd2ee_language%~
 //			ACTION_IF input = 1 BEGIN
 		COPY ~%mod_folder%/ddrawfix~ ~./~
 //				ACTION_MATCH ~%WEIDU_OS%~ WITH
@@ -113,6 +117,8 @@ END
 
 ACTION_IF ~%LANGUAGE%~ STRING_EQUAL_CASE ~Portuguese~ BEGIN
 	INCLUDE ~%mod_folder%/tra/Portuguese/revised_vanilla_strings.tph~
+	// Pre-made parties screen (Party.ini) in Portuguese. WeiDU backs up the original and restores it on uninstall.
+	COPY ~%mod_folder%/tra/Portuguese/Party.ini~ ~Party.ini~
 END
 
 ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
