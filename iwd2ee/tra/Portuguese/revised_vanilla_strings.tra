@@ -425,7 +425,7 @@ Esta magia concede ao conjurador uma redução de dano de 10/- contra dano de conc
 @100274=~Tudo bem.~
 @100275=~Mostramos o pergaminho de enxofre carbonizado que pegamos dos escavadores goblins para Lady Elytharra, e ela nos disse que era um de um par de pergaminhos. Contanto que o usuário tenha algum conhecimento de magia, ele pode teletransportar o portador do segundo pergaminho (e os aliados do portador, presumivelmente) para a localização do primeiro. O que significa que alguém na cidade teletransportou os goblins para as cavernas sob o armazém. Devemos ver se conseguimos encontrar esse traidor e então contar a Elytharra.~
 @100276=~Mostramos a garrafa tocada por fantasmas de Cahl-Hyred à Senhora Elytharra, e ela nos disse que a garrafa poderia ser usada para armazenar parte da substância do plano etéreo. Se conseguíssemos obter um pouco desse material do plano etéreo e colocá-lo dentro da garrafa, ele poderia ser usado para encantar um item ou uma arma. Vale a pena investigar.~
-@100277=~Durante nossa conversa com Elytharra, nos ocorreu que poderíamos colocar algumas das lágrimas do espírito da Viúva Chorona na garrafa tocada pelo fantasma.~
+@100277=~Durante nossa conversa com Elytharra, nos ocorreu que poderíamos colocar algumas das lágrimas do espírito da Viúva Chorosa na garrafa tocada pelo fantasma.~
 @100278=~Eu insultei Testocles~
 @100279=~Testocles me pediu para trazer de volta seu programa~
 @100280=~Eu concordei em trazer de volta o programa de TV favorito de Testocles~
@@ -448,35 +448,35 @@ Esta magia concede ao conjurador uma redução de dano de 10/- contra dano de conc
 @100297=~Não, mas há alguma pista sobre as crianças desaparecidas?~
 @100298=~Você ganha experiência por fazer testículos sofrerem e esperarem~
 @100299=~Você ganha experiência por irritar testículos permanentemente~
-@100300=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@100301=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
+@100300=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@100301=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
 @100302=~Você viu isso com seus próprios olhos?~
 @100303=~Abela~
 @100304=~Albert~
-@100305=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorona.~
-@100306=~Você descobriu um esconderijo secreto na taverna Viúva Chorona.~
+@100305=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorosa.~
+@100306=~Você descobriu um esconderijo secreto na taverna Viúva Chorosa.~
 @100307=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @100308=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
 @100309=~Guarde seus elogios para alguém que possa achá-los valiosos; nós apenas matamos alguns monstros que nos atacaram. Adeus.~
 @100310=~Alvanhendar~
-@100311=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@100312=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
+@100311=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@100312=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
 @100313=~Ah. Cresça e supere isso. Deve haver um monte de coisas que eu preferiria fazer do que ajudar a trazer de volta uma série para mais uma temporada!~
 @100314=~Muito bem, verei o que posso fazer.~
 @100315=~Terei que pensar sobre isso.~
-@100316=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorona.~
+@100316=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorosa.~
 @100317=~Farei isso.~
-@100318=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorona.~
+@100318=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorosa.~
 @100319=~Silêncio, criança. Me dê quaisquer moedas ou comida que você tenha escondido - e não conte a ninguém sobre isso, ou você está morto.~
 @100320=~Farei isso.~
 @100321=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @100322=~Sim. Eu, eh,... os "convenci" do erro de seus caminhos.~
 @100323=~Ainda não#~
 @100324=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@100325=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
+@100325=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
 @100326=~Agora que isso está resolvido, talvez você possa fazer algo por mim#~
 @100327=~Foi um prazer ajudar. Até logo.~
-@100328=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
+@100328=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
 @100329=~Ei, você não acha que está levando isso um pouco a sério demais?~
 @100330=~Tudo bem.~
 @100331=~Encontrei um personagem de depuração chamado Testocles.~
@@ -532,8 +532,8 @@ Esta magia concede ao conjurador uma redução de dano de 10/- contra dano de conc
 @100381=~Ah, é mesmo! É assim que você se sente em relação a um entretenimento clássico e de qualidade???? Suma daqui, infiel!~
 @100382=~Ei, você não acha que está levando isso um pouco a sério demais?~
 @100383=~Tudo bem.~
-@100384=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorona.~
-@100385=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorona.~
+@100384=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorosa.~
+@100385=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorosa.~
 @100386=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @100387=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
 @100388=~Você contou a Elytharra que Phaen era o traidor.~
@@ -557,7 +557,7 @@ Esta magia concede ao conjurador uma redução de dano de 10/- contra dano de conc
 @100406=~Depósito Comercial de Gallaway~
 @100407=~Mercadorias de Henghelm~
 @100408=~Encantamentos de Elytharra~
-@100409=~A Viúva Chorona~
+@100409=~A Viúva Chorosa~
 @100410=~Galinha~
 @100411=~Você disse a Elytharra que Phaen era o traidor.~
 @100412=~Você disse a Elytharra que Phaen era o traidor e o nome dele mestre.~
@@ -589,7 +589,7 @@ Esta magia concede ao conjurador uma redução de dano de 10/- contra dano de conc
 @100438=~Conseguimos ajudar Valin. Ele foi curado e recuperou a consciência.~
 @100439=~Tenho aqui uma poção de Cahl-Hyred que ele deseja que seja identificada.~
 @100440=~Eu sou... Gostaria de saber se você poderia me dizer para que serve esta garrafa tocada por um fantasma.~
-@100441=~Obtivemos uma lágrima do fantasma que assombra a Viúva Chorona e gostaríamos de saber se você poderia utilizá-la.~
+@100441=~Obtivemos uma lágrima do fantasma que assombra a Viúva Chorosa e gostaríamos de saber se você poderia utilizá-la.~
 @100442=~Você usa as vestes de uma feiticeira. Você tem alguma magia que possamos comprar de você?~
 @100443=~Você tem alguma magia que possamos comprar de você?~
 @100444=~Preciso me retirar. Adeus.~
@@ -712,12 +712,12 @@ Peso: 0 kg
 ~
 @100527=~Screed~
 @100528=~Marinheiro~
-@100529=~Chave da Viúva Chorona~
+@100529=~Chave da Viúva Chorosa~
 @100530=~Eldgull~
-@100531=~Chave da Viúva Chorona~
+@100531=~Chave da Viúva Chorosa~
 @100532=~Hedron Kerdos~
 @100533=~Capitão do Navio~
-@100534=~Esta pequena chave de ferro destranca o quarto do andar superior da Estalagem da Viúva Chorona.
+@100534=~Esta pequena chave de ferro destranca o quarto do andar superior da Estalagem da Viúva Chorosa.
 Peso: 0 lb.
 ~
 @100535=~Jorun Tamewater~
@@ -831,7 +831,7 @@ Requisito de Talento: Arma Simples, Lâmina Pequena
 Tipo: Uma mão
 ~
 @100608=~Lágrima da Mágoa~
-@100609=~Esta lâmina de prata excepcionalmente pesada foi encantada com a lágrima que você obteve do espírito da Viúva Chorona. Aparentemente, a lágrima ainda guarda parte da raiva dela contra você e da angústia por seu banimento da estalagem, o que pode ser a razão para o grande peso da arma. Parece que não há fúria maior nos infernos do que a de um espírito banido, mas contanto que você consiga uma valiosa arma mágica, um pouco de fúria espectral é um preço pequeno a se pagar.
+@100609=~Esta lâmina de prata excepcionalmente pesada foi encantada com a lágrima que você obteve do espírito da Viúva Chorosa. Aparentemente, a lágrima ainda guarda parte da raiva dela contra você e da angústia por seu banimento da estalagem, o que pode ser a razão para o grande peso da arma. Parece que não há fúria maior nos infernos do que a de um espírito banido, mas contanto que você consiga uma valiosa arma mágica, um pouco de fúria espectral é um preço pequeno a se pagar.
 ESTATÍSTICAS:
 
 Dano: 1d4 + 1, +2 contra Mortos-vivos Espectrais
@@ -893,7 +893,7 @@ Peso: 0 lb.
 ~
 @100625=~Cicatriz de Letto~
 @100626=~Esta espada curta encantada foi esculpida em um único pedaço de xisto, sua superfície manchada com veneno extraído da língua de uma serpente do deserto. O veneno nunca seca, dando à espada um brilho doentio.
-Esta espada curta é uma arma maligna, que dizem ter causado muitas mortes agonizantes ao longo dos anos. Seu nome vem de seu último dono conhecido, um infame pirata chamado Letto, que atacava navios que navegavam pelo Mar de Gelo Movediço. Conta-se que ele foi capturado pela Tribo da Grande Baleia à sombra do Iceberg de Hehnhold, onde seu navio foi despedaçado pelos grandes machados dos bárbaros e a tripulação incendiada com piche em chamas. Quando a batalha terminou, restaram apenas pedaços de madeira à deriva. Um dos pedaços do casco de seu navio foi levado para o sul e a madeira foi usada na construção de um dos quartos do andar superior da Estalagem da Viúva Chorona. A espada curta está enterrada na madeira há quase trinta anos ou mais, esperando que alguém a encontre novamente e a use em nome de Letto.
+Esta espada curta é uma arma maligna, que dizem ter causado muitas mortes agonizantes ao longo dos anos. Seu nome vem de seu último dono conhecido, um infame pirata chamado Letto, que atacava navios que navegavam pelo Mar de Gelo Movediço. Conta-se que ele foi capturado pela Tribo da Grande Baleia à sombra do Iceberg de Hehnhold, onde seu navio foi despedaçado pelos grandes machados dos bárbaros e a tripulação incendiada com piche em chamas. Quando a batalha terminou, restaram apenas pedaços de madeira à deriva. Um dos pedaços do casco de seu navio foi levado para o sul e a madeira foi usada na construção de um dos quartos do andar superior da Estalagem da Viúva Chorosa. A espada curta está enterrada na madeira há quase trinta anos ou mais, esperando que alguém a encontre novamente e a use em nome de Letto.
 
 ESTATÍSTICAS:
 
@@ -1039,7 +1039,7 @@ Esta magia causa uma doença grave e fraqueza em uma criatura. O indivíduo afetad
 @100736=~Escudo de Fogo~
 @100737=~~
 @100738=~Brogan~
-@100739=~Hedron Kerdos, o capitão da A Malvada, deixou nosso grupo nos cais de Targos. Ele nos disse para procurarmos Ulbrec Dinnsmore, o Senhor de Targos, na cidade acima dos penhascos, e nos alertou para termos cuidado com os saqueadores goblins da região.~
+@100739=~Hedron Kerdos, o capitão da A Moça Atrevida, deixou nosso grupo nos cais de Targos. Ele nos disse para procurarmos Ulbrec Dinnsmore, o Senhor de Targos, na cidade acima dos penhascos, e nos alertou para termos cuidado com os saqueadores goblins da região.~
 @100740=~Você descobriu algum tipo de plano de lobisomens.~
 @100741=~Você descobriu algum tipo de plano de lobisomens.~
 @100742=~Restauração Maior~
@@ -1054,19 +1054,19 @@ Esta magia causa uma doença grave e fraqueza em uma criatura. O indivíduo afetad
 @100751=~Você garantiu a ajuda de Dereth na reconstrução da Vila de Shaengaren Ford.~
 @100752=~Se precisar de batedores, minhas habilidades de sobrevivência na natureza podem ser úteis.~
 @100753=~Coração de <CHARNAME>~
-@100754=~Só depois de mencionarmos o nome do navio de Hedron, a A Malvada, é que a velha que salvamos parou de uivar e, relutantemente, admitiu que talvez estivéssemos falando a verdade sobre termos vindo ajudá-la. Ela nos disse para voltarmos a Hedron e avisá-lo de que ela estava a salvo. Curiosamente, Firtha mencionou que ela era cega, o que é estranho, porque ela parecia nos ver muito bem.~
+@100754=~Só depois de mencionarmos o nome do navio de Hedron, a A Moça Atrevida, é que a velha que salvamos parou de uivar e, relutantemente, admitiu que talvez estivéssemos falando a verdade sobre termos vindo ajudá-la. Ela nos disse para voltarmos a Hedron e avisá-lo de que ela estava a salvo. Curiosamente, Firtha mencionou que ela era cega, o que é estranho, porque ela parecia nos ver muito bem.~
 @100755=~O vapor jorra desta grade de ferro enferrujada. Parece levar ao interior da fortaleza, porém três grossas barras de ferro trancam a grade por dentro, tornando a entrada por este caminho improvável.~
 @100756=~Muralha de Fogo~
 @100757=~Maldição~
 @100758=~Besouro~
-@100759=~Placa Animada 3~
+@100759=~Armadura Animada 3~
 @100760=~Mandíbula Genérica de Besouro~
 @100761=~Marechal Arqueiro Goblin~
 @100762=~Alvanhendar~
 @100763=~Irmão Ferg~
-@100764=~Placa Animada~
-@100765=~Placa Animada 2~
-@100766=~Placa Animada 3~
+@100764=~Armadura Animada~
+@100765=~Armadura Animada 2~
+@100766=~Armadura Animada 3~
 @100767=~Besouro Perfurador~
 @100768=~Besouro Perfurador~
 @100769=~Ataque de Gato~
@@ -1674,7 +1674,7 @@ Peso: 2,5 kg (5 lb).
 Talento Necessário: Arma Marcial, Mangual
 Tipo: Uma mão
 ~
-@101124=~Um dos barcos de pesca menores usados pela tripulação d'A Malvada em Maer Dualdon. Você pensou em usá-lo como bote salva-vidas várias vezes durante a viagem.~
+@101124=~Um dos barcos de pesca menores usados pela tripulação d'A Moça Atrevida em Maer Dualdon. Você pensou em usá-lo como bote salva-vidas várias vezes durante a viagem.~
 @101125=~Mangual +3~
 @101126=~O mangual é um cabo de madeira resistente preso a uma haste de ferro, uma haste de madeira com pontas ou uma bola de ferro com pontas. Entre o cabo e o seu dispositivo existe uma dobradiça ou uma corrente. A arma foi aprimorada magicamente, formando efetivamente um vínculo entre a arma e o seu portador.
 ESTATÍSTICAS:
@@ -1789,7 +1789,7 @@ Peso: 3 kg (6 lb).
 @101159=~O Alto Torturador~
 @101160=~O Alto Batista~
 @101161=~Yxunomei~
-@101162=~Mãe Egenia~
+@101162=~Madre Egenia~
 @101163=~Nym~
 @101164=~Ginafae~
 @101165=~Marketh~
@@ -2289,7 +2289,7 @@ Tipo: Duas mãos
 @101363=~djfshd
 ~
 @101364=~Ha! Então ele mandou vocês em vez de arrastar a pele sarnenta dele até a minha porta, foi?! Boa história! Fora, fora, antes que eu arranque a pele de vocês daqui até Bremen, seus ladrões imundos!~
-@101365=~Nós *não* somos ladrões. Nós apenas chegamos a bordo da A Malvada para ajudar Targos.~
+@101365=~Nós *não* somos ladrões. Nós apenas chegamos a bordo da A Moça Atrevida para ajudar Targos.~
 @101366=~Olha aqui, sua banshee imunda, chega de uivar, ou NÓS VAMOS roubar você.~
 @101367=~É *este* o agradecimento que vocês oferecem àqueles que salvaram suas vidas? Nós viemos em seu auxílio, e vocês nos retribuem com ameaças?!~
 @101368=~Ah, é mesmo? Bem, então tenho certeza, tão certa quanto o frio do Vale, que vocês vão adorar me deixar em casa! Fora, fora, antes que eu lhes dê uma surra daqui até Bremen, seus ladrões imundos!~
@@ -2297,7 +2297,7 @@ Tipo: Duas mãos
 @101370=~Eh? Quê? Como OUSAM -~
 @101371=~Fiquem *silêncio*. Já ouvi o suficiente de vocês - viemos e salvamos suas vidas, e vocês não oferecem uma palavra de agradecimento, nenhuma demonstração de apreço?~
 @101372=~Sua falta de gratidão envergonha o nome da sua família... e me fere mais fundo do que a lâmina de qualquer goblin.~
-@101373=~Então, voltaremos para a Bruxa Malvada. Adeus.~
+@101373=~Então, voltaremos para a Bruxa Moça Atrevida. Adeus.~
 @101374=~Não há mais nada a dizer. Adeus.~
 @101375=~Agora olhem aqui! Eu não te perguntei...~
 @101376=~Sua mãe não te ensinou nada de boas maneiras, a ponto de você cuspir em uma mão estendida para te ajudar?~
@@ -2312,7 +2312,7 @@ Tipo: Duas mãos
 @101385=~~
 @101386=~De qualquer forma, boa viagem a Targos, <AMIGO>, aconteça o que acontecer.~
 @101387=~Para você também. Boa viagem.~
-@101388=~Ouvi dizer que a cidade está sendo atacada novamente - a A Malvada está pronta para zarpar se você precisar recuar.~
+@101388=~Ouvi dizer que a cidade está sendo atacada novamente - a A Moça Atrevida está pronta para zarpar se você precisar recuar.~
 @101389=~Veremos como a batalha se desenrola. Adeus.~
 @101390=~Ouvi dizer que a luta nos cais foi feroz - você conseguiu expulsar aqueles goblins, não é?~
 @101391=~Sim... desta vez. Eles podem ter voltado, então fique em guarda. Adeus.~
@@ -2323,11 +2323,11 @@ Tipo: Duas mãos
 @101396=~~
 @101397=~Um deles quase derrubou Reig com um machado, mas o pobre Brohn não teve a mesma sorte... uma flecha atravessou seu pescoço. Ele nem teve chance.~
 @101398=~Nada me agradaria mais. Adeus.~
-@101399=~"A Malvada?!" Você está me dizendo que Hedron, aquele gato-do-deserto infestado de piolhos, não se dá ao trabalho nem de descer do navio para salvar a própria mãe?! Me arrependo do dia em que tirei aquele garoto do ninho, sim!~
+@101399=~"A Moça Atrevida?!" Você está me dizendo que Hedron, aquele gato-do-deserto infestado de piolhos, não se dá ao trabalho nem de descer do navio para salvar a própria mãe?! Me arrependo do dia em que tirei aquele garoto do ninho, sim!~
 @101400=~Ah, "tirei do ventre", entendi. Uma maneira bem interessante de colocar as coisas.~
 @101401=~Hedron provavelmente gostaria de saber que você está segura... eu acho.~
 @101402=~Você é a mãe de Hedron? Se for, ele provavelmente gostaria de saber que você está segura... eu acho.~
-@101403=~"A Malvada?!" Esse é o navio do meu filho! Ora, Hedron, aquele gato-do-deserto infestado de piolhos, não se dá ao trabalho nem de descer do navio para salvar a própria mãe! Eu me arrependo do dia em que tirei aquele menino do meu ventre!~
+@101403=~"A Moça Atrevida?!" Esse é o navio do meu filho! Ora, Hedron, aquele gato-do-deserto infestado de piolhos, não se dá ao trabalho nem de descer do navio para salvar a própria mãe! Eu me arrependo do dia em que tirei aquele menino do meu ventre!~
 @101404=~Humph. É melhor você ir dizer a ele que estou bem, então. Ele pode começar a se preocupar, sim, e aí começa a beber, e depois disso, bem, só vem mais sofrimento, com certeza.~
 @101405=~Antes de ir, você tem certeza de que está bem?~
 @101406=~Arqueiro Esqueleto~
@@ -2451,11 +2451,11 @@ Tipo: Duas mãos
 @101524=~Vou deixá-los com suas bebidas. Adeus.~
 @101525=~Por todos os deuses e sua mãe, que tipo de idiota você é?! Iremos quando estivermos prontos!~
 @101526=~Somos uma *companhia de aventureiros*, não mercenários. É melhor você não confundir os dois novamente.~
-@101527=~Você prefere estar de volta à Viúva Chorona com Koluhm ou no quartel com aquele mago? Vá então! Prefiro estar bebendo essa porcaria do que ouvindo qualquer um deles tagarelar.~
+@101527=~Você prefere estar de volta à Viúva Chorosa com Koluhm ou no quartel com aquele mago? Vá então! Prefiro estar bebendo essa porcaria do que ouvindo qualquer um deles tagarelar.~
 @101528=~~
 @101529=~Quem são esses dois de quem você fala?~
 @101530=~Preciso ir. Adeus.~
-@101531=~Phaen montou acampamento em uma oficina de carroceiro abandonada na cidade - para "paz e sossego", disse ele. Quanto a Koluhm, a última vez que ouvi falar dele, ele estava na Viúva Chorona - a única estalagem da cidade, e menor que um armário. Não consigo entender por que Koluhm quer ficar lá e gastar seu dinheiro. ~
+@101531=~Phaen montou acampamento em uma oficina de carroceiro abandonada na cidade - para "paz e sossego", disse ele. Quanto a Koluhm, a última vez que ouvi falar dele, ele estava na Viúva Chorosa - a única estalagem da cidade, e menor que um armário. Não consigo entender por que Koluhm quer ficar lá e gastar seu dinheiro. ~
 @101532=~Por isso, você vai pagar a próxima rodada, seu idiota. Pague, ou eu vou te dar uma surra.~
 @101533=~Você está <BEBADO>, <SEU_IDIOTA>! Cale a boca, ou minha espada fará isso por você.~
 @101534=~Assim que ela quebrou a garrafa na minha cabeça, eu pulei e... pelos INFERNOS, o que te traz rastejando de volta *desta* vez?~
@@ -2974,7 +2974,7 @@ Esta magia invoca um elemental da água com 8 dados de vida para servir ao conjur
 @101695=~Pare! Você está com Targos ou contra ela?~
 @101696=~Adaga de Nester~
 @101697=~Uma Chave~
-@101698=~Estamos com Targos. Acabamos de chegar a bordo da Malvada.~
+@101698=~Estamos com Targos. Acabamos de chegar a bordo da Moça Atrevida.~
 @101699=~~
 @101700=~~
 @101701=~~
@@ -3291,9 +3291,9 @@ Peso: 0 lb.
 @101961=~Nem mesmo os melhores batedores de Ulbrec conseguiram determinar de onde os goblins estão atacando.~
 @101962=~Ulbrec tem dois guardas florestais a seu serviço, Ennelia e Braston. Ele os enviou em busca dos goblins, mas aqueles dois apaixonados provavelmente estão apenas passando um tempo juntos na floresta.~
 @101963=~Guthewulfe chegou à cidade com um amuleto de lobo prateado que, segundo ele, pode invocar lobos para o seu lado. Só acredito vendo.~
-@101964=~A gangue mercenária Coleira de Ferro vem aqui beber bastante, mas há outros dois deles que eu nunca vi - um é um sacerdote Myrkulita lá na Viúva Chorona, e o outro é um mago de rua vestido com trapos.~
+@101964=~A gangue mercenária Coleira de Ferro vem aqui beber bastante, mas há outros dois deles que eu nunca vi - um é um sacerdote Myrkulita lá na Viúva Chorosa, e o outro é um mago de rua vestido com trapos.~
 @101965=~Cuidado com aquele maluco de meia-calça, Oswald Fiddlebender - seu dirigível quase caiu em Targos algumas semanas atrás, e Ulbrec o contratou para servir como batedor aéreo, de todas as coisas. Tolos, os dois.~
-@101966=~A estalagem de Targos se chama Viúva Chorona - dizem que é assombrada pelo fantasma de uma mulher que vaga por um dos quartos do andar de cima.~
+@101966=~A estalagem de Targos se chama Viúva Chorosa - dizem que é assombrada pelo fantasma de uma mulher que vaga por um dos quartos do andar de cima.~
 @101967=~Aquele cachorro é o dono de Deirdre Gallaway, neta de Ilmus Gallaway, e herdou o temperamento dele. Cuidado se cruzar o caminho dela.~
 @101968=~Um dos comerciantes de madeira da cidade, Grundwall, aparentemente discutiu com um dos anões de Tamewater, e os dois não se falam.~
 @101969=~O anão mais jovem de Tamewater, Olap, supervisionou a construção daquele guindaste nos penhascos. Dizem que o pai dele também não ficou muito satisfeito com ele fazendo isso.~
@@ -4510,25 +4510,25 @@ Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma mão
 ~
 @102702=~Clérigo Élfico~
-@102703=~Suoma, a anciã da Vila Errante, pediu que conversemos com Venla, a Curandeira, e a ajudemos. Ela afirma que, se ajudarmos a vila, ela nos ajudará em troca, indicando o caminho através da assombrada Floresta Devastada a leste.~
+@102703=~Suoma, a anciã da Vila Errante, pediu que conversemos com Venla, a Curandeira, e a ajudemos. Ela afirma que, se ajudarmos a vila, ela nos ajudará em troca, indicando o caminho através da assombrada Mata Sinistra a leste.~
 @102704=~Após derrotarmos Limha e recuperarmos as crianças desaparecidas da vila para Venla, Suoma, a Anciã, nos pediu outro favor: ela quer que conversemos com Tahvo, o Mestre Caçador, e o ajudemos.~
 @102705=~Acalmamos a situação do túmulo mencionado por Tahvo e retornamos a Suoma, que tinha mais um pedido. Desta vez, ela queria que falássemos com Kurttu e o ajudássemos. Pelo bem desta aldeia e de Kuldahar, só podemos esperar que esta seja a última tarefa que ela nos confiou.~
-@102706=~Conversamos com Kurttu e desvendamos o mistério do fantasma silencioso de Kyosti. Esta foi a terceira e última tarefa que Suoma nos deu; tendo ajudado a vila da melhor maneira possível, ela agora está disposta a nos dizer como atravessar a Floresta Devastada.~
-@102707=~Suoma, a Anciã, nos contou o caminho através da Floresta Devastada: aparentemente, existe uma espécie de criatura chamada "entes das trevas" cujo poder maligno pode distorcer e ocultar caminhos, confundindo viajantes e fazendo com que se percam irremediavelmente. Se destruirmos os entes das trevas da Floresta Devastada, poderemos atravessá-la e chegar aos Pântanos Gelados além dela.~
+@102706=~Conversamos com Kurttu e desvendamos o mistério do fantasma silencioso de Kyosti. Esta foi a terceira e última tarefa que Suoma nos deu; tendo ajudado a vila da melhor maneira possível, ela agora está disposta a nos dizer como atravessar a Mata Sinistra.~
+@102707=~Suoma, a Anciã, nos contou o caminho através da Mata Sinistra: aparentemente, existe uma espécie de criatura chamada "entes das trevas" cujo poder maligno pode distorcer e ocultar caminhos, confundindo viajantes e fazendo com que se percam irremediavelmente. Se destruirmos os entes das trevas da Mata Sinistra, poderemos atravessá-la e chegar aos Pântanos Gelados além dela.~
 @102708=~Vocês cumpriram o último pedido de Suoma, a Anciã, para ajudar sua vila.~
 @102709=~Cumprimos o último pedido de Suoma, a Anciã, para ajudar sua vila.~
-@102710=~Trouxemos os restos da Floresta Devastada. Você trouxe os mortos da Floresta Devastada de volta para a Vila Errante e os entregou a Suoma, a Anciã, que os enterrará.~
+@102710=~Trouxemos os restos da Mata Sinistra. Você trouxe os mortos da Mata Sinistra de volta para a Vila Errante e os entregou a Suoma, a Anciã, que os enterrará.~
 @102711=~Você cumpriu o último pedido de Suoma, a Anciã, para ajudar sua vila.~
-@102712=~Você trouxe os restos mortais dos mortos da Floresta Devastada para Suoma para serem enterrados.~
+@102712=~Você trouxe os restos mortais dos mortos da Mata Sinistra para Suoma para serem enterrados.~
 @102713=~Você cumpriu o último pedido de Suoma, a Anciã, para ajudar sua vila.~
-@102714=~Você trouxe os restos mortais dos mortos da Floresta Devastada para Suoma para serem enterrados.~
+@102714=~Você trouxe os restos mortais dos mortos da Mata Sinistra para Suoma para serem enterrados.~
 @102715=~Mais estranhos? Hmmm... Eu sou Suoma, a anciã da vila e professora de magia - sejam bem-vindos. Vocês devem perdoar nossas caras sombrias - estes são tempos difíceis para nós.~
 @102716=~"Mais estranhos?" Quem mais está aqui?~
 @102717=~O que aflige esta vila, Suoma?~
 @102718=~Você pode me falar sobre esta vila?~
 @102719=~O que você pode me dizer sobre Nym?~
 @102720=~Como eu atravesso a floresta para o leste?~
-@102721=~Eu trouxe os restos mortais dos mortos da Floresta Devastada.~
+@102721=~Eu trouxe os restos mortais dos mortos da Mata Sinistra.~
 @102722=~Você pode me vender feitiços?~
 @102723=~Saudações e até logo.~
 @102724=~Sim?~
@@ -4538,7 +4538,7 @@ Tipo: Uma mão
 @102728=~Meus agradecimentos. Adeus.~
 @102729=~Não sei nada sobre ele... apenas que veio encontrar alguém que ele tinha certeza que passaria por nossa vila.~
 @102730=~Eu estava apenas de passagem. Adeus.~
-@102731=~Você fala da Floresta Devastada, não é? É um lugar escuro e terrível. A trilha para os Pântanos Gelados além da floresta é difícil de encontrar... nesta vila, só eu conheço o caminho.~
+@102731=~Você fala da Mata Sinistra, não é? É um lugar escuro e terrível. A trilha para os Pântanos Gelados além da floresta é difícil de encontrar... nesta vila, só eu conheço o caminho.~
 @102732=~Por que só você?~
 @102733=~Então você me diria o caminho?~
 @102734=~Espere - eu tinha outras perguntas.~
@@ -4559,10 +4559,10 @@ Tipo: Uma mão
 @102749=~Eu fui. Carita assassinou Kyosti; seu amante escondeu o cadáver. Ambos fugiram.~
 @102750=~Não consigo expressar minha gratidão... mas posso implorar seu perdão. Espero que você não odeie o povo desta vila pelo que fizemos você passar...~
 @102751=~Fiquei feliz em ajudar. Agora, sobre aquela floresta a leste...~
-@102752=~Como eu atravesso a Floresta Devastada?~
+@102752=~Como eu atravesso a Mata Sinistra?~
 @102753=~Estou pensando em arrasar o lugar. Me dê minhas informações.~
 @102754=~Voltarei mais tarde, Suoma. Adeus.~
-@102755=~Há um certo tipo de monstro na Floresta Devastada, abominações horríveis conhecidas como entes das trevas. É a influência distorcida deles que esconde o verdadeiro caminho de você.~
+@102755=~Há um certo tipo de monstro na Mata Sinistra, abominações horríveis conhecidas como entes das trevas. É a influência distorcida deles que esconde o verdadeiro caminho de você.~
 @102756=~Como eu os encontro?~
 @102757=~"Sim. Eu te disse que os preços deles iriam cair. Sempre caem."~
 @102758=~Você os encontrará nas profundezas mais escuras da floresta. Eles sentirão que você os conhece agora e virão até você. Eles são oponentes terríveis e odiosos... tome muito cuidado.~
@@ -4583,7 +4583,7 @@ Tipo: Uma mão
 @102773=~Você mencionou outros estranhos - quem mais está aqui?~
 @102774=~Entendo. Eu tinha algumas perguntas.~
 @102775=~Que pena. Adeus, Suoma.~
-@102776=~Sim... e eu posso te ajudar em troca. Se você pretende continuar viajando para o leste, precisa passar pela assombrada Floresta Fell. A trilha para os Pântanos Frios além da floresta é difícil de encontrar... nesta vila, só eu conheço o caminho.~
+@102776=~Sim... e eu posso te ajudar em troca. Se você pretende continuar viajando para o leste, precisa passar pela assombrada Mata Sinistra. A trilha para os Pântanos Frios além da floresta é difícil de encontrar... nesta vila, só eu conheço o caminho.~
 @102777=~Prazer em <CONHECE_LO>. Você já terminou de ajudar Venla, viajante?~
 @102778=~Sim, terminei - as crianças estão seguras.~
 @102779=~Não, mas eu tinha perguntas.~
@@ -5459,7 +5459,7 @@ Tipo de Proficiência: Porretes
 Tipo: Uma mão
 ~
 @103190=~Pacificador~
-@103191=~Quando perguntamos a Venla se havia alguma pista sobre as crianças desaparecidas da aldeia, ela disse que seus melhores caçadores já haviam procurado por toda parte e não encontraram nenhum vestígio delas. Alguns moradores acreditam que as crianças se perderam na Floresta Devastada, a leste, vítimas de alguma "criatura feérica", como uma dríade ou ninfa.~
+@103191=~Quando perguntamos a Venla se havia alguma pista sobre as crianças desaparecidas da aldeia, ela disse que seus melhores caçadores já haviam procurado por toda parte e não encontraram nenhum vestígio delas. Alguns moradores acreditam que as crianças se perderam na Mata Sinistra, a leste, vítimas de alguma "criatura feérica", como uma dríade ou ninfa.~
 @103192=~Adjatha, a Bebedora +2~
 @103193=~Ras +2~
 @103194=~Promessa de Selune~
@@ -5638,7 +5638,7 @@ Especial:
   -2 de Carisma enquanto estiver usando
 Peso: 20 kg (40 lb).
 ~
-@103317=~Esses antigos elmos eram comuns entre os bárbaros Reghedmen que vieram para o que hoje é conhecido como Vale do Vento Gélido. O design da armadura é relativamente simples: um elmo de ferro liso com uma placa facial articulada. Uma vez concluída a construção básica do elmo, os artesãos esculpiam a imagem de um guerreiro morto na placa facial. O nome do guerreiro e uma breve descrição de sua morte eram gravados na testa da máscara. O elmo era então deixado na pira funerária do guerreiro morto. Os sacerdotes acreditavam que a máscara ocultaria o medo do morto em relação à vida após a morte quando ele fosse julgado por Tempos. Após um mês, os elmos de guerreiros particularmente valentes eram recuperados pelos sacerdotes. Nos anos seguintes, os sacerdotes louvavam os guerreiros valentes nominalmente em seus rituais diários. Segundo a lenda, se Tempos considerasse o guerreiro verdadeiramente valente, o elmo ganharia o poder de tornar o usuário imune ao medo. Este elmo em particular ostenta o antigo nome "Siglef" e a palavra "Machado".
+@103317=~Esses antigos elmos eram comuns entre os bárbaros Reghedmen que vieram para o que hoje é conhecido como Vale do Vento Gelado. O design da armadura é relativamente simples: um elmo de ferro liso com uma placa facial articulada. Uma vez concluída a construção básica do elmo, os artesãos esculpiam a imagem de um guerreiro morto na placa facial. O nome do guerreiro e uma breve descrição de sua morte eram gravados na testa da máscara. O elmo era então deixado na pira funerária do guerreiro morto. Os sacerdotes acreditavam que a máscara ocultaria o medo do morto em relação à vida após a morte quando ele fosse julgado por Tempos. Após um mês, os elmos de guerreiros particularmente valentes eram recuperados pelos sacerdotes. Nos anos seguintes, os sacerdotes louvavam os guerreiros valentes nominalmente em seus rituais diários. Segundo a lenda, se Tempos considerasse o guerreiro verdadeiramente valente, o elmo ganharia o poder de tornar o usuário imune ao medo. Este elmo em particular ostenta o antigo nome "Siglef" e a palavra "Machado".
 ESTATÍSTICAS:
 
 Bônus de Classe de Armadura: 1
@@ -5793,7 +5793,7 @@ Esta magia causa uma sensação de perdição que domina o alvo. Durante a duração d
 @103368=~Eu poderia receber cura aqui?~
 @103369=~Distintivo do Irmão Perdiem~
 @103370=~Distintivo do Irmão Perdiem~
-@103371=~Apenas que nossos melhores caçadores procuraram por toda parte e não encontraram nenhum vestígio deles. Alguns acreditam que eles se perderam na Floresta Devastada a leste... que alguma criatura feérica como uma dríade ou ninfa os roubou.~
+@103371=~Apenas que nossos melhores caçadores procuraram por toda parte e não encontraram nenhum vestígio deles. Alguns acreditam que eles se perderam na Mata Sinistra a leste... que alguma criatura feérica como uma dríade ou ninfa os roubou.~
 @103372=~Escritório de Orrick~
 @103373=~Bandoth~
 @103374=~Templo de Eldath~
@@ -7164,8 +7164,8 @@ Força Mínima de 18 Necessária
 @104433=~Deixa pra lá, Tahvo. Adeus.~
 @104434=~Como mestre de caça, sou responsável tanto pelo treinamento dos jovens caçadores quanto pela fabricação dos itens que eles usarão. Às vezes, trabalho com Suoma e Venla para encantar esses itens.~
 @104435=~<OBRIGADO_MAI>. Adeus, Tahvo.~
-@104436=~Toda a região selvagem é perigosa, mas a pior fica a leste, além da Floresta Devastada. Os Pântanos Gelados e os Lagos de Gelo estão repletos de perigos; siga rio acima pelo Rio Corvo Negro e adentre as montanhas da Espinha do Mundo.~
-@104437=~Você pode me contar sobre a Floresta Devastada?~
+@104436=~Toda a região selvagem é perigosa, mas a pior fica a leste, além da Mata Sinistra. Os Pântanos Gelados e os Lagos de Gelo estão repletos de perigos; siga rio acima pelo Rio Corvo Negro e adentre as montanhas da Espinha do Mundo.~
+@104437=~Você pode me contar sobre a Mata Sinistra?~
 @104438=~Conte-me sobre os Pântanos Gelados e os Lagos de Gelo.~
 @104439=~[GORION 2] Corra, criança, saia daqui!~
 @104440=~[GORION 3] Espere! Há algo errado. Estamos em uma emboscada. Prepare-se!~
@@ -7558,9 +7558,9 @@ Requisito de Talento: Arma Exótica, Espada Bastarda
 Tipo: Uma mão
 ~
 @104732=~Envolto na Resiliente de Otiluke Esfera~
-@104733=~Kurttu pediu nossa ajuda para desvendar o mistério do desaparecimento de Kyosti e seu fantasma silencioso. Kyosti desapareceu há algum tempo, mas seu espírito retorna ocasionalmente para assombrar a área entre a vila e a Floresta Devastada, a leste. Como ele não fala, os aldeões não sabem por que a alma do caçador não consegue descansar.~
+@104733=~Kurttu pediu nossa ajuda para desvendar o mistério do desaparecimento de Kyosti e seu fantasma silencioso. Kyosti desapareceu há algum tempo, mas seu espírito retorna ocasionalmente para assombrar a área entre a vila e a Mata Sinistra, a leste. Como ele não fala, os aldeões não sabem por que a alma do caçador não consegue descansar.~
 @104734=~Explicamos a Kurttu que Kyosti foi assassinado por sua esposa Carita e que Leevi, seu amante, escondeu o cadáver, removendo sua língua para que o fantasma de Kyosti não pudesse falar e revelar sua vergonha. Leevi e Carita desapareceram, presumivelmente fugindo da vila depois de descobrirem, de alguma forma, que eu havia descoberto seu terrível segredo.~
-@104735=~Segundo Kurttu, Kyosti, que desapareceu recentemente, era marido de Carita e um dos melhores caçadores da aldeia. Kurttu também afirmou que Carita, sua viúva, disse que, quando Kyosti desapareceu, ele estava indo para a Floresta Devastada, a leste da aldeia, para caçar os enormes lobos brancos que lá habitam. No entanto, parece que seu corpo nunca foi encontrado.~
+@104735=~Segundo Kurttu, Kyosti, que desapareceu recentemente, era marido de Carita e um dos melhores caçadores da aldeia. Kurttu também afirmou que Carita, sua viúva, disse que, quando Kyosti desapareceu, ele estava indo para a Mata Sinistra, a leste da aldeia, para caçar os enormes lobos brancos que lá habitam. No entanto, parece que seu corpo nunca foi encontrado.~
 @104736=~Invisibilidade Aprimorada
 Improved Invisibility (Ilusão)
 Nível: Brd 4, Fet/Mag 4, Mask 4
@@ -7673,7 +7673,7 @@ Este feitiço é semelhante ao feitiço de Invisibilidade, mas o alvo é capaz de at
 @104835=~[SIL 1] Volte de onde veio. Este não é o seu lugar!~
 @104836=~Vou ver se há algo que eu possa fazer. Adeus.~
 @104837=~[SIL 2] Você ouviu meus desejos! Não fale mais comigo!~
-@104838=~Ele era marido de Carita há dois anos e um dos melhores caçadores. Carita disse que, quando ele desapareceu, estava indo caçar os enormes lobos brancos na Floresta Devastada. Acreditamos que foi lá que ele morreu, mas ninguém sabe ao certo.~
+@104838=~Ele era marido de Carita há dois anos e um dos melhores caçadores. Carita disse que, quando ele desapareceu, estava indo caçar os enormes lobos brancos na Mata Sinistra. Acreditamos que foi lá que ele morreu, mas ninguém sabe ao certo.~
 @104839=~[DELSVIRFTANYON 1] Que droga! Cansei! Não há mais vida aqui!~
 @104840=~Casei-me com o pai dela há muito tempo, depois que a mãe dela foi morta por saqueadores. Ela nunca gostou de mim e parece estar sempre zangada, mesmo quando estava com Kyosti. Ela me afastou quando tentei consolá-la, mas parece ter se voltado para Leevi.~
 @104841=~O que você pode me dizer sobre Leevi?~
@@ -8102,7 +8102,7 @@ Tipo: Uma mão
 @105078=~Mytos~
 @105079=~Desejo-te boa sorte, então. Adeus.~
 @105080=~Tenho que ir... adeus, Jari.~
-@105081=~Caçar... e o que me preocupa é que não sou um grande caçador. Sei que vou falhar. Às vezes penso em entrar na Floresta Devastada para caçar um dos grandes lobos brancos de lá, mas simplesmente não sou bom o suficiente - eu só morreria.~
+@105081=~Caçar... e o que me preocupa é que não sou um grande caçador. Sei que vou falhar. Às vezes penso em entrar na Mata Sinistra para caçar um dos grandes lobos brancos de lá, mas simplesmente não sou bom o suficiente - eu só morreria.~
 @105082=~Tenho uma pele de uma dessas feras.~
 @105083=~O quê? Você tem? Se eu fosse forte o suficiente para ganhar uma... eu poderia impressionar o pai de Anja, e ele nos permitiria casar!~
 @105084=~Aqui... pegue. É seu.~
@@ -8120,7 +8120,7 @@ Tipo: Uma mão
 @105096=~Tudo bem... então eu volto quando você voltar. Adeus *por enquanto*, Jari.~
 @105097=~Não se preocupe, eu não sou má, só estou brincando. Adeus, Jari.~
 @105098=~Esqueça, então. Adeus.~
-@105099=~A situação ficou mais perigosa ultimamente, especialmente a Floresta Devastada. Há espíritos estranhos por perto e muitos monstros a leste - Suoma tenta nos impedir de ir para lá. Mal posso esperar pela próxima primavera, quando mudaremos a vila novamente...~
+@105099=~A situação ficou mais perigosa ultimamente, especialmente a Mata Sinistra. Há espíritos estranhos por perto e muitos monstros a leste - Suoma tenta nos impedir de ir para lá. Mal posso esperar pela próxima primavera, quando mudaremos a vila novamente...~
 @105100=~Tenho uma pele de um dos lobos brancos.~
 @105101=~<OBRIGADO_MAI> e até logo.~
 @105102=~Hã?! Heh-heh, você me surpreendeu de novo.~
@@ -9396,7 +9396,7 @@ Especial:
 Peso: 0 lb
 Lançador: Funda
 ~
-@105802=~Armaduras como esta são meticulosamente confeccionadas para uso dos melhores jovens caçadores da Vila Errante. São forradas com peles dos grandes lobos brancos da Floresta Fell e encantadas para resistir ao frio do inverno.
+@105802=~Armaduras como esta são meticulosamente confeccionadas para uso dos melhores jovens caçadores da Vila Errante. São forradas com peles dos grandes lobos brancos da Mata Sinistra e encantadas para resistir ao frio do inverno.
 ESTATÍSTICAS:
 
 Armadura Leve
@@ -9969,18 +9969,18 @@ Tipo: Uma mão
 @106176=~Espere - o que você pode me dizer sobre esta área?~
 @106177=~Infligir Ferimentos Leves~
 @106178=~Lorde Ulbrec nos acolheu oficialmente na Guarda de Targos e nos instruiu a nos apresentarmos ao comandante da Guarda de Targos, Shawford Crale, para recebermos nossas missões. Ulbrec nos disse que poderíamos encontrar Crale na Paliçada, logo além do portão norte.~
-@106179=~Lorde Ulbrec nos elogiou por nossos esforços na defesa de Targos durante o ataque goblin à Paliçada, mas com seu elogio veio outra missão: uma força goblin tomou a Ponte Shaengarne ao sul, uma ponte que os reforços de Neverwinter pretendiam usar para chegar a Targos. Ele quer que viajemos até a Ponte Shaengarne e a retomemos dos goblinoides. Ele espera que nosso grupo possa ter sucesso onde a Guarda de Targos não conseguiu; só o tempo dirá se ele está certo ou errado.~
+@106179=~Lorde Ulbrec nos elogiou por nossos esforços na defesa de Targos durante o ataque goblin à Paliçada, mas com seu elogio veio outra missão: uma força goblin tomou a Ponte de Shaengarne ao sul, uma ponte que os reforços de Neverwinter pretendiam usar para chegar a Targos. Ele quer que viajemos até a Ponte de Shaengarne e a retomemos dos goblinoides. Ele espera que nosso grupo possa ter sucesso onde a Guarda de Targos não conseguiu; só o tempo dirá se ele está certo ou errado.~
 @106180=~Svirfneblin Cego~
-@106181=~Lorde Ulbrec soube da destruição da Ponte Shaengarne e determinou que somente se Targos conseguir organizar uma ofensiva rapidamente poderá derrotar a horda de goblins antes que ataquem a cidade novamente. Ele nos pediu para encontrar dois de seus batedores, Ennelia e Braston, ao sul e leste de Targos, e fornecer-lhes toda a ajuda necessária para quebrar o poder dos goblins na região.~
+@106181=~Lorde Ulbrec soube da destruição da Ponte de Shaengarne e determinou que somente se Targos conseguir organizar uma ofensiva rapidamente poderá derrotar a horda de goblins antes que ataquem a cidade novamente. Ele nos pediu para encontrar dois de seus batedores, Ennelia e Braston, ao sul e leste de Targos, e fornecer-lhes toda a ajuda necessária para quebrar o poder dos goblins na região.~
 @106182=~Esqueleto Serrilhado~
 @106183=~Svirfneblin Cego~
 @106184=~Esqueleto Serrilhado~
 @106185=~Kontik~
-@106186=~Lorde Ulbrec soube do nosso sucesso na retomada da Ponte Shaengarne e acredita que uma ofensiva rápida tem chances de derrotar a horda de goblins e expulsá-los da região. Ele nos pediu para encontrar dois de seus batedores, Ennelia e Braston, ao sul e leste de Targos, e dar-lhes toda a ajuda necessária para quebrar o domínio dos goblins na região.~
+@106186=~Lorde Ulbrec soube do nosso sucesso na retomada da Ponte de Shaengarne e acredita que uma ofensiva rápida tem chances de derrotar a horda de goblins e expulsá-los da região. Ele nos pediu para encontrar dois de seus batedores, Ennelia e Braston, ao sul e leste de Targos, e dar-lhes toda a ajuda necessária para quebrar o domínio dos goblins na região.~
 @106187=~Lorde Ulbrec soube do nosso sucesso em infiltrar a fortaleza da Horda e lidar com o chefe bugbear, Guthma. Ele nos agradeceu pelos nossos esforços e nos deu nossa próxima missão, que deve ser um pouco menos árdua do que as outras missões suicidas que já realizamos . Ele nos pediu para falar com Oswald Fiddlebender e pedir que ele nos levasse até o Passagem Ocidental para nos encontrarmos com os reforços de Neverwinter.~
-@106188=~Você quebrou o domínio dos goblins sobre a Ponte Shaengarne.~
+@106188=~Você quebrou o domínio dos goblins sobre a Ponte de Shaengarne.~
 @106189=~Lobo Cinzento~
-@106190=~Você retomou a Ponte Shaengarne.~
+@106190=~Você retomou a Ponte de Shaengarne.~
 @106191=~Você quebrou a força dos goblins na região e salvou Targos.~
 @106192=~Você repeliu os goblins das muralhas de Targos.~
 @106193=~[Urgente, irritado]Quem é você? [Faz uma suposição] Se você é de uma companhia mercenária, seu lugar é nos cais, não aqui. Recebi notícias de que estamos sob ataque e toda espada é necessária nos penhascos.~
@@ -10218,7 +10218,7 @@ Tipo: Duas Mãos
 @106353=~Besta~
 @106354=~Uma tempestade se aproxima? Como você sabe disso?~
 @106355=~~
-@106356=~Sim, você pode descansar na Viúva Chorona, pode, mas cuidado com o estalajadeiro, Cahl-Hyred. Ele pode ser duas vezes tolo, mas tentará tirar de você qualquer oferta de ajuda.~
+@106356=~Sim, você pode descansar na Viúva Chorosa, pode, mas cuidado com o estalajadeiro, Cahl-Hyred. Ele pode ser duas vezes tolo, mas tentará tirar de você qualquer oferta de ajuda.~
 @106357=~Os arcos curtos foram os primeiros a serem desenvolvidos, embora não fossem chamados assim. Este é mais um termo genérico que se refere a qualquer coisa que não seja um arco longo. As hastes dos arcos curtos têm cerca de 1,5 metro de comprimento em média. Com o passar dos anos, foram feitas tentativas para aumentar o alcance dos arcos. Os arcos receberam hastes mais longas ou a flexibilidade foi aumentada sem alterar o comprimento. O primeiro resultou no que hoje chamamos de arco longo.
 ESTATÍSTICAS:
 
@@ -10330,10 +10330,10 @@ Tipo: Uma mão
 ~
 @106380=~~
 @106381=~Então não deixe que aquele fanfarrão te use como mula de carga sem receber nada em troca. Ele sugaria a paciência de um paladino até a última gota, e fará o mesmo com você, guarde minhas palavras. Olhe através dos olhos dele e verá um mundo onde chovem moedas de ouro.~
-@106382=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@106383=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@106384=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorona.~
-@106385=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorona.~
+@106382=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@106383=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@106384=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorosa.~
+@106385=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorosa.~
 @106386=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @106387=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
 @106388=~Sério? E como você sabe o que Cahl-Hyred vê?~
@@ -10450,7 +10450,7 @@ Quando esta magia é conjurada, estilhaços de gelo caem sobre todos os alvos na á
 @106440=~Deixa pra lá. O fantasma está em silêncio - alguma ideia do que ele quer?~
 @106441=~Esquece. Você pode me contar sobre esta área?~
 @106442=~Não importa, Leevi. Adeus.~
-@106443=~Resolver... o mistério? HA! Espíritos devem ser deixados em paz. E não pense que nós, nortistas, somos tolos supersticiosos... entre na Floresta Devastada se duvida do poder dos fantasmas. Deixe *em paz*, <FORASTEIRO>... deixe em paz.~
+@106443=~Resolver... o mistério? HA! Espíritos devem ser deixados em paz. E não pense que nós, nortistas, somos tolos supersticiosos... entre na Mata Sinistra se duvida do poder dos fantasmas. Deixe *em paz*, <FORASTEIRO>... deixe em paz.~
 @106444=~Adeus, Leevi.~
 @106445=~O que todos os fantasmas querem: retornar ao mundo dos vivos. Pode ser que o fantasma não fale porque... porque Kyosti é orgulhoso demais para pedir ajuda? Eu não sei... eu não sei.~
 @106446=~E quanto a Carita?~
@@ -11563,8 +11563,8 @@ Tipo: Uma mão
 @107233=~Precisamos ir. Adeus.~
 @107234=~Pergaminho Amaldiçoado da Desajeitamento~
 @107235=~Contamos a Cahl-Hyred que tínhamos dado paz ao espírito que assombrava sua estalagem. Ele ficou satisfeito com a notícia, embora relutante em nos recompensar de outra forma.~
-@107236=~O dono da estalagem Viúva Chorona, em Targos, nos contou que o espírito de uma mulher assombra um dos quartos do andar de cima. Nos oferecemos para ver se podíamos ajudá-lo a dar paz ao fantasma, e ele nos deu a chave do quarto. Ele disse que ela aparece à noite, então provavelmente deveríamos verificar o quarto nesse horário.~
-@107237=~O estalajadeiro da Viúva Chorona nos disse que é possível que o navio de Donovan tenha naufragado na praia de Targos, e que deveríamos falar com Gohar na Taverna do Cão Salgado - aparentemente, Gohar guarda pedaços de vários navios e os usa para decorar as paredes da Taverna do Cão Salgado.~
+@107236=~O dono da estalagem Viúva Chorosa, em Targos, nos contou que o espírito de uma mulher assombra um dos quartos do andar de cima. Nos oferecemos para ver se podíamos ajudá-lo a dar paz ao fantasma, e ele nos deu a chave do quarto. Ele disse que ela aparece à noite, então provavelmente deveríamos verificar o quarto nesse horário.~
+@107237=~O estalajadeiro da Viúva Chorosa nos disse que é possível que o navio de Donovan tenha naufragado na praia de Targos, e que deveríamos falar com Gohar na Taverna do Cão Salgado - aparentemente, Gohar guarda pedaços de vários navios e os usa para decorar as paredes da Taverna do Cão Salgado.~
 @107238=~Aparentemente, Koluhm, o sacerdote de Myrkul, pagou Cahl-Hyred com uma garrafa encantada, mas Cahl-Hyred está com muito medo de abri-la, quanto mais de beber seu conteúdo. Dissemos a ele que veríamos se conseguiríamos identificá-la e a traríamos de volta. Um dos magos ou sacerdotes da cidade poderá nos ajudar. Cahl-Hyred recomendou Elytharra, esposa de Lorde Ulbrec e também uma feiticeira.~
 @107239=~Conseguimos ensinar o básico de manejo de lança a alguns dos recrutas de Targos. Isso deve ajudá-los a se sair um pouco melhor no campo de batalha.~
 @107240=~Você ajudou a treinar alguns dos recrutas na Paliçada.~
@@ -13854,7 +13854,7 @@ Esta magia extingue a vida das criaturas na área de efeito, matando-as instantan
 ~
 @107919=~'Não ouviram? Há goblins nos cais! Precisaremos de todas as lâminas que pudermos reunir, ou nossos cadáveres estarão flutuando em Maer Dualdon!~
 @107920=~Preciso descansar - não consigo continuar.~
-@107921=~Ah, isso explicaria por que você está aqui guardando a Viúva Chorona... nos vemos nos cais, "defensor de Targos".~
+@107921=~Ah, isso explicaria por que você está aqui guardando a Viúva Chorosa... nos vemos nos cais, "defensor de Targos".~
 @107922=~Para os cais, então. Adeus.~
 @107923=~Você escolheu um caminho diplomático com Mytos em vez de provocar uma luta.~
 @107924=~Enfraquecido~
@@ -14332,7 +14332,7 @@ Tipo: Uma mão
 @108185=~De todo mal? Como você chama roubar as crianças deles?~
 @108186=~Que tipo de acordo é esse? Os aldeões nem sabem o que você está fazendo.~
 @108187=~Como *você* acha que aquela vila de simplórios sobreviveu por tanto tempo ao lado da tribo de bárbaros mais feroz do norte, verme? *EU!*~
-@108188=~São *MINHAS* criaturas terríveis que assombram a Floresta Devastada, *MEUS* monstros repugnantes que infestam os Pântanos Gelados, e os incontáveis bárbaros do Corvo Negro que *MINHA* magia matou, mantendo esses tolos ignorantes e detestáveis em segurança. *SOMENTE* EU PERMITO QUE ESSA VILA EXISTA!~
+@108188=~São *MINHAS* criaturas terríveis que assombram a Mata Sinistra, *MEUS* monstros repugnantes que infestam os Pântanos Gelados, e os incontáveis bárbaros do Corvo Negro que *MINHA* magia matou, mantendo esses tolos ignorantes e detestáveis em segurança. *SOMENTE* EU PERMITO QUE ESSA VILA EXISTA!~
 @108189=~Exceto pelas crianças que você destrói.~
 @108190=~Talvez a aldeia prefira se defender a ter suas crianças mortas por você.~
 @108191=~Bobagem. Elas não são mortas, apenas drenadas de parte de sua energia vital. As pequenas larvas não ficam com alma suficiente para manter uma existência humana, então eu as transformo em preciosas e minúsculas doninhas...~
@@ -14342,7 +14342,7 @@ Tipo: Uma mão
 @108195=~Oh... você é tão *nobre*, perguntando sobre as crianças... mas receio que *não*, verme. A única maneira de salvar aquelas pequenas doninhas seria me matar, e isso simplesmente não é possível - sou *muito* poderoso para ser derrotado por alguém como *você*.~
 @108196=~Bandolim da Maravilhosa Preservação~
 @108197=~Veremos. Se salvar aquelas crianças significar a sua morte, que assim seja.~
-@108198=~Não cometa o erro fatal de nos subestimar, como todos os nossos inimigos mortos fizeram. Diga-nos o caminho através da Floresta Devastada e deixaremos você viver.~
+@108198=~Não cometa o erro fatal de nos subestimar, como todos os nossos inimigos mortos fizeram. Diga-nos o caminho através da Mata Sinistra e deixaremos você viver.~
 @108199=~*Pff!* Tão ansiosos para jogar suas vidas fora. *Por quê?*~
 @108200=~O que vocês estão fazendo está errado. Você precisa ser parado.~
 @108201=~Temos um trabalho a fazer, e você está no nosso caminho.~
@@ -14376,20 +14376,20 @@ Remove a fadiga como se o usuário tivesse dormido uma noite inteira.
 @108212=~A cidade ainda está preocupada, e eu não os culpo - dizem que aqueles goblinoides eram apenas uma pata em um urso maior. Eu mesmo estava pensando em subir o rio... mas vou ficar aqui mais um pouco para ver como as coisas se desenrolam. O vale pode não estar seguro por muito mais tempo.~
 @108213=~Isto? Um totem de lobo... um amuleto da sorte. Ganhei do marido da minha prima, que achou que ia me vencer no meu melhor jogo! Talvez em algum dia sombrio eu encontre um homem com mais coragem do que eu, e então passarei o charme para ele...~
 @108214=~Jogo? Que jogo?~
-@108215=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@108216=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@108217=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorona.~
-@108218=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorona.~
+@108215=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@108216=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@108217=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorosa.~
+@108218=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorosa.~
 @108219=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @108220=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@108221=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@108222=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona. Estalagem.~
-@108223=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorona.~
-@108224=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorona.~
+@108221=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@108222=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa. Estalagem.~
+@108223=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorosa.~
+@108224=~Você descobriu um esconderijo secreto dentro da Estalagem Viúva Chorosa.~
 @108225=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @108226=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@108227=~Você quebrou a vontade do espírito da Estalagem Viúva Chorona.~
-@108228=~Você exorcizou o fantasma feminino da Estalagem Viúva Chorona.~
+@108227=~Você quebrou a vontade do espírito da Estalagem Viúva Chorosa.~
+@108228=~Você exorcizou o fantasma feminino da Estalagem Viúva Chorosa.~
 @108229=~Desde a era de Netheril, os magos aprenderam a conferir uma grande variedade de propriedades mágicas aos objetos do cotidiano que os cercam. Um item favorito para esse tipo de encantamento é a túnica comum. Ela é leve, acessível e retém bem o encantamento, tornando-se, assim, um equipamento ideal para um mago.
 ESTATÍSTICAS:
 
@@ -14399,11 +14399,11 @@ Conhecimento (Arcano): +5 bônus
 Inteligência: +1
 Peso: 2 kg (4 lb).
 ~
-@108230=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorona.~
-@108231=~Você descobriu um esconderijo secreto na taverna Viúva Chorona.~
+@108230=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna Viúva Chorosa.~
+@108231=~Você descobriu um esconderijo secreto na taverna Viúva Chorosa.~
 @108232=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @108233=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@108234=~Você quebrou a vontade do espírito da taverna Viúva Chorona.~
+@108234=~Você quebrou a vontade do espírito da taverna Viúva Chorosa.~
 @108235=~Um anel é uma pequena faixa de metal precioso usada como joia. Alguns anéis raros possuem encantamentos que conferem diversas habilidades mágicas. Esses anéis são muito procurados, especialmente por aventureiros. Sem motivo aparente, este anel está quente ao toque.
 ESTATÍSTICAS:
 
@@ -14411,16 +14411,16 @@ Bônus de Resistência:
 +10% de Resistência a Projéteis
 +10% de resistência à Fogo
 ~
-@108236=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@108237=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorona.~
-@108238=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorona.~
+@108236=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@108237=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna da Viúva Chorosa.~
+@108238=~Você descobriu um esconderijo secreto dentro da Estalagem da Viúva Chorosa.~
 @108239=~Osso Kris de Icor Negro~
 @108240=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @108241=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@108242=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@108243=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona Estalagem.~
+@108242=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@108243=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa Estalagem.~
 @108244=~Mercenário Garra Negra~
-@108245=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorona.~
+@108245=~Você obteve uma lágrima fantasmagórica e baniu o espírito da taverna Viúva Chorosa.~
 @108246=~Cota de Malha Élfica da Mão +3~
 @108247=~Durante a Era de Ouro entre os Elfos da Mão de Seldarine e os Anões das Profundezas de Dorn, uma versão especial da ilustre cota de malha élfica foi criada, oferecendo proteção adicional contra as duras condições climáticas do norte.
 ESTATÍSTICAS:
@@ -14433,7 +14433,7 @@ Falha de Magia Arcana: 30%
 Bônus de Resistência: +10% de resistência à Frio
 Peso: 7,5 kg (15 lb).
 ~
-@108248=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorona.~
+@108248=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorosa.~
 @108249=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @108250=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
 @108251=~Hah! Então é o seguinte: você ganha - HAH! - e o amuleto do lobo é seu. Se você perder, não importa - mas de qualquer forma, você vai pagar pelo braehg que engolimos: essa coisa não é fácil de conseguir, com esses javalis selvagens e tudo mais. São cinco moedas de ouro por rodada...~
@@ -14459,7 +14459,7 @@ Peso: 7,5 kg (15 lb).
 @108271=~Muito bem. Deixe-me ver quais quartos você tem disponíveis.~
 @108272=~Você sabe de algum trabalho em Targos?~
 @108273=~~
-@108274=~Bem, a estalagem se chama A Viúva Chorona, mas a parte sobre aquela pobre mulher se atirar da janela costuma fazer os hóspedes irem embora rapidinho.~
+@108274=~Bem, a estalagem se chama A Viúva Chorosa, mas a parte sobre aquela pobre mulher se atirar da janela costuma fazer os hóspedes irem embora rapidinho.~
 @108275=~Você disse a Cahl-Hyred que fez o choro de Veira parar.~
 @108276=~Você identificou a garrafa para Cahl-Hyred... só para descobrir que o idiota não a quer.~
 @108277=~Sério? Então aqui está a chave do quarto - ela deve te ajudar a passar pela Proteção na porta. Se você puder ajudar a acalmar o espírito daquela pobre mulher, ficarei grato, e o farei. Ela chora principalmente à noite, então esse provavelmente seria o melhor horário para vê-la.~
@@ -14612,24 +14612,24 @@ Peso: 1 kg (2 lb).
 @108416=~Para minha grande sorte, foram Isair e Madae, fundadores da Legião da Quimera, que finalmente me encontraram e restauraram minha mente e meu corpo. É a eles que devo minha lealdade e minha vida, e farei tudo o que estiver ao meu alcance para garantir que sejam bem-sucedidos.~
 @108417=~Que história, Saablic, mas ainda não posso permitir que você e a Legião da Quimera continuem.~
 @108418=~Tem certeza de que recuperou a sanidade? Parece-me que o truque de Malavon embaralhou sua mente permanentemente!~
-@108419=~Encontramos um espírito na Floresta Devastada que nos advertiu para ficarmos longe, afirmando que aqueles que entram estão condenados a vagar por suas trilhas pela eternidade. Segundo esse fantasma, a floresta é intransitável até que o "terrível segredo da Floresta Devastada" seja revelado.~
-@108420=~O espírito da Floresta Devastada não pôde nos revelar o segredo da floresta, mas disse que a resposta não estava dentro da própria floresta – que tínhamos que procurar em outro lugar. Ele também nos deu alguns conselhos: que dentro da Floresta Devastada, o oeste sempre leva à segurança; que quanto mais vagarmos, mais perdidos ficaremos, o que significa que devemos partir e retornar se ficarmos muito confusos; e que se morrermos aqui, nos juntaremos aos "Mortos Inquietos da Floresta Devastada" – os espíritos furiosos daqueles atraídos para a morte por luzes fantasmagóricas.~
-@108421=~Perguntamos ao espírito que encontramos na Floresta Devastada sobre o Kyosti desaparecido. Ele nos disse que se apagássemos as luzes fantasmagóricas e assim acalmássemos os Mortos Inquietos da Floresta Fell, ele nos contaria o que sabia.~
-@108422=~O espírito que encontramos na Floresta Devastada nos disse que Kyosti não morreu lá, mas que ele tinha visto um fantasma silencioso flutuando sobre sua sepultura rasa a oeste da floresta. Poderia ser Kyosti? O espírito disse que, se fôssemos até lá, o fantasma poderia nos aparecer. Teremos que procurar na área entre a Vila Errante e a Floresta Devastada.~
-@108423=~Você deu a paz final aos Mortos Inquietos da Floresta Devastada.~
-@108424=~Você deu a paz final aos Mortos Inquietos da Floresta Devastada.~
+@108419=~Encontramos um espírito na Mata Sinistra que nos advertiu para ficarmos longe, afirmando que aqueles que entram estão condenados a vagar por suas trilhas pela eternidade. Segundo esse fantasma, a floresta é intransitável até que o "terrível segredo da Mata Sinistra" seja revelado.~
+@108420=~O espírito da Mata Sinistra não pôde nos revelar o segredo da floresta, mas disse que a resposta não estava dentro da própria floresta – que tínhamos que procurar em outro lugar. Ele também nos deu alguns conselhos: que dentro da Mata Sinistra, o oeste sempre leva à segurança; que quanto mais vagarmos, mais perdidos ficaremos, o que significa que devemos partir e retornar se ficarmos muito confusos; e que se morrermos aqui, nos juntaremos aos "Mortos Inquietos da Mata Sinistra" – os espíritos furiosos daqueles atraídos para a morte por luzes fantasmagóricas.~
+@108421=~Perguntamos ao espírito que encontramos na Mata Sinistra sobre o Kyosti desaparecido. Ele nos disse que se apagássemos as luzes fantasmagóricas e assim acalmássemos os Mortos Inquietos da Mata Sinistra, ele nos contaria o que sabia.~
+@108422=~O espírito que encontramos na Mata Sinistra nos disse que Kyosti não morreu lá, mas que ele tinha visto um fantasma silencioso flutuando sobre sua sepultura rasa a oeste da floresta. Poderia ser Kyosti? O espírito disse que, se fôssemos até lá, o fantasma poderia nos aparecer. Teremos que procurar na área entre a Vila Errante e a Mata Sinistra.~
+@108423=~Você deu a paz final aos Mortos Inquietos da Mata Sinistra.~
+@108424=~Você deu a paz final aos Mortos Inquietos da Mata Sinistra.~
 @108425=~~
 @108426=~Não se assuste com meu semblante fantasmagórico, andarilho... meu espírito livre permanece aqui apenas para avisar, não para matar. Deixe esta floresta, ou junte-se à morte daqueles que ignoraram meu aviso.~
 @108427=~~
-@108428=~Um terrível segredo se esconde na Floresta Devastada, um segredo que condena aqueles que entram a vagar por suas trilhas escuras pela eternidade. Até que seu segredo seja revelado, nenhum homem vivo poderá passar.~
+@108428=~Um terrível segredo se esconde na Mata Sinistra, um segredo que condena aqueles que entram a vagar por suas trilhas escuras pela eternidade. Até que seu segredo seja revelado, nenhum homem vivo poderá passar.~
 @108429=~Qual é esse segredo?~
 @108430=~Eu sei apenas que a resposta *não* está nesta floresta - você deve procurar em outro lugar. Mas se você está <DETERMINADO> a explorar estas terras sombrias e sangrentas, imploro que se lembre destas palavras:~
-@108431=~Dentro da Floresta Sombria, o oeste quase sempre leva à segurança. Você encontrará o caminho para a liberdade sempre iluminado...~
-@108432=~Quanto mais você vagar pela Floresta Sombria, mais <PERDIDO> ficará - saia e retorne, e seu caminho ficará claro novamente por um tempo...~
-@108433=~E, por último, *não* se permita morrer aqui, ou você se juntará para sempre aos Mortos Inquietos da Floresta Sombria.~
+@108431=~Dentro da Mata Sinistra, o oeste quase sempre leva à segurança. Você encontrará o caminho para a liberdade sempre iluminado...~
+@108432=~Quanto mais você vagar pela Mata Sinistra, mais <PERDIDO> ficará - saia e retorne, e seu caminho ficará claro novamente por um tempo...~
+@108433=~E, por último, *não* se permita morrer aqui, ou você se juntará para sempre aos Mortos Inquietos da Mata Sinistra.~
 @108434=~Os "mortos inquietos?"~
 @108435=~Garrafa de Efreeti~
-@108436=~Atraídos para a morte pelas luzes fantasmagóricas da Floresta Sombria, sua inveja dos vivos se transformou em ódio. Eles nunca descansarão até que as luzes fantasmas se apaguem...~
+@108436=~Atraídos para a morte pelas luzes fantasmagóricas da Mata Sinistra, sua inveja dos vivos se transformou em ódio. Eles nunca descansarão até que as luzes fantasmas se apaguem...~
 @108437=~Luzes fantasmas? Você quer dizer fogos-fátuos?~
 @108438=~O que são essas "luzes fantasmas"?~
 @108439=~Chame-as como quiser, andarilho, mas saiba que elas existem unicamente para atrair viajantes para a sua perdição. Elas se alimentam do medo e da agonia dos moribundos e podem ser encontradas nas profundezas destas florestas.~
@@ -14641,13 +14641,13 @@ Peso: 1 kg (2 lb).
 @108445=~"Sobre o Cão Preguiçoso." 0123456789~
 @108446=~Meus agradecimentos. Adeus, espírito.~
 @108447=~Orbes cintilantes de luz fantasmagórica - existem unicamente para atrair viajantes à sua perdição. Alimentam-se do medo e da agonia dos moribundos e podem ser encontradas nas profundezas destas florestas.~
-@108448=~Você me pede algo, e eu peço algo em troca. Encontre e apague as luzes fantasmagóricas e acalme os Mortos Inquietos da Floresta Devastada, e eu responderei à sua pergunta.~
+@108448=~Você me pede algo, e eu peço algo em troca. Encontre e apague as luzes fantasmagóricas e acalme os Mortos Inquietos da Mata Sinistra, e eu responderei à sua pergunta.~
 @108449=~O que são as luzes fantasmagóricas mesmo?~
 @108450=~Adeus, espírito.~
-@108451=~Você retorna, andarilho? Por favor, não se esqueça dos meus avisos - tome muito cuidado enquanto estiver na Floresta Devastada.~
+@108451=~Você retorna, andarilho? Por favor, não se esqueça dos meus avisos - tome muito cuidado enquanto estiver na Mata Sinistra.~
 @108452=~Você obteve sucesso, andarilho, e extinguiu todas as luzes fantasmagóricas?~
 @108453=~Ainda não. Adeus, espírito.~
-@108454=~Você fez uma grande coisa, andarilho. As luzes fantasmagóricas foram extintas e os Mortos Inquietos da Floresta Devastada finalmente conhecerão a paz. Aos seus pés estão os restos mortais que outrora assombraram este lugar...~
+@108454=~Você fez uma grande coisa, andarilho. As luzes fantasmagóricas foram extintas e os Mortos Inquietos da Mata Sinistra finalmente conhecerão a paz. Aos seus pés estão os restos mortais que outrora assombraram este lugar...~
 @108455=~Claro. Há um homem chamado Kyosti entre eles?~
 @108456=~Claro. Adeus, espírito.~
 @108457=~Você retorna? <O_QUE_O_TRAZ_MAI> aqui novamente, andarilho?~
@@ -15938,7 +15938,7 @@ Tipo: Duas mãos
 @109160=~O que aconteceu depois?~
 @109161=~Recuei para Upper Dorn, junto com meus neo-orogs. Infelizmente, fui forçado a me esconder de minhas amadas criações, já que agora eu era uma criatura que eu as treinei para matar! Por trinta anos, lutei contra os pensamentos caóticos da minha mente de umber hulk, que ameaçavam dominar minha vontade.~
 @109162=~Esta janela parece ter sido quebrada há muito tempo e foi mal consertada. Você sente um arrepio ao olhar para isso.~
-@109163=~"A Estalagem da Viúva Chorona"~
+@109163=~"A Estalagem da Viúva Chorosa"~
 @109164=~Este guindaste parece ter sido projetado para transportar madeira dos penhascos abaixo.~
 @109165=~Você estava se perguntando de onde vinha aquele cheiro. Nossa, que cheiro bom.~
 @109166=~Há algo suspeito nesta carroça. Toda vez que você se vira, jura que ela está olhando para você - mas quando você se vira... nada.~
@@ -17072,7 +17072,7 @@ Esses personagens são a ruína de tudo que é bom e organizado. Personagens caótic
 @109655=~Addy~
 @109656=~Na verdade, preferimos ficar com ele. Encontramos no corpo de um dos goblins atacantes; Parece um pergaminho de teletransporte, e achamos que seu gêmeo está flutuando por aí em algum lugar.~
 @109657=~Então receio que terei que tomá-lo de você - é um de um par, entende? E não seria bom que esse pergaminho ficasse flutuando por aí.~
-@109658=~Swift Thomas~
+@109658=~Thomas Ligeiro~
 @109659=~"E que segredos você tem para contar...?"~
 @109660=~"Ah, sim... você está de luto por um ente querido? Ela tinha algum tesouro escondido aqui?"~
 @109661=~"O Senhor dos Ossos o recebeu. Não tema seu abraço."~
@@ -17128,7 +17128,7 @@ Esses personagens são a ruína de tudo que é bom e organizado. Personagens caótic
 @109711=~~
 @109712=~~
 @109713=~::Sussurro fraco, sibilante.::~
-@109714=~Koluhm disse que havia se instalado na Estalagem da Viúva Chorona, mas que o choro de um espírito o havia expulsado do prédio. Ele nos disse que, se quiséssemos falar com essa aparição, deveríamos ir até ela à noite.~
+@109714=~Koluhm disse que havia se instalado na Estalagem da Viúva Chorosa, mas que o choro de um espírito o havia expulsado do prédio. Ele nos disse que, se quiséssemos falar com essa aparição, deveríamos ir até ela à noite.~
 @109715=~~
 @109716=~~
 @109717=~::Sussurro fraco, como uma rajada de vento.::~
@@ -17142,7 +17142,7 @@ Esses personagens são a ruína de tudo que é bom e organizado. Personagens caótic
 @109725=~Você traduziu um pouco dos delírios do goblin morto.~
 @109726=~Você pediu a Koluhm para enviar as palavras do goblin para a Paliçada.~
 @109727=~Sob coação, Koluhm também nos disse que há um prédio em ruínas na cidade com um esconderijo secreto sob o assoalho. Vamos ficar de olho nisso.~
-@109728=~Confrontamos Koluhm sobre o verdadeiro uso da garrafa tocada por um fantasma que ele deu a Cahl-Hyred. Parece que ele não sabia que ela havia sido tocada por um fantasma e nos disse que poderíamos usá-la capturando as lágrimas do espírito na Viúva Chorona e levando-as à feiticeira Elytharra, esposa de Lorde Ulbrec.~
+@109728=~Confrontamos Koluhm sobre o verdadeiro uso da garrafa tocada por um fantasma que ele deu a Cahl-Hyred. Parece que ele não sabia que ela havia sido tocada por um fantasma e nos disse que poderíamos usá-la capturando as lágrimas do espírito na Viúva Chorosa e levando-as à feiticeira Elytharra, esposa de Lorde Ulbrec.~
 @109729=~Você traduziu os desvarios do goblin morto.~
 @109730=~~
 @109731=~Você traduziu parte dos desvarios do goblin morto.~
@@ -17278,8 +17278,8 @@ Peso: 12,5 kg (25 lb).
 @109809=~Você realmente... descansa aqui?~
 @109810=~Cahl-Hyred, o estalajadeiro, disse que você saiu da estalagem sem pagar.~
 @109811=~Você pode nos dizer qual é a poção que deu a Cahl-Hyred?~
-@109812=~Você pode nos dizer algo sobre o espírito que assombra a Estalagem da Viúva Chorona?~
-@109813=~A banda mercenária Coleira de Ferro disse que você estava hospedado na Estalagem da Viúva Chorona... por que você está? Aqui?~
+@109812=~Você pode nos dizer algo sobre o espírito que assombra a Estalagem da Viúva Chorosa?~
+@109813=~A banda mercenária Coleira de Ferro disse que você estava hospedado na Estalagem da Viúva Chorosa... por que você está? Aqui?~
 @109814=~Quem são esses mercenários da Coleira de Ferro de que você fala?~
 @109815=~Então você disse que viajou para cá com o bando de mercenários da Coleira de Ferro?~
 @109816=~Você conhece alguém chamado Phaen?~
@@ -17671,7 +17671,7 @@ Duração: 5 turnos
 @110099=~Agradeça por não estar lá, criança - ninguém deve desejar estar em batalha, apenas desejar ficar longe dela.~
 @110100=~Bem, deixe-me dizer, uma ou duas mãos teriam sido bem-vindas. A Guarda de Targos estava espalhada como gansos.~
 @110101=~Se você estivesse lá, teria morrido como os outros soldados e moradores, garoto.~
-@110102=~Eu ainda queria ter visto! Meu nome é Thomas. Sou bom de arco e flecha, mas não me deixam ficar nas muralhas, então na maioria das vezes me pedem para correr para lá e para cá entregando isso e aquilo. Fiquei bem bom em percorrer a cidade a pé, por isso me chamam de Thomas Veloz.~
+@110102=~Eu ainda queria ter visto! Meu nome é Thomas. Sou bom de arco e flecha, mas não me deixam ficar nas muralhas, então na maioria das vezes me pedem para correr para lá e para cá entregando isso e aquilo. Fiquei bem bom em percorrer a cidade a pé, por isso me chamam de Thomas Ligeiro.~
 @110103=~Olap nos disse que você poderia nos mostrar a rota mais rápida por Targos.~
 @110104=~Hum, Olap nos disse que você poderia nos mostrar a rota mais rápida por Targos.~
 @110105=~Você pode me mostrar a cidade?~
@@ -18120,7 +18120,7 @@ Todos morrem, o que importa é como você vive.
 Quando eu não puder mais ficar sozinho, então será a hora de morrer.
 --
 ~
-@110395=~Vale do Vento Gélido II~
+@110395=~Vale do Vento Gelado II~
 @110396=~"Olap está mesmo mal-humorado hoje. Igualzinho a ontem. E anteontem."~
 @110397=~Bola de Fogo com Explosão Retardada~
 @110398=~Guarda Óssea Maior de Elite~
@@ -18768,7 +18768,7 @@ Tipo: Uma mão
 @110919=~Machado de Batalha da Ruptura +5~
 @110920=~Você não pode despausar o jogo e, portanto, não pode usar esta tela.~
 @110921=~Templo do Deus Esquecido~
-@110922=~Vale do Vento Gélido~
+@110922=~Vale do Vento Gelado~
 @110923=~Acampamento Bárbaro~
 @110924=~A versão mais comum do machado de batalha é um cabo robusto com cerca de 1,2 metros de comprimento com uma Lâmina de um só gume em forma de trombeta, montada em uma das extremidades. Machados de batalha também são chamados de machados largos.
 ESTATÍSTICAS:
@@ -19279,7 +19279,7 @@ Teste de resistência: nenhum
 
 Esta magia imbuí as mãos do conjurador com energia negativa destrutiva que será liberada quando um ataque de toque for bem-sucedido. Este ataque causa 4d8 + 1 ponto por nível do conjurador de dano mágico (máximo de 4d8 + 20). Esta magia não tem efeito sobre mortos-vivos ou constructos.
 ~
-@111195=~Esta não é uma estalagem para vivos, e você também não gostaria de ficar aqui quando a noite cair. Vá até aquele que reivindica a Viúva Chorona - ele poderá te acordar na hora marcada.~
+@111195=~Esta não é uma estalagem para vivos, e você também não gostaria de ficar aqui quando a noite cair. Vá até aquele que reivindica a Viúva Chorosa - ele poderá te acordar na hora marcada.~
 @111196=~Mas você e essa mulher são da mesma origem - vamos lá, você sabe como se descobrem os segredos de uma mulher. Se você quiser conhecer o coração dela, vá até ela à noite. Sim, a noite é o melhor horário, eu acho.~
 @111197=~[MENSAGEADOR DE SONHOS 01] Saudações! Vim em busca de alguém para entregar um presente. Uma corneta, na verdade.~
 @111198=~Se você vier até *mim* à noite, vai se juntar ao Velho Lorde Caveira mais cedo do que imagina.~
@@ -19546,7 +19546,7 @@ Peso: 0,5 kg (1 lb).
 @111424=~De qualquer forma, preciso que você fale com Koluhm e veja o que ele descobriu sobre o goblin - os outros homens não se aproximarão dele.~
 @111425=~Muito bem. Onde posso encontrá-lo?~
 @111426=~Então irei caçar Koluhm.~
-@111427=~Ele montou um... necrotério... em um dos prédios abandonados da cidade principal, ao norte da Estalagem da Viúva Chorona. Você pode encontrá-lo lá.~
+@111427=~Ele montou um... necrotério... em um dos prédios abandonados da cidade principal, ao norte da Estalagem da Viúva Chorosa. Você pode encontrá-lo lá.~
 @111428=~Muito bem. Vou falar com ele, então. Até logo.~
 @111429=~Você falou com Koluhm?~
 @111430=~Ah, Koluhm? Ele caiu acidentalmente na minha... er, arma de alguém e morreu.~
@@ -19895,10 +19895,10 @@ NÃO TRANSFIRA
 @111613=~[Prazer em ver o jogador, ouvi falar de seus atos de bravura]Ouvi falar de seus atos de bravura na defesa de [Tar-goes]Targos. Você serviu [Tar-goes]Targos com distinção e valor, e tem minha gratidão.~
 @111614=~[Sombrio, Suspiros]Receio que nos tenha sido concedido apenas um alívio temporário; ainda não sabemos o que está levando essa horda a atacar as muralhas de Targos.~
 @111615=~[Apenas negócios, Oz-wald Fiddle-bender]Oswald Fiddlebender, nosso batedor aéreo, esteve explorando a região em seu dirigível e descobriu algumas notícias perturbadoras sobre a horda.~
-@111616=~Parece que os goblins que atacaram Targos eram apenas a vanguarda de um grupo de ataque muito maior. Sua força principal tomou a Ponte Shaengarne, o que é uma má notícia.~
-@111617=~Ponte Shaengarne?~
+@111616=~Parece que os goblins que atacaram Targos eram apenas a vanguarda de um grupo de ataque muito maior. Sua força principal tomou a Ponte de Shaengarne, o que é uma má notícia.~
+@111617=~Ponte de Shaengarne?~
 @111618=~[EDWIN 43] Raaagh! Socorro!~
-@111619=~[Explica]Deixe-me ver seu mapa; vou marcar a localização para você - [apontando no mapa do jogador]aqui é Targos, e a Ponte Shaengarne fica logo ao sul.~
+@111619=~[Explica]Deixe-me ver seu mapa; vou marcar a localização para você - [apontando no mapa do jogador]aqui é Targos, e a Ponte de Shaengarne fica logo ao sul.~
 @111620=~[GORION 14]~
 @111621=~Troll Espiritual~
 @111622=~[Explica, com um leve tom de urgência no final]As tropas de Neverwinter planejavam usar esta ponte para atravessar o rio, mas enquanto os goblins a controlarem, os reforços de Neverwinter *não poderão* atravessar o rio para nos ajudar.~
@@ -19924,7 +19924,7 @@ NÃO TRANSFIRA
 @111642=~[GNOME FEMALE 6]~
 @111643=~Sanadal Gwist~
 @111644=~CARREGAR!~
-@111645=~Muito bem. Então, vamos até a Ponte Shaengarne. Até logo.~
+@111645=~Muito bem. Então, vamos até a Ponte de Shaengarne. Até logo.~
 @111646=~Sanadal Gwist~
 @111647=~[Grim]Não pense que isso não passou pela minha cabeça. [Suspiro]Mas precisamos da ponte intacta, e a aeronave de Oswald é o único reconhecimento confiável que conseguimos no último mês - precisamos dela, e da ponte, intactas.~
 @111648=~Entendo. Antes de ir, gostaria de lhe fazer algumas perguntas.~
@@ -19944,7 +19944,7 @@ NÃO TRANSFIRA
 @111662=~Biff, o Substituto~
 @111663=~Biff, o Substituto~
 @111664=~Como chegamos a Shaengarne?~
-@111665=~As tropas goblin na Ponte Shaengarne são o coração do exército goblin?~
+@111665=~As tropas goblin na Ponte de Shaengarne são o coração do exército goblin?~
 @111666=~Alguma notícia dos batedores que você enviou para encontrar o acampamento goblin?~
 @111667=~Você pode me dizer algo sobre esse dirigível que o Oswald possui?~
 @111668=~Alguma notícia sobre os reforços de Neverwinter?~
@@ -19985,7 +19985,7 @@ NÃO TRANSFIRA
 @111703=~Templo de Helm~
 @111704=~Canção da Manhã~
 @111705=~[Um pouco deprimido, preocupado que as tropas não cheguem a tempo] Até que o [Shane-garn]Shaengarne seja retomado, podemos esperar poucas notícias deles. Teremos que lidar com os goblins na ponte da melhor maneira possível.~
-@111706=~[Repete]Preciso que você viaje até a Ponte Shaengarne e encontre uma maneira de retomá-la dos goblins acampados lá. Enquanto eles mantiverem a ponte, não podemos esperar reforços de Neverwinter.~
+@111706=~[Repete]Preciso que você viaje até a Ponte de Shaengarne e encontre uma maneira de retomá-la dos goblins acampados lá. Enquanto eles mantiverem a ponte, não podemos esperar reforços de Neverwinter.~
 @111707=~Armadura Antiga~
 @111708=~Aello Sortudo~
 @111709=~Aello Sortudo~
@@ -22150,7 +22150,7 @@ Peso: 0,5 kg (1 lb).
 ~
 @112642=~Restos de Madeira Caída~
 @112643=~Restos de Madeira Caída~
-@112644=~Estes são os restos mortais dos mortos da Floresta Devastada, libertados de seu tormento quando você destruiu os fogos-fátuos que os atraíram para a morte.
+@112644=~Estes são os restos mortais dos mortos da Mata Sinistra, libertados de seu tormento quando você destruiu os fogos-fátuos que os atraíram para a morte.
 Peso: 2,5 kg (5 lb).
 ~
 @112645=~Frostrose~
@@ -31004,7 +31004,7 @@ Esta magia delineia uma criatura com um brilho pálido, tornando sua posição e mo
 @117023=~"Acho que a Suoma vai nos fazer mudar de novo dentro de um mês."~
 @117024=~"Vamos mesmo *caçar* alguma coisa em breve?"~
 @117025=~"Devemos verificar as armadilhas para animais antes do fim do dia."~
-@117026=~"Jarkko e eu íamos caçar lobos brancos na Floresta Devastada - mas aí ficamos sóbrios!"~
+@117026=~"Jarkko e eu íamos caçar lobos brancos na Mata Sinistra - mas aí ficamos sóbrios!"~
 @117027=~"Minha esposa está brava de novo - talvez eu tenha que dormir em um dos casebres da Venla."~
 @117028=~"Está frio - talvez devêssemos ficar um pouco perto da fogueira da aldeia."~
 @117029=~"Os estranhos do sonho de Suoma chegaram - eles estão nos ajudando agora mesmo."~
@@ -33334,8 +33334,8 @@ Falha de Magia Arcana: 50%
 Peso: 12,5 kg (25 lb).
 ~
 @117884=~Este prisioneiro humanoide emaciado provavelmente morreu de fome. Pelo cheiro, você diria que já se passaram pelo menos alguns dias desde sua morte.~
-@117885=~"Preste atenção ao meu aviso... saia da Floresta Devastada!"~
-@117886=~"A Floresta Devastada não é lugar para os vivos..."~
+@117885=~"Preste atenção ao meu aviso... saia da Mata Sinistra!"~
+@117886=~"A Mata Sinistra não é lugar para os vivos..."~
 @117887=~Você foi amaldiçoado com Letargia.~
 @117888=~"Como vou impressionar o pai da Anja...?"~
 @117889=~"Tão silencioso... tão tranquilo."~
@@ -38092,7 +38092,7 @@ Peso: 1 kg (2 lb).
 @121448=~Olho do Mago~
 @121449=~Olho da Espada~
 @121450=~Olho da Mente~
-@121451=~Swift Thomas~
+@121451=~Thomas Ligeiro~
 @121452=~Tabard Mooncalf~
 @121453=~Tarran~
 @121454=~Ultrablast~
@@ -38502,9 +38502,9 @@ Tipo: Uma mão
 @121511=~Você se infiltrou na congregação Aurilita.~
 @121512=~Viemos para nos juntar ao clero.~
 @121513=~Somos membros do clero. Deixem-nos passar.~
-@121514=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demônio e o convencemos de que estávamos lá para nos juntar à congregação de Auril. Acabamos de completar seu Ritual de Abraço e agora somos considerados membros. Se não atrairmos atenção desnecessária, poderemos investigar seu templo sem incidentes.~
-@121515=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demônio e, com a ajuda das vestes de Auril, o convencemos de que éramos membros de sua congregação. Se não atrairmos atenção desnecessária, poderemos investigar o templo deles sem incidentes.~
-@121516=~Ao tentarmos nos juntar à congregação de Auril participando de seu "Ritual de Abraço", o Cavaleiro Demônio responsável nos impediu, pois o ritual só pode ser realizado à noite.~
+@121514=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demoníaco e o convencemos de que estávamos lá para nos juntar à congregação de Auril. Acabamos de completar seu Ritual de Abraço e agora somos considerados membros. Se não atrairmos atenção desnecessária, poderemos investigar seu templo sem incidentes.~
+@121515=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demoníaco e, com a ajuda das vestes de Auril, o convencemos de que éramos membros de sua congregação. Se não atrairmos atenção desnecessária, poderemos investigar o templo deles sem incidentes.~
+@121516=~Ao tentarmos nos juntar à congregação de Auril participando de seu "Ritual de Abraço", o Cavaleiro Demoníaco responsável nos impediu, pois o ritual só pode ser realizado à noite.~
 @121517=~Estávamos de saída. Adeus.~
 @121518=~Você se infiltrou na congregação Aurilita.~
 @121519=~Viemos ver Sherincal.~
@@ -38523,7 +38523,7 @@ Tipo: Uma mão
 @121532=~Você descobriu que uma congregação aurilita criou a geleira durante um de seus festivais.~
 @121533=~Isso foi alterado. Qualquer roupa é apropriada agora.~
 @121534=~Qual é a vestimenta adequada?~
-@121535=~Ao tentarmos nos juntar à congregação de Auril participando de seu "Ritual de Abraço", o Cavaleiro Demônio responsável nos impediu, pois percebeu que nenhum de nós estava usando as vestimentas apropriadas para o ritual.~
+@121535=~Ao tentarmos nos juntar à congregação de Auril participando de seu "Ritual de Abraço", o Cavaleiro Demoníaco responsável nos impediu, pois percebeu que nenhum de nós estava usando as vestimentas apropriadas para o ritual.~
 @121536=~Você descobriu que os sacerdotes aurilitas criaram a tempestade que causou a queda da aeronave de Oswald.~
 @121537=~Quem é Sherincal?~
 @121538=~Adeus.~
@@ -39387,8 +39387,8 @@ Peso: 2 kg (4 lb).
 @122144=~Palavra de Poder, Cego~
 @122145=~Símbolo do Medo~
 @122146=~Símbolo, Dor~
-@122147=~Cavaleiro Demônio~
-@122148=~Cavaleiro Demônio~
+@122147=~Cavaleiro Demoníaco~
+@122148=~Cavaleiro Demoníaco~
 @122149=~Mendas 2~
 @122150=~Mendas 2~
 @122151=~Mendas 3~
@@ -42633,7 +42633,7 @@ Peso: 0 kg.
 @124492=~Você contou a Elytharra que Phaen era o traidor e o nome de seu mestre.~
 @124493=~Você contou a Elytharra que Phaen era o traidor.~
 @124494=~Você contou a Elytharra que Phaen era o traidor e o nome de seu mestre.~
-@124495=~Sim, poderia, mas... ah, entendi onde sua pergunta quer chegar! Você está pensando na assombração da Viúva Chorona?~
+@124495=~Sim, poderia, mas... ah, entendi onde sua pergunta quer chegar! Você está pensando na assombração da Viúva Chorosa?~
 @124496=~Eu tinha pensado nisso... você pode me contar algo sobre o espírito que assombra a pousada?~
 @124497=~Bem, eu estava pensando nisso, se não a tivéssemos espantado antes. De qualquer forma, <OBRIGADO> por ter olhado a garrafa para nós.~
 @124498=~~
@@ -43930,13 +43930,13 @@ Desvantagens:
 @125276=~Ah, sim, e vou garantir que ele lhe traga um frasco de conhaque de Cormyr e um copo gelado. Talvez você também queira pantufas e um robe? Vou pedir aos magos que conjurem alguns para você também. Agora vá!~
 @125277=~Olha, pirralho, você PRECISA de soldados, e se quer que a gente vá para outro lugar, tudo bem, pode explicar nossa desistência para o próprio Shawford. Tenho certeza de que ele ficará satisfeito por você ter jogado uma espada fora a serviço de Targos.~
 @125278=~Parece que vamos a pé, então. Até logo.~
-@125279=~Hum... você tem razão. Certo, vou dizer ao Swift Thomas para te levar pela rota mais rápida através de Targos. Só mande ele de volta rapidinho, beleza?~
-@125280=~Swift Thomas? Onde podemos encontrá-lo?~
+@125279=~Hum... você tem razão. Certo, vou dizer ao Thomas Ligeiro para te levar pela rota mais rápida através de Targos. Só mande ele de volta rapidinho, beleza?~
+@125280=~Thomas Ligeiro? Onde podemos encontrá-lo?~
 @125281=~Tudo bem.~
 @125282=~O garoto geralmente fica bem em frente ao salão de reuniões onde Shawford montou seu posto, esperando para entregar uma mensagem a ele ou a Ulbrec. Agora, seja rápido com seus afazeres.~
 @125283=~Tudo bem, então.~
 @125284=~Esse guindaste já foi consertado? Ainda não vejo nenhuma madeira por aqui.~
-@125285=~Onde podemos encontrar Swift Thomas novamente?~
+@125285=~Onde podemos encontrar Thomas Ligeiro novamente?~
 @125286=~Temos a roda do guindaste, mas não sabemos bem o que fazer com ela.~
 @125287=~Weenagoo~
 @125288=~Aprendiz~
@@ -46113,7 +46113,7 @@ Perigo: O usuário pode invocar Pensamentos Perturbadores, um poderoso glabrezu. 
 @126742=~Embora eu não precise dizer mais nada sobre o seu futuro. Pois tudo o que eu disse, tudo o que eu vi, lhe será revelado... no tempo certo.~
 @126743=~Dizem que a história é a maior de todas as professoras. E que os relatos de feitos passados definem quem somos no presente e o que seremos no futuro.~
 @126744=~Contarei a vocês uma história assim. É uma história que me é bastante familiar, pois passei quase toda a minha vida reunindo seus fragmentos e registrando-a aqui neste livro.~
-@126745=~Nossa história se passa na região norte de Faerûn, conhecida como Vale do Vento Gélido. É uma terra inóspita e congelada, isolada do resto do mundo por uma muralha de picos irregulares chamada Espinha do Mundo.~
+@126745=~Nossa história se passa na região norte de Faerûn, conhecida como Vale do Vento Gelado. É uma terra inóspita e congelada, isolada do resto do mundo por uma muralha de picos irregulares chamada Espinha do Mundo.~
 @126746=~Durante séculos, as planícies geladas do vale foram o lar dos povos bárbaros Uthgardt e Reghedmen.~
 @126747=~Agrupados em pequenas tribos unidas, os bárbaros viviam vidas simples: livres, orgulhosos e ferozmente independentes.~
 @126748=~Até o dia em que um Arquimago chamado Arakon chegou a Icewind Dale.~
@@ -46742,7 +46742,7 @@ Peso: 1 kg (2 lb).
 @127172=~Estátua de Sune~
 @127173=~Estátua de Sune~
 @127174=~A saga do Céu Errante é uma história de lar e família contada por muitos escaldos do Norte. A história exemplifica a persistência e a força do espírito bárbaro.
-Quando as legiões de Arakon, o Arquimago, varreram o Vale do Vento Gélido, a Tribo do Urso foi uma das primeiras tribos a enfrentar o ataque. Subjugados pelas forças superiores, os bárbaros lutaram bravamente, mas não eram páreo para as tropas de Arakon. Um dos caçadores e guerreiros mais velhos da tribo, Hreidgar, foi nocauteado durante a batalha e acordou com o céu rasgando seu rosto e os restos mortais de seus companheiros ao seu redor. De sua esposa e filhos, não havia vestígio algum, e sem dizer uma palavra, Hreidgar empunhou sua grande espada e seguiu o rastro do exército de Arakon, determinado a resgatá-los e vingar os caídos.
+Quando as legiões de Arakon, o Arquimago, varreram o Vale do Vento Gelado, a Tribo do Urso foi uma das primeiras tribos a enfrentar o ataque. Subjugados pelas forças superiores, os bárbaros lutaram bravamente, mas não eram páreo para as tropas de Arakon. Um dos caçadores e guerreiros mais velhos da tribo, Hreidgar, foi nocauteado durante a batalha e acordou com o céu rasgando seu rosto e os restos mortais de seus companheiros ao seu redor. De sua esposa e filhos, não havia vestígio algum, e sem dizer uma palavra, Hreidgar empunhou sua grande espada e seguiu o rastro do exército de Arakon, determinado a resgatá-los e vingar os caídos.
 
 Hreidgar foi um dos primeiros a jurar lealdade ao xamã bárbaro Jerrod quando este uniu as tribos contra Arakon, e serviu incansavelmente nas grandes batalhas que se seguiram, mesmo no dia mais sombrio, quando Arakon desencadeou exércitos infernais contra Jerrod e as tribos. Em cada batalha, Hreidgar e sua espada eram um só, uivando como o vento enquanto repelia seus inimigos... para a morte. Mas quando Arakon foi finalmente derrotado, nenhum vestígio da esposa e do filho de Hreidgar foi encontrado.
 
@@ -46851,7 +46851,7 @@ Peso: 0 lb.
 @127208=~Inquisidor Venomin~
 @127209=~Inquisidor Venomin~
 @127210=~Nada hoje, <OBRIGADO>. Até logo.~
-@127211=~[Bem, não pensem que sou um cara legal, mas...] Bem... agora, antes que pensem que eu mesmo tenho um lado tolo, Lorde [Uhl-brek]Ulbrec está me pagando uma bela bolada de ouro para manter a Malvada aqui no porto.~
+@127211=~[Bem, não pensem que sou um cara legal, mas...] Bem... agora, antes que pensem que eu mesmo tenho um lado tolo, Lorde [Uhl-brek]Ulbrec está me pagando uma bela bolada de ouro para manter a Moça Atrevida aqui no porto.~
 @127212=~Por que isso?~
 @127213=~Mão de Vallah~
 @127214=~[Com um ar pragmático, mas impressionado com o fato de Ulbrec se importar com seu povo]Quer garantir que os moradores tenham uma saída de Targos se as coisas ficarem feias, e isso me basta. Minha mãe está aqui, e eu não quero vê-la sofrer.~
@@ -47153,7 +47153,7 @@ Tipo: Uma mão
 @127401=~Hobart Barba por fazer~
 @127402=~Chave da Masmorra~
 @127403=~Uma chave de aparência complexa feita de ferro frio.~
-@127404=~<OBRIGADO_MAI>... Gostaria de saber se você poderia me ajudar com outra questão. Obtivemos uma lágrima do fantasma que assombra a Viúva Chorona e gostaríamos de saber se você poderia utilizá-la.~
+@127404=~<OBRIGADO_MAI>... Gostaria de saber se você poderia me ajudar com outra questão. Obtivemos uma lágrima do fantasma que assombra a Viúva Chorosa e gostaríamos de saber se você poderia utilizá-la.~
 @127405=~Este símbolo sagrado, finamente trabalhado, é venerado pelo deus Helm. O símbolo representa uma manopla de guerra ereta com um olho fixo na frente. A própria manopla é feita da mais fina platina, a parte branca do olho é esculpida em madrepérola e uma safira azul foi usada para a pupila.
 Peso: 0 kg.
 ~
@@ -47749,7 +47749,7 @@ Peso: 1 kg (2 lb).
 Requisito de Talento: Arma Simples, Lâmina Pequena
 Tipo: Uma mão
 ~
-@127583=~Esta lâmina de prata excepcionalmente pesada foi encantada com a lágrima que você obteve do espírito da Viúva Chorona. Aparentemente, a lágrima ainda guarda parte da raiva dela contra você e da angústia por seu banimento da estalagem, o que pode ser a razão para o grande peso da arma. Parece que não há fúria maior nos infernos do que a de um espírito banido, mas contanto que você consiga uma valiosa arma mágica, um pouco de fúria espectral é um preço pequeno a se pagar.
+@127583=~Esta lâmina de prata excepcionalmente pesada foi encantada com a lágrima que você obteve do espírito da Viúva Chorosa. Aparentemente, a lágrima ainda guarda parte da raiva dela contra você e da angústia por seu banimento da estalagem, o que pode ser a razão para o grande peso da arma. Parece que não há fúria maior nos infernos do que a de um espírito banido, mas contanto que você consiga uma valiosa arma mágica, um pouco de fúria espectral é um preço pequeno a se pagar.
 ESTATÍSTICAS:
 
 Dano: 1d4 + 3, +4 contra Mortos-vivos Espectrais
@@ -47826,7 +47826,7 @@ Tipo: Uma mão
 @127615=~Eu sou um contigo, ó Ilmater~
 @127616=~Obrigada, ó Ilmater, por tua divina orientação.~
 @127617=~A saga do Céu Errante é uma história de lar e família contada por muitos escaldos do Norte. A história exemplifica a persistência e a força do espírito bárbaro.
-Quando as legiões de Arakon, o Arquimago, varreram o Vale do Vento Gélido, a Tribo do Urso foi uma das primeiras tribos a enfrentar o ataque. Subjugados pelas forças superiores, os bárbaros lutaram bravamente, mas não eram páreo para as tropas de Arakon. Um dos caçadores e guerreiros mais velhos da tribo, Hreidgar, foi nocauteado durante a batalha e acordou com o céu rasgando seu rosto e os restos mortais de seus companheiros ao seu redor. De sua esposa e filhos, não havia vestígio algum, e sem dizer uma palavra, Hreidgar empunhou sua grande espada e seguiu o rastro do exército de Arakon, determinado a resgatá-los e vingar os caídos.
+Quando as legiões de Arakon, o Arquimago, varreram o Vale do Vento Gelado, a Tribo do Urso foi uma das primeiras tribos a enfrentar o ataque. Subjugados pelas forças superiores, os bárbaros lutaram bravamente, mas não eram páreo para as tropas de Arakon. Um dos caçadores e guerreiros mais velhos da tribo, Hreidgar, foi nocauteado durante a batalha e acordou com o céu rasgando seu rosto e os restos mortais de seus companheiros ao seu redor. De sua esposa e filhos, não havia vestígio algum, e sem dizer uma palavra, Hreidgar empunhou sua grande espada e seguiu o rastro do exército de Arakon, determinado a resgatá-los e vingar os caídos.
 
 Hreidgar foi um dos primeiros a jurar lealdade ao xamã bárbaro Jerrod quando este uniu as tribos contra Arakon, e serviu incansavelmente nas grandes batalhas que se seguiram, mesmo no dia mais sombrio, quando Arakon desencadeou exércitos infernais contra Jerrod e as tribos. Em cada batalha, Hreidgar e sua espada eram um só, uivando como o vento enquanto repelia seus inimigos... para a morte. Mas quando Arakon foi finalmente derrotado, nenhum vestígio da esposa e do filho de Hreidgar foi encontrado.
 
@@ -47934,7 +47934,7 @@ Tipo: Uma mão
 @127628=~O Corpo de Montaron~
 @127629=~O Corpo de Montaron~
 @127630=~Esta espada curta encantada foi esculpida em um único pedaço de xisto, sua superfície manchada com veneno extraído da língua de uma serpente do deserto. O veneno nunca seca, dando à espada um brilho doentio.
-Esta espada curta é uma arma maligna, que dizem ter causado muitas mortes agonizantes ao longo dos anos. Seu nome vem de seu último dono conhecido, um infame pirata chamado Letto, que atacava navios que navegavam pelo Mar de Gelo Movediço. Conta-se que ele foi capturado pela Tribo da Grande Baleia à sombra do Iceberg de Hehnhold, onde seu navio foi despedaçado pelos grandes machados dos bárbaros e a tripulação incendiada com piche em chamas. Quando a batalha terminou, restaram apenas pedaços de madeira à deriva. Um dos pedaços do casco de seu navio foi levado para o sul e a madeira foi usada na construção de um dos quartos do andar superior da Estalagem da Viúva Chorona. A espada curta está enterrada na madeira há quase trinta anos ou mais, esperando que alguém a encontre novamente e a use em nome de Letto.
+Esta espada curta é uma arma maligna, que dizem ter causado muitas mortes agonizantes ao longo dos anos. Seu nome vem de seu último dono conhecido, um infame pirata chamado Letto, que atacava navios que navegavam pelo Mar de Gelo Movediço. Conta-se que ele foi capturado pela Tribo da Grande Baleia à sombra do Iceberg de Hehnhold, onde seu navio foi despedaçado pelos grandes machados dos bárbaros e a tripulação incendiada com piche em chamas. Quando a batalha terminou, restaram apenas pedaços de madeira à deriva. Um dos pedaços do casco de seu navio foi levado para o sul e a madeira foi usada na construção de um dos quartos do andar superior da Estalagem da Viúva Chorosa. A espada curta está enterrada na madeira há quase trinta anos ou mais, esperando que alguém a encontre novamente e a use em nome de Letto.
 
 ESTATÍSTICAS:
 
@@ -48192,11 +48192,11 @@ Tipo: Duas mãos
 @127857=~Esta área viu a passagem de centenas de soldados e trabalhadores no último mês. Todas as árvores na área imediata e além da paliçada foram derrubadas para serem usadas na construção da grande muralha de madeira... e para criar uma zona de abate para quaisquer goblins que tentem invadir as muralhas de Targos. ~
 @127858=~Esta casa parece uma simples casa de fazenda que foi convertida em uma sala de guerra militar. Não é surpresa que o chão tenha visto o trânsito de dezenas de pés calçados com botas, e pegadas de neve e lama cruzam o centro da sala e a área ao redor da porta.~
 @127859=~Sir Cadril~
-@127860=~No cerne dos ensinamentos do seu mestre está a ideia de que deve haver ordem em todas as coisas – e que a disciplina não pode ser testada enquanto se permanece em segurança atrás dos muros de um mosteiro. Seus anciãos o desafiaram a vagar pelo Norte e observar a vida das pessoas que lá vivem, retornando em três anos para relatar o que viu. Essa jornada o trouxe à cidade de Luskan, onde um anúncio de vaga para mercenários chamou sua atenção no mercado. Dias depois, você embarcou na A Malvada rumo à cidade sitiada de Targos para lutar ao lado dos defensores e restaurar a ordem no conturbado Norte.~
+@127860=~No cerne dos ensinamentos do seu mestre está a ideia de que deve haver ordem em todas as coisas – e que a disciplina não pode ser testada enquanto se permanece em segurança atrás dos muros de um mosteiro. Seus anciãos o desafiaram a vagar pelo Norte e observar a vida das pessoas que lá vivem, retornando em três anos para relatar o que viu. Essa jornada o trouxe à cidade de Luskan, onde um anúncio de vaga para mercenários chamou sua atenção no mercado. Dias depois, você embarcou na A Moça Atrevida rumo à cidade sitiada de Targos para lutar ao lado dos defensores e restaurar a ordem no conturbado Norte.~
 @127861=~Sir Cadril~
-@127862=~Você deixou sua tribo há muitos anos para contemplar as famosas cidades do Norte - Luskan, Bryn Shander, até mesmo Termalaine -, mas visitar esses lugares pouco fez para saciar sua sede de aventura. Desanimado com a superficialidade da vida urbana em Luskan, você se deparou com um arauto anunciando a convocação de mercenários em Targos, pedindo heróis para lutar ao lado da Guarda de Targos contra uma crescente horda de goblins no Norte. Ansioso por um desafio, você embarcou na A Malvada rumo a Targos, onde buscará provar seu valor no campo de batalha.~
-@127863=~A magia corre em suas veias, sempre pronta para ser moldada por sua vontade em alguma nova façanha arcana. Mas, embora você tenha aprendido a controlar sua força interior ao longo dos últimos anos, agora seu espírito anseia por um desafio de outro tipo: aventura. Desencorajado pelas perspectivas de emoção na cidade de Luskan, um anúncio para aventureiros em Targos chamou sua atenção no mercado - e com ele, uma estranha sensação de destino. Essa sensação o levou a reservar uma passagem na Malvada, através do lago Maer Dualdon, rumo à cidade sitiada de Targos, onde você planeja lutar ao lado dos defensores da cidade e gravar seu nome no campo de batalha.~
-@127864=~Sim, acabamos de chegar ao porto a bordo da Malvada. O que aconteceu?~
+@127862=~Você deixou sua tribo há muitos anos para contemplar as famosas cidades do Norte - Luskan, Bryn Shander, até mesmo Termalaine -, mas visitar esses lugares pouco fez para saciar sua sede de aventura. Desanimado com a superficialidade da vida urbana em Luskan, você se deparou com um arauto anunciando a convocação de mercenários em Targos, pedindo heróis para lutar ao lado da Guarda de Targos contra uma crescente horda de goblins no Norte. Ansioso por um desafio, você embarcou na A Moça Atrevida rumo a Targos, onde buscará provar seu valor no campo de batalha.~
+@127863=~A magia corre em suas veias, sempre pronta para ser moldada por sua vontade em alguma nova façanha arcana. Mas, embora você tenha aprendido a controlar sua força interior ao longo dos últimos anos, agora seu espírito anseia por um desafio de outro tipo: aventura. Desencorajado pelas perspectivas de emoção na cidade de Luskan, um anúncio para aventureiros em Targos chamou sua atenção no mercado - e com ele, uma estranha sensação de destino. Essa sensação o levou a reservar uma passagem na Moça Atrevida, através do lago Maer Dualdon, rumo à cidade sitiada de Targos, onde você planeja lutar ao lado dos defensores da cidade e gravar seu nome no campo de batalha.~
+@127864=~Sim, acabamos de chegar ao porto a bordo da Moça Atrevida. O que aconteceu?~
 @127865=~Quem é você?~
 @127866=~Conseguimos expulsar os últimos goblins das Docas de Targos. Reig e Lorde Ulbrec ficarão gratos em saber do nosso sucesso.~
 @127867=~Usando o volante do Jorun, encaixamos ele no guindaste e o fizemos funcionar novamente. O Olap não terá mais falta de madeira dos cais. É melhor irmos contar para ele ou para o Shawford o que conseguimos.~
@@ -48207,7 +48207,7 @@ Tipo: Duas mãos
 @127872=~Cão de Vghotan~
 @127873=~Por mais estranho que pareça, este gato não tem nada a dizer para você.~
 @127874=~Senhora Irlana~
-@127875=~Chegamos a bordo da A Malvada, seu idiota! Somos de Luskan - ou você confia em nós ou não. Não tenho mais tempo a perder conversando com você.~
+@127875=~Chegamos a bordo da A Moça Atrevida, seu idiota! Somos de Luskan - ou você confia em nós ou não. Não tenho mais tempo a perder conversando com você.~
 @127876=~Senhora Irlana~
 @127877=~Hrmm. Não sei por quê, mas acredito em você - mas isso não significa que tenha minha *confiança*, não mesmo. Mesmo assim, Targos precisa de boas lâminas com esses goblins imundos à solta.~
 @127878=~Conseguiu recuperar as flechas da Deirdre? Vejo que você não tem nenhum ferimento, então você ainda não deve ter contado a ela.~
@@ -48383,29 +48383,29 @@ o bug de alimentação de linha
 @128045=~Este armazém é enorme - procurá-lo levará muito tempo.~
 @128046=~Então, tudo bem se abrirmos esses barris ao meio?~
 @128047=~Mas a caixa com as poções está trancada?~
-@128048=~Somente pela fé, nosso sacerdote quebrou a vontade do espírito da Estalagem da Viúva Chorona e extraiu dele uma estranha premonição. O espírito derrotado nos alertou sobre o sinal da quimera e disse que esse sinal ameaçava toda Targos.~
-@128049=~Somente pela fé, nosso sacerdote exorcizou o espírito da taverna da Viúva Chorona. O estalajadeiro ficará contente em saber que sua taverna não é mais assombrada.~
-@128050=~Após extrair uma de suas lágrimas e colocá-la no frasco tocado pelo fantasma, nosso sacerdote baniu o espírito que assombrava a Viúva Chorona. O estalajadeiro ficará contente em saber disso... e esperamos que a recompensa tenha valido a pena nossos esforços. Se não, pelo menos podemos vender a lágrima para Elytharra.~
-@128051=~Fomos espertos o suficiente para extrair uma dádiva adicional do espírito que nos levou a descobrir um tesouro escondido sob o assoalho da Estalagem da Viúva Chorona.~
+@128048=~Somente pela fé, nosso sacerdote quebrou a vontade do espírito da Estalagem da Viúva Chorosa e extraiu dele uma estranha premonição. O espírito derrotado nos alertou sobre o sinal da quimera e disse que esse sinal ameaçava toda Targos.~
+@128049=~Somente pela fé, nosso sacerdote exorcizou o espírito da taverna da Viúva Chorosa. O estalajadeiro ficará contente em saber que sua taverna não é mais assombrada.~
+@128050=~Após extrair uma de suas lágrimas e colocá-la no frasco tocado pelo fantasma, nosso sacerdote baniu o espírito que assombrava a Viúva Chorosa. O estalajadeiro ficará contente em saber disso... e esperamos que a recompensa tenha valido a pena nossos esforços. Se não, pelo menos podemos vender a lágrima para Elytharra.~
+@128051=~Fomos espertos o suficiente para extrair uma dádiva adicional do espírito que nos levou a descobrir um tesouro escondido sob o assoalho da Estalagem da Viúva Chorosa.~
 @128052=~Retornamos a Veira com o pedaço da nave de Donovan. Isso pareceu tranquilizá-la. Em retribuição ao nosso esforço, ela nos alertou sobre uma grande escuridão que ameaçava Targos – uma força maligna reunida sob o símbolo da quimera.~
 @128053=~Usando a garrafa tocada pelo fantasma, conseguimos obter uma das lágrimas fantasmagóricas de Veira. Talvez Elytharra possa fazer algum uso dela. Assim que obtivemos a lágrima, Veira finalmente nos deixou, retornando à morte de onde veio.~
-@128054=~Encontramos um espírito que assombrava a Viúva Chorona, que lamentava a perda de seu marido, Donovan. Talvez o dono da hospedaria saiba quem é esse homem.~
-@128055=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@128056=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@128057=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorona.~
-@128058=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorona.~
+@128054=~Encontramos um espírito que assombrava a Viúva Chorosa, que lamentava a perda de seu marido, Donovan. Talvez o dono da hospedaria saiba quem é esse homem.~
+@128055=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@128056=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@128057=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorosa.~
+@128058=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorosa.~
 @128059=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @128060=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@128061=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@128062=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@128063=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorona.~
-@128064=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorona.~
+@128061=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@128062=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@128063=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorosa.~
+@128064=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorosa.~
 @128065=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @128066=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
-@128067=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorona.~
-@128068=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorona.~
-@128069=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorona.~
-@128070=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorona.~
+@128067=~Você quebrou a vontade do espírito da Estalagem da Viúva Chorosa.~
+@128068=~Você exorcizou o fantasma feminino da Estalagem da Viúva Chorosa.~
+@128069=~Você obteve uma lágrima fantasmagórica e expulsou o espírito da taverna da Viúva Chorosa.~
+@128070=~Você descobriu um esconderijo secreto na Estalagem da Viúva Chorosa.~
 @128071=~Você trouxe o pedaço do navio de Donovan para Veira.~
 @128072=~Você obteve uma das lágrimas fantasmagóricas de Veira e a libertou.~
 @128073=~- Quem é este que meus olhos lacrimejantes veem? - Não é meu Donovan -
@@ -48474,7 +48474,7 @@ o bug de alimentação de linha
 @128123=~Se eu precisasse de cinco moedas de ouro, eu poderia tirá-las do meu banquinho.~
 @128124=~É, bem, talvez não para você, mas para mim foi uma fortuna. Basta manter os olhos abertos e ouvir o que as pessoas dizem para você fazer, e você vai pegar o jeito.~
 @128125=~Entendo. Bom, é melhor eu voltar ao ritmo normal.~
-@128126=~Só mais uma coisa: se te mandarem em alguma missão idiota para os cais, veja se consegue encontrar aquele mensageiro, Swift Thomas. Aquele rapaz te leva para qualquer lugar em Targos mais rápido que o vento, pode apostar. Vai te poupar um tempo - contanto que você consiga convencê-lo de que está em missão oficial.~
+@128126=~Só mais uma coisa: se te mandarem em alguma missão idiota para os cais, veja se consegue encontrar aquele mensageiro, Thomas Ligeiro. Aquele rapaz te leva para qualquer lugar em Targos mais rápido que o vento, pode apostar. Vai te poupar um tempo - contanto que você consiga convencê-lo de que está em missão oficial.~
 @128127=~Hum. Vou procurá-lo, então.~
 @128128=~Farei isso. Ele parece ser um bom garoto.~
 @128129=~Antes de ir, Anson, como *você* conseguiu se livrar de todos aqueles ratos do armazém?~
@@ -48846,7 +48846,7 @@ Peso: 0,5 Kg (1 lb).
 ~
 @128390=~Coração do Inverno~
 @128391=~História de Kuldahar~
-@128392=~O pequeno vale de Kuldahar está aninhado na cordilheira conhecida como Espinha do Mundo, situada na extensão norte do continente de Faerûn. Seus picos irregulares e cobertos de neve estendem-se da Costa da Espada, a oeste, até o Deserto de Anauroch, a leste, separando a região norte conhecida como Vale do Vento Gélido das terras mais quentes e civilizadas ao sul. Tradicionalmente, o acesso ao Vale do Vento Gélido se limita à rota de caravanas que serpenteia da cidade fronteiriça de Luskan, contorna a borda oeste da Espinha do Mundo e atravessa a tundra congelada que circunda as Dez Cidades do Vale. No entanto, existe outra rota, a Passagem de Kuldahar, menos utilizada devido aos perigos inerentes à sua geografia.
+@128392=~O pequeno vale de Kuldahar está aninhado na cordilheira conhecida como Espinha do Mundo, situada na extensão norte do continente de Faerûn. Seus picos irregulares e cobertos de neve estendem-se da Costa da Espada, a oeste, até o Deserto de Anauroch, a leste, separando a região norte conhecida como Vale do Vento Gelado das terras mais quentes e civilizadas ao sul. Tradicionalmente, o acesso ao Vale do Vento Gelado se limita à rota de caravanas que serpenteia da cidade fronteiriça de Luskan, contorna a borda oeste da Espinha do Mundo e atravessa a tundra congelada que circunda as Dez Cidades do Vale. No entanto, existe outra rota, a Passagem de Kuldahar, menos utilizada devido aos perigos inerentes à sua geografia.
 A rota pelo Passo de Kuldahar consiste em trilhas estreitas e sinuosas, mal largas o suficiente para acomodar animais de carga, quanto mais carroças de caravanas. Os penhascos íngremes e nevados do passo representam um obstáculo suficiente para deter até mesmo os mercadores mais empreendedores. Some-se a isso o perigo constante de gigantes e outros habitantes da cordilheira indomada, e é um milagre que alguém se aventure por essa rota. Aqueles que ousam percorrer o caminho (e conseguem sobreviver) encontram um pequeno vale isolado situado no coração do passo da montanha. No centro do vale, em um lugar frio e desolado onde plantas e outras folhagens não deveriam existir, ergue-se uma árvore colossal com mais de noventa metros de altura. A própria árvore é um santuário sagrado de Silvanus, o Pai Carvalho, Deus da Natureza e divindade padroeira dos Druidas. Foi ele quem plantou a semente e nutriu este carvalho gigante há milhares de anos, quando Faerûn nasceu. O santuário foi concebido como um testemunho do poder bruto da natureza, um monumento à sua capacidade de prosperar diante da adversidade. Por gerações, os devotos seguidores de Silvanus cuidaram da árvore, e eventualmente o santuário se tornou uma espécie de oráculo, um local místico onde druidas de todos os reinos podiam vir em busca de conhecimento e revelações que os aproximassem da compreensão da harmonia entre a natureza e o homem. Foi somente nos últimos trinta ou quarenta anos que os exploradores descobriram a Passagem e, posteriormente, o pequeno vale que abrigava essa árvore imponente. Logo começaram a circular histórias sobre o clima incomumente quente nesse vale escondido, um calor que parecia emanar da própria árvore. Era apenas uma questão de tempo até que colonos começassem a chegar, buscando construir lares em um lugar que obviamente era tão próximo dos Deuses.
 
 Inicialmente, os druidas buscaram proteger o local sagrado dos colonos. O arquidruida responsável pelo santuário na época via os colonos como uma afronta à santidade e ao isolamento do local. Durante anos, os druidas mantiveram os colonos afastados com barreiras de sarças espinhosas e diversos truques druídicos que mantinham o povo comum com medo do lugar. No fim, seus esforços foram em vão. Apesar do sucesso dos druidas em manter os colonos longe da própria árvore, eles ainda se recusavam a deixar o vale. Foi somente com a ascensão do arquidruida Tolben que a situação no Vale de Kuldahar finalmente mudou. Tolben, ao contrário de seus antecessores, acreditava que o povoamento do vale não era apenas inevitável, mas sim a vontade de Silvanus. Ele acreditava que os druidas haviam errado ao manter os colonos afastados e que o Pai Carvalho havia planejado, desde o princípio, que as pessoas compartilhassem do milagre do Grande Carvalho. Quando finalmente se tornou Arquidruida, ele elaborou um plano para cumprir o destino do local sagrado, promovendo a união entre o Grande Carvalho e os colonos. Era essa união que o Arquidruida Tolben acreditava que alcançaria a harmonia pela qual os druidas vinham lutando há gerações: a harmonia entre o homem e a natureza. Atualmente, Kuldahar é um monumento a essa visão. A árvore e a cidade existem em uma simbiose natural, onde é praticamente impossível distinguir onde uma termina e a outra começa.
@@ -48870,7 +48870,7 @@ Peso: 0,5 Kg (1 lb).
 @128395=~Se não fosse pela ascensão do rei bárbaro Wylfdene trinta anos atrás e os terríveis eventos que cercaram sua campanha contra as Dez Cidades, Lonelywood provavelmente teria sido esquecida pela maior parte do Norte. Situada entre as margens rochosas de Maer Dualdon e a floresta alpina de Lonely Wood, da qual a cidade emprestou seu nome, Lonelywood tem a duvidosa honra de ser o assentamento mais ao norte de toda Faerûn. A cidade fica à sombra do Túmulo de Kelvin, e o pico solitário da montanha atua como uma barreira que protege tanto a cidade quanto a floresta dos ventos impiedosos que sopram da Geleira Reghed. Embora a cidade esteja protegida do vento, o clima está longe de ser ameno. A neve ainda cobre o chão quase o ano todo, e à noite a temperatura cai abaixo de zero.
 Lonelywood é uma das mais jovens das Dez Cidades. Foi apenas nos últimos anos que foi reconhecida pelo conselho como a décima cidade. Oitenta anos atrás, não havia nenhum assentamento civilizado ao norte de Termalaine e a área ao redor de Lonelywood era repleta de acampamentos de lenhadores e caçadores solitários. Com a fundação da Estalagem da Forca Assobiadora, no entanto, Lonelywood ganhou um senso de permanência e uma pequena cidade cresceu lentamente ao redor da estalagem.
 
-Não é surpresa que o comércio em Lonelywood gire em torno da madeira. A Floresta Solitária é a única floresta respeitável em todo o Vale do Vento Gélido (daí o nome, Floresta Solitária), e toda a madeira e subprodutos das Dez Cidades que não são importados do sul têm origem em Lonelywood. Infelizmente, a grande maioria da madeira é importada do sul, o que explica por que Lonelywood continua sendo uma comunidade tão rude e isolada.
+Não é surpresa que o comércio em Lonelywood gire em torno da madeira. A Floresta Solitária é a única floresta respeitável em todo o Vale do Vento Gelado (daí o nome, Floresta Solitária), e toda a madeira e subprodutos das Dez Cidades que não são importados do sul têm origem em Lonelywood. Infelizmente, a grande maioria da madeira é importada do sul, o que explica por que Lonelywood continua sendo uma comunidade tão rude e isolada.
 
 Sua posição isolada no Norte torna Lonelywood vulnerável a ataques das tribos bárbaras que habitam as planícies geladas ao redor das Dez Cidades. Foi a primeira das cidades no caminho do rei bárbaro Wylfdene e das tribos unidas do Urso, do Alce e da Grande Baleia em sua campanha para expulsar os habitantes do Norte. Quando Wylfdene foi derrotado por um bando de aventureiros de Kuldahar, as tribos se dispersaram e Lonelywood retornou à sua rotina diária pouco tempo depois.
 
@@ -50123,11 +50123,11 @@ Usando esta magia, um mago pode tentar reduzir a resistência a magia de uma cria
 @129297=~Conte-me o que aconteceu com Isair e Madae depois que eles saíram de Kuldahar.~
 @129298=~Conte-me sobre o envolvimento de Isair e Madae na Guerra Sangrenta.~
 @129299=~Essa é a origem de todos os nossos problemas - e da nossa salvação. É a Gema da Pedra do Coração, um artefato de poderes incríveis. Ela protege Kuldahar e ajuda a aquecer nossa vila. Os Aurilitas e a Legião a desprezam, assim como tudo o que ela representa.~
-@129300=~Eu sei demais. Gostaria de conhecê-los apenas como adversários. Lembro-me deles quando eram crianças. Foram criados pela Mãe Egenia em uma pequena cabana nos arredores da aldeia.~
-@129301=~Mãe Egenia?~
-@129302=~Mãe Egenia era uma sacerdotisa de Ilmater, o deus do sofrimento. Trinta anos atrás, quando dois demônios lutaram entre si nesta região da Espinha do Mundo, Egenia aventurou-se a ajudar os aflitos.~
+@129300=~Eu sei demais. Gostaria de conhecê-los apenas como adversários. Lembro-me deles quando eram crianças. Foram criados pela Madre Egenia em uma pequena cabana nos arredores da aldeia.~
+@129301=~Madre Egenia?~
+@129302=~Madre Egenia era uma sacerdotisa de Ilmater, o deus do sofrimento. Trinta anos atrás, quando dois demônios lutaram entre si nesta região da Espinha do Mundo, Egenia aventurou-se a ajudar os aflitos.~
 @129303=~~
-@129304=~Ela foi até Olho do Dragão, uma montanha vulcânica, para resgatar aldeões dos yuan-ti e do demônio Yxunomei. Depois que um grupo de aventureiros derrotou a criatura, Mãe Egenia desapareceu. Ninguém sabia o que tinha acontecido com ela.~
+@129304=~Ela foi até Olho do Dragão, uma montanha vulcânica, para resgatar aldeões dos yuan-ti e do demônio Yxunomei. Depois que um grupo de aventureiros derrotou a criatura, Madre Egenia desapareceu. Ninguém sabia o que tinha acontecido com ela.~
 @129305=~[eh-GAY-nee-uh]Egenia vasculhou a Espinha do Mundo em busca de vítimas e sobreviventes. Ela enterrou as vítimas no[RAHTH-garz] Vale de Hrothga. Ela sentiu pena de uma mulher morta: uma donzela élfica chamada [il-MAH-dee-ah BAH-ree-el] Ilmadia Bariel.~
 @129306=~Nem eu sei por que Egenia decidiu chamar Ilmadia de volta do mundo espiritual. A elfa havia sido tenente no exército do demônio Belhifet. Ela era obcecada em reconstruir a Mão Decepada, uma fortaleza élfica em ruínas.~
 @129307=~Por favor, continue.~
@@ -50142,7 +50142,7 @@ Usando esta magia, um mago pode tentar reduzir a resistência a magia de uma cria
 @129316=~Quando a igreja de Ilmater tentou intervir, foi expulsa da cidade. É por isso que a igreja permanece vazia até hoje. As mães levaram seus filhos para o único lugar que os acolheria: Olho do Dragão.~
 @129317=~Conte-me mais sobre Isair e Madae.~
 @129318=~Após minha chegada em Kuldahar, encontrei a cidade em alvoroço. Os aldeões planejavam invadir Olho do Dragão para matar as... abominações - suas ex-esposas e filhas, irmãs e mães.~
-@129319=~Dissuadi os aldeões de tal insanidade. Um ano depois, descobri que a Mãe Egenia estava criando as crianças em segredo nos arredores da aldeia. Eu não sabia o que fazer.~
+@129319=~Dissuadi os aldeões de tal insanidade. Um ano depois, descobri que a Madre Egenia estava criando as crianças em segredo nos arredores da aldeia. Eu não sabia o que fazer.~
 @129320=~Eles são forjados pelo mal, e nada além do mal pode vir deles! Lembro-me de ter dito isso a ela. Será que fomos nós que fizemos isso acontecer? Não consigo deixar de me perguntar agora. Egenia acreditava de todo o coração que os cambions poderiam ser criaturas boas e virtuosas.~
 @129321=~Ela me pediu para dar nomes a eles, já que fui criado entre elfos com um pai elfo. O menino se chamava Isair, a menina, Madae. Dei a eles os nomes dos meus pais, meus amados pais. Me arrependo amargamente do dia em que cometi esse erro.~
 @129322=~Egenia criou as crianças longe das outras pessoas, ensinando-lhes moralidade em total isolamento. Ela preparou Madae para ser uma sacerdotisa de Ilmater. Quando a velha Egenia morreu, foi assim que os aldeões as encontraram. Madae estava realizando ritos funerários.~
@@ -52731,10 +52731,10 @@ Peso: 92,5 kg (185 lb).
 @130962=~Certamente, hmmm, curioso... Eu tinha certeza de que tinha alguns itens naquela prateleira - alguns deles parecem ter desaparecido. Receio que você terá que pedir outra coisa.~
 @130963=~Na verdade, mudamos de ideia. Adeus.~
 @130964=~Você se infiltrou na congregação Aurilita.~
-@130965=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demônio e, com a ajuda das vestes de Auril, o convencemos de que éramos membros de sua congregação. Se não atrairmos atenção desnecessária, poderemos investigar o templo deles sem incidentes.~
+@130965=~Após destruirmos o bloqueio de gelo e neve compactada na geleira, encontramos um Cavaleiro Demoníaco e, com a ajuda das vestes de Auril, o convencemos de que éramos membros de sua congregação. Se não atrairmos atenção desnecessária, poderemos investigar o templo deles sem incidentes.~
 @130966=~PAREM! Quem está aí?! Quem tem a audácia de demolir nosso bloqueio?! FALE, ou *prove* a lâmina do Lorde Rengar!~
-@130967=~Ao tentarmos nos juntar à congregação de Auril participando do seu Ritual de Abraço, o Cavaleiro Demônio responsável nos impediu, pois percebeu que nenhum de nós estava usando as vestimentas apropriadas para o ritual.~
-@130968=~Não conseguimos convencer um Cavaleiro Demônio que guardava a geleira de que éramos membros da congregação de Auril porque ele percebeu que nenhum de nós portava seu símbolo sagrado.~
+@130967=~Ao tentarmos nos juntar à congregação de Auril participando do seu Ritual de Abraço, o Cavaleiro Demoníaco responsável nos impediu, pois percebeu que nenhum de nós estava usando as vestimentas apropriadas para o ritual.~
+@130968=~Não conseguimos convencer um Cavaleiro Demoníaco que guardava a geleira de que éramos membros da congregação de Auril porque ele percebeu que nenhum de nós portava seu símbolo sagrado.~
 @130969=~Você se infiltrou na congregação Aurilita.~
 @130970=~Aquela criatura Sherincal voou para cá?~
 @130971=~Viemos para nos juntar ao clero.~
@@ -53313,7 +53313,7 @@ Peso: 15 kg (30 lb).
 @131350=~Corrente da Fúria de Drakkas~
 @131351=~Resiliência Glacial~
 @131352=~Kyndor Martelo de Gelo era um poderoso guerreiro anão que amava o frio dos Vales. Kyndor não apenas considerava o Vale Vento Gélido seu lar, como também possuía uma conexão especial com os Vales – era parte dele – não apenas parte de seu corpo, mas de sua própria alma.
-Kyndor também era um notável ferreiro de armaduras e armas. Tudo o que ele forjava tinha algum tipo de conexão com o Vale do Vento Gélido. De fato, sua própria armadura, forjada por suas próprias mãos, parecia ter vida própria, e essa vida era muito protetora de Kyndor. Muitas vezes, durante a batalha, sua armadura parecia canalizar os elementos dos Vales e retaliar contra os atacantes de Kyndor.
+Kyndor também era um notável ferreiro de armaduras e armas. Tudo o que ele forjava tinha algum tipo de conexão com o Vale do Vento Gelado. De fato, sua própria armadura, forjada por suas próprias mãos, parecia ter vida própria, e essa vida era muito protetora de Kyndor. Muitas vezes, durante a batalha, sua armadura parecia canalizar os elementos dos Vales e retaliar contra os atacantes de Kyndor.
 
 Com o tempo, a armadura de Kyndor ganhou o apelido de Resistência Glacial, devido ao fato de que todos que a usavam pareciam tão impenetráveis quanto uma geleira e tão mortalmente frios quanto ela.
 
@@ -53330,7 +53330,7 @@ Peso: 20 kg (40 lb).
 ~
 @131353=~Base~
 @131354=~Kyndor Martelo de Gelo era um poderoso guerreiro anão que amava o frio dos Vales. Kyndor não apenas considerava o Vale Vento Gélido seu lar, como também possuía uma conexão especial com os Vales – era parte dele – não apenas parte de seu corpo, mas de sua própria alma.
-Kyndor também era um notável ferreiro de armaduras e armas. Tudo o que ele forjava tinha algum tipo de conexão com o Vale do Vento Gélido. De fato, sua própria armadura, forjada por suas próprias mãos, parecia ter vida própria, e essa vida era muito protetora de Kyndor. Muitas vezes, durante a batalha, sua armadura parecia canalizar os elementos dos Vales e retaliar contra os atacantes de Kyndor.
+Kyndor também era um notável ferreiro de armaduras e armas. Tudo o que ele forjava tinha algum tipo de conexão com o Vale do Vento Gelado. De fato, sua própria armadura, forjada por suas próprias mãos, parecia ter vida própria, e essa vida era muito protetora de Kyndor. Muitas vezes, durante a batalha, sua armadura parecia canalizar os elementos dos Vales e retaliar contra os atacantes de Kyndor.
 
 Com o tempo, a armadura de Kyndor ganhou o apelido de Tempestade Glacial, devido ao fato de que todos que a vestiam pareciam tão impenetráveis quanto uma geleira e tão mortalmente frios quanto ela.
 
@@ -54571,7 +54571,7 @@ Tipo: Uma mão
 @131884=~Ingrath Mariner~
 @131885=~...estes muitos espíritos, libertados de seu tormento por tua mão, oferecem seus sinceros agradecimentos.~
 @131886=~~
-@131887=~Depois que matamos os fogos-fátuos, o fantasma do caçador explicou que havíamos dado paz aos Mortos Inquietos da Floresta Devastada. Muitos espíritos, silenciosos, mas gratos, apareceram para nos agradecer e deixaram seus restos mortais sob nossos cuidados.~
+@131887=~Depois que matamos os fogos-fátuos, o fantasma do caçador explicou que havíamos dado paz aos Mortos Inquietos da Mata Sinistra. Muitos espíritos, silenciosos, mas gratos, apareceram para nos agradecer e deixaram seus restos mortais sob nossos cuidados.~
 @131888=~Você *obviamente* precisa expulsá-lo de seu receptáculo - destrua a estátua, peça a um sacerdote que profane o altar e assim por diante. Se estiver se <SENTINDO_AUDACIOSO>, pode até considerar invocar seu nome diretamente - isso deve acender sua chama.~
 @131889=~Eu a sinto - Alta Sacerdotisa Oria. Ela cruzou para uma seção do reino etéreo que está *fisicamente* localizada no mesmo espaço que o nível inferior deste templo.~
 @131890=~Como podemos alcançar esse reino?~
@@ -55950,7 +55950,7 @@ Peso: 7,5 kg (15 lb).
 Requisito de Talento: Arma Marcial, Montante
 Tipo: Duas mãos
 ~
-@132684=~Vocês derrotaram Isair e Madae, a Legião da Quimera, e salvaram as Dez Cidades. Seus nomes serão lendários em todo o Vale do Vento Gélido.~
+@132684=~Vocês derrotaram Isair e Madae, a Legião da Quimera, e salvaram as Dez Cidades. Seus nomes serão lendários em todo o Vale do Vento Gelado.~
 @132685=~Garrafa de Braehg~
 @132686=~Isto é péssimo - muito, muito ruim! Nosso senhor está morto para sempre, amaldiçoado com o veneno daquela cobra Venomin! Calma... calma... respire... O Rei Lothar tanto almejava eliminar os yuan-ti E recuperar seu status - *agora* sua desculpa está à mão! A morte nos aguarda...~
 @132687=~~
@@ -57400,8 +57400,8 @@ Cuidem-se, meus amigos, e viajem mais rápido que o vento!
 
 Peso: 0 kg.
 ~
-@133413=~Você derrotou os Ents Sombrios e libertou a Floresta Devastada de sua influência deturpadora.~
-@133414=~Encontramos e eliminamos o último dos Entes das Trevas na Floresta Devastada, pondo fim à sua influência deturpadora sobre a floresta: os caminhos não se torcem mais nem se escondem, e suas raízes malignas não agarram mais os transeuntes desavisados.~
+@133413=~Você derrotou os Ents Sombrios e libertou a Mata Sinistra de sua influência deturpadora.~
+@133414=~Encontramos e eliminamos o último dos Entes das Trevas na Mata Sinistra, pondo fim à sua influência deturpadora sobre a floresta: os caminhos não se torcem mais nem se escondem, e suas raízes malignas não agarram mais os transeuntes desavisados.~
 @133415=~Perguntamos a Sabrina se ela sabia o caminho para o vau de Shaengarne. Ela disse que não, mas que seu marido, Dereth, sabia. Ela sugeriu que falássemos com ele. Ele pode ser encontrado em sua casa, na margem leste do rio.~
 @133416=~Ainda não o libertamos. Espere aqui, vamos cuidar disso.~
 @133417=~Oh... que notícia terrível. Volte para a cidade. Eu... eu encontrarei o caminho de volta em breve... *snif*~
@@ -57529,7 +57529,7 @@ Peso: 1 kg (2 lb).
 @133535=~Saudações, senhora. O Sargento Dammel responderá a quaisquer perguntas que a senhora possa ter.~
 @133536=~Agora você está <SEGURO>, <SENHOR>. Tenha um bom dia.~
 @133537=~A senhora está segura agora. Tenha um bom dia.~
-@133538=~Quem era a Mãe Egenia mesmo?~
+@133538=~Quem era a Madre Egenia mesmo?~
 @133539=~Acho que a questão vai além de Phaen. Ele mencionou algo sobre servir a um mestre chamado Harshom, e que Harshom serviu a outra pessoa - Phaen parece ser um elo em uma corrente muito longa.~
 @133540=~Isto é realmente sério - parece que teremos que ficar em alerta tanto interna quanto externamente. Agradeço-lhe, e agradeço também ao meu marido.~
 @133541=~Qualquer ajuda que você puder oferecer será muito apreciada. Se você puder ajudar Valin de alguma forma, Targos ficará em dívida com você.~
@@ -57720,12 +57720,12 @@ Peso: 0,5 Kg (1 lb).
 @133720=~Corpo de Wallag~
 @133721=~<OBRIGADO_MAI>. A propósito, tenho aqui uma poção de Cahl-Hyred que ele deseja que seja identificada.~
 @133722=~<OBRIGADO_MAI>. A propósito, gostaria de saber se você poderia me dizer para que serve essa garrafa tocada por um fantasma. ~
-@133723=~Obtivemos uma lágrima do fantasma que assombra a Viúva Chorona e gostaríamos de saber se você poderia utilizá-la.~
-@133724=~Você matou os fogos-fátuos, extinguindo para sempre as luzes fantasmagóricas da Floresta Devastada.~
+@133723=~Obtivemos uma lágrima do fantasma que assombra a Viúva Chorosa e gostaríamos de saber se você poderia utilizá-la.~
+@133724=~Você matou os fogos-fátuos, extinguindo para sempre as luzes fantasmagóricas da Mata Sinistra.~
 @133725=~Sombra Morta~
 @133726=~Sombra Morta~
 @133727=~As teias secaram e ficaram quebradiças, e o último resquício de seu veneno evaporou - elas não irão mais atrapalhar seu progresso.~
-@133728=~Encontramos uma árvore enorme e retorcida no meio de uma floresta, o covil de três fogos-fátuos. Destruímos todos eles, garantindo assim que nenhum outro viajante fosse atraído para a morte pelas luzes fantasmagóricas da Floresta Devastada.~
+@133728=~Encontramos uma árvore enorme e retorcida no meio de uma floresta, o covil de três fogos-fátuos. Destruímos todos eles, garantindo assim que nenhum outro viajante fosse atraído para a morte pelas luzes fantasmagóricas da Mata Sinistra.~
 @133729=~Eu sou <CHARNAME>. Matei aqueles filhotes e trolls que estavam bloqueando a passagem.~
 @133730=~::Choro!:: Você matou aquele miserável, Kruntur! A culpa será minha, <SEU_MORTAL_TOLO_E_CARNAL>! EU VOU TE MATAR!~
 @133731=~PROFICIÊNCIA EM ARMAS SIMPLES, BESTA:
@@ -58998,7 +58998,7 @@ Peso: 0,5 kg (1 lb).
 @134603=~Boné triste do Gohji~
 @134604=~Escudo do Bezerro Lunar~
 @134605=~Escudo do Bezerro Lunar~
-@134606=~Falei com Swift Thomas - onde posso encontrá-lo novamente? ~
+@134606=~Falei com Thomas Ligeiro - onde posso encontrá-lo novamente? ~
 @134607=~Conto da Esposa do Carrasco~
 @134608=~Machado de Dullcobble~
 @134609=~Destruidor de Barril do Vau de Shaengarne~
@@ -60190,7 +60190,7 @@ Peso: 2,5 kg (5 lb).
 @135301=~É bom ver <OUTRO_ANAO> na costa de Maer Dualdon, especialmente com esses malditos goblins por perto... parece que não importa para onde você vá no mundo, eles sempre estão lá. Quem é você? Veio adicionar seu machado e martelo a Targos? ~
 @135302=~Bem, <UM_ANAO_E> um alívio para os olhos nestas terras varridas pelo vento... especialmente <UM> que consegue derrotar goblins tão bem quanto você. Algo em que este velho construtor naval possa te ajudar? ~
 @135303=~Meu nome é <CHARNAME>. Quem é você?~
-@135304=~Somos aventureiros de Luskan. Acabamos de chegar a bordo da A Malvada e encontramos Targos sendo atacado. ~
+@135304=~Somos aventureiros de Luskan. Acabamos de chegar a bordo da A Moça Atrevida e encontramos Targos sendo atacado. ~
 @135305=~Meu nome é <CHARNAME>. Quem é você?~
 @135306=~Você é Jorun Tamewater? Conversei com seu filho, Olap, no Paliçada. Parece que o guindaste quebrou e precisa ser consertado.~
 @135307=~Estamos querendo derramar um pouco de sangue de goblin... e ganhar algumas moedas pelo nosso trabalho, mas até agora o dinheiro tem sido meio escasso. ~
@@ -60219,7 +60219,7 @@ Peso: 2,5 kg (5 lb).
 @135330=~Como está o Oswald? Não me diga que ele sofreu outro acidente?~
 @135331=~Entendo. Adeus.~
 @135332=~Ah, não, não, não - ele está bem. Só está em mais uma de suas missões.~
-@135333=~A propósito, a Passagem Leste estava longe de ser desprotegida como você disse que estaria. Então, a geleira foi destruída?~
+@135333=~A propósito, a Passagem Oriental estava longe de ser desprotegida como você disse que estaria. Então, a geleira foi destruída?~
 @135334=~Ahhh, sim - com certeza! Duvido que aqueles Aurilitas nos causem mais problemas.~
 @135335=~Infelizmente... Em minhas provações contra a Legião da Quimera, fiz sacrifícios que desafiam a própria natureza do meu ser. Rogo aos deuses que possam restaurar meu caminho de retidão - talvez salvar quaisquer druidas andoranos que vocês tenham poupado seja um bom começo.~
 @135336=~Já mencionamos os andorianos para você, Nathaniel? Não me lembro.~
@@ -61880,7 +61880,7 @@ Benefício: Este talento concede a habilidade de conjurar magias mesmo estando em
 @136502=~Parley? Você está blefando... você está tentando nos enganar, ganhar tempo, não é?~
 @136503=~Não vamos negociar com você, Xuki. Vamos expulsá-lo de Shaengarne de uma vez por todas.~
 @136504=~Bem, essa batalha por um lado. Por que ela precisa continuar? Vamos discutir as possibilidades de uma trégua.~
-@136505=~Você ataca a Ponte Shaengarne, faz os aldeões prisioneiros e agora quer discutir a paz? Certamente você está brincando.~
+@136505=~Você ataca a Ponte de Shaengarne, faz os aldeões prisioneiros e agora quer discutir a paz? Certamente você está brincando.~
 @136506=~Sua posição aqui é tão frágil que você agora recorre a palavras?~
 @136507=~Uma trégua? Você está blefando... você quer nos enganar, ganhar tempo, não é?~
 @136508=~De forma alguma. Vamos cessar essas hostilidades e organizar um encontro entre seu Lorde Ulbrec e um representante da Legião. Vamos trabalhar pela paz.~
@@ -63743,7 +63743,7 @@ Benefício: Ao atacar com Ataque Atordoante, você força um inimigo atingido pelo 
 @137898=~Um chifre para beber foi roubado do túmulo próximo. Você sabe alguma coisa sobre isso?~
 @137899=~Você sabe o caminho através da floresta a leste?~
 @137900=~Não, eu não.~
-@137901=~Hum-hum, mas... ah, talvez! Uns homens passaram por aqui recentemente; diziam ser exploradores, mas pareciam bandidos. Entraram na Floresta Devastada a leste... e nunca mais voltaram! O fantasma furioso apareceu logo depois.~
+@137901=~Hum-hum, mas... ah, talvez! Uns homens passaram por aqui recentemente; diziam ser exploradores, mas pareciam bandidos. Entraram na Mata Sinistra a leste... e nunca mais voltaram! O fantasma furioso apareceu logo depois.~
 @137902=~~
 @137903=~~
 @137904=~~
@@ -65060,9 +65060,9 @@ Ou devo simplesmente ficar parado aqui?
 @138928=~Homens-serpente de Olho do Dragão - eles têm um histórico sangrento com Kuldahar, que remonta à época em que eu e Sheemish éramos crianças. Deveríamos tê-los exterminado anos atrás, mas Iselore nos impediu. Agora metade da cidade está morta, e nós seremos os próximos.~
 @138929=~Por que os yuan-ti atacaram agora?~
 @138930=~Eles estavam apenas procurando uma oportunidade - provavelmente, a Legião da Quimera os procurou e sugeriu uma aliança, e eles agarraram a chance. Agora, estamos sitiados por todos os lados.~
-@138931=~Não muito. Passei bastante tempo no antigo templo de Ilmater quando era jovem. Ouvi dizer que eles moravam naquela casa incendiada na extremidade oeste da Passagem - eles eram criados pela Mãe Egenia, pelo menos até os dois a assassinarem.~
+@138931=~Não muito. Passei bastante tempo no antigo templo de Ilmater quando era jovem. Ouvi dizer que eles moravam naquela casa incendiada na extremidade oeste da Passagem - eles eram criados pela Madre Egenia, pelo menos até os dois a assassinarem.~
 @138932=~Eles a assassinaram?~
-@138933=~Essa é a história, não que houvesse muitas testemunhas - se é que havia alguma. Pergunte a Nathaniel sobre isso, se quiser saber mais. Ele morava aqui na Passagem, perto da casa da Mãe Egenia, antes de os aldeões destruírem a casa dela.~
+@138933=~Essa é a história, não que houvesse muitas testemunhas - se é que havia alguma. Pergunte a Nathaniel sobre isso, se quiser saber mais. Ele morava aqui na Passagem, perto da casa da Madre Egenia, antes de os aldeões destruírem a casa dela.~
 @138934=~Iselore é o arquidruida. Está aqui há uns vinte ou trinta anos - ele *deveria* ter expulsado os yuan-ti do Olho do Dragão assim que chegou, e agora estamos pagando o preço.~
 @138935=~Ainda assim, ele se recusou a abandonar a cidade, isso eu reconheço - mas se é por causa da Gema da Pedra do Coração ou do povo de Kuldahar, eu não sei.~
 @138936=~Se você ainda não falou com ele, ele *deveria* estar a leste daqui, guardando a Gema da Pedra do Coração dos yuan-ti - se é que ele já não está morto. Se quiser saber mais sobre ele, pergunte a Nathaniel - ele ensinou tudo o que Nathaniel sabe, o que explicaria por que estamos nos escondendo aqui nesta torre.~
@@ -65082,19 +65082,19 @@ Ou devo simplesmente ficar parado aqui?
 @138950=~Você está perdoado. O preconceito é muito... humano. Adeus, Jermsy.~
 @138951=~Saiam de perto de mim - espero que o Norte engula seus cadáveres.~
 @138952=~Depois que Nathaniel nos contou sobre a presença dela, encontramos um espírito flutuando dentro da estrutura de um prédio incendiado no Passo de Kuldahar. Ela parecia estar procurando por seus dois filhos desaparecidos, quem quer que eles fossem.~
-@138953=~O espírito parece ser o fantasma da Mãe Egenia, que aparentemente era a guardiã de Isair e Madae - e ainda os ama.~
+@138953=~O espírito parece ser o fantasma da Madre Egenia, que aparentemente era a guardiã de Isair e Madae - e ainda os ama.~
 @138954=~Pedimos ao espírito uma visão do futuro, e ela nos deu uma: disse-nos que atravessaríamos o Olho do Dragão, até os Campos Ensanguentados, e que nossa jornada terminaria nas garras do caos. Lá, disse ela, enfrentaríamos o maior teste de nossas vidas - e confrontaríamos Isair e Madae pela última vez. Ela pareceu aceitar o destino deles e pediu que fôssemos misericordiosos.~
-@138955=~Mãe Egenia nos contou que as vidas de Isair e Madae estavam ligadas a um espelho brilhante que ondulava ao toque. Ela disse que deveríamos atacá-las ali, senão elas nos destruiriam.~
+@138955=~Madre Egenia nos contou que as vidas de Isair e Madae estavam ligadas a um espelho brilhante que ondulava ao toque. Ela disse que deveríamos atacá-las ali, senão elas nos destruiriam.~
 @138956=~Antes de retornar à morte, Egenia fez uma pergunta perturbadora: por que estamos em guerra com a Legião? Por que estamos fazendo tudo isso? É por dever? Honra? Ganância? Glória? Porque é a coisa certa a fazer? Ou tudo isso está acontecendo por acaso? Não importa a resposta que dermos, a pergunta permanece.~
-@138957=~Conseguimos dar descanso eterno à alma da Mãe Egenia - ela não assombrará mais sua casa no Passo de Kuldahar.~
-@138958=~Você deu o último adeus à Mãe Egenia.~
+@138957=~Conseguimos dar descanso eterno à alma da Madre Egenia - ela não assombrará mais sua casa no Passo de Kuldahar.~
+@138958=~Você deu o último adeus à Madre Egenia.~
 @138959=~Você descobriu as fraquezas de Isair e Madae.~
 @138960=~Agora você conhece seu futuro - e a jornada que ainda lhe resta.~
 @138961=~- Você viu os gêmeos? - Meus preciosos protegidos -
 - Eles estavam aqui ao meu lado -
 - Para onde eles foram? -
 ~
-@138962=~Mãe Egenia?~
+@138962=~Madre Egenia?~
 @138963=~Diga-me quem você é novamente - e por que está vagando por aqui.~
 @138964=~O que aconteceu com você?~
 @138965=~O que você pode me dizer sobre Isair e Madae?~
@@ -65118,7 +65118,7 @@ Ou devo simplesmente ficar parado aqui?
 @138975=~- As lágrimas de uma mãe por seus filhos mortos são terríveis -          - Mas as lágrimas dos filhos por sua mãe morta -
        - Ainda mais terrível -
 ~
-@138976=~Mãe Egenia - o que aconteceu com você?~
+@138976=~Madre Egenia - o que aconteceu com você?~
 @138977=~- Deitei-me e adormeci -         - Por um momento -
       - Só para descansar os olhos -
           - E então eles se foram -
@@ -65177,9 +65177,9 @@ Ou devo simplesmente ficar parado aqui?
 @138996=~O que você pode me dizer sobre Kuldahar?~
 @138997=~Você sabe alguma coisa sobre a Gema Pedra do Coração?~
 @138998=~Se você criou Isair e Madae, então deve conhecer suas fraquezas.~
-@138999=~Eu sei o que aconteceu com seus protegidos, Mãe Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
+@138999=~Eu sei o que aconteceu com seus protegidos, Madre Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
 @139000=~Por que você anda entre os vivos? Você não pertence mais a este lugar.~
-@139001=~Mãe Egenia, seu tempo em Faerûn acabou, e você deve dormir agora.~
+@139001=~Madre Egenia, seu tempo em Faerûn acabou, e você deve dormir agora.~
 @139002=~Não tenho mais nada a te dizer, espírito. Adeus.~
 @139003=~- A Visão é uma coisa terrível -            - Ela nos força a seguir caminhos que não escolheríamos -
    - É este o seu desejo? -
@@ -65219,19 +65219,19 @@ Ou devo simplesmente ficar parado aqui?
       - Mesmo assim, eu ainda os amo.
 ~
 @139015=~Se você não quer que eles sofram, diga-me quais são suas fraquezas.~
-@139016=~Farei como pede, Mãe Egenia. Se eles não entenderem a razão, não sofrerão pelas minhas mãos.~
+@139016=~Farei como pede, Madre Egenia. Se eles não entenderem a razão, não sofrerão pelas minhas mãos.~
 @139017=~Há mais alguma coisa que eu gostaria de lhe perguntar.~
 @139018=~- Gostaria de descansar agora -       - Estou cansado -
      - Mas se eu fechar os olhos -
          - Nunca mais verei meus filhos -
               - E jamais saberei o destino deles -
 ~
-@139019=~Não sei o que aconteceu com eles depois da sua morte, Mãe Egenia, mas vou tentar descobrir.~
-@139020=~Eu sei o que aconteceu com eles, Mãe Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
+@139019=~Não sei o que aconteceu com eles depois da sua morte, Madre Egenia, mas vou tentar descobrir.~
+@139020=~Eu sei o que aconteceu com eles, Madre Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
 @139021=~- DIGA-ME -        - Eu preciso saber -
       - Ou eu jamais conhecerei a paz.
 ~
-@139022=~Enquanto a enterravam, Mãe Egenia, os aldeões os encontraram. Os aldeões... não entenderam o que havia acontecido. Eles presumiram que as crianças a haviam matado. Atacaram Isair e Madae, e os gêmeos revidaram. Os aldeões não sobreviveram. E, de certa forma, Isair e Madae também não.~
+@139022=~Enquanto a enterravam, Madre Egenia, os aldeões os encontraram. Os aldeões... não entenderam o que havia acontecido. Eles presumiram que as crianças a haviam matado. Atacaram Isair e Madae, e os gêmeos revidaram. Os aldeões não sobreviveram. E, de certa forma, Isair e Madae também não.~
 @139023=~Vou procurar a história e depois volto. Antes de ir, gostaria de lhe perguntar mais alguma coisa.~
 @139024=~Antes de te contar, preciso saber mais algumas coisas.~
 @139025=~A história fica para outra hora - não agora, espírito. Adeus.~
@@ -65245,7 +65245,7 @@ Ou devo simplesmente ficar parado aqui?
     - Quero descansar agora.
         - Estou cansado -
 ~
-@139029=~Adeus, Mãe Egenia. Descanse em paz.~
+@139029=~Adeus, Madre Egenia. Descanse em paz.~
 @139030=~- Uma coisa ainda persiste -      - Dentro de você há uma pergunta -
           - Ainda não foi perguntado -
 ~
@@ -65284,7 +65284,7 @@ Ou devo simplesmente ficar parado aqui?
          - E você prevalecerá -
               - Até a próxima -
 ~
-@139048=~<OBRIGADO_MAI>, Mãe Egenia. Descanse em paz.~
+@139048=~<OBRIGADO_MAI>, Madre Egenia. Descanse em paz.~
 @139049=~- Muito bem <CHARNAME> -     - Que sua rebeldia lhe dê força -
      - Agora sigo o último caminho -
           - E o seu ainda permanece -
@@ -65355,21 +65355,21 @@ Ou devo simplesmente ficar parado aqui?
 ~
 @139070=~~
 @139071=~Perguntamos a Nathaniel o que ele estava fazendo em Olho do Dragão, e ele pareceu confuso e disse que nunca tinha posto os pés lá.~
-@139072=~Nathaniel nos contou que a Mãe Egenia, guardiã de Isair e Madae, vivia em uma pequena cabana a oeste da torre de vigia e que seu espírito despertou como resultado da ressurreição dos mortos na Passagem. Talvez devêssemos investigar.~
+@139072=~Nathaniel nos contou que a Madre Egenia, guardiã de Isair e Madae, vivia em uma pequena cabana a oeste da torre de vigia e que seu espírito despertou como resultado da ressurreição dos mortos na Passagem. Talvez devêssemos investigar.~
 @139073=~Nathaniel nos disse que agora que sabemos sobre o espírito de Egenia, nossa mãe, deveríamos ser capazes de vê-la na casa. Infelizmente, com o sacerdote de Bane e sua horda de mortos-vivos no Vale, é improvável que ela apareça no local de sua morte até que ele e todas as suas tropas sejam expulsos da Passagem.~
 @139074=~Nathaniel nos disse que agora que sabemos sobre o espírito de Egenia, nossa mãe, deveríamos ser capazes de vê-la na casa.~
-@139075=~Dissemos a Nathaniel que não sabíamos as peças que faltavam na vida dela e que a Mãe Egenia desejava saber, e ele sugeriu que falássemos com Iselore sobre o assunto.~
-@139076=~Contamos a Nathaniel que tínhamos dado descanso eterno ao espírito da Mãe Egenia, e ele nos agradeceu. Parecia que um grande fardo havia sido tirado de seus ombros. Talvez os lamentos dela o estivessem atormentando mais do que pensávamos.~
+@139075=~Dissemos a Nathaniel que não sabíamos as peças que faltavam na vida dela e que a Madre Egenia desejava saber, e ele sugeriu que falássemos com Iselore sobre o assunto.~
+@139076=~Contamos a Nathaniel que tínhamos dado descanso eterno ao espírito da Madre Egenia, e ele nos agradeceu. Parecia que um grande fardo havia sido tirado de seus ombros. Talvez os lamentos dela o estivessem atormentando mais do que pensávamos.~
 @139077=~Contamos a Nathaniel que havíamos derrotado o sacerdote de Bane, e ele nos agradeceu. Ele disse que deveríamos contar a Jermsy sobre nosso sucesso.~
 @139078=~Contamos a Nathaniel que tínhamos encontrado a chave da torre de vigia que Gerbash possuía, e ele disse que deveríamos contar a Jermsy imediatamente.~
-@139079=~Você disse a Nathaniel que deu paz de espírito à Mãe Egenia... e também confortou o espírito de Nathaniel.~
+@139079=~Você disse a Nathaniel que deu paz de espírito à Madre Egenia... e também confortou o espírito de Nathaniel.~
 @139080=~Parece que meus desejos de que a natureza guiasse suas viagens foram atendidos. Eu esperava que você chegasse a Kuldahar antes de mim, mas suponho que não faria muita diferença. A maioria dos moradores foi evacuada, graças a Oswald. Agora temos outros problemas, para a sorte de Black Bess.~
 @139081=~Acho que poderíamos escrever um livro de história sobre nossa jornada - acho que exploramos todos os cantos do Norte para chegar até aqui.~
 @139082=~Nathaniel - você não estava no Olho do Dragão? Como você voltou tão rápido?~
 @139083=~Derrotei Hiepherus e todas as suas tropas. O Passo e o Vale de Hrothgar devem estar livres agora.~
 @139084=~Encontramos Gerbash e recuperamos a chave da torre de vigia.~
-@139085=~Conversamos com a Mãe Egenia. Ela tem medo de descansar até saber o que aconteceu com seus filhos aqui em Kuldahar depois que ela faleceu... mas eu não sei o que lhe dizer.~
-@139086=~Conseguimos dar descanso eterno à alma da Mãe Egenia.~
+@139085=~Conversamos com a Madre Egenia. Ela tem medo de descansar até saber o que aconteceu com seus filhos aqui em Kuldahar depois que ela faleceu... mas eu não sei o que lhe dizer.~
+@139086=~Conseguimos dar descanso eterno à alma da Madre Egenia.~
 @139087=~Quais problemas?~
 @139088=~Você pode usar sua magia para me curar?~
 @139089=~Você pode cuidar de nós enquanto descansamos?~
@@ -65408,9 +65408,9 @@ Ou devo simplesmente ficar parado aqui?
 @139122=~Iselore é meu mentor e o arquidruida de Kuldahar. Ele veio de Lua Alta para substituir Arundel, o antigo druida de Kuldahar. Ele conhece muito sobre a natureza e o Equilíbrio, mas temo que nem mesmo seus poderes possam deter os yuan-ti para sempre.~
 @139123=~Essa é uma ótima notícia mesmo! Diga ao Jermsy - acredito que ele deveria ser igualmente grato pelos seus esforços em nosso nome. Talvez isso o faça mudar de ideia em relação a você também - minhas histórias sobre suas dificuldades no Passagem Ocidental parecem não ter surtido efeito nele.~
 @139124=~Ah, Isair e Madae... essa é uma longa história, <MEU_AMIGO>. Eu conheço apenas a superfície dela, Iselore conhece as profundezas - se quiser ouvi-la, procure-o em Kuldahar. Eu *sei* que os gêmeos viveram no Passo, em uma pequena casa a oeste da torre de vigia, antes de serem expulsos.~
-@139125=~A casa é um lugar assombrado - temo que a recente necromancia na Passagem tenha despertado coisas que é melhor deixar em paz. O espírito da Mãe Egenia não descansa em paz naquele lugar, disso tenho certeza. Eu a ouvi chamando pelos gêmeos à noite, e seus gritos... me causam dor.~
-@139126=~Mãe Egenia?~
-@139127=~A Mãe Egenia era uma sacerdotisa de Ilmater e foi a guardiã de Isair e Madae após a morte de sua verdadeira mãe.~
+@139125=~A casa é um lugar assombrado - temo que a recente necromancia na Passagem tenha despertado coisas que é melhor deixar em paz. O espírito da Madre Egenia não descansa em paz naquele lugar, disso tenho certeza. Eu a ouvi chamando pelos gêmeos à noite, e seus gritos... me causam dor.~
+@139126=~Madre Egenia?~
+@139127=~A Madre Egenia era uma sacerdotisa de Ilmater e foi a guardiã de Isair e Madae após a morte de sua verdadeira mãe.~
 @139128=~Dizem que os gêmeos a mataram e, em seguida, foram atacados pelos aldeões - mas é uma história distorcida, e desconheço todos os seus desdobramentos. Iselore saberia a verdade - assim como Egenia, que seu espírito inquieto finalmente encontre a paz.~
 @139129=~Espere... você já viu o espírito de Egenia?~
 @139130=~Sim - e não é a primeira vez. Este é um segredo que não compartilhei com muitos, mas fui eu quem a enterrou há muitos anos, pouco depois da tragédia que lhe tirou a vida. Isso... me sensibilizou para o espírito dela, para o bem ou para o mal. Com a recente ressurreição dos mortos pelos Banitas, ela também ressuscitou.~
@@ -65568,7 +65568,7 @@ Peso: 1 kg (2 lb).
 ~
 @139277=~Fúria Bárbara Maior~
 @139278=~Fúria Bárbara Maior~
-@139279=~Você adentrou ainda mais na Floresta Devastada.~
+@139279=~Você adentrou ainda mais na Mata Sinistra.~
 @139280=~Esquiva Sobrenatural (Bônus de Destreza na CA)~
 @139281=~~
 @139282=~~
@@ -66852,8 +66852,8 @@ Peso: 5 kg (10 lb).
 @140383=~Gostaríamos de dar uma olhada nas suas poções antes de irmos, Oswald.~
 @140384=~Bem, você poderia pegar os caminhos que levam aos Campos da Matança, mas [lembrando] a Legião da Quimera destruiu a maioria das trilhas. [tudo ficará bem] Iselore saberá o que fazer. Você pode encontrá-lo a leste, depois da ponte e do moinho.~
 @140385=~Ela nem sempre morou comigo, não. [MAIR-ah-lee]Maralie foi separada do meu irmão e da esposa dele quando goblins atacaram a vila deles. Não temos notícias deles há cinco anos. Mas ficarei mais do que feliz em cuidar dela.~
-@140386=~Aquilo? Foi lá que a Mãe Egenia criou Isair e Madae. Ela ainda está enterrada lá, mas os aldeões queimaram a casa.~
-@140387=~Quem é Mãe Egenia?~
+@140386=~Aquilo? Foi lá que a Madre Egenia criou Isair e Madae. Ela ainda está enterrada lá, mas os aldeões queimaram a casa.~
+@140387=~Quem é Madre Egenia?~
 @140388=~É uma torre de vigia. Costumava ser uma torre de grãos, mas [IH-zeh-lor]Iselore e [JURM-zee]Jermsy acharam que seria melhor transformá-la em uma torre de vigia.~
 @140389=~Quem é Jermsy?~
 @140390=~Ela - [tenta explicar, não consegue] bem, ela - Sinto muito. Eu poderia te contar, mas acho que [IH-zeh-lor]Iselore seria mais útil do que eu. O que aconteceu com [eh-GAY-nee-uh]Egenia, [ih-ZAIR]Isair, [mah-DAY]Madae - até mesmo com a mãe dos gêmeos - é uma história triste.~
@@ -67331,7 +67331,7 @@ Peso: 5 kg (10 lb).
 @140861=~Logo após a partida dos heróis, Iselore plantou um jardim na base do grande carvalho.~
 @140862=~Pois, disse-nos ele, a memória dos aventureiros deve permanecer associada ao reino dos vivos.~
 @140863=~E, como agora percebo, é pelo bem dos vivos que deixo minha casa.~
-@140864=~Assim como meu mentor fez quando veio aqui, assim como aqueles aventureiros fizeram quando salvaram todo o Vale do Vento Gélido.~
+@140864=~Assim como meu mentor fez quando veio aqui, assim como aqueles aventureiros fizeram quando salvaram todo o Vale do Vento Gelado.~
 @140865=~Ainda há muitos caminhos a percorrer, muitas façanhas a realizar, antes do fim dos meus dias.~
 @140866=~Embora *bastante* caro, o Espelho da Prisão da Vida é uma proteção bastante eficaz. Os que estão dentro são os membros do Talismã do grupo, aprisionados enquanto recuperavam o equipamento de um prisioneiro chamado Nathaniel.~
 @140867=~Embora *bastante* caro, aquele Espelho da Prisão da Vida era uma proteção bastante eficaz. Os que estavam dentro eram o Talismã do grupo, aprisionados enquanto recuperavam o equipamento de um prisioneiro chamado Nathaniel. Quando você o quebrou, suas mentes distorcidas o culparam erroneamente por seu aprisionamento.~
@@ -67377,7 +67377,7 @@ Peso: 5 kg (10 lb).
 @140907=~~
 @140908=~~
 @140909=~~
-@140910=~Eu sei o que aconteceu com seus filhos, Mãe Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
+@140910=~Eu sei o que aconteceu com seus filhos, Madre Egenia - pelo menos o que aconteceu depois que você fechou os olhos.~
 @140911=~Pah! Já perdi tempo *suficiente* com você... vivo ou morto, vou garantir que você *se junte* à Legião. Em breve, seus cadáveres marcharão sobre Kuldahar, e você massacrará Iselore onde ele estiver! ~
 @140912=~Então você não é páreo para ele enquanto ele estiver em Kuldahar? Duvido que Iselore *precise* da Gema da Pedra do Coração para lidar com você.~
 @140913=~Renda-se, Hiepherus. Não perguntarei duas vezes.~
@@ -67549,7 +67549,7 @@ Peso: 2,5 kg (5 lb).
 @141077=~URGH! Essas feridas terríveis drenam minhas forças como uma sanguessuga faminta em um matadouro. Suponho que eu deva *agradecer* pela destruição dos yuan-ti... embora, com o tempo, eu mesmo lançaria uma ofensiva massiva.~
 @141078=~*suspiro* Sim? Se dependermos de nós mesmos, tenho certeza de que ambos podemos alcançar nossos respectivos objetivos. Do que você precisa *agora*?~
 @141079=~Os aracnídeos gigantes incluem tanto pragas menores, como aranhas e ettercaps, quanto variantes mutantes, como os driders, a união antinatural de um elfo negro e uma aranha. Quase sempre criados como punição pela deusa drow Lolth, os driders são párias sedentos de sangue que percorrem a Underdark em busca de sua próxima refeição. Embora os driders possuam a habilidade de lançar teias de seus corpos de aranha, eles também costumam manter as habilidades de classe que tinham de seu passado como elfos negros.~
-@141080=~Ponte Shaengarne~
+@141080=~Ponte de Shaengarne~
 @141081=~Parede de Gelo~
 @141082=~Saída dos Pântanos Frios~
 @141083=~A geleia ocre se divide!~
@@ -67858,7 +67858,7 @@ Peso: 2,5 kg (5 lb).
 @141386=~Concordamos em assistir à peça dos Caminhantes de Chamas... deve ter sido muito longa e/ou entediante, pois dormimos durante a maior parte dela e noite adentro. Embora um tanto sonolentos, vimos o Rei Lothar arrancar indiscretamente a Alta Feiticeira Izbelah de sua gaiola e jogá-la fatalmente no mar antes de retornar à sua morada. De fato, as suspeitas de Jasper sobre um crime se confirmaram. Ao acordarmos, Venomin passou por nós apressado, tentando chegar a algum lugar.~
 @141387=~Ouvimos uma conversa entre Lothar e Venomin na cidadela do rei. Lothar mentiu de forma convincente, alegando que Izbelah caiu no mar enquanto tentava escapar, que Pyros causou a erupção de trinta anos atrás, bem como a que está prestes a ocorrer, e que Pyros ordenou a execução de Izbelah. Ao término da reunião, Venomin cogitou ter um encontro particular com Pyros pela manhã, mas achamos que sabemos o que aconteceu. Desnecessário dizer que Lothar ficou bastante irritado ao nos flagrar ouvindo a conversa.~
 @141388=~Tudo se resume a isto: da borda, podemos ver a Alta Feiticeira Izbelah se preparando para lançar seu feitiço de Estase Temporal, que criou este loop temporal de cinco dias. Não podemos deixar isso acontecer - nossas vidas - nossos futuros - dependem disso.~
-@141389=~A Floresta Devastada~
+@141389=~A Mata Sinistra~
 @141390=~Falha em Lançar Magia~
 @141391=~Falha de Feitiço Arcano~
 @141392=~~
