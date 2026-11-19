@@ -2173,7 +2173,7 @@ Requisito de Talento: Arma Marcial, Arco
 Tipo: Duas mãos
 ~
 @101289=~Arco Longo +5~
-@101289=~O arco longo é semelhante ao arco curto, exceto que a haste tem aproximadamente a mesma altura do arqueiro, geralmente de 1,8 a 2 metros. Ele possui duas vantagens sobre o arco curto: maior alcance e, portanto, muito mais precisão. Este foi aprimorado com propriedades mágicas, conferindo-lhe um ar de perfeição.
+@101290=~O arco longo é semelhante ao arco curto, exceto que a haste tem aproximadamente a mesma altura do arqueiro, geralmente de 1,8 a 2 metros. Ele possui duas vantagens sobre o arco curto: maior alcance e, portanto, muito mais precisão. Este foi aprimorado com propriedades mágicas, conferindo-lhe um ar de perfeição.
 ESTATÍSTICAS:
 
 Dano: +5 (projétil)
@@ -3652,7 +3652,7 @@ Talento Necessário: Arma Simples, Maça
 Tipo: Uma mão
 ~
 @102118=~Maça do Golpe Sagrado~
-@102118=~A maça é descendente direta do porrete básico, sendo nada mais que um cabo de madeira com uma cabeça de ferro montada na extremidade. Neste caso, a cabeça é piramidal e parece brilhar com uma luz azul interna, pois está fixada em um cabo de carvalho polido.
+@102119=~A maça é descendente direta do porrete básico, sendo nada mais que um cabo de madeira com uma cabeça de ferro montada na extremidade. Neste caso, a cabeça é piramidal e parece brilhar com uma luz azul interna, pois está fixada em um cabo de carvalho polido.
 ESTATÍSTICAS:
 
 Dano: 1d8
@@ -15522,7 +15522,7 @@ SAREVOK
 
 11 de Tarsahk, 1368: Tive um sonho esta noite. Minha mãe falava comigo, mas enquanto falava, seu rosto inchou e ficou descolorido. Sua voz foi ficando mais fraca enquanto me pedia para salvá-la de Reiltar. Eu podia ver o garrote cortando seu pescoço, mas não fiz nada. Foi apenas um sonho.
 
-27 de Tarsahk, 1368: Despeço-me de Candlekeep agora, e não poderia ser mais oportuno, pois tenho certeza de que Gorion percebeu minha linhagem. De uma coisa tenho certeza: <NOME DO PERSONAGEM> também é um dos filhos de Bhaal. <NOME DO PERSONAGEM> possui todas as marcas, o que explicaria a curiosidade de Gorion sobre meus estudos. Embora não haja nada que eu possa fazer agora, terei que retornar e matar aquele pirralho. Seria tolice da minha parte deixar um dos meus irmãos viver, especialmente um criado pelos Harpistas (e tenho certeza de que é a eles que Gorion está leal).
+27 de Tarsahk, 1368: Despeço-me de Candlekeep agora, e não poderia ser mais oportuno, pois tenho certeza de que Gorion percebeu minha linhagem. De uma coisa tenho certeza: <CHARNAME> também é um dos filhos de Bhaal. <CHARNAME> possui todas as marcas, o que explicaria a curiosidade de Gorion sobre meus estudos. Embora não haja nada que eu possa fazer agora, terei que retornar e matar aquele pirralho. Seria tolice da minha parte deixar um dos meus irmãos viver, especialmente um criado pelos Harpistas (e tenho certeza de que é a eles que Gorion está leal).
 
 5 de Mirtul, 1368: Hoje encontrei-me com Reiltar em Portão de Baldur. O tolo ainda insiste em me chamar de filho, e por enquanto vou deixar. Ele presume que sou leal a ele porque me criou. Bem, leal eu sou, mas apenas enquanto ele for útil. Ele estabeleceu uma base na mansão de uma família nobre falida e diz que tudo está correndo bem. Mulahey se instalou nas minas de Nashkel, e seus lacaios kobolds já devem estar ocupados contaminando o minério de ferro. Apenas alguns escravos começaram a extrair o minério em Cloakwood, embora Reiltar me assegure que, assim que os ataques de bandidos começarem, teremos um suprimento constante de novos escravos.
 
@@ -15534,7 +15534,7 @@ SAREVOK
 
 
 - de Myrtle
-Não tenho tempo para escrever, mas não devo negligenciar meus diários. Os futuros mortos precisam saber como o Senhor do Assassinato voltou a assombrá-los. Contratarei um escriba quando o tempo permitir. As coisas não saíram exatamente como planejei, mas ainda conseguirei salvar a situação. <NOME DO JOGADOR> está a caminho de Portão de Baldur; se eu conseguisse levar o filhote para Candlekeep, teria o bode expiatório perfeito para o meu plano. Meu pai mortal, Rieltar, está lá para se encontrar com os Cavaleiros do Escudo. Ele tem bloqueado todas as minhas tentativas de intensificar as hostilidades entre Amn e Portão de Baldur, e esses encontros só servirão para apaziguar as relações. Devo me livrar de todos eles e assumir o controle do Trono de Ferro. Não posso permitir que negócios mesquinhos e preocupações monetárias interfiram. Sinto muito, pai, mas minha verdadeira linhagem me chama e você está no meu caminho. Certificarei-me de instruir os doppelgangers sobre a maneira exata como Reiltar deve morrer. Acho que um garrote seria perfeito para a tarefa.
+Não tenho tempo para escrever, mas não devo negligenciar meus diários. Os futuros mortos precisam saber como o Senhor do Assassinato voltou a assombrá-los. Contratarei um escriba quando o tempo permitir. As coisas não saíram exatamente como planejei, mas ainda conseguirei salvar a situação. <CHARNAME> está a caminho de Portão de Baldur; se eu conseguisse levar o filhote para Candlekeep, teria o bode expiatório perfeito para o meu plano. Meu pai mortal, Rieltar, está lá para se encontrar com os Cavaleiros do Escudo. Ele tem bloqueado todas as minhas tentativas de intensificar as hostilidades entre Amn e Portão de Baldur, e esses encontros só servirão para apaziguar as relações. Devo me livrar de todos eles e assumir o controle do Trono de Ferro. Não posso permitir que negócios mesquinhos e preocupações monetárias interfiram. Sinto muito, pai, mas minha verdadeira linhagem me chama e você está no meu caminho. Certificarei-me de instruir os doppelgangers sobre a maneira exata como Reiltar deve morrer. Acho que um garrote seria perfeito para a tarefa.
 
 Este diário parece ser importante. É melhor você mantê-lo consigo.
 ~
@@ -39116,7 +39116,7 @@ Peso: 1 kg (2 lb).
 ~
 @121949=~Faca de Manteiga Ornamentada~
 @121950=~Faca de Manteiga de Balduran~
-@121951=~Faca de Manteiga de Balduran: Lendas frequentemente falam da Faca de Manteiga de Balduran. O herói não permitia que nenhum outro utensílio tocasse seus condimentos. Acredita-se que sua mãe lhe deu a ornamentada faca de manteiga como presente de a
+@121951=~Faca de Manteiga de Balduran: Lendas frequentemente falam da Faca de Manteiga de Balduran. O herói não permitia que nenhum outro utensílio tocasse seus condimentos. Acredita-se que sua mãe lhe deu a ornamentada faca de manteiga como presente de aniversário de dezoito anos.
 ~
 @121952=~Cara de Merda Rodriguez~
 @121953=~Braçadeiras de Ligação~
@@ -39339,7 +39339,7 @@ Tipo: Uma mão
 @122106=~Reunimos uma grande congregação e em breve faremos chover morte gélida sobre nossos inimigos - começando por vocês mesmos.~
 @122107=~Seus inimigos?~
 @122108=~Chegou a sua hora de morrer!~
-@122109=~Nossos inimigos são de Kuldahar, os das Dez Cidades e qualquer um tolo o suficiente para protegê-los. Eles devem pagar pelo sacrilégio contra Auril... e pelo que fizeram a Lysan ~
+@122109=~Nossos inimigos são de Kuldahar, os das Dez Cidades e qualquer um tolo o suficiente para protegê-los. Eles devem pagar pelo sacrilégio contra Auril... e pelo que fizeram a Lysan. ~
 @122110=~Lysan?~
 @122111=~Oswald, levante-se agora ou pegaremos sua nave e o jogaremos em Maer Dualdon!~
 @122112=~Muito bem, Oswald - muito engraçado. Agora levante-se.~

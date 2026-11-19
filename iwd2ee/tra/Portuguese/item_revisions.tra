@@ -1460,7 +1460,7 @@ Bônus de Salvamento: +5 em testes de Vontade
 Magias Seguras: Quando o usuário conjura uma magia de área de efeito, os aliados fazem testes de resistência contra a magia com CD reduzida em -5.
 Peso: 2 kg (4 lb).~
 //@10391 = ~Robe do Bom Arquimago~
-@10392 = ~Este poderoso Robe de Mago oferece proteção contra todas as formas de ataque físico, ao mesmo tempo em que aumenta a resistência mágica e os testes de salvamento. Devido à natureza de seu encantamento, só pode ser usado por aqueles de alinhament
+@10392 = ~Este poderoso Robe de Mago oferece proteção contra todas as formas de ataque físico, ao mesmo tempo em que aumenta a resistência mágica e os testes de salvamento. Devido à natureza de seu encantamento, só pode ser usado por aqueles de alinhamento bom.
 
 ESTATÍSTICAS:
 
@@ -2582,7 +2582,7 @@ Especial:
   Poder de Feitiço: Pode lançar a Magia de Clérigo de 5º nível Ressuscitar uma vez por dia.
 Peso: 25 kg (50 lb).~
 @10571 = ~Placa do Demônio do Abismo~
-@10572 = ~Ninguém sabe ao certo de onde veio a Placa do Demônio do Abismo, ou como foi criada. Suas placas espinhosas de escamas vermelhas irradiam um brilho vermelho ardente o tempo todo, convencendo aqueles que a olham de que a cota de malha é certament
+@10572 = ~Ninguém sabe ao certo de onde veio a Placa do Demônio do Abismo, ou como foi criada. Suas placas espinhosas de escamas vermelhas irradiam um brilho vermelho ardente o tempo todo, convencendo aqueles que a olham de que a cota de malha é certamente de outro mundo.
 
 Aqueles que equipam a Placa do Demônio do Abismo descobrem que ela possui uma defesa natural mortal quando é atingida muitas vezes. Se um inimigo for muito bem-sucedido com seus golpes contra o portador da Placa do Demônio do Abismo, a placa emitirá uma explosão de chamas em todas as direções ao seu redor. Essas chamas ferem mortalmente todos os que forem pegos em sua onda, exceto o portador da armadura incomum.
 
@@ -2599,7 +2599,7 @@ Especial:
   Retribuição: 10% de chance de lançar o feitiço Fogo Solar sempre que o inimigo atacante acertar com sucesso o portador da Placa do Demônio do Abismo (somente combate corpo a corpo)
 Peso: 25 kg (50 lb).~
 @10573 = ~Placa do Balor~
-@10574 = ~Ninguém sabe ao certo de onde veio a Placa do Balor, ou como foi criada. Suas placas vermelhas, lisas e resistentes irradiam um brilho vermelho ardente o tempo todo, convencendo aqueles que a olham de que a cota de malha é certamente de outro mu
+@10574 = ~Ninguém sabe ao certo de onde veio a Placa do Balor, ou como foi criada. Suas placas vermelhas, lisas e resistentes irradiam um brilho vermelho ardente o tempo todo, convencendo aqueles que a olham de que a cota de malha é certamente de outro mundo.
 
 Aqueles que equipam a Placa do Balor descobrem que ela possui uma defesa natural mortal quando é atingida muitas vezes. Se um inimigo for muito bem-sucedido com seus golpes contra o portador da Placa do Balor, a placa emitirá uma explosão de chamas em todas as direções ao seu redor. Essas chamas ferem mortalmente todos os que forem pegos em sua onda, exceto o portador da armadura incomum.
 
@@ -4273,7 +4273,7 @@ Peso: 2 kg (4 lb).
 Requisito de Talento: Arma Marcial, Lâmina Grande
 Tipo: Uma Mão~
 @10873 = ~Espada Longa +1, Defensor~
-@10874 = ~Essas espadas são geralmente chamadas de espadas de dois gumes, espadas de guerra ou espadas militares. Em muitos casos, a espada longa tem uma lâmina de um só gume. Não existe uma única versão da espada longa; o design e o comprimento variam de
+@10874 = ~Essas espadas são geralmente chamadas de espadas de dois gumes, espadas de guerra ou espadas militares. Em muitos casos, a espada longa tem uma lâmina de um só gume. Não existe uma única versão da espada longa; o design e o comprimento variam de cultura para cultura e podem variar dentro da mesma cultura, dependendo da época. Entre as características mais comuns de todas as espadas longas está o seu comprimento, que varia de 89 a 119 centímetros. No último caso, sabe-se que a lâmina ocupa 102 centímetros do comprimento total. A maioria das espadas longas possui uma lâmina de dois gumes e uma ponta afiada. Apesar da ponta, a espada longa é projetada para golpes de corte, não para estocadas.
 
 ESTATÍSTICAS:
 
@@ -4689,7 +4689,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Exótica, Espada Bastarda
 Tipo: Uma mão~
 @10935 = ~Fúria do Caos +3~
-@10936 = ~Esta arma é uma visão impressionante. A lâmina é feita de ouro vermelho com uma borda prateada. A guarda é de platina finamente polida, e o cabo enrolado em fio é feito de adamantina negra. Quando é desembainhada, a lâmina irradia um arco-íris d
+@10936 = ~Esta arma é uma visão impressionante. A lâmina é feita de ouro vermelho com uma borda prateada. A guarda é de platina finamente polida, e o cabo enrolado em fio é feito de adamantina negra. Quando é desembainhada, a lâmina irradia um arco-íris de cores.
 
 Esta arma tem sido considerada uma verdadeira bênção por aqueles que a empunham. Contra criaturas leais, ela causa um dano devastador. A Fúria do Caos é conhecida por virar a maré de muitas batalhas. Além disso, a vítima pode perder o controle de suas faculdades e cair em um estado de confusão quando atingida pela arma.
 
@@ -4709,7 +4709,7 @@ Peso: 4 kg (8 lb).
 Requisito de Talento: Arma Exótica, Espada Bastarda
 Tipo: Uma mão~
 @10937 = ~Nêmesis da Ordem +5~
-@10938 = ~Esta arma é uma visão impressionante. A lâmina é feita de ouro vermelho com uma borda prateada. A guarda é de platina finamente polida, e o cabo enrolado em fio é feito de adamantina negra. Quando é desembainhada, a lâmina irradia um arco-íris d
+@10938 = ~Esta arma é uma visão impressionante. A lâmina é feita de ouro vermelho com uma borda prateada. A guarda é de platina finamente polida, e o cabo enrolado em fio é feito de adamantina negra. Quando é desembainhada, a lâmina irradia um arco-íris de cores.
 
 Esta arma tem sido considerada uma verdadeira bênção por aqueles que a empunham. Contra criaturas leais, ela causa um dano devastador. A Fúria do Caos é conhecida por virar a maré de muitas batalhas. Além disso, a vítima pode perder o controle de suas faculdades e cair em um estado de confusão quando atingida pela arma. Os poderes caóticos da lâmina também impedem que o portador seja controlado ou confuso em batalha.
 
@@ -6248,7 +6248,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Marcial, Machado
 Tipo: Uma Mão~
 @11247    = ~Machado de Batalha da Força +2~
-@11248    = ~A versão mais comum do machado de batalha é um bastão robusto de cerca de quatro pés de comprimento, com uma lâmina de um só lado em forma de trompete montada em uma das extremidades. Os machados de batalha também são chamados de machados lar
+@11248    = ~A versão mais comum do machado de batalha é um bastão robusto de cerca de quatro pés de comprimento, com uma lâmina de um só lado em forma de trompete montada em uma das extremidades. Os machados de batalha também são chamados de machados largos.
 
 ESTATÍSTICAS:
 
@@ -6846,7 +6846,7 @@ Tipo: Duas mãos~
 //@11345 = ~Porrete de Chama Fria +2~
 //@11346 = ~A descrição do item pode permanecer a mesma; se uma nova descrição for necessária, coloque-a aqui~
 //@11347 = ~Porrete Atordoante +1~
-@11348 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11348 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6862,7 +6862,7 @@ Tipo: Uma mão~
 //@11349 = ~Porrete de Impacto Seguro~
 //@11350 = ~A descrição do item pode permanecer a mesma; se uma nova descrição for necessária, coloque-a aqui~
 @11351 = ~Porrete do Sol~
-@11352 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11352 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6888,7 +6888,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Simples, Maça
 Tipo: Uma mão~
 @11357 = ~Porrete do Destino +5~
-@11358 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11358 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6902,7 +6902,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Simples, Maça
 Tipo: Uma Mão~
 //@11359 = ~Porrete do Esclarecimento +5~
-@11360 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11360 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6950,7 +6950,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Simples, Maça
 Tipo: Uma Mão~
 @11365 = ~Porrete Irrefreável +3~
-@11366 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11366 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6964,7 +6964,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Simples, Maça
 Tipo: Uma Mão~
 @11367 = ~Porrete da Intoxicação +4~
-@11368 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira res
+@11368 = ~A maioria dos tacos são feitos de madeira dura e resistente, com empunhadura estreita e ponta mais larga. Esta arma simples tem sido usada desde que a humanidade começou a usar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6982,7 +6982,7 @@ Tipo: Uma Mão~
 //@11371 = ~Porrete de Qualidade Superior~
 //@11372 = ~A descrição do item pode permanecer a mesma; se for necessária uma nova descrição, coloque aqui~
 @11373 = ~Porrete Amaldiçoada da Imolação +5~
-@11374 = ~A maioria dos porretes são bastões robustos de madeira dura, estreitos na empunhadura e mais largos na extremidade. Essa arma simples tem sido usada desde que a humanidade começou a utilizar ferramentas. Qualquer um pode encontrar um bom pedaço de
+@11374 = ~A maioria dos porretes são bastões robustos de madeira dura, estreitos na empunhadura e mais largos na extremidade. Essa arma simples tem sido usada desde que a humanidade começou a utilizar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -6998,7 +6998,7 @@ Peso: 1,5 kg (3 lb).
 Requisito de Talento: Arma Simples, Maça
 Tipo: Uma Mão~
 @11375 = ~Porrete dos Raios +5~
-@11376 = ~A maioria dos porretes são bastões robustos de madeira dura, estreitos na empunhadura e mais largos na extremidade. Essa arma simples tem sido usada desde que a humanidade começou a 'utilizar ferramentas. Qualquer um pode encontrar um bom pedaço de
+@11376 = ~A maioria dos porretes são bastões robustos de madeira dura, estreitos na empunhadura e mais largos na extremidade. Essa arma simples tem sido usada desde que a humanidade começou a 'utilizar ferramentas. Qualquer um pode encontrar um bom pedaço de madeira resistente e brandi-lo; daí o uso tão difundido da arma.
 
 ESTATÍSTICAS:
 
@@ -7682,7 +7682,7 @@ Tipo: Uma Mão~
 //@11523 = ~Mangual Obra-Prima~
 //@11524 = ~A descrição do item pode permanecer a mesma; se precisar de uma nova descrição, coloque-a aqui~
 @11525 = ~Mangual de Veranon +3~
-@11526 = ~Veranon é um sacerdote há muito esquecido pelo tempo. Alguns dizem que ele era humano, outros semi-humano, e outros ainda afirmam que ele era de origem demoníaca. Ninguém sabe ao certo. A única pista sobrevivente de sua identidade pode ser encon
+@11526 = ~Veranon é um sacerdote há muito esquecido pelo tempo. Alguns dizem que ele era humano, outros semi-humano, e outros ainda afirmam que ele era de origem demoníaca. Ninguém sabe ao certo. A única pista sobrevivente de sua identidade pode ser encontrada em seu mangual.
 
 O mangual de Veranon é uma arma de aparência vil. O cabo é feito de ônix negro como azeviche com um núcleo vermelho pulsante. Runas flamejantes serpenteiam ao longo do cabo, quase como se tivessem vontade própria. O cabo é encimado por uma pedra de punho, uma granada vermelho-sangue. A arma ostenta duas cabeças, cada uma com o rosto de uma criatura desconhecida, mas de aparência demoníaca. Os olhos das cabeças brilham em vermelho e um odor sulfuroso parece emanar de suas bocas. As cabeças parecem ser feitas de pedaços de carvão, mas são duras como aço.
 
@@ -7700,7 +7700,7 @@ Peso: 2,5 kg (5 lb)
 Requisito de Talento: Arma Marcial, Mangual
 Tipo: Uma Mão~
 @11527 = ~Mangual do Inferno +5~
-@11528 = ~Veranon é um sacerdote há muito esquecido pelo tempo. Alguns dizem que ele era humano, outros semi-humano, e outros ainda afirmam que ele era de origem demoníaca. Ninguém sabe ao certo. A única pista sobrevivente de sua identidade pode ser encon
+@11528 = ~Veranon é um sacerdote há muito esquecido pelo tempo. Alguns dizem que ele era humano, outros semi-humano, e outros ainda afirmam que ele era de origem demoníaca. Ninguém sabe ao certo. A única pista sobrevivente de sua identidade pode ser encontrada em seu mangual.
 
 O Mangual do Inferno é uma arma de aparência vil. O cabo é feito de ônix negro com um núcleo vermelho pulsante. Runas flamejantes serpenteiam ao longo do cabo, quase como se tivessem vontade própria. O cabo é encimado por uma pedra de punho, uma granada vermelho-sangue. A arma ostenta duas cabeças, cada uma com o rosto de uma criatura desconhecida, mas de aparência demoníaca. Os olhos das cabeças brilham em vermelho e um odor sulfuroso parece emanar das bocas. As cabeças parecem ter sido feitas de pedaços de carvão, mas são duras como aço.
 
@@ -7893,7 +7893,7 @@ Tipo: Uma Mão~
 //@11557 = ~Martelo de Guerra +3~
 //@11558 = ~A descrição do item pode permanecer a mesma; se precisar de uma nova descrição, coloque-a aqui~
 //@11559 = ~Martelo de Contusão +2~
-@11560 = ~Como outros do mesmo tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 18". No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais efi
+@11560 = ~Como outros do mesmo tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 18". No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7905,7 +7905,7 @@ Peso: 4,5 kg (9 lb).
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 //@11561 = ~Martelo de Gelo Atordoante +1~
-@11562 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combat
+@11562 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7920,7 +7920,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 //@11563 = ~Martelo da Dissipação +1~
-@11564 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais efi
+@11564 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7934,7 +7934,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 @11565 = ~Martelo do Enfraquecimento +1~
-@11566 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combat
+@11566 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7948,7 +7948,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 @11567 = ~Martelo da Força Mágica~
-@11568 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais efi
+@11568 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7962,7 +7962,7 @@ Tipo: Uma Mão~
 //@11569 = ~Martelo da Lei~
 //@11570 = ~A descrição do item pode permanecer a mesma; Se precisar de uma nova descrição, coloque-a aqui~
 @11571 = ~Martelo de Pedra +5~
-@11572 = ~Como outros do seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais efi
+@11572 = ~Como outros do seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -7991,7 +7991,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 @11575 = ~Martelo da Ira Justa +4~
-@11576 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combat
+@11576 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -8005,7 +8005,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 @11577 = ~Martelo de Resistência +3~
-@11578 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais efi
+@11578 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com um pequeno número de propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -8021,7 +8021,7 @@ Peso: 3,5 kg (7 lb)
 Requisito de Talento: Arma Marcial, Martelo
 Tipo: Uma Mão~
 //@11579 = ~Martelo Flamejante +1~
-@11580 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combat
+@11580 = ~Como outros de seu tipo, este martelo de guerra é feito inteiramente de aço, com um martelo esmagador de ossos montado em uma haste de 45 cm. No entanto, ele também foi agraciado com algumas propriedades mágicas, tornando-o mais eficaz em combate.
 
 ESTATÍSTICAS:
 
@@ -10335,7 +10335,7 @@ Peso: 0,5 kg (1 lb).~
 //@12055 = ~Rações de Ferro~
 //@12056 = ~A descrição do item pode permanecer a mesma; se precisar de uma nova descrição, coloque-a aqui~
 //@12057 = ~Rações de Ferro~ // HoF
-@12058 = ~Ao contrário das rações normais, as rações de ferro contêm alimentos secos que podem ser armazenados por longos períodos sem estragar. Combinadas com uma vara de três metros e quinze metros de corda, elas completam perfeitamente a mochila de um 
+@12058 = ~Ao contrário das rações normais, as rações de ferro contêm alimentos secos que podem ser armazenados por longos períodos sem estragar. Combinadas com uma vara de três metros e quinze metros de corda, elas completam perfeitamente a mochila de um aventureiro à moda antiga. 
 
 ESTATÍSTICAS:
 
@@ -10391,14 +10391,14 @@ ESTATÍSTICAS:
 Cura de 1 a 100 pontos de vida
 Peso: 0,5 kg (1 lb).~
 //@12079 = ~Essência Espiritual~
-@12080 = ~Esta valiosa poção é feita pela captura e destilação dos espíritos de trolls. Normalmente usado apenas por necromantes e encantadores poderosos, o processo resulta em uma poderosa poção de cura capaz de regenerar instantaneamente até mesmo ferim
+@12080 = ~Esta valiosa poção é feita pela captura e destilação dos espíritos de trolls. Normalmente usado apenas por necromantes e encantadores poderosos, o processo resulta em uma poderosa poção de cura capaz de regenerar instantaneamente até mesmo ferimentos graves.
 
 ESTATÍSTICAS:
 
 Cura 40 pontos de vida
 Peso: 0,5 kg (1 lb)~
 //@12081 = ~Essência Espiritual~ //HoF
-@12082 = ~Esta valiosa poção é feita pela captura e destilação dos espíritos de trolls. Normalmente usado apenas por necromantes e encantadores poderosos, o processo resulta em uma poderosa poção de cura capaz de regenerar instantaneamente até mesmo ferim
+@12082 = ~Esta valiosa poção é feita pela captura e destilação dos espíritos de trolls. Normalmente usado apenas por necromantes e encantadores poderosos, o processo resulta em uma poderosa poção de cura capaz de regenerar instantaneamente até mesmo ferimentos graves.
 
 ESTATÍSTICAS:
 
@@ -10894,7 +10894,7 @@ Alcance: 6 metros (20 pés)
 Área: 1 criatura
 Duração: 24 horas~
 @12191 = ~Pergaminho Amaldiçoado de Petrificação~
-@12192 = ~Este pergaminho parece ser um pergaminho de Proteção contra Petrificação, mas na verdade é um pergaminho amaldiçoado. Quando usado, ele transformará o alvo em pedra se ele falhar em seu teste de Fortitude. O pergaminho pode ser usado para amaldi
+@12192 = ~Este pergaminho parece ser um pergaminho de Proteção contra Petrificação, mas na verdade é um pergaminho amaldiçoado. Quando usado, ele transformará o alvo em pedra se ele falhar em seu teste de Fortitude. O pergaminho pode ser usado para amaldiçoar um monstro.
 
 ESTATÍSTICAS:
 
@@ -11223,7 +11223,7 @@ ESTATÍSTICAS;
 Especial: Pode conjurar Graxa (Reflexos CD 12)
 Peso: 0,5 kg (1 lb)~
 @12253 = ~Varinha da Exaustão~
-@12254 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12254 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11245,7 +11245,7 @@ Peso: 0,5 kg (1 lb).~
 //@12259 = ~Varinha de Aranha~
 //@12260 = ~A descrição do item pode permanecer a mesma; se precisar de uma nova descrição, coloque-a aqui. ~
 @12261 = ~Varinha de Identificação de Criatura~
-@12262 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12262 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem carga, ela é consumida e destruída.
 
@@ -11254,7 +11254,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Identificar Criatura
 Peso: 0,5 kg (1 lb)~
 //@12263 = ~Varinha das Mãos Flamejantes~
-@12264 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12264 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem carga, ela é consumida e destruída.
 
@@ -11263,7 +11263,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Mãos Flamejantes (5d4 de dano de fogo; Reflexos CD 14 para metade)
 Peso: 0,5 kg (1 lb) ~
 @12265 = ~Varinha de Armadura~
-@12266 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojo
+@12266 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11273,7 +11273,7 @@ Concede à criatura um bônus genérico de +4 na CA por 6 rodadas.
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb).~
 @12267 = ~Varinha de Fenda Elemental~
-@12268 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojo
+@12268 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11283,7 +11283,7 @@ Faz com que uma criatura receba 30% a mais de dano de fogo, frio, eletricidade e
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb).~
 @12269 = ~Varinha de Cores Deslumbrantes~
-@12270 = ~Varinhas têm 37 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem alguma coisa na ponta - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em
+@12270 = ~Varinhas têm 37 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem alguma coisa na ponta - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11292,7 +11292,7 @@ ESTATÍSTICAS:
 Pode liberar um Leque Cromático, atordoando qualquer criatura ao alcance que veja as cores por 1d2 segundos (CD de Vontade 14).
 Peso: 0,5 kg (1 lb)~
 //@12271 = ~Varinha da Teia de Aranha~
-@12272 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojo
+@12272 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta guarnecida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11301,7 +11301,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Teia (Reflexos CD 14)
 Peso: 0,5 kg (1 lb) ~
 @12273 = ~Varinha de Explosões de Destreza~
-@12274 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12274 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11311,7 +11311,7 @@ Pode conceder +10 de Destreza a uma criatura por 3 rodadas
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb)~
 @12275 = ~Varinha das Imagens~
-@12276 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12276 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11321,7 +11321,7 @@ Pode conceder duas imagens espelhadas a uma criatura (conforme a magia Imagem Es
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb).~
 //@12277 = ~Varinha da Flecha Ácida de Melf~
-@12278 = ~Varinhas têm 36 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem alguma coisa na ponta - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em
+@12278 = ~Varinhas têm 36 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem alguma coisa na ponta - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11330,7 +11330,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Flecha Ácida de Melf, causando 2d4 de dano de ácido por rodada durante 3 rodadas.
 Peso: 0,5 kg (1 lb)~
 //@12279 = ~Varinha do Enfraquecimento~
-@12280 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12280 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11339,7 +11339,7 @@ ESTATÍSTICAS:
 Pode reduzir a Força de uma criatura em 15 por 4 rodadas (Fortitude CD 17)
 Peso: 0,5 kg (1 lb)~
 //@12281 = ~Varinha do Emaranhamento~
-@12282 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12282 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11350,7 +11350,7 @@ Peso: 0,5 kg (1 lb)~
 //@12283 = ~Varinha da Proteção Maligna~
 //@12284 = ~A descrição do item pode permanecer a mesma; se precisar de uma nova descrição, coloque-a aqui~
 //@12285 = ~Varinha de Queimadura Solar~
-@12286 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12286 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11359,7 +11359,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Queimadura Solar (no nível 10)
 Peso: 0,5 kg (1 lb) ~
 @12287 = ~Varinha do Desespero~
-@12288 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12288 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11368,7 +11368,7 @@ ESTATÍSTICAS:
 Concede à criatura uma penalidade de -2 em testes de resistência e jogadas de ataque por 10 rodadas (sem resistência, cumulativo).
 Peso: 0,5 kg (1 lb)~
 //@12289 = ~Varinha do Santuário~
-@12290 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12290 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11378,7 +11378,7 @@ Pode conceder os efeitos do feitiço Santuário a uma criatura por 5 rodadas.
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb).~
 @12291 = ~Varinha Menor de Resistência à Magia~
-@12292 = ~Varinhas têm 36 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas e
+@12292 = ~Varinhas têm 36 centímetros de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11388,7 +11388,7 @@ Pode conceder a uma criatura +6 de Resistência à Magia por 10 rodadas
 Alcance: 30 metros (100 pés)
 Peso: 0,5 kg (1 lb)~
 //@12293 = ~Varinha de Imobilizar Pessoa~
-@12294 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12294 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta recoberta por algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11397,7 +11397,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia "Imobilizar Pessoa" (CD de Vontade 13)
 Peso: 0,5 kg (1 lb)~
 //@12295 = ~Varinha do Silêncio~
-@12296 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos
+@12296 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11406,7 +11406,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia "Silêncio" (CD de Vontade 14)
 Peso: 0,5 kg (1 lb)~
 @12297 = ~Varinha da Saúde Maior~
-@12298 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem uma ponta com algum objeto - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em est
+@12298 = ~Varinhas têm 36 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem uma ponta com algum objeto - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11416,7 +11416,7 @@ Pode conceder a uma criatura 40 pontos de vida temporários por 4 horas.
 Alcance: 1,5 metros (5 pés)
 Peso: 0,5 kg (1 lb).~
 //@12299 = ~Varinha de Charme~
-@12300 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem uma ponta com algum objeto - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em est
+@12300 = ~Varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente possuem uma ponta com algum objeto - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11446,7 +11446,7 @@ ESTATÍSTICAS:
 Pode conjurar Curar Ferimentos Moderados (cura 2d8+10 pontos de vida)
 Peso: 0,5 kg (1 lb)~
 @12307 = ~Varinha de Resistência à Magia~
-@12308 = ~Parecida com uma varinha arquetípica, esta haste esguia de ébano negro tem na ponta uma estrela dourada semelhante às estrelas encontradas no símbolo sagrado de Mystra, deusa da magia. Quando usada, a varinha concede à criatura a habilidade de r
+@12308 = ~Parecida com uma varinha arquetípica, esta haste esguia de ébano negro tem na ponta uma estrela dourada semelhante às estrelas encontradas no símbolo sagrado de Mystra, deusa da magia. Quando usada, a varinha concede à criatura a habilidade de resistir à magia.
 
 ESTATÍSTICAS:
 
@@ -11461,7 +11461,7 @@ ESTATÍSTICAS:
 Pode conjurar a magia Remover Paralisia
 Peso: 0,5 kg (1 lb)~
 @12311 = ~Varinha de Explosões de Força~
-@12312 = ~As varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em esto
+@12312 = ~As varinhas têm 37 cm de comprimento e são finas. São feitas de marfim, osso ou madeira e geralmente têm a ponta revestida com algo - metal, cristal, pedra, etc. São frágeis e tendem a quebrar facilmente. Por isso, costumam ser guardadas em estojos.
 
 Varinhas são energizadas por cargas, e cada uso custa uma ou mais cargas (dependendo do item). Quando uma varinha fica sem cargas, ela é consumida e destruída.
 
@@ -11617,7 +11617,7 @@ Peso: 2 kg (4 lb)
 Requisito de Talento: Arma Marcial, Machado
 Tipo: Uma Mão~
 @12427 = ~Disparo de Energia Brilhante +2~
-@12428 = ~Disparos ou disparos são as munições disparadas por bestas, independentemente do tamanho da arma. No entanto, este disparo foi imbuído de propriedades mágicas que melhoram o desempenho em voo, quase como se o disparo fosse guiado em direção ao s
+@12428 = ~Disparos ou disparos são as munições disparadas por bestas, independentemente do tamanho da arma. No entanto, este disparo foi imbuído de propriedades mágicas que melhoram o desempenho em voo, quase como se o disparo fosse guiado em direção ao seu alvo.
 
 ESTATÍSTICAS:
 
@@ -12417,7 +12417,7 @@ Especial:
 Peso: 0 kg.
 Lançador: Besta~
 @12569 = ~Raio Afiado de Retorno +5~
-@12570 = ~Carambas ou raios são as munições disparadas por bestas, independentemente do tamanho da arma. No entanto, esse dardo foi imbuído de propriedades mágicas que melhoram o desempenho em voo, quase como se o dardo fosse guiado em direção ao seu alvo
+@12570 = ~Carambas ou raios são as munições disparadas por bestas, independentemente do tamanho da arma. No entanto, esse dardo foi imbuído de propriedades mágicas que melhoram o desempenho em voo, quase como se o dardo fosse guiado em direção ao seu alvo.
 
 ESTATÍSTICAS:
 
@@ -13081,7 +13081,7 @@ ESTATÍSTICAS:
 O portador ganha 30/- de resistência adicional a danos cortantes, perfurantes e contundentes enquanto estiver sob o efeito da magia Peles de Ferro.
 Peso: 4,5 kg (9 lb)~
 @12683 = ~Colar da Furtividade em Combate~
-@12684 = ~Enquanto amuletos mágicos normalmente possuem encantamentos defensivos, colares mágicos frequentemente possuem poderes ofensivos. Este colar em particular permite que o portador se esconda repetidamente à vista de todos, desde que já seja bom em
+@12684 = ~Enquanto amuletos mágicos normalmente possuem encantamentos defensivos, colares mágicos frequentemente possuem poderes ofensivos. Este colar em particular permite que o portador se esconda repetidamente à vista de todos, desde que já seja bom em se esconder.
 
 ESTATÍSTICAS:
 
