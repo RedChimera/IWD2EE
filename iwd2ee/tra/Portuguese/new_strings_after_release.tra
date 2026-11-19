@@ -1420,38 +1420,6 @@ Desvantagens:
 @222 = ~Especialização em Combate
 
 Ao usar esta habilidade, você pode escolher ganhar um bônus de CA de até +5 e uma penalidade de ataque do mesmo valor. O bônus escolhido não pode exceder seu bônus base de ataque e só se aplica enquanto você estiver atacando com uma arma corpo a corpo.~
-@525 = ~BÁRBARO:
-
-Dos ermos congelados do norte e das selvas infernais do sul surgem guerreiros bravos, até mesmo imprudentes. Embora não seja tão disciplinado ou habilidoso quanto um guerreiro normal, o bárbaro pode se lançar voluntariamente em uma fúria frenética, tornando-se um oponente mais forte e resistente.
-
-Pontos de vida por nível: 1-12
-
-Vantagens:
-* Proficiente com todas as armas simples e marciais, armaduras leves, armaduras médias e escudos.
-
-* Fúria Bárbara (Barbarian Rage): Pode entrar em fúria uma vez por dia a cada 4 níveis (começa no 1º nível com um uso). A fúria concede +4 em Força e Constituição (que se acumulam com outros bônus em Força e Constituição), além de uma penalidade de -2 na CA, +2 nos testes de Vontade e imunidade a medo, atordoamento, sono, encantamento, dominação, confusão, inconsciência, paralisia, debilidade mental e desespero por 3 rodadas. Após entrar em fúria, o bárbaro ficará fatigado por três rodadas, sofrendo uma penalidade de -2 em Força e Destreza.
-
-* Movimento Rápido (Fast Movement): Bárbaros podem se mover 3 metros mais rápido que um personagem padrão, desde que não estejam sobrecarregados ou usando armadura pesada.
-
-* 2º nível: Redução de Dano (Damage Reduction): O bárbaro ganha 1/- ponto de resistência a danos cortantes, perfurantes e contundentes. Ele ou ela ganha 1/- ponto adicional de resistência nos níveis 5, 8, 11 e a cada 3 níveis subsequentes. Se o bárbaro usar armadura média, a redução de dano concedida por esta habilidade é dobrada.
-
-* 2º nível: Esquiva Sobrenatural (Uncanny Dodge): Bárbaros mantêm seu bônus de Destreza na Classe de Armadura se forem atacados por inimigos invisíveis.
-
-* 5º nível: Esquiva Sobrenatural Aprimorada (Improved Uncanny Dodge): Bárbaros não podem sofrer Ataques Furtivos de ladinos, a menos que o atacante seja pelo menos quatro níveis superior ao do bárbaro. A fúria do bárbaro agora dura um número de rodadas adicionais igual ao bônus de Constituição recém-aprimorado do bárbaro.
-
-* 15º nível: Fúria Maior (Greater Rage): Todas as fúrias do bárbaro se tornam fúrias maiores, o que aumenta os bônus de força e constituição para +6 e o bônus de teste de resistência para +3. Ele ou ela ainda recebe a penalidade de -2 na CA.
-
-* 20º nível: Fúria Incansável (Tireless Rage): O bárbaro não fica mais fatigado após uma fúria.
-
-* 21º nível: Fúria Poderosa (Mighty Rage): A habilidade de fúria do bárbaro agora concede +8 em Força e Constituição e +4 em testes de Vontade.
-
-* 25º nível: A fúria do bárbaro agora concede +10 em Força e Constituição e +5 em testes de Vontade.
-
-* 29º nível: A fúria do bárbaro agora concede +12 em Força e Constituição e +6 em testes de Vontade.
-
-Desvantagens:
-* Bárbaros ganham talentos mais lentamente do que guerreiros.
-* Bárbaros não começam com proficiência em armaduras pesadas. ~
 @977 = ~Fúria do Bárbaro
 
 Ao entrar em fúria, o bárbaro ganha +4 em Força e Constituição (que se acumulam com outros bônus de Força e Constituição), além de uma penalidade de -2 na CA, +2 em testes de Vontade e imunidade a medo, atordoamento, sono, encantamento, dominação, confusão, inconsciência, paralisia, imbecilidade e desesperança. A fúria dura 3 rodadas + um número de rodadas igual ao bônus de Constituição (recém-aprimorado) do bárbaro. Após entrar em fúria, o bárbaro ficará fatigado por três rodadas, o que lhe dará uma penalidade de -2 em Força e Destreza. ~

@@ -1332,28 +1332,6 @@ Svantaggi:
 @222    = ~Competenza
 
 Quando usi questa abilita, puoi scegliere di ottenere un bonus alla CA fino a +5 e una penalita all'attacco dello stesso valore. Il bonus che scegli non puo superare il tuo bonus di attacco base e si applica solo quando attacchi con un'arma da mischia.~
-@525    = ~BARBARO:
-
-Dalle gelide distese del nord e dalle giungle infernali del sud provengono guerrieri coraggiosi, persino temerari. Sebbene non sia disciplinato o abile come un combattente normale, il barbaro puo lanciarsi volontariamente in una furia berserker, diventando un avversario piu resistente e forte.
-
-Punti ferita per livello: 1-12
-
-Vantaggi:
-* Competente con tutte le armi semplici e marziali, le armature leggere, le armature medie e gli scudi.
-* Furia barbarica: puo infuriarsi una volta al giorno ogni 4 livelli (inizia al 1° livello con un uso). La furia gli conferisce +4 alla Forza e alla Costituzione (che si sommano ad altri bonus alla Forza e alla Costituzione), oltre a una penalita di -2 alla CA, +2 ai tiri salvezza di Volonta e immunita a paura, stordimento, sonno, incantesimo, dominazione, confusione, incoscienza, paralisi, debolezza mentale e disperazione. La rabbia dura un numero di round pari a 3 piu il bonus di Costituzione (recentemente migliorato) del barbaro. Dopo aver dato sfogo alla rabbia, il barbaro sara affaticato per tre round, con una penalita di -2 alla Forza e alla Destrezza.
-* Movimento veloce: i barbari possono muoversi 10 piedi piu velocemente di un personaggio standard, a condizione che non siano appesantiti o indossino armature pesanti.
-* 2° livello: Riduzione del danno. Il barbaro ottiene 1/- punto di resistenza ai danni da taglio, da perforazione e da contusione. Ottiene 1/- punto di resistenza aggiuntivo ai livelli 5, 8, 11 e ogni 3 livelli successivi. Se il barbaro indossa un'armatura media, la riduzione del danno concessa da questa caratteristica e raddoppiata.
-* 2° livello: Schivata prodigiosa. I barbari mantengono il loro bonus di Destrezza alla Classe Armatura se vengono attaccati da nemici invisibili.
-* 5° livello: Schivata prodigiosa migliorata. I barbari non possono essere attaccati di sorpresa dai ladri a meno che l'attaccante non abbia almeno quattro livelli in piu rispetto al barbaro.
-* 15° livello: Furia Maggiore. Tutte le furie del barbaro diventano furie maggiori, che aumentano i bonus di Forza e Costituzione a +6 e il bonus ai tiri salvezza a +3. Continua comunque a ricevere la penalita di -2 alla Classe Armatura.
-* 20° livello: Rabbia instancabile. Il barbaro non e piu affaticato dopo una rabbia.
-* 21° livello: Rabbia potente. L'abilita rabbia del barbaro ora garantisce +8 alla Forza e alla Costituzione e +4 ai tiri salvezza di Volonta.
-* 25° livello: La rabbia barbarica ora garantisce +10 alla Forza e alla Costituzione e +5 ai tiri salvezza di Volonta.
-* 29° livello: la rabbia del barbaro ora garantisce +12 alla Forza e alla Costituzione e +6 ai tiri salvezza di Volonta.
-
-Svantaggi:
-* I barbari ottengono talenti a un ritmo piu lento rispetto ai combattenti.
-* I barbari non iniziano con la competenza nell'uso delle armature pesanti.~
 @977    = ~Rabbia barbarica
 
 Entrando in uno stato di rabbia, il barbaro ottiene +4 alla Forza e alla Costituzione (che si sommano ad altri bonus alla Forza e alla Costituzione), oltre a una penalita di -2 alla CA, +2 ai tiri salvezza sulla Volonta e immunita a paura, stordimento, sonno, incantesimo, dominazione, confusione, incoscienza, paralisi, debolezza mentale e disperazione. La rabbia dura 3 round + un numero di round pari al bonus di Costituzione (appena migliorato) del barbaro. Dopo aver dato sfogo alla sua rabbia, il barbaro sara affaticato per tre round, subendo una penalita di -2 alla Forza e alla Destrezza.~

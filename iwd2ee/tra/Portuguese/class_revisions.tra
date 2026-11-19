@@ -513,7 +513,7 @@ Você pode aumentar a área de efeito de suas magias.
 
 Pré-requisitos: Capacidade de lançar magias de 2º nível.
 
-Benefício: Você ganha a habilidade Ampliar Magia, que pode ser usada à vontade como uma ação livre. Usá-la aumenta a área de efeito da próxima magia que você lançar em 50%, mas faz com que ela ocupe um nível de magia um nível mais alto.
+Benefício: Você ganha a habilidade Ampliar Magia, que pode ser usada à vontade como uma ação livre. Usá-la aumenta a área de efeito da próxima magia que você lançar em 50%, mas faz com que ela ocupe um nível de magia um nível mais alto. Só são ampliadas as magias com área circular ou em cone; paredes e outros formatos especiais, como Parede Prismática e Golpe do Vento de Aço, não são afetados.
 (Original: Metamagic, Widen Spell)~
 @363 = ~Metamágica, Magia em Massa~
 @364 = ~METAMÁGICA, MAGIA EM MASSA:

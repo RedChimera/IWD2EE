@@ -1328,28 +1328,6 @@ Disadvantages:
 @222    = ~Expertise
 
 When you use this ability, you may choose to gain an AC bonus of up to +5, and an attack penalty of the same amount. The bonus you choose may not exceed your base attack bonus, and only applies while you are attacking with a melee weapon.~
-@525    = ~BARBARIAN:
-
-From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
-
-Hit points per level: 1-12
-
-Advantages:
-* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness for 3 rounds. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.
-* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
-* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, and bludgeoning damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
-* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
-* 5th level: Improved Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian. Barbarian rage now lasts a number of additional rounds equal to the barbarian's newly improved Constitution bonus.
-* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 AC penalty.
-* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
-* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
-* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
-* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
-
-Disadvantages:
-* Barbarians gain feats at a slower rate than fighters.
-* Barbarians do not start with proficiency in heavy armor.~
 @977    = ~Barbarian Rage
 
 By entering a rage, the barbarian gains +4 to Strength and Constitution (which stack with other bonuses to Strength and Constitution), as well as a -2 AC penalty, +2 to Will saves, and immunity to fear, stun, sleep, charm, domination, confusion, unconsciousness, paralysis, feeblemind, and hopelessness. The rage lasts for 3 rounds + a number of rounds equal to the barbarian's (newly improved) Constitution bonus. After raging the barbarian will be fatigued for three rounds, giving them a -2 penalty to Strength and Dexterity.~

@@ -1330,7 +1330,7 @@ Tempo de Conjuração: 4
 Área de Efeito: Conjurador
 Teste de Resistência: Nenhum
 
-Este feitiço cria uma esfera mágica imóvel e ligeiramente cintilante ao redor do conjurador, que impede que feitiços de 1º, 2º ou 3º nível afetem o conjurador. Isso inclui habilidades inatas e efeitos de dispositivos. No entanto, qualquer tipo de feitiço pode ser lançado para fora da esfera mágica sem penalidade, e feitiços de mago estritamente defensivos que afetam apenas o conjurador, como Imagem Espelhada (Mirror Image), ainda podem ser lançados (feitiços não defensivos e aqueles que podem ser lançados em outros personagens, como Armadura da Morte e Proteção contra o Mal, serão bloqueados). O globo pode ser derrubado por um feitiço bem-sucedido de Dispersar Magia.~
+Este feitiço cria uma esfera mágica imóvel e ligeiramente cintilante ao redor do conjurador, que impede que feitiços de 1º, 2º ou 3º nível afetem o conjurador. Isso inclui habilidades inatas e efeitos de dispositivos. No entanto, qualquer tipo de feitiço pode ser lançado para fora da esfera mágica sem penalidade, mas os feitiços de 1º a 3º nível que o conjurador lança em si mesmo também são bloqueados, inclusive feitiços estritamente defensivos como Imagem Espelhada (Mirror Image). O globo pode ser derrubado por um feitiço bem-sucedido de Dispersar Magia.~
 @1655 = ~Globo de Invulnerabilidade~
 @1656 = ~Globo de Invulnerabilidade
 Globe of Invulnerability (Abjuração)
@@ -5100,7 +5100,7 @@ Tempo de Conjuração: 8
 Área de Efeito: Especial
 Teste de Resistência: Nenhum
 
-Simulacro cria uma duplicata do conjurador, que servirá ao conjurador durante a duração. Ela tem metade dos pontos de vida do conjurador e metade do nível do conjurador (arredondado para cima) em cada uma das classes do conjurador. O simulacro retém os feitiços memorizados pelo conjurador, que ele pode lançar também (mas apenas os de nível baixo o suficiente). Não possui equipamentos, sendo útil principalmente como um conjurador extra. Um personagem só pode ter um simulacro de cada vez.~
+Simulacro cria uma duplicata do conjurador, que servirá ao conjurador durante a duração. Ela tem metade dos pontos de vida do conjurador e metade do nível do conjurador (arredondado para cima) em cada uma das classes do conjurador. O simulacro retém os feitiços memorizados pelo conjurador, que ele pode lançar também (mas apenas os de nível baixo o suficiente). Não possui equipamentos, sendo útil principalmente como um conjurador extra. Um personagem só pode ter um simulacro de cada vez. O simulacro de um bardo não pode usar canções de bardo.~
 @37863 = ~Inverter a Gravidade~
 @38863 = ~Inverter a Gravidade
 Reverse Gravity (Transmutação)

@@ -5757,7 +5757,7 @@ Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 //@11131    = ~Twelve Paces~
-@11132    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to sever lengths from the wielder, taking the victim down before they can even enter close combat.
+@11132    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to seven lengths from the wielder, taking the victim down before they can even enter close combat.
 
 STATISTICS:
 
@@ -13424,7 +13424,7 @@ Weight: 3 lb.~
 
 STATISTICS:
 
-Shield Bonus: +10
+Shield Bonus: +12
 Armor Bonus:  +1 vs. missile weapons
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%

@@ -135,6 +135,7 @@ COPY_EXISTING ~11HFAMCM.itm~ ~override~
 	SAY IDENTIFIED_DESC @10071
 
 COPY_EXISTING ~12AMULHC.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=146 parameter1=10 STR_VAR match_resource=~SPPR217~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR target=4 range=100 END
 	END
@@ -4703,6 +4704,9 @@ COPY_EXISTING ~00ax1hck.itm~ ~override~ ~00hfaxck.itm~ ~override~ ~ushamtdt.itm~
 
 COPY_EXISTING ~00dart83.itm~ ~override~
 	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=0 END
+
+COPY_EXISTING ~00ax1h98.itm~ ~override~ ~usax1h48.itm~ ~override~
+	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=1 END
 
 COPY_EXISTING ~11bookde.itm~ ~override~ ~11hfbkde.itm~ ~override~
 	READ_BYTE 0x2b us_kit_unusability_2

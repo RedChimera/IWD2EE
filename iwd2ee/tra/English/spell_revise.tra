@@ -1330,7 +1330,7 @@ Casting Time: 4
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell creates an immobile, faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from affecting the caster. This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere with no penalty, and strictly defensive mage spells that only impact the caster, such as Mirror Image, may still be cast (non-defensive spells and those which can be cast on other characters, such as Death Armor and Protection from Evil, will be blocked). The globe can be brought down by a successful Dispel Magic spell.~
+This spell creates an immobile, faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from affecting the caster. This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere with no penalty, but 1st- to 3rd-level spells the caster casts on themself are blocked as well, including strictly defensive spells such as Mirror Image. The globe can be brought down by a successful Dispel Magic spell.~
 @1655    = ~Globe of Invulnerability~
 @1656    = ~Globe of Invulnerability
 (Abjuration)
@@ -5095,7 +5095,7 @@ Casting Time: 8
 Area of Effect: Special
 Saving Throw: None
 
-Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time.~
+Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time. A bard's simulacrum cannot use bard songs.~
 @37863     = ~Reverse Gravity~
 @38863     = ~Reverse Gravity
 (Transmutation)

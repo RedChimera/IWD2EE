@@ -486,7 +486,7 @@ Vous pouvez augmenter la zone d’effet de vos sorts.
 
 Prérequis : La capacité de lancer des sorts de niveau 2.
 
-Avantage : Vous gagnez la capacité Extension de zone d’effet, utilisable à volonté comme une action libre. L’utiliser augmente la zone d’effet de votre prochain sort de 50%, mais nécessite un emplacement de sort d’un niveau plus haut.~
+Avantage : Vous gagnez la capacité Extension de zone d’effet, utilisable à volonté comme une action libre. L’utiliser augmente la zone d’effet de votre prochain sort de 50%, mais nécessite un emplacement de sort d’un niveau plus haut. Seuls les sorts dont la zone d’effet est circulaire ou en cône sont élargis ; les murs et les autres formes particulières, comme Mur Prismatique et Frappe du vent d’acier, ne sont pas affectés.~
 @363	= ~Sort de groupe~
 @364	= ~MÉTAMAGIE, SORT DE GROUPE :
 

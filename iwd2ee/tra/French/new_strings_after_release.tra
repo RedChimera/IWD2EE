@@ -1446,28 +1446,6 @@ Désavantages :
 @222	= ~Expertise du combat
 
 Lorsque vous utilisez cette capacité, vous pouvez choisir de gagner un bonus à la classe d’armure allant jusqu’à +5, et une pénalité d’attaque équivalente. Le bonus choisi ne peut excéder le bonus de base à l’attaque du personnage et ne s’applique que lorsque vous attaquez avec une arme de mêlée.~
-@525	= ~BARBARE :
-
-Des terres gelées du Nord et des jungles infernales du Sud viennent des guerriers dont la bravoure n’a d’égale que l’implacabilité. Ces barbares, bien que manquant de discipline, voire de compétences, peuvent devenir des adversaires particulièrement coriaces s’ils entrent dans une rage de berserker.
-
-Points de vie par niveau : 1-12
-
-Avantages :
-* Compétent avec toute arme courante et martiale, ainsi qu’avec les armures légères ou moyennes et les boucliers.
-* Rage de berserker : peut entrer dans cet état une fois par jour tous les 4 niveaux (à partir du 1er niveau avec un seul accès de rage). La rage leur confère +4 en Force et Constitution (qui s’ajoutent à d’autres bonus de Force et de Constitution), ainsi qu’une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité à la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure un nombre de rounds égal à 3 plus le bonus de Constitution (nouvellement boosté) du barbare. Après la rage, le barbare sera fatigué pendant 3 rounds, subissant une pénalité de -2 en Force et Dextérité.
-* Déplacement accéléré : le barbare gagne 3 mètres en déplacement par rapport à un personnage normal, à condition de ne pas être encombré ou de ne pas porter une armure lourde.
-* Niveau 2 : Réduction des dégâts. Le barbare gagne 1/- point de résistance aux dégâts tranchants, perforants et contondants. Il ou elle gagne 1/- point de résistance supplémentaire aux niveaux 5, 8, 11 et tous les 3 niveaux suivants. Si le barbare porte une armure moyenne, la réduction des dégâts accordée par cette capacité est doublée.
-* Niveau 2 : Esquive instinctive. Les barbares conservent leur bonus de Dextérité à la classe d’armure s’ils sont attaqués par des ennemis invisibles.
-* Niveau 5 : Esquive instinctive améliorée. Le barbare ne peut subir d’attaque sournoise venant d’un roublard, sauf si ce dernier est supérieur de 4 niveaux (ou plus) au barbare.
-* Niveau 15 : Rage de grand berserker. La rage de berserker se transforme en "rage de grand berserker", se traduisant par 6 points de bonus en Force et en Constitution, + 3 points de bonus aux jets de sauvegarde. La pénalité de 2 points à la classe d’armure est maintenue.
-* Niveau 20 : Rage sans fatigue. Le barbare n’est plus fatigué après une rage.
-* Niveau 21 : Rage puissante. La capacité de rage du barbare accorde désormais +8 en Force et Constitution et +4 aux jets de sauvegarde de Volonté.
-* Niveau 25 : La rage du barbare accorde désormais +10 en Force et Constitution et +5 aux jets de sauvegarde de Volonté.
-* Niveau 29 : La rage du barbare accorde désormais +12 en Force et Constitution et +6 aux jets de sauvegarde de Volonté.
-
-Désavantages :
-* Le barbare acquiert des dons à une cadence plus lente que le guerrier.
-* Le barbare débute sans aucune compétence en armures lourdes.~
 @977	= ~Rage de berserker
 
 En entrant en rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d’autres bonus à la Force et à la Constitution), ainsi qu’une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, à l’étourdissement, au sommeil, au charme, à la domination, à la confusion, à l’évanouissement, à la paralysie, à la débilité et au désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant trois rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.~

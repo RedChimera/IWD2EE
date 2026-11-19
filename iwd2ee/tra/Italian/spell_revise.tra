@@ -1290,7 +1290,7 @@ Tempo di Lancio: 4
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo crea una sfera magica immobile e debolmente scintillante attorno all'incantatore che impedisce a qualsiasi effetto di incantesimo di 1' 2' o 3' livello di influenzare l'incantatore. Cio' include abilita' innate ed effetti derivanti dai dispositivi. Tuttavia qualsiasi tipo di incantesimo puo' essere lanciato fuori dalla sfera magica senza penalita' e gli incantesimi strettamente difensivi del mago che hanno un impatto solo su chi l'ha lanciato come Immagini Illusorie possono comunque essere lanciati (gli incantesimi non difensivi e quelli che possono essere lanciati su altri personaggi come Armatura della Morte e Protezione dal Male verranno bloccati). Il globo puo' essere abbattuto da un incantesimo Dissolvi Magie riuscito.~
+Questo incantesimo crea una sfera magica immobile e debolmente scintillante attorno all'incantatore che impedisce a qualsiasi effetto di incantesimo di 1' 2' o 3' livello di influenzare l'incantatore. Cio' include abilita' innate ed effetti derivanti dai dispositivi. Tuttavia qualsiasi tipo di incantesimo puo' essere lanciato fuori dalla sfera magica senza penalita', ma anche gli incantesimi di livello da 1 a 3 che l'incantatore lancia su se stesso vengono bloccati, compresi quelli strettamente difensivi come Immagini Illusorie. Il globo puo' essere abbattuto da un incantesimo Dissolvi Magie riuscito.~
 @1655=~Globo d'Invulnerabilita'~
 @1656=~Globo d'Invulnerabilita'
 (Abiurazione)
@@ -4866,7 +4866,7 @@ Tempo di Lancio: 8
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Simulacro crea un duplicato dell'incantatore che servira' all'incantatore per tutta la durata. Ha meta' dei punti ferita dell'incantatore e meta' del livello dell'incantatore (arrotondato per eccesso) in ciascuna delle classi dell'incantatore. Il simulacro conserva gli incantesimi memorizzati dall'incantatore che puo' anche lanciare (ma solo quelli di livello sufficientemente basso). Non ha equipaggiamento quindi e' utile principalmente come incantatore extra. Un personaggio puo' avere un solo simulacro alla volta.~
+Simulacro crea un duplicato dell'incantatore che servira' all'incantatore per tutta la durata. Ha meta' dei punti ferita dell'incantatore e meta' del livello dell'incantatore (arrotondato per eccesso) in ciascuna delle classi dell'incantatore. Il simulacro conserva gli incantesimi memorizzati dall'incantatore che puo' anche lanciare (ma solo quelli di livello sufficientemente basso). Non ha equipaggiamento quindi e' utile principalmente come incantatore extra. Un personaggio puo' avere un solo simulacro alla volta. Il simulacro di un bardo non puo' usare i canti bardici.~
 @37863=~Gravita' Inversa~
 @38863=~Gravita' inversa
 (Trasmutazione)

@@ -1326,7 +1326,7 @@ Temps d’incantation : 4
 Zone d’effet : lanceur
 Jet de sauvegarde : aucun
 
-Ce sort crée une sphère immobile, légèrement scintillante autour du lanceur qui empêche tout effet de sorts de niveau 1, 2 ou 3 d’affecter le lanceur. Cela inclut les capacités innées et les effets magiques des objets. Cependant, tout type de sort peut être lancé hors de la sphère magique sans pénalité, et les sorts de mage strictement défensifs qui n’impactent que le lanceur, comme Image miroir, peuvent encore être lancés (les sorts non défensifs et ceux pouvant être lancés sur d’autres personnages, comme Armure de la mort et Protection contre le mal, seront bloqués). Le globe peut être annulé par un sort de Dissipation de la magie réussi.~
+Ce sort crée une sphère immobile, légèrement scintillante autour du lanceur qui empêche tout effet de sorts de niveau 1, 2 ou 3 d’affecter le lanceur. Cela inclut les capacités innées et les effets magiques des objets. Cependant, tout type de sort peut être lancé hors de la sphère magique sans pénalité, mais les sorts de niveau 1 à 3 que le lanceur se lance à lui-même sont également bloqués, y compris les sorts strictement défensifs comme Image miroir. Le globe peut être annulé par un sort de Dissipation de la magie réussi.~
 
 @1655	= ~Globe d’invulnérabilité~
 @1656	= ~Globe d’invulnérabilité
@@ -5181,7 +5181,7 @@ Temps d’incantation : 8
 Zone d’effet : Spéciale
 Jet de sauvegarde : aucun
 
-Simulacre crée un double du lanceur qui le servira pendant la durée du sort. Il possède la moitié des points de vie du lanceur et la moitié du niveau du lanceur dans chacune des classes du lanceur (arrondi au supérieur). Le simulacre conserve les sorts mémorisés du lanceur, qu’il peut également lancer (mais seulement ceux d’un niveau suffisamment bas). Il n’a pas d’équipement, donc il est principalement utile en tant que lanceur de sorts supplémentaire. Un personnage ne peut avoir qu’un seul simulacre à la fois.~
+Simulacre crée un double du lanceur qui le servira pendant la durée du sort. Il possède la moitié des points de vie du lanceur et la moitié du niveau du lanceur dans chacune des classes du lanceur (arrondi au supérieur). Le simulacre conserve les sorts mémorisés du lanceur, qu’il peut également lancer (mais seulement ceux d’un niveau suffisamment bas). Il n’a pas d’équipement, donc il est principalement utile en tant que lanceur de sorts supplémentaire. Un personnage ne peut avoir qu’un seul simulacre à la fois. Le simulacre d’un barde ne peut pas utiliser les chants de barde.~
 
 @37863 	= ~Gravité inversée~
 @38863 	= ~Gravité inversée

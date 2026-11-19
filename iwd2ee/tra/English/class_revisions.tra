@@ -481,7 +481,7 @@ You may increase the area of effect of your spells.
 
 Prerequisites: The ability to cast 2nd-level spells.
 
-Benefit: You gain the Widen Spell ability, usable at will as a free action. Using it increases the area of effect of your next spell by 50%, but causes it to take up a spell slot one level higher.~
+Benefit: You gain the Widen Spell ability, usable at will as a free action. Using it increases the area of effect of your next spell by 50%, but causes it to take up a spell slot one level higher. Only spells with a circular or cone-shaped area are widened; walls and other special shapes, such as Prismatic Wall and Steel Wind Strike, are not affected.~
 @363    = ~Mass Spell~
 @364    = ~METAMAGIC, MASS SPELL:
 
