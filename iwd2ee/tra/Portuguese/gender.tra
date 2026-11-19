@@ -1,6 +1,9 @@
 <ABENCOADO>abençoado
 abençoada
 
+<ACORDA_LO>acordá-lo
+acordá-la
+
 <ACOSTUMADO>acostumado
 acostumada
 
@@ -15,6 +18,9 @@ ajudá-la
 
 <AJUDA_LO_MEU_SENHOR>ajudá-lo, meu senhor
 ajudá-la, minha senhora
+
+<AJUDA_LO_MEU_SOBERANO>ajudá-lo, meu soberano
+ajudá-la, minha soberana
 
 <ALGUM_IDIOTA>algum idiota
 alguma idiota
@@ -43,6 +49,9 @@ anã
 <ANSIOSO>ansioso
 ansiosa
 
+<AQUELE>aquele
+aquela
+
 <ARMADO>armado
 armada
 
@@ -52,11 +61,17 @@ arrasada
 <ATACADO>atacado
 atacada
 
+<ATACA_LO>atacá-lo
+atacá-la
+
 <ATENCIOSO>atencioso
 atenciosa
 
 <ATENDE_LO>atendê-lo
 atendê-la
+
+<AUXILIA_LO>auxiliá-lo
+auxiliá-la
 
 <AVENTUREIRO>aventureiro
 aventureira
@@ -79,8 +94,23 @@ barda
 <BEBADO>bêbado
 bêbada
 
+<BEBADO_2>*bêbado?*
+*bêbada?*
+
+<BELO_IRMAO_MAI>Belo irmão
+Bela irmã
+
+<BEM_ANSIOSO>bem ansioso
+bem ansiosa
+
+<BEM_ENCONTRADO_MAI>Bem-encontrado
+Bem-encontrada
+
 <BEM_EQUIPADO>bem equipado
 bem equipada
+
+<BEM_IMPRESSIONADO>bem impressionado
+bem impressionada
 
 <BEM_VINDO>bem-vindo
 bem-vinda
@@ -99,6 +129,9 @@ boba
 
 <BOM>bom
 boa
+
+<BOM_AVENTUREIRO>bom aventureiro
+boa aventureira
 
 <BOM_DEMAIS>bom demais
 boa demais
@@ -130,6 +163,9 @@ cansada
 <CANTOR>cantor
 cantora
 
+<CARNUDO>carnudo
+carnuda
+
 <CEGO>cego
 cega
 
@@ -139,11 +175,20 @@ cercada
 <CERTO>certo
 certa
 
+<COLEGA_INICIADO_MAI>Colega iniciado
+Colega iniciada
+
 <COLETOR>coletor
 coletora
 
 <COMO_BARDO_MAI>Como bardo
 Como barda
+
+<COMO_COMPANHEIRO_DRUIDA>como companheiro druida
+como companheira druida
+
+<COMO_LADINO_MAI>Como ladino
+Como ladina
 
 <COMO_MAGO>como mago
 como maga
@@ -153,6 +198,9 @@ Como maga
 
 <COMO_PALADINO_MAI>Como paladino
 Como paladina
+
+<COMO_PATRULHEIRO_MAI>Como patrulheiro
+Como patrulheira
 
 <COMO_SACERDOTE>como sacerdote
 como sacerdotisa
@@ -175,14 +223,23 @@ confusa
 <CONHECE_LO>conhecê-lo
 conhecê-la
 
+<CONHECIDO>conhecido
+conhecida
+
 <CONSIDERA_LO_UM_ALIADO>considerá-lo um aliado
 considerá-la uma aliada
+
+<CONSIDERA_LO_UM_ASSOCIADO>considerá-lo um associado
+considerá-la uma associada
 
 <CONTAMINADO>contaminado
 contaminada
 
 <CONTRATADO>contratado
 contratada
+
+<CONTRATA_LO>contratá-lo
+contratá-la
 
 <CONVENCIDO>convencido
 convencida
@@ -196,11 +253,23 @@ corajosamente tola
 <CORAJOSO>corajoso
 corajosa
 
+<CORAJOSO_OU_TOLO_MAI>Corajoso ou tolo
+Corajosa ou tola
+
 <CORRETO>correto
 correta
 
 <CRIADO>criado
 criada
+
+<CRIADO_FILHO_MAI>Criado... filho
+Criada... filha
+
+<CRIATURA_O_OFENDEU>criatura o ofendeu
+criatura a ofendeu
+
+<CUMPRIMENTA_LO>cumprimentá-lo
+cumprimentá-la
 
 <CURANDEIRO>curandeiro
 curandeira
@@ -208,20 +277,44 @@ curandeira
 <CURIOSO>curioso
 curiosa
 
+<DECEPCIONADO>decepcionado
+decepcionada
+
 <DECIDIDO>decidido
 decidida
 
 <DEIXA_ELE>deixa ele
 deixa ela
 
+<DEIXA_LO>deixá-lo
+deixá-la
+
+<DEIXA_LO_CAIDO>deixá-lo caído
+deixá-la caída
+
+<DEIXE_O>deixe-o
+deixe-a
+
 <DESARMADO>desarmado
 desarmada
+
+<DESGRACADO>desgraçado
+desgraçada
+
+<DESPEDACA_LO>despedaçá-lo
+despedaçá-la
 
 <DESPERCEBIDO>despercebido
 despercebida
 
 <DETERMINADO>determinado
 determinada
+
+<DE_GAROTO_DE_RECADOS>de garoto de recados
+de garota de recados
+
+<DE_UM_LADINO>de um ladino
+de uma ladina
 
 <DE_UM_MONGE>de um monge
 de uma monja
@@ -235,14 +328,29 @@ disposta
 <DISPOSTO_CAPS>DISPOSTO
 DISPOSTA
 
+<DOIDO>doido
+doida
+
+<DO_SENHOR>do senhor
+da senhora
+
+<ELA_O_TENHA_TRAZIDO_MAI>ELA o tenha trazido
+ELA a tenha trazido
+
 <ELES_O_DEVORARAO>eles o devorarão
 eles a devorarão
+
+<ELE_O_ENCARA>ele o encara
+ele a encara
 
 <ELFO>elfo
 elfa
 
 <ELFO_NEGRO>elfo negro
 elfa negra
+
+<ELFO_NEGRO_2>- elfo negro -
+- elfa negra -
 
 <ELIMINADO>eliminado
 eliminada
@@ -277,6 +385,9 @@ esperta
 <ESSE_CACHORRO>esse cachorro
 essa cachorra
 
+<ESSE_CAO>esse cão
+essa cadela
+
 <ESSE_CARA>esse cara
 essa aí
 
@@ -298,8 +409,17 @@ estar viva
 <ESTAVA_CURIOSO>estava curioso
 estava curiosa
 
+<ESTA_CERTO_MAI>Está certo
+Está certa
+
+<ESTA_DECIDIDO>está decidido
+está decidida
+
 <ESTA_ENGANADO>está enganado
 está enganada
+
+<ESTA_MANCOMUNADO>está mancomunado
+está mancomunada
 
 <ESTA_MORTO>está morto
 está morta
@@ -316,8 +436,20 @@ esteja disposta
 <ESTEJA_SATISFEITO_CONSIGO_>esteja satisfeito consigo mesmo
 esteja satisfeita consigo mesma
 
+<ESTEJA_SATISFEITO_CONSIGO_ME>esteja satisfeito consigo mesmo
+esteja satisfeita consigo mesma
+
+<ESTE_AQUI>este aqui
+esta aqui
+
 <ESTE_INTRUSO>este intruso
 esta intrusa
+
+<ESTE_MENTIROSO>este mentiroso
+esta mentirosa
+
+<ESTE_MERCENARIOZINHO_MAI>Este mercenariozinho
+Esta mercenariazinha
 
 <ESTE_MERCENARIO_MAI>Este mercenário
 Esta mercenária
@@ -361,14 +493,29 @@ Eu mesma
 <EU_MESMO_SOU_UM_DROW_MAI>Eu mesmo sou um drow
 Eu mesma sou uma drow
 
+<EU_MESMO_UM_TRANSMUTADOR>eu mesmo um transmutador
+eu mesma uma transmutadora
+
 <EU_O_AJUDAREI>eu o ajudarei
 eu a ajudarei
+
+<EU_O_ATRAPALHE>eu o atrapalhe
+eu a atrapalhe
+
+<EU_O_AVISO_MAI>Eu o aviso
+Eu a aviso
 
 <EU_O_CONSUMIREI>eu o consumirei
 eu a consumirei
 
+<EU_O_DEIXARIA_MAI>Eu o deixaria
+Eu a deixaria
+
 <EU_O_ENCORAJO>eu o encorajo
 eu a encorajo
+
+<EU_O_SAUDO_MAI>Eu o saúdo
+Eu a saúdo
 
 <EU_O_SEGUIREI>eu o seguirei
 eu a seguirei
@@ -382,14 +529,56 @@ extorquida
 <E_OUSADO>é ousado
 é ousada
 
+<E_OUSADO_MAI>É ousado
+É ousada
+
+<E_O_ACONSELHO>e o aconselho
+e a aconselho
+
+<E_O_APROXIMA>e o aproxima
+e a aproxima
+
+<E_SILENCIOSO_MAI>É silencioso
+É silenciosa
+
+<E_UM_MENSAGEIRO_MAI>É um mensageiro
+É uma mensageira
+
+<FAZER_SOZINHO>fazer sozinho
+fazer sozinha
+
+<FAZE_LO>fazê-lo
+fazê-la
+
 <FEIO>feio
 feia
 
 <FERIDO>ferido
 ferida
 
+<FERIDO_MAI>Ferido
+Ferida
+
 <FICARA_PRESO>ficará preso
 ficará presa
+
+<FICAREI_SATISFEITO>ficarei satisfeito
+ficarei satisfeita
+
+<FICAR_CALADO>ficar calado
+ficar calada
+
+<FICAR_PARADO>ficar parado
+ficar parada
+
+<FICAR_QUIETO>ficar quieto
+ficar quieta
+
+<FIQUE_ATENTO_MAI>Fique atento
+Fique atenta
+
+<FIQUE_AVISADO>fique avisado
+fique avisada
 
 <FIQUE_CALADO>fique calado
 fique calada
@@ -397,11 +586,26 @@ fique calada
 <FORASTEIRO>forasteiro
 forasteira
 
+<FORASTEIRO_MAI>Forasteiro
+Forasteira
+
+<FORASTEIRO_TOLO_MAI>Forasteiro tolo
+Forasteira tola
+
 <FORCADO>forçado
 forçada
 
+<FORTALECIDO>fortalecido
+fortalecida
+
 <FOR_FERIDO>for ferido
 for ferida
+
+<FOSSE_UM_DELEGADO>fosse um delegado
+fosse uma delegada
+
+<FRAGIL_E_FERIDO>frágil e ferido
+frágil e ferida
 
 <FUI_OBRIGADO>fui obrigado
 fui obrigada
@@ -409,11 +613,17 @@ fui obrigada
 <GAROTO>garoto
 garota
 
+<GENTILEZA_SUA_AMIGO_MAI>Gentileza sua, amigo
+Gentileza sua, amiga
+
 <GNOMO>gnomo
 gnoma
 
 <GRATO>grato
 grata
+
+<GROSSEIRO>grosseiro
+grosseira
 
 <GUERREIRO>guerreiro
 guerreira
@@ -433,6 +643,12 @@ honesta
 <HONRADO>honrado
 honrada
 
+<HONRADO_CLIENTE>honrado cliente
+honrada cliente
+
+<HOSPEDADO>hospedado
+hospedada
+
 <HUMANO>humano
 humana
 
@@ -445,14 +661,23 @@ impedida
 <IMPRESSIONADO>impressionado
 impressionada
 
+<INDIGNO>indigno
+indigna
+
 <INGENUO>ingênuo
 ingênua
 
 <INICIADO>iniciado
 iniciada
 
+<INICIADO_2>iniciado
+iniciada
+
 <INICIADO_MAI>Iniciado
 Iniciada
+
+<INICIADO_R>, iniciado
+, iniciada
 
 <INIMIGO>inimigo
 inimiga
@@ -475,8 +700,14 @@ irmã
 <IRMAO_DAS_SOMBRAS>irmão-das-sombras
 irmã-das-sombras
 
+<IRMAO_INICIADO>irmão iniciado
+irmã iniciada
+
 <IRRITADO>irritado
 irritada
+
+<ISSO_O_DEIXA>isso o deixa
+isso a deixa
 
 <JUSTO>justo
 justa
@@ -486,6 +717,9 @@ la
 
 <LOUCO>louco
 louca
+
+<MACHUCADO>machucado
+machucada
 
 <MACHUCADO_MAI>Machucado
 Machucada
@@ -499,6 +733,9 @@ mais interessada
 <MAIS_PARECIDO>mais parecido
 mais parecida
 
+<MAIS_UM_DAQUELES_MERCENARIOS_MAI>Mais um daqueles mercenários novatos
+Mais uma daquelas mercenárias novatas
+
 <MAIS_UM_MERCENARIO>mais um mercenário
 mais uma mercenária
 
@@ -508,8 +745,17 @@ mais velha
 <MALUCO>maluco
 maluca
 
+<MANCOMUNADO>mancomunado
+mancomunada
+
+<MANDA_LO>mandá-lo
+mandá-la
+
 <MANTE_LO>mantê-lo
 mantê-la
+
+<MARIDO_O_RECOMPENSARIA>marido o recompensaria
+marido a recompensaria
 
 <MASSACRA_LO>massacrá-lo
 massacrá-la
@@ -525,6 +771,12 @@ mentirosa
 
 <MERCENARIO>mercenário
 mercenária
+
+<MERCENARIO_2>, mercenário?
+, mercenária?
+
+<MERCENARIO_3>*mercenário,*
+*mercenária,*
 
 <MESMO>mesmo
 mesma
@@ -544,6 +796,15 @@ MESTRA DOS SONHOS
 <MESTRE_DO_TERROR_MAI>Mestre do Terror
 Mestra do Terror
 
+<MESTRE_DO_TERROR_MAI_2>Mestre do Terror
+Mestra do Terror
+
+<MESTRE_DO_TERROR_MAI_R>MESTRE DO TERROR
+MESTRA DO TERROR
+
+<METE_LO>metê-lo
+metê-la
+
 <MEU_AMIGO>meu amigo
 minha amiga
 
@@ -556,11 +817,17 @@ minha cara
 <MEU_FIEL_DISCIPULO>meu fiel discípulo
 minha fiel discípula
 
+<MEU_FORTE_E_ROBUSTO_AVENTURE>meu forte e robusto aventureiro
+minha forte e robusta aventureira
+
 <MEU_HEROI>meu herói
 minha heroína
 
 <MEU_IRMAO>meu irmão
 minha irmã
+
+<MEU_LEAL_DISCIPULO>meu leal discípulo
+minha leal discípula
 
 <MEU_PRECIOSO>meu precioso
 minha preciosa
@@ -574,6 +841,15 @@ minha salvadora
 <MIM_MESMO>mim mesmo
 mim mesma
 
+<MORTAL_CARNUDO>mortal carnudo
+mortal carnuda
+
+<MORTAL_CARNUDO_E_DOENTIO>mortal carnudo e doentio
+mortal carnuda e doentia
+
+<MORTAL_CARNUDO_MAI>Mortal carnudo
+Mortal carnuda
+
 <MORTO>morto
 morta
 
@@ -583,14 +859,32 @@ muito mais poderosa
 <NAO_ERA_INIMIGO>não era inimigo
 não era inimiga
 
+<NAO_E_CONJURADOR>não é conjurador
+não é conjuradora
+
 <NAO_FIQUE_CONVENCIDO_MAI>Não fique convencido
 Não fique convencida
+
+<NAO_MACULADO>não maculado
+não maculada
+
+<NAO_O_CONHECO>não o conheço
+não a conheço
 
 <NAO_O_RECONHECO_MAI>Não o reconheço
 Não a reconheço
 
+<NAO_O_VI>não o vi
+não a vi
+
+<NAO_SOU_CONJURADOR>não sou conjurador
+não sou conjuradora
+
 <NAO_SOU_HUMANO_MAI>Não sou humano
 Não sou humana
+
+<NEM_CRIADO>nem criado
+nem criada
 
 <NENHUM_FEITICEIRO>nenhum feiticeiro
 nenhuma feiticeira
@@ -604,14 +898,23 @@ nobre paladina
 <NOSSO_SALVADOR>nosso salvador
 nossa salvadora
 
+<NOS_O_ABATEREMOS>nós o abateremos
+nós a abateremos
+
 <NOS_O_AJUDAREMOS>nós o ajudaremos
 nós a ajudaremos
 
 <NOVO>novo
 nova
 
+<NUM_LADRAO>num ladrão
+numa ladra
+
 <O>o
 a
+
+<OBEDECE_LO>obedecê-lo
+obedecê-la
 
 <OBRIGADO>obrigado
 obrigada
@@ -621,6 +924,9 @@ Obrigada
 
 <OCUPADO>ocupado
 ocupada
+
+<OFENDE_LO>ofendê-lo
+ofendê-la
 
 <ORIENTA_LO>orientá-lo
 orientá-la
@@ -646,8 +952,14 @@ A amiga retorna
 <O_CONSIDERAREI_UM_ASSOCIAD>o considerarei um associado
 a considerarei uma associada
 
+<O_ENCARA>o encara
+a encara
+
 <O_ESTRANHO_MAI>O estranho
 A estranha
+
+<O_FORASTEIRO_RETORNA_MAI>O forasteiro retorna
+A forasteira retorna
 
 <O_GNOMO>o gnomo
 a gnoma
@@ -670,11 +982,26 @@ a líder
 <O_MERCENARIO_DE_TARGOS>o mercenário de Targos
 a mercenária de Targos
 
+<O_MEU_HEROI>o meu herói
+a minha heroína
+
+<O_MUNDO_O_ABANDONAR>o mundo o abandonar
+o mundo a abandonar
+
+<O_NOSSO_SALVADOR>o nosso salvador
+a nossa salvadora
+
+<O_PENDURE>o pendure
+a pendure
+
 <O_PODEROSO_AVENTUREIRO>o poderoso aventureiro
 a poderosa aventureira
 
 <O_PODEROSO_MATADOR>o poderoso matador
 a poderosa matadora
+
+<O_POUPEM>o poupem
+a poupem
 
 <O_QUE_O_TRAZ_MAI>O que o traz
 O que a traz
@@ -687,6 +1014,18 @@ a saúda
 
 <O_SENHOR>o senhor
 a senhora
+
+<O_SENHOR_E>o senhor é
+a senhora é
+
+<O_SENHOR_MAI>O senhor
+A senhora
+
+<O_SENHOR_TENHA>o senhor tenha
+a senhora tenha
+
+<O_TRAPACEIRO_MAI>O TRAPACEIRO
+A TRAPACEIRA
 
 <O_VASSALO>o vassalo
 a vassala
@@ -721,11 +1060,20 @@ Para ser honesta
 <PARA_UM_DROW>para um drow
 para uma drow
 
+<PASSOS_O_ENGANARAM>passos o enganaram
+passos a enganaram
+
 <PERDIDO>perdido
 perdida
 
+<PERSUADI_LO>persuadi-lo
+persuadi-la
+
 <PIRRALHO>pirralho
 pirralha
+
+<PIRRALHO_MAI>PIRRALHO
+PIRRALHA
 
 <PORCO>porco
 porca
@@ -751,8 +1099,14 @@ presenteá-la
 <PREZADO_CLIENTE>prezado cliente
 prezada cliente
 
+<PRINCIPALMENTE_UM_QUE>principalmente um que
+principalmente uma que
+
 <PRONTO>pronto
 pronta
+
+<PROTEGE_LO>protegê-lo
+protegê-la
 
 <QUANDO_UM_TOLO_COMECA_MAI>Quando um tolo começa
 Quando uma tola começa
@@ -766,14 +1120,38 @@ querida
 <QUE_IRMAO_MAI>Que irmão
 Que irmã
 
+<QUE_O_EXPELIU>que o expeliu
+que a expeliu
+
+<QUE_O_EXPULSOU>que o expulsou
+que a expulsou
+
+<QUE_O_LEVA>que o leva
+que a leva
+
+<QUE_O_LEVOU>que o levou
+que a levou
+
+<QUE_O_TROUXERAM>que o trouxeram
+que a trouxeram
+
 <RAPAZ>rapaz
 moça
+
+<RECEBE_LO>recebê-lo
+recebê-la
 
 <RECOMPENSADO>recompensado
 recompensada
 
 <RECOMPENSA_LO>recompensá-lo
 recompensá-la
+
+<RECOMPENSA_LO_A>recompensá-lo(a)
+recompensá-la
+
+<REENCONTRA_LO>reencontrá-lo
+reencontrá-la
 
 <REMOVE_LO>removê-lo
 removê-la
@@ -793,8 +1171,14 @@ sábia
 <SACERDOTE>sacerdote
 sacerdotisa
 
+<SALVA_LO>salvá-lo
+salvá-la
+
 <SEGURO>seguro
 segura
+
+<SEJA_BEM_VINDO_MAI>Seja bem-vindo
+Seja bem-vinda
 
 <SEJA_OBSTINADO>seja obstinado
 seja obstinada
@@ -820,6 +1204,12 @@ SENHORA DA TEMPESTADE
 <SENHOR_DA_TEMPESTADE_MAI>Senhor da Tempestade
 Senhora da Tempestade
 
+<SENHOR_DA_TEMPESTADE_MAI_2>Senhor da Tempestade
+Senhora da Tempestade
+
+<SENHOR_DA_TEMPESTADE_MAI_R>SENHOR DA TEMPESTADE
+SENHORA DA TEMPESTADE
+
 <SENTINDO_AUDACIOSO>sentindo audacioso
 sentindo audaciosa
 
@@ -832,14 +1222,23 @@ sentir viva
 <SERA_CONSIDERADO_UM_ASSOCI>será considerado um associado
 será considerada uma associada
 
+<SERA_CONSIDERADO_UM_ASSOCIAD>será considerado um associado
+será considerada uma associada
+
 <SERA_RECOMPENSADO>será recompensado
 será recompensada
+
+<SERA_SEPARADO>será separado
+será separada
 
 <SERA_TRATADO>será tratado
 será tratada
 
 <SERIA_ACEITO>seria aceito
 seria aceita
+
+<SERIA_FRANCO>seria franco
+seria franca
 
 <SERIA_PODEROSO>seria poderoso
 seria poderosa
@@ -853,8 +1252,17 @@ serva
 <SERVO_MAI>Servo
 Serva
 
+<SER_ACRESCENTADO>ser acrescentado
+ser acrescentada
+
 <SER_AMEACADO>ser ameaçado
 ser ameaçada
+
+<SER_ANUNCIADO>ser anunciado
+ser anunciada
+
+<SER_COMPENSADO>ser compensado
+ser compensada
 
 <SER_CONVENCIDO>ser convencido
 ser convencida
@@ -880,11 +1288,23 @@ ser outra agente
 <SER_PAGO>ser pago
 ser paga
 
+<SER_PERSUADIDO>ser persuadido
+ser persuadida
+
 <SER_RECOMPENSADO>ser recompensado
 ser recompensada
 
+<SER_SINCERO>ser sincero
+ser sincera
+
+<SER_UM_DELEGADO_ESTRANGEIRO>ser um delegado estrangeiro
+ser uma delegada estrangeira
+
 <SEU_BOBO>seu bobo
 sua boba
+
+<SEU_CACHORRO_IMUNDO_MAI>Seu cachorro imundo
+Sua cachorra imunda
 
 <SEU_CAO_IMUNDO_MAI>Seu cão imundo
 Sua cadela imunda
@@ -895,8 +1315,14 @@ sua cadela insolente
 <SEU_CAO_MESTICO>seu cão mestiço
 sua cadela mestiça
 
+<SEU_CEGO>seu cego
+sua cega
+
 <SEU_COMPLETO_IMBECIL_MAI>Seu completo imbecil
 Sua completa imbecil
+
+<SEU_COMPLETO_TOLO_BUFAO_MAI>Seu completo tolo, bufão
+Sua completa tola, bufona
 
 <SEU_CRETINO_DESAJEITADO>seu cretino desajeitado
 sua cretina desajeitada
@@ -906,6 +1332,9 @@ sua desgraçada
 
 <SEU_ESTRANGEIRO_IDIOTA_MAI>Seu estrangeiro idiota
 Sua estrangeira idiota
+
+<SEU_FILHO_MAI>Seu filho
+Sua filha
 
 <SEU_IDIOTA>seu idiota
 sua idiota
@@ -919,11 +1348,20 @@ SUA IDIOTA
 <SEU_IDIOTA_MAI>Seu idiota
 Sua idiota
 
+<SEU_IDIOTA_MAI_2>Seu idiota
+Sua idiota
+
+<SEU_IDIOTA_MAI_R>SEU *IDIOTA!*
+SUA *IDIOTA!*
+
 <SEU_IMBECIL>seu imbecil
 sua imbecil
 
 <SEU_INIMIGO>seu inimigo
 sua inimiga
+
+<SEU_MORTAL_CARNUDO_E_TOLO>seu mortal carnudo e tolo
+sua mortal carnuda e tola
 
 <SEU_MORTAL_TOLO_E_CARNAL>seu mortal tolo e carnal
 sua mortal tola e carnal
@@ -934,11 +1372,17 @@ sua porca imunda
 <SEU_PORCO_IMUNDO_MAI>Seu porco imundo
 Sua porca imunda
 
+<SEU_TOLO>seu tolo
+sua tola
+
 <SEU_TOLO_INSOLENTE>seu tolo insolente
 sua tola insolente
 
 <SEU_TOLO_MAI>Seu tolo
 Sua tola
+
+<SEU_TOLO_MAI_2>SEU TOLO
+SUA TOLA
 
 <SILENCIOSO>silencioso
 silenciosa
@@ -949,17 +1393,32 @@ sincera
 <SI_MESMO>si mesmo
 si mesma
 
+<SORTE_O_ACOMPANHE>sorte o acompanhe
+sorte a acompanhe
+
+<SOU_APENAS_UM_SACERDOTE>sou apenas um sacerdote
+sou apenas uma sacerdotisa
+
 <SOU_GRATO_MAI>Sou grato
 Sou grata
 
 <SOU_NECESSARIO_MAI>Sou necessário
 Sou necessária
 
+<SOU_OBRIGADO_MAI>Sou obrigado
+Sou obrigada
+
+<SOU_SACERDOTE_TAMBEM_MAI>Sou sacerdote também
+Sou sacerdotisa também
+
 <SOU_UM_ABJURADOR_MAI>Sou um abjurador
 Sou uma abjuradora
 
 <SOU_UM_MONGE>sou* um monge
 sou* uma monja
+
+<SOU_UM_MONGE_R>*sou* um monge
+*sou* uma monja
 
 <SOU_UM_TIEFLING_MAI>Sou um tiefling
 Sou uma tiefling
@@ -970,11 +1429,20 @@ sozinha
 <SOZINHO_E_DESARMADO>sozinho e desarmado
 sozinha e desarmada
 
+<SSETH_O_FAVORECER_MAI>Sseth o favorecer
+Sseth a favorecer
+
+<SUPOSTAMENTE_O_AJUDARA>supostamente o ajudará
+supostamente a ajudará
+
 <SURDO>surdo
 surda
 
 <SURPRESO>surpreso
 surpresa
+
+<TALOSIANO>talosiano
+talosiana
 
 <TALOSIANO_MAI>Talosiano
 Talosiana
@@ -987,6 +1455,18 @@ tão generosa
 
 <TAO_TOLO>tão tolo
 tão tola
+
+<TARGOS_O_DEFENDERA_MAI>Targos o defenderá
+Targos a defenderá
+
+<TA_ANSIOSO>tá ansioso
+tá ansiosa
+
+<TA_METIDO>tá metido
+tá metida
+
+<TA_VIVO>tá vivo
+tá viva
 
 <TER_SIDO_BURRO>ter sido burro
 ter sido burra
@@ -1003,11 +1483,20 @@ tivesse sido criada
 <TOLO>tolo
 tola
 
+<TOLO_2>, tolo
+, tola
+
 <TOLO_DESCARADO_MAI>Tolo descarado
 Tola descarada
 
+<TOLO_ESTUPIDO_MAI>Tolo estúpido
+Tola estúpida
+
 <TOLO_FORASTEIRO_MAI>Tolo forasteiro
 Tola forasteira
+
+<TOLO_INSOLENTE_MAI>Tolo insolente
+Tola insolente
 
 <TOLO_MAI>Tolo
 Tola
@@ -1017,6 +1506,9 @@ traidora
 
 <TRANSMUTADOR>transmutador
 transmutadora
+
+<TYMORA_O_ABENCOE_MAI>Tymora o abençoe
+Tymora a abençoe
 
 <UM>um
 uma
@@ -1063,6 +1555,12 @@ uma boba
 <UM_CIDADAO_MEIO_IDIOTA>um cidadão meio-idiota
 uma cidadã meio-idiota
 
+<UM_COLEGA_SEGUIDOR_MAI>Um colega seguidor
+Uma colega seguidora
+
+<UM_COMPANHEIRO>um companheiro
+uma companheira
+
 <UM_COMPANHEIRO_SEGUIDOR_MA>Um companheiro seguidor
 Uma companheira seguidora
 
@@ -1080,6 +1578,9 @@ uma diplomata
 
 <UM_DOS_BRAVOS>um dos bravos
 uma das bravas
+
+<UM_DOS_CORAJOSOS>um dos corajosos
+uma das corajosas
 
 <UM_DOS_MERCENARIOS>um dos mercenários
 uma das mercenárias
@@ -1102,11 +1603,20 @@ uma *elfa
 <UM_ELFO_NEGRO>um elfo negro
 uma elfa negra
 
+<UM_ELFO_R>um *elfo*
+uma *elfa*
+
+<UM_ESCALDO>um escaldo
+uma escalda
+
 <UM_ESTRELA_PRATEADA_UM_DE_>um Estrela Prateada, um de seus sacerdotes
 uma Estrela Prateada, uma de suas sacerdotisas
 
 <UM_FALASTRAO>um falastrão
 uma falastrona
+
+<UM_FORASTEIRO_PARTICULARMENT>um forasteiro particularmente *irritante*
+uma forasteira particularmente *irritante*
 
 <UM_FORASTEIRO_PARTICULARME_3BAD>um forasteiro particularmente *incômodo
 uma forasteira particularmente *incômoda
@@ -1114,14 +1624,23 @@ uma forasteira particularmente *incômoda
 <UM_GNOMO>um gnomo
 uma gnoma
 
+<UM_GNOMO_CABECUDO>um gnomo cabeçudo
+uma gnoma cabeçuda
+
 <UM_GRANDE_CAMPEAO>um grande campeão
 uma grande campeã
 
 <UM_GUARDIAO_DO_CONHECIMENT>um Guardião do Conhecimento
 uma Guardiã do Conhecimento
 
+<UM_GUARDIAO_DO_SABER>um Guardião do Saber
+uma Guardiã do Saber
+
 <UM_GUERREIRO>um guerreiro
 uma guerreira
+
+<UM_GUERREIRO_CORAJOSO_E_CHEI>um guerreiro corajoso e cheio de recursos
+uma guerreira corajosa e cheia de recursos
 
 <UM_GUERREIRO_CORAJOSO_E_EN>um guerreiro corajoso e engenhoso
 uma guerreira corajosa e engenhosa
@@ -1140,6 +1659,9 @@ uma Ilmatari, uma Portadora
 
 <UM_INICIADO_MAI>Um iniciado
 Uma iniciada
+
+<UM_INICIADO_MAI_R>Um iniciado?
+Uma iniciada?
 
 <UM_INTRUSO>um intruso
 uma intrusa
@@ -1165,14 +1687,26 @@ Uma mentirosa
 <UM_MERCENARIO>um mercenário
 uma mercenária
 
+<UM_MERCENARIO_APARECEU>um mercenário apareceu
+uma mercenária apareceu
+
 <UM_MERCENARIO_INGENUO_MAI>Um mercenário ingênuo
 Uma mercenária ingênua
 
 <UM_MESTRE_DO_MEDO>um Mestre do Medo
 uma Mestra do Medo
 
+<UM_MESTRE_DO_TERROR>um Mestre do Terror
+uma Mestra do Terror
+
 <UM_MONGE_MAI>Um monge
 Uma monja
+
+<UM_MORTAL_CARNUDO_E_LOUCO>um mortal carnudo e louco
+uma mortal carnuda e louca
+
+<UM_MORTAL_CARNUDO_LOUCO>um mortal carnudo louco
+uma mortal carnuda louca
 
 <UM_MORTAL_DE_CARNE_E_OSSO_>um mortal de carne e osso insano
 uma mortal de carne e osso insana
@@ -1194,6 +1728,9 @@ uma paladina
 
 <UM_PESSIMO_MENTIROSO>um péssimo mentiroso
 uma péssima mentirosa
+
+<UM_PESSIMO_MENTIROSO_E_AINDA_MAI>Um péssimo mentiroso e ainda por cima um estúpido
+Uma péssima mentirosa e ainda por cima uma estúpida
 
 <UM_REPRESENTANTE>um representante
 uma representante
@@ -1243,6 +1780,12 @@ vista
 <VIVO>vivo
 viva
 
+<VOCE_BOM_MAI>Você bom
+Você boa
+
+<VOCE_ESPERTO_MAI>Você esperto
+Você esperta
+
 <VOCE_ESTA_VIVO>você está vivo
 você está viva
 
@@ -1251,3 +1794,9 @@ você mesma
 
 <VOCE_PORCO>você, porco
 você, porca
+
+<VOCE_SEGURO>você seguro
+você segura
+
+<XVIM_O_IMPEDIRA_MAI>Xvim o impedirá
+Xvim a impedirá
