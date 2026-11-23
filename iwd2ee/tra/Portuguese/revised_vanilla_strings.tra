@@ -3218,7 +3218,7 @@ Esta magia cura uma criatura de todos os seguintes males: dreno de energia, debi
 @101935=~Símbolo do Atordoamento~
 @101936=~Símbolo do Atordoamento
 (Todos) 
-Nível: Clr 8, Sor/Mag 8
+Nível: Clr 8, Fet/Mag 8
 Alcance: Visão do Conjurador
 Duração: 5 rodadas
 Tempo de Conjuração: 3
@@ -3230,7 +3230,7 @@ Esta magia conjura um glifo mágico imbuído de poder que canaliza seus efeitos at
 @101937=~Símbolo da Morte~
 @101938=~Símbolo da Morte 
 (Todos) 
-Nível: Clr 8, Sor/Mag 8, Oghma 8
+Nível: Clr 8, Fet/Mag 8, Oghma 8
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 3
@@ -4987,7 +4987,7 @@ Tipo: Duas mãos~
 @102968=~Mísseis Mágicos~
 @102969=~Invisibilidade
 (Ilusão)
-Nível: Brd 2, Sor/Mago 2
+Nível: Brd 2, Fet/Mag 2
 Alcance: Toque
 Duração: 10 minutos / nível
 Tempo de Conjuração: 2
@@ -7548,7 +7548,7 @@ Tipo:  Uma mão~
 @104735=~Segundo Kurttu, Kyosti, que desapareceu há pouco tempo, era marido de Carita e um dos melhores caçadores da vila. Kurttu também disse que Carita, a viúva, contou que, quando Kyosti sumiu, ele estava indo à Mata Sinistra, a leste da vila, caçar os enormes lobos brancos que vivem lá. No entanto, parece que o corpo dele nunca foi encontrado.~
 @104736=~Invisibilidade Aprimorada 
 (Ilusão) 
-Nível: Brd 4, Sor/Wiz 4, Mask 4
+Nível: Brd 4, Fet/Mag 4, Mask 4
 Alcance: Toque 
 Duração: 1 minuto / nível
 Tempo de Conjuração: 4 
@@ -10520,7 +10520,7 @@ Elient, 1370
 @106501=~Mas essa não é a coisa mais estranha... Eu vejo essas coisas, mas não sou *eu* quem vê, é sempre pelos olhos de outra, olhos de mulher, eu vejo essas... essas outras vidas, todas tingidas de cinza e tristeza, se ramificando para fora, como uma grande árvore negra e retorcida.~
 @106502=~Emoção: Desespero
 (Encantamento)
-Nível: Brd 3, Sor/Mag 4, Maldição Menor 4, Máscara 4
+Nível: Brd 3, Fet/Mag 4, Maldição Menor 4, Máscara 4
 Alcance: Visão do Conjurador
 Duração: 5 rodadas
 Tempo de Conjuração: 4
@@ -10540,7 +10540,7 @@ Esta magia cria a emoção de desespero na área de efeito. Todas as criaturas afet
 @106512=~Sangue Ardente de Beltyn~
 @106513=~Sangue Ardente de Beltyn
 (Necromancia)
-Nível: Sor/Mag 4
+Nível: Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: 1 rodada/2 níveis
 Tempo de Conjuração: 4
@@ -10551,7 +10551,7 @@ Esta magia transforma o sangue do alvo em chamas, causando de 3 a 12 pontos de v
 @106514=~Conjuração de Sombras~
 @106515=~Conjuração das Sombras
 (Ilusão)
-Nível: Brd 5, Sor/Mag 4, Máscara 5
+Nível: Brd 5, Fet/Mag 4, Máscara 5
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 4
@@ -10665,7 +10665,7 @@ Esta magia molda material do Semiplano das Sombras em um monstro ilusório sob o 
 @106618=~Bola de Fogo~
 @106619=~Nublar 
 (Ilusão)  
-Nível: Brd 2, Sor/Mag 2, Másc 2
+Nível: Brd 2, Fet/Mag 2, Másc 2
 Alcance: Conjurador
 Duração: 1 minuto / nível 
 Tempo de Conjuração: 2
@@ -10686,7 +10686,7 @@ Teste de Resistência: Nenhum
 Esta magia permite que um clérigo auxilie e proteja qualquer ser que não seja o próprio clérigo.  Por meio do toque, o conjurador remove os efeitos de medo, sono, debilidade mental, inconsciência, embriaguez, bem como os estados mentais de fúria, confusão e desesperança.  Além disso, o receptor fica protegido contra magias e outros ataques que causem esses efeitos durante a duração da magia.~
 @106622=~Cegueira 
 (Transmutação)  
-Nível: Brd 2, Clr 3, Sor/Mag 2, Másc 2
+Nível: Brd 2, Clr 3, Fet/Mag 2, Másc 2
 Alcance: Visão do Conjurador
 Duração: 8 horas
 Tempo de Conjuração: 2
@@ -12033,7 +12033,7 @@ Os drow então lutaram entre si, nobre contra nobre, sacerdote contra sacerdotisa
 ~
 @107329=~História de Águas Profundas - Era 0, Tuabemoots e Pioneiros:  
 
-Poucos conhecem hoje a verdadeira história desta grande cidade, que teve início há mais de mil anos, quando o Norte era de fato o que os sulistas ainda chamam com desdém: "o Norte Selvagem". Naqueles dias, a maior parte do Norte era coberta por vastas florestas altas de um verde antigo, e habitada por anões e goblinoides (nas montanhas e sopés mais ao norte) e por elfos (em enclaves florestais amplamente espalhados por todo o resto). Algumas tribos humanas primitivas viviam ao longo da Costa da Espada, pescando, caçando e se reunindo na primavera e no outono para trocar suas peles pelas joias e ferramentas de metal dos mercadores, ou por uma arma ou outra que porventura houvesse, com embarcações que vinham do Sul. Na primavera, essas embarcações vinham principalmente para cortar e levar árvores enormes para a construção de navios, já que árvores de tamanho tão grande não existiam mais mais ao sul.
+Poucos conhecem hoje a verdadeira história desta grande cidade, que teve início há mais de mil anos, quando o Norte era de fato o que os sulistas ainda chamam com desdém: "o Norte Selvagem". Naqueles dias, a maior parte do Norte era coberta por vastas florestas altas de um verde antigo, e habitada por anões e goblinoides (nas montanhas e sopés mais ao norte) e por elfos (em enclaves florestais amplamente espalhados por todo o resto). Algumas tribos humanas primitivas viviam ao longo da Costa da Espada, pescando, caçando e se reunindo na primavera e no outono para trocar suas peles pelas joias e ferramentas de metal dos mercadores, ou por uma arma ou outra que porventura houvesse, com embarcações que vinham do Sul. Na primavera, essas embarcações vinham principalmente para cortar e levar árvores enormes para a construção de navios, já que árvores de tamanho tão grande não existiam mais ao sul.
 
 No outono, as embarcações vinham cortar madeira para seus próprios reparos, ou para carregar madeira caso os infortúnios do comércio tivessem deixado seus porões vazios ou quase. A maioria desses tuabemoots acontecia num certo lugar onde havia um grande porto natural de águas profundas, protegido do mar por um esporão rochoso de terra, o braço de um penhasco costeiro isolado, e uma ilha rochosa mais além. 
 ~
@@ -12752,7 +12752,7 @@ Esta magia cura todas as criaturas aliadas dentro da área de efeito em 1d8 + 1 p
 @107480=~Palavra de Poder: Sono~
 @107481=~Palavra de Poder: Sono 
 (Conjuração) 
-Nível: Brd 2, Sor/Mago 2
+Nível: Brd 2, Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: 5 rodadas
 Tempo de Conjuração: 1 
@@ -12791,7 +12791,7 @@ Quando um mago evoca a magia Palavra de Poder: Sono, ele impõe um sono comatoso 
 @107509=~Emoção: Fúria~
 @107510=~Emoção: Fúria
 (Encantamento)
-Nível: Brd 3, Sor/Mago 4, Selune 4
+Nível: Brd 3, Fet/Mag 4, Selune 4
 Alcance: Visão do Conjurador
 Duração: 5 rodadas
 Tempo de Conjuração: 4
@@ -12802,7 +12802,7 @@ Esta magia cria a emoção de fúria dentro da área de efeito. Todas as criaturas a
 @107511=~Emoção: Medo~
 @107512=~Emoção: Medo 
 (Encantamento)
-Nível: Brd 3, Sor/Mago 4
+Nível: Brd 3, Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: 5 rodadas
 Tempo de Conjuração: 4
@@ -12814,7 +12814,7 @@ Esta magia cria a emoção de medo dentro da área de efeito. Todas as criaturas af
 @107513=~Emoção: Esperança~
 @107514=~Emoção: Esperança 
 (Encantamento)
-Nível: Brd 3, Sor/Mago 4, Ilmater 4, Selune 4
+Nível: Brd 3, Fet/Mag 4, Ilmater 4, Selune 4
 Alcance: Visão do Conjurador
 Duração: 50 rodadas
 Tempo de Conjuração: 4
@@ -12826,7 +12826,7 @@ Esta magia cria a emoção de esperança dentro da área de efeito. Todas as criatur
 @107515=~Muito bem, então... adeus.~
 @107516=~Manto de Chamas 
 (Evocação)
-Nível: Sor/Mago 5
+Nível: Fet/Mag 5
 Alcance: Visão do Conjurador 
 Duração: 5 rodadas
 Tempo de Conjuração: 5
@@ -12838,7 +12838,7 @@ Esta magia faz uma criatura irromper em chamas se falhar em um teste de Reflexos
 @107517=~Invocar Sombra~
 @107518=~Invocar Sombra 
 (Necromancia)
-Nível: Brd 5, Sor/Mago 5
+Nível: Brd 5, Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 1 rodada + 1 rodada/nível 
 Tempo de Conjuração: 5
@@ -12851,7 +12851,7 @@ Esta magia invoca uma criatura de escuridão viva, uma Sombra, que obedecerá à vo
 @107520=~Conjuração de Sombras Maior~
 @107521=~Conjuração Sombria Maior 
 (Ilusão)
-Nível: Brd 6, Sor/Mago 5, Mask 6
+Nível: Brd 6, Fet/Mag 5, Mask 6
 Alcance: Visão do Conjurador 
 Duração: 1 rodada/nível
 Tempo de Conjuração: 5
@@ -12884,7 +12884,7 @@ Esta magia imbui as mãos do conjurador com energia negativa destrutiva, que será
 @107534=~Vinculação Planar: Elemental da Água~
 @107535=~Proteção contra Fogo 
 (Abjuração) 
-Nível: Clr 3, Drd 3, Rgr 2, Sor/Mago 3, Selune 3
+Nível: Clr 3, Drd 3, Rgr 2, Fet/Mag 3, Selune 3
 Alcance: Toque 
 Duração: Especial 
 Tempo de Conjuração: 3
@@ -12896,7 +12896,7 @@ O efeito de uma magia Proteção contra Fogo difere conforme o receptor da magia -
 ~
 @107536=~Vinculação Planar: Elemental da Água
 (Conjuração)
-Nível: Sor/Mago 6, Selune 7
+Nível: Fet/Mag 6, Selune 7
 Alcance: Visão do Conjurador 
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 1 rodada
@@ -12907,7 +12907,7 @@ Esta magia permite ao conjurador invocar um elemental de 16 Dados de Vida do Pla
 @107537=~Campo Antimagia~
 @107538=~Campo Antimagia 
 (Abjuração)
-Nível: Clr 8, Sor/Mago 6, Selune 6
+Nível: Clr 8, Fet/Mag 6, Selune 6
 Alcance: Conjurador 
 Duração: 10 rodadas/nível
 Tempo de Conjuração: 1
@@ -12937,7 +12937,7 @@ O efeito de uma magia Proteção Contra Frio difere conforme o receptor da magia -
 @107547=~Invocar Espreitador Invisível~
 @107548=~Toque do Lich 
 (Necromancia)
-Nível: Sor/Mago 6
+Nível: Fet/Mag 6
 Alcance: Toque 
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 6
@@ -12951,7 +12951,7 @@ Esta magia confere ao conjurador os poderes do toque de um lich e suas imunidade
 @107551=~Esfera Gélida de Otiluke~
 @107552=~Esfera Gélida de Otiluke 
 (Evocação)
-Nível: Sor/Mago 6
+Nível: Fet/Mag 6
 Alcance: Visão do Conjurador 
 Duração: Instantânea
 Tempo de Conjuração: 6
@@ -12963,7 +12963,7 @@ Esta magia dispara uma esfera de frio contra uma criatura, causando 1d6 pontos d
 @107553=~Sombras~
 @107554=~Sombras 
 (Ilusão)
-Nível: Brd 6, Sor/Mago 6, Mask 7
+Nível: Brd 6, Fet/Mag 6, Mask 7
 Alcance: Visão do Conjurador 
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 6
@@ -13297,7 +13297,7 @@ Tipo: Uma mão~
 @107663=~Nuvem Flamejante~
 @107664=~Nuvem Flamejante 
 (Conjuração)
-Nível: Fei/Mag 8
+Nível: Fet/Mag 8
 Alcance: Visão do Conjurador
 Duração: 10 rodadas
 Tempo de Conjuração: 2
@@ -13315,7 +13315,7 @@ Esta magia invoca uma nuvem fina e esfumaçada que preenche a área de efeito e, d
 @107671=~Sentinela +4~
 @107672=~Dedo da Morte 
 (Necromancia)
-Nível: Drd 8, Fei/Mag 7
+Nível: Drd 8, Fet/Mag 7
 Alcance: Visão do Conjurador 
 Duração: Permanente 
 Tempo de Conjuração: 5
@@ -13333,7 +13333,7 @@ O conjurador pronuncia o encantamento do dedo da morte, aponta o indicador para 
 @107679=~Evaporação~
 @107680=~Evaporação 
 (Necromancia) 
-Nível: Fei/Mag 8, Ilmater 9, Talos 9
+Nível: Fet/Mag 8, Ilmater 9, Talos 9
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 8
@@ -13375,7 +13375,7 @@ Esta magia evapora a umidade do corpo de toda criatura viva dentro da área de ef
 @107711=~Anel da Influência Humana~
 @107712=~Grito da Banshee 
 (Necromancia) 
-Nível: Brd 8, Fei/Mag 9, Oghma 9, Talos 9
+Nível: Brd 8, Fet/Mag 9, Oghma 9, Talos 9
 Alcance: Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 9
@@ -13401,7 +13401,7 @@ O conjurador emite um grito terrível que mata as criaturas que o ouvirem (exceto
 @107725=~Raio de Enfraquecimento~
 @107726=~Raio de Enfraquecimento 
 (Necromancia) 
-Nível: Fei/Mag 2
+Nível: Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: 1 minuto / nível
 Tempo de Conjuração: 2 
@@ -13464,7 +13464,7 @@ Por meio de um Raio de Enfraquecimento, um mago debilita um oponente, reduzindo 
 @107778=~Palavra de Poder: Silêncio~
 @107779=~Palavra de Poder: Silêncio 
 (Conjuração)
-Nível: Brd 5, Fei/Mag 6, Oghma 5, Bane 6
+Nível: Brd 5, Fet/Mag 6, Oghma 5, Bane 6
 Alcance: Visão do Conjurador
 Duração: 2 rodadas
 Tempo de Conjuração: 1
@@ -13477,7 +13477,7 @@ Esta magia permite ao conjurador pronunciar uma das palavras de poder. Quando pr
 @107781=~Martelo dos Raios +3~
 @107782=~Palavra de Poder: Atordoar 
 (Conjuração)
-Nível: Fei/Mag 7, Oghma 6, Tempus 8
+Nível: Fet/Mag 7, Oghma 6, Tempus 8
 Alcance: Visão do Conjurador
 Duração: Especial 
 Tempo de Conjuração: 1
@@ -13488,7 +13488,7 @@ Semelhante a Palavra de Poder: Silêncio e Palavra de Poder: Matar, Palavra de Po
 @107783=~Palavra de Poder: Cegar~
 @107784=~Palavra de Poder: Cegar 
 (Conjuração) 
-Nível: Brd 8, Fei/Mag 8, Tempus 7, Bane 8 
+Nível: Brd 8, Fet/Mag 8, Tempus 7, Bane 8 
 Alcance: Visão do Conjurador
 Duração: Especial
 Tempo de Conjuração: 1 
@@ -13502,7 +13502,7 @@ Esta magia cega as criaturas inimigas dentro da área de efeito. A duração da ceg
 @107787=~Lâmina Fantasma~
 @107788=~Lâmina Fantasma 
 (Evocação) 
-Nível: Brd 5, Fei/Mag 5, Mask 6
+Nível: Brd 5, Fet/Mag 5, Mask 6
 Alcance: Conjurador
 Duração: 3 rodadas + 1 rodada/nível 
 Tempo de Conjuração: 5
@@ -13533,7 +13533,7 @@ A lâmina fantasma age como uma espada longa mágica +3 quanto aos bônus de ataque
 @107807=~Lança +3~
 @107808=~Transformação de Tenser 
 (Transmutação)
-Nível: Fei/Mag 6
+Nível: Fet/Mag 6
 Alcance: Conjurador 
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 6
@@ -13570,7 +13570,7 @@ Encontrei outro caminho por um buraco enorme em uma das celas de prisão na área 
 @107831=~Espada de Mordenkainen~
 @107832=~Espada de Mordenkainen 
 (Evocação)
-Nível: Fei/Mag 7
+Nível: Fet/Mag 7
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 7
@@ -13599,7 +13599,7 @@ Esta magia invoca uma espada cintilante de energia que pode ser empunhada mental
 @107851=~Lâmina Negra do Desastre~
 @107852=~Lâmina Negra do Desastre 
 (Conjuração) 
-Nível: Fei/Mag 9, Másc 9
+Nível: Fet/Mag 9, Másc 9
 Alcance: Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 9
@@ -13752,7 +13752,7 @@ Recitando uma passagem sagrada ou declaração, o conjurador invoca a bênção de su
 @107917=~Círculo da Morte~
 @107918=~Círculo da Morte 
 (Necromancia)
-Nível: Sor/Wiz 6
+Nível: Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: Instantânea 
 Tempo de Conjuração: 6
@@ -13775,7 +13775,7 @@ Esta magia extingue a vida das criaturas na área de efeito, matando-as instantan
 @107930=~Proteção contra Energia Mágica~
 @107931=~Proteção contra Energia Mágica 
 (Abjuração) 
-Nível: Sor/Wiz 6
+Nível: Fet/Mag 6
 Alcance: Toque 
 Duração: 10 rodadas
 Tempo de Conjuração: 6
@@ -13984,7 +13984,7 @@ Quando conjurada, esta magia envolve o conjurador num turbilhão defensivo de ene
 @108061=~Manto dos Elfos~
 @108062=~Invocar Espreitador Invisível
 (Conjuração)
-Nível: Brd 6, Sor/Mag 6
+Nível: Brd 6, Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: 2 horas
 Tempo de Conjuração: 1 rodada
@@ -13996,7 +13996,7 @@ Esta magia invoca um espreitador invisível, uma criatura nativa do Plano Element
 @108063=~Manto das Estrelas~
 @108064=~Globo de Invulnerabilidade 
 (Abjuração) 
-Nível: Sor/Mag 6, Helm 6
+Nível: Fet/Mag 6, Helm 6
 Alcance: Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 1 rodada
@@ -14006,7 +14006,7 @@ Teste de Resistência: Nenhum
 Esta magia é semelhante à magia de mago de 4º nível Globo Menor de Invulnerabilidade, exceto que também protege o conjurador de magias de 4º nível.~
 @108065=~Carne para Pedra 
 (Transmutação) 
-Nível: Sor/Mag 6
+Nível: Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: Permanente
 Tempo de Conjuração: 6
@@ -14059,7 +14059,7 @@ Tipo:  Duas mãos~
 @108098=~Obrigado de novo por me salvar daquela *bruxa* maldita!~
 @108099=~Símbolo da Dor 
 (Todas)
-Nível: Clr 8, Sor/Mag 8, Ilmater 8
+Nível: Clr 8, Fet/Mag 8, Ilmater 8
 Alcance: Visão do Conjurador
 Duração: 10 minutos / nível
 Tempo de Conjuração: 3
@@ -14070,7 +14070,7 @@ Esta magia conjura um glifo mágico imbuído de poder que canaliza seus efeitos at
 ~
 @108100=~Símbolo do Desespero 
 (Todas)
-Nível: Clr 8, Sor/Mag 8, Oghma 7
+Nível: Clr 8, Fet/Mag 8, Oghma 7
 Alcance: Visão do Conjurador
 Duração: 10 rodadas
 Tempo de Conjuração: 3
@@ -17015,7 +17015,7 @@ Tipo: 1 mão~
 @109745=~Você traduziu parte dos delírios do goblin morto.~
 @109746=~Animar Mortos
 (Necromancy) [Mal]
-Nível: Clr 3, Sor/Wiz 5, Tempus 3
+Nível: Clr 3, Fet/Mag 5, Tempus 3
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1 rodada
@@ -18545,7 +18545,7 @@ Esta poderosa magia de abjuração faz as magias lançadas contra o mago serem abso
 @110896=~Estátua~
 @110897=~Dedo da Morte
 Finger of Death (Necromancia) 
-Nível: Drd 8, Fei/Mago 7
+Nível: Drd 8, Fet/Mag 7
 Alcance: Linha de visão do conjurador 
 Duração: Permanente
 Tempo de Conjuração: 5
@@ -18748,7 +18748,7 @@ Observe: você não pode importar personagens de outros jogos do Infinity Engine, 
 ~
 @110985=~Confusão 
 (Encantamento) 
-Nível: Brd 3, Clr 7, Sor/Wiz 4
+Nível: Brd 3, Clr 7, Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 1 rodada
@@ -20391,7 +20391,7 @@ Teste de Resistência: Reflexos reduz à metade
 Esta magia cria uma lança prateada, parcialmente etérea, em forma de alicórnio (o chifre de um unicórnio). O conjurador escolhe um alvo e a lança de alicórnio dispara instantaneamente contra ele, causando 3d6 pontos de dano perfurante, com teste de resistência para reduzir o dano à metade. Embora a lança se dissipe após atingir o alvo, ela deixa um brilho prateado ao redor dele, que o torna mais fácil de ver e de acertar, concedendo-lhe uma penalidade de -2 na Classe de Armadura por 3 rodadas.~
 @112140=~Armadura Arcana
 (Conjuration)
-Nível: Brd 1, Sor/Wiz 1
+Nível: Brd 1, Fet/Mag 1
 Alcance: Toque
 Duração: 1 hora / nível
 Tempo de Conjuração: 1 rodada
@@ -20401,7 +20401,7 @@ Teste de Resistência: Nenhum
 Por meio desta magia, o mago cria um campo mágico de força que funciona como uma armadura de escamas (Bônus de Armadura: 4). Ele se acumula com a Destreza e com o bônus de escudo. A magia não atrapalha o movimento, não acrescenta peso nem volume e não impede a conjuração de magias. Dura até ser dissipada com sucesso ou até o fim da duração.~
 @112141=~Mãos Flamejantes
 (Transmutation)
-Nível: Sor/Wiz 1
+Nível: Fet/Mag 1
 Alcance: Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1
@@ -20412,7 +20412,7 @@ Quando o mago conjura esta magia, um jato de chamas escaldantes jorra de seus de
 ~
 @112142=~Imagem Espelhada
 (Illusion)
-Nível: Brd 2, Sor/Wiz 2, Mask 3
+Nível: Brd 2, Fet/Mag 2, Mask 3
 Alcance: Conjurador
 Duração: 3 rodadas/nível
 Tempo de Conjuração: 1
@@ -20443,7 +20443,7 @@ Quando esta magia é conjurada, o mago e todo o seu equipamento tornam-se imateri
 ~
 @112145=~Dissipar Magia
 (Abjuration)
-Nível: Brd 3, Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 3
+Nível: Brd 3, Clr 3, Drd 4, Pal 3, Fet/Mag 3, Oghma 3
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 3
@@ -20454,7 +20454,7 @@ Dissipar Magia remove os efeitos mágicos que atuam sobre qualquer um dentro da á
 ~
 @112146=~Globo Menor de Invulnerabilidade
 (Abjuration)
-Nível: Sor/Wiz 4
+Nível: Fet/Mag 4
 Alcance: Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 4
@@ -20464,7 +20464,7 @@ Teste de Resistência: Nenhum
 Esta magia cria uma esfera mágica imóvel, de brilho tênue, ao redor do conjurador, que impede que quaisquer efeitos de magias de 1º, 2º ou 3º nível o afetem. Isso inclui habilidades inatas e efeitos de dispositivos. No entanto, qualquer tipo de magia pode ser conjurada de dentro da esfera sem penalidade. O globo pode ser desfeito por uma magia Dissipar Magia bem-sucedida.~
 @112147=~Dificultar Detecção
 (Abjuration)
-Nível: Rgr 4, Sor/Wiz 3
+Nível: Rgr 4, Fet/Mag 3
 Alcance: Toque
 Duração: 1 hora / nível
 Tempo de Conjuração: 3
@@ -20475,7 +20475,7 @@ Ao conjurar esta magia, o mago torna a criatura tocada indetectável por magias d
 ~
 @112148=~Proteção contra o Mal
 (Abjuration)
-Nível: Brd 1, Clr 1, Pal 1, Sor/Wiz 1, Ilmater 1, Helm 1
+Nível: Brd 1, Clr 1, Pal 1, Fet/Mag 1, Ilmater 1, Helm 1
 Alcance: Toque
 Duração: 2 rodadas/nível
 Tempo de Conjuração: 1
@@ -20485,7 +20485,7 @@ Teste de Resistência: Nenhum
 Quando esta magia é conjurada, ela cria uma barreira mágica ao redor do receptor, a trinta centímetros de distância. A barreira acompanha o receptor e tem dois efeitos principais: primeiro, todos os ataques feitos por criaturas malignas ou com encantamento maligno contra a criatura protegida sofrem uma penalidade de -2 em cada jogada de ataque; segundo, quaisquer testes de resistência provocados por tais ataques são feitos pela criatura protegida com bônus de +2.~
 @112149=~Proteção contra Flechas
 (Abjuration)
-Nível: Sor/Wiz 2
+Nível: Fet/Mag 2
 Alcance: Toque
 Duração: 10 minutos / nível
 Tempo de Conjuração: 3
@@ -20496,7 +20496,7 @@ Esta magia concede ao alvo redução de dano 10/+1 contra projéteis durante a dura
 ~
 @112150=~Proteção contra Petrificação
 (Abjuration)
-Nível: Sor/Wiz 1
+Nível: Fet/Mag 1
 Alcance: Toque
 Duração: 3 rodadas/nível
 Tempo de Conjuração: 1
@@ -20507,7 +20507,7 @@ Esta magia concede ao receptor imunidade a todos os ataques de petrificação. Iss
 ~
 @112151=~Resistir ao Medo
 (Abjuration)
-Nível: Sor/Wiz 2
+Nível: Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: 1 hora
 Tempo de Conjuração: 1
@@ -20517,7 +20517,7 @@ Teste de Resistência: Nenhum
 Esta magia de mago infunde coragem nos receptores, elevando seu moral ao máximo. O moral dos receptores voltará gradualmente ao normal à medida que a duração se esgota. Se os receptores estiverem sob efeito de medo mágico, o efeito é anulado.~
 @112152=~Flecha de Chamas
 (Conjuration)
-Nível: Sor/Wiz 3
+Nível: Fet/Mag 3
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 3
@@ -20527,7 +20527,7 @@ Teste de Resistência: Reflexos reduz à metade
 Esta magia permite ao conjurador arremessar flechas flamejantes contra seus inimigos. Cada projétil causa 4-24 pontos de dano de fogo. Apenas metade do dano de fogo é causada se a criatura for bem-sucedida num teste de resistência de Reflexos. O conjurador pode disparar um projétil a cada quatro níveis de experiência (dois projéteis no 8º nível, três no 12º nível, etc.).~
 @112153=~Armadura Fantasmal 
 (Conjuração)
-Nível: Brd 3, Sor/Wiz 3, Selune 4
+Nível: Brd 3, Fet/Mag 3, Selune 4
 Alcance: Toque
 Duração: 5 rodadas/nível
 Tempo de Conjuração: 1 
@@ -20537,7 +20537,7 @@ Teste de Resistência: Nenhum
 Esta magia cria um campo mágico de força com a resistência de uma cota de malha (bônus de deflexão +5). É cumulativo com efeitos de Destreza, bônus de armadura e bônus de escudo. A magia Armadura Fantasmal não atrapalha o movimento, não acrescenta peso nem volume e não impede a conjuração de magias. Dura até ser dissipada ou até o fim da duração.~
 @112154=~Graxa 
 (Conjuração) 
-Nível: Brd 1, Sor/Wiz 1
+Nível: Brd 1, Fet/Mag 1
 Alcance: Visão do Conjurador 
 Duração: 1 rodada / nível
 Tempo de Conjuração: 1 
@@ -20548,7 +20548,7 @@ A magia Graxa cobre o chão com uma camada escorregadia de natureza gordurosa. Qu
 ~
 @112155=~Flecha Ácida de Melf 
 (Conjuração) 
-Nível: Sor/Wiz 2
+Nível: Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: Especial 
 Tempo de Conjuração: 2 
@@ -20558,7 +20558,7 @@ Teste de Resistência: Nenhum
 Esta magia cria uma flecha mágica que voa veloz até o alvo. A flecha não tem bônus de ataque nem de dano, mas causa 2-8 pontos de dano de ácido.  Não há dano por respingo.  A cada três níveis alcançados pelo conjurador, o ácido dura mais 1 rodada, causando mais 2-8 pontos de dano. Assim, do 3º ao 5º nível, o ácido dura 2 rodadas; do 6º ao 8º nível, dura 3 rodadas, e assim por diante.~
 @112156=~Invocar Monstro III
 (Conjuração) 
-Nível: Brd 3, Clr 3, Sor/Wiz 3
+Nível: Brd 3, Clr 3, Fet/Mag 3
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -20570,7 +20570,7 @@ Esta magia invoca um monstro que auxiliará o conjurador pela duração da magia.  
 ~
 @112157=~Invocar Monstro IV
 (Conjuração) 
-Nível: Brd 4, Clr 4, Sor/Wiz 4
+Nível: Brd 4, Clr 4, Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6 
@@ -20581,7 +20581,7 @@ Esta magia invoca um monstro que auxiliará o conjurador pela duração da magia.  
 ~
 @112158=~Invocar Monstro V
 (Conjuração) 
-Nível: Brd 5, Clr 5, Sor/Wiz 5
+Nível: Brd 5, Clr 5, Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -20611,7 +20611,7 @@ Teste de Resistência: Nenhum
 Esta magia é semelhante à magia de sacerdote de 1º nível, Detectar o Mal. Qualquer criatura maligna dentro do alcance da magia brilhará em vermelho por um instante.  ~
 @112161=~Identificar 
 (Adivinhação) 
-Nível: Brd 1, Sor/Wiz 1, Oghma 1
+Nível: Brd 1, Fet/Mag 1, Oghma 1
 Alcance: Toque
 Duração: Instantânea
 Tempo de Conjuração: Especial 
@@ -20633,7 +20633,7 @@ O receptor desta magia ganha a capacidade de enxergar com infravisão, como um el
 ~
 @112163=~Ver Invisibilidade 
 (Adivinhação) 
-Nível: Brd 2, Sor/Wiz 2, Oghma 2
+Nível: Brd 2, Fet/Mag 2, Oghma 2
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 2 
@@ -20643,7 +20643,7 @@ Teste de Resistência: Nenhum
 Quando o mago conjura Ver Invisibilidade, ele dissipa qualquer invisibilidade e revela quaisquer personagens ocultos na área de efeito (como ladinos usando furtividade). Nota: se uma criatura invisível entrar na área de efeito depois que a magia já foi conjurada, ela permanecerá invisível.~
 @112164=~Conhecer Tendência
 (Adivinhação) 
-Nível: Clr 2, Sor/Wiz 2
+Nível: Clr 2, Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1 rodada 
@@ -20653,7 +20653,7 @@ Teste de Resistência: Vontade anula
 A magia Conhecer Tendência permite ao mago ler a aura de uma criatura. Se a criatura for bem-sucedida num teste de resistência de Vontade, o conjurador nada descobre sobre ela com aquela conjuração. Certos dispositivos mágicos anulam o poder da magia Conhecer Tendência. Criaturas malignas brilharão em vermelho, neutras em azul e criaturas amistosas em verde por um breve período.~
 @112165=~Enfeitiçar Pessoa 
 (Encantamento) 
-Nível: Brd 1, Sor/Wiz 1, Oghma 2
+Nível: Brd 1, Fet/Mag 1, Oghma 2
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 / nível
 Tempo de Conjuração: 1 
@@ -20664,7 +20664,7 @@ Esta magia afeta qualquer pessoa sobre a qual seja conjurada. O termo pessoa inc
 Se o conjurador ferir, ou tentar ferir, a pessoa enfeitiçada por alguma ação explícita, ou se uma magia de dissipar magia for conjurada com sucesso sobre ela, o feitiço é quebrado.  Se dois ou mais efeitos de encanto afetarem uma criatura ao mesmo tempo, o mais recente tem precedência.  Note que o alvo tem plena lembrança dos eventos ocorridos enquanto estava enfeitiçado. Note também que não é possível fazer uma criatura enfeitiçada sair da área onde foi enfeitiçada.~
 @112166=~Confusão 
 (Encantamento/Feitiço) 
-Nível: Brd 3, Sor/Wiz 4
+Nível: Brd 3, Fet/Mag 4
 Alcance: Visão do Conjurador 
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 4
@@ -20675,7 +20675,7 @@ Esta magia causa confusão em uma ou mais criaturas dentro da área de efeito, ger
 ~
 @112167=~Confusão 
 (Encantamento) 
-Nível: Brd 3, Sor/Wiz 4
+Nível: Brd 3, Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 4 
@@ -20685,7 +20685,7 @@ Teste de Resistência: Vontade anula
 Esta magia causa confusão em uma ou mais criaturas dentro da área de efeito, gerando indecisão e a incapacidade de agir com eficácia. Todas as criaturas na área de efeito têm direito a um teste de resistência de Vontade para resistir aos efeitos.  Criaturas confusas enlouquecem de fúria, ficam paradas, confusas, ou vagam sem rumo durante a duração da magia.~
 @112168=~Encanto Macabro 
 (Encantamento) 
-Nível: Brd 2, Sor/Wiz 3, Bane 3
+Nível: Brd 2, Fet/Mag 3, Bane 3
 Alcance: Visão do Conjurador
 Duração: 20 rodadas
 Tempo de Conjuração: 3 
@@ -20695,7 +20695,7 @@ Teste de Resistência: Vontade anula
 Esta magia é semelhante a Enfeitiçar Pessoa. Porém, a criatura afetada entra num estado de fúria, não querendo que ninguém fira seu mestre (o conjurador). Assim, a criatura lutará contra os inimigos do conjurador, mesmo antigos aliados. A magia tem as mesmas limitações de Enfeitiçar Pessoa. Pode afetar qualquer humanoide de tamanho Médio ou menor. Assim, um guerreiro de 10º nível pode ser enfeitiçado, mas um ogro não.  Um teste de resistência de Vontade bem-sucedido anula qualquer efeito.~
 @112169=~Esplendor da Águia 
 (Transmutação) 
-Nível: Brd 2, Sor/Wiz 2, Oghma 1
+Nível: Brd 2, Fet/Mag 2, Oghma 1
 Alcance: Conjurador
 Duração: 10 rodadas / nível
 Tempo de Conjuração: 1 
@@ -20705,7 +20705,7 @@ Teste de Resistência: Nenhum
 A criatura transmutada torna-se mais elegante, articulada e pessoalmente imponente.  A magia concede um bônus de melhoria de 1d4+1 pontos em Carisma, somando os benefícios habituais das perícias e habilidades baseadas em Carisma. ~
 @112170=~Imobilizar Pessoa 
 (Encantamento) 
-Nível: Brd 2, Clr 2, Sor/Wiz 3, Helm 2
+Nível: Brd 2, Clr 2, Fet/Mag 3, Helm 2
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível 
 Tempo de Conjuração: 3 
@@ -21394,7 +21394,7 @@ Teste de Resistência: Vontade anula
 Esta magia deixa animais rigidamente imóveis. Apenas animais normais e de tamanho gigante são afetados por esta magia. Monstros estranhos, como wyverns e rastejadores da carniça, não contam como animais. O efeito é centrado em um ponto escolhido pelo conjurador, e de 1 a 4 animais a até 6 metros do ponto-alvo são afetados. Aqueles que passarem no teste de Vontade não são afetados pela magia. Estar imobilizado não impede que a condição do alvo piore por causa de ferimentos, doenças ou veneno.~
 @112315=~Imobilizar Pessoa 
 (Encantamento) 
-Nível: Brd 2, Clr 2, Sor/Wiz 3, Helm 2
+Nível: Brd 2, Clr 2, Fet/Mag 3, Helm 2
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 3
@@ -22980,7 +22980,7 @@ Peso: 1 kg (2 lb).~
 Peso: 1 kg (2 lb).~
 @113189=~História de Águas Profundas - Era 0, Assembleias de Comércio e Pioneiros:  
 
-Poucos hoje conhecem a verdadeira história desta grande cidade, que teve início há mais de mil anos, quando o Norte era de fato o que os sulistas ainda chamam com desdém: "o Norte Selvagem". Naquela época, a maior parte do Norte era coberta por vastas e altas florestas de um verde ancestral, habitadas por anões e goblinoides (nas montanhas e contrafortes mais ao norte) e por elfos (em enclaves florestais amplamente dispersos por todo o resto). Algumas tribos humanas primitivas viviam ao longo da Costa da Espada, pescando, caçando e se reunindo na primavera e no outono para trocar suas peles com embarcações vindas do sul por joias de mercadores, ferramentas de metal e, vez ou outra, uma arma ou duas. Na primavera, essas embarcações vinham principalmente para cortar e levar árvores enormes para a construção de navios, já que árvores de tamanho tão grande não existiam mais mais ao sul.
+Poucos hoje conhecem a verdadeira história desta grande cidade, que teve início há mais de mil anos, quando o Norte era de fato o que os sulistas ainda chamam com desdém: "o Norte Selvagem". Naquela época, a maior parte do Norte era coberta por vastas e altas florestas de um verde ancestral, habitadas por anões e goblinoides (nas montanhas e contrafortes mais ao norte) e por elfos (em enclaves florestais amplamente dispersos por todo o resto). Algumas tribos humanas primitivas viviam ao longo da Costa da Espada, pescando, caçando e se reunindo na primavera e no outono para trocar suas peles com embarcações vindas do sul por joias de mercadores, ferramentas de metal e, vez ou outra, uma arma ou duas. Na primavera, essas embarcações vinham principalmente para cortar e levar árvores enormes para a construção de navios, já que árvores de tamanho tão grande não existiam mais ao sul.
 
 No outono, as embarcações chegavam para cortar madeira para os próprios reparos ou para embarcar uma carga de lenha, caso os infortúnios do comércio tivessem deixado seus porões vazios ou quase. A maioria dessas assembleias de comércio acontecia num certo lugar onde havia um grande porto natural de águas profundas, protegido do mar por um esporão rochoso de terra, o braço de um penhasco costeiro isolado ou uma ilha rochosa além dele. 
 
@@ -24512,7 +24512,7 @@ Tipo: 1 mão~
 A poça se agita e rodopia. Luzes estranhas dançam em seu interior. Ao encarar a poça, você vislumbra uma paisagem urbana. Por um breve instante, com absoluta clareza, você observa a cidade mudar. As eras passam e os habitantes abandonam suas ferramentas e costumes primitivos. Descobertas são feitas e a mente do povo muda e cresce, apreendendo a cada dia um novo fato ou invenção. A imagem se esvai até que você veja apenas uma poça.~
 @114315=~Portal 
 (Conjuração) 
-Nível: Clr 9, Sor/Wiz 9, Maldição Menor 7
+Nível: Clr 9, Fet/Mag 9, Maldição Menor 7
 Alcance: Visão do Conjurador
 Duração: 33 rodadas
 Tempo de Conjuração: 5
@@ -28077,7 +28077,7 @@ Dois Espaços: +2 de bônus na Classe de Armadura, +1 de bônus em Acerto Crítico.~
 @116164=~"Finalmente! Achei que nunca mais ia funcionar."~
 @116165=~Invocar Monstro VI
 (Conjuração) 
-Nível: Brd 6, Clr 6, Sor/Wiz 6
+Nível: Brd 6, Clr 6, Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -28092,7 +28092,7 @@ Esta magia invoca um monstro que auxiliará o conjurador pela duração da magia.  
 @116169=~"Ai, meu Deus! Espero não estar encrencado..."~
 @116170=~Invocar Monstro VII
 (Conjuração) 
-Nível: Clr 7, Sor/Wiz 7, Tempus 7
+Nível: Clr 7, Fet/Mag 7, Tempus 7
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -28625,7 +28625,7 @@ Esta magia restaura níveis perdidos por drenagem de energia e dissipa quaisquer 
 @116357=~"Senhor! Os goblins estão na Paliçada!"~
 @116358=~Invocar Monstro VIII
 (Conjuração)
-Nível: Clr 8, Sor/Wiz 8
+Nível: Clr 8, Fet/Mag 8
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -28636,7 +28636,7 @@ Esta magia invoca um monstro que auxiliará o conjurador pela duração da magia.  
 ~
 @116359=~Invocar Monstro IX
 (Conjuração)
-Nível: Clr 9, Sor/Wiz 9
+Nível: Clr 9, Fet/Mag 9
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 6
@@ -33686,7 +33686,7 @@ Aparentemente, isto transformará uma criatura em uma pequena gema, mas ninguém s
 @118313=~Laço Elétrico de Gedlee~
 @118314=~Laço Elétrico de Gedlee 
 (Evocação)
-Nível: Fet/Mago 2, Talos 2
+Nível: Fet/Mag 2, Talos 2
 Alcance: Curto
 Duração: Instantânea
 Tempo de Conjuração: 2
@@ -33701,7 +33701,7 @@ Ao completar esta magia, um anel de eletricidade irrompe do conjurador, causando
 @118318=~Armadura da Morte~
 @118319=~Armadura da Morte 
 (Necromancia) 
-Nível: Fet/Mago 2, Talos 2
+Nível: Fet/Mag 2, Talos 2
 Alcance: Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 2
@@ -33730,7 +33730,7 @@ Esta magia envolve o conjurador em uma energia negra e crepitante vinda do plano
 @118338=~Piscar~
 @118339=~Piscar 
 (Transmutação)
-Nível: Brd 3, Fet/Mago 3
+Nível: Brd 3, Fet/Mag 3
 Alcance: Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 3
@@ -33756,7 +33756,7 @@ Por meio desta magia, o conjurador entra em um estado em que fica constantemente
 @118354=~Dispensar~
 @118355=~Dispensar 
 (Abjuração) 
-Nível: Brd 4, Clr 4, Fet/Mago 5, Helm 5
+Nível: Brd 4, Clr 4, Fet/Mag 5, Helm 5
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1
@@ -33768,7 +33768,7 @@ Ao completar esta magia, a criatura invocada alvo deve fazer um teste de Vontade
 @118357=~Banimento~
 @118358=~Banimento 
 (Abjuração) 
-Nível: Clr 6, Fet/Mago 7, Helm 9
+Nível: Clr 6, Fet/Mag 7, Helm 9
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1
@@ -33781,7 +33781,7 @@ Ao completar esta magia, todas as criaturas invocadas na área de efeito devem fa
 @118360=~Bola de Raios~
 @118361=~Bola de Raios 
 (Evocação)
-Nível: Fet/Mago 5, Talos 5
+Nível: Fet/Mag 5, Talos 5
 Alcance: Conjurador 
 Duração: 1 rodada/nível
 Tempo de Conjuração: 5
@@ -33794,7 +33794,7 @@ Por meio desta magia, o conjurador cria minúsculas esferas de eletricidade que p
 @118364=~Passeio Frequente de Lutzaen~
 @118365=~Passeio Frequente de Lutzaen 
 (Transmutação) 
-Nível: Fet/Mago 5
+Nível: Fet/Mag 5
 Alcance: Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: Instantâneo
@@ -33806,7 +33806,7 @@ Semelhante a Porta Dimensional, esta magia permite que o conjurador salte instan
 @118366=~Truque de Translocação~
 @118367=~Truque de Translocação 
 (Transmutação) 
-Nível: Fet/Mago 6
+Nível: Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1
@@ -39647,7 +39647,7 @@ Tipo: Uma mão~
 @122608=~Armadura Espiritual~
 @122609=~Armadura Espiritual
 Spirit Armor (Necromancia)
-Nível: Brd 4, Sor/Wiz 4
+Nível: Brd 4, Fet/Mag 4
 Alcance: Toque
 Duração: 5 rodadas/nível
 Tempo de Conjuração: 3
@@ -39658,7 +39658,7 @@ Esta magia cria uma barreira corpórea ao redor do corpo do alvo, canalizando a f
 @122610=~Caos~
 @122611=~Caos
 Chaos (Encantamento)
-Nível: Sor/Wiz 5
+Nível: Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 5
@@ -39669,7 +39669,7 @@ Os efeitos desta magia são idênticos aos da magia de 4º nível Confusão em todos 
 @122612=~Enfraquecer Intelecto~
 @122613=~Enfraquecer Intelecto
 Feeblemind (Encantamento)
-Nível: Sor/Wiz 5, Ilmater 5, Maldição Menor 6
+Nível: Fet/Mag 5, Ilmater 5, Maldição Menor 6
 Alcance: Visão do Conjurador
 Duração: 20 rodadas
 Tempo de Conjuração: 5
@@ -39681,7 +39681,7 @@ Esta magia transforma o alvo em um idiota balbuciante enquanto durar.  A vítima 
 @122614=~Dominar Pessoa~
 @122615=~Dominar Pessoa
 Dominate Person (Encantamento)
-Nível: Brd 4, Sor/Wiz 5, Maldição Menor 5
+Nível: Brd 4, Fet/Mag 5, Maldição Menor 5
 Alcance: Visão do Conjurador
 Duração: 1 minuto/nível
 Tempo de Conjuração: 5
@@ -39692,7 +39692,7 @@ A magia de dominação permite que o conjurador controle as ações de qualquer cria
 @122616=~Imobilizar Monstro~
 @122617=~Imobilizar Monstro
 Hold Monster (Encantamento)
-Nível: Brd 4, Sor/Wiz 5
+Nível: Brd 4, Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 5
@@ -39715,7 +39715,7 @@ Esta magia permite que o conjurador invada a mente da criatura-alvo, forçando-a 
 @122620=~Proteção contra Raio~
 @122621=~Proteção contra Raio
 Protection from Lightning (Abjuração)
-Nível: Clr 4, Drd 4, Rgr 3, Sor/Wiz 4
+Nível: Clr 4, Drd 4, Rgr 3, Fet/Mag 4
 Alcance: Toque
 Duração: 5 rodadas/nível
 Tempo de Conjuração: 7
@@ -39998,7 +39998,7 @@ Harmonia Defensiva permite que um grupo de criaturas aja como uma única unidade 
 @122831=~Praga de Insetos~
 @122832=~Círculo Mágico Contra o Mal
 (Abjuração) [Bem]
-Nível: Brd 3, Clr 3, Pal 3, Sor/Wiz 3, Ilmater 3
+Nível: Brd 3, Clr 3, Pal 3, Fet/Mag 3, Ilmater 3
 Alcance: Toque 
 Duração: 10 rodadas / nível
 Tempo de Conjuração: 7
@@ -41585,7 +41585,7 @@ Tipo: Uma mão~
 @124241=~Então você precisa de trezentas flechas? Alguma coisa me diz que a Deirdre não vai gostar muito desse número.~
 @124242=~Graça do Gato
 (Transmutação)
-Nível: Brd 2, Sor/Mag 2
+Nível: Brd 2, Fet/Mag 2
 Alcance: Toque
 Duração: 1 hora/nível
 Tempo de Conjuração: 2
@@ -41606,7 +41606,7 @@ Esta magia dobra a velocidade normal do conjurador por um curto período de tempo
 ~
 @124244=~Contatar Outro Plano
 (Adivinhação)
-Nível: Sor/Mag 5, Oghma 5
+Nível: Fet/Mag 5, Oghma 5
 Alcance: Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 1 rodada
@@ -41616,7 +41616,7 @@ Teste de Resistência: Nenhum
 Esta magia permite ao mago contatar poderes de outros planos de existência para receber conselhos e informações. A natureza da adivinhação gira em torno do conhecimento sobre inimigos poderosos, itens mágicos e magias.~
 @124245=~Esfera Vitriólica
 (Conjuração)
-Nível: Sor/Mag 4
+Nível: Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: Especial
 Tempo de Conjuração: 4
@@ -41626,7 +41626,7 @@ Teste de Resistência: Reflexos reduz à metade
 Esta magia conjura uma esfera de ácido esmeralda brilhante que o conjurador pode dirigir para atingir qualquer alvo dentro do alcance. Ao chegar ao alvo, a esfera explode e encharca a vítima com ácido potente. A vítima sofre 1d4 pontos de dano de ácido por nível do conjurador, até um máximo de 12d4 pontos de dano (Reflexos reduz à metade). Após o dano inicial, a vítima deve fazer um teste de Reflexos a cada rodada, que reduzirá à metade o dano daquela rodada e também interromperá qualquer dano de ácido posterior. Se falhar, a vítima continua sofrendo dano de ácido nas rodadas seguintes, sofrendo dois dados de dano a menos a cada rodada. Por exemplo, um mago de 8º nível causa 8d4 de dano com esta magia na primeira rodada, 6d4 na segunda, 4d4 na terceira, 2d4 na quarta, e a magia termina na quinta rodada. A cada rodada a vítima tem direito a um teste de Reflexos para evitar mais dano nas rodadas restantes. A esfera vitriólica também respinga ácido em um raio de 1,5 metro ao redor do alvo principal. Qualquer criatura dentro do raio de respingo deve fazer um teste de Reflexos ou sofrer um respingo que causa 1d4 pontos de dano a cada cinco níveis do conjurador. Respingos não causam dano contínuo.~
 @124246=~Mísseis de Força de Mordenkainen
 (Evocação)
-Nível: Sor/Mag 4
+Nível: Fet/Mag 4
 Alcance: Visão do Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 4
@@ -42640,7 +42640,7 @@ Especial:
 @124785=~Chamado do Wyvern~
 @124786=~Chamado do Wyvern
 (Conjuração)
-Nível: Fet/Mago 6
+Nível: Fet/Mag 6
 Alcance: Visão do Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 1 rodada
@@ -42705,7 +42705,7 @@ Peso: 1 kg (2 lb)
 Tipo de Proficiência: Punhos~
 @124797=~Vinculação Planar Menor: Elemental da Terra
 (Conjuração)
-Nível: Fet/Mago 5
+Nível: Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 1 rodada
@@ -42723,7 +42723,7 @@ Peso: 1 kg (2 lb)
 É necessário Força mínima de 14~
 @124799=~Vinculação Planar Menor: Elemental do Fogo
 (Conjuração)
-Nível: Fet/Mago 5
+Nível: Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 1 rodada
@@ -42734,7 +42734,7 @@ Esta magia invoca um elemental de fogo de 8 dados de vida para servir o conjurad
 ~
 @124800=~Vinculação Planar Menor: Elemental do Ar
 (Conjuração)
-Nível: Fet/Mago 5
+Nível: Fet/Mag 5
 Alcance: Visão do Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 1 rodada
@@ -42962,7 +42962,7 @@ Quando proferida, esta magia transforma o clérigo em uma ponte entre seu deus e 
 Não há teste de resistência, e os efeitos duram pela duração da magia ou até serem dissipados. Esta magia só pode ser conjurada por personagens malignos.~
 @124915=~Fogo Solar 
 (Evocação) 
-Nível: Fei/Mag 5
+Nível: Fet/Mag 5
 Alcance: Conjurador
 Duração: Instantânea
 Tempo de Conjuração: 3
@@ -44297,7 +44297,7 @@ Peso: 0,5 kg (1 lb).~
 @125866=~Imagem Espelhada Menor~
 @125867=~Imagem Espelhada Menor 
 (Ilusão) 
-Nível: Brd 1, Sor/Wiz 1, Mask 1
+Nível: Brd 1, Fet/Mag 1, Mask 1
 Alcance: Conjurador
 Duração: 3 rodadas + 1 rodada/nível
 Tempo de Conjuração: 1
@@ -44344,7 +44344,7 @@ Quando conjurada sobre uma criatura alvo, esta magia dissipa todas as proteções 
 @125875=~Pele de Rocha~
 @125876=~Pele de Rocha 
 (Abjuração)
-Nível: Sor/Wiz 4, Ilmater 6
+Nível: Fet/Mag 4, Ilmater 6
 Alcance: Toque
 Duração: 10 minutos/nível
 Tempo de Conjuração: 1
@@ -44356,7 +44356,7 @@ A criatura protegida ganha resistência a pancadas, cortes, estocadas e golpes de
 @125877=~Reedle~
 @125878=~Reedle~
 @125879=~Escudo de Fogo (Azul) (Evocação) 
-Nível: Sor/Wiz 4
+Nível: Fet/Mag 4
 Alcance: Conjurador
 Duração: 1 rodada/nível
 Tempo de Conjuração: 4 
@@ -54782,7 +54782,7 @@ Esta magia detém 1d4 criaturas mortas-vivas na área de efeito se elas falharem n
 @132393=~Pedra para Carne~
 @132394=~Pedra para Carne 
 (Transmutação) 
-Nível: Sor/Wiz 6
+Nível: Fet/Mag 6
 Alcance: Médio
 Duração: Permanente
 Tempo de Conjuração: 6
@@ -54808,7 +54808,7 @@ Esta magia faz uma criatura petrificada voltar ao normal. Se um de seus companhe
 @132409=~Controlar Mortos-Vivos~
 @132410=~Controlar Mortos-Vivos 
 (Necromancia) 
-Nível: Sor/Wiz 7
+Nível: Fet/Mag 7
 Alcance: Visão do Conjurador
 Duração: 1 minuto / nível
 Tempo de Conjuração: 7
@@ -54836,7 +54836,7 @@ A magia Controlar Mortos-Vivos permite ao conjurador assumir o controle de 1 a 4
 @132427=~Invisibilidade em Massa~
 @132428=~Invisibilidade em Massa 
 (Ilusão)
-Nível: Brd 7, Sor/Wiz 7, Mask 8
+Nível: Brd 7, Fet/Mag 7, Mask 8
 Alcance: Visão do Conjurador 
 Duração: 10 minutos / nível
 Tempo de Conjuração: 7
@@ -54847,7 +54847,7 @@ Invisibilidade em Massa oculta todas as criaturas aliadas dentro de sua área de 
 ~
 @132429=~Esfera de Invisibilidade 
 (Ilusão) 
-Nível: Brd 3, Sor/Wiz 3, Mask 3
+Nível: Brd 3, Fet/Mag 3, Mask 3
 Alcance: Conjurador
 Duração: 10 minutos / nível
 Tempo de Conjuração: 1 rodada
@@ -64029,7 +64029,7 @@ Normal: Um personagem que usa uma arma sem ser proficiente com ela sofre uma pen
 @138547=~É uma coleção impressionante para uma área tão pequena. Como... ah... transmutador... eu mesmo, devo dizer que estou <IMPRESSIONADO>.~
 @138548=~Invocar Monstro II
 (Conjuração) 
-Nível: Brd 2, Clr 2, Sor/Wiz 2
+Nível: Brd 2, Clr 2, Fet/Mag 2
 Alcance: Visão do Conjurador
 Duração: 3 rounds + 1 round/nível
 Tempo de Conjuração: 6
@@ -64041,7 +64041,7 @@ Esta magia invoca um monstro que auxiliará o conjurador pela duração da magia.  
 @138549=~~
 @138550=~Invocar Monstro I
 (Conjuração) 
-Nível: Brd 1, Clr 1, Sor/Wiz 1
+Nível: Brd 1, Clr 1, Fet/Mag 1
 Alcance: Visão do Conjurador
 Duração: 3 rounds + 1 round/nível
 Tempo de Conjuração: 6
