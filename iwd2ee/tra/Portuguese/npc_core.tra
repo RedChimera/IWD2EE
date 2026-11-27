@@ -711,28 +711,28 @@ Tipo: Uma mão~
     - Mas se eu deixar este lugar, posso ser destruído como qualquer outro -~
 @40016=~Então despeço-me de você, Veira. Espero que possa encontrar paz.~
 @40017=~Receio que precisamos de todas as mãos que pudermos. Se essa... quimera... é tão perigosa quanto você diz, podemos precisar da sua ajuda.~
-@40018=~- Então vá, e eu o seguirei -
+@40018=~- Então vá, e <EU_O_SEGUIREI> -
   - Eu te ajudarei enquanto esta forma persistir -
     - Até que a sombra seja banida do nosso futuro -~
-@40019=~Sou grato, Veira. Vamos defender esta cidade juntos.~
-@40020=~Nunca fui amigo de um fantasma antes, mas acho que sempre há uma primeira vez para tudo. Vamos, vamos partir.~
+@40019=~Sou <GRATO>, Veira. Vamos defender esta cidade juntos.~
+@40020=~Nunca fui <AMIGO> de um fantasma antes, mas acho que sempre há uma primeira vez para tudo. Vamos, vamos partir.~
 @40021=~Temos o líder bem aqui. Os outros devem chegar em breve.~
 @40022=~Usei a maior parte do meu poder para chegar até aqui e lutar contra esses orcs. Dependi de pergaminhos para chegar tão longe. Não posso fazer isso sozinho. Preciso da sua ajuda nessa tarefa.~
 @40023=~Um troll é um adversário perigoso. Vou considerar isso.~
 @40024=~Junte-se a nós e ajudaremos aqueles aldeões juntos.~
-@40025=~Você consideraria se juntar a nós? A horda tomou a Ponte Shaengarne, e Lorde Ulbrec nos pediu para retomar a ponte. Ficaríamos gratos se você nos ajudasse.~
+@40025=~Você consideraria se juntar a nós? A horda tomou a Ponte de Shaengarne, e Lorde Ulbrec nos pediu para retomar a ponte. Ficaríamos gratos se você nos ajudasse.~
 @40026=~Bem, ao menos você sairá daqui com minha bênção. Se eu puder ajudar em mais alguma coisa, basta pedir.~
 @40027=~Esses orcs também me preocupam. Se precisar de ajuda, terei prazer em fornecê-la. O que precisa ser feito?~
-@40028=~Precisamos marchar até a Ponte Shaengarne e expulsar os orcs. É uma rota importante para Targos, e não podemos deixá-la cair.~
+@40028=~Precisamos marchar até a Ponte de Shaengarne e expulsar os orcs. É uma rota importante para Targos, e não podemos deixá-la cair.~
 @40029=~Mate orcs. Mate goblins. Qualquer coisa que atrapalhe, honestamente.~
 @40030=~Muito bem. Mostre o caminho e podemos combater a horda juntos.~
-@40031=~Uma forma estranha de dizer, mas não sou estranho ao combate. Farei o que for preciso para manter esses aldeões seguros.~
+@40031=~Uma forma estranha de dizer, mas não sou estranha ao combate. Farei o que for preciso para manter esses aldeões seguros.~
 @40032=~Sim. Seria errado ficar aqui e ignorar o sofrimento deles, mesmo sem minha lâmina lunar. Vou viajar com vocês.~
 @40033=~Muito bem. Mesmo sem minha lâmina lunar, posso lutar. Vamos.~
 @40034=~Você voltou. Como posso... é aquele troll que roubou minha lâmina?~
 @40035=~Precisávamos da ajuda do troll para enfrentar a horda. Sinto muito, mas a condição de Vrek era que não pudéssemos entregar a lâmina. A espada é uma ameaça para ele e não podemos entregá-la.~
 @40036=~Desculpe, Emma, mas temos um aliado mais forte à disposição. Não podemos te dar a espada. Vrek aqui a vê como uma ameaça.~
-@40037=~Você trocou minha lâmina lunar pela lealdade de um *troll?* Devolva minha espada, porco, ou vou tomá-la à força!~
+@40037=~Você trocou minha lâmina lunar pela lealdade de um *troll?* Devolva minha espada, <PORCO>, ou vou tomá-la à força!~
 @40038=~Não posso fazer isso, sacerdotisa. Vrek e eu fizemos um acordo, e eu preciso definir prioridades. A espada agora é nossa.~
 @40039=~Gostaria de ver você tentar. Vrek, vamos?~
 @40040=~Não posso te derrotar agora, mas voltarei com aliados!~
@@ -758,7 +758,7 @@ Tipo: Uma mão~
 @40060=~E se você não perceber? E se a próxima lâmina estiver escondida? Você precisa de outras pessoas para ajudar a procurá-las. Pessoas como nós.~
 @40061=~Vrek não confia em humano. Humano odeia Vrek.~
 @40062=~Preciso de ajuda para lutar contra a horda de goblins e aceitarei qualquer ajuda que puder, mesmo de um troll. Se você me ajudar a matar os orcs na ponte, eu te ajudo a procurar armas mágicas como as da Emma... Você pode até ganhar uma parte do nosso ouro.~
-@40063=~Não sou humano, mas preciso de ajuda para lutar contra a horda de goblins e aceitarei qualquer ajuda que puder, mesmo de um troll. Se você me ajudar a matar os orcs na ponte, eu te ajudo a procurar armas mágicas como as da Emma... Você pode até ganhar uma parte do nosso ouro.~
+@40063=~<NAO_SOU_HUMANO_MAI>, mas preciso de ajuda para lutar contra a horda de goblins e aceitarei qualquer ajuda que puder, mesmo de um troll. Se você me ajudar a matar os orcs na ponte, eu te ajudo a procurar armas mágicas como as da Emma... Você pode até ganhar uma parte do nosso ouro.~
 @40064=~Vrek não come ouro. Vrek já tem comida e espada curandeira.~
 @40065=~Então não há como conversar com você. Seu reinado acaba aqui, Vrek.~
 @40066=~Talvez não. Mas posso te oferecer algo melhor. Junte-se ao meu grupo e teremos muita carne para você todos os dias.~
@@ -777,7 +777,7 @@ Tipo: Uma mão~
 @40079=~O time vencedor? Você realmente acredita que pode derrubar a horda?~
 @40080=~A horda é forte. Mas não tão forte quanto nós. Como acha que chegamos tão longe sem morrer?~
 @40081=~A horda não é tão forte quanto parece. Já conseguimos chegar até aqui.~
-@40082=~Você deve estar iludido, ou no mínimo corajosamente tolo. Duvido que consiga parar Guthma, e não vou arriscar minha vida ajudando um cidadãomeio-idiota a lutar por uma causa perdida.~
+@40082=~Você deve estar <ILUDIDO>, ou no mínimo <CORAJOSAMENTE_TOLO>. Duvido que consiga parar Guthma, e não vou arriscar minha vida ajudando <UM_CIDADAO_MEIO_IDIOTA> a lutar por uma causa perdida.~
 @40083=~E você espera que eu ajude a lutar contra a horda quando vocês já estão desesperadamente em menor número?~
 @40084=~É verdade que estamos em menor número. Mas estamos muito *menos* em menor número do que quando chegamos aqui.~
 @40085=~Sim. Ou você prefere lutar contra a gente? Porque muitos outros goblins já cometeram esse erro.~
@@ -812,7 +812,7 @@ Tipo: Uma mão~
 @40114=~Está feito, então. Já banimos Aeij-Kllenzr't – Fúria Enjaulada. Ele era o espírito de uma tempestade preso a um altar lá embaixo.~
 @40115=~Excelente. Voltarei quando a tarefa estiver concluída.~
 @40116=~Mortais são sempre previsíveis. Com minha liberdade, eu poderia conceder esse desejo — mil peças de ouro, na moeda local.~
-@40117=~De todas as coisas, um aventureiro pode apreciar o fascínio do poder. Com minha liberdade, eu poderia conceder esse desejo — uma porção da minha força vital, transferida de meu ser para o seu.~
+@40117=~De todas as coisas, <UM_AVENTUREIRO> pode apreciar o fascínio do poder. Com minha liberdade, eu poderia conceder esse desejo — uma porção da minha força vital, transferida de meu ser para o seu.~
 @40118=~E minha recompensa?~
 @40119=~Não prometi nada a você, mortal — apenas disse que tinha o *poder* de conceder seu pedido. Nossos negócios estão encerrados. Adeus.~
 @40120=~Você vai pagar por isso! Está voltando para os Infernos do jeito mais difícil!~
@@ -848,7 +848,7 @@ Tipo: Uma mão~
 @40150=~Sim! Sim, eu vou! Mal posso esperar para começar. Todos os lugares que vamos conhecer, todas as coisas que vamos ver...~
 @40151=~Bem-vinda ao grupo, Pairi. Agora você é uma das heroínas de Targos.~
 @40152=~Alinhe-se, Pairi. Temos uma longa marcha pela frente.~
-@40153=~Posso te ensinar mais, se quiser. Tenho praticado minhas habilidades por todo o Vale do Vento Gélido e aprendi muito mais do que quando treinava em uma salinha apertada. Precisamos de uma monja dedicada e cheia de energia como você.~
+@40153=~Posso te ensinar mais, se quiser. Tenho praticado minhas habilidades por todo o Vale do Vento Gelado e aprendi muito mais do que quando treinava em uma salinha apertada. Precisamos de uma monja dedicada e cheia de energia como você.~
 @40154=~Sabe, não há professor melhor que a experiência. Se quiser aprimorar suas habilidades, precisamos de uma monja dedicada. Dá para aprender muita coisa em uma aventura — e não só sobre artes marciais.~
 @40155=~Deixar o monastério? Mas aprendi tanto aqui — e meu treinamento ainda não terminou!~
 @40156=~Se você precisa de ajuda de fora só para convencer seu mestre a fazer o trabalho dele, acho que vai continuar batendo em paredes mentais. Por que não vai buscar sua última lição enquanto Svaltid está disposto a ajudar, e depois vem conosco?~
@@ -862,7 +862,7 @@ Tipo: Uma mão~
 @40164=~Estamos matando monstros. Vamos onde os monstros estão e então os matamos.~
 @40165=~Além de derrotar a Legião da Quimera? Estamos conhecendo lugares. Aproveitando o clima. Conhecendo novas pessoas. Fazendo descobertas.~
 @40166=~Eu realmente não sei.~
-@40167=~Isso, hum... Isso parece que poderia ser interessante. Mas acho que é melhor eu ficar aqui. Tenho amigos no monastério e, ah... muitas coisas para fazer. Mas agradeço por ter falado com Svaltid por mim. Obrigado.~
+@40167=~Isso, hum... Isso parece que poderia ser interessante. Mas acho que é melhor eu ficar aqui. Tenho amigos no monastério e, ah... muitas coisas para fazer. Mas agradeço por ter falado com Svaltid por mim. Obrigada.~
 @40168=~Eu entendo. Adeus, Sersa.~
 @40169=~Isso... na verdade parece interessante. Mas também tenho tantas coisas para aprender aqui... Não posso dizer agora. Vou treinar com Svaltid e pensar melhor. Falo com você de novo pela manhã...~
 @40170=~Muito bem. Vejo você então.~
@@ -870,19 +870,19 @@ Tipo: Uma mão~
 @40172=~Talvez... Mas eu preciso saber mais sobre no que estou me metendo. Diga-me, para onde vocês estão indo, exatamente?~
 @40173=~Isso... na verdade parece interessante. Mas não tenho certeza... Não posso dizer agora. Preciso pensar melhor sobre isso. Me dê um dia e falo com você novamente pela manhã.~
 @40174=~Não tenho certeza... Não posso dizer agora. Preciso pensar melhor sobre isso. Me dê um dia e falo com você novamente pela manhã.~
-@40175=~Pensei no que você disse e... minha resposta é sim. Eu adoraria me juntar ao seu grupo. Já falei com Salisam e ele disse que é uma boa oportunidade para mim. Tenho certeza de que sentirei falta de algumas coisas ao deixar o mosteiro, mas esse é o preço de tentar coisas novas. Tenho minhas coisas em ordem — o que basicamente significa apenas eu — e estou pronto para ir.~
-@40176=~Pensei no que você disse e... minha resposta é sim. Eu adoraria me juntar ao seu grupo. Já falei com a Aruma e ela disse que é uma boa oportunidade para mim. Tenho certeza de que sentirei falta de algumas coisas ao deixar o monastério, mas esse é o preço de tentar coisas novas. Já organizei minhas coisas — o que basicamente significa apenas eu — e estou pronto para ir.~
+@40175=~Pensei no que você disse e... minha resposta é sim. Eu adoraria me juntar ao seu grupo. Já falei com Salisam e ele disse que é uma boa oportunidade para mim. Tenho certeza de que sentirei falta de algumas coisas ao deixar o mosteiro, mas esse é o preço de tentar coisas novas. Tenho minhas coisas em ordem — o que basicamente significa apenas eu — e estou pronta para ir.~
+@40176=~Pensei no que você disse e... minha resposta é sim. Eu adoraria me juntar ao seu grupo. Já falei com a Aruma e ela disse que é uma boa oportunidade para mim. Tenho certeza de que sentirei falta de algumas coisas ao deixar o monastério, mas esse é o preço de tentar coisas novas. Já organizei minhas coisas — o que basicamente significa apenas eu — e estou pronta para ir.~
 @40177=~Ótimo. Vamos começar.~
 @40178=~Nunca vi alguém tão rabugento só porque tem que cumprir seu dever.~
 @40179=~Não gosto de ser forçado a marchar no frio. Vim aqui para lutar e lucrar; não para congelar minhas pedras na neve com garotos brincando de ser soldados.~
 @40180=~Brincando de ser soldados? Você e seu bando de mercenários estavam–~
-@40181=~Nós não somos *mercenários*, garoto! Nós–~
+@40181=~Nós não somos *mercenários*, <GAROTO>! Nós–~
 @40182=~Vocês estavam se embriagando até a morte enquanto os *verdadeiros* homens estavam lá fora lutando contra os goblins.~
-@40183=~Parece que os goblins é que estavam lutando de verdade. Diga, como está seu braço, garoto? Acha que ainda pode lutar?~
-@40184=~Me ameace de novo, mercenário. Passe um dia na cadeia pública e vai mudar seu tom.~
-@40185=~E quem diabos é você para me colocar na cadeia, garoto? Você não me parece nada com aquele velho corvo na paliçada.~
+@40183=~Parece que os goblins é que estavam lutando de verdade. Diga, como está seu braço, <GAROTO>? Acha que ainda pode lutar?~
+@40184=~Me ameace de novo, <MERCENARIO>. Passe um dia na cadeia pública e vai mudar seu tom.~
+@40185=~E quem diabos é você para me colocar na cadeia, <GAROTO>? Você não me parece nada com aquele velho corvo na paliçada.~
 @40186=~Sou um soldado, matador. E ficaria feliz em te apresentar à disciplina militar. Acho que você precisa.~
-@40187=~Não brinque comigo, garoto. Não estou com humor.~
+@40187=~Não brinque comigo, <GAROTO>. Não estou com humor.~
 @40188=~Vamos continuar lutando juntos?~
 @40189=~Sim, vamos.~
 @40190=~Não agora, mas talvez eu volte em breve. Espere aqui.~
@@ -899,7 +899,7 @@ Tipo: Uma mão~
 - E eu possa deixar este reino para sempre -~
 @40200=~Ainda não, Veira. Eu repensei. Agradeço sua ajuda.~
 @40201=~Ainda não. Por favor, espere aqui por mim, e talvez eu volte.~
-@40202=~Sim, está na hora de você partir. Obrigado, Veira. Você merece seu descanso muitas vezes.~
+@40202=~Sim, está na hora de você partir. <OBRIGADO_MAI>, Veira. Você merece seu descanso muitas vezes.~
 @40203=~Você não me quer no grupo? Estou disposto a sair, mas é melhor ficarmos juntos.~
 @40204=~Claro, você pode vir junto.~
 @40205=~Por enquanto, vamos nos separar, mas talvez eu volte.~
@@ -935,7 +935,7 @@ Tipo: Uma mão~
 @40235=~Targos precisa de toda a ajuda possível, mas não acho que trazer um troll conosco seja seguro. O que acontece quando a maré da batalha se voltar contra nós? Aquela fera vai nos abandonar no momento em que achar que estamos em perigo — ou pior, se juntar à horda e se voltar contra nós. Precisamos de aliados, sim, mas precisamos de aliados em quem possamos *confiar*.~
 @40236=~Liderança significa correr riscos. Eu também não confio em Vrek, mas precisamos da força extra. Um troll é um inimigo poderoso e um amigo poderoso. Já temos inimigos demais.~
 @40237=~Não gosto de flechas. Prefiro que elas afundem no couro do Vrek do que no meu.~
-@40238=~Pra ser honesto, eu estava improvisando... Estávamos cercados; não tinha certeza se sairíamos vivos. Não pensei que acabaria viajando com ele. Simplesmente aconteceu.~
+@40238=~<PRA_SER_HONESTO_MAI>, eu estava improvisando... Estávamos cercados; não tinha certeza se sairíamos vivos. Não pensei que acabaria viajando com ele. Simplesmente aconteceu.~
 @40239=~Anotado. Agora continue andando, soldado.~
 @40240=~Um inimigo morto é melhor do que um falso amigo.~
 @40241=~Quer dizer, poderíamos esfaqueá-lo enquanto ele dorme se achássemos que ele iria virar contra nós, mas não tenho certeza se isso realmente o mataria.~
@@ -958,13 +958,13 @@ Tipo: Uma mão~
 @40258=~Nem todo mundo que luta contra a horda é humano, Reig. Elfos também estão do seu lado.~
 @40259=~Nem todo mundo que luta contra a horda é humano, Reig. Anões também estão do seu lado.~
 @40260=~Nem todo mundo que luta contra a horda é humano, Reig. Halflings também estão do seu lado.~
-@40261=~Nem todo mundo que luta contra a horda é humano, Reig. Eu sou meio-elfo, e também estou do seu lado.~
+@40261=~Nem todo mundo que luta contra a horda é humano, Reig. Eu sou <MEIO_ELFO>, e também estou do seu lado.~
 @40262=~Nem todo mundo que luta contra a horda é humano, Reig. Um drow também está do seu lado.~
 @40263=~Nem todo mundo que luta contra a horda é humano, Reig. Um meio-orc também está do seu lado.~
 @40264=~Nem todo mundo que luta contra a horda é humano, Reig. Gnomos também estão do seu lado.~
 @40265=~Não entendo do que você está reclamando. Gosto de ter um goblin que não está tentando nos matar, pela primeira vez.~
 @40266=~Pelo menos o goblin é menos feio.~
-@40267=~Estou cansado dos seus preconceitos, Reig. Também estou cansado de você desafiar minhas decisões. Eu sou a única razão de você estar vivo e Targos ainda existir.~
+@40267=~Estou <CANSADO> dos seus preconceitos, Reig. Também estou <CANSADO> de você desafiar minhas decisões. Eu sou a única razão de você estar vivo e Targos ainda existir.~
 @40268=~Não esqueci disso. Mas você sempre esteve do nosso lado. O goblin tentaria nos rasgar se nos encontrássemos no campo de batalha.~
 @40269=~Considere-se sortudo por não termos feito isso. Vamos continuar. Já sei como você se sente sobre Vrek; não preciso ouvir a mesma palestra sobre Vunarg.~
 @40270=~Agora ele não é mais, e você tem que me agradecer. De nada. Agora cale a boca.~
@@ -986,7 +986,7 @@ Tipo: Uma mão~
 @40286=~E quanto tempo isso vai durar? Esse goblin passou a vida inteira massacrando meu povo. Isso não vai mudar depois de uma conversa.~
 @40287=~Talvez não. Mas teremos que enfrentar isso quando chegar a hora.~
 @40288=~Eu sei. Mas preciso que você lute ao lado dele, mesmo assim.~
-@40289=~Não sou ingênuo, Reig. Sei o que ele é. Mas eu sou o motivo dele não estar tentando nos matar. De nada. Agora cale a boca.~
+@40289=~Não sou <INGENUO>, Reig. Sei o que ele é. Mas eu sou o motivo dele não estar tentando nos matar. De nada. Agora cale a boca.~
 @40290=~Precisamos de guerreiros fortes em quem possamos *confiar.* Esse goblin passou a vida matando meu povo. Tentaria nos rasgar se nos encontrássemos no campo de batalha.~
 @40291=~Considere-se sortudo por não termos feito isso. Vamos continuar.~
 @40292=~Mas ele não é, e você tem que me agradecer. De nada. Agora cale a boca.~
@@ -997,7 +997,7 @@ Tipo: Uma mão~
 @40297=~Eu sei. Mas ainda preciso que você lute ao lado dele.~
 @40298=~Talvez. Mas essas exceções não são baratas. Vou dar uma chance ao goblin, mas não vou esquecer o que ele é.~
 @40299=~Será que vamos realmente confiar na palavra de um demônio? Nós-~
-@40300=~Escute *com atenção*, humano. Eu não sou um demônio, mas um diabo, uma criatura de lei e propósito. Nós, diabos, *matamos* demônios; eles são nossos inimigos antigos. Ser chamado de demônio é um grande insulto para a nossa espécie.~
+@40300=~Escute *com atenção*, <HUMANO>. Eu não sou um demônio, mas um diabo, uma criatura de lei e propósito. Nós, diabos, *matamos* demônios; eles são nossos inimigos antigos. Ser chamado de demônio é um grande insulto para a nossa espécie.~
 @40301=~Fique tranquilo, estou disposto a trabalhar com este grupo em minha vingança contra a Legião da Quimera. Mas me chame de demônio novamente e você morrerá dolorosamente.~
 @40302=~Muito bem, diabo. Mas o que você estava dizendo antes? Sobre os demônios serem seus inimigos?~
 @40303=~Nós diabos temos lutado contra demônios por incontáveis milênios no que os mortais chamam de Guerra do Sangue. Um conflito além da sua compreensão, mortal, e muito mais antigo que seus deuses mesquinhos.~
@@ -1021,7 +1021,7 @@ Tipo: Uma mão~
 @40321=~E agora você luta ao lado de um. Quanto você odeia isso?~
 @40322=~Eu também não achava que chegaríamos tão longe. A fortaleza foi uma luta gloriosa, não foi?~
 @40323=~Quantos você acha que derrubou até agora?~
-@40324=~É bom estar vivo. Vamos manter assim.~
+@40324=~É bom <ESTAR_VIVO>. Vamos manter assim.~
 @40325=~Ainda temos um longo caminho pela frente. Ainda temos que passar pelos sacerdotes que nos derrubaram.~
 @40326=~Hoje em dia, não me incomoda tanto. Você é um bom soldado, Vunarg.~
 @40327=~Você também, morador da cidade.~
@@ -1059,9 +1059,9 @@ Tipo: Uma mão~
 @40359=~Sinto falta de casa. Estou fora há tempo demais. Ah, esqueça. Temos cobras para matar.~
 @40360=~Então é aqui que tudo termina. Escravos, demônios nos corredores, e Deus sabe o que é aquele crescimento doentio por toda a parede. E isso já foi uma fortaleza élfica?... Nunca percebi o quanto a horda avançou.~
 @40361=~Parece que quase todos os cantos de Icewind Dale.~
-@40362=~Estou com frio, cansado e irritado. Mal posso esperar para espetar as cabeças dos gêmeos em uma estaca.~
+@40362=~Estou com frio, <CANSADO> e <IRRITADO>. Mal posso esperar para espetar as cabeças dos gêmeos em uma estaca.~
 @40363=~Quais são seus planos quando tudo isso acabar?~
-@40364=~Estou muito curioso sobre aquele crescimento nas paredes. Nunca vi algo assim antes.~
+@40364=~Estou muito <CURIOSO> sobre aquele crescimento nas paredes. Nunca vi algo assim antes.~
 @40365=~Estou começando a pensar se tudo isso poderia ter sido evitado. A Legião não era só goblins e orcs iniciando um ataque maior; os cambions recrutaram seres por todo Icewind Dale, e até muito mais ao sul. Como uniram tantas pessoas?~
 @40366=~Levantar um exército exige dinheiro e aliados. Isair e Madae disseram que estavam lá para unir os aberrações e mestiços do mundo. Eles não poderiam ter subornado todo o exército para lutar por eles.~
 @40367=~O que você quer dizer?~
@@ -1080,7 +1080,7 @@ Tipo: Uma mão~
 @40380=~E você? Acha que vamos ver o fim da guerra? Deus, pareço um erudito pomposo sentado em casa na poltrona, achando que entende o mundo lá fora...~
 @40381=~Guerras acabam quando o inimigo está morto. Não podemos matá-los todos ainda, mas vamos chegar mais perto. E eles definitivamente vão pensar duas vezes antes de nos atacar novamente.~
 @40382=~Não acho que essas guerras realmente terminem. Tudo o que você pode fazer é detê-las temporariamente. Teremos que nos contentar com isso.~
-@40383=~Não pensei sobre isso. Estou ocupado demais matando monstros. Honestamente, já estou acostumado.~
+@40383=~Não pensei sobre isso. Estou <OCUPADO> demais matando monstros. Honestamente, já estou <ACOSTUMADO>.~
 @40384=~Filósofos de poltrona passam a vida ponderando sobre a história que fazemos.~
 @40385=~Não me importo se a guerra recomeçar. Gostei da nossa longa sequência de vitórias. Claro, a estrada é um inferno, mas ficamos mais fortes, mais ricos e mais inteligentes do que jamais seríamos em casa, e vimos coisas com as quais pessoas inferiores apenas sonham. Talvez eu passe a próxima guerra como general em vez de soldado raso.~
 @40386=~Acho que vou ficar de fora da próxima guerra. Já está na hora de me aposentar.~
@@ -1120,10 +1120,10 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40414=~Você é um homem sedento por sangue, Black Geoffrey. Acho que vou te manter por perto.~
 @40415=~Que bom? Quase morremos!~
 @40416=~Vamos sair daqui... O fedor está insuportável.~
-@40417=~Hmph. Quer ouro, pega você mesmo — ou implora aquela velha coruja por algumas moedas sobrando. Eu não estava partindo goblins como lenha só para o seu benefício.~
+@40417=~Hmph. Quer ouro, pega <VOCE_MESMO> — ou implora aquela velha coruja por algumas moedas sobrando. Eu não estava partindo goblins como lenha só para o seu benefício.~
 @40418=~Não sou cão de ataque de ninguém, <PRO_BOYGIRL>. *Nunca* se esqueça disso.~
-@40419=~É melhor aprender rápido, pirralho. Ou mantenha seu pescoço magro longe do combate, antes que um guerreiro melhor decida abri-lo. Homens fracos não vivem muito no campo de batalha.~
-@40420=~Vai você mesmo; ainda não terminei aqui. Talvez algum desses goblins possa me comprar algo melhor que aquela água rala que o Gohar anda nos vendendo...~
+@40419=~É melhor aprender rápido, <PIRRALHO>. Ou mantenha seu pescoço magro longe do combate, antes que um guerreiro melhor decida abri-lo. Homens fracos não vivem muito no campo de batalha.~
+@40420=~Vai <VOCE_MESMO>; ainda não terminei aqui. Talvez algum desses goblins possa me comprar algo melhor que aquela água rala que o Gohar anda nos vendendo...~
 @40421=~menino~
 @40422=~menina~
 @40423=~Menino~
@@ -1156,8 +1156,8 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40450=~Por que não queimar em vez disso?~
 @40451=~Você nunca cheirou carne queimada, hein? Confie em mim, um corpo é uma péssima lenha...~
 @40452=~Não sou seu irmão, <PRO_BOYGIRL>. E guarde suas “brincadeiras amigáveis” para você.~
-@40453=~O quê, você acha que eu deveria valorizar sua personalidade? Somos *espadas*, amigo. Derramamos sangue e ganhamos ouro, só isso. Não espere mais nada de mim.~
-@40454=~Cale a boca, <PRO_BOYGIRL>; você não é um bobo da corte esperto. Só mantenha os olhos abertos. Se você se matar, *eu* é que não vou ser o responsável por enterrar seu corpo.~
+@40453=~O quê, você acha que eu deveria valorizar sua personalidade? Somos *espadas*, <AMIGO>. Derramamos sangue e ganhamos ouro, só isso. Não espere mais nada de mim.~
+@40454=~Cale a boca, <PRO_BOYGIRL>; você não é <UM_BOBO> da corte <ESPERTO>. Só mantenha os olhos abertos. Se você se matar, *eu* é que não vou ser o responsável por enterrar seu corpo.~
 @40455=~Melhor não errar. Se ele correr de volta para o acampamento, vai trazer os amigos junto.~
 @40456=~Pelo que ouvi, os orcs não valorizam arqueiros tanto quanto valorizam guerreiros fortes com machado. Os arqueiros normalmente são os fracos entre eles.~
 @40457=~Orcs são fortes em geral. Aposto que até os mais fracos conseguem disparar uma flecha com força.~
@@ -1199,7 +1199,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40493=~Veremos quanto vale quando chegarmos a esse ponto.~
 @40494=~É melhor a Emma pagar por ela.~
 @40495=~Espera, ela não te queima? Pode valer mais do que eu pensei há alguns segundos.~
-@40496=~Não vamos vender; eu mesmo vou empunhá-la.~
+@40496=~Não vamos vender; <EU_MESMO> vou empunhá-la.~
 @40497=~Viu? Não parece quente, mas dói pra caramba! Podemos muito bem vendê-la. Pelo menos algum mercador vai pagar ouro por ela.~
 @40498=~O que está espreitando, vadia? Viu algo que gostou? Ou só está tentando me irritar?~
 @40499=~Mesmo que não fosse por essa careta horrível no seu rosto, eu sinto a escuridão nos seus olhos. Como um homem mau como você acabou lutando por Targos?~
@@ -1210,18 +1210,18 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40504=~Você vai precisar de um estômago forte se for lutar por Targos, Emma. O inimigo é muito mais sombrio que Geoffrey.~
 @40505=~Os tempos já estão difíceis, Emma. Havia muitos homens bons em Targos com quem poderíamos ter viajado, homens em quem você poderia ter confiado mais. Mas esses homens morreram quando os goblins atacaram. Não escolhemos os amigos que queríamos. Escolhemos os amigos que sobreviveram.~
 @40506=~Muito verdade. E talvez um dia nos separemos dele. Mas essa é uma decisão para outro momento.~
-@40507=~Espero que seja verdade. Mas um companheiro de viagem é mais do que apenas uma espada — ele também deve ser seu *escudo*. Sei que sou novo no grupo e não espero que as coisas mudem apenas por causa do meu conselho, mas me sentiria negligente se não me manifestasse. Direi apenas isto e deixo a decisão a seu critério: pergunte a si mesmo não em quem você acredita que pode derrotar seus inimigos, mas em quem você confia para mantê-lo seguro.~
+@40507=~Espero que seja verdade. Mas um companheiro de viagem é mais do que apenas uma espada — ele também deve ser seu *escudo*. Sei que sou nova no grupo e não espero que as coisas mudem apenas por causa do meu conselho, mas me sentiria negligente se não me manifestasse. Direi apenas isto e deixo a decisão a seu critério: pergunte a <SI_MESMO> não em quem você acredita que pode derrotar seus inimigos, mas em quem você confia para <MANTE_LO> <SEGURO>.~
 @40508=~Eu farei isso, Emma. E agradeço seu conselho.~
 @40509=~Honestamente, Emma, não espero que ninguém me mantenha segura. Não espero viver muito mais. Pretendo lutar pelo tempo que puder.~
 @40510=~Talvez agora eu tenha ambos. Se Geoffrey é minha espada, você será meu escudo, Emma?~
 @40511=~Intenções nobres. Eu as admiro — suponho que sinto o mesmo em relação aos meus próprios deveres; a minha também é uma vida de serviço. Mas se Targos precisa de você, lembre-se que precisa de você viva. Talvez por muito tempo.~
 @40512=~Ponto justo. Vou tentar não me matar antes de terminar meu trabalho.~
 @40513=~E talvez você possa me ajudar a sobreviver esse tempo todo.~
-@40514=~Agradeço. E se precisar, não hesite em pedir minha ajuda. Ficarei feliz em ajudar um novo amigo.~
-@40515=~E se tivermos sorte, talvez um dia eu seja um velho amigo.~
+@40514=~Agradeço. E se precisar, não hesite em pedir minha ajuda. Ficarei feliz em ajudar <UM_NOVO_AMIGO>.~
+@40515=~E se tivermos sorte, talvez um dia eu seja <UM_VELHO_AMIGO>.~
 @40516=~Agradeço, Emma. Vou lembrar disso.~
 @40517=~Pode contar comigo. Você tem minha palavra.~
-@40518=~Não tenho dúvidas. Mas um companheiro de viagem é mais do que apenas uma espada — ele também deve ser seu *escudo*. Sei que sou novo no grupo e não espero que as coisas mudem apenas com meus conselhos, mas me sentiria negligente se não me manifestasse. Direi apenas uma coisa, e deixo a decisão a seu critério: pergunte a si mesmo não em quem você acredita que pode derrotar seus inimigos, mas em quem você confia para mantê-lo seguro.~
+@40518=~Não tenho dúvidas. Mas um companheiro de viagem é mais do que apenas uma espada — ele também deve ser seu *escudo*. Sei que sou nova no grupo e não espero que as coisas mudem apenas com meus conselhos, mas me sentiria negligente se não me manifestasse. Direi apenas uma coisa, e deixo a decisão a seu critério: pergunte a <SI_MESMO> não em quem você acredita que pode derrotar seus inimigos, mas em quem você confia para <MANTE_LO> <SEGURO>.~
 @40519=~Lamento ouvir isso, e entendo a necessidade de encontrar aliados onde puder. Respeitarei as escolhas que fez. Porém, acredito que um companheiro de viagem é mais do que uma espada — ele também deve ser seu *escudo.*~
 @40520=~Muito certo. E agradeço seu conselho.~
 @40521=~Devemos tomar essa decisão logo. Mas deixo isso com você.~
@@ -1239,7 +1239,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40533=~Nem me lembre... Acho que a cidade toda está condenada, e aqui estamos nós, lutando por um senhor que provavelmente vai acabar com a cabeça espetada na lança de algum goblin antes do fim do ano.~
 @40534=~Nem a ponte era assim... Goblins e orcs eu aguento. O bicho selvagem estranho também não me incomoda. Até aqueles malditos *bugbears* eu não ligo; é só um tipo maior de fera.~
 @40535=~Bem, o que diabos estamos fazendo aqui? Você viu a magia que aquele porco de olhos amarelos estava jorrando antes de abatê-lo, e aposto que o *interior* da fortaleza tem ainda pior. Escute... Os goblins e orcs eu consigo lidar. Um ou outro animal selvagem também não me incomoda. Até os malditos *bugbears* eu não me importo; é só um tipo maior de fera.~
-@40536=~Não é questão de nervos, "amigo". Pare e pense por um segundo. Você acha mesmo que aquele velho feixe de gravetos em Targos vai resistir para sempre? A cidade inteira está condenada, eu imagino, e aqui estamos nós, lutando por um senhor que provavelmente vai acabar com a cabeça na lança de algum goblin antes do fim do ano.~
+@40536=~Não é questão de nervos, "<AMIGO>". Pare e pense por um segundo. Você acha mesmo que aquele velho feixe de gravetos em Targos vai resistir para sempre? A cidade inteira está condenada, eu imagino, e aqui estamos nós, lutando por um senhor que provavelmente vai acabar com a cabeça na lança de algum goblin antes do fim do ano.~
 @40537=~Mas olhe para o campo de batalha. É, nós vencemos esta luta, mas veja o que tivemos que matar. Não estamos apenas em menor número, <PRO_BOYGIRL>... A horda tem magia, magia *forte*, e não apenas alguns xamãs dementes bêbados de hidromel, braehg ou ponche de seiva de árvore.~
 @40538=~Aquele orc de olhos amarelos gritava para o céu para invocar o trovão sobre nós... Ainda consigo ouvir o estrondo. Magia rara, essa. Até o ar ainda está zumbindo. Grande magia, grandes números, tambores e *worgs* — pelo amor de Deus, e se a luta der errado e tivermos que voltar para a floresta? Não podemos fugir de uma matilha de worgs em nosso encalço.~
 @40539=~*cuspir* Nos inscrevemos para lutar contra goblins. Não isso aqui.~
@@ -1263,18 +1263,18 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40557=~Ou o contrário, dependendo do seu gosto.~
 @40558=~Eles ainda estarão lá quando voltarmos. Vamos?~
 @40559=~Tudo bem. Vamos andar; meus dedos estão ficando dormentes só de ficar parado na neve.~
-@40560=~Pois é, e você é o idiota que gosta de tudo isso também. Vamos ver quanto tempo esse sorriso dura quando os orcs estiverem te assando no espeto.~
+@40560=~Pois é, e você é <O_IDIOTA> que gosta de tudo isso também. Vamos ver quanto tempo esse sorriso dura quando os orcs estiverem te assando no espeto.~
 @40561=~Hm. Pois é. Gostei do som disso.~
 @40562=~Eu imaginei que gostasse. Vamos lá, vamos inspirar umas histórias incríveis.~
 @40563=~Você tem bom gosto, meu amigo. Avante!~
 @40564=~Te vejo no inferno, vadia de pele azul.~
 @40565=~Eu *nunca* deveria ter vindo aqui. Nunca deveria ter me alistado, nunca deveria ter vindo para Targos, nunca deveria ter deixado você me arrastar para a paliçada! Eu deveria partir aquele gnomo em dois! E Ulbrec também. O idiota colocou seus melhores guerreiros em uma nave frágil e nos mandou para a morte! Que diabos... como vamos voltar para casa? Ou para qualquer lugar?~
 @40566=~- Nunca estive tão longe de Donovan -
-- perdido em outro mar -
+- perdida em outro mar -
 - um oceano de neve -~
 @40567=~Minha cabeça ainda está girando por causa da queda... Estou surpreso por ainda estarmos vivos. Mas o que devemos fazer agora?~
 @40568=~Vrek não entende. Navio devia pousar suave. Agora estamos presos. Gnomo nos enganou? Ou gnomo é burro?~
-@40569=~Eu não conhecia Oswald, mas estou desapontado mesmo assim. O dirigível foi uma escolha tola, e agora todos nós temos que pagar o preço. Não sei ao certo como proceder... este não é território seguro, nem um que tenhamos preparado.~
+@40569=~Eu não conhecia Oswald, mas estou desapontada mesmo assim. O dirigível foi uma escolha tola, e agora todos nós temos que pagar o preço. Não sei ao certo como proceder... este não é território seguro, nem um que tenhamos preparado.~
 @40570=~Eu pensei que estava no time vencedor. Não percebi o quão estúpidos vocês, moradores da cidade, são — ou o quão estúpido eu fui em entrar. Mas não, eu pisei em uma máquina não testada, só por sua ordem, e agora estamos aqui. Condenados à fome, porque aquele gnomo idiota nos contou uma história fantástica e nós acreditamos nele.~
 @40571=~Não sei o quanto culpar Oswald. Aqueles sacerdotes no topo do muro causaram a queda, e isso ninguém de nós poderia ter previsto.~
 @40572=~Oswald quase nos matou todos. Não acredito que achei que aquela coisa ia continuar no ar... Mas aqui estamos. Tarde demais para voltar agora.~
@@ -1287,7 +1287,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40579=~Guarde sua energia. Vamos precisar dela se quisermos sobreviver. Devemos começar a explorar.~
 @40580=~Acho que prefiro Ulbrec vivo, para ele ainda poder nos pagar.~
 @40581=~Ponto justo. Mas acho que agora isso não importa mais.~
-@40582=~Nem pense em me dar uma lição, <PRO_BOYGIRL>! Não agora! Não quando estamos perdidos e sozinhos! Tenho todo motivo para estar bravo, garoto, e Ulbrec não está aqui para reclamar—então fique calada... até poder voltar para Targos e lamber suas botas.~ 
+@40582=~Nem pense em me dar uma lição, <PRO_BOYGIRL>! Não agora! Não quando estamos perdidos e sozinhos! Tenho todo motivo para estar bravo, <GAROTO>, e Ulbrec não está aqui para reclamar—então <FIQUE_CALADO>... até poder voltar para Targos e lamber suas botas.~ 
 @40583=~Também não teste *minha* paciência, Geoffrey. Olha, temos trabalho a fazer.~
 @40584=~Tudo bem. De qualquer forma, você não vale a pena para conversar.~
 @40585=~Não vou aceitar uma ameaça a Ulbrec, mercenário. Cuidado com suas palavras.~
@@ -1372,7 +1372,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40662=~Às vezes proteger os fracos significa alimentar a fera. Não são palavras gentis que matam goblins. É aço.~
 @40663=~Sem querer ofender, Veira, mas o resto de nós ainda tem vidas para perder. Não vou arriscar a minha. Prefiro viver com um troll do que morrer por um orc.~
 @40664=~Nossos objetivos não mudaram. Não se preocupe; ainda estamos comprometidos a proteger Targos.~
-@40665=~Isso não saiu exatamente como eu planejei, para ser honesto. Mas não tenho certeza se podemos voltar atrás.~
+@40665=~Isso não saiu exatamente como eu planejei, <PARA_SER_HONESTO>. Mas não tenho certeza se podemos voltar atrás.~
 @40666=~- Quanto tempo ela vai se juntar a nós -
  - Quanto tempo vamos alimentá-la -
  - E se ela vai se voltar contra nós no fim -~
@@ -1451,7 +1451,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40699=~Eu sou um *aventureiro,* goblin. Mas você? É só um miserável ladrão que a horda puxou do barro.~
 @40700=~Eu? UM MISERÁVEL!? Sou o maior e mais forte da minha tribo! Eu mataria um goblin se ele me dissesse o que você acabou de dizer. E faria o mesmo se fosse um bugbear. É melhor você não me chamar assim de novo.~
 @40701=~Argh, tudo bem. Mas ainda não gosto disso.~
-@40702=~Você é louca de confiar em um goblin, <PRO_BOYGIRL>. Mesmo que ele não tente cortar nossas gargantas enquanto dormimos, ele ainda é um espião, pelo que eu sei. Vou ficar calada, tudo bem, mas não vou fechar os olhos... nem por um instante.~
+@40702=~Você é <LOUCO> de confiar em um goblin, <PRO_BOYGIRL>. Mesmo que ele não tente cortar nossas gargantas enquanto dormimos, ele ainda é um espião, pelo que eu sei. Vou ficar calado, tudo bem, mas não vou fechar os olhos... nem por um instante.~
 @40703=~Espero que ele não seja sempre assim.~
 @40704=~É sim.~
 @40705=~Você deveria vê-lo quando está bebendo.~
@@ -1507,7 +1507,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40753=~Não vou me afastar de Targos em sua hora de necessidade. Mas a situação é grave, e estamos em menor número. *Precisamos* ser cuidadosos nas próximas missões. Se encontrarmos outra luta como aquela na ponte, talvez não tenhamos tanta sorte.~
 @40754=~Concordo. Essa guerra pode durar muito tempo, e precisamos sobreviver para ver o fim dela.~
 @40755=~Acho que não, e não espero que isso mude. A próxima batalha será pior. É melhor estarmos preparados.~
-@40756=~Pode ser. Mas eu o encorajo a não se tornar excessivamente confiante. Precisamos ser criteriosos com os riscos que assumimos. Uma decisão errada pode nos custar a vida.~
+@40756=~Pode ser. Mas <EU_O_ENCORAJO> a não se tornar excessivamente confiante. Precisamos ser criteriosos com os riscos que assumimos. Uma decisão errada pode nos custar a vida.~
 @40757=~Isso seria muito bem-vindo, de fato.~
 @40758=~Verdade, mas eu não pensei que *eu* teria dificuldade com isso. Selune tem sido bondosa comigo. Olhando para trás, passei por poucas dificuldades na vida até agora. Agora essa tendência está mudando, e preciso me adaptar.~
 @40759=~Você já teve dúvidas sobre a vida de aventureiro? Não é um estilo de vida para o qual muitas pessoas estão preparadas.~
@@ -1516,7 +1516,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40762=~Nunca parei realmente para pensar nisso. A vida de aventureiro meio que... aconteceu comigo.~
 @40763=~Para ser honesto, acho que nunca passei um dia sequer sem ter dúvidas.~
 @40764=~O que é que te faz continuar?~
-@40765=~Isso me faz sentir vivo. Saber que cada decisão pode ser a diferença entre a vida e a morte... é empolgante.~
+@40765=~Isso me faz <SENTIR_VIVO>. Saber que cada decisão pode ser a diferença entre a vida e a morte... é empolgante.~
 @40766=~Ouro. Todo mundo precisa ganhar a vida.~
 @40767=~Ouro. Só isso mesmo.~
 @40768=~Há pessoas para proteger. Ideais pelos quais lutar. Tiranos para derrubar e dragões para matar. Não consigo ficar parado e deixar o mundo indefeso.~
@@ -1532,21 +1532,21 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40778=~Você deveria. Às vezes, há bons motivos para se preocupar.~
 @40779=~*suspiro* Espero que isso não te leve a correr grandes riscos. Sinto que haverá pouco espaço para erros nos dias que virão.~
 @40780=~O ouro é a fonte de muitos males. Ainda assim, não te culpo se tudo o que deseja é sustentar a si mesmo e à sua família. Os tempos estão difíceis, e nem toda colheita traz o suficiente para alimentar os famintos.~
-@40781=~*suspiro* Há coisas maiores na vida do que moedas, amigo. Espero que um dia você as abrace.~
+@40781=~*suspiro* Há coisas maiores na vida do que moedas, <AMIGO>. Espero que um dia você as abrace.~
 @40782=~Sinto o mesmo. Suponho que isso é tudo o que realmente importa. Não devo reclamar dos meus medos mesquinhos. Não quando há tanto em jogo.~
 @40783=~Sim. Realmente sim.~
 @40784=~Justo. Não vou insistir, se esse for o seu desejo.~
 @40785=~Curioso. Isso é bem diferente dos meus próprios motivos. A vida de um sacerdote costuma ser cheia de propósito. Tudo tem uma razão, uma intenção maior. Seja lá o que te guia, espero que te leve na direção certa.~
 @40786=~Não, seria vergonhoso recusar o chamado à ação. Preciso engolir meus medos. O caminho à frente não tem espaço para eles.~
-@40787=~Devemos ser cautelosos com nossa abordagem. Não podemos nos dar ao luxo de travar outra batalha caótica como aquela na Ponte Shaengarne. Nossa vitória lá foi por pouco, e as forças da horda são, sem dúvida, ainda mais fortes aqui. Se chamarmos muita atenção para nós mesmos, podemos ser subjugados.~
+@40787=~Devemos ser cautelosos com nossa abordagem. Não podemos nos dar ao luxo de travar outra batalha caótica como aquela na Ponte de Shaengarne. Nossa vitória lá foi por pouco, e as forças da horda são, sem dúvida, ainda mais fortes aqui. Se chamarmos muita atenção para nós mesmos, podemos ser subjugados.~
 @40788=~Este é o coração da horda. Se quisermos quebrar sua força, teremos que fazê-lo aqui. Mas há olhos por toda parte. Não será fácil nos aproximarmos.~
 @40789=~Ainda temos uma vantagem. A horda não está esperando por nós aqui.~
 @40790=~Emma, sua magia pode nos fazer passar por alguns goblins, certo?~
 @40791=~Um pouco de magia deve nos levar bem longe. Duvido que algo aqui consiga ver o invisível.~
-@40792=~Consigo passar por alguns goblins sonolentos... Desde que você esteja por perto para me ajudar se eu for visto.~
+@40792=~Consigo passar por alguns goblins sonolentos... Desde que você esteja por perto para me ajudar se eu for <VISTO>.~
 @40793=~Eles podem não estar esperando *a gente*, mas viram Ennelia e Braston há pouco tempo. Então, provavelmente estão de olho em algum tipo de intruso. O elemento surpresa provavelmente não vai durar muito.~
 @40794=~Selune pode ajudar a esconder um de nós, mas toda magia tem seus limites. Não espere que ela nos proteja de *todo* perigo.~
-@40795=~Estarei por perto, amigo. Mas ainda assim, tenha cuidado. Há situações das quais eu não poderia te salvar.~
+@40795=~Estarei por perto, <AMIGO>. Mas ainda assim, tenha cuidado. Há situações das quais eu não poderia te salvar.~
 @40796=~Eu não contaria com isso. Com certeza pelo menos um deles em Shaengarne escapou para avisar a fortaleza da derrota na ponte.~
 @40797=~Até onde isso pode nos levar? Imagino que não dure para sempre.~
 @40798=~Longe o bastante para entendermos nosso entorno, pelo menos. Aí podemos bolar um plano de ataque.~
@@ -1560,7 +1560,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40806=~Quem me dera ter. Tudo bem, vamos ver até onde conseguimos chegar.~
 @40807=~Tudo bem. Vamos ver do que ela é capaz.~
 @40808=~Verdade. Não quero parecer ingrato. Só não gosto das nossas chances.~
-@40809=~Não fique convencido. Se você cometer um erro, todos nós vamos pagar por isso.~
+@40809=~<NAO_FIQUE_CONVENCIDO_MAI>. Se você cometer um erro, todos nós vamos pagar por isso.~
 @40810=~Estarei lá. Boa sorte.~
 @40811=~Deuses, esse lugar fede... Cabelo queimado, carne podre, cocô de goblin, e nem sei mais o quê.~
 @40812=~*cospe* O lugar inteiro fede a goblin. Não sei como eles aguentam ficar aqui dentro. Talvez essas criaturinhas miseráveis *gostem* do cheiro.~
@@ -1609,13 +1609,13 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40852=~*fareja* Cheiro escuro. Azedo. *Diferente.*~
 @40853=~Algo antinatural, você acha?~
 @40854=~Sim.~
-@40855=~Hm. Pode ser magia, pode ser extraplanar. Um demônio, um mago, um bruxo? Se não for magia comum, se vier de outro plano... isso definitivamente é relevante. Obrigado, Vrek. Isso foi muito esclarecedor.~
+@40855=~Hm. Pode ser magia, pode ser extraplanar. Um demônio, um mago, um bruxo? Se não for magia comum, se vier de outro plano... isso definitivamente é relevante. <OBRIGADO_MAI>, Vrek. Isso foi muito esclarecedor.~
 @40856=~Essa foi por pouco. Graças aos deuses ele não chamou mais atenção para nós.~
 @40857=~Argh, e aqui está o *maior* motivo pelo qual eu queria sair desse lugar.~
 @40858=~Esses são algum tipo de goblin-demônio. Eles conseguem se passar por goblins, mas essa não é a sua verdadeira forma. Na verdade, são uns demônios nojentos saídos das piores histórias do meu xamã. Aquele ali ficou *muito* bom em fingir ser um goblin da minha tribo, só para devorar vários de nós quando baixamos a guarda!~
 @40859=~O pior é que a maioria das armas não faz nada contra eles. Se um orc vem roubar nossa comida, basta atirar nele. Mas eu sou o único da minha tribo com uma arma capaz de ferir essas coisas.~
 @40860=~Tenho sérias dúvidas quanto às nossas táticas. Não gosto de derramamento de sangue, mas há momentos em que ele é necessário. Não acredito que Guthma seja digno de confiança.~
-@40861=~Você me disse depois da luta em Shaengarne que estava preocupado com os riscos que estávamos correndo. Você queria uma abordagem mais segura, algo que pudesse nos manter vivos. É isso. Nós escapamos de uma luta que poderíamos ter perdido e ainda assim saímos vitoriosos. Targos está segura, e é isso que importa.~
+@40861=~Você me disse depois da luta em Shaengarne que estava <PREOCUPADO> com os riscos que estávamos correndo. Você queria uma abordagem mais segura, algo que pudesse nos manter vivos. É isso. Nós escapamos de uma luta que poderíamos ter perdido e ainda assim saímos vitoriosos. Targos está segura, e é isso que importa.~
 @40862=~O que está feito, está feito, Emma.~
 @40863=~Nem eu. Mas Guthma tem outros inimigos dentro da Legião, e exploramos essa divisão. Nossos inimigos vão lutar entre si antes de nos atacarem de novo. Na minha opinião, esse é um resultado muito mais eficaz do que simplesmente matar Guthma.~
 @40864=~Voltaremos para lidar com Guthma quando chegar a hora. Não fugimos da luta; apenas escolhemos um momento melhor para ela.~
@@ -1625,7 +1625,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40868=~Agradeço, Emma. Fico feliz por ter seu apoio.~
 @40869=~É compreensível. Também tenho minhas dúvidas. Mas acho que conseguimos o que precisávamos.~
 @40870=~Fico feliz. Espero estar lá quando esse dia chegar.~
-@40871=~E fico feliz em oferecê-lo, amigo.~
+@40871=~E fico feliz em oferecê-lo, <AMIGO>.~
 @40872=~Concordo. E fico feliz que você também entenda meu ponto de vista.~
 @40873=~Não precisa ser assim. Se quiser, podemos voltar, matar Guthma e libertar Braston. Ennelia gostaria muito mais disso. Mas deixarei a decisão com você.~
 @40874=~Mas se Guthma mudar de ideia e atacar Targos em vez de emboscar a Legião, sacrificaremos uma oportunidade valiosa de cortar a cabeça da fera. Se ele ordenar outro ataque, não será tão fácil invadirmos a fortaleza novamente.~
@@ -1685,7 +1685,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40926=~Sim, sim, por favor! Me dê um pouco do seu sangue!~
 @40927=~NÃO! Você não vai ganhar nem uma gota do meu sangue. Da próxima vez que quiser algo de mim, é melhor ter mais poder de barganha do que isso.~
 @40928=~Ai, isso doeu! E você quebrou o frasco onde eu ia guardar! Vou ter que achar outro...~
-@40929=~Fale, humano.~
+@40929=~Fale, <HUMANO>.~
 @40930=~Não tenho nada a dizer a *você*, diabo.~
 @40931=~Mesmo assim, você me encara. Algo está na sua mente.~
 @40932=~Sim. Mas não tenho nada a dizer a você.~
@@ -1743,7 +1743,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @40980=~Fizemos nosso acordo com a bruxa. Ela não é mais nossa preocupação. Vamos a assuntos mais urgentes.~
 @40981=~Evitar a luta foi a decisão sábia. Prefiro não ver a bruxa nos transformar em doninhas.~
 @40982=~Droga! Os diabos moralistas já fugiram para o buraco de onde saíram. Devíamos ter aberto eles quando tivemos a chance!~
-@40983=~Meu coração ainda está acelerado... *Isso* é o que vocês têm lutado? Estou preocupado... Minha vila não é a única em perigo.~
+@40983=~Meu coração ainda está acelerado... *Isso* é o que vocês têm lutado? Estou preocupada... Minha vila não é a única em perigo.~
 @40984=~Os líderes da Legião viajam sem guarda-costas. Acho que eles não *precisam* de guardas; eles são conjuradores poderosos por si só. Por mais que eu quisesse ter acabado com tudo ali mesmo, provavelmente é melhor que eles tenham ido embora. Não tenho certeza se estamos prontos para enfrentá-los agora.~
 @40985=~Isair e Madae se aliam a hordas goblinoides e deuses malignos, mas ainda fingem lutar pela justiça. Estamos lidando com o pior tipo de fanatismo aqui. Fúria cega. Me pergunto de onde eles vieram?~
 @40986=~Estudei um pouco sobre cambions, embora não saiba muita coisa. Eles são a progênie de um demônio e um mortal, mas... aquela demonstração de magia deles não era normal. Ser capaz de matar os vivos e ressuscitar os mortos de uma só vez? Isso não é algo que *nenhum* cambion consegue fazer. Seja qual for o demônio que os gerou, deve ter sido um dos grandes.~
@@ -1771,11 +1771,11 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41008=~Você pode não estar feito para a vida de aventureiro. Você só vai saber de verdade depois de um tempo nessa vida.~
 @41009=~Fazemos um bom trabalho; vou dar esse crédito para nós. Mas *vai* ser difícil.~
 @41010=~Prepare-se. Temos um longo caminho pela frente.~
-@41011=~Ok. Obrigado. Eu entendo completamente.~
+@41011=~Ok. Obrigada. Eu entendo completamente.~
 @41012=~Acho que sim. Talvez só vejamos como vai ser, né?~
-@41013=~Obrigado! Prometo que vou fazer o meu melhor. Muito obrigado por me levar junto.~
+@41013=~Obrigada! Prometo que vou fazer o meu melhor. Muito obrigada por me levar junto.~
 @41014=~Oh, isso é horrível! *Isso* foi o que aconteceu com as crianças? Vocês as sequestraram e drenaram a vida delas?~
-@41015=~E quem é *você* para se opor, meio-elfo? Você vai viver quase duzentos anos de graça; eu tive que trabalhar por anos para aprender os segredos sombrios necessários para viver metade disso!~
+@41015=~E quem é *você* para se opor, <MEIO_ELFO>? Você vai viver quase duzentos anos de graça; eu tive que trabalhar por anos para aprender os segredos sombrios necessários para viver metade disso!~
 @41016=~Impressionante. Aquela magia mortal daqueles dois cambions era algo. Às vezes esqueço que semi-demônios podem se tornar tão poderosos.~
 @41017=~Os Aurilitas pareciam sentir o mesmo. Cathin, aquela sacerdotisa com machado no templo, disse que eles só estavam interessados em obter a Joia da Pedra do Coração. Assim como a Horda, eles só fizeram amizade com a Legião para atingir seus próprios objetivos. Isso pode ser uma boa notícia. Para nós, pelo menos. A aliança deles parece bem frágil.~
 @41018=~Meio-demônios são uma casta de baixo escalão no meu plano e não podem ser promovidos. No entanto, os maiores deles são comparáveis aos demônios maiores em sua habilidade mágica e de luta, ou talvez até melhores. E estes podem ser os cambions mais poderosos que já vi em toda a minha existência.~
@@ -1811,17 +1811,17 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41048=~Talvez algum dia você possa voltar e estudar os restos do trabalho dela. Provavelmente ainda haverá pistas para descobrir.~
 @41049=~De jeito nenhum! Acho que o trabalho dela poderia ser usado para muitas coisas. Por que não, poderia me dizer muito sobre a própria morfologia de Aocha! E sempre quis saber como seria me transformar em uma aranha.~
 @41050=~O quê?~
-@41051=~Não estou surpreso.~
+@41051=~Não estou <SURPRESO>.~
 @41052=~Não é muito diferente de se transformar em qualquer outro animal.~
 @41053=~Já fiz isso antes. É uma sensação... nervosa, eu diria. Nervosa e faminta.~
 @41054=~Eu também.~
 @41055=~Bem, você não pode passar tanto tempo quanto eu passo perto da Aocha sem ficar *um pouco* curioso. Ela é uma criatura linda, do seu jeito, e é muito mais inteligente do que a maioria pensa! Não é, Aocha?~
 @41056=~Estou feliz por você, Zack.~
-@41057=~Estou preocupado com você, Zack.~
+@41057=~Estou <PREOCUPADO> com você, Zack.~
 @41058=~Ah, não sei não. Uma aranha é uma criatura única. Sem falar mal dos outros animais, claro, mas um rastejante de oito patas e oito olhos que pode produzir sua própria seda? Agora *essa* é uma animal raro!~
 @41059=~Do que eu estava falando mesmo? Ah, certo, o mago morto. Tantas oportunidades perdidas...~
 @41060=~É, isso parece a Aocha. Talvez algum dia eu possa experimentar isso eu mesmo.~
-@41061=~Você tem bom gosto, meu amigo. Muito bom gosto.~
+@41061=~Você tem bom gosto, <MEU_AMIGO>. Muito bom gosto.~
 @41062=~Eu também. Talvez algum dia possamos voltar e ver se mais do trabalho dela pode ser recuperado. Uma questão para outro dia, eu acho.~
 @41063=~Rabugento. Ah, bem. Acho que nem todo mundo consegue apreciar os aspectos mais refinados da Arte. Cada um com seu gosto...~
 @41064=~Ainda pior! A velha drow tem as prioridades mais estranhas. Destruir um mutador de aranha perfeitamente bom! Que pena...~
@@ -1836,7 +1836,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41073=~Vrek não gosta disso. O devorador de mentes deixa Vrek tonto.~
 @41074=~Teremos que manter o foco. Tudo aqui dentro tenta bagunçar nossas cabeças.~
 @41075=~Os illithids são problemas. Um deles já é ruim, mas um monte deles é... bem, tenho certeza que damos conta. Só espero que não tenhamos que matar o cérebro ancião ou algo assim, hehe. Provavelmente morreríamos!~
-@41076=~Os Illithids são uma raça poderosa e arrogante. Se você permitir que eles entorpecam seus sentidos, eles o devorarão. Mas se você fortalecer sua mente, a carne deles é tão macia quanto a de qualquer humano. Corte seus corpos ao meio antes que eles cortem sua mente.~
+@41076=~Os Illithids são uma raça poderosa e arrogante. Se você permitir que eles entorpecam seus sentidos, <ELES_O_DEVORARAO>. Mas se você fortalecer sua mente, a carne deles é tão macia quanto a de qualquer humano. Corte seus corpos ao meio antes que eles cortem sua mente.~
 @41077=~Bem feito. Amedrontar um cérebro mestre não é tarefa fácil. Poucos mortais conseguem isso.~
 @41078=~O vale todo cheira a podridão. Nada de carne fresca. Podridão, óleo e cobra.~
 @41079=~Isso é tão triste... Ouvi histórias sobre Kuldahar, e toda a vida que floresce ao redor. Aquele grande orog transformou um vale lindo em um cemitério podre. Temos *que* limpar este lugar. Não está certo.~
@@ -1871,7 +1871,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41108=~Você está certo. Preciso deixar minhas emoções de lado. Há muito em jogo.~
 @41109=~Não, acho que não. Se eu começar a beber para fugir dos meus medos, só vou me afogar.~
 @41110=~*suspiro* Tudo bem. Queria compartilhar seu entusiasmo.~
-@41111=~Sinto muito ouvir isso, amigo... E se eu descobrir uma solução, aviso você.~
+@41111=~Sinto muito ouvir isso, <AMIGO>... E se eu descobrir uma solução, aviso você.~
 @41112=~Nós vamos... realmente passar por um portal para Chult? Ainda estou me recuperando da viagem de dirigível!~
 @41113=~Nunca estive em uma selva antes. Aposto que é muito bonita... exceto pelos yuan-ti, claro.~
 @41114=~A selva vai ser difícil para a Aocha. Aranhas-da-geada não foram feitas para ambientes quentes. Melhor eu fazer um bálsamo de hortelã para o tórax dela.~
@@ -1924,7 +1924,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41144=~Finalmente, um lugar quente! Eu... na verdade... está quente demais. Droga! Já sinto suor na testa.~
 @41145=~Essa é uma mudança bem-vinda em relação a Icewind Dale. Eu me pergunto como é viver aqui... um mundo inteiro tão quente quanto uma lareira.~
 @41146=~Vou ter tantas histórias para contar ao meu clã. Me pergunto quantas eles vão acreditar.~
-@41147=~Eu... Ouço tantos gritos aqui. Li que os yuan-ti são torturadores, mas... Minha alma está tremendo. Nunca estive tão pronto para recorrer à violência como agora. *Devemos* purificar este templo insidioso. Não podemos permitir que uma única cobra escape da punição!~
+@41147=~Eu... Ouço tantos gritos aqui. Li que os yuan-ti são torturadores, mas... Minha alma está tremendo. Nunca estive tão pronta para recorrer à violência como agora. *Devemos* purificar este templo insidioso. Não podemos permitir que uma única cobra escape da punição!~
 @41148=~Gosto da sua atitude!~
 @41149=~Estou surpresa em te ver tão ansiosa para matar, Sersa. Você nunca me pareceu do tipo confrontadora.~
 @41150=~Concordo.~
@@ -1933,7 +1933,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41153=~Obrigada. Mas... talvez ainda devêssemos ser cautelosos. As cobras podem estar em qualquer lugar. Não quero ser pega desprevenida.~
 @41154=~Normalmente, não sou. Mas aquelas vozes... mudam as coisas. Este lugar não deixa espaço para hesitação.~
 @41155=~Bom. Mas... talvez ainda devêssemos ser cautelosos. As cobras podem estar em qualquer lugar. Não quero ser pega desprevenida.~
-@41156=~Você está certo. Me desculpe. Você é mais experiente que eu, e vou confiar no seu julgamento. Mas, por favor, precisamos agir. Se não destruirmos este templo, eu não conseguiria viver comigo mesma.~
+@41156=~Você está <CERTO>. Me desculpe. Você é mais experiente que eu, e vou confiar no seu julgamento. Mas, por favor, precisamos agir. Se não destruirmos este templo, eu não conseguiria viver comigo mesma.~
 @41157=~Desculpe. Vou tomar cuidado. Mas, por favor, não podemos deixar esse templo de pé. Eu não conseguiria viver comigo mesma se fizéssemos menos do que isso.~
 @41158=~Estou tendo dificuldade em entender como definir um humano.~
 @41159=~Como assim?~
@@ -1948,8 +1948,8 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41168=~O que realmente os torna diferentes de mim? Não pode ser só a cor da pele. É só a criação deles? Ser *criado* pelos yuan-ti é suficiente para tornar alguém maligno? Talvez *eu* lutaria por eles, se tivesse sido criado aqui, assim como aqueles humanos iniciados em Chult. E se isso for verdade... será que vale para os goblins também? Os orcs? Sherincal, o duergar, um *devorador de mentes*?~
 @41169=~Isso é verdade para Isair e Madae?~
 @41170=~Isso realmente importa? Seja como for que eles acabaram do lado da Legião, não há volta agora.~
-@41171=~Difícil dizer. Já me perguntei como teria sido minha vida se *eu* tivesse sido criado por humanos. Mas mesmo depois de crescer entre os meus, aqui estou, lutando por Targos.~
-@41172=~Não sei. Fui criado por humanos e acabei do lado das Dez Cidades. Talvez eu estivesse lutando pela Legião, se tivesse sido criado entre os meus.~
+@41171=~Difícil dizer. Já me perguntei como teria sido minha vida se *eu* <TIVESSE_SIDO_CRIADO> por humanos. Mas mesmo depois de crescer entre os meus, aqui estou, lutando por Targos.~
+@41172=~Não sei. Fui <CRIADO> por humanos e acabei do lado das Dez Cidades. Talvez eu estivesse lutando pela Legião, se tivesse sido <CRIADO> entre os meus.~
 @41173=~Eu estava me perguntando a mesma coisa. Posso não ter tanto sangue yuan-ti quanto os mestiços daqui, mas ver tanta gente aqui como eu, depois de passar tanto tempo da minha vida sendo o único... Não sei qual é a diferença entre mim e eles. Talvez não haja nenhuma.~
 @41174=~Eu também tenho sangue yuan-ti, Reig, e mesmo assim estou aqui, lutando por Targos. Os mestiços daqui *escolheram* lutar por uma causa maligna. A criação deles não é desculpa.~
 @41175=~Ninguém obrigou os mestiços a lutar pela Legião ou pelas cobras. Eles estão aqui por escolha própria.~
@@ -1993,11 +1993,11 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41210=~Você também, goblin.~
 @41211=~Espero que dure.~
 @41212=~Espero que dure bastante. A sorte sempre acaba eventualmente.~
-@41213=~Não fique confiante demais, [PRO_RACE]. Basta um erro para levar uma lâmina no pescoço.~
+@41213=~Não fique confiante demais, <PRO_RACE>. Basta um erro para levar uma lâmina no pescoço.~
 @41214=~Eu também espero. Mas não vai durar. A sorte sempre acaba eventualmente.~
 @41215=~Finalmente vou ver Targos por dentro. Só espero que seus companheiros soldados não saiam com a espada na mão ao me ver.~
 @41216=~Você agora é um dos heróis de Targos, Vunarg. Vou garantir que te tratem como tal.~
-@41217=~Para ser honesto, eu nem tinha pensado nisso.~
+@41217=~<PARA_SER_HONESTO_MAI>, eu nem tinha pensado nisso.~
 @41218=~Não se preocupe; vou dizer a eles que você é um gnomo de aparência estranha.~
 @41219=~Você espera que eu lute contra meus próprios aliados só para te proteger?~
 @41220=~Eles provavelmente vão achar que você é nosso prisioneiro.~
@@ -2015,8 +2015,8 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41232=~Você tem razão. A morte de Guthma vai render uma boa história para contar ao redor da fogueira.~
 @41233=~Eles sabiam. Acho que não deveria me preocupar. Eles entenderam por que me juntei a vocês.~
 @41234=~Você deveria. Não serei útil para você se eu morrer.~
-@41235=~Seja sério. Você pode não estar em território inimigo agora, mas eu estou.~
-@41236=~*Eu* sou seu aliado, [PRO_RACE]. Já te defendi antes. Espero que você faça o mesmo por mim.~
+@41235=~<SEJA_SERIO_MAI>. Você pode não estar em território inimigo agora, mas eu estou.~
+@41236=~*Eu* sou seu aliado, <PRO_RACE>. Já te defendi antes. Espero que você faça o mesmo por mim.~
 @41237=~Não gosto da ideia, mas talvez seja o mais seguro. Tenho certeza que seria mais fácil para você explicar isso aos seus companheiros soldados.~
 @41238=~Parece um plano.~
 @41239=~É, não acho que "Vunarg é um amigo de Targos" vá colar por aqui.~
@@ -2121,13 +2121,13 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41333=~Não quero ser duro. Mas você se distrai com frequência, e aventurar não é amigável com esse hábito. Sempre que estamos em um lugar novo, precisamos ficar alertas. Certo?~
 @41334=~Mas lugares novos são os mais *interessantes!* É onde é mais fácil se distrair! E é onde eu tiro muita inspiração para minha magia também. É onde aprendo coisas.~
 @41335=~Eu... entendo. Se é assim que você precisa funcionar, tudo bem. Eu vou cuidar das suas costas.~
-@41336=~Obrigado! E fico feliz por ter um amigo grande e forte cuidando de mim.~
+@41336=~Obrigada! E fico feliz por ter um amigo grande e forte cuidando de mim.~
 @41337=~O prazer é meu, Pairi.~
 @41338=~Tive minhas dúvidas sobre você, Vunarg. Mas você tem defendido o grupo muito bem e... queria te agradecer por isso.~
 @41339=~De nada. Mas isso é simplesmente prático. Qualquer clã que queira sobreviver deve agir em uníssono. Também preciso da sua defesa.~
 @41340=~Você terá isso.~
 @41341=~Bom.~
-@41342=~E eu também tive dúvidas sobre você. Tinha certeza que você encontraria uma desculpa para tentar me matar algum dia. Aparentemente, você é mais aberto do que eu pensava.~
+@41342=~E eu também tive dúvidas sobre você. Tinha certeza que você encontraria uma desculpa para tentar me matar algum dia. Aparentemente, você é <MAIS_ABERTO> do que eu pensava.~
 @41343=~Você achava que eu ia te atacar? Por que ficou?~
 @41344=~Porque eu não achava que você teria sucesso.~
 @41345=~Ha ha! Justo.~
@@ -2135,17 +2135,17 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41347=~Reig, você já está aventurando há muito tempo, certo?~
 @41348=~Não muito. Até eu entrar neste grupo, eu era apenas um soldado em casa. Já vi *muito* desde então, mas... não faz tanto tempo assim.~
 @41349=~Ah. Bem, pensei em perguntar se você teria algum conselho para mim. Você sempre me pareceu um veterano.~
-@41350=~Obrigado. Mas não sei que conselho eu daria. Você já é atencioso, ávido por aprender, fácil de conviver... e humilde, pensando bem, o que também é importante... e nem sempre muito comum. Seja lá o que te ensinaram no mosteiro, acho que provavelmente era muito bom.~
+@41350=~Obrigado. Mas não sei que conselho eu daria. Você já é <ATENCIOSO>, <AVIDO> por aprender, fácil de conviver... e humilde, pensando bem, o que também é importante... e nem sempre muito comum. Seja lá o que te ensinaram no mosteiro, acho que provavelmente era muito bom.~
 @41351=~Mas se eu pensar em algo, te aviso.~
-@41352=~Obrigado!~
+@41352=~Obrigada!~
 @41353=~Olhos na frente, patife.~
-@41354=~Cuide da sua vida, garoto. Eu olho onde quiser.~
+@41354=~Cuide da sua vida, <GAROTO>. Eu olho onde quiser.~
 @41355=~Já vi centenas de libertinos bêbados antes de você, e você não é diferente. Tire os olhos da Pairi.~
 @41356=~Oh, ela é *sua?* Talvez você devesse deixar ela escolher sozinha... Tenho certeza que ela preferiria um *homem* de verdade.~
 @41357=~Ela não é de ninguém, Geoffrey—nem sua nem minha. Escolha outra pessoa... alguém que realmente saiba o que você é, e não se importe com isso.~
 @41358=~*resmunga* Estamos longe de uma taverna. Não me culpe se eu estiver com um pouco de sede.~
 @41359=~Falo sério, Geoffrey. Estou de olho em você.~
-@41360=~Veira, você pode me contar meu futuro? Estou um pouco curioso. Nunca tive minha sorte lida antes.~
+@41360=~Veira, você pode me contar meu futuro? Estou um pouco curiosa. Nunca tive minha sorte lida antes.~
 @41361=~- Não preciso de magia para vê-lo -
  - Você vive uma vida abençoada -
  - Beleza, charme e inocência -
@@ -2171,10 +2171,10 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41377=~Vrek não tem medo de você. Só há uma arma que Vrek teme, e Vrek toma!~
 @41378=~Mas nosso grupo inclui Sersa, uma Monja Corvo Negro. Certamente ela pode entrar, mesmo que o resto não possa?~
 @41379=~Não. Sersa é apenas uma iniciada, não uma verdadeira monja. Ela ainda não dominou as Oito Câmaras.~
-@41380=~Pra ser honesto, não estou muito animado para lutar contra um bando de driders. Talvez não tenham tantos...~
-@41381=~E aqui está minha lâmina. Obrigado por me ajudar a recuperá-la. Devo recompensá-los.~
-@41382=~Eu vi seus feitos. Você demonstrou dedicação inabalável à luta contra o mal. Minha lâmina foi destinada justamente a essa causa. Sou grato por me ajudar a recuperá-la, mas agora é uma honra entregá-la a você. Use-a bem em nossas batalhas futuras.~
-@41383=~Obrigado pelo presente, sacerdotisa. Mas se você vai conosco, é melhor que empunhe a lâmina da lua você mesma. É sua arma de escolha, e você a merece tanto quanto nós. Por favor, a leve de volta.~
+@41380=~Pra ser honesta, não estou muito animada para lutar contra um bando de driders. Talvez não tenham tantos...~
+@41381=~E aqui está minha lâmina. Obrigada por me ajudar a recuperá-la. Devo recompensá-los.~
+@41382=~Eu vi seus feitos. Você demonstrou dedicação inabalável à luta contra o mal. Minha lâmina foi destinada justamente a essa causa. Sou grata por me ajudar a recuperá-la, mas agora é uma honra entregá-la a você. Use-a bem em nossas batalhas futuras.~
+@41383=~<OBRIGADO_MAI> pelo presente, sacerdotisa. Mas se você vai conosco, é melhor que empunhe a lâmina da lua você mesma. É sua arma de escolha, e você a merece tanto quanto nós. Por favor, a leve de volta.~
 @41384=~Muito bem. Se desejar, eu empunharei a lâmina da lua.~
 @41385=~Isair e Madae fizeram uma escolha muito estranha em seu quartel-general. Todo esse prédio está *saturado* de magia instável. Você pode até vê-la escorrendo pelas paredes!~
 @41386=~Quão instável?~
@@ -2269,7 +2269,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41441=~Os gêmeos se mostraram muito confiantes e muito convictos de suas ideias. Dúvida não é algo que sentirão com facilidade.~
 @41442=~Se vamos colocar algo nos corações deles, uma adaga funcionaria muito melhor do que “dúvida”.~
 @41443=~~
-@41444=~- Talvez você esteja certo -
+@41444=~- Talvez você esteja <CERTO> -
  - As chances de convencê-los são mínimas -
  - Isso certamente terminará em violência -
  - Quando chegar a hora do derramamento de sangue -
@@ -2326,7 +2326,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41462=~- Rezo para que você tenha sucesso -
  - Talvez não salvemos suas vidas -
  - Mas talvez isso salve as nossas. -~
-@41463=~- Uma pena que você esteja certo -
+@41463=~- Uma pena que você esteja <CERTO> -
  - Pode ter havido um tempo em que poderíamos tê-los mudado -
  - Mas isso foi há muito tempo -
  - Muito, muito tempo atrás -~
@@ -2348,7 +2348,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41479=~Vou sentir sua falta.~
 @41480=~Sim. E agradeço suas palavras. Meu clã significa tudo para mim.~
 @41481=~Vou considerar isso.~
-@41482=~Bem, na improvável hipótese de você querer viver uma vida goblin algum dia, meu clã sempre o receberá de braços abertos. Mas isso é para outro dia. Venha... vamos terminar o trabalho. Não temos futuro enquanto os gêmeos ainda respirarem.~
+@41482=~Bem, na improvável hipótese de você querer viver uma vida goblin algum dia, meu clã <SEMPRE_O_RECEBERA> de braços abertos. Mas isso é para outro dia. Venha... vamos terminar o trabalho. Não temos futuro enquanto os gêmeos ainda respirarem.~
 @41483=~Mas eu deveria parar de me preocupar com o futuro. Isair e Madae ainda estão vivos. Preciso manter meu foco neles. Quando estiverem mortos, aí sim poderei pensar na minha vida após a Legião.~
 @41484=~Essa é minha intenção. Mas um filho nem sempre é como os pais. Espero que meus filhos sejam fortes e inteligentes, mas não há garantias.~
 @41485=~Mais de uma dinastia já caiu por causa disso.~
@@ -2384,11 +2384,11 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41515=~Mas agora estou vendo os frutos do trabalho. Todas essas pessoas estão finalmente livres. Nossas ações estão fazendo a diferença.~
 @41516=~Liberdade. Nunca encontrei palavra mais perfeita.~
 @41517=~Por mais sombrias que as coisas pareçam nesta cidadela distorcida, estou muito feliz por você ter me trazido com você. Não posso agradecer o suficiente por tudo o que me ensinou.~
-@41518=~Ora, obrigado, Pairi. Você tem sido uma excelente aluna.~
+@41518=~Ora, <OBRIGADO>, Pairi. Você tem sido uma excelente aluna.~
 @41519=~Você se dá pouco crédito, Pairi. Foi você quem é responsável por tudo o que aprendeu.~
 @41520=~Uh... de nada. De onde está vindo isso, Pairi?~
 @41521=~De nada. Mas precisamos mesmo nos concentrar agora. Isair e Madae ainda estão vivos, e estamos em território perigoso.~
-@41522=~Obrigado *a você* por nos ajudar a matar nossos inimigos.~
+@41522=~<OBRIGADO_MAI> *a você* por nos ajudar a matar nossos inimigos.~
 @41523=~De lugar nenhum em especial. Só sinto que o mundo é muito mais grandioso do que jamais imaginei lá na aldeia. Nunca estive tão empolgada para explorar o mundo!~
 @41524=~Vamos sim. Isair e Madae são apenas um capítulo de nossas vidas. Temos muito mais pela frente juntos.~
 @41525=~Acho que posso me aposentar depois disso. Já tive aventura suficiente para durar dez vidas.~
@@ -2421,7 +2421,7 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41552=~Existem muitos caminhos para o desenvolvimento de alguém, nem todos como o seu. Mas essa variante em particular é nova para mim.~
 @41553=~Acho que o ódio também ajuda a socar muito bem.~
 @41554=~Acho que sim. Esses monges eram poderosos, mas ainda estavam seguindo o caminho errado.~
-@41555=~É. Tanta raiva... fico surpreso que *alguém* tenha achado Xvim atraente como deus.~
+@41555=~É. Tanta raiva... fico surpresa que *alguém* tenha achado Xvim atraente como deus.~
 @41556=~Talvez. Não sei de onde eles tiraram suas habilidades, mas realmente parece que esse tipo de escola carece de disciplina.~
 @41557=~Iyachtu Xvim é muito mesquinho para profanar essas estátuas... Posando-as para adorá-lo, só para satisfazer seu próprio ego. É uma exibição patética... mesmo *deixando de lado* a blasfêmia inerente a tudo isso.~
 @41558=~O que *acabou de acontecer?* Será que realmente lutamos contra um deus? E não morremos?~
@@ -2437,26 +2437,26 @@ Como Xhaan não foi invocado por magia convencional, não há limite de tempo para 
 @41567=~Ah, claro! Desculpe. Vou me concentrar. Talvez depois eu descubra o que vem a seguir...~
 @41568=~Ah... vou sentir sua falta! Vou garantir que te visite com frequência, onde quer que você se estabeleça. Talvez eu possa trazer algumas lembranças e histórias para você. Me pergunto para onde eu irei...~
 @41569=~...além disso, se Sersa completar todas as oito câmaras sozinha, sem ninguém mais do grupo fazendo câmaras para ela, ela será oficialmente uma monja da ordem do Corvo Negro.~
-@41570=~...Finalmente chegou a hora de eu tentar as Oito Câmaras. Estou um pouco assustado. Espero estar preparado.~
+@41570=~...Finalmente chegou a hora de eu tentar as Oito Câmaras. Estou um pouco assustada. Espero estar preparada.~
 @41571=~Você é um monge do Corvo Negro, certo? Você já não completou as Câmaras?~
 @41572=~Do que há para ter medo? Isso não é apenas outra forma de treinamento para se tornar monge?~
 @41573=~O que você sabe sobre as provas que enfrentaremos nas Oito Câmaras?~
 @41574=~Então vamos começar.~
-@41575=~Não, ainda não completei as Oito Câmaras. Ainda sou um iniciado, não um monge verdadeiro.~
-@41576=~Para me tornar um monge oficial da ordem do Corvo Negro, preciso passar por todas as oito câmaras sozinho. Se algum de vocês passar por alguma das câmaras no meu lugar, continuarei sendo um iniciado.~
+@41575=~Não, ainda não completei as Oito Câmaras. Ainda sou uma iniciada, não uma monja verdadeira.~
+@41576=~Para me tornar uma monja oficial da ordem do Corvo Negro, preciso passar por todas as oito câmaras sozinha. Se algum de vocês passar por alguma das câmaras no meu lugar, continuarei sendo uma iniciada.~
 @41577=~As Oito Câmaras não são apenas treinamento; são um teste, e letal. Se falharmos no teste, morremos.~
 @41578=~Sei que a primeira câmara exige que puxemos alavancas em uma certa ordem, mas a ordem exata é mantida em segredo. A segunda câmara também exige que façamos algo em uma certa ordem.~
 @41579=~As outras seis câmaras simplesmente exigem que derrotamos todos os inimigos da câmara. Os inimigos da terceira câmara podem lançar feitiços de raio, e supostamente um certo painel no chão nos protege desses raios.~
 @41580=~Os inimigos da quarta câmara explodem, mas aparentemente há uma alavanca que pode impedir que eles explodam. Os inimigos da quinta câmara resistem a socos e chutes, mas as armadilhas de fogo na câmara ainda os ferem.~
-@41581=~A sexta câmara supostamente está cheia de aranhas. Não estou ansioso para isso. A sétima câmara exige que nocauteemos e incapacitemos os inimigos, o que não parece tão ruim.~
+@41581=~A sexta câmara supostamente está cheia de aranhas. Não estou ansiosa para isso. A sétima câmara exige que nocauteemos e incapacitemos os inimigos, o que não parece tão ruim.~
 @41582=~A câmara final é aparentemente a mais difícil, onde temos que lutar contra inimigos em uma sala cheia de chamas.~
 @41583=~Matar inocentes? *Nunca!* Receio que não possamos derrotá-los, mas vou tentar antes de ousarmos cometer assassinato!~
 @41584=~Matar escravos vai contra os ensinamentos da nossa ordem. Devemos *libertar* os escravos, não matá-los!~
 @41585=~*Suspiro* Será que este grupo tem ideia do que está se metendo aqui?~
-@41586=~Posso ver por que você foi escolhido para ser o líder da sua ordem. Você prefere morrer uma monstruosidade horrível do que desistir de seus ideais. Gostaria de ser tão resoluto.~
+@41586=~Posso ver por que você foi <ESCOLHIDO> para ser <O_LIDER> da sua ordem. Você prefere morrer uma monstruosidade horrível do que desistir de seus ideais. Gostaria de ser tão resoluto.~
 @41587=~Nunca vamos nos aliar a você, deus maligno! Receio que não possamos derrotá-lo, mas certamente vou tentar!~
 @41588=~Vamos purificar este lugar, deus maligno! Receio que não possamos derrotá-lo, mas certamente vou tentar!~
-@41589=~E vejo que você tem o fantasma da estalagem em sua companhia. Você é mais parecido com os Myrkulytes do que imagina.~
+@41589=~E vejo que você tem o fantasma da estalagem em sua companhia. Você é <MAIS_PARECIDO> com os Myrkulytes do que imagina.~
 @41590=~- Eu não teria nada a ver -
  - Com um Senhor -
  - Que vê aqueles que pereceram -
@@ -2493,7 +2493,7 @@ A última câmara é aparentemente a mais difícil, onde temos que lutar contra inim
 @41606=~Sersa dominou todas as Oito Câmaras.~
 @41607=~Agora que ela dominou as Oito Câmaras, Sersa se tornou uma verdadeira monja da ordem do Corvo Negro.~
 @41608=~E parabéns especialmente a Sersa — você não é mais uma iniciante, mas uma verdadeira membro da nossa ordem.~
-@41609=~Sim... obrigado. As Oito Câmaras foram menos difíceis do que eu temia.~
+@41609=~Sim... obrigada. As Oito Câmaras foram menos difíceis do que eu temia.~
 @41610=~Eu *nunca* ouvi um lêmure falar antes. Normalmente, eles são silenciosos e obedecem aos comandos telepáticos de demônios mais poderosos. Mas este não está respondendo aos meus. E eu sinto que ele é *muito* mais poderoso do que a maioria dos lêmures. Vamos ouvir o que ele tem a dizer.~
 @41611=~O QUÊ!? Isair e Madae são meio-demônios, mas empregam *tanar'ri* aqui?~
 @41612=~Vamos encontrar uma maneira de matar este glabrezu. Não me importo com esses escravos patéticos, mas os tanar'ri devem morrer.~
@@ -2523,7 +2523,7 @@ A última câmara é aparentemente a mais difícil, onde temos que lutar contra inim
 @41636=~Se eu morrer aqui, retorno aos Nove Infernos e posso continuar a buscar promoção lá. Não é um grande revés, e a garantia de que serei promovido se matar vocês, mortais, é tentadora demais, mesmo que as chances de sucesso sejam pequenas.~
 @41637=~Vingança contra Isair e Madae é o que menos me preocupa neste momento. Se eu matar vocês, mortais, e for promovido aqui, então meu tempo preso neste plano será a melhor coisa que já me aconteceu.~
 @41638=~Na verdade, sim, isso é uma preocupação. Yxbudur'zmutkimdu, não posso aceitar este acordo enquanto essa possibilidade existir.~
-@41639=~Então lhe ofereço um último acordo. Você parece depender demais desses mortais. Se conseguir quase me derrotar sozinho, sem ajuda deles, juro que lhe darei a promoção que busca. Mas se falhar, eu o consumirei.~
+@41639=~Então lhe ofereço um último acordo. Você parece depender demais desses mortais. Se conseguir quase me derrotar <SOZINHO>, sem ajuda deles, juro que lhe darei a promoção que busca. Mas se falhar, eu <O> consumirei.~
 @41640=~Eu Aceito.~
 @41641=~Espero que você consiga fazer isso sozinho, Xhaan.~
 @41642=~Não podemos deixar você fazer isso sozinho, Xhaan! Você precisa da nossa ajuda para derrotar este demônio!~
